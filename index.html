@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>APLUS Achiever | Personalised Online Tuition</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2933;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eeeeee;
+      background: white;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #285c4d;
+    }
+
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #285c4d;
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      padding: 80px 7%;
+      background: linear-gradient(135deg, #f4fbf7, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e1f2ea;
+      color: #285c4d;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    h1 span {
+      color: #397b67;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #5d6870;
+      max-width: 620px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .primary {
+      background: #285c4d;
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid #285c4d;
+      color: #285c4d;
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #68747c;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      padding: 30px;
+      background: #f8faf9;
+      border-radius: 14px;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #285c4d;
+    }
+
+    .feature p {
+      color: #667078;
+      font-size: 15px;
+    }
+
+    .courses {
+      background: #f5faf7;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .course {
+      background: white;
+      padding: 35px;
+      border-radius: 14px;
+      border: 1px solid #e5ebe8;
+    }
+
+    .course h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .course p {
+      color: #68747c;
+      margin-bottom: 20px;
+    }
+
+    .course a {
+      color: #285c4d;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .cta {
+      text-align: center;
+      background: #285c4d;
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .cta .button {
+      background: white;
+      color: #285c4d;
+    }
+
+    footer {
+      padding: 30px 7%;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .features,
+      .course-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 550px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">APLUS ACHIEVER</div>
+
+    <nav>
+      <a href="#why">Why Us</a>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="tag">
+        Personalised Online Tuition
+      </div>
+
+      <h1>
+        Helping Students<br>
+        <span>Achieve Their A+</span>
+      </h1>
+
+      <p>
+        Personalised online tuition with experienced teachers,
+        small classes and innovative teaching techniques
+        designed to help students learn with confidence.
+      </p>
+
+      <div class="buttons">
+
+        <a class="button primary"
+           href="#courses">
+          Explore Courses
+        </a>
+
+        <a class="button secondary"
+           href="#contact">
+          Book a Trial Class
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="why">
+
+    <div class="section-title">
+
+      <h2>Why Parents Choose APLUS</h2>
+
+      <p>
+        Focused teaching. Personalised attention. Better learning.
+      </p>
+
+    </div>
+
+
+    <div class="features">
+
+      <div class="feature">
+        <h3>Experienced Teachers</h3>
+        <p>
+          Learn from experienced educators who understand
+          the Singapore education system.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>Small Online Classes</h3>
+        <p>
+          Smaller groups allow teachers to give students
+          more attention and feedback.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>Personalised Learning</h3>
+        <p>
+          Lessons are designed around students' learning needs,
+          strengths and areas for improvement.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>Innovative Techniques</h3>
+        <p>
+          Practical strategies and structured learning methods
+          help students improve understanding and confidence.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="courses" class="courses">
+
+    <div class="section-title">
+
+      <h2>Our Courses</h2>
+
+      <p>
+        Primary, Secondary and Junior College programmes
+      </p>
+
+    </div>
+
+
+    <div class="course-grid">
+
+      <div class="course">
+        <h3>Primary</h3>
+
+        <p>
+          English, Mathematics, Science, Chinese
+          and PSLE preparation.
+        </p>
+
+        <a href="#contact">
+          Explore Primary →
+        </a>
+      </div>
+
+
+      <div class="course">
+        <h3>Secondary</h3>
+
+        <p>
+          English, Mathematics, Science and
+          examination preparation.
+        </p>
+
+        <a href="#contact">
+          Explore Secondary →
+        </a>
+      </div>
+
+
+      <div class="course">
+        <h3>Junior College</h3>
+
+        <p>
+          GP and JC subjects with structured
+          examination-focused preparation.
+        </p>
+
+        <a href="#contact">
+          Explore JC →
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="contact" class="cta">
+
+    <h2>Ready to Help Your Child Achieve More?</h2>
+
+    <p>
+      Speak to us about our courses and trial classes.
+    </p>
+
+    <a class="button"
+       href="https://wa.me/6580000000">
+      WhatsApp Us
+    </a>
+
+  </section>
+
+
+  <footer>
+
+    © 2026 APLUS ACHIEVER. All Rights Reserved.
+
+  </footer>
+
+</body>
+</html>
