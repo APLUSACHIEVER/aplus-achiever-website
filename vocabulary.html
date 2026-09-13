@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>APLUS PSLE ENGLISH Learning | PSLE Daily 10</title>
+<title>APLU​S ACHIEVER — Daily 10</title>
 
 <style>
 
@@ -17,211 +15,490 @@
 }
 
 body {
-
     margin: 0;
-
     font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
         Arial,
+        Helvetica,
         sans-serif;
 
     background: #f4faf7;
-
-    color: #173f32;
+    color: #123c2d;
 }
-
 
 /* =========================
    HEADER
 ========================= */
 
-.header {
-
-    height: 110px;
-
+header {
+    height: 130px;
     background: white;
 
-    border-bottom: 1px solid #e2eee8;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
-    padding: 0 4.5%;
+    padding: 0 5%;
+    border-top: 1px solid #ead6c8;
+    border-bottom: 1px solid #e8efeb;
 }
 
 .logo {
+    line-height: 1;
+}
 
+.logo-main {
     font-size: 34px;
-
     font-weight: 800;
-
     letter-spacing: 2px;
-
-    color: #08734f;
+    color: #176448;
 }
 
 .logo-sub {
+    margin-top: 14px;
 
-    margin-top: 8px;
-
-    font-size: 15px;
-
-    letter-spacing: 5px;
-
+    font-size: 16px;
     font-weight: 700;
+    letter-spacing: 4px;
 
-    color: #80958d;
+    color: #637c75;
 }
 
-.back {
-
-    color: #08734f;
-
+.back-link {
+    color: #087047;
     text-decoration: none;
 
-    font-size: 20px;
-
+    font-size: 16px;
     font-weight: 700;
 }
 
-.back:hover {
-
-    opacity: 0.7;
+.back-link:hover {
+    text-decoration: underline;
 }
-
 
 /* =========================
    HERO
 ========================= */
 
 .hero {
-
     text-align: center;
 
-    padding: 68px 20px 42px;
+    padding:
+        66px
+        20px
+        38px;
 }
 
 .badge {
-
     display: inline-block;
 
-    background: #e1f3ea;
-
-    color: #08734f;
-
-    padding: 12px 27px;
+    padding: 12px 28px;
 
     border-radius: 30px;
 
-    font-size: 16px;
+    background: #dff2e9;
 
+    color: #126448;
+
+    font-size: 15px;
     font-weight: 800;
 
     letter-spacing: 1px;
 }
 
 .hero h1 {
-
-    margin: 22px 0 10px;
+    margin:
+        22px
+        0
+        12px;
 
     font-size: 64px;
+    line-height: 1;
 
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-
-    color: #163f31;
+    color: #123c2d;
 }
 
 .hero h1 span {
-
-    color: #2ca16b;
+    color: #27a56b;
 }
 
 .hero p {
-
     margin: 0;
 
-    font-size: 23px;
+    font-size: 21px;
 
-    color: #71857d;
+    color: #657c76;
 }
-
 
 /* =========================
    MAIN CARD
 ========================= */
 
 .container {
+    width: min(1360px, 90%);
 
-    width: min(1000px, 92%);
-
-    margin: 0 auto 80px;
+    margin:
+        10px
+        auto
+        100px;
 }
 
 .card {
-
     background: white;
 
     border-radius: 32px;
 
-    padding: 42px;
+    padding: 48px;
 
     box-shadow:
-        0 20px 55px rgba(35, 75, 60, 0.08);
+        0 18px 50px
+        rgba(28, 80, 58, 0.08);
 }
 
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+.progress-text {
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #57736a;
+}
+
+.level-text {
+    font-size: 15px;
+    font-weight: 800;
+
+    color: #209261;
+}
+
+.progress {
+    width: 100%;
+    height: 9px;
+
+    background: #e7f0eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 42px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 10%;
+
+    background: #28a66d;
+
+    border-radius: 20px;
+
+    transition:
+        width 0.3s ease;
+}
+
+/* =========================
+   QUESTION
+========================= */
+
+.question-label {
+    font-size: 14px;
+    font-weight: 800;
+
+    color: #2ba06c;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 14px;
+}
+
+.question {
+    font-size: 32px;
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    color: #173d2f;
+
+    margin-bottom: 34px;
+}
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.option {
+    width: 100%;
+
+    min-height: 76px;
+
+    padding: 18px 22px;
+
+    border:
+        2px solid #dcebe4;
+
+    border-radius: 16px;
+
+    background: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #244a3c;
+
+    transition:
+        all 0.15s ease;
+}
+
+.option:hover {
+    border-color: #42ad7c;
+
+    background: #f3fbf7;
+
+    transform: translateY(-1px);
+}
+
+.option.correct {
+    border-color: #239660;
+
+    background: #e3f6ec;
+
+    color: #126448;
+}
+
+.option.wrong {
+    border-color: #d76868;
+
+    background: #fff0f0;
+
+    color: #a73535;
+}
+
+.option:disabled {
+    cursor: default;
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.feedback {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 22px 24px;
+
+    border-radius: 16px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+.feedback.correct {
+    display: block;
+
+    background: #eaf8f0;
+
+    color: #176448;
+}
+
+.feedback.wrong {
+    display: block;
+
+    background: #fff1f1;
+
+    color: #923c3c;
+}
+
+.feedback-title {
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+/* =========================
+   NEXT BUTTON
+========================= */
+
+.button-row {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 30px;
+}
+
+.next-button {
+    display: none;
+
+    border: none;
+
+    background: #19895d;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background: #11734d;
+}
+
+/* =========================
+   RESULT
+========================= */
+
+#result {
+    display: none;
+
+    text-align: center;
+
+    padding: 30px 10px;
+}
+
+.result-title {
+    font-size: 38px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 70px;
+
+    font-weight: 800;
+
+    color: #239966;
+
+    margin-bottom: 15px;
+}
+
+.result-message {
+    font-size: 20px;
+
+    color: #637a72;
+
+    margin-bottom: 35px;
+}
+
+.restart-button {
+    border: none;
+
+    background: #19895d;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+#errorBox {
+    display: none;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    background: #fff1f1;
+
+    border: 1px solid #efb2b2;
+
+    color: #8b3030;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+#errorBox strong {
+    display: block;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
 
 /* =========================
    LOADING
 ========================= */
 
-.loading {
-
-    min-height: 250px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
+#loading {
     text-align: center;
 
-    color: #6f847c;
+    padding: 100px 20px;
 
     font-size: 20px;
+
+    color: #617970;
 }
 
 .spinner {
+    width: 38px;
+    height: 38px;
 
-    width: 42px;
+    margin:
+        0
+        auto
+        22px;
 
-    height: 42px;
+    border:
+        4px solid #dcece5;
 
-    border: 4px solid #e2eee8;
-
-    border-top: 4px solid #2ca16b;
+    border-top-color: #299d69;
 
     border-radius: 50%;
 
-    animation: spin 0.9s linear infinite;
-
-    margin-bottom: 20px;
+    animation:
+        spin 0.8s linear infinite;
 }
 
 @keyframes spin {
-
-    from {
-        transform: rotate(0deg);
-    }
 
     to {
         transform: rotate(360deg);
@@ -229,518 +506,76 @@ body {
 
 }
 
-
-/* =========================
-   ERROR
-========================= */
-
-.error-box {
-
-    background: #fff4f2;
-
-    border: 1px solid #f0c7c1;
-
-    color: #a53c30;
-
-    padding: 25px;
-
-    border-radius: 18px;
-
-    line-height: 1.7;
-
-    text-align: center;
-}
-
-.error-box code {
-
-    background: #fff;
-
-    padding: 5px 8px;
-
-    border-radius: 5px;
-
-    font-family: monospace;
-}
-
-
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 20px;
-}
-
-.question-number {
-
-    font-size: 18px;
-
-    font-weight: 700;
-
-    color: #71857d;
-}
-
-.level {
-
-    padding: 8px 15px;
-
-    border-radius: 20px;
-
-    background: #e8f5ef;
-
-    color: #08734f;
-
-    font-size: 14px;
-
-    font-weight: 800;
-}
-
-
-/* =========================
-   PROGRESS
-========================= */
-
-.progress-area {
-
-    margin-bottom: 38px;
-}
-
-.progress-background {
-
-    width: 100%;
-
-    height: 10px;
-
-    background: #e8f0ec;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-}
-
-.progress {
-
-    height: 100%;
-
-    width: 10%;
-
-    background: #2ca16b;
-
-    border-radius: 20px;
-
-    transition: width 0.3s ease;
-}
-
-
-/* =========================
-   QUESTION
-========================= */
-
-.question-type {
-
-    color: #2ca16b;
-
-    font-size: 14px;
-
-    font-weight: 800;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 14px;
-}
-
-.question {
-
-    font-size: 31px;
-
-    line-height: 1.4;
-
-    font-weight: 700;
-
-    color: #173f32;
-
-    margin-bottom: 30px;
-}
-
-.word-highlight {
-
-    color: #229361;
-}
-
-
-/* =========================
-   OPTIONS
-========================= */
-
-.options {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 16px;
-}
-
-.option {
-
-    border: 2px solid #e4eee9;
-
-    background: white;
-
-    border-radius: 17px;
-
-    padding: 19px 20px;
-
-    font-size: 18px;
-
-    text-align: left;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease;
-
-    color: #26493e;
-}
-
-.option:hover {
-
-    border-color: #54b987;
-
-    background: #f4fbf7;
-
-    transform: translateY(-2px);
-}
-
-.option.correct {
-
-    background: #e6f7ee;
-
-    border-color: #2ca16b;
-
-    color: #08734f;
-}
-
-.option.wrong {
-
-    background: #fff1ef;
-
-    border-color: #e06b5d;
-
-    color: #a53c30;
-}
-
-.option:disabled {
-
-    cursor: default;
-
-    transform: none;
-}
-
-
-/* =========================
-   FEEDBACK
-========================= */
-
-.feedback {
-
-    margin-top: 25px;
-
-    padding: 22px;
-
-    border-radius: 18px;
-
-    display: none;
-
-    line-height: 1.7;
-}
-
-.feedback.correct {
-
-    display: block;
-
-    background: #edf9f3;
-
-    color: #08734f;
-}
-
-.feedback.wrong {
-
-    display: block;
-
-    background: #fff5f2;
-
-    color: #9b3e31;
-}
-
-.feedback-title {
-
-    font-weight: 800;
-
-    font-size: 18px;
-
-    margin-bottom: 6px;
-}
-
-
-/* =========================
-   NEXT BUTTON
-========================= */
-
-.next-area {
-
-    margin-top: 30px;
-
-    display: flex;
-
-    justify-content: flex-end;
-}
-
-.next-button {
-
-    border: none;
-
-    background: #08734f;
-
-    color: white;
-
-    padding: 15px 28px;
-
-    border-radius: 14px;
-
-    font-size: 17px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    display: none;
-}
-
-.next-button:hover {
-
-    background: #075d40;
-}
-
-
-/* =========================
-   RESULT
-========================= */
-
-.result {
-
-    display: none;
-
-    text-align: center;
-
-    padding: 25px 0;
-}
-
-.result-title {
-
-    font-size: 38px;
-
-    font-weight: 800;
-
-    margin-bottom: 10px;
-}
-
-.score {
-
-    font-size: 72px;
-
-    font-weight: 900;
-
-    color: #2ca16b;
-
-    margin: 20px 0;
-}
-
-.result-message {
-
-    font-size: 21px;
-
-    color: #71857d;
-
-    margin-bottom: 30px;
-}
-
-.result-buttons {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-}
-
-.restart {
-
-    background: #08734f;
-
-    color: white;
-
-    border: none;
-
-    padding: 15px 28px;
-
-    border-radius: 14px;
-
-    font-size: 17px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-}
-
-.restart:hover {
-
-    background: #075d40;
-}
-
-
-/* =========================
-   WEAK WORDS
-========================= */
-
-.weak-section {
-
-    margin-top: 45px;
-
-    text-align: left;
-}
-
-.weak-title {
-
-    font-size: 22px;
-
-    font-weight: 800;
-
-    margin-bottom: 15px;
-}
-
-.weak-list {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-}
-
-.weak-word {
-
-    background: #f2f7f4;
-
-    border: 1px solid #dceae3;
-
-    padding: 9px 14px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-
-    color: #49675c;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-
-    text-align: center;
-
-    color: #8ba098;
-
-    font-size: 14px;
-
-    padding-bottom: 40px;
-}
-
-
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
 
-    .header {
+    header {
+        height: 105px;
 
-        height: 90px;
-
-        padding: 0 20px;
+        padding:
+            0
+            20px;
     }
 
-    .logo {
-
-        font-size: 24px;
+    .logo-main {
+        font-size: 23px;
     }
 
     .logo-sub {
-
         font-size: 11px;
 
-        letter-spacing: 3px;
+        margin-top: 8px;
     }
 
-    .back {
-
-        font-size: 14px;
+    .back-link {
+        font-size: 13px;
     }
 
     .hero {
-
-        padding: 45px 15px 30px;
+        padding:
+            45px
+            15px
+            30px;
     }
 
     .hero h1 {
-
         font-size: 46px;
     }
 
     .hero p {
+        font-size: 17px;
+    }
 
-        font-size: 18px;
+    .container {
+        width: 94%;
     }
 
     .card {
-
         padding: 25px 20px;
 
-        border-radius: 24px;
+        border-radius: 22px;
     }
 
     .options {
-
         grid-template-columns: 1fr;
     }
 
     .question {
-
-        font-size: 25px;
+        font-size: 24px;
     }
 
-    .score {
+    .option {
+        min-height: 68px;
 
-        font-size: 58px;
+        font-size: 16px;
     }
 
 }
 
 </style>
-
 </head>
 
 
@@ -751,28 +586,30 @@ body {
      HEADER
 ========================= -->
 
-<header class="header">
+<header>
 
-    <div>
+    <div class="logo">
 
-        <div class="logo">
+        <div class="logo-main">
             APLUS ACHIEVER
         </div>
 
         <div class="logo-sub">
-            PSLE ENGLISH VOCABULARY LEARNING
+            AI LEARNING
         </div>
 
     </div>
 
+
     <a
-        class="back"
-        href="index.html"
+        href="https://aplusachiever.com"
+        class="back-link"
     >
         ← Back to APLUS
     </a>
 
 </header>
+
 
 
 <!-- =========================
@@ -796,154 +633,142 @@ body {
 </section>
 
 
+
 <!-- =========================
      MAIN
 ========================= -->
 
 <main class="container">
 
-<div class="card">
+    <div class="card">
 
 
-    <!-- LOADING -->
+        <!-- LOADING -->
 
-    <div
-        id="loading"
-        class="loading"
-    >
+        <div id="loading">
 
-        <div class="spinner"></div>
+            <div class="spinner"></div>
 
-        <div>
             Loading today's challenge...
-        </div>
-
-    </div>
-
-
-    <!-- ERROR -->
-
-    <div
-        id="error"
-        class="error-box"
-        style="display:none;"
-    >
-    </div>
-
-
-    <!-- QUIZ -->
-
-    <div
-        id="quiz"
-        style="display:none;"
-    >
-
-        <div class="topbar">
-
-            <div
-                id="questionNumber"
-                class="question-number"
-            >
-                Question 1 of 10
-            </div>
-
-            <div
-                id="level"
-                class="level"
-            >
-                Level 1
-            </div>
 
         </div>
 
 
-        <div class="progress-area">
 
-            <div class="progress-background">
+        <!-- ERROR -->
+
+        <div id="errorBox">
+
+            <strong>
+                Vocabulary could not be loaded.
+            </strong>
+
+            <div id="errorMessage"></div>
+
+        </div>
+
+
+
+        <!-- QUIZ -->
+
+        <div id="quiz"
+             style="display:none;">
+
+
+            <div class="topbar">
 
                 <div
-                    id="progress"
-                    class="progress"
+                    class="progress-text"
+                    id="progressText"
+                >
+                    Question 1 of 10
+                </div>
+
+                <div
+                    class="level-text"
+                    id="levelText"
+                >
+                    Level 1
+                </div>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar"
                 ></div>
 
             </div>
 
-        </div>
+
+            <div class="question-label">
+                CHOOSE THE BEST ANSWER
+            </div>
 
 
-        <div
-            id="questionType"
-            class="question-type"
-        >
-            MEANING
-        </div>
-
-
-        <div
-            id="question"
-            class="question"
-        >
-        </div>
-
-
-        <div
-            id="options"
-            class="options"
-        >
-        </div>
-
-
-        <div
-            id="feedback"
-            class="feedback"
-        >
-        </div>
-
-
-        <div class="next-area">
-
-            <button
-                id="nextButton"
-                class="next-button"
-                onclick="nextQuestion()"
+            <div
+                class="question"
+                id="questionText"
             >
-                Next Question →
-            </button>
+            </div>
+
+
+            <div
+                class="options"
+                id="options"
+            >
+            </div>
+
+
+            <div
+                class="feedback"
+                id="feedback"
+            >
+            </div>
+
+
+            <div class="button-row">
+
+                <button
+                    class="next-button"
+                    id="nextButton"
+                    onclick="nextQuestion()"
+                >
+                    Next Question →
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
 
 
-    <!-- RESULT -->
+        <!-- RESULT -->
 
-    <div
-        id="result"
-        class="result"
-    >
+        <div id="result">
 
-        <div class="result-title">
-            Daily 10 Complete!
-        </div>
+            <div class="result-title">
+                Today's Challenge Complete
+            </div>
 
-        <div
-            id="score"
-            class="score"
-        >
-            0 / 10
-        </div>
+            <div
+                class="score"
+                id="score"
+            >
+                0 / 10
+            </div>
 
-        <div
-            id="resultMessage"
-            class="result-message"
-        >
-        </div>
-
-
-        <div class="result-buttons">
+            <div
+                class="result-message"
+                id="resultMessage"
+            >
+            </div>
 
             <button
-                class="restart"
+                class="restart-button"
                 onclick="restartQuiz()"
             >
                 Try Again
@@ -952,53 +777,34 @@ body {
         </div>
 
 
-        <div class="weak-section">
-
-            <div class="weak-title">
-                Your Weak Words
-            </div>
-
-            <div
-                id="weakList"
-                class="weak-list"
-            >
-            </div>
-
-        </div>
-
     </div>
-
-
-</div>
 
 </main>
 
 
-<div class="footer">
-
-    APLUS ACHIEVER · PSLE English AI Learning
-
-</div>
-
 
 <!-- =====================================================
-     IMPORTANT
-     vocabulary.js MUST be inside /data/
+     VOCABULARY
 ===================================================== -->
 
 <script src="./data/vocabulary.js"></script>
 
 
+
+<!-- =====================================================
+     DAILY 10 ENGINE
+===================================================== -->
+
 <script>
 
+"use strict";
+
+
 /* =====================================================
-   APLUS DAILY 10
+   GLOBAL VARIABLES
 ===================================================== */
 
-
-/* -------------------------
-   VARIABLES
-------------------------- */
+let vocabularyData = [];
 
 let questions = [];
 
@@ -1008,77 +814,6 @@ let score = 0;
 
 let answered = false;
 
-let wrongWords = [];
-
-
-/* -------------------------
-   QUESTION PLAN
-------------------------- */
-
-const questionPlan = [
-
-    {
-        type: "meaning",
-        minLevel: 1,
-        maxLevel: 2
-    },
-
-    {
-        type: "meaning",
-        minLevel: 1,
-        maxLevel: 3
-    },
-
-    {
-        type: "synonym",
-        minLevel: 2,
-        maxLevel: 4
-    },
-
-    {
-        type: "synonym",
-        minLevel: 3,
-        maxLevel: 5
-    },
-
-    {
-        type: "context",
-        minLevel: 4,
-        maxLevel: 6
-    },
-
-    {
-        type: "context",
-        minLevel: 5,
-        maxLevel: 7
-    },
-
-    {
-        type: "context",
-        minLevel: 6,
-        maxLevel: 8
-    },
-
-    {
-        type: "cloze",
-        minLevel: 7,
-        maxLevel: 9
-    },
-
-    {
-        type: "cloze",
-        minLevel: 8,
-        maxLevel: 10
-    },
-
-    {
-        type: "challenge",
-        minLevel: 9,
-        maxLevel: 10
-    }
-
-];
-
 
 /* =====================================================
    START
@@ -1086,88 +821,126 @@ const questionPlan = [
 
 window.addEventListener(
     "load",
-    startApp
+    function () {
+
+        setTimeout(
+            initialiseApp,
+            50
+        );
+
+    }
 );
 
 
-function startApp() {
+/* =====================================================
+   INITIALISE
+===================================================== */
+
+function initialiseApp() {
 
     try {
 
-        /* Check vocabulary.js */
+        /*
+         * vocabulary.js should create:
+         *
+         * window.vocabulary
+         */
 
         if (
-            typeof vocabulary === "undefined"
+            !window.vocabulary
         ) {
 
             throw new Error(
-                "Vocabulary database was not found."
+                "window.vocabulary is not available."
             );
 
         }
 
 
         if (
-            !Array.isArray(vocabulary)
+            !Array.isArray(
+                window.vocabulary
+            )
         ) {
 
             throw new Error(
-                "Vocabulary database format is incorrect."
+                "window.vocabulary is not an array."
             );
 
         }
 
 
         if (
-            vocabulary.length === 0
+            window.vocabulary.length === 0
         ) {
 
             throw new Error(
-                "Vocabulary database is empty."
+                "The vocabulary database is empty."
+            );
+
+        }
+
+
+        vocabularyData =
+            window.vocabulary
+                .filter(
+                    word =>
+                        word &&
+                        word.word
+                );
+
+
+        if (
+            vocabularyData.length === 0
+        ) {
+
+            throw new Error(
+                "No valid vocabulary entries were found."
             );
 
         }
 
 
         console.log(
-            "Vocabulary loaded:",
-            vocabulary.length
+            "AP​LUS vocabulary loaded:",
+            vocabularyData.length,
+            "words"
         );
 
 
         createDailyQuestions();
 
 
-        if (
-            questions.length === 0
-        ) {
-
-            throw new Error(
-                "Unable to create today's questions."
-            );
-
-        }
-
-
-        document
-            .getElementById("loading")
-            .style.display = "none";
-
-
-        document
-            .getElementById("quiz")
-            .style.display = "block";
-
-
         showQuestion();
+
+
+        document
+            .getElementById(
+                "loading"
+            )
+            .style.display =
+            "none";
+
+
+        document
+            .getElementById(
+                "quiz"
+            )
+            .style.display =
+            "block";
 
     }
 
     catch (error) {
 
-        console.error(error);
+        console.error(
+            "APLUS Daily 10 error:",
+            error
+        );
 
-        showError(error.message);
+        showError(
+            error
+        );
 
     }
 
@@ -1178,47 +951,49 @@ function startApp() {
    ERROR
 ===================================================== */
 
-function showError(message) {
+function showError(error) {
 
     document
-        .getElementById("loading")
-        .style.display = "none";
+        .getElementById(
+            "loading"
+        )
+        .style.display =
+        "none";
 
 
-    const errorBox =
-        document.getElementById("error");
+    document
+        .getElementById(
+            "quiz"
+        )
+        .style.display =
+        "none";
 
 
-    errorBox.style.display = "block";
+    document
+        .getElementById(
+            "errorBox"
+        )
+        .style.display =
+        "block";
 
 
-    errorBox.innerHTML = `
+    document
+        .getElementById(
+            "errorMessage"
+        )
+        .innerHTML =
 
-        <strong>
-            ⚠️ Vocabulary could not be loaded
-        </strong>
+        "Please check that your GitHub files are arranged as:<br><br>" +
 
-        <br><br>
+        "<strong>index.html</strong><br>" +
 
-        ${message}
+        "└── <strong>data/vocabulary.js</strong><br><br>" +
 
-        <br><br>
+        "Technical message: " +
 
-        Please make sure your GitHub files are arranged like this:
-
-        <br><br>
-
-        <code>
-            vocabulary.html
-        </code>
-
-        <br>
-
-        <code>
-            data/vocabulary.js
-        </code>
-
-    `;
+        escapeHTML(
+            error.message
+        );
 
 }
 
@@ -1231,135 +1006,61 @@ function createDailyQuestions() {
 
     questions = [];
 
-    const usedIds = new Set();
-
-
-    questionPlan.forEach(
-        plan => {
-
-            let candidates =
-                vocabulary.filter(
-                    word =>
-
-                        word.level >=
-                        plan.minLevel &&
-
-                        word.level <=
-                        plan.maxLevel &&
-
-                        !usedIds.has(word.id)
-                );
-
-
-            /*
-             * If not enough words exist
-             * in this level range,
-             * use any unused word.
-             */
-
-            if (
-                candidates.length === 0
-            ) {
-
-                candidates =
-                    vocabulary.filter(
-                        word =>
-                            !usedIds.has(word.id)
-                    );
-
-            }
-
-
-            if (
-                candidates.length === 0
-            ) {
-
-                return;
-
-            }
-
-
-            /*
-             * Random word
-             */
-
-            const word =
-                candidates[
-                    Math.floor(
-                        Math.random() *
-                        candidates.length
-                    )
-                ];
-
-
-            usedIds.add(word.id);
-
-
-            const question =
-                buildQuestion(
-                    word,
-                    plan.type
-                );
-
-
-            if (question) {
-
-                questions.push(question);
-
-            }
-
-        }
-    );
-
 
     /*
-     * Make sure we have 10 questions.
+     * We want exactly 10 questions.
+     *
+     * Level 1 → Level 10
+     *
+     * Therefore each question comes
+     * from a different difficulty level.
      */
 
-    while (
-        questions.length < 10
+
+    for (
+        let level = 1;
+        level <= 10;
+        level++
     ) {
 
-        const available =
-            vocabulary.filter(
+        let pool =
+            vocabularyData.filter(
                 word =>
-                    !usedIds.has(word.id)
+                    Number(word.level) === level
             );
 
 
+        /*
+         * If a level is missing,
+         * use the complete vocabulary
+         * as a fallback.
+         */
+
         if (
-            available.length === 0
+            pool.length === 0
         ) {
 
-            break;
+            pool =
+                vocabularyData;
 
         }
 
 
-        const word =
-            available[
+        let word =
+            pool[
                 Math.floor(
                     Math.random() *
-                    available.length
+                    pool.length
                 )
             ];
 
 
-        usedIds.add(word.id);
-
-
-        const question =
-            buildQuestion(
+        questions.push(
+            createQuestion(
                 word,
-                "meaning"
-            );
-
-
-        if (question) {
-
-            questions.push(question);
-
-        }
+                level
+            )
+        );
 
     }
 
@@ -1367,56 +1068,87 @@ function createDailyQuestions() {
 
 
 /* =====================================================
-   BUILD QUESTION
+   CREATE QUESTION
 ===================================================== */
 
-function buildQuestion(
+function createQuestion(
     word,
-    type
+    level
 ) {
 
+    /*
+     * Three question styles:
+     *
+     * meaning
+     * synonym
+     * context
+     */
+
+
+    let type =
+        level <= 3
+            ? "meaning"
+            : randomChoice(
+                [
+                    "meaning",
+                    "synonym",
+                    "context"
+                ]
+            );
+
+
     if (
-        !word
+        type === "synonym"
     ) {
 
-        return null;
+        let correct =
+            getCorrectMeaning(
+                word
+            );
+
+
+        return {
+
+            level:
+                level,
+
+            word:
+                word,
+
+            question:
+                'Which word is closest in meaning to "' +
+                word.word +
+                '"?',
+
+            answer:
+                correct,
+
+            explanation:
+                getExplanation(
+                    word
+                )
+
+        };
 
     }
 
 
-    switch(type) {
+    if (
+        type === "context"
+    ) {
 
-
-        case "meaning":
-
-            return buildMeaningQuestion(word);
-
-
-        case "synonym":
-
-            return buildSynonymQuestion(word);
-
-
-        case "context":
-
-            return buildContextQuestion(word);
-
-
-        case "cloze":
-
-            return buildClozeQuestion(word);
-
-
-        case "challenge":
-
-            return buildChallengeQuestion(word);
-
-
-        default:
-
-            return buildMeaningQuestion(word);
+        return createContextQuestion(
+            word,
+            level
+        );
 
     }
+
+
+    return createMeaningQuestion(
+        word,
+        level
+    );
 
 }
 
@@ -1425,155 +1157,56 @@ function buildQuestion(
    MEANING QUESTION
 ===================================================== */
 
-function buildMeaningQuestion(word) {
+function createMeaningQuestion(
+    word,
+    level
+) {
 
-    const correct =
-        word.meaning ||
-        `the meaning of the word "${word.word}"`;
-
-
-    let distractors =
-        vocabulary
-
-            .filter(
-                item =>
-                    item.id !== word.id &&
-                    item.meaning &&
-                    item.meaning !== correct
-            )
-
-            .sort(
-                () => Math.random() - 0.5
-            )
-
-            .slice(0, 3)
-
-            .map(
-                item =>
-                    item.meaning
-            );
-
-
-    const options =
-        shuffle([
-            correct,
-            ...distractors
-        ]);
-
-
-    return {
-
-        type: "meaning",
-
-        word: word,
-
-        prompt:
-            `What does <span class="word-highlight">${escapeHTML(word.word)}</span> mean?`,
-
-        options: options,
-
-        answer: correct,
-
-        explanation:
-            word.meaning ||
-            "This is the meaning of the word."
-
-    };
-
-}
-
-
-/* =====================================================
-   SYNONYM QUESTION
-===================================================== */
-
-function buildSynonymQuestion(word) {
-
-    /*
-     * If no synonym exists,
-     * automatically fall back to meaning.
-     */
-
-    if (
-        !word.synonyms ||
-        word.synonyms.length === 0
-    ) {
-
-        return buildMeaningQuestion(word);
-
-    }
-
-
-    const correct =
-        word.synonyms[0];
-
-
-    let distractors = [];
-
-
-    vocabulary
-
-        .filter(
-            item =>
-                item.id !== word.id &&
-                item.synonyms &&
-                item.synonyms.length > 0
-        )
-
-        .sort(
-            () => Math.random() - 0.5
-        )
-
-        .forEach(
-            item => {
-
-                if (
-                    distractors.length < 3
-                ) {
-
-                    const candidate =
-                        item.synonyms[0];
-
-
-                    if (
-                        candidate !== correct &&
-                        !distractors.includes(candidate)
-                    ) {
-
-                        distractors.push(
-                            candidate
-                        );
-
-                    }
-
-                }
-
-            }
+    let correct =
+        getCorrectMeaning(
+            word
         );
 
 
-    const options =
-        shuffle([
-            correct,
-            ...distractors
-        ]);
+    let wrongAnswers =
+        getWrongMeanings(
+            word,
+            3
+        );
+
+
+    let options =
+        shuffle(
+            [
+                correct,
+                ...wrongAnswers
+            ]
+        );
 
 
     return {
 
-        type: "synonym",
+        level:
+            level,
 
-        word: word,
+        word:
+            word,
 
-        prompt:
-            `Which word is closest in meaning to <span class="word-highlight">${escapeHTML(word.word)}</span>?`,
+        question:
+            'What does "' +
+            word.word +
+            '" mean?',
 
-        options: options,
+        answer:
+            correct,
 
-        answer: correct,
+        options:
+            options,
 
         explanation:
-            `"${word.word}" is closest in meaning to "${correct}".`
+            getExplanation(
+                word
+            )
 
     };
 
@@ -1584,83 +1217,98 @@ function buildSynonymQuestion(word) {
    CONTEXT QUESTION
 ===================================================== */
 
-function buildContextQuestion(word) {
+function createContextQuestion(
+    word,
+    level
+) {
 
-    let sentence =
+    let example =
         word.example ||
-        "";
+        (
+            "The student used the word " +
+            word.word +
+            " correctly."
+        );
 
 
     /*
-     * If the example contains
-     * the target word,
-     * hide it.
+     * Replace the word with a blank.
+     */
+
+    let sentence =
+        example.replace(
+            new RegExp(
+                "\\b" +
+                escapeRegExp(
+                    word.word
+                ) +
+                "\\b",
+                "i"
+            ),
+            "_____"
+        );
+
+
+    /*
+     * If the example doesn't
+     * contain the word, create
+     * a simple sentence.
      */
 
     if (
-        sentence
-            .toLowerCase()
-            .includes(
-                word.word.toLowerCase()
-            )
+        sentence === example
     ) {
 
-        const regex =
-            new RegExp(
-                word.word,
-                "gi"
-            );
-
-
         sentence =
-            sentence.replace(
-                regex,
-                "______"
-            );
-
-    }
-
-    else {
-
-        sentence =
-            `The student was ______ when completing the challenging task.`;
+            "The student was " +
+            word.word +
+            " when answering the question.";
 
     }
 
 
-    const correct =
+    let correct =
         word.word;
 
 
-    let distractors =
-        getDistractors(
+    let wrongWords =
+        getWrongWords(
             word,
             3
         );
 
 
-    const options =
-        shuffle([
-            correct,
-            ...distractors
-        ]);
+    let options =
+        shuffle(
+            [
+                correct,
+                ...wrongWords
+            ]
+        );
 
 
     return {
 
-        type: "context",
+        level:
+            level,
 
-        word: word,
+        word:
+            word,
 
-        prompt:
+        question:
+            "Choose the word that best completes the sentence:<br><br>" +
             sentence,
 
-        options: options,
+        answer:
+            correct,
 
-        answer: correct,
+        options:
+            options,
 
         explanation:
-            `The correct word is "${word.word}".`
+            getExplanation(
+                word
+            )
 
     };
 
@@ -1668,167 +1316,230 @@ function buildContextQuestion(word) {
 
 
 /* =====================================================
-   CLOZE QUESTION
+   CORRECT MEANING
 ===================================================== */
 
-function buildClozeQuestion(word) {
+function getCorrectMeaning(
+    word
+) {
 
-    return buildContextQuestion(
-        word
+    if (
+        word.meaning &&
+        word.meaning.trim()
+    ) {
+
+        return word.meaning;
+
+    }
+
+
+    if (
+        word.chinese &&
+        word.chinese.trim()
+    ) {
+
+        return word.chinese;
+
+    }
+
+
+    /*
+     * Fallback so the question
+     * never breaks.
+     */
+
+    return (
+        "the meaning of the word " +
+        word.word
     );
 
 }
 
 
 /* =====================================================
-   CHALLENGE
+   WRONG MEANINGS
 ===================================================== */
 
-function buildChallengeQuestion(word) {
-
-    /*
-     * Advanced words use a
-     * contextual question.
-     */
-
-    let sentence =
-        word.example ||
-        `The teacher discussed the ______ issue with the class.`;
-
-
-    if (
-        sentence
-            .toLowerCase()
-            .includes(
-                word.word.toLowerCase()
-            )
-    ) {
-
-        sentence =
-            sentence.replace(
-                new RegExp(
-                    word.word,
-                    "gi"
-                ),
-                "______"
-            );
-
-    }
-    else {
-
-        sentence =
-            `Choose the best word to complete this sentence: The teacher described the issue as ______.`;
-
-    }
-
-
-    const correct =
-        word.word;
-
-
-    const distractors =
-        getDistractors(
-            word,
-            3
-        );
-
-
-    return {
-
-        type: "challenge",
-
-        word: word,
-
-        prompt:
-            sentence,
-
-        options:
-            shuffle([
-                correct,
-                ...distractors
-            ]),
-
-        answer: correct,
-
-        explanation:
-            `${word.word}: ${word.meaning || "See the example sentence for context."}`
-
-    };
-
-}
-
-
-/* =====================================================
-   DISTRACTORS
-===================================================== */
-
-function getDistractors(
-    word,
-    amount
+function getWrongMeanings(
+    correctWord,
+    count
 ) {
 
     let candidates =
-        vocabulary.filter(
-            item =>
-                item.id !== word.id
+        vocabularyData
+            .filter(
+                item =>
+                    item.id !==
+                    correctWord.id &&
+                    (
+                        item.meaning ||
+                        item.chinese
+                    )
+            );
+
+
+    candidates =
+        shuffle(
+            candidates.slice()
         );
 
 
-    /*
-     * Prefer nearby levels.
-     */
-
-    candidates.sort(
-        (a, b) => {
-
-            const da =
-                Math.abs(
-                    a.level -
-                    word.level
-                );
-
-            const db =
-                Math.abs(
-                    b.level -
-                    word.level
-                );
-
-            return da - db;
-
-        }
-    );
-
-
-    const result = [];
+    let results = [];
 
 
     for (
         let item of candidates
     ) {
 
+        let meaning =
+            getCorrectMeaning(
+                item
+            );
+
+
         if (
-            result.length >= amount
+            meaning &&
+            meaning !==
+            getCorrectMeaning(
+                correctWord
+            )
+        ) {
+
+            results.push(
+                meaning
+            );
+
+        }
+
+
+        if (
+            results.length >=
+            count
         ) {
 
             break;
 
         }
 
+    }
 
-        if (
-            item.word !== word.word
-        ) {
 
-            result.push(
-                item.word
-            );
+    /*
+     * Safety fallback.
+     */
 
-        }
+    while (
+        results.length < count
+    ) {
+
+        results.push(
+            "another possible meaning"
+        );
 
     }
 
 
-    return result;
+    return results;
+
+}
+
+
+/* =====================================================
+   WRONG WORDS
+===================================================== */
+
+function getWrongWords(
+    correctWord,
+    count
+) {
+
+    let candidates =
+        vocabularyData
+            .filter(
+                item =>
+                    item.id !==
+                    correctWord.id
+            );
+
+
+    candidates =
+        shuffle(
+            candidates.slice()
+        );
+
+
+    return candidates
+        .slice(
+            0,
+            count
+        )
+        .map(
+            item =>
+                item.word
+        );
+
+}
+
+
+/* =====================================================
+   EXPLANATION
+===================================================== */
+
+function getExplanation(
+    word
+) {
+
+    let text = "";
+
+
+    if (
+        word.meaning
+    ) {
+
+        text +=
+            "Meaning: " +
+            word.meaning;
+
+    }
+
+
+    if (
+        word.chinese
+    ) {
+
+        text +=
+            "<br>中文： " +
+            word.chinese;
+
+    }
+
+
+    if (
+        word.example
+    ) {
+
+        text +=
+            "<br><br>Example: " +
+            word.example;
+
+    }
+
+
+    if (
+        word.synonyms &&
+        word.synonyms.length
+    ) {
+
+        text +=
+            "<br><br>Synonyms: " +
+            word.synonyms.join(
+                ", "
+            );
+
+    }
+
+
+    return text;
 
 }
 
@@ -1842,7 +1553,7 @@ function showQuestion() {
     answered = false;
 
 
-    const q =
+    let q =
         questions[
             currentQuestion
         ];
@@ -1850,72 +1561,110 @@ function showQuestion() {
 
     if (!q) {
 
-        showResult();
-
         return;
 
     }
 
 
-    const number =
-        currentQuestion + 1;
-
-
     document
         .getElementById(
-            "questionNumber"
+            "progressText"
         )
         .textContent =
-            `Question ${number} of ${questions.length}`;
+        "Question " +
+        (currentQuestion + 1) +
+        " of " +
+        questions.length;
 
 
     document
         .getElementById(
-            "level"
+            "levelText"
         )
         .textContent =
-            `Level ${q.word.level}`;
+        "Level " +
+        q.level;
+
+
+    let percentage =
+        (
+            (currentQuestion + 1) /
+            questions.length
+        ) * 100;
 
 
     document
         .getElementById(
-            "progress"
+            "progressBar"
         )
         .style.width =
-            `${(number / questions.length) * 100}%`;
+        percentage + "%";
 
 
     document
         .getElementById(
-            "questionType"
+            "questionText"
         )
-        .textContent =
-            getQuestionTypeName(
-                q.type
+        .innerHTML =
+        q.question;
+
+
+    let options =
+        q.options ||
+        [];
+
+
+    /*
+     * Meaning questions already have
+     * options.
+     *
+     * Synonym questions need options.
+     */
+
+    if (
+        !q.options
+    ) {
+
+        let correct =
+            q.answer;
+
+
+        let wrong =
+            getWrongMeanings(
+                q.word,
+                3
             );
 
 
-    document
-        .getElementById(
-            "question"
-        )
-        .innerHTML =
-            q.prompt;
+        options =
+            shuffle(
+                [
+                    correct,
+                    ...wrong
+                ]
+            );
 
 
-    const options =
+        q.options =
+            options;
+
+    }
+
+
+    let optionsContainer =
         document.getElementById(
             "options"
         );
 
 
-    options.innerHTML = "";
+    optionsContainer.innerHTML =
+        "";
 
 
-    q.options.forEach(
-        option => {
+    options.forEach(
+        function(option) {
 
-            const button =
+            let button =
                 document.createElement(
                     "button"
                 );
@@ -1930,14 +1679,17 @@ function showQuestion() {
 
 
             button.onclick =
-                () =>
+                function() {
+
                     checkAnswer(
                         option,
                         button
                     );
 
+                };
 
-            options.appendChild(
+
+            optionsContainer.appendChild(
                 button
             );
 
@@ -1945,17 +1697,19 @@ function showQuestion() {
     );
 
 
-    const feedback =
-        document.getElementById(
+    document
+        .getElementById(
             "feedback"
-        );
-
-
-    feedback.className =
+        )
+        .className =
         "feedback";
 
 
-    feedback.innerHTML =
+    document
+        .getElementById(
+            "feedback"
+        )
+        .innerHTML =
         "";
 
 
@@ -1964,41 +1718,7 @@ function showQuestion() {
             "nextButton"
         )
         .style.display =
-            "none";
-
-}
-
-
-/* =====================================================
-   QUESTION TYPE NAME
-===================================================== */
-
-function getQuestionTypeName(type) {
-
-    const names = {
-
-        meaning:
-            "WORD MEANING",
-
-        synonym:
-            "SYNONYM",
-
-        context:
-            "CONTEXT",
-
-        cloze:
-            "CLOZE",
-
-        challenge:
-            "PSLE CHALLENGE"
-
-    };
-
-
-    return (
-        names[type] ||
-        "VOCABULARY"
-    );
+        "none";
 
 }
 
@@ -2012,7 +1732,9 @@ function checkAnswer(
     clickedButton
 ) {
 
-    if (answered) {
+    if (
+        answered
+    ) {
 
         return;
 
@@ -2022,24 +1744,25 @@ function checkAnswer(
     answered = true;
 
 
-    const q =
+    let q =
         questions[
             currentQuestion
         ];
 
 
-    const correct =
-        selected === q.answer;
+    let correct =
+        selected ===
+        q.answer;
 
 
-    const buttons =
+    let buttons =
         document.querySelectorAll(
             ".option"
         );
 
 
     buttons.forEach(
-        button => {
+        function(button) {
 
             button.disabled =
                 true;
@@ -2060,7 +1783,9 @@ function checkAnswer(
     );
 
 
-    if (correct) {
+    if (
+        correct
+    ) {
 
         score++;
 
@@ -2072,7 +1797,7 @@ function checkAnswer(
 
         showFeedback(
             true,
-            "Correct!",
+            "Correct! ✓",
             q.explanation
         );
 
@@ -2085,15 +1810,13 @@ function checkAnswer(
         );
 
 
-        wrongWords.push(
-            q.word
-        );
-
-
         showFeedback(
             false,
             "Not quite.",
-            `The correct answer is "${q.answer}". ${q.explanation}`
+            'The correct answer is "' +
+            q.answer +
+            '".<br><br>' +
+            q.explanation
         );
 
     }
@@ -2104,7 +1827,7 @@ function checkAnswer(
             "nextButton"
         )
         .style.display =
-            "block";
+        "block";
 
 }
 
@@ -2119,7 +1842,7 @@ function showFeedback(
     text
 ) {
 
-    const feedback =
+    let feedback =
         document.getElementById(
             "feedback"
         );
@@ -2131,17 +1854,13 @@ function showFeedback(
             : "feedback wrong";
 
 
-    feedback.innerHTML = `
-
-        <div class="feedback-title">
-            ${title}
-        </div>
-
-        <div>
-            ${text}
-        </div>
-
-    `;
+    feedback.innerHTML =
+        '<div class="feedback-title">' +
+        title +
+        "</div>" +
+        "<div>" +
+        text +
+        "</div>";
 
 }
 
@@ -2183,7 +1902,7 @@ function showResult() {
             "quiz"
         )
         .style.display =
-            "none";
+        "none";
 
 
     document
@@ -2191,7 +1910,7 @@ function showResult() {
             "result"
         )
         .style.display =
-            "block";
+        "block";
 
 
     document
@@ -2199,10 +1918,12 @@ function showResult() {
             "score"
         )
         .textContent =
-            `${score} / ${questions.length}`;
+        score +
+        " / " +
+        questions.length;
 
 
-    const percentage =
+    let percentage =
         Math.round(
             score /
             questions.length *
@@ -2210,11 +1931,12 @@ function showResult() {
         );
 
 
-    let message = "";
+    let message;
 
 
     if (
-        percentage === 100
+        percentage ===
+        100
     ) {
 
         message =
@@ -2236,7 +1958,7 @@ function showResult() {
     ) {
 
         message =
-            "Good effort! Keep practising your weak words. 📚";
+            "Good effort! Keep practising your vocabulary. 📚";
 
     }
 
@@ -2253,169 +1975,7 @@ function showResult() {
             "resultMessage"
         )
         .textContent =
-            message;
-
-
-    saveWeakWords();
-
-
-    showWeakWords();
-
-}
-
-
-/* =====================================================
-   SAVE WEAK WORDS
-===================================================== */
-
-function saveWeakWords() {
-
-    if (
-        wrongWords.length === 0
-    ) {
-
-        return;
-
-    }
-
-
-    let saved = [];
-
-
-    try {
-
-        saved =
-            JSON.parse(
-                localStorage.getItem(
-                    "aplusWeakWords"
-                )
-            ) || [];
-
-    }
-
-    catch(e) {
-
-        saved = [];
-
-    }
-
-
-    wrongWords.forEach(
-        word => {
-
-            if (
-                !saved.some(
-                    item =>
-                        item.id === word.id
-                )
-            ) {
-
-                saved.push(word);
-
-            }
-
-        }
-    );
-
-
-    /*
-     * Keep the latest 50 weak words.
-     */
-
-    saved =
-        saved.slice(-50);
-
-
-    localStorage.setItem(
-        "aplusWeakWords",
-        JSON.stringify(saved)
-    );
-
-}
-
-
-/* =====================================================
-   SHOW WEAK WORDS
-===================================================== */
-
-function showWeakWords() {
-
-    const list =
-        document.getElementById(
-            "weakList"
-        );
-
-
-    let saved = [];
-
-
-    try {
-
-        saved =
-            JSON.parse(
-                localStorage.getItem(
-                    "aplusWeakWords"
-                )
-            ) || [];
-
-    }
-
-    catch(e) {
-
-        saved = [];
-
-    }
-
-
-    /*
-     * Remove duplicates.
-     */
-
-    const unique = [];
-
-
-    saved.forEach(
-        word => {
-
-            if (
-                !unique.some(
-                    item =>
-                        item.id === word.id
-                )
-            ) {
-
-                unique.push(word);
-
-            }
-
-        }
-    );
-
-
-    if (
-        unique.length === 0
-    ) {
-
-        list.innerHTML =
-            `<span class="weak-word">
-                No weak words yet — great job!
-            </span>`;
-
-        return;
-
-    }
-
-
-    list.innerHTML =
-        unique
-            .slice(-20)
-            .map(
-                word =>
-                    `<span class="weak-word">
-                        ${escapeHTML(word.word)}
-                    </span>`
-            )
-            .join("");
+        message;
 
 }
 
@@ -2430,16 +1990,15 @@ function restartQuiz() {
 
     score = 0;
 
-    wrongWords = [];
-
     questions = [];
+
 
     document
         .getElementById(
             "result"
         )
         .style.display =
-            "none";
+        "none";
 
 
     document
@@ -2447,7 +2006,7 @@ function restartQuiz() {
             "quiz"
         )
         .style.display =
-            "block";
+        "block";
 
 
     createDailyQuestions();
@@ -2458,14 +2017,75 @@ function restartQuiz() {
 
 
 /* =====================================================
+   RANDOM CHOICE
+===================================================== */
+
+function randomChoice(
+    array
+) {
+
+    return array[
+        Math.floor(
+            Math.random() *
+            array.length
+        )
+    ];
+
+}
+
+
+/* =====================================================
    SHUFFLE
 ===================================================== */
 
-function shuffle(array) {
+function shuffle(
+    array
+) {
 
-    return array.sort(
-        () =>
-            Math.random() - 0.5
+    for (
+        let i =
+            array.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        let j =
+            Math.floor(
+                Math.random() *
+                (i + 1)
+            );
+
+
+        [
+            array[i],
+            array[j]
+        ] =
+        [
+            array[j],
+            array[i]
+        ];
+
+    }
+
+
+    return array;
+
+}
+
+
+/* =====================================================
+   ESCAPE REGEX
+===================================================== */
+
+function escapeRegExp(
+    string
+) {
+
+    return String(
+        string
+    ).replace(
+        /[.*+?^${}()|[\]\\]/g,
+        "\\$&"
     );
 
 }
@@ -2479,38 +2099,38 @@ function escapeHTML(
     value
 ) {
 
-    return String(value)
+    return String(
+        value
+    )
 
-        .replace(
-            /&/g,
-            "&amp;"
-        )
+    .replace(
+        /&/g,
+        "&amp;"
+    )
 
-        .replace(
-            /</g,
-            "&lt;"
-        )
+    .replace(
+        /</g,
+        "&lt;"
+    )
 
-        .replace(
-            />/g,
-            "&gt;"
-        )
+    .replace(
+        />/g,
+        "&gt;"
+    )
 
-        .replace(
-            /"/g,
-            "&quot;"
-        )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
 
-        .replace(
-            /'/g,
-            "&#039;"
-        );
+    .replace(
+        /'/g,
+        "&#039;"
+    );
 
 }
 
 </script>
 
-
 </body>
-
 </html>
