@@ -1,9 +1,22 @@
-// APLUS ACHIEVER
-// PSLE English Vocabulary Database
-// Level 1 - Batch 1
-// Version 1.0
+/* =========================================================
+   APLUS ACHIEVER
+   PSLE ENGLISH VOCABULARY DATABASE
+   =========================================================
 
-const vocabulary = [
+   IMPORTANT:
+   The website expects:
+       window.vocabulary
+
+   DO NOT change this to:
+       const vocabulary = ...
+
+   ========================================================= */
+
+window.vocabulary = [
+
+  /* =========================================================
+     LEVEL 1 — FOUNDATION
+     ========================================================= */
 
   {
     id: 1,
@@ -26,15 +39,15 @@ const vocabulary = [
     word: "advise",
     partOfSpeech: "verb",
     level: 1,
-    meaning: "to give someone suggestions about what they should do",
-    example: "The teacher advised Ben to revise his work carefully.",
-    synonyms: ["recommend", "suggest"],
+    meaning: "to tell someone what you think they should do",
+    example: "The teacher advised the pupils to read the question carefully.",
+    synonyms: ["recommend"],
     antonyms: [],
-    collocations: ["advise someone to do something", "advise against something"],
-    topic: "Communication",
-    difficulty: 40,
-    psleValue: 88,
-    confusion: "Advise is a verb. Advice is a noun."
+    collocations: ["advise someone to", "advise against", "advise someone on"],
+    topic: "School",
+    difficulty: 38,
+    psleValue: 85,
+    confusion: "Advise is a verb. Advice is the noun."
   },
 
   {
@@ -43,14 +56,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "worried or nervous about something",
-    example: "Mia felt anxious before her important examination.",
+    example: "Sarah felt anxious before her examination.",
     synonyms: ["worried", "nervous"],
-    antonyms: ["calm", "relaxed"],
-    collocations: ["feel anxious", "anxious about something"],
+    antonyms: ["calm"],
+    collocations: ["feel anxious", "anxious about", "anxious child"],
     topic: "Feelings",
     difficulty: 42,
-    psleValue: 90,
-    confusion: "In this level, anxious means worried. Do not confuse it with eager, which means very excited to do something."
+    psleValue: 88,
+    confusion: "Anxious usually means worried or nervous, especially about something that may happen."
   },
 
   {
@@ -59,14 +72,14 @@ const vocabulary = [
     partOfSpeech: "verb",
     level: 1,
     meaning: "to stay away from someone or something",
-    example: "We should avoid touching electrical switches with wet hands.",
+    example: "We should avoid touching electrical appliances with wet hands.",
     synonyms: ["keep away from"],
-    antonyms: ["approach", "face"],
-    collocations: ["avoid danger", "avoid making mistakes", "avoid doing something"],
+    antonyms: ["approach"],
+    collocations: ["avoid danger", "avoid doing something", "avoid mistakes"],
     topic: "Safety",
     difficulty: 35,
-    psleValue: 91,
-    confusion: "Avoid is normally followed by a noun or an -ing verb."
+    psleValue: 86,
+    confusion: "Avoid is normally followed by a noun or -ing form, not 'to + verb'."
   },
 
   {
@@ -75,14 +88,14 @@ const vocabulary = [
     partOfSpeech: "verb",
     level: 1,
     meaning: "to act in a particular way",
-    example: "The children behaved well during the school assembly.",
+    example: "The pupils behaved well during the school assembly.",
     synonyms: ["act"],
-    antonyms: ["misbehave"],
+    antonyms: [],
     collocations: ["behave well", "behave badly", "behave properly"],
     topic: "Character",
-    difficulty: 30,
-    psleValue: 86,
-    confusion: "Behave describes how someone acts, especially how they conduct themselves."
+    difficulty: 32,
+    psleValue: 78,
+    confusion: "Behave describes how someone acts, especially whether the behaviour is acceptable."
   },
 
   {
@@ -90,15 +103,15 @@ const vocabulary = [
     word: "brave",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "willing to face danger or difficulty without fear",
-    example: "The brave boy helped his younger sister during the emergency.",
-    synonyms: ["courageous", "fearless"],
+    meaning: "showing courage when facing danger or difficulty",
+    example: "The brave boy helped the injured dog.",
+    synonyms: ["courageous"],
     antonyms: ["cowardly"],
-    collocations: ["brave person", "brave decision", "brave enough to"],
+    collocations: ["brave person", "brave decision", "brave enough"],
     topic: "Character",
-    difficulty: 25,
-    psleValue: 78,
-    confusion: "Brave does not mean that a person has no fear. A brave person can feel afraid but still does what is necessary."
+    difficulty: 28,
+    psleValue: 80,
+    confusion: "Brave describes someone who faces danger or difficulty without giving up because of fear."
   },
 
   {
@@ -106,15 +119,15 @@ const vocabulary = [
     word: "careful",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "giving attention to what you are doing in order to avoid mistakes or danger",
-    example: "Be careful when you cross the busy road.",
+    meaning: "taking care to avoid mistakes or danger",
+    example: "Be careful when crossing the busy road.",
     synonyms: ["cautious"],
     antonyms: ["careless"],
-    collocations: ["be careful", "careful with", "careful about"],
+    collocations: ["be careful", "careful with", "careful decision"],
     topic: "Safety",
     difficulty: 25,
-    psleValue: 84,
-    confusion: "Careful means taking care to avoid mistakes or danger. Careless means not taking enough care."
+    psleValue: 78,
+    confusion: "Careful means taking care. Careless means not taking enough care."
   },
 
   {
@@ -123,13 +136,13 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "happy and positive",
-    example: "Despite the rainy weather, Lily remained cheerful.",
-    synonyms: ["happy", "bright"],
-    antonyms: ["gloomy", "sad"],
+    example: "The cheerful girl greeted everyone with a smile.",
+    synonyms: ["happy", "joyful"],
+    antonyms: ["gloomy"],
     collocations: ["cheerful smile", "cheerful person", "remain cheerful"],
     topic: "Feelings",
-    difficulty: 38,
-    psleValue: 80,
+    difficulty: 35,
+    psleValue: 79,
     confusion: "Cheerful describes a generally happy and positive mood."
   },
 
@@ -138,15 +151,15 @@ const vocabulary = [
     word: "curious",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "wanting to know or learn about something",
-    example: "The curious girl asked many questions about the strange object.",
+    meaning: "wanting to know or learn something",
+    example: "The curious child asked many questions about space.",
     synonyms: ["inquisitive"],
     antonyms: ["uninterested"],
-    collocations: ["curious about", "curious to know"],
-    topic: "Character",
-    difficulty: 38,
-    psleValue: 89,
-    confusion: "Curious can describe a desire to learn or find out more. It can also mean unusual in some contexts."
+    collocations: ["curious about", "curious child", "curious to know"],
+    topic: "Learning",
+    difficulty: 36,
+    psleValue: 84,
+    confusion: "Curious can mean eager to learn or interested in finding out something."
   },
 
   {
@@ -154,14 +167,14 @@ const vocabulary = [
     word: "decide",
     partOfSpeech: "verb",
     level: 1,
-    meaning: "to choose what you will do after thinking about different possibilities",
-    example: "After discussing the problem, the team decided to try again.",
-    synonyms: ["choose", "determine"],
+    meaning: "to choose something after thinking about it",
+    example: "After discussing the problem, the pupils decided to help their classmate.",
+    synonyms: ["choose"],
     antonyms: [],
-    collocations: ["decide to do something", "decide on something", "make a decision"],
-    topic: "Thinking",
-    difficulty: 30,
-    psleValue: 86,
+    collocations: ["decide to", "decide whether", "make a decision"],
+    topic: "Actions",
+    difficulty: 28,
+    psleValue: 85,
     confusion: "Decide is a verb. Decision is the noun."
   },
 
@@ -170,15 +183,15 @@ const vocabulary = [
     word: "disappointed",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "sad because something was not as good or successful as expected",
-    example: "Jason was disappointed when the school trip was cancelled.",
-    synonyms: ["let down", "dissatisfied"],
-    antonyms: ["pleased", "satisfied"],
-    collocations: ["feel disappointed", "be disappointed with", "be disappointed by"],
+    meaning: "sad because something was not as good as expected",
+    example: "Tom was disappointed when the football match was cancelled.",
+    synonyms: ["upset"],
+    antonyms: ["pleased"],
+    collocations: ["feel disappointed", "disappointed with", "deeply disappointed"],
     topic: "Feelings",
-    difficulty: 45,
-    psleValue: 94,
-    confusion: "Disappointed means unhappy because expectations were not met. It is different from surprised."
+    difficulty: 42,
+    psleValue: 90,
+    confusion: "Disappointed means that reality was worse or less satisfying than expected."
   },
 
   {
@@ -186,15 +199,15 @@ const vocabulary = [
     word: "encourage",
     partOfSpeech: "verb",
     level: 1,
-    meaning: "to give someone support or confidence to do something",
-    example: "Her parents encouraged her to keep trying after she made a mistake.",
-    synonyms: ["support", "motivate"],
+    meaning: "to give someone confidence or support",
+    example: "The teacher encouraged the pupils to keep trying.",
+    synonyms: ["support"],
     antonyms: ["discourage"],
-    collocations: ["encourage someone to", "encourage good habits"],
+    collocations: ["encourage someone to", "encourage learning", "encourage children"],
     topic: "Relationships",
-    difficulty: 42,
-    psleValue: 93,
-    confusion: "Encourage means to give support or confidence, not simply to tell someone what to do."
+    difficulty: 40,
+    psleValue: 91,
+    confusion: "Encourage means to give someone confidence or motivation to do something."
   },
 
   {
@@ -204,13 +217,13 @@ const vocabulary = [
     level: 1,
     meaning: "extremely large",
     example: "An enormous tree stood in the middle of the park.",
-    synonyms: ["huge", "giant"],
-    antonyms: ["tiny", "small"],
-    collocations: ["enormous amount", "enormous size", "enormous building"],
+    synonyms: ["huge", "massive"],
+    antonyms: ["tiny"],
+    collocations: ["enormous amount", "enormous building", "enormous tree"],
     topic: "Description",
-    difficulty: 40,
-    psleValue: 86,
-    confusion: "Enormous is stronger than large or big."
+    difficulty: 35,
+    psleValue: 83,
+    confusion: "Enormous means extremely large in size, amount or degree."
   },
 
   {
@@ -219,13 +232,13 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "extremely tired",
-    example: "After walking for several hours, the hikers were exhausted.",
-    synonyms: ["extremely tired", "worn out"],
-    antonyms: ["energetic", "rested"],
-    collocations: ["feel exhausted", "completely exhausted"],
+    example: "After running the race, Daniel was completely exhausted.",
+    synonyms: ["very tired"],
+    antonyms: ["energetic"],
+    collocations: ["feel exhausted", "completely exhausted", "physically exhausted"],
     topic: "Health",
-    difficulty: 45,
-    psleValue: 94,
+    difficulty: 40,
+    psleValue: 87,
     confusion: "Exhausted is much stronger than simply tired."
   },
 
@@ -234,15 +247,15 @@ const vocabulary = [
     word: "familiar",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "well known because you have seen, heard or experienced it before",
-    example: "The street looked familiar, so I knew we were close to home.",
-    synonyms: ["well-known", "recognisable"],
-    antonyms: ["unfamiliar", "unknown"],
+    meaning: "well known because you have seen or experienced it before",
+    example: "The place looked familiar, although I could not remember its name.",
+    synonyms: ["known"],
+    antonyms: ["unfamiliar"],
     collocations: ["familiar with", "familiar face", "familiar place"],
     topic: "General",
-    difficulty: 48,
-    psleValue: 88,
-    confusion: "Be familiar with something means to know it well because you have experienced or learned about it before."
+    difficulty: 43,
+    psleValue: 90,
+    confusion: "Familiar means known because of previous experience."
   },
 
   {
@@ -250,14 +263,14 @@ const vocabulary = [
     word: "fortunate",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "lucky or having good things happen to you",
-    example: "We were fortunate to find shelter before the heavy rain began.",
+    meaning: "having good luck",
+    example: "We were fortunate to find shelter before the storm began.",
     synonyms: ["lucky"],
-    antonyms: ["unfortunate", "unlucky"],
-    collocations: ["be fortunate to", "fortunate enough to"],
+    antonyms: ["unfortunate"],
+    collocations: ["fortunate enough", "fortunate to", "fortunate person"],
     topic: "General",
-    difficulty: 50,
-    psleValue: 84,
+    difficulty: 45,
+    psleValue: 86,
     confusion: "Fortunate is a more formal word for lucky."
   },
 
@@ -267,14 +280,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "feeling thankful for something someone has done",
-    example: "I am grateful to my friend for helping me with my project.",
+    example: "I am grateful to my parents for their support.",
     synonyms: ["thankful"],
-    antonyms: ["ungrateful"],
-    collocations: ["grateful to someone", "grateful for something"],
+    antonyms: [],
+    collocations: ["grateful to", "grateful for", "deeply grateful"],
     topic: "Feelings",
-    difficulty: 45,
-    psleValue: 92,
-    confusion: "We are grateful to a person for something."
+    difficulty: 40,
+    psleValue: 91,
+    confusion: "Use 'grateful to someone for something'."
   },
 
   {
@@ -283,14 +296,14 @@ const vocabulary = [
     partOfSpeech: "verb",
     level: 1,
     meaning: "to pause because you are unsure about what to do",
-    example: "Ella hesitated before answering the difficult question.",
-    synonyms: ["pause", "waver"],
-    antonyms: ["act", "decide"],
+    example: "She hesitated before answering the difficult question.",
+    synonyms: ["pause"],
+    antonyms: ["decide"],
     collocations: ["hesitate to", "hesitate before", "without hesitation"],
     topic: "Actions",
     difficulty: 48,
-    psleValue: 90,
-    confusion: "Hesitate means to pause because you are uncertain, not simply because you are busy."
+    psleValue: 92,
+    confusion: "Hesitate suggests uncertainty before making an action or decision."
   },
 
   {
@@ -298,15 +311,15 @@ const vocabulary = [
     word: "honest",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "always telling the truth and not cheating or stealing",
-    example: "The honest boy admitted that he had broken the vase.",
-    synonyms: ["truthful", "sincere"],
+    meaning: "telling the truth and not cheating or stealing",
+    example: "The honest boy returned the wallet he found.",
+    synonyms: ["truthful"],
     antonyms: ["dishonest"],
-    collocations: ["honest person", "be honest with", "honest answer"],
+    collocations: ["honest person", "be honest", "honest answer"],
     topic: "Character",
-    difficulty: 28,
-    psleValue: 89,
-    confusion: "Honest describes a person or action that is truthful and fair."
+    difficulty: 30,
+    psleValue: 88,
+    confusion: "Honest describes someone who tells the truth and behaves fairly."
   },
 
   {
@@ -315,14 +328,14 @@ const vocabulary = [
     partOfSpeech: "verb",
     level: 1,
     meaning: "to become better or make something better",
-    example: "Sam practised every day to improve his spelling.",
-    synonyms: ["develop", "enhance"],
+    example: "Regular reading can improve your vocabulary.",
+    synonyms: ["develop"],
     antonyms: ["worsen"],
-    collocations: ["improve your skills", "improve performance", "improve gradually"],
+    collocations: ["improve skills", "improve performance", "improve health"],
     topic: "Learning",
-    difficulty: 32,
+    difficulty: 30,
     psleValue: 94,
-    confusion: "Improve can be used for both people and things."
+    confusion: "Improve means become better or make something better."
   },
 
   {
@@ -331,14 +344,14 @@ const vocabulary = [
     partOfSpeech: "verb",
     level: 1,
     meaning: "to contain something as part of a whole",
-    example: "The price includes breakfast and a bottle of water.",
-    synonyms: ["contain", "involve"],
+    example: "The price includes breakfast and a drink.",
+    synonyms: ["contain"],
     antonyms: ["exclude"],
-    collocations: ["include something", "include someone in something"],
+    collocations: ["include something", "include information", "include everyone"],
     topic: "General",
-    difficulty: 35,
-    psleValue: 92,
-    confusion: "Include means something is part of a group or whole. Exclude means to leave it out."
+    difficulty: 30,
+    psleValue: 89,
+    confusion: "Include means to contain something as part of a group or whole."
   },
 
   {
@@ -347,14 +360,14 @@ const vocabulary = [
     partOfSpeech: "adverb",
     level: 1,
     meaning: "in place of someone or something else",
-    example: "We did not go swimming. Instead, we played badminton indoors.",
+    example: "We planned to walk, but we took the bus instead.",
     synonyms: ["alternatively"],
     antonyms: [],
-    collocations: ["instead of", "instead"],
+    collocations: ["instead of", "do something instead", "instead"],
     topic: "General",
-    difficulty: 42,
-    psleValue: 95,
-    confusion: "Instead of is followed by a noun, pronoun or -ing form."
+    difficulty: 35,
+    psleValue: 92,
+    confusion: "Instead of is followed by a noun or -ing form."
   },
 
   {
@@ -363,14 +376,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "able to learn, understand and think well",
-    example: "The intelligent student quickly understood the difficult problem.",
-    synonyms: ["clever", "bright"],
+    example: "The intelligent student quickly understood the problem.",
+    synonyms: ["clever", "smart"],
     antonyms: ["unintelligent"],
-    collocations: ["intelligent person", "intelligent decision"],
+    collocations: ["intelligent person", "intelligent decision", "highly intelligent"],
     topic: "Character",
-    difficulty: 40,
-    psleValue: 82,
-    confusion: "Intelligent refers to someone's ability to understand and learn."
+    difficulty: 38,
+    psleValue: 84,
+    confusion: "Intelligent refers to the ability to understand, learn and solve problems."
   },
 
   {
@@ -379,14 +392,14 @@ const vocabulary = [
     partOfSpeech: "verb",
     level: 1,
     meaning: "to ask someone to come to an event or place",
-    example: "Amy invited her classmates to her birthday party.",
+    example: "Jenny invited her friends to her birthday party.",
     synonyms: ["ask"],
     antonyms: [],
-    collocations: ["invite someone to", "invite someone over"],
+    collocations: ["invite someone to", "invite someone over", "invite guests"],
     topic: "Relationships",
-    difficulty: 30,
-    psleValue: 80,
-    confusion: "Invite is a verb. Invitation is the noun."
+    difficulty: 28,
+    psleValue: 84,
+    confusion: "Invite someone to a place or event."
   },
 
   {
@@ -395,14 +408,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "sad because you feel that you have no friends or company",
-    example: "The new student felt lonely during his first week at school.",
+    example: "The new pupil felt lonely during his first week at school.",
     synonyms: ["isolated"],
-    antonyms: ["companionable"],
-    collocations: ["feel lonely", "lonely person", "lonely place"],
+    antonyms: [],
+    collocations: ["feel lonely", "lonely child", "lonely place"],
     topic: "Feelings",
-    difficulty: 40,
-    psleValue: 88,
-    confusion: "Lonely describes a feeling. Alone simply means without other people."
+    difficulty: 38,
+    psleValue: 91,
+    confusion: "Lonely means unhappy because of a lack of companionship. Alone simply means without other people."
   },
 
   {
@@ -411,14 +424,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "worried or afraid about something that is going to happen",
-    example: "Kevin felt nervous before speaking in front of the class.",
+    example: "The boy felt nervous before giving his speech.",
     synonyms: ["anxious", "worried"],
-    antonyms: ["calm", "confident"],
+    antonyms: ["calm"],
     collocations: ["feel nervous", "nervous about", "nervous before"],
     topic: "Feelings",
-    difficulty: 32,
-    psleValue: 92,
-    confusion: "Nervous often describes worry or fear before an event."
+    difficulty: 30,
+    psleValue: 90,
+    confusion: "Nervous is commonly used when someone is worried about an upcoming event."
   },
 
   {
@@ -426,15 +439,15 @@ const vocabulary = [
     word: "ordinary",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "normal and not special or unusual",
-    example: "It looked like an ordinary box, but it contained an important letter.",
+    meaning: "normal and not unusual or special",
+    example: "It looked like an ordinary school bag.",
     synonyms: ["normal", "usual"],
-    antonyms: ["unusual", "extraordinary"],
-    collocations: ["ordinary day", "ordinary person", "ordinary object"],
+    antonyms: ["unusual"],
+    collocations: ["ordinary person", "ordinary day", "ordinary life"],
     topic: "Description",
-    difficulty: 45,
-    psleValue: 84,
-    confusion: "Ordinary means normal or usual, not necessarily bad."
+    difficulty: 38,
+    psleValue: 85,
+    confusion: "Ordinary means normal or usual, not special."
   },
 
   {
@@ -443,14 +456,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "able to wait calmly without becoming annoyed",
-    example: "The patient teacher explained the difficult concept again.",
-    synonyms: ["calm", "tolerant"],
+    example: "The patient teacher explained the difficult question again.",
+    synonyms: ["calm"],
     antonyms: ["impatient"],
-    collocations: ["be patient", "patient with someone"],
+    collocations: ["be patient", "patient with", "patient teacher"],
     topic: "Character",
-    difficulty: 38,
-    psleValue: 90,
-    confusion: "Patient has another meaning: a person receiving medical treatment. This database uses the character meaning."
+    difficulty: 40,
+    psleValue: 89,
+    confusion: "Here patient means able to wait calmly. It can also be a noun meaning a person receiving medical treatment."
   },
 
   {
@@ -460,13 +473,13 @@ const vocabulary = [
     level: 1,
     meaning: "enjoyable, comfortable or nice",
     example: "We had a pleasant afternoon at the park.",
-    synonyms: ["enjoyable", "agreeable"],
+    synonyms: ["enjoyable", "pleasant"],
     antonyms: ["unpleasant"],
-    collocations: ["pleasant experience", "pleasant smell", "pleasant weather"],
+    collocations: ["pleasant experience", "pleasant weather", "pleasant smell"],
     topic: "Description",
-    difficulty: 48,
-    psleValue: 86,
-    confusion: "Pleasant is a general positive word that can describe experiences, smells, weather and people."
+    difficulty: 42,
+    psleValue: 87,
+    confusion: "Pleasant describes something that gives you a good or comfortable feeling."
   },
 
   {
@@ -475,14 +488,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "having good manners and showing respect to others",
-    example: "It is polite to thank someone when they help you.",
-    synonyms: ["courteous", "well-mannered"],
-    antonyms: ["rude", "impolite"],
-    collocations: ["be polite", "polite manner", "polite request"],
+    example: "The polite pupil thanked the librarian.",
+    synonyms: ["courteous"],
+    antonyms: ["rude"],
+    collocations: ["polite person", "polite behaviour", "be polite"],
     topic: "Character",
     difficulty: 30,
-    psleValue: 88,
-    confusion: "Polite refers to behaviour that shows good manners and respect."
+    psleValue: 86,
+    confusion: "Polite describes respectful behaviour and good manners."
   },
 
   {
@@ -494,11 +507,11 @@ const vocabulary = [
     example: "I prefer reading books to watching television.",
     synonyms: ["favour"],
     antonyms: [],
-    collocations: ["prefer A to B", "prefer to do something"],
-    topic: "Preferences",
-    difficulty: 40,
-    psleValue: 94,
-    confusion: "The common structure is prefer A to B, not prefer A than B."
+    collocations: ["prefer A to B", "prefer to", "prefer doing"],
+    topic: "General",
+    difficulty: 38,
+    psleValue: 91,
+    confusion: "Use 'prefer A to B', not 'prefer A than B'."
   },
 
   {
@@ -506,15 +519,15 @@ const vocabulary = [
     word: "prepare",
     partOfSpeech: "verb",
     level: 1,
-    meaning: "to make yourself or something ready for an event or activity",
-    example: "The students prepared carefully for their English examination.",
+    meaning: "to get ready for something",
+    example: "The pupils prepared carefully for their examination.",
     synonyms: ["get ready"],
-    antonyms: [],
-    collocations: ["prepare for", "prepare something", "prepare yourself"],
-    topic: "Learning",
-    difficulty: 35,
+    antonyms": [],
+    collocations: ["prepare for", "prepare something", "prepare carefully"],
+    topic: "School",
+    difficulty: 30,
     psleValue: 92,
-    confusion: "Prepare for an event, but prepare something when you make something ready."
+    confusion: "Prepare means to make yourself or something ready."
   },
 
   {
@@ -522,31 +535,31 @@ const vocabulary = [
     word: "protect",
     partOfSpeech: "verb",
     level: 1,
-    meaning: "to keep someone or something safe from harm or danger",
-    example: "Trees help protect the soil from being washed away by heavy rain.",
-    synonyms: ["defend", "guard"],
-    antonyms: ["endanger", "harm"],
-    collocations: ["protect someone from", "protect the environment", "protect against"],
+    meaning: "to keep someone or something safe from harm",
+    example: "Trees help protect the soil from erosion.",
+    synonyms: ["guard"],
+    antonyms: ["harm"],
+    collocations: ["protect someone", "protect the environment", "protect against"],
     topic: "Safety",
-    difficulty: 38,
-    psleValue: 93,
-    confusion: "Protect means to prevent harm or danger."
+    difficulty: 34,
+    psleValue: 92,
+    confusion: "Protect means to keep someone or something safe from danger or damage."
   },
 
   {
     id: 34,
-    word: "realize",
+    word: "realise",
     partOfSpeech: "verb",
     level: 1,
     meaning: "to suddenly understand or become aware of something",
-    example: "I realised that I had left my water bottle at school.",
-    synonyms: ["understand", "recognise"],
+    example: "I realised that I had left my notebook at home.",
+    synonyms: ["understand"],
     antonyms: [],
-    collocations: ["realise that", "realise something"],
+    collocations: ["realise that", "suddenly realise", "realise the importance"],
     topic: "Thinking",
-    difficulty: 45,
+    difficulty: 42,
     psleValue: 94,
-    confusion: "Realise often describes becoming aware of something that you did not understand before."
+    confusion: "For Singapore/British English, use 'realise' rather than American 'realize'."
   },
 
   {
@@ -555,14 +568,14 @@ const vocabulary = [
     partOfSpeech: "verb",
     level: 1,
     meaning: "to get or be given something",
-    example: "Sarah received a certificate for her excellent performance.",
-    synonyms: ["get", "accept"],
+    example: "She received a letter from her friend.",
+    synonyms: ["get"],
     antonyms: ["give"],
-    collocations: ["receive a letter", "receive an award", "receive a message"],
+    collocations: ["receive a letter", "receive help", "receive an award"],
     topic: "General",
-    difficulty: 40,
-    psleValue: 90,
-    confusion: "Receive means to get something. It is often confused with the spelling of believe."
+    difficulty: 32,
+    psleValue: 91,
+    confusion: "Remember: receive is spelled with 'ei' after the c."
   },
 
   {
@@ -570,15 +583,15 @@ const vocabulary = [
     word: "reduce",
     partOfSpeech: "verb",
     level: 1,
-    meaning: "to make something smaller or less in amount",
-    example: "We can reduce waste by using reusable bags.",
-    synonyms: ["decrease", "lower"],
-    antonyms: ["increase", "raise"],
-    collocations: ["reduce waste", "reduce costs", "reduce the amount"],
+    meaning: "to make something smaller or less",
+    example: "We should reduce the amount of plastic we use.",
+    synonyms: ["decrease"],
+    antonyms: ["increase"],
+    collocations: ["reduce waste", "reduce costs", "reduce pollution"],
     topic: "Environment",
-    difficulty: 42,
+    difficulty: 38,
     psleValue: 94,
-    confusion: "Reduce means make less or smaller. Increase means make more or larger."
+    confusion: "Reduce means make less. Decrease can be used similarly."
   },
 
   {
@@ -586,15 +599,15 @@ const vocabulary = [
     word: "reliable",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "able to be trusted to do what is expected",
-    example: "Tom is a reliable friend who always keeps his promises.",
-    synonyms: ["dependable", "trustworthy"],
+    meaning: "able to be trusted or depended on",
+    example: "A reliable friend will help you when you need support.",
+    synonyms: ["dependable"],
     antonyms: ["unreliable"],
     collocations: ["reliable person", "reliable source", "reliable information"],
     topic: "Character",
-    difficulty: 55,
-    psleValue: 93,
-    confusion: "Reliable means that someone or something can be trusted to work or behave as expected."
+    difficulty: 48,
+    psleValue: 94,
+    confusion: "Reliable means that someone or something can be trusted to do what is expected."
   },
 
   {
@@ -603,14 +616,14 @@ const vocabulary = [
     partOfSpeech: "verb",
     level: 1,
     meaning: "to help someone remember something",
-    example: "Please remind me to bring my science book tomorrow.",
-    synonyms: ["prompt"],
+    example: "Please remind me to bring my homework tomorrow.",
+    synonyms: [],
     antonyms: [],
-    collocations: ["remind someone to", "remind someone of something"],
+    collocations: ["remind someone to", "remind someone of", "remind me"],
     topic: "Communication",
-    difficulty: 40,
-    psleValue: 95,
-    confusion: "Remind someone to do something. Remember means to have something in your memory."
+    difficulty: 38,
+    psleValue: 93,
+    confusion: "Use 'remind someone to do something' or 'remind someone of something'."
   },
 
   {
@@ -618,15 +631,15 @@ const vocabulary = [
     word: "responsible",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "having a duty to take care of something or someone",
-    example: "As the class leader, Mei was responsible for collecting the worksheets.",
-    synonyms: ["dependable", "reliable"],
+    meaning: "having a duty to deal with something or being trusted to do the right thing",
+    example: "A responsible pupil completes his homework on time.",
+    synonyms: ["reliable"],
     antonyms: ["irresponsible"],
-    collocations: ["responsible for", "responsible person", "take responsibility"],
+    collocations: ["responsible for", "responsible person", "socially responsible"],
     topic: "Character",
-    difficulty: 52,
+    difficulty: 45,
     psleValue: 95,
-    confusion: "Responsible for is followed by a noun or an -ing form."
+    confusion: "Responsible for something means having a duty or being in charge of it."
   },
 
   {
@@ -634,15 +647,15 @@ const vocabulary = [
     word: "satisfied",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "pleased because something is as good as you expected",
-    example: "The customer was satisfied with the service at the restaurant.",
-    synonyms: ["pleased", "content"],
+    meaning: "pleased because something is as good as expected",
+    example: "The customer was satisfied with the service.",
+    synonyms: ["pleased"],
     antonyms: ["dissatisfied"],
     collocations: ["satisfied with", "feel satisfied", "completely satisfied"],
     topic: "Feelings",
-    difficulty: 48,
-    psleValue: 90,
-    confusion: "Satisfied means pleased because expectations or needs have been met."
+    difficulty: 45,
+    psleValue: 91,
+    confusion: "Satisfied means pleased with a result or situation."
   },
 
   {
@@ -651,14 +664,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "showing good judgement and practical thinking",
-    example: "Wearing a raincoat was a sensible choice because the sky was dark.",
+    example: "It was sensible to bring an umbrella because dark clouds were gathering.",
     synonyms: ["wise", "practical"],
-    antonyms: ["foolish", "unwise"],
-    collocations: ["sensible choice", "sensible decision", "sensible person"],
+    antonyms: ["foolish"],
+    collocations: ["sensible choice", "sensible decision", "sensible advice"],
     topic: "Thinking",
-    difficulty: 55,
-    psleValue: 91,
-    confusion: "Sensible means showing good judgement. Sensitive means easily affected by feelings or changes."
+    difficulty: 50,
+    psleValue: 93,
+    confusion: "Sensible means showing good judgement. Do not confuse it with sensitive."
   },
 
   {
@@ -666,15 +679,15 @@ const vocabulary = [
     word: "serious",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "important or needing attention; not joking",
-    example: "The doctor said that the injury was not serious.",
-    synonyms: ["important", "severe"],
-    antonyms: ["minor", "trivial"],
-    collocations: ["serious problem", "serious injury", "serious matter"],
+    meaning: "important, worrying or requiring careful attention",
+    example: "The teacher realised that the problem was serious.",
+    synonyms: ["important"],
+    antonyms: ["minor"],
+    collocations: ["serious problem", "serious mistake", "take seriously"],
     topic: "General",
-    difficulty: 42,
-    psleValue: 89,
-    confusion: "Serious can describe a problem, situation, illness or a person's attitude."
+    difficulty: 35,
+    psleValue: 91,
+    confusion: "Serious can describe problems, situations, people, illnesses or behaviour."
   },
 
   {
@@ -682,15 +695,15 @@ const vocabulary = [
     word: "similar",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "almost the same, but not exactly the same",
-    example: "The two houses are similar in size and design.",
-    synonyms: ["alike", "comparable"],
-    antonyms: ["different", "dissimilar"],
-    collocations: ["similar to", "similar in", "very similar"],
+    meaning: "almost the same but not completely the same",
+    example: "The two bags look similar, but one is more expensive.",
+    synonyms: ["alike"],
+    antonyms: ["different"],
+    collocations: ["similar to", "similar idea", "similar situation"],
     topic: "Description",
-    difficulty: 38,
-    psleValue: 93,
-    confusion: "The common structure is similar to, not similar with."
+    difficulty: 35,
+    psleValue: 92,
+    confusion: "Use 'similar to', not 'similar with'."
   },
 
   {
@@ -698,15 +711,15 @@ const vocabulary = [
     word: "suitable",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "right or appropriate for a particular person, purpose or situation",
+    meaning: "right or appropriate for a particular purpose or situation",
     example: "These shoes are suitable for walking long distances.",
-    synonyms: ["appropriate", "fitting"],
-    antonyms: ["unsuitable", "inappropriate"],
+    synonyms: ["appropriate"],
+    antonyms: ["unsuitable"],
     collocations: ["suitable for", "suitable choice", "suitable place"],
     topic: "General",
     difficulty: 48,
-    psleValue: 93,
-    confusion: "Suitable means appropriate for a particular purpose or situation."
+    psleValue: 94,
+    confusion: "Suitable means appropriate or right for a particular purpose."
   },
 
   {
@@ -715,14 +728,14 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "feeling shocked because something unexpected has happened",
-    example: "I was surprised to see my old friend at the library.",
-    synonyms: ["amazed", "astonished"],
-    antonyms: ["expectant"],
-    collocations: ["be surprised by", "be surprised to", "surprised at"],
+    example: "I was surprised to see my old friend at the station.",
+    synonyms: ["amazed"],
+    antonyms: [],
+    collocations: ["feel surprised", "surprised to", "surprised by"],
     topic: "Feelings",
     difficulty: 32,
-    psleValue: 88,
-    confusion: "Surprised means something was unexpected. It does not necessarily mean the person was happy."
+    psleValue: 89,
+    confusion: "Use 'surprised' for how a person feels and 'surprising' for what causes the feeling."
   },
 
   {
@@ -730,15 +743,15 @@ const vocabulary = [
     word: "terrible",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "very bad, unpleasant or serious",
-    example: "The family stayed indoors because of the terrible storm.",
-    synonyms: ["awful", "horrible"],
-    antonyms: ["wonderful", "pleasant"],
-    collocations: ["terrible accident", "terrible weather", "terrible mistake"],
+    meaning: "very bad or unpleasant",
+    example: "The family experienced terrible weather during the trip.",
+    synonyms: ["awful"],
+    antonyms: ["excellent"],
+    collocations: ["terrible mistake", "terrible weather", "feel terrible"],
     topic: "Description",
-    difficulty: 38,
-    psleValue: 84,
-    confusion: "Terrible is a strong negative word and can describe situations, events or experiences."
+    difficulty: 30,
+    psleValue: 80,
+    confusion: "Terrible usually describes something extremely bad or unpleasant."
   },
 
   {
@@ -746,15 +759,15 @@ const vocabulary = [
     word: "thoughtful",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "kind and considerate because you think about other people's needs or feelings",
-    example: "It was thoughtful of Jane to bring an umbrella for her friend.",
-    synonyms: ["considerate", "caring"],
-    antonyms: ["thoughtless", "inconsiderate"],
-    collocations: ["thoughtful gesture", "thoughtful person", "thoughtful gift"],
+    meaning: "kind and considerate towards other people",
+    example: "It was thoughtful of Sarah to help her injured classmate.",
+    synonyms: ["considerate"],
+    antonyms: ["thoughtless"],
+    collocations: ["thoughtful person", "thoughtful gesture", "thoughtful gift"],
     topic: "Character",
-    difficulty: 58,
-    psleValue: 88,
-    confusion: "Thoughtful can mean considerate and caring. It can also describe someone who thinks carefully about something."
+    difficulty: 50,
+    psleValue: 91,
+    confusion: "Thoughtful can mean considerate and caring about other people's feelings."
   },
 
   {
@@ -763,13 +776,13 @@ const vocabulary = [
     partOfSpeech: "adjective",
     level: 1,
     meaning: "different from what is normal or expected",
-    example: "It was unusual to see so many birds in the school garden.",
-    synonyms: ["uncommon", "rare"],
-    antonyms: ["usual", "ordinary"],
-    collocations: ["unusual behaviour", "unusual sight", "unusual situation"],
+    example: "The scientist noticed an unusual pattern in the results.",
+    synonyms: ["strange"],
+    antonyms: ["ordinary"],
+    collocations: ["unusual behaviour", "unusual situation", "unusual sound"],
     topic: "Description",
-    difficulty: 42,
-    psleValue: 88,
+    difficulty: 40,
+    psleValue: 89,
     confusion: "Unusual means not normal or not commonly seen."
   },
 
@@ -778,15 +791,15 @@ const vocabulary = [
     word: "valuable",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "worth a lot of money or very useful or important",
-    example: "The experience taught us a valuable lesson about teamwork.",
-    synonyms: ["precious", "useful"],
+    meaning: "worth a lot or very useful or important",
+    example: "The teacher gave us valuable advice before the examination.",
+    synonyms: ["useful", "important"],
     antonyms: ["worthless"],
-    collocations: ["valuable lesson", "valuable information", "valuable item"],
+    collocations: ["valuable information", "valuable advice", "valuable experience"],
     topic: "General",
-    difficulty: 48,
-    psleValue: 90,
-    confusion: "Valuable does not always mean expensive. Advice, information and experience can also be valuable."
+    difficulty: 44,
+    psleValue: 93,
+    confusion: "Valuable does not always mean expensive. Advice and experience can also be valuable."
   },
 
   {
@@ -794,49 +807,127 @@ const vocabulary = [
     word: "worried",
     partOfSpeech: "adjective",
     level: 1,
-    meaning: "thinking about problems or difficulties with fear or concern",
+    meaning: "thinking about problems or unpleasant things that might happen",
     example: "Mum was worried when her son did not return home on time.",
     synonyms: ["concerned", "anxious"],
-    antonyms: ["calm", "unconcerned"],
-    collocations: ["feel worried", "worried about", "worried that"],
+    antonyms: ["relaxed"],
+    collocations: ["feel worried", "worried about", "deeply worried"],
     topic: "Feelings",
-    difficulty: 28,
+    difficulty: 30,
     psleValue: 92,
-    confusion: "Worried describes a feeling of concern about a possible problem."
+    confusion: "Worried describes a feeling of concern about something that may happen."
   }
 
 ];
 
 
-// ---------------------------------------------------------
-// Helper functions
-// ---------------------------------------------------------
+/* =========================================================
+   DATABASE INFORMATION
+   ========================================================= */
 
-function getVocabularyByLevel(level) {
-  return vocabulary.filter(word => word.level === level);
-}
+window.vocabularyInfo = {
+  name: "APLUS ACHIEVER PSLE English Vocabulary",
+  version: "1.0",
+  currentWords: window.vocabulary.length,
+  targetWords: 1000,
+  levels: {
+    1: {
+      name: "Foundation",
+      target: 200
+    },
+    2: {
+      name: "Core",
+      target: 250
+    },
+    3: {
+      name: "PSLE",
+      target: 250
+    },
+    4: {
+      name: "Advanced",
+      target: 200
+    },
+    5: {
+      name: "Challenge",
+      target: 100
+    }
+  }
+};
 
-function getVocabularyByTopic(topic) {
-  return vocabulary.filter(word =>
-    word.topic.toLowerCase() === topic.toLowerCase()
+
+/* =========================================================
+   HELPER FUNCTIONS
+   ========================================================= */
+
+window.getVocabularyByLevel = function(level) {
+  return window.vocabulary.filter(function(item) {
+    return item.level === level;
+  });
+};
+
+
+window.getVocabularyById = function(id) {
+  return window.vocabulary.find(function(item) {
+    return item.id === id;
+  });
+};
+
+
+window.getVocabularyByWord = function(word) {
+  return window.vocabulary.find(function(item) {
+    return item.word.toLowerCase() === word.toLowerCase();
+  });
+};
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+window.validateVocabulary = function() {
+
+  if (!Array.isArray(window.vocabulary)) {
+    console.error("Vocabulary database is not an array.");
+    return false;
+  }
+
+  if (window.vocabulary.length === 0) {
+    console.error("Vocabulary database is empty.");
+    return false;
+  }
+
+  var ids = new Set();
+
+  window.vocabulary.forEach(function(item) {
+
+    if (!item.id) {
+      console.warn("Missing ID:", item);
+    }
+
+    if (!item.word) {
+      console.warn("Missing word:", item);
+    }
+
+    if (ids.has(item.id)) {
+      console.warn("Duplicate ID:", item.id);
+    }
+
+    ids.add(item.id);
+
+  });
+
+  console.log(
+    "APLUS Vocabulary loaded successfully:",
+    window.vocabulary.length,
+    "words"
   );
-}
 
-function getVocabularyById(id) {
-  return vocabulary.find(word => word.id === id);
-}
-
-function getVocabularyByWord(word) {
-  return vocabulary.find(item =>
-    item.word.toLowerCase() === word.toLowerCase()
-  );
-}
+  return true;
+};
 
 
-// ---------------------------------------------------------
-// Export
-// ---------------------------------------------------------
+/* =========================================================
+   RUN VALIDATION
+   ========================================================= */
 
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = vocabulary;
-}
+window.validateVocabulary();
