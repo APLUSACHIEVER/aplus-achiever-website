@@ -1,431 +1,883 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>APLUS Achiever | Personalised Online Tuition</title>
+<title>APLUS Achiever | Personalised Online Tuition</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #1f2933;
-      background: #ffffff;
-      line-height: 1.6;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    header {
-      padding: 22px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eeeeee;
-      background: white;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #18352d;
+    background: #ffffff;
+    line-height: 1.6;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #285c4d;
-    }
+a {
+    text-decoration: none;
+}
 
-    nav a {
-      margin-left: 28px;
-      text-decoration: none;
-      color: #333;
-      font-size: 15px;
-    }
+/* NAVIGATION */
 
-    nav a:hover {
-      color: #285c4d;
+header {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8eeeb;
+    background: rgba(255,255,255,0.96);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #245c4d;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #40534d;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #245c4d;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 680px;
+    padding: 80px 7%;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 70px;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 25%, #e4f3ed 0, transparent 32%),
+        linear-gradient(135deg, #f5faf7 0%, #ffffff 70%);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: #e2f2eb;
+    color: #286451;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+    color: #17372e;
+    margin-bottom: 28px;
+}
+
+h1 span {
+    color: #3b806c;
+}
+
+.hero-description {
+    max-width: 580px;
+    font-size: 18px;
+    color: #60716b;
+    margin-bottom: 34px;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 23px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.btn-primary {
+    background: #245c4d;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #19483c;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #245c4d;
+    color: #245c4d;
+    background: white;
+}
+
+.btn-secondary:hover {
+    background: #eef7f3;
+}
+
+/* HERO VISUAL */
+
+.hero-visual {
+    position: relative;
+    min-height: 470px;
+}
+
+.visual-main {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 88%;
+    height: 420px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #dcefe7, #f6fbf8);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.visual-main::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: #c6e3d8;
+    top: 35px;
+    right: 45px;
+}
+
+.visual-card {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    width: 240px;
+    padding: 24px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(36,92,77,.14);
+    z-index: 2;
+}
+
+.visual-card small {
+    color: #6b7b75;
+    font-size: 12px;
+}
+
+.visual-card strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 23px;
+    color: #245c4d;
+}
+
+.visual-stat {
+    position: absolute;
+    right: 18px;
+    bottom: 35px;
+    padding: 18px 22px;
+    background: #245c4d;
+    color: white;
+    border-radius: 15px;
+    z-index: 3;
+    box-shadow: 0 15px 30px rgba(36,92,77,.2);
+}
+
+.visual-stat strong {
+    display: block;
+    font-size: 24px;
+}
+
+.visual-stat span {
+    font-size: 11px;
+    opacity: .85;
+}
+
+/* TRUST BAR */
+
+.trust {
+    padding: 24px 7%;
+    border-bottom: 1px solid #edf1ef;
+    border-top: 1px solid #edf1ef;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    flex-wrap: wrap;
+    color: #64736e;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.section-heading .label {
+    color: #3d806c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin-top: 10px;
+    font-size: 42px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    color: #193b32;
+}
+
+.section-heading p {
+    margin-top: 15px;
+    color: #71807b;
+}
+
+/* WHY US */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    padding: 32px 28px;
+    border: 1px solid #e4ebe7;
+    border-radius: 18px;
+    background: white;
+    transition: .25s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(30,70,60,.08);
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #e5f3ed;
+    color: #286451;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #71807b;
+    font-size: 14px;
+}
+
+/* COURSES */
+
+.courses {
+    background: #f4faf7;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.course {
+    background: white;
+    border-radius: 20px;
+    padding: 38px;
+    border: 1px solid #e3ebe7;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-number {
+    font-size: 12px;
+    color: #55917e;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.course h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.course p {
+    color: #71807b;
+    font-size: 14px;
+    flex: 1;
+}
+
+.course-link {
+    color: #245c4d;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* MESSAGE */
+
+.message {
+    text-align: center;
+}
+
+.message-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 65px 40px;
+    border-radius: 25px;
+    background: #edf7f2;
+}
+
+.message-box h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.message-box p {
+    color: #65766f;
+    max-width: 600px;
+    margin: auto auto 28px;
+}
+
+/* CTA */
+
+.cta {
+    padding: 95px 7%;
+    text-align: center;
+    background: #245c4d;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    opacity: .85;
+    margin-bottom: 30px;
+}
+
+.cta .btn {
+    background: white;
+    color: #245c4d;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #77847f;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 14px;
     }
 
     .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      padding: 80px 7%;
-      background: linear-gradient(135deg, #f4fbf7, #ffffff);
+        grid-template-columns: 1fr;
+        padding-top: 60px;
     }
 
-    .hero-content {
-      max-width: 700px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e1f2ea;
-      color: #285c4d;
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-      margin-bottom: 22px;
-      font-weight: 600;
-    }
-
-    h1 {
-      font-size: 58px;
-      line-height: 1.1;
-      margin-bottom: 24px;
-      letter-spacing: -1px;
-    }
-
-    h1 span {
-      color: #397b67;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #5d6870;
-      max-width: 620px;
-      margin-bottom: 35px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 26px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .primary {
-      background: #285c4d;
-      color: white;
-    }
-
-    .secondary {
-      border: 1px solid #285c4d;
-      color: #285c4d;
-    }
-
-    section {
-      padding: 80px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-title h2 {
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .section-title p {
-      color: #68747c;
+    .hero-visual {
+        min-height: 400px;
     }
 
     .features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-
-    .feature {
-      padding: 30px;
-      background: #f8faf9;
-      border-radius: 14px;
-    }
-
-    .feature h3 {
-      margin-bottom: 10px;
-      color: #285c4d;
-    }
-
-    .feature p {
-      color: #667078;
-      font-size: 15px;
-    }
-
-    .courses {
-      background: #f5faf7;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .course-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 5%;
     }
 
-    .course {
-      background: white;
-      padding: 35px;
-      border-radius: 14px;
-      border: 1px solid #e5ebe8;
+    .logo {
+        font-size: 16px;
     }
 
-    .course h3 {
-      font-size: 24px;
-      margin-bottom: 12px;
+    nav a {
+        font-size: 11px;
     }
 
-    .course p {
-      color: #68747c;
-      margin-bottom: 20px;
+    .hero {
+        padding: 55px 5%;
     }
 
-    .course a {
-      color: #285c4d;
-      font-weight: 600;
-      text-decoration: none;
+    h1 {
+        font-size: 47px;
+        letter-spacing: -2px;
     }
 
-    .cta {
-      text-align: center;
-      background: #285c4d;
-      color: white;
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-visual {
+        min-height: 340px;
+    }
+
+    .visual-main {
+        width: 100%;
+        height: 320px;
+    }
+
+    .visual-card {
+        width: 190px;
+        padding: 18px;
+    }
+
+    .visual-stat {
+        right: 5px;
+        bottom: 20px;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .message-box {
+        padding: 45px 25px;
     }
 
     .cta h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      margin-bottom: 30px;
-      opacity: 0.9;
-    }
-
-    .cta .button {
-      background: white;
-      color: #285c4d;
+        font-size: 34px;
     }
 
     footer {
-      padding: 30px 7%;
-      text-align: center;
-      color: #777;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-
-      header {
         flex-direction: column;
-        gap: 15px;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
-
-      .features,
-      .course-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: 550px;
-      }
+        text-align: center;
     }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">APLUS ACHIEVER</div>
+<header>
+
+    <div class="logo">
+        APLUS ACHIEVER
+    </div>
 
     <nav>
-      <a href="#why">Why Us</a>
-      <a href="#courses">Courses</a>
-      <a href="#contact">Contact</a>
+        <a href="#why">Why Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
+
+</header>
 
 
-  <section class="hero">
+<!-- HERO -->
+
+<section class="hero">
 
     <div class="hero-content">
 
-      <div class="tag">
-        Personalised Online Tuition
-      </div>
+        <div class="eyebrow">
+            PERSONALISED ONLINE TUITION
+        </div>
 
-      <h1>
-  Helping Students<br>
-  <span>Learn Better. Achieve More.</span>
-      </h1>
+        <h1>
+            Helping Students
+            <span>Learn Better.<br>Achieve More.</span>
+        </h1>
 
-      <p>
-        Personalised online tuition for Primary,
-        Secondary and Junior College students.
-        Learn from experienced teachers through
-        small-group classes and innovative teaching techniques.
-      </p>
+        <p class="hero-description">
+            Personalised online tuition for Primary, Secondary
+            and Junior College students — with experienced
+            teachers, small classes and innovative teaching
+            techniques.
+        </p>
 
-      <div class="buttons">
+        <div class="buttons">
 
-        <a class="button primary"
-           href="#courses">
-          Explore Courses
-        </a>
+            <a href="#courses" class="btn btn-primary">
+                Explore Courses
+            </a>
 
-        <a class="button secondary"
-           href="#contact">
-          Book a Trial Class
-        </a>
+            <a href="#contact" class="btn btn-secondary">
+                Book a Trial Class
+            </a>
 
-      </div>
+        </div>
 
     </div>
 
-  </section>
+
+    <div class="hero-visual">
+
+        <div class="visual-main">
+
+            <div class="visual-card">
+
+                <small>
+                    A better learning experience
+                </small>
+
+                <strong>
+                    Learn with confidence.
+                </strong>
+
+            </div>
+
+            <div class="visual-stat">
+
+                <strong>
+                    A+
+                </strong>
+
+                <span>
+                    Aim higher. Learn smarter.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-  <section id="why">
+<!-- TRUST -->
 
-    <div class="section-title">
+<div class="trust">
 
-      <h2>Why Parents Choose APLUS</h2>
+    <span>Experienced Teachers</span>
 
-      <p>
-        Focused teaching. Personalised attention. Better learning.
-      </p>
+    <span>Small Online Classes</span>
+
+    <span>Personalised Learning</span>
+
+    <span>Examination-Focused</span>
+
+</div>
+
+
+<!-- WHY APLUS -->
+
+<section id="why">
+
+    <div class="section-heading">
+
+        <div class="label">
+            WHY APLUS ACHIEVER
+        </div>
+
+        <h2>
+            More than tuition.<br>
+            A better way to learn.
+        </h2>
+
+        <p>
+            We focus on understanding, confidence and
+            structured preparation — not simply completing
+            more worksheets.
+        </p>
 
     </div>
 
 
     <div class="features">
 
-      <div class="feature">
-        <h3>Experienced Teachers</h3>
-        <p>
-          Learn from experienced educators who understand
-          the Singapore education system.
-        </p>
-      </div>
+        <div class="feature">
 
-      <div class="feature">
-        <h3>Small Online Classes</h3>
-        <p>
-          Smaller groups allow teachers to give students
-          more attention and feedback.
-        </p>
-      </div>
+            <div class="icon">01</div>
 
-      <div class="feature">
-        <h3>Personalised Learning</h3>
-        <p>
-          Lessons are designed around students' learning needs,
-          strengths and areas for improvement.
-        </p>
-      </div>
+            <h3>
+                Experienced Teachers
+            </h3>
 
-      <div class="feature">
-        <h3>Innovative Techniques</h3>
-        <p>
-          Practical strategies and structured learning methods
-          help students improve understanding and confidence.
-        </p>
-      </div>
+            <p>
+                Learn from educators who understand
+                Singapore's education system and
+                examination requirements.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">02</div>
+
+            <h3>
+                Small Online Classes
+            </h3>
+
+            <p>
+                Smaller groups allow teachers to
+                observe students closely and provide
+                meaningful feedback.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">03</div>
+
+            <h3>
+                Personalised Learning
+            </h3>
+
+            <p>
+                Lessons are structured around each
+                student's strengths, weaknesses and
+                learning needs.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">04</div>
+
+            <h3>
+                Exam-Focused Preparation
+            </h3>
+
+            <p>
+                Build the knowledge, techniques and
+                confidence needed for important
+                school examinations.
+            </p>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <section id="courses" class="courses">
+<!-- COURSES -->
 
-    <div class="section-title">
+<section id="courses" class="courses">
 
-      <h2>Our Courses</h2>
+    <div class="section-heading">
 
-      <p>
-        Primary, Secondary and Junior College programmes
-      </p>
+        <div class="label">
+            OUR PROGRAMMES
+        </div>
+
+        <h2>
+            Find the right programme
+        </h2>
+
+        <p>
+            Structured tuition for every stage of
+            the Singapore education journey.
+        </p>
 
     </div>
 
 
     <div class="course-grid">
 
-      <div class="course">
-        <h3>Primary</h3>
+        <div class="course">
 
-        <p>
-          English, Mathematics, Science, Chinese
-          and PSLE preparation.
-        </p>
+            <div class="course-number">
+                PRIMARY
+            </div>
 
-        <a href="#contact">
-          Explore Primary →
-        </a>
-      </div>
+            <h3>
+                Primary School
+            </h3>
 
+            <p>
+                English, Mathematics, Science,
+                Chinese and PSLE preparation.
+            </p>
 
-      <div class="course">
-        <h3>Secondary</h3>
+            <a href="#contact" class="course-link">
+                Explore Primary →
+            </a>
 
-        <p>
-          English, Mathematics, Science and
-          examination preparation.
-        </p>
-
-        <a href="#contact">
-          Explore Secondary →
-        </a>
-      </div>
+        </div>
 
 
-      <div class="course">
-        <h3>Junior College</h3>
+        <div class="course">
 
-        <p>
-          GP and JC subjects with structured
-          examination-focused preparation.
-        </p>
+            <div class="course-number">
+                SECONDARY
+            </div>
 
-        <a href="#contact">
-          Explore JC →
-        </a>
-      </div>
+            <h3>
+                Secondary School
+            </h3>
+
+            <p>
+                English, Mathematics, Science and
+                examination-focused preparation.
+            </p>
+
+            <a href="#contact" class="course-link">
+                Explore Secondary →
+            </a>
+
+        </div>
+
+
+        <div class="course">
+
+            <div class="course-number">
+                JUNIOR COLLEGE
+            </div>
+
+            <h3>
+                Junior College
+            </h3>
+
+            <p>
+                GP and JC subjects with structured
+                preparation for major examinations.
+            </p>
+
+            <a href="#contact" class="course-link">
+                Explore JC →
+            </a>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <section id="contact" class="cta">
+<!-- BRAND MESSAGE -->
 
-    <h2>Ready to Help Your Child Achieve More?</h2>
+<section class="message">
+
+    <div class="message-box">
+
+        <h2>
+            Every student can improve.
+        </h2>
+
+        <p>
+            The right guidance, the right strategy
+            and consistent practice can make a
+            meaningful difference.
+        </p>
+
+        <a href="#contact" class="btn btn-primary">
+            Talk to Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section id="contact" class="cta">
+
+    <h2>
+        Ready to help your child<br>
+        achieve more?
+    </h2>
 
     <p>
-      Speak to us about our courses and trial classes.
+        Speak with us about our programmes
+        and trial classes.
     </p>
 
-    <a class="button"
-       href="https://wa.me/6598816223">
-      WhatsApp Us
+    <a
+        href="https://wa.me/6580000000"
+        class="btn"
+    >
+        WhatsApp Us
     </a>
 
-  </section>
+</section>
 
 
-  <footer>
+<footer>
 
-    © 2026 APLUS ACHIEVER. All Rights Reserved.
+    <div>
+        © 2026 APLUS ACHIEVER
+    </div>
 
-  </footer>
+    <div>
+        Personalised Online Tuition
+    </div>
+
+</footer>
 
 </body>
 </html>
