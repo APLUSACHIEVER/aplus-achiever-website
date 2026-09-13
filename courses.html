@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Courses | APLUS Achiever</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #193b32;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7eeeb;
+}
+
+.logo {
+    color: #245c4d;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #40534d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #245c4d;
+}
+
+
+/* HERO */
+
+.hero {
+    padding: 95px 7%;
+    text-align: center;
+    background: linear-gradient(135deg, #f3faf7, #ffffff);
+}
+
+.label {
+    color: #3b806c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #6b7b75;
+    font-size: 17px;
+}
+
+
+/* COURSES */
+
+.courses {
+    padding: 90px 7%;
+}
+
+.course-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.course {
+    border: 1px solid #e1e9e5;
+    border-radius: 20px;
+    padding: 38px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: .25s;
+}
+
+.course:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(30,70,60,.09);
+}
+
+.number {
+    color: #5a967f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.course h2 {
+    font-size: 29px;
+    margin: 15px 0;
+}
+
+.course p {
+    color: #6e7d77;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.course ul {
+    padding-left: 18px;
+    color: #52645d;
+    font-size: 14px;
+    flex: 1;
+}
+
+.course li {
+    margin-bottom: 7px;
+}
+
+.course a {
+    display: inline-block;
+    margin-top: 25px;
+    color: #245c4d;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* CTA */
+
+.cta {
+    margin-top: 30px;
+    padding: 85px 7%;
+    text-align: center;
+    background: #245c4d;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    opacity: .85;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 25px;
+    background: white;
+    color: #245c4d;
+    border-radius: 7px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px 7%;
+    text-align: center;
+    color: #77847f;
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <a href="index.html" class="logo">
+        APLUS ACHIEVER
+    </a>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+        <a href="index.html#why">
+            Why Us
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="label">
+        OUR PROGRAMMES
+    </div>
+
+    <h1>
+        Find the right programme.
+    </h1>
+
+    <p>
+        Structured online tuition for Primary,
+        Secondary and Junior College students,
+        designed around understanding, confidence
+        and examination preparation.
+    </p>
+
+</section>
+
+
+
+<section class="courses">
+
+    <div class="course-grid">
+
+
+        <!-- PRIMARY -->
+
+        <div class="course">
+
+            <div class="number">
+                01 · PRIMARY
+            </div>
+
+            <h2>
+                Primary School
+            </h2>
+
+            <p>
+                Build strong foundations and develop
+                effective learning habits from an early stage.
+            </p>
+
+            <ul>
+
+                <li>English</li>
+
+                <li>Mathematics</li>
+
+                <li>Science</li>
+
+                <li>Chinese</li>
+
+                <li>PSLE Preparation</li>
+
+            </ul>
+
+            <a href="index.html#contact">
+                Enquire about Primary →
+            </a>
+
+        </div>
+
+
+
+        <!-- SECONDARY -->
+
+        <div class="course">
+
+            <div class="number">
+                02 · SECONDARY
+            </div>
+
+            <h2>
+                Secondary School
+            </h2>
+
+            <p>
+                Strengthen subject knowledge while
+                preparing systematically for school examinations.
+            </p>
+
+            <ul>
+
+                <li>English</li>
+
+                <li>Mathematics</li>
+
+                <li>Science</li>
+
+                <li>Examination Preparation</li>
+
+                <li>O-Level Preparation</li>
+
+            </ul>
+
+            <a href="index.html#contact">
+                Enquire about Secondary →
+            </a>
+
+        </div>
+
+
+
+        <!-- JC -->
+
+        <div class="course">
+
+            <div class="number">
+                03 · JUNIOR COLLEGE
+            </div>
+
+            <h2>
+                Junior College
+            </h2>
+
+            <p>
+                Develop stronger academic skills and
+                examination strategies for JC subjects.
+            </p>
+
+            <ul>
+
+                <li>General Paper</li>
+
+                <li>JC Subject Support</li>
+
+                <li>Argument & Example Banks</li>
+
+                <li>Examination Techniques</li>
+
+                <li>Structured Revision</li>
+
+            </ul>
+
+            <a href="index.html#contact">
+                Enquire about JC →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<section class="cta">
+
+    <h2>
+        Not sure which programme is right?
+    </h2>
+
+    <p>
+        Speak with us and we can help you
+        understand the available options.
+    </p>
+
+    <a
+        href="index.html#contact"
+        class="button"
+    >
+        Contact APLUS
+    </a>
+
+</section>
+
+
+
+<footer>
+
+    © 2026 APLUS ACHIEVER · Personalised Online Tuition
+
+</footer>
+
+
+</body>
+
+</html>
