@@ -3518,21 +3518,7 @@ window.vocabulary = [
     confusion: "Precisely means exactly and is used when accuracy or exactness is important."
   }
    
-   const vocabulary = [
-  {
-    id: 1,
-    word: "able",
-    ...
-  },
-  ...
-  {
-    id: 200,
-    word: "...",
-    ...
-  }
-];
 
-export default vocabulary;
 ];
 
 
