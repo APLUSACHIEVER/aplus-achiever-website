@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>APLUS AI Vocabulary | PSLE Daily 10</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6faf7;
+    color: #173b2a;
+    min-height: 100vh;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #e4eee8;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1d7048;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #7b9284;
+    margin-top: 3px;
+}
+
+.back-home {
+    text-decoration: none;
+    color: #1d7048;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: 45px auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.badge {
+    display: inline-block;
+    background: #e4f4ea;
+    color: #1d7048;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    color: #2b9560;
+}
+
+.hero p {
+    color: #6d8075;
+    font-size: 16px;
+}
+
+.quiz-card {
+    background: white;
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(30,80,50,0.08);
+}
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.question-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: #628072;
+}
+
+.difficulty {
+    font-size: 13px;
+    font-weight: 700;
+    color: #d88925;
+}
+
+.progress-container {
+    height: 8px;
+    background: #e9f0ec;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 10%;
+    background: #2b9560;
+    border-radius: 10px;
+    transition: width .3s ease;
+}
+
+.question {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.question strong {
+    color: #1d7048;
+}
+
+.options {
+    display: grid;
+    gap: 13px;
+}
+
+.option {
+    border: 2px solid #e2ebe5;
+    background: white;
+    padding: 17px 18px;
+    border-radius: 13px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    transition: .2s;
+}
+
+.option:hover {
+    border-color: #5db681;
+    background: #f4fbf6;
+}
+
+.option.correct {
+    background: #e8f7ed;
+    border-color: #39a968;
+    color: #16703f;
+}
+
+.option.wrong {
+    background: #fff0f0;
+    border-color: #dc6868;
+    color: #a53b3b;
+}
+
+.feedback {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 13px;
+    display: none;
+}
+
+.feedback.correct-feedback {
+    display: block;
+    background: #edf9f1;
+    color: #267144;
+}
+
+.feedback.wrong-feedback {
+    display: block;
+    background: #fff3f3;
+    color: #a53b3b;
+}
+
+.explanation {
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.next-button {
+    width: 100%;
+    margin-top: 22px;
+    border: none;
+    background: #1d7048;
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+}
+
+.next-button:hover {
+    background: #155c39;
+}
+
+.result {
+    display: none;
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.result h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 58px;
+    font-weight: 800;
+    color: #2b9560;
+    margin: 15px 0;
+}
+
+.result-message {
+    color: #6c7e73;
+    margin-bottom: 25px;
+}
+
+.review-title {
+    text-align: left;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.review-list {
+    display: grid;
+    gap: 10px;
+    text-align: left;
+}
+
+.review-item {
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff4f4;
+    color: #8e3d3d;
+}
+
+.restart-button {
+    margin-top: 25px;
+    border: none;
+    background: #1d7048;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #668074;
+}
+
+@media(max-width:600px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .quiz-card {
+        padding: 23px;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+
+APLUS ACHIEVER
+
+<span>AI LEARNING</span>
+
+</div>
+
+<a href="index.html"
+class="back-home">
+
+← Back to APLUS
+
+</a>
+
+</header>
+
+
+<main class="container">
+
+
+<section class="hero">
+
+<div class="badge">
+PSLE ENGLISH
+</div>
+
+<h1>
+Daily <span>10</span>
+</h1>
+
+<p>
+Build stronger vocabulary, one question at a time.
+</p>
+
+</section>
+
+
+<section class="quiz-card">
+
+
+<div id="loading"
+class="loading">
+
+Loading today's vocabulary...
+
+</div>
+
+
+<div id="quiz"
+style="display:none;">
+
+
+<div class="quiz-top">
+
+<div class="question-number"
+id="questionNumber">
+
+Question 1 of 10
+
+</div>
+
+<div class="difficulty"
+id="difficulty">
+
+★ Easy
+
+</div>
+
+</div>
+
+
+<div class="progress-container">
+
+<div class="progress-bar"
+id="progressBar">
+</div>
+
+</div>
+
+
+<div class="question"
+id="question">
+</div>
+
+
+<div class="options"
+id="options">
+</div>
+
+
+<div class="feedback"
+id="feedback">
+
+<strong id="feedbackTitle">
+</strong>
+
+<div class="explanation"
+id="explanation">
+</div>
+
+</div>
+
+
+<button
+class="next-button"
+id="nextButton"
+onclick="nextQuestion()">
+
+Next Question →
+
+</button>
+
+
+</div>
+
+
+<div class="result"
+id="result">
+
+
+<div class="result-icon">
+🎉
+</div>
+
+<h2>
+Daily 10 Complete!
+</h2>
+
+<div class="score"
+id="finalScore">
+0 / 10
+</div>
+
+<p class="result-message"
+id="resultMessage">
+</p>
+
+
+<h3 class="review-title">
+Words to Review
+</h3>
+
+<div class="review-list"
+id="reviewList">
+</div>
+
+
+<button
+class="restart-button"
+onclick="restartQuiz()">
+
+Try Again
+
+</button>
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<footer>
+
+© 2026 APLUS ACHIEVER · PSLE AI Vocabulary
+
+</footer>
+
+
+<!-- IMPORTANT:
+     vocabulary database
+-->
+
+<script src="data/vocabulary.js"></script>
+
+
+<script>
+
+
+/* ============================
+   QUIZ VARIABLES
+============================ */
+
+let dailyQuestions = [];
+
+let currentQuestion = 0;
+
+let score = 0;
+
+let wrongAnswers = [];
+
+
+/* ============================
+   CREATE DAILY 10
+============================ */
+
+function createDailyQuestions() {
+
+    dailyQuestions = [];
+
+    /*
+       Pick one word from each
+       difficulty level.
+
+       Level 1 → Level 10
+    */
+
+    for (let level = 1; level <= 10; level++) {
+
+        const words =
+            vocabulary.filter(
+                item => item.level === level
+            );
+
+        if (words.length > 0) {
+
+            const randomWord =
+                words[
+                    Math.floor(
+                        Math.random() * words.length
+                    )
+                ];
+
+            dailyQuestions.push(randomWord);
+
+        }
+
+    }
+
+    /*
+       If there are not yet 10 levels,
+       fill the remaining questions
+       from the entire vocabulary.
+    */
+
+    while (dailyQuestions.length < 10) {
+
+        const randomWord =
+            vocabulary[
+                Math.floor(
+                    Math.random() * vocabulary.length
+                )
+            ];
+
+        dailyQuestions.push(randomWord);
+
+    }
+
+}
+
+
+/* ============================
+   CREATE OPTIONS
+============================ */
+
+function createOptions(correctWord) {
+
+    let options = [];
+
+    options.push(correctWord);
+
+    /*
+       Find other words with
+       different meanings.
+    */
+
+    const others =
+        vocabulary.filter(
+            item =>
+                item.id !== correctWord.id &&
+                item.meaning
+        );
+
+
+    while (options.length < 4) {
+
+        const random =
+            others[
+                Math.floor(
+                    Math.random() * others.length
+                )
+            ];
+
+        if (!options.includes(random)) {
+
+            options.push(random);
+
+        }
+
+    }
+
+
+    /*
+       Shuffle
+    */
+
+    options.sort(
+        () => Math.random() - 0.5
+    );
+
+
+    return options;
+
+}
+
+
+/* ============================
+   LOAD QUESTION
+============================ */
+
+function loadQuestion() {
+
+    const q =
+        dailyQuestions[currentQuestion];
+
+
+    document.getElementById(
+        "questionNumber"
+    ).innerText =
+        "Question " +
+        (currentQuestion + 1) +
+        " of 10";
+
+
+    document.getElementById(
+        "difficulty"
+    ).innerText =
+        "Level " + q.level;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        ((currentQuestion + 1) / 10 * 100) +
+        "%";
+
+
+    /*
+       Context question
+    */
+
+    document.getElementById(
+        "question"
+    ).innerHTML =
+
+        `Choose the word that best fits the sentence:
+
+        <br><br>
+
+        <strong>
+        ${q.example}
+        </strong>`;
+
+
+    const optionsContainer =
+        document.getElementById(
+            "options"
+        );
+
+
+    optionsContainer.innerHTML = "";
+
+
+    const options =
+        createOptions(q);
+
+
+    options.forEach(
+        (option, index) => {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.className =
+                "option";
+
+
+            button.innerText =
+                String.fromCharCode(
+                    65 + index
+                ) +
+                ". " +
+                option.word;
+
+
+            button.onclick =
+                function() {
+
+                    checkAnswer(
+                        option,
+                        q,
+                        button
+                    );
+
+                };
+
+
+            optionsContainer.appendChild(
+                button
+            );
+
+        }
+    );
+
+
+    document.getElementById(
+        "feedback"
+    ).className =
+        "feedback";
+
+
+    document.getElementById(
+        "nextButton"
+    ).style.display =
+        "none";
+
+}
+
+
+/* ============================
+   CHECK ANSWER
+============================ */
+
+function checkAnswer(
+    selected,
+    correct,
+    selectedButton
+) {
+
+    const buttons =
+        document.querySelectorAll(
+            ".option"
+        );
+
+
+    buttons.forEach(
+        button => {
+            button.disabled = true;
+        }
+    );
+
+
+    if (
+        selected.id === correct.id
+    ) {
+
+        score++;
+
+        selectedButton.classList.add(
+            "correct"
+        );
+
+
+        document.getElementById(
+            "feedback"
+        ).className =
+            "feedback correct-feedback";
+
+
+        document.getElementById(
+            "feedbackTitle"
+        ).innerText =
+            "✓ Correct!";
+
+
+    } else {
+
+        selectedButton.classList.add(
+            "wrong"
+        );
+
+
+        wrongAnswers.push(
+            correct
+        );
+
+
+        document.getElementById(
+            "feedback"
+        ).className =
+            "feedback wrong-feedback";
+
+
+        document.getElementById(
+            "feedbackTitle"
+        ).innerText =
+            "✗ Not quite";
+
+    }
+
+
+    document.getElementById(
+        "explanation"
+    ).innerHTML =
+
+        `<strong>${correct.word}</strong>
+
+        <br>
+
+        ${correct.meaning}
+
+        <br><br>
+
+        中文：
+        ${correct.chinese}`;
+
+
+    document.getElementById(
+        "nextButton"
+    ).style.display =
+        "block";
+
+}
+
+
+/* ============================
+   NEXT QUESTION
+============================ */
+
+function nextQuestion() {
+
+    currentQuestion++;
+
+
+    if (
+        currentQuestion <
+        dailyQuestions.length
+    ) {
+
+        loadQuestion();
+
+    } else {
+
+        showResult();
+
+    }
+
+}
+
+
+/* ============================
+   RESULT
+============================ */
+
+function showResult() {
+
+    document.getElementById(
+        "quiz"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "result"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "finalScore"
+    ).innerText =
+        score + " / 10";
+
+
+    let message;
+
+
+    if (score === 10) {
+
+        message =
+            "Outstanding! Vocabulary Master!";
+
+    }
+
+    else if (score >= 8) {
+
+        message =
+            "Excellent! Keep building your vocabulary.";
+
+    }
+
+    else if (score >= 6) {
+
+        message =
+            "Good effort! Review your weak words.";
+
+    }
+
+    else {
+
+        message =
+            "Keep practising. You will improve!";
+
+    }
+
+
+    document.getElementById(
+        "resultMessage"
+    ).innerText =
+        message;
+
+
+    const reviewList =
+        document.getElementById(
+            "reviewList"
+        );
+
+
+    reviewList.innerHTML = "";
+
+
+    if (
+        wrongAnswers.length === 0
+    ) {
+
+        reviewList.innerHTML =
+
+            `<div
+            class="review-item"
+            style="background:#edf9f1;color:#267144;">
+
+            Perfect! No words to review 🎉
+
+            </div>`;
+
+    }
+
+    else {
+
+        wrongAnswers.forEach(
+            word => {
+
+                const item =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                item.className =
+                    "review-item";
+
+
+                item.innerHTML =
+
+                    `<strong>
+                    ${word.word}
+                    </strong>
+
+                    <br>
+
+                    ${word.meaning}
+
+                    <br>
+
+                    中文：
+                    ${word.chinese}`;
+
+
+                reviewList.appendChild(
+                    item
+                );
+
+            }
+        );
+
+    }
+
+}
+
+
+/* ============================
+   RESTART
+============================ */
+
+function restartQuiz() {
+
+    currentQuestion = 0;
+
+    score = 0;
+
+    wrongAnswers = [];
+
+    createDailyQuestions();
+
+
+    document.getElementById(
+        "quiz"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "result"
+    ).style.display =
+        "none";
+
+
+    loadQuestion();
+
+}
+
+
+/* ============================
+   START
+============================ */
+
+if (
+    typeof vocabulary !== "undefined" &&
+    vocabulary.length > 0
+) {
+
+    document.getElementById(
+        "loading"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "quiz"
+    ).style.display =
+        "block";
+
+
+    createDailyQuestions();
+
+    loadQuestion();
+
+}
+
+else {
+
+    document.getElementById(
+        "loading"
+    ).innerHTML =
+
+        "Vocabulary database could not be loaded.";
+
+}
+
+
+</script>
+
+</body>
+
+</html>
