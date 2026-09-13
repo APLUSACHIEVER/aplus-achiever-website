@@ -1,12 +1,17 @@
 // =====================================================
-// APLUS PSLE VOCABULARY 1000
-// 10 Levels × 100 Words
-// NOT an official SEAB vocabulary list
+// APLUS ACHIEVER
+// PSLE ENGLISH VOCABULARY DATABASE
+// =====================================================
+// Self-contained vocabulary database
+// Works with the APLUS Daily 10 index.html
 // =====================================================
 
-const wordsByLevel = [
+var wordsByLevel = [
 
+  // =====================================================
   // LEVEL 1 — Foundation
+  // =====================================================
+
   [
     "able","about","above","across","act","add","afraid","after","again","age",
     "ago","air","all","allow","almost","alone","along","already","also","always",
@@ -20,7 +25,10 @@ const wordsByLevel = [
     "come","common","complete","cook","cool","copy","corner","correct","cost","could"
   ],
 
+  // =====================================================
   // LEVEL 2 — Basic
+  // =====================================================
+
   [
     "country","cover","cry","cut","dance","dark","date","day","decide","deep",
     "desk","different","difficult","dinner","dirty","doctor","dog","door","down","draw",
@@ -34,7 +42,10 @@ const wordsByLevel = [
     "happy","hard","hat","have","head","hear","heart","heavy","help","high"
   ],
 
+  // =====================================================
   // LEVEL 3 — P4–P5 Core
+  // =====================================================
+
   [
     "hill","history","hold","home","hope","horse","hot","house","how","however",
     "hundred","hungry","idea","if","important","into","island","jacket","job","join",
@@ -48,7 +59,10 @@ const wordsByLevel = [
     "notice","number","object","ocean","off","often","old","once","only","open"
   ],
 
+  // =====================================================
   // LEVEL 4 — P5+
+  // =====================================================
+
   [
     "orange","order","other","outside","over","own","page","paint","pair","paper",
     "parent","park","part","party","pass","past","pay","people","person","phone",
@@ -62,7 +76,10 @@ const wordsByLevel = [
     "sometimes","soon","sound","south","space","speak","spend","sport","spring","stand"
   ],
 
+  // =====================================================
   // LEVEL 5 — P6 Core
+  // =====================================================
+
   [
     "start","stay","still","stop","story","street","strong","student","study","summer",
     "sun","sure","table","take","talk","tall","teacher","tell","ten","test",
@@ -76,7 +93,10 @@ const wordsByLevel = [
     "year","yellow","yes","yet","young","your","zero","accident","active","admire"
   ],
 
+  // =====================================================
   // LEVEL 6 — P6+
+  // =====================================================
+
   [
     "adventure","advice","afford","against","agree","alive","amazing","amount","ancient","announce",
     "another","anxious","anyone","anything","anywhere","argue","artist","attention","attractive","autumn",
@@ -90,7 +110,10 @@ const wordsByLevel = [
     "fortunate","forward","freedom","fresh","friendly","frozen","future","generous","gentle","geography"
   ],
 
+  // =====================================================
   // LEVEL 7 — PSLE Core
+  // =====================================================
+
   [
     "grateful","habit","healthy","honest","however","imagine","improve","include","increase","independent",
     "influence","information","instead","intelligent","interest","introduce","invite","journey","judge","knowledge",
@@ -105,7 +128,10 @@ const wordsByLevel = [
     "trouble","trust","useful","value","various","village","volunteer","weather","welcome","whether"
   ],
 
+  // =====================================================
   // LEVEL 8 — PSLE Advanced
+  // =====================================================
+
   [
     "abandon","absorb","accompany","accurate","acquire","adequate","aggressive","alternative","ambitious","ancient",
     "apparent","appeal","appropriate","argue","artificial","aspect","assist","assume","attempt","authority",
@@ -119,7 +145,10 @@ const wordsByLevel = [
     "intense","interact","internal","interpret","interrupt","investigate","logical","magnificent","mature","negotiate"
   ],
 
+  // =====================================================
   // LEVEL 9 — Challenge
+  // =====================================================
+
   [
     "objective","obvious","occasion","optimistic","overcome","participate","permanent","perspective","persuade","precise",
     "predict","preserve","priority","proceed","profession","promote","propose","prove","react","reasonable",
@@ -133,7 +162,10 @@ const wordsByLevel = [
     "cumulative","deplorable","discerning","disparity","eccentric","enigmatic","exacerbate","exemplary","exhaustive","fallacy"
   ],
 
+  // =====================================================
   // LEVEL 10 — Mastery
+  // =====================================================
+
   [
     "fastidious","fervent","frugal","futile","impartial","inconspicuous","incongruous","indispensable","inevitable","ingenious",
     "intricate","judicious","magnanimous","meticulous","negligent","obsolete","paradox","pragmatic","precarious","profound",
@@ -146,65 +178,26 @@ const wordsByLevel = [
     "anticipate","assess","attain","authentic","bias","compelling","comprehensive","contradict","conventional","cumulative",
     "demonstrate","devise","differentiate","discrete","facilitate","hierarchy","indigenous","inhibit","intrinsic","legitimate"
   ]
+
 ];
 
 
 // =====================================================
-// AUTOMATIC DATABASE GENERATOR
+// BUILD VOCABULARY DATABASE
 // =====================================================
 
-const vocabulary = [];
+var vocabulary = [];
 
-let id = 1;
-
-wordsByLevel.forEach((words, levelIndex) => {
-
-  const level = levelIndex + 1;
-
-  words.forEach(word => {
-
-    vocabulary.push({
-
-      id: id++,
-
-      word: word,
-
-      level: level,
-
-      partOfSpeech: guessPartOfSpeech(word),
-
-      meaning: getMeaning(word),
-
-      chinese: getChinese(word),
-
-      synonyms: getSynonyms(word),
-
-      antonyms: getAntonyms(word),
-
-      example: createExample(word),
-
-      topics: getTopics(level),
-
-      questionTypes: [
-        "meaning",
-        "context",
-        "cloze"
-      ]
-
-    });
-
-  });
-
-});
+var wordId = 1;
 
 
 // =====================================================
-// BASIC WORD INFORMATION
+// BASIC HELPERS
 // =====================================================
 
 function guessPartOfSpeech(word) {
 
-  const verbs = [
+  var verbs = [
     "act","add","allow","appear","arrive","ask","bake","become",
     "begin","believe","break","bring","build","buy","call","carry",
     "catch","change","choose","climb","collect","compare","complain",
@@ -227,7 +220,7 @@ function guessPartOfSpeech(word) {
     "walk","want","wash","watch","welcome","wonder","work","write"
   ];
 
-  if (verbs.includes(word)) {
+  if (verbs.indexOf(word) !== -1) {
     return "verb";
   }
 
@@ -255,295 +248,229 @@ function guessPartOfSpeech(word) {
 
 
 // =====================================================
-// MEANING
+// MEANINGS
 // =====================================================
 
-function getMeaning(word) {
+var meanings = {
 
-  const meanings = {
+  able: "having the skill or ability to do something",
+  afraid: "feeling fear or worry",
+  brave: "showing courage when facing danger or difficulty",
+  curious: "wanting to know or learn something",
+  generous: "willing to give or share freely",
+  anxious: "worried or nervous about something",
+  responsible: "having a duty to act carefully and reliably",
+  remarkable: "unusual or impressive",
+  reluctant: "not willing or eager to do something",
+  persuade: "to convince someone to do or believe something",
+  deteriorate: "to become worse in condition",
+  consequence: "a result that follows an action or event",
+  vulnerable: "easily hurt, harmed or affected",
+  inevitable: "certain to happen and impossible to avoid",
+  significant: "important or large enough to matter",
+  meticulous: "very careful about small details",
+  unprecedented: "never having happened or existed before",
+  resilient: "able to recover after difficulty",
+  persevere: "to continue despite difficulty",
+  abandonment: "the act of leaving someone or something",
+  adversity: "a difficult or unpleasant situation",
+  ambiguity: "a lack of clear meaning",
+  articulate: "able to express ideas clearly",
+  coherent: "clear, logical and well organised",
+  controversial: "causing disagreement or argument",
+  detrimental: "causing harm or damage",
+  eloquent: "using language in a clear and effective way",
+  formidable: "very difficult or impressive",
+  impartial: "fair and not favouring one side",
+  ingenious: "clever and original",
+  integrity: "the quality of being honest and having strong principles",
+  plausible: "seeming reasonable or likely to be true",
+  profound: "very deep or important",
+  scrutiny: "careful and detailed examination",
+  strategic: "planned carefully to achieve a goal",
+  tenacious: "determined and unwilling to give up",
+  ubiquitous: "present or found everywhere",
+  unequivocal: "clear and leaving no doubt"
 
-    able: "having the skill or ability to do something",
-
-    afraid: "feeling fear or worry",
-
-    brave: "showing courage when facing danger or difficulty",
-
-    curious: "wanting to know or learn something",
-
-    generous: "willing to give or share freely",
-
-    anxious: "worried or nervous about something",
-
-    responsible: "having a duty to act carefully and reliably",
-
-    remarkable: "unusual or impressive",
-
-    reluctant: "not willing or eager to do something",
-
-    persuade: "to convince someone to do or believe something",
-
-    deteriorate: "to become worse in condition",
-
-    consequence: "a result that follows an action or event",
-
-    vulnerable: "easily hurt, harmed or affected",
-
-    inevitable: "certain to happen and impossible to avoid",
-
-    significant: "important or large enough to matter",
-
-    meticulous: "very careful about small details",
-
-    unprecedented: "never having happened or existed before",
-
-    resilient: "able to recover after difficulty",
-
-    persevere: "to continue despite difficulty",
-
-    abandonment: "the act of leaving someone or something",
-
-    adversity: "a difficult or unpleasant situation",
-
-    ambiguity: "a lack of clear meaning",
-
-    articulate: "able to express ideas clearly",
-
-    coherent: "clear, logical and well organised",
-
-    controversial: "causing disagreement or argument",
-
-    detrimental: "causing harm or damage",
-
-    eloquent: "using language in a clear and effective way",
-
-    formidable: "very difficult or impressive",
-
-    impartial: "fair and not favouring one side",
-
-    ingenious: "clever and original",
-
-    integrity: "the quality of being honest and having strong principles",
-
-    plausible: "seeming reasonable or likely to be true",
-
-    profound: "very deep or important",
-
-    scrutiny: "careful and detailed examination",
-
-    strategic: "planned carefully to achieve a goal",
-
-    tenacious: "determined and unwilling to give up",
-
-    ubiquitous: "present or found everywhere",
-
-    unequivocal: "clear and leaving no doubt"
-
-  };
-
-  return meanings[word] ||
-    "a useful English word that should be understood and used correctly in context";
-}
+};
 
 
 // =====================================================
-// CHINESE MEANING
+// CHINESE MEANINGS
 // =====================================================
 
-function getChinese(word) {
+var chinese = {
 
-  const chinese = {
+  able: "能够的",
+  afraid: "害怕的",
+  brave: "勇敢的",
+  curious: "好奇的",
+  generous: "慷慨的",
+  anxious: "焦虑的；担心的",
+  responsible: "负责任的",
+  remarkable: "非凡的；引人注目的",
+  reluctant: "不情愿的",
+  persuade: "说服",
+  deteriorate: "恶化",
+  consequence: "后果；结果",
+  vulnerable: "脆弱的；易受伤害的",
+  inevitable: "不可避免的",
+  significant: "重要的；显著的",
+  meticulous: "一丝不苟的",
+  unprecedented: "前所未有的",
+  resilient: "有韧性的；坚韧的",
+  persevere: "坚持；锲而不舍",
+  adversity: "逆境",
+  ambiguity: "模棱两可",
+  articulate: "善于表达的",
+  coherent: "连贯的",
+  controversial: "有争议的",
+  detrimental: "有害的",
+  eloquent: "雄辩的；有说服力的",
+  formidable: "强大的；难以应付的",
+  impartial: "公正的",
+  ingenious: "巧妙的；有创意的",
+  integrity: "正直；诚信",
+  plausible: "貌似合理的",
+  profound: "深刻的",
+  scrutiny: "仔细审查",
+  strategic: "战略性的",
+  tenacious: "坚韧不拔的",
+  ubiquitous: "无处不在的",
+  unequivocal: "明确的；毫不含糊的"
 
-    able: "能够的",
-    afraid: "害怕的",
-    brave: "勇敢的",
-    curious: "好奇的",
-    generous: "慷慨的",
-    anxious: "焦虑的；担心的",
-    responsible: "负责任的",
-    remarkable: "非凡的；引人注目的",
-    reluctant: "不情愿的",
-    persuade: "说服",
-    deteriorate: "恶化",
-    consequence: "后果；结果",
-    vulnerable: "脆弱的；易受伤害的",
-    inevitable: "不可避免的",
-    significant: "重要的；显著的",
-    meticulous: "一丝不苟的",
-    unprecedented: "前所未有的",
-    resilient: "有韧性的；坚韧的",
-    persevere: "坚持；锲而不舍",
-    adversity: "逆境",
-    ambiguity: "模棱两可",
-    articulate: "善于表达的",
-    coherent: "连贯的",
-    controversial: "有争议的",
-    detrimental: "有害的",
-    eloquent: "雄辩的；有说服力的",
-    formidable: "强大的；难以应付的",
-    impartial: "公正的",
-    ingenious: "巧妙的；有创意的",
-    integrity: "正直；诚信",
-    plausible: "貌似合理的",
-    profound: "深刻的",
-    scrutiny: "仔细审查",
-    strategic: "战略性的",
-    tenacious: "坚韧不拔的",
-    ubiquitous: "无处不在的",
-    unequivocal: "明确的；毫不含糊的"
-
-  };
-
-  return chinese[word] || "";
-}
+};
 
 
 // =====================================================
 // SYNONYMS
 // =====================================================
 
-function getSynonyms(word) {
+var synonyms = {
 
-  const synonyms = {
+  able: ["capable"],
+  afraid: ["frightened","scared"],
+  brave: ["courageous","bold"],
+  curious: ["inquisitive"],
+  generous: ["giving"],
+  anxious: ["worried","nervous"],
+  responsible: ["reliable","dependable"],
+  remarkable: ["extraordinary","notable"],
+  reluctant: ["unwilling","hesitant"],
+  persuade: ["convince","influence"],
+  deteriorate: ["worsen","decline"],
+  consequence: ["result","outcome"],
+  vulnerable: ["exposed","unprotected"],
+  inevitable: ["unavoidable","certain"],
+  significant: ["important","notable"],
+  meticulous: ["careful","thorough"],
+  unprecedented: ["unparalleled"],
+  resilient: ["tough","adaptable"],
+  persevere: ["persist","continue"],
+  adversity: ["hardship"],
+  ambiguity: ["uncertainty"],
+  articulate: ["expressive"],
+  coherent: ["logical"],
+  controversial: ["disputed"],
+  detrimental: ["harmful"],
+  eloquent: ["expressive"],
+  formidable: ["powerful"],
+  impartial: ["fair"],
+  ingenious: ["inventive"],
+  integrity: ["honesty"],
+  plausible: ["credible"],
+  profound: ["deep"],
+  scrutiny: ["inspection"],
+  strategic: ["planned"],
+  tenacious: ["persistent"],
+  ubiquitous: ["widespread"],
+  unequivocal: ["definite"]
 
-    able: ["capable"],
-    afraid: ["frightened", "scared"],
-    brave: ["courageous", "bold"],
-    curious: ["inquisitive"],
-    generous: ["giving"],
-    anxious: ["worried", "nervous"],
-    responsible: ["reliable", "dependable"],
-    remarkable: ["extraordinary", "notable"],
-    reluctant: ["unwilling", "hesitant"],
-    persuade: ["convince", "influence"],
-    deteriorate: ["worsen", "decline"],
-    consequence: ["result", "outcome"],
-    vulnerable: ["exposed", "unprotected"],
-    inevitable: ["unavoidable", "certain"],
-    significant: ["important", "notable"],
-    meticulous: ["careful", "thorough"],
-    unprecedented: ["unparalleled"],
-    resilient: ["tough", "adaptable"],
-    persevere: ["persist", "continue"],
-    adversity: ["hardship"],
-    ambiguity: ["uncertainty"],
-    articulate: ["expressive"],
-    coherent: ["logical"],
-    controversial: ["disputed"],
-    detrimental: ["harmful"],
-    eloquent: ["expressive"],
-    formidable: ["powerful"],
-    impartial: ["fair"],
-    ingenious: ["inventive"],
-    integrity: ["honesty"],
-    plausible: ["credible"],
-    profound: ["deep"],
-    scrutiny: ["inspection"],
-    strategic: ["planned"],
-    tenacious: ["persistent"],
-    ubiquitous: ["widespread"],
-    unequivocal: ["definite"]
-
-  };
-
-  return synonyms[word] || [];
-
-}
+};
 
 
 // =====================================================
 // ANTONYMS
 // =====================================================
 
-function getAntonyms(word) {
+var antonyms = {
 
-  const antonyms = {
+  able: ["unable"],
+  afraid: ["brave"],
+  brave: ["cowardly"],
+  curious: ["indifferent"],
+  generous: ["selfish"],
+  anxious: ["calm"],
+  responsible: ["irresponsible"],
+  remarkable: ["ordinary"],
+  reluctant: ["willing"],
+  deteriorate: ["improve"],
+  consequence: ["cause"],
+  vulnerable: ["protected"],
+  inevitable: ["avoidable"],
+  significant: ["insignificant"],
+  meticulous: ["careless"],
+  unprecedented: ["common"],
+  resilient: ["fragile"],
+  persevere: ["quit"],
+  impartial: ["biased"],
+  plausible: ["unlikely"],
+  profound: ["shallow"],
+  tenacious: ["weak"],
+  ubiquitous: ["rare"]
 
-    able: ["unable"],
-    afraid: ["brave"],
-    brave: ["cowardly"],
-    curious: ["indifferent"],
-    generous: ["selfish"],
-    anxious: ["calm"],
-    responsible: ["irresponsible"],
-    remarkable: ["ordinary"],
-    reluctant: ["willing"],
-    deteriorate: ["improve"],
-    consequence: ["cause"],
-    vulnerable: ["protected"],
-    inevitable: ["avoidable"],
-    significant: ["insignificant"],
-    meticulous: ["careless"],
-    unprecedented: ["common"],
-    resilient: ["fragile"],
-    persevere: ["quit"],
-    impartial: ["biased"],
-    plausible: ["unlikely"],
-    profound: ["shallow"],
-    tenacious: ["weak"],
-    ubiquitous: ["rare"]
-
-  };
-
-  return antonyms[word] || [];
-
-}
+};
 
 
 // =====================================================
-// EXAMPLE SENTENCE
+// EXAMPLES
 // =====================================================
 
-function createExample(word) {
+var examples = {
 
-  const special = {
+  able:
+    "She was able to solve the difficult problem on her own.",
 
-    able:
-      "She was able to solve the difficult problem on her own.",
+  brave:
+    "The brave boy helped his younger sister during the emergency.",
 
-    brave:
-      "The brave boy helped his younger sister during the emergency.",
+  curious:
+    "The curious student asked many questions during the science lesson.",
 
-    curious:
-      "The curious student asked many questions during the science lesson.",
+  generous:
+    "The generous girl shared her food with her classmates.",
 
-    generous:
-      "The generous girl shared her food with her classmates.",
+  anxious:
+    "He felt anxious before receiving the examination results.",
 
-    anxious:
-      "He felt anxious before receiving the examination results.",
+  responsible:
+    "A responsible student completes his work on time.",
 
-    responsible:
-      "A responsible student completes his work on time.",
+  remarkable:
+    "The athlete made a remarkable improvement in just a few months.",
 
-    remarkable:
-      "The athlete made a remarkable improvement in just a few months.",
+  reluctant:
+    "The boy was reluctant to speak in front of the class.",
 
-    reluctant:
-      "The boy was reluctant to speak in front of the class.",
+  persuade:
+    "The teacher tried to persuade the students to read more books.",
 
-    persuade:
-      "The teacher tried to persuade the students to read more books.",
+  consequence:
+    "Every action has a consequence.",
 
-    consequence:
-      "Every action has a consequence.",
+  inevitable:
+    "Change is inevitable as technology continues to develop.",
 
-    inevitable:
-      "Change is inevitable as technology continues to develop.",
+  significant:
+    "There was a significant improvement in her writing.",
 
-    significant:
-      "There was a significant improvement in her writing.",
+  meticulous:
+    "The meticulous student checked every answer carefully.",
 
-    meticulous:
-      "The meticulous student checked every answer carefully.",
+  resilient:
+    "The resilient child continued trying after making several mistakes."
 
-    resilient:
-      "The resilient child continued trying after making several mistakes."
-
-  };
-
-  return special[word] ||
-    `The students learned how to use the word "${word}" correctly in context.`;
-}
+};
 
 
 // =====================================================
@@ -593,11 +520,78 @@ function getTopics(level) {
 
 
 // =====================================================
-// MAKE VOCABULARY AVAILABLE TO THE WEBSITE
+// CREATE DATABASE
+// =====================================================
+
+wordsByLevel.forEach(function(words, levelIndex) {
+
+  var level = levelIndex + 1;
+
+  words.forEach(function(word) {
+
+    vocabulary.push({
+
+      id: wordId++,
+
+      word: word,
+
+      level: level,
+
+      partOfSpeech: guessPartOfSpeech(word),
+
+      meaning:
+        meanings[word] ||
+        "a useful English word that should be understood and used correctly in context",
+
+      chinese:
+        chinese[word] || "",
+
+      synonyms:
+        synonyms[word] || [],
+
+      antonyms:
+        antonyms[word] || [],
+
+      example:
+        examples[word] ||
+        'The students learned how to use the word "' +
+        word +
+        '" correctly in context.',
+
+      topics:
+        getTopics(level),
+
+      questionTypes: [
+        "meaning",
+        "context",
+        "cloze"
+      ]
+
+    });
+
+  });
+
+});
+
+
+// =====================================================
+// IMPORTANT
+// MAKE DATABASE AVAILABLE TO INDEX.HTML
 // =====================================================
 
 window.vocabulary = vocabulary;
 
+
+// =====================================================
+// DEBUG INFORMATION
+// =====================================================
+
 console.log(
-  `APLUS PSLE Vocabulary loaded: ${vocabulary.length} words`
+  "APLUS PSLE Vocabulary loaded:",
+  vocabulary.length,
+  "words"
+);
+
+console.log(
+  "APLUS PSLE Vocabulary database is ready."
 );
