@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -15,10 +16,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #193b32;
@@ -30,8 +27,8 @@ header {
     height: 76px;
     padding: 0 7%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #e7eeeb;
 }
 
@@ -40,6 +37,7 @@ header {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1.5px;
+    text-decoration: none;
 }
 
 nav {
@@ -61,7 +59,7 @@ nav a:hover {
 /* HERO */
 
 .hero {
-    padding: 95px 7%;
+    padding: 90px 7%;
     text-align: center;
     background: linear-gradient(135deg, #f3faf7, #ffffff);
 }
@@ -82,117 +80,152 @@ nav a:hover {
 }
 
 .hero p {
-    max-width: 650px;
+    max-width: 680px;
     margin: auto;
     color: #6b7b75;
     font-size: 17px;
 }
 
 
-/* COURSES */
+/* COURSE SECTION */
 
-.courses {
-    padding: 90px 7%;
+.course-section {
+    padding: 80px 7%;
 }
+
+.course-section:nth-child(even) {
+    background: #f5faf8;
+}
+
+.section-header {
+    max-width: 1150px;
+    margin: 0 auto 40px;
+}
+
+.section-header h2 {
+    font-size: 38px;
+    margin-top: 8px;
+}
+
+.section-header p {
+    color: #718079;
+    margin-top: 8px;
+}
+
+
+/* YEAR GROUP */
+
+.year-title {
+    max-width: 1150px;
+    margin: 35px auto 15px;
+    font-size: 18px;
+    color: #245c4d;
+}
+
+
+/* COURSE GRID */
 
 .course-grid {
     max-width: 1150px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
-.course {
+
+/* COURSE CARD */
+
+.course-card {
+    background: white;
     border: 1px solid #e1e9e5;
-    border-radius: 20px;
-    padding: 38px;
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
+    border-radius: 14px;
+    padding: 23px;
+    min-height: 115px;
     transition: .25s;
 }
 
-.course:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(30,70,60,.09);
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(30,70,60,.08);
 }
 
-.number {
-    color: #5a967f;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
+.course-card h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
 }
 
-.course h2 {
-    font-size: 29px;
-    margin: 15px 0;
+.course-card p {
+    color: #74827c;
+    font-size: 13px;
 }
 
-.course p {
-    color: #6e7d77;
-    font-size: 14px;
-    margin-bottom: 20px;
+
+/* ENRICHMENT */
+
+.enrichment {
+    background: #f5faf8;
 }
 
-.course ul {
-    padding-left: 18px;
-    color: #52645d;
-    font-size: 14px;
-    flex: 1;
+.enrichment-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
-.course li {
+.enrichment-card {
+    background: white;
+    border: 1px solid #dfe9e4;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.enrichment-card h3 {
     margin-bottom: 7px;
 }
 
-.course a {
-    display: inline-block;
-    margin-top: 25px;
-    color: #245c4d;
+.enrichment-card p {
+    color: #718079;
     font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
 }
 
 
 /* CTA */
 
 .cta {
-    margin-top: 30px;
-    padding: 85px 7%;
+    padding: 80px 7%;
     text-align: center;
     background: #245c4d;
     color: white;
 }
 
 .cta h2 {
-    font-size: 40px;
-    line-height: 1.2;
-    margin-bottom: 15px;
+    font-size: 38px;
+    margin-bottom: 12px;
 }
 
 .cta p {
     opacity: .85;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .button {
     display: inline-block;
-    padding: 14px 25px;
+    padding: 14px 26px;
     background: white;
     color: #245c4d;
     border-radius: 7px;
-    font-weight: 700;
     text-decoration: none;
+    font-weight: 700;
 }
 
 
 /* FOOTER */
 
 footer {
-    padding: 30px 7%;
+    padding: 30px;
     text-align: center;
     color: #77847f;
     font-size: 13px;
@@ -201,18 +234,47 @@ footer {
 
 /* MOBILE */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     .course-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .enrichment-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 65px 5%;
     }
 
     .hero h1 {
         font-size: 45px;
     }
 
-    nav {
-        gap: 12px;
+    .course-section {
+        padding: 60px 5%;
+    }
+
+    .course-grid,
+    .enrichment-grid {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -225,6 +287,8 @@ footer {
 <body>
 
 
+<!-- HEADER -->
+
 <header>
 
     <a href="index.html" class="logo">
@@ -233,21 +297,13 @@ footer {
 
     <nav>
 
-        <a href="index.html">
-            Home
-        </a>
+        <a href="index.html">Home</a>
 
-        <a href="courses.html">
-            Courses
-        </a>
+        <a href="courses.html">Courses</a>
 
-        <a href="index.html#why">
-            Why Us
-        </a>
+        <a href="index.html#why">Why Us</a>
 
-        <a href="index.html#contact">
-            Contact
-        </a>
+        <a href="index.html#contact">Contact</a>
 
     </nav>
 
@@ -255,170 +311,468 @@ footer {
 
 
 
+<!-- HERO -->
+
 <section class="hero">
 
     <div class="label">
-        OUR PROGRAMMES
+        OUR COURSES
     </div>
 
     <h1>
-        Find the right programme.
+        Learn Better.<br>
+        Achieve More.
     </h1>
 
     <p>
-        Structured online tuition for Primary,
-        Secondary and Junior College students,
-        designed around understanding, confidence
-        and examination preparation.
+        Personalised online tuition programmes
+        for Primary, Secondary and Junior College students,
+        together with enrichment programmes designed
+        to build skills beyond the classroom.
     </p>
 
 </section>
 
 
 
-<section class="courses">
+<!-- PRIMARY -->
+
+<section class="course-section">
+
+    <div class="section-header">
+
+        <div class="label">
+            PRIMARY SCHOOL
+        </div>
+
+        <h2>
+            Primary Courses
+        </h2>
+
+        <p>
+            Build strong academic foundations and
+            prepare confidently for school examinations and PSLE.
+        </p>
+
+    </div>
+
+
+    <div class="year-title">
+        Primary 4
+    </div>
 
     <div class="course-grid">
 
-
-        <!-- PRIMARY -->
-
-        <div class="course">
-
-            <div class="number">
-                01 · PRIMARY
-            </div>
-
-            <h2>
-                Primary School
-            </h2>
-
-            <p>
-                Build strong foundations and develop
-                effective learning habits from an early stage.
-            </p>
-
-            <ul>
-
-                <li>English</li>
-
-                <li>Mathematics</li>
-
-                <li>Science</li>
-
-                <li>Chinese</li>
-
-                <li>PSLE Preparation</li>
-
-            </ul>
-
-            <a href="index.html#contact">
-                Enquire about Primary →
-            </a>
-
+        <div class="course-card">
+            <h3>Science</h3>
+            <p>P4 Science programme</p>
         </div>
 
-
-
-        <!-- SECONDARY -->
-
-        <div class="course">
-
-            <div class="number">
-                02 · SECONDARY
-            </div>
-
-            <h2>
-                Secondary School
-            </h2>
-
-            <p>
-                Strengthen subject knowledge while
-                preparing systematically for school examinations.
-            </p>
-
-            <ul>
-
-                <li>English</li>
-
-                <li>Mathematics</li>
-
-                <li>Science</li>
-
-                <li>Examination Preparation</li>
-
-                <li>O-Level Preparation</li>
-
-            </ul>
-
-            <a href="index.html#contact">
-                Enquire about Secondary →
-            </a>
-
+        <div class="course-card">
+            <h3>English Composition</h3>
+            <p>P4 English writing development</p>
         </div>
 
+    </div>
 
 
-        <!-- JC -->
+    <div class="year-title">
+        Primary 5
+    </div>
 
-        <div class="course">
+    <div class="course-grid">
 
-            <div class="number">
-                03 · JUNIOR COLLEGE
-            </div>
-
-            <h2>
-                Junior College
-            </h2>
-
-            <p>
-                Develop stronger academic skills and
-                examination strategies for JC subjects.
-            </p>
-
-            <ul>
-
-                <li>General Paper</li>
-
-                <li>JC Subject Support</li>
-
-                <li>Argument & Example Banks</li>
-
-                <li>Examination Techniques</li>
-
-                <li>Structured Revision</li>
-
-            </ul>
-
-            <a href="index.html#contact">
-                Enquire about JC →
-            </a>
-
+        <div class="course-card">
+            <h3>English Composition</h3>
+            <p>P5 composition skills</p>
         </div>
 
+        <div class="course-card">
+            <h3>English Oral</h3>
+            <p>P5 oral preparation</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Science</h3>
+            <p>P5 Science</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Mathematics</h3>
+            <p>P5 Mathematics</p>
+        </div>
+
+    </div>
+
+
+    <div class="year-title">
+        Primary 6
+    </div>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>English Composition</h3>
+            <p>P6 composition and PSLE preparation</p>
+        </div>
+
+        <div class="course-card">
+            <h3>English Oral</h3>
+            <p>P6 oral preparation</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Science</h3>
+            <p>P6 Science and PSLE preparation</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Mathematics</h3>
+            <p>P6 Mathematics and PSLE preparation</p>
+        </div>
+
+        <div class="course-card">
+            <h3>English Listening Comprehension</h3>
+            <p>P6 listening preparation</p>
+        </div>
 
     </div>
 
 </section>
 
 
+
+<!-- SECONDARY -->
+
+<section class="course-section">
+
+    <div class="section-header">
+
+        <div class="label">
+            SECONDARY SCHOOL
+        </div>
+
+        <h2>
+            Secondary Courses
+        </h2>
+
+        <p>
+            Strengthen subject knowledge and develop
+            examination skills for O-Level and IP pathways.
+        </p>
+
+    </div>
+
+
+    <div class="year-title">
+        Secondary 1
+    </div>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>English</h3>
+            <p>S1 English</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Mathematics</h3>
+            <p>S1 Mathematics</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Science</h3>
+            <p>S1 Science</p>
+        </div>
+
+        <div class="course-card">
+            <h3>History</h3>
+            <p>S1 History</p>
+        </div>
+
+    </div>
+
+
+    <div class="year-title">
+        Secondary 2
+    </div>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>English</h3>
+            <p>S2 English O-Level preparation</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Mathematics</h3>
+            <p>S2 Mathematics</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Science</h3>
+            <p>S2 Science</p>
+        </div>
+
+        <div class="course-card">
+            <h3>History</h3>
+            <p>S2 History</p>
+        </div>
+
+    </div>
+
+
+    <div class="year-title">
+        Secondary 3 / 4
+    </div>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>English</h3>
+            <p>S3/S4 English</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Chemistry</h3>
+            <p>S3/S4 Chemistry</p>
+        </div>
+
+        <div class="course-card">
+            <h3>History</h3>
+            <p>S3/S4 History</p>
+        </div>
+
+    </div>
+
+
+    <div class="year-title">
+        Secondary 4
+    </div>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>English Oral</h3>
+            <p>S4 English Oral preparation</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Social Studies</h3>
+            <p>S4 Social Studies preparation</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Biology Olympiad</h3>
+            <p>Biology Olympiad programme</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- JC -->
+
+<section class="course-section">
+
+    <div class="section-header">
+
+        <div class="label">
+            JUNIOR COLLEGE
+        </div>
+
+        <h2>
+            JC Courses
+        </h2>
+
+        <p>
+            Advanced subject support and structured
+            A-Level preparation for JC students.
+        </p>
+
+    </div>
+
+
+    <div class="year-title">
+        JC1
+    </div>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>H2 Physics</h3>
+            <p>JC1 Physics</p>
+        </div>
+
+        <div class="course-card">
+            <h3>H2 Chemistry</h3>
+            <p>JC1 Chemistry</p>
+        </div>
+
+        <div class="course-card">
+            <h3>H2 Economics</h3>
+            <p>JC1 Economics</p>
+        </div>
+
+        <div class="course-card">
+            <h3>General Paper</h3>
+            <p>JC1 GP</p>
+        </div>
+
+    </div>
+
+
+    <div class="year-title">
+        JC2
+    </div>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>General Paper</h3>
+            <p>JC2 GP</p>
+        </div>
+
+        <div class="course-card">
+            <h3>H2 Physics</h3>
+            <p>JC2 Physics</p>
+        </div>
+
+        <div class="course-card">
+            <h3>H2 Chemistry</h3>
+            <p>JC2 Chemistry</p>
+        </div>
+
+        <div class="course-card">
+            <h3>H2 Economics</h3>
+            <p>JC2 Economics</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ENRICHMENT -->
+
+<section class="course-section enrichment">
+
+    <div class="section-header">
+
+        <div class="label">
+            BEYOND ACADEMICS
+        </div>
+
+        <h2>
+            Enrichment Programmes
+        </h2>
+
+        <p>
+            Develop practical skills, confidence,
+            critical thinking and broader perspectives.
+        </p>
+
+    </div>
+
+
+    <div class="enrichment-grid">
+
+        <div class="enrichment-card">
+
+            <h3>
+                Financial Intelligence
+            </h3>
+
+            <p>
+                Financial Intelligence programme
+                for Secondary students.
+            </p>
+
+        </div>
+
+
+        <div class="enrichment-card">
+
+            <h3>
+                Leadership
+            </h3>
+
+            <p>
+                Leadership development programme
+                for Secondary students.
+            </p>
+
+        </div>
+
+
+        <div class="enrichment-card">
+
+            <h3>
+                Critical Thinking
+            </h3>
+
+            <p>
+                Develop structured thinking,
+                reasoning and problem-solving skills.
+            </p>
+
+        </div>
+
+
+        <div class="enrichment-card">
+
+            <h3>
+                Argumentative Writing
+            </h3>
+
+            <p>
+                Argumentative Writing &
+                Critical Thinking programme.
+            </p>
+
+        </div>
+
+
+        <div class="enrichment-card">
+
+            <h3>
+                APLUS Cultural Camp
+            </h3>
+
+            <p>
+                Broaden students' perspectives
+                through cultural learning experiences.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CTA -->
 
 <section class="cta">
 
     <h2>
-        Not sure which programme is right?
+        Looking for the right programme?
     </h2>
 
     <p>
-        Speak with us and we can help you
-        understand the available options.
+        Speak with APLUS Achiever to find a suitable
+        course for your child.
     </p>
 
     <a
-        href="index.html#contact"
+        href="https://wa.me/6598816223"
         class="button"
     >
-        Contact APLUS
+        Enquire via WhatsApp
     </a>
 
 </section>
