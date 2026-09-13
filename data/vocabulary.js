@@ -522,7 +522,7 @@ window.vocabulary = [
     meaning: "to get ready for something",
     example: "The pupils prepared carefully for their examination.",
     synonyms: ["get ready"],
-    antonyms": [],
+    antonyms: [],
     collocations: ["prepare for", "prepare something", "prepare carefully"],
     topic: "School",
     difficulty: 30,
