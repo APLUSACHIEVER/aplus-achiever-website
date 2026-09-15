@@ -15,7 +15,7 @@ header{background:#fff;border-bottom:1px solid #dfece6;padding:18px 5%;display:f
 .hint-panel{margin-top:16px;padding:16px 18px;border:1px solid #dbeae3;background:#f7fbf9;border-radius:15px}.hint-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}.hint-title{font-weight:900;color:#176448}.hint-step{padding:12px 13px;background:#fff;border-radius:11px;margin:8px 0;line-height:1.5}.hint-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.hint-btn{border:1px solid #cfe2d9;background:#fff;color:#176448;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}.hint-btn.primary{background:#176448;color:#fff}.ai-note{margin-top:10px;padding:10px 12px;border-radius:10px;background:#edf8f2;font-size:13px}.revealed-answer{padding:13px;border-radius:11px;background:#fff7df;border:1px solid #eedb9c;margin-top:10px;font-weight:800}.mastery-change{font-weight:900;color:#176448}.feedback .micro{font-size:13px;color:#5e746c}
 </style></head>
 <body>
-<header><div><div class="logo">APLUS ACHIEVER</div><div class="sub">PSLE ENGLISH VOCABULARY</div></div><div class="pill">AI TUTOR 3.0 • V13.1</div></header>
+<header><div><div class="logo">APLUS ACHIEVER</div><div class="sub">PSLE ENGLISH VOCABULARY</div></div><div class="pill">AI TUTOR 4.0 • V14</div></header>
 <main class="container">
 <section class="hero"><div class="pill">1000-WORD ADAPTIVE SYSTEM</div><h1>Your <span>PSLE AI</span> Personal Tutor</h1><p>Diagnose → Learn → Review → Challenge → Master</p></section>
 <div class="actions"><button class="btn primary" onclick="startMode('daily')">AI Daily 10</button><button class="btn" onclick="startMode('diagnostic')">AI Diagnostic</button><button class="btn" onclick="startMode('due')">Review Due</button><button class="btn" onclick="startMode('weak')">Weak Words</button><button class="btn" onclick="startMode('challenge')">Challenge</button></div><div class="actions" style="margin-top:10px"><button class="btn" onclick="V11_masteryCheck()">Mastery Check</button><button class="btn" onclick="V11_parentReport()">Parent Report</button><button class="btn" onclick="showTutor()">AI Tutor Dashboard</button><button class="btn" onclick="V11_resetDemo()">Reset Learning Data</button><button class="btn" onclick="showHome()">Home</button></div>
@@ -24,8 +24,8 @@ header{background:#fff;border-bottom:1px solid #dfece6;padding:18px 5%;display:f
 <section id="diagnosticCard" class="card hidden"><div class="section-title">AI Diagnostic</div><h2>Find your current PSLE vocabulary level</h2><p class="small">20 questions across Levels 1–10. The tutor uses the result to set your first target range.</p><button class="btn primary" onclick="startMode('diagnostic')">Start Diagnostic →</button></section>
 <section id="quiz" class="card hidden"><div class="quiz-top"><span id="modeLabel">AI DAILY 10</span><span id="counter">1 / 10</span></div><div class="progress" style="margin:13px 0 22px"><i id="qbar"></i></div><div class="section-title" id="typeLabel">MEANING</div><div class="question" id="question"></div><div id="options" class="options"></div><div id="inputWrap" class="hidden"><input id="answerInput" class="input" autocomplete="off" placeholder="Type the word..."><p class="small">Spelling is checked flexibly.</p></div><div id="hintPanel" class="hint-panel hidden"></div><div class="controls"><button class="btn" onclick="speakCurrent()">🔊 Hear Word</button><button id="checkBtn" class="btn primary" onclick="submitAnswer()">Check Answer</button><button id="nextBtn" class="btn primary hidden" onclick="nextQuestion()">Next Question →</button></div><div id="feedback" class="feedback hidden"></div><div id="wordCard" class="word-card hidden"></div></section>
 <section id="result" class="card hidden result"><div class="section-title">SESSION COMPLETE</div><div id="score" class="score">0/10</div><h2 id="resultTitle"></h2><p id="resultText" class="small"></p><div id="diagnosis" class="diagnosis"></div><button class="btn primary" onclick="startMode('daily')">Another AI 10 →</button><button class="btn" onclick="showTutor()">Open Tutor Dashboard</button></section>
-<section id="tutor" class="card hidden"><div class="section-title">AI TUTOR DASHBOARD</div><h2>Your Learning Profile</h2><p class="small">V13.1 Explain & Remember: every question has one clearly defined answer. No ambiguous fill-in-the-blank questions.</p><div id="tutorContent"></div><button class="btn primary" onclick="startMode('daily')">Continue Learning →</button><button class="btn" onclick="showHome()">Home</button></section>
-<div class="footer">APLUS ACHIEVER • PSLE AI Tutor 3.0 V13</div></main><div id="toast" class="toast"></div>
+<section id="tutor" class="card hidden"><div class="section-title">AI TUTOR DASHBOARD</div><h2>Your Learning Profile</h2><p class="small">V14 Adaptive Mastery: the tutor adapts difficulty using accuracy, mastery, response speed, recency and error patterns. Choose-the-word questions always use four options with one fixed answer.</p><div id="tutorContent"></div><button class="btn primary" onclick="startMode('daily')">Continue Learning →</button><button class="btn" onclick="showHome()">Home</button></section>
+<div class="footer">APLUS ACHIEVER • PSLE AI Tutor 4.0 V14</div></main><div id="toast" class="toast"></div>
 <script src="data/vocabulary.js"></script>
 <script>
 'use strict';
@@ -47,8 +47,48 @@ function targetLevel(){if(db.diagnostic&&db.total<30)return db.diagnostic.target
 function streak(){let d=Object.keys(db.days).sort().reverse(),n=0,dt=new Date();for(let i=0;i<d.length;i++){let expected=new Date();expected.setDate(dt.getDate()-i);if(d[i]===expected.toISOString().slice(0,10))n++;else break}return n}
 function dailyDone(){let d=db.days[today()]||{q:0,c:0};return Math.min(10,d.q||0)}
 function pick(arr,n){let a=[...arr].sort(()=>Math.random()-.5);return a.slice(0,n)}
-function rankScore(w){let s=wordState(w),forget=s.last?Math.min(1,(Date.now()-s.last)/86400000/(s.mastery>=80?30:7)):1;let error=s.seen?1-acc(s):.5;let weakness=s.mastery<60?1:(100-s.mastery)/100;let dueBoost=s.next&&s.next<=Date.now()?1:0;let fit=Math.max(0,1-Math.abs((w.level||1)-targetLevel())/6);let unseen=s.seen?0:.35;return forget*.28+error*.28+weakness*.18+dueBoost*.14+fit*.08+unseen*.04+Math.random()*.03}
-function choose(mode){if(mode==='diagnostic'){let q=[];for(let l=1;l<=10;l++){let a=VOCAB.filter(w=>Number(w.level)===l);if(a.length)q.push(pick(a,2)[0])}return pick(q,20)}if(mode==='due'){let a=due();return pick(a.length?a:weak().length?weak():VOCAB,10)}if(mode==='weak'){let a=weak();return pick(a.length?a:VOCAB.filter(w=>w.level<=targetLevel()+1),10)}if(mode==='challenge'){let a=VOCAB.filter(w=>Number(w.level)>=Math.max(7,targetLevel()+2)&&wordState(w).mastery<90);return pick(a.length?a:VOCAB.filter(w=>Number(w.level)>=7),10)}let ranked=[...VOCAB].sort((a,b)=>rankScore(b)-rankScore(a));let out=ranked.slice(0,6);let pool=VOCAB.filter(w=>!out.includes(w)&&Math.abs(Number(w.level)-targetLevel())<=1);out=out.concat(pick(pool,4));return out.length<10?out.concat(pick(VOCAB.filter(w=>!out.includes(w)),10-out.length)):out.slice(0,10)}
+function rankScore(w){
+  const s=wordState(w), now=Date.now();
+  const daysSince=s.last?Math.min(1,(now-s.last)/86400000/(s.mastery>=85?30:s.mastery>=65?14:5)):1;
+  const error=s.seen?1-acc(s):.45;
+  const weakness=s.mastery<55?1:(100-s.mastery)/100;
+  const dueBoost=s.next&&s.next<=now?1:0;
+  const levelGap=Math.abs(Number(w.level||1)-targetLevel());
+  const fit=Math.max(0,1-levelGap/7);
+  const unseen=s.seen?0:.28;
+  const slowBias=(s.seen&&(s.slowCount||0)>(s.fastCount||0))?.10:0;
+  const recent=s.recentResults||[];
+  const unstable=recent.length>=2&&recent.slice(-2).includes('wrong')?.08:0;
+  return daysSince*.22+error*.24+weakness*.18+dueBoost*.18+fit*.08+unseen*.04+slowBias+unstable+Math.random()*.025;
+}
+function choose(mode){
+  if(mode==='diagnostic'){
+    const q=[];
+    for(let l=1;l<=10;l++){const a=VOCAB.filter(w=>Number(w.level)===l);if(a.length)q.push(pick(a,2)[0]);}
+    return pick(q,20);
+  }
+  if(mode==='due'){const a=due();return pick(a.length?a:weak().length?weak():VOCAB,10);}
+  if(mode==='weak'){const a=weak();return pick(a.length?a:VOCAB.filter(w=>Number(w.level)<=targetLevel()+1),10);}
+  if(mode==='challenge'){const min=Math.min(10,Math.max(7,targetLevel()+2));const a=VOCAB.filter(w=>Number(w.level)>=min&&wordState(w).mastery<90);return pick(a.length?a:VOCAB.filter(w=>Number(w.level)>=7),10);}
+  const ranked=[...VOCAB].sort((a,b)=>rankScore(b)-rankScore(a));
+  const out=[],used=new Set();
+  for(let i=0;i<10;i++){
+    const type=DAILY_PLAN[i%DAILY_PLAN.length];
+    const candidate=ranked.find(w=>!used.has(w.id)&&suitableForType(w,type));
+    if(candidate){out.push(candidate);used.add(candidate.id);}
+  }
+  // If a rare data gap exists, fill remaining slots with unused valid words.
+  for(const w of ranked){if(out.length>=10)break;if(!used.has(w.id)){out.push(w);used.add(w.id);}}
+  return out.slice(0,10);
+}
+const DAILY_PLAN=['meaning','meaning','synonym','synonym','cloze','cloze','cloze','cloze','context','context'];
+function suitableForType(w,type){
+  if(!w||!w.word)return false;
+  if(type==='synonym')return Array.isArray(w.synonyms)&&w.synonyms.filter(Boolean).length>0;
+  if(type==='context')return !!String(w.meaning||'').trim()&&!!String(w.example||'').trim();
+  if(type==='cloze')return !!String(w.example||'').trim()&&new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i').test(String(w.example));
+  return !!String(w.meaning||'').trim();
+}
 function makeQuestion(w,i){
   if(!w || !w.word) throw new Error('Question data is missing a valid vocabulary word.');
   const meaning=String(w.meaning||'').trim();
@@ -60,18 +100,18 @@ function makeQuestion(w,i){
      four choices. We only create this question when the original
      example sentence contains the target word, so the answer is fixed.
   */
-  if(i%4===3 && example && new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i').test(example)){
+  if(DAILY_PLAN[i%DAILY_PLAN.length]==='cloze' && example && new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i').test(example)){
     const answer=String(w.word);
     const blankSentence=example.replace(new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i'),'__________');
     return {type:'cloze',text:'Choose the best word to complete the sentence.',context:blankSentence,answer:answer,opts:clozeOptions(w)};
   }
 
-  const useSyn=i%3===1 && syns.length>0;
+  const useSyn=DAILY_PLAN[i%DAILY_PLAN.length]==='synonym' && syns.length>0;
   if(useSyn){
     const answer=syns[0];
     return {type:'synonym',text:'Which word is closest in meaning to "'+w.word+'"?',answer:answer,opts:synonymOptions(w,answer)};
   }
-  if(i%3===2 && meaning && example){
+  if(DAILY_PLAN[i%DAILY_PLAN.length]==='context' && meaning && example){
     return {type:'context',text:'In the sentence below, what does "'+w.word+'" mean?',context:example,answer:meaning,opts:meaningOptions(w)};
   }
   return {type:'meaning',text:'What is the best meaning of "'+w.word+'"?',answer:meaning||'Meaning not available',opts:meaningOptions(w)};
@@ -135,7 +175,7 @@ function renderQuestion(){
       box.appendChild(b);
     });
   }catch(err){
-    console.error('V12 renderQuestion error:',err);
+    console.error('V14 renderQuestion error:',err);
     const q=document.getElementById('question'); if(q) q.textContent='We could not create this question.';
     const box=document.getElementById('options'); if(box) box.innerHTML='<div class="feedback wrong"><h3>⚠️ Tutor Error</h3><p>'+esc(err.message||String(err))+'</p><p>Please try another Daily 10.</p></div>';
     const check=document.getElementById('checkBtn'); if(check) check.classList.add('hidden');
@@ -151,8 +191,12 @@ let correct=ans===currentQ.answer;
 if(correct)score++;
 let s=wordState(current);s.seen++;s.last=Date.now();
 const hintsUsed=0; const revealed=false;
-if(correct){s.correct++;s.streak++;let gain=revealed?3:hintsUsed===0?12:hintsUsed===1?10:hintsUsed===2?7:5;s.mastery=Math.min(100,s.mastery+gain);let days=s.streak>=6?30:s.streak>=4?14:s.streak>=2?7:3;s.next=Date.now()+days*86400000;sessionCorrect.push(current.word)}
-else{s.wrong++;s.streak=0;s.mastery=Math.max(0,s.mastery-8);s.next=Date.now()+2*3600000;sessionWrong.push(current.word)}
+if(!Array.isArray(s.recentResults))s.recentResults=[];
+s.recentResults.push(correct?'correct':'wrong');if(s.recentResults.length>8)s.recentResults.shift();
+s.responseTimes=Array.isArray(s.responseTimes)?s.responseTimes:[];s.responseTimes.push(responseMs);if(s.responseTimes.length>8)s.responseTimes.shift();
+const fast=responseMs<=7000;
+if(correct){s.correct++;s.streak++;let gain=fast?14:10;s.mastery=Math.min(100,s.mastery+gain);let days=s.streak>=6?30:s.streak>=4?14:s.streak>=2?7:3;s.next=Date.now()+days*86400000;sessionCorrect.push(current.word)}
+else{s.wrong++;s.streak=0;s.mastery=Math.max(0,s.mastery-10);s.next=Date.now()+2*3600000;sessionWrong.push(current.word)}
 db.total++;if(correct)db.correct++;
 if(current){const rs=wordState(current);rs.lastResponseMs=responseMs;rs.fastCount=(rs.fastCount||0)+(responseMs<5000?1:0);rs.slowCount=(rs.slowCount||0)+(responseMs>15000?1:0);rs.lastResult=correct?'correct':'wrong';}let d=db.days[today()]||{q:0,c:0};d.q=(d.q||0)+1;d.c=(d.c||0)+(correct?1:0);db.days[today()]=d;
 if(!db.hints)db.hints={used:0,revealed:0};db.hints.used+=hintsUsed;if(revealed)db.hints.revealed++;
@@ -169,10 +213,30 @@ document.getElementById('checkBtn').classList.add('hidden');document.getElementB
 let hp=document.getElementById('hintPanel');hp.className='hint-panel hidden';hp.innerHTML='';
 let c=document.getElementById('wordCard');c.className='word-card';c.innerHTML='<div class="word-title">'+esc(current.word)+' <button class="btn" style="padding:5px 8px;font-size:12px" onclick="speakCurrent()">🔊</button></div><span class="tag">Level '+esc(current.level||'—')+'</span> <span class="tag">'+esc(current.partOfSpeech||'—')+'</span><p><b>中文：</b> '+esc(current.chinese||'—')+'</p><p><b>Meaning:</b> '+esc(current.meaning||'—')+'</p><p><b>Example:</b> '+esc(current.example||'—')+'</p><p><b>Synonyms:</b> '+esc((current.synonyms||[]).join(', ')||'—')+'</p><p><b>Antonyms:</b> '+esc((current.antonyms||[]).join(', ')||'—')+'</p><p><b>Memory Tip:</b> '+esc((current.collocations&&current.collocations.length)?'Remember it with: '+current.collocations.slice(0,2).join(' · '):(current.topic?'Connect it to the topic: '+current.topic:'Say the word aloud and use it in your own sentence.'))+'</p><p class="small">Mastery: '+Math.round(s.mastery)+'%</p>';
 }
-function nextQuestion(){if(!answered)return;if(index<questions.length-1){index++;renderQuestion()}else finish()}
+function nextQuestion(){
+  if(!answered)return;
+  if(index<questions.length-1){
+    const nextIndex=index+1, currentState=wordState(current);
+    if(mode==='daily'||mode==='weak'||mode==='due'){
+      let pool=[];
+      if(currentState.lastResult==='wrong'){
+        pool=due().concat(weak());
+      }else if(currentState.lastResult==='correct'&&(currentState.fastCount||0)>=(currentState.slowCount||0)){
+        pool=VOCAB.filter(w=>Number(w.level)>=Math.min(10,targetLevel()+1)&&wordState(w).mastery<90);
+      }
+      const nextType=DAILY_PLAN[nextIndex%DAILY_PLAN.length];
+      const unseenInSession=pool.filter(w=>!questions.slice(0,index+1).some(q=>q&&q.id===w.id)&&suitableForType(w,nextType));
+      const candidate=pick(unseenInSession,1)[0];
+      if(candidate)questions[nextIndex]=candidate;
+    }
+    index=nextIndex;renderQuestion();
+  }else finish();
+}
 function finish(){show('result');let pct=Math.round(score/questions.length*100);document.getElementById('score').textContent=score+'/'+questions.length;document.getElementById('resultTitle').textContent=pct>=90?'Excellent!':pct>=70?'Good progress!':'Let’s strengthen the weak areas.';document.getElementById('resultText').textContent='Session accuracy: '+pct+'%. '+(sessionWrong.length?sessionWrong.length+' word(s) need extra review.':'No wrong answers — excellent control.');let target=targetLevel();document.getElementById('diagnosis').innerHTML='<div class="plan"><b>AI Diagnosis</b><p>Current target: <b>Level '+target+'</b>.</p><p>'+ (sessionWrong.length?'Priority: revisit your weak words and due reviews before pushing difficulty.':'Priority: maintain accuracy, then add a small number of higher-level challenge words.')+'</p></div>';updateUI()}
 function setDiagnostic(){let by=[];questions.forEach(w=>{let s=wordState(w);if(s.seen&&s.last===Date.now())by.push({l:Number(w.level),ok:acc(s)})});let total=score/questions.length;let t=total>=.9?8:total>=.8?7:total>=.7?6:total>=.6?5:total>=.5?4:3;db.diagnostic={score:Math.round(total*100),target:t,date:today()}}
 function showTutor(){show('tutor');let target=targetLevel(),weakList=weak().slice(0,10),html='<div class="dashboard-grid"><div class="box"><b>Readiness</b><h2>'+readiness()+'%</h2></div><div class="box"><b>Accuracy</b><h2>'+overall()+'%</h2></div><div class="box"><b>Mastered</b><h2>'+mastered()+'</h2></div><div class="box"><b>Target</b><h2>Level '+target+'</h2></div></div><h3>AI Recommendation</h3><div class="plan"><b>'+recommendation()+'</b><p class="small">The tutor balances weak words, due reviews, unseen words and a small stretch above your target.</p></div><h3>Top Weak Words</h3>'+(weakList.length?'<div class="weak-list">'+weakList.map(w=>{let s=wordState(w);return '<div class="weak"><b>'+esc(w.word)+'</b><span>'+Math.round(acc(s)*100)+'% · '+s.wrong+' wrong</span></div>'}).join('')+'</div>':'<p class="small">No weak words yet.</p>')+'<h3>Level 1–10 Performance</h3>';for(let l=1;l<=10;l++){let arr=VOCAB.filter(w=>Number(w.level)===l),seen=0,cor=0;arr.forEach(w=>{let s=wordState(w);seen+=s.seen;cor+=s.correct});let p=seen?Math.round(cor/seen*100):0;html+='<div class="level"><div><span>Level '+l+'</span><span>'+p+'%</span></div><div class="bar"><i style="width:'+p+'%"></i></div></div>'}html+='<h3>7-Day AI Plan</h3><div class="plan"><p>Day 1–2: Due + weak words</p><p>Day 3–4: Daily 10 at Level '+target+'</p><p>Day 5: Mixed meaning + choose-the-word</p><p>Day 6: Level 7–10 challenge</p><p>Day 7: Mastery check</p></div>';document.getElementById('tutorContent').innerHTML=html}
+function adaptiveFast(){let f=0,t=0;VOCAB.forEach(w=>{let s=wordState(w);f+=s.fastCount||0;t+=(s.fastCount||0)+(s.slowCount||0)});return t?Math.round(f/t*100):0}
+function adaptiveSlow(){let f=0,t=0;VOCAB.forEach(w=>{let s=wordState(w);f+=s.slowCount||0;t+=(s.fastCount||0)+(s.slowCount||0)});return t?Math.round(f/t*100):0}
 function readiness(){let a=overall(),m=mastered()/Math.max(1,VOCAB.length)*100,sample=Math.min(100,db.total/50*100),d=db.diagnostic?db.diagnostic.score:0;return Math.min(100,Math.round(a*.5+m*.2+sample*.15+d*.15))}
 function recommendation(){if(!db.total)return 'Take the AI Diagnostic first.';if(due().length)return 'Review due words first.';if(weak().length)return 'Strengthen your weak words before increasing difficulty.';return 'You are ready for a controlled stretch into higher-level vocabulary.'}
 function updateUI(){document.getElementById('sAcc').textContent=overall()+'%';document.getElementById('sQ').textContent=db.total;document.getElementById('sMaster').textContent=mastered();document.getElementById('sDue').textContent=due().length;document.getElementById('sLevel').textContent=targetLevel();document.getElementById('sStreak').textContent=streak();let d=dailyDone();document.getElementById('dailyBar').style.width=(d/10*100)+'%';document.getElementById('dailyText').textContent=d+' / 10 today';document.getElementById('homeAdvice').textContent=!db.total?'Start with AI Diagnostic or Daily 10. The tutor learns from every answer.':recommendation()+' Target Level '+targetLevel()+'.'}
