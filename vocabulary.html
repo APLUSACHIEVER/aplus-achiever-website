@@ -757,6 +757,163 @@ header {
     .v6-panel{padding:24px 18px;}
 }
 
+
+/* =====================================================
+   APLUS ACHIEVER V7 — TRUE AI LEARNING BRAIN
+===================================================== */
+
+.v7-tools{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:16px 0 20px;
+}
+.v7-tool{
+    border:1px solid #cfe6da;
+    background:#f6fbf8;
+    color:#176b4b;
+    border-radius:12px;
+    padding:10px 14px;
+    font-size:13px;
+    font-weight:800;
+    cursor:pointer;
+}
+.v7-tool:hover{background:#e8f6ef}
+.v7-ai{
+    background:#e9f7ef;
+    border-color:#a8d9bf;
+}
+.v7-badge{
+    display:inline-block;
+    margin:0 0 18px;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#e8f7ef;
+    color:#16734e;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.8px;
+}
+.v7-overlay{
+    position:fixed;
+    inset:0;
+    z-index:10000;
+    background:rgba(12,43,32,.42);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+}
+.v7-panel{
+    width:min(960px,96vw);
+    max-height:90vh;
+    overflow:auto;
+    background:#fff;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 30px 90px rgba(0,0,0,.2);
+    position:relative;
+}
+.v7-close{
+    position:absolute;
+    right:15px;
+    top:13px;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:#edf7f2;
+    color:#176b4b;
+    font-size:24px;
+    cursor:pointer;
+}
+.v7-panel h2{margin:0 48px 20px 0;color:#123c2d}
+.v7-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px;
+    margin-bottom:20px;
+}
+.v7-card{
+    background:#f5faf7;
+    border:1px solid #dcebe4;
+    border-radius:16px;
+    padding:16px;
+}
+.v7-card strong{
+    display:block;
+    color:#16875a;
+    font-size:27px;
+    margin-top:5px;
+}
+.v7-section{
+    background:#f8fbfa;
+    border:1px solid #e1eee8;
+    border-radius:16px;
+    padding:17px;
+    margin:14px 0;
+}
+.v7-progress{
+    height:12px;
+    border-radius:99px;
+    background:#e7efe9;
+    overflow:hidden;
+}
+.v7-progress span{
+    display:block;
+    height:100%;
+    width:0;
+    background:#19895d;
+    border-radius:99px;
+}
+.v7-row{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    align-items:center;
+    padding:11px 13px;
+    margin:7px 0;
+    background:#fff;
+    border-radius:11px;
+    border:1px solid #e6eee9;
+}
+.v7-tag{
+    display:inline-block;
+    padding:4px 9px;
+    border-radius:999px;
+    background:#e8f7ef;
+    color:#176b4b;
+    font-size:11px;
+    font-weight:900;
+}
+.v7-action{
+    border:0;
+    border-radius:12px;
+    padding:12px 17px;
+    background:#19895d;
+    color:#fff;
+    font-weight:800;
+    cursor:pointer;
+    margin:5px 6px 0 0;
+}
+.v7-action.secondary{
+    background:#e8f5ef;
+    color:#176b4b;
+}
+.v7-brain{
+    font-size:52px;
+    font-weight:900;
+    color:#16875a;
+}
+.v7-reason{
+    color:#4a6258;
+    line-height:1.65;
+}
+@media(max-width:760px){
+    .v7-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .v7-panel{padding:24px 18px}
+}
+
 </style>
 </head>
 
@@ -877,7 +1034,14 @@ header {
 
 
 
-            <div class="v6-tools">
+            <div class="v7-tools">
+                <button type="button" class="v7-tool v7-ai" onclick="startAIBrain()">🧠 AI Daily 10</button>
+                <button type="button" class="v7-tool" onclick="openAIBrain()">🤖 AI Learning Brain</button>
+                <button type="button" class="v7-tool" onclick="startDueReview()">🔁 Review Due <span id="v7DueCount">0</span></button>
+                <button type="button" class="v7-tool" onclick="startWeakReview()">🎯 Weak Words</button>
+                <button type="button" class="v7-tool" onclick="startChallengeReview()">🚀 Challenge</button>
+            </div>
+            <div id="v7ModeBadge" class="v7-badge" style="display:none;"></div>
                 <button type="button" class="v6-tool v6-due" onclick="startDueReview()">
                     🔁 Review Due <span id="v6DueCount">0</span>
                 </button>
@@ -986,6 +1150,14 @@ header {
                 <div id="v6OverlayContent"></div>
             </div>
         </div>
+
+
+<div id="v7Overlay" class="v7-overlay" style="display:none;">
+    <div class="v7-panel">
+        <button class="v7-close" type="button" onclick="closeAIBrain()">×</button>
+        <div id="v7Content"></div>
+    </div>
+</div>
 
 </main>
 
@@ -2629,6 +2801,569 @@ function escapeHTML(
 
     window.addEventListener("load", function(){
         setTimeout(updateV6DueCount, 300);
+    });
+
+})();
+</script>
+
+
+<script>
+/* =====================================================
+   APLUS ACHIEVER V7 — TRUE AI LEARNING BRAIN
+   Local adaptive engine: ability + forgetting + errors +
+   difficulty + confidence + recency + streak.
+===================================================== */
+(function(){
+    "use strict";
+
+    const V7_KEY = "aplusAchieverPSLEV7BrainV1";
+    let v7Mode = "daily";
+    let v7Questions = [];
+
+    function readBrain(){
+        try{
+            const x = localStorage.getItem(V7_KEY);
+            return x ? JSON.parse(x) : {words:{}, sessions:[], days:{}};
+        }catch(e){
+            return {words:{}, sessions:[], days:{}};
+        }
+    }
+    function saveBrain(x){
+        try{ localStorage.setItem(V7_KEY, JSON.stringify(x)); }catch(e){}
+    }
+    function now(){ return Date.now(); }
+    function clamp(x,a,b){ return Math.max(a,Math.min(b,x)); }
+    function dayKey(){
+        const d=new Date();
+        return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+    }
+    function vocab(){
+        return window.vocabulary || window.vocabularyData || [];
+    }
+    function escapeText(s){
+        if(typeof escapeHTML==="function") return escapeHTML(String(s));
+        return String(s).replace(/[&<>"']/g,function(c){
+            return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+        });
+    }
+
+    /* ---------- Word-level learner model ---------- */
+    function getWordState(word){
+        const b=readBrain();
+        if(!b.words[word.word]){
+            b.words[word.word]={
+                word:word.word,
+                level:Number(word.level||1),
+                seen:0,
+                correct:0,
+                wrong:0,
+                consecutive:0,
+                confidence:0,
+                mastery:0,
+                lastSeen:0,
+                lastWrong:0,
+                lastCorrect:0,
+                avgResponse:0,
+                nextReview:now(),
+                difficulty:Number(word.level||1),
+                volatility:0
+            };
+            saveBrain(b);
+        }
+        return b.words[word.word];
+    }
+
+    function updateWord(word, correct, responseMs){
+        if(!word || !word.word) return;
+
+        const b=readBrain();
+        const s=b.words[word.word] || getWordState(word);
+
+        s.level=Number(word.level||s.level||1);
+        s.seen++;
+        s.lastSeen=now();
+
+        if(responseMs>0){
+            s.avgResponse = s.avgResponse ?
+                s.avgResponse*.7 + responseMs*.3 :
+                responseMs;
+        }
+
+        if(correct){
+            s.correct++;
+            s.consecutive++;
+            s.lastCorrect=now();
+        }else{
+            s.wrong++;
+            s.consecutive=0;
+            s.lastWrong=now();
+        }
+
+        const acc=s.seen ? s.correct/s.seen : 0;
+        const consistency=Math.min(1,s.consecutive/5);
+        const sample=Math.min(1,s.seen/10);
+
+        s.confidence=clamp(
+            acc*.55 + consistency*.25 + sample*.20,
+            0,1
+        );
+
+        /* Mastery is deliberately harder than raw accuracy. */
+        s.mastery=clamp(
+            acc*.45 +
+            Math.min(1,s.consecutive/6)*.25 +
+            Math.min(1,s.seen/8)*.15 +
+            (s.wrong===0 ? .15 : 0),
+            0,1
+        );
+
+        /*
+         * Adaptive forgetting interval.
+         * Strong + correct = longer interval.
+         * Weak / wrong = very short interval.
+         */
+        let hours;
+        if(!correct){
+            hours=2;
+        }else if(s.mastery>=.90){
+            hours=24*30;
+        }else if(s.mastery>=.80){
+            hours=24*14;
+        }else if(s.mastery>=.68){
+            hours=24*7;
+        }else if(s.mastery>=.52){
+            hours=24*3;
+        }else{
+            hours=24;
+        }
+
+        /* Faster repetition for slow/unstable learners. */
+        if(s.volatility>.35) hours*=.65;
+
+        s.nextReview=now()+hours*3600000;
+
+        /* A simple volatility signal: recent failures vs successes. */
+        const recentWrong=Math.min(5,s.wrong);
+        const recentRight=Math.min(5,s.correct);
+        s.volatility=clamp(
+            Math.abs(recentWrong-recentRight)/5,
+            0,1
+        );
+
+        b.words[word.word]=s;
+        saveBrain(b);
+        updateV7DueCount();
+    }
+
+    /* ---------- Forgetting model ---------- */
+    function forgettingRisk(s){
+        if(!s.seen) return 1;
+        const ageHours=Math.max(0,(now()-(s.lastSeen||now()))/3600000);
+        const mastery=Number(s.mastery||0);
+        const halfLife=12 + mastery*24*21;
+        return clamp(1-Math.exp(-ageHours/halfLife),0,1);
+    }
+
+    function errorRisk(s){
+        const total=Number(s.seen||0);
+        if(!total) return 1;
+        const acc=Number(s.correct||0)/total;
+        return clamp(1-acc,0,1);
+    }
+
+    function urgency(s){
+        if(!s.seen) return 1;
+        const overdue=Math.max(0,now()-Number(s.nextReview||now()));
+        return clamp(overdue/(24*3600000*7),0,1);
+    }
+
+    /* ---------- Student ability ---------- */
+    function ability(){
+        const b=readBrain();
+        const states=Object.values(b.words);
+
+        if(!states.length){
+            return {
+                readiness:20,
+                accuracy:0,
+                confidence:0,
+                mastered:0,
+                due:0,
+                target:2,
+                min:1,
+                max:3,
+                levelAbilities:Array(10).fill(0),
+                total:0
+            };
+        }
+
+        const totalSeen=states.reduce((a,s)=>a+Number(s.seen||0),0);
+        const totalCorrect=states.reduce((a,s)=>a+Number(s.correct||0),0);
+        const accuracy=totalSeen ? totalCorrect/totalSeen : 0;
+
+        const weighted=states.reduce(function(sum,s){
+            return sum + Number(s.confidence||0);
+        },0)/states.length;
+
+        const mastered=states.filter(s=>Number(s.mastery||0)>=.8).length;
+        const due=states.filter(s=>Number(s.nextReview||0)<=now()).length;
+
+        const levels=[];
+        for(let i=1;i<=10;i++){
+            const x=states.filter(s=>Number(s.level||1)===i);
+            if(!x.length){
+                levels.push(0);
+            }else{
+                levels.push(
+                    x.reduce((a,s)=>a+Number(s.confidence||0),0)/x.length
+                );
+            }
+        }
+
+        const levelScore=levels.reduce((sum,x)=>sum+x,0)/10;
+
+        const readiness=clamp(
+            accuracy*.40 +
+            weighted*.30 +
+            levelScore*.15 +
+            Math.min(1,totalSeen/100)*.10 +
+            Math.min(1,mastered/30)*.05,
+            0,1
+        );
+
+        let target;
+        if(readiness<.25) target=2;
+        else if(readiness<.40) target=3;
+        else if(readiness<.55) target=4;
+        else if(readiness<.68) target=5;
+        else if(readiness<.78) target=6;
+        else if(readiness<.87) target=7;
+        else target=8;
+
+        return {
+            readiness:Math.round(readiness*100),
+            accuracy:Math.round(accuracy*100),
+            confidence:Math.round(weighted*100),
+            mastered,
+            due,
+            target,
+            min:Math.max(1,target-2),
+            max:Math.min(10,target+2),
+            levelAbilities:levels.map(x=>Math.round(x*100)),
+            total:totalSeen
+        };
+    }
+
+    /* ---------- AI selection ---------- */
+    function scoreWord(w, mode){
+        const s=getWordState(w);
+
+        const unseen=s.seen===0 ? 1 : 0;
+        const forget=forgettingRisk(s);
+        const error=errorRisk(s);
+        const due=urgency(s);
+        const weakness=1-Number(s.mastery||0);
+        const level=Number(w.level||1);
+        const a=ability();
+
+        const difficultyFit=1-Math.min(1,Math.abs(level-a.target)/5);
+        const challenge=mode==="challenge" ? level/10 : 0;
+        const dueBoost=mode==="due" ? due : 0;
+
+        /*
+         * Main AI priority:
+         * 30% forgetting
+         * 25% errors
+         * 20% mastery weakness
+         * 15% due status
+         * 10% difficulty fit
+         */
+        let score=
+            forget*.30+
+            error*.25+
+            weakness*.20+
+            due*.15+
+            difficultyFit*.10+
+            challenge*.15+
+            unseen*.12+
+            Math.random()*.035;
+
+        if(mode==="weak") score += error*.30 + weakness*.20;
+        if(mode==="due") score += due*.35 + forget*.15;
+
+        return score;
+    }
+
+    function chooseWords(mode,count){
+        const a=ability();
+        let pool=vocab().filter(function(w){
+            if(!w || !w.word) return false;
+            const lv=Number(w.level||1);
+
+            if(mode==="challenge") return lv>=Math.max(7,a.target);
+            if(mode==="due") return true;
+            if(mode==="weak") return true;
+
+            return lv>=a.min && lv<=a.max;
+        });
+
+        pool.sort(function(x,y){ return scoreWord(y,mode)-scoreWord(x,mode); });
+
+        const chosen=[];
+        const used=new Set();
+
+        /*
+         * Balanced composition:
+         * weak + due + target + stretch + new.
+         */
+        function add(filter){
+            for(const w of pool){
+                if(chosen.length>=count) return;
+                if(used.has(w.word)) continue;
+                if(!filter(w)) continue;
+                used.add(w.word);
+                chosen.push(w);
+            }
+        }
+
+        if(mode==="ai"){
+            add(function(w){
+                const s=getWordState(w);
+                return s.seen>0 && (errorRisk(s)>.30 || forgettingRisk(s)>.45);
+            });
+
+            add(function(w){
+                const s=getWordState(w);
+                return Number(s.nextReview||0)<=now();
+            });
+
+            add(function(w){
+                return Math.abs(Number(w.level||1)-a.target)<=1;
+            });
+
+            add(function(w){
+                return Number(w.level||1)===Math.min(10,a.target+1);
+            });
+
+            add(function(w){
+                return getWordState(w).seen===0;
+            });
+        }else{
+            add(function(){return true;});
+        }
+
+        return chosen.slice(0,count);
+    }
+
+    function makeQuestions(words){
+        return words.map(function(w){
+            return createQuestion(w,Number(w.level||1));
+        });
+    }
+
+    function startAI(mode,label){
+        const words=chooseWords(mode,10);
+
+        if(!words.length){
+            alert("The AI needs more vocabulary records before it can build this session.");
+            return;
+        }
+
+        v7Questions=makeQuestions(words);
+        questions=v7Questions;
+        currentQuestion=0;
+        score=0;
+        answered=false;
+        v7Mode=mode;
+
+        const badge=document.getElementById("v7ModeBadge");
+        if(badge){
+            badge.textContent=label;
+            badge.style.display="inline-block";
+        }
+
+        const result=document.getElementById("result");
+        const quiz=document.getElementById("quiz");
+        if(result) result.style.display="none";
+        if(quiz) quiz.style.display="block";
+
+        closeAIBrain();
+        showQuestion();
+    }
+
+    window.startAIBrain=function(){
+        startAI("ai","AI ADAPTIVE DAILY 10");
+    };
+
+    window.startDueReview=function(){
+        startAI("due","AI — DUE & FORGETTING RISK");
+    };
+
+    window.startWeakReview=function(){
+        startAI("weak","AI — WEAK WORDS");
+    };
+
+    window.startChallengeReview=function(){
+        startAI("challenge","AI — CHALLENGE MODE");
+    };
+
+    /* ---------- AI explanation/dashboard ---------- */
+    window.openAIBrain=function(){
+        const a=ability();
+        const b=readBrain();
+        const states=Object.values(b.words);
+
+        const weakest=states
+            .filter(s=>s.seen>0)
+            .sort(function(x,y){
+                const sx=errorRisk(x)*.6+forgettingRisk(x)*.25+(1-x.mastery)*.15;
+                const sy=errorRisk(y)*.6+forgettingRisk(y)*.25+(1-y.mastery)*.15;
+                return sy-sx;
+            })
+            .slice(0,8);
+
+        let state="🌱 Building Foundations";
+        if(a.readiness>=85) state="🏆 Advanced & Ready";
+        else if(a.readiness>=70) state="💪 Strong & Developing";
+        else if(a.readiness>=50) state="📚 Developing";
+
+        let recommendation;
+        if(a.due>0){
+            recommendation="Start with due words first. The AI has detected that some words are at higher forgetting risk.";
+        }else if(a.readiness<50){
+            recommendation="Focus on weak words and target Levels "+a.min+"–"+a.max+" before pushing difficulty higher.";
+        }else if(a.readiness<75){
+            recommendation="Mix weak words, due words and target-level vocabulary. Add a small amount of stretch practice.";
+        }else{
+            recommendation="The learner is ready for more challenging vocabulary. The AI will still protect weak words from being forgotten.";
+        }
+
+        const levelRows=a.levelAbilities.map(function(x,i){
+            return `<div class="v7-row">
+                <span>Level ${i+1}</span>
+                <span class="v7-tag">${x}% ability</span>
+            </div>`;
+        }).join("");
+
+        const weakRows=weakest.length ? weakest.map(function(s){
+            return `<div class="v7-row">
+                <span>${escapeText(s.word)}</span>
+                <span class="v7-tag">${Math.round(Number(s.mastery||0)*100)}% mastery</span>
+            </div>`;
+        }).join("") : "<p>No weak-word history yet.</p>";
+
+        const content=`
+            <h2>🧠 APLUS ACHIEVER — AI Learning Brain</h2>
+
+            <div class="v7-section">
+                <div>Current Ability</div>
+                <div class="v7-brain">${a.readiness}/100</div>
+                <strong>${state}</strong>
+                <p class="v7-reason">${recommendation}</p>
+                <div class="v7-progress">
+                    <span style="width:${a.readiness}%"></span>
+                </div>
+            </div>
+
+            <div class="v7-grid">
+                <div class="v7-card">Accuracy<strong>${a.accuracy}%</strong></div>
+                <div class="v7-card">Confidence<strong>${a.confidence}%</strong></div>
+                <div class="v7-card">Due<strong>${a.due}</strong></div>
+                <div class="v7-card">Target Level<strong>${a.target}</strong></div>
+            </div>
+
+            <div class="v7-section">
+                <h3>🎯 AI Recommendation</h3>
+                <p>
+                    Today's adaptive range:
+                    <strong>Level ${a.min}–${a.max}</strong>.
+                    The AI will prioritize weak, forgotten and unstable words,
+                    then fill the remaining questions with appropriate new/challenge words.
+                </p>
+                <button class="v7-action" onclick="startAIBrain()">🧠 Start AI Daily 10</button>
+                <button class="v7-action secondary" onclick="startDueReview()">🔁 Review Due</button>
+            </div>
+
+            <div class="v7-section">
+                <h3>📈 Ability by Level</h3>
+                ${levelRows}
+            </div>
+
+            <div class="v7-section">
+                <h3>⚠️ AI Weak-Word Radar</h3>
+                ${weakRows}
+            </div>
+        `;
+
+        const overlay=document.getElementById("v7Overlay");
+        const target=document.getElementById("v7Content");
+        if(overlay && target){
+            target.innerHTML=content;
+            overlay.style.display="flex";
+        }
+    };
+
+    window.closeAIBrain=function(){
+        const overlay=document.getElementById("v7Overlay");
+        if(overlay) overlay.style.display="none";
+    };
+
+    function updateV7DueCount(){
+        const el=document.getElementById("v7DueCount");
+        if(el){
+            const b=readBrain();
+            el.textContent=Object.values(b.words)
+                .filter(s=>Number(s.nextReview||0)<=now())
+                .length;
+        }
+    }
+
+    /*
+     * Wrap the existing checkAnswer once.
+     * Response time is measured from question display when available.
+     */
+    const originalCheckAnswer=window.checkAnswer;
+    let v7StartTime=0;
+
+    const originalShowQuestion=window.showQuestion;
+
+    if(typeof originalShowQuestion==="function"){
+        window.showQuestion=function(){
+            v7StartTime=now();
+            return originalShowQuestion.apply(this,arguments);
+        };
+    }
+
+    window.checkAnswer=function(selected,clickedButton){
+        const q=questions[currentQuestion];
+        const wasAnswered=answered;
+
+        if(typeof originalCheckAnswer==="function"){
+            originalCheckAnswer(selected,clickedButton);
+        }
+
+        if(!wasAnswered && answered && q && q.word){
+            updateWord(q.word,selected===q.answer,now()-v7StartTime);
+        }
+    };
+
+    /*
+     * Keep the V7 brain isolated from the old V6 SRS store.
+     * Existing learning data remains intact.
+     */
+    window.addEventListener("load",function(){
+        setTimeout(updateV7DueCount,300);
+    });
+
+    document.addEventListener("keydown",function(e){
+        if(e.key==="Escape") closeAIBrain();
+        if((e.key==="Enter" || e.key===" ") &&
+           answered &&
+           document.getElementById("nextButton") &&
+           document.getElementById("nextButton").style.display!=="none"){
+            e.preventDefault();
+            nextQuestion();
+        }
     });
 
 })();
