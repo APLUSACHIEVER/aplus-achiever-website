@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -10,134 +8,90 @@
 
 <title>APLUS ACHIEVER — Daily 10</title>
 
-
 <style>
-
-/* =====================================================
-   GLOBAL
-===================================================== */
 
 * {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-
     margin: 0;
-
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
     background: #f4faf7;
-
     color: #123c2d;
-
 }
 
-
-/* =====================================================
+/* =========================
    HEADER
-===================================================== */
+========================= */
 
 header {
-
     height: 130px;
-
     background: white;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     padding: 0 5%;
-
     border-top: 1px solid #ead6c8;
-
     border-bottom: 1px solid #e8efeb;
-
 }
 
 .logo {
-
     line-height: 1;
-
 }
 
 .logo-main {
-
     font-size: 34px;
-
     font-weight: 800;
-
     letter-spacing: 2px;
-
     color: #176448;
-
 }
 
 .logo-sub {
-
     margin-top: 14px;
 
     font-size: 16px;
-
     font-weight: 700;
-
     letter-spacing: 4px;
 
     color: #637c75;
-
 }
 
 .back-link {
-
     color: #087047;
-
     text-decoration: none;
 
     font-size: 16px;
-
     font-weight: 700;
-
 }
 
 .back-link:hover {
-
     text-decoration: underline;
-
 }
 
-
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero {
-
     text-align: center;
 
     padding:
         66px
         20px
         38px;
-
 }
 
 .badge {
-
     display: inline-block;
 
-    padding:
-        12px
-        28px;
+    padding: 12px 28px;
 
     border-radius: 30px;
 
@@ -146,62 +100,49 @@ header {
     color: #126448;
 
     font-size: 15px;
-
     font-weight: 800;
 
     letter-spacing: 1px;
-
 }
 
 .hero h1 {
-
     margin:
         22px
         0
         12px;
 
     font-size: 64px;
-
     line-height: 1;
 
     color: #123c2d;
-
 }
 
 .hero h1 span {
-
     color: #27a56b;
-
 }
 
 .hero p {
-
     margin: 0;
 
     font-size: 21px;
 
     color: #657c76;
-
 }
 
-
-/* =====================================================
-   MAIN CONTAINER
-===================================================== */
+/* =========================
+   MAIN CARD
+========================= */
 
 .container {
-
     width: min(1360px, 90%);
 
     margin:
         10px
         auto
         100px;
-
 }
 
 .card {
-
     background: white;
 
     border-radius: 32px;
@@ -211,152 +152,37 @@ header {
     box-shadow:
         0 18px 50px
         rgba(28, 80, 58, 0.08);
-
 }
 
-
-/* =====================================================
+/* =========================
    TOP BAR
-===================================================== */
+========================= */
 
 .topbar {
-
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     margin-bottom: 32px;
-
 }
 
 .progress-text {
-
     font-size: 16px;
-
     font-weight: 700;
 
     color: #57736a;
-
 }
 
 .level-text {
-
     font-size: 15px;
-
     font-weight: 800;
 
     color: #209261;
-
 }
-
-
-/* =====================================================
-   MISTAKE REVIEW
-===================================================== */
-
-.study-controls {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.mistake-button {
-    border: 1px solid #cfe4d9;
-    background: #f3faf6;
-    color: #176448;
-    padding: 10px 16px;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.15s ease;
-}
-
-.mistake-button:hover {
-    background: #e4f5ec;
-    border-color: #42ad7c;
-    transform: translateY(-1px);
-}
-
-.mistake-button:disabled {
-    opacity: 0.5;
-    cursor: default;
-    transform: none;
-}
-
-.review-badge {
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 7px 12px;
-    border-radius: 20px;
-    background: #fff1df;
-    color: #a45b16;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.result-actions {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.secondary-button {
-    border: 1px solid #cfe4d9;
-    background: white;
-    color: #176448;
-    padding: 15px 24px;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 800;
-    cursor: pointer;
-}
-
-.secondary-button:hover {
-    background: #f3faf6;
-}
-
-.mistake-summary {
-    margin: 0 auto 28px;
-    max-width: 650px;
-    padding: 18px 20px;
-    border-radius: 16px;
-    background: #f7fbf9;
-    color: #4d6b61;
-    line-height: 1.6;
-    text-align: left;
-}
-
-@media (max-width: 760px) {
-    .topbar {
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .study-controls {
-        gap: 8px;
-        flex-direction: column-reverse;
-        align-items: flex-end;
-    }
-
-    .mistake-button {
-        padding: 8px 11px;
-        font-size: 12px;
-    }
-}
-
-/* =====================================================
-   PROGRESS
-===================================================== */
 
 .progress {
-
     width: 100%;
-
     height: 9px;
 
     background: #e7f0eb;
@@ -366,13 +192,10 @@ header {
     overflow: hidden;
 
     margin-bottom: 42px;
-
 }
 
 .progress-bar {
-
     height: 100%;
-
     width: 10%;
 
     background: #28a66d;
@@ -381,18 +204,14 @@ header {
 
     transition:
         width 0.3s ease;
-
 }
 
-
-/* =====================================================
+/* =========================
    QUESTION
-===================================================== */
+========================= */
 
 .question-label {
-
     font-size: 14px;
-
     font-weight: 800;
 
     color: #2ba06c;
@@ -400,73 +219,38 @@ header {
     letter-spacing: 1.5px;
 
     margin-bottom: 14px;
-
 }
 
 .question {
-
     font-size: 32px;
-
-    line-height: 1.5;
+    line-height: 1.4;
 
     font-weight: 700;
 
     color: #173d2f;
 
     margin-bottom: 34px;
-
 }
 
-
-/* =====================================================
-   FILL-IN-THE-BLANK
-===================================================== */
-
-.question-blank {
-
-    display: inline-block;
-
-    min-width: 150px;
-
-    height: 1.05em;
-
-    margin:
-        0
-        8px;
-
-    border-bottom:
-        3px solid #27a56b;
-
-    vertical-align:
-        baseline;
-
-}
-
-
-/* =====================================================
+/* =========================
    OPTIONS
-===================================================== */
+========================= */
 
 .options {
-
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
     gap: 16px;
-
 }
 
 .option {
-
     width: 100%;
 
     min-height: 76px;
 
-    padding:
-        18px
-        24px;
+    padding: 18px 22px;
 
     border:
         2px solid #dcebe4;
@@ -479,152 +263,98 @@ header {
 
     text-align: left;
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
     font-size: 18px;
-
     font-weight: 600;
 
     color: #244a3c;
 
     transition:
         all 0.15s ease;
-
-    /* Prevent browser text caret */
-    user-select: none;
-
-    -webkit-user-select: none;
-
 }
 
 .option:hover {
-
     border-color: #42ad7c;
 
     background: #f3fbf7;
 
-    transform:
-        translateY(-1px);
-
-}
-
-.option:focus {
-
-    outline: none;
-
-}
-
-.option:focus-visible {
-
-    outline:
-        3px solid
-        rgba(39, 165, 107, 0.25);
-
-    outline-offset: 2px;
-
+    transform: translateY(-1px);
 }
 
 .option.correct {
-
     border-color: #239660;
 
     background: #e3f6ec;
 
     color: #126448;
-
 }
 
 .option.wrong {
-
     border-color: #d76868;
 
     background: #fff0f0;
 
     color: #a73535;
-
 }
 
 .option:disabled {
-
     cursor: default;
-
-    transform: none;
-
 }
 
-
-/* =====================================================
+/* =========================
    FEEDBACK
-===================================================== */
+========================= */
 
 .feedback {
-
     display: none;
 
     margin-top: 30px;
 
-    padding:
-        22px
-        24px;
+    padding: 22px 24px;
 
     border-radius: 16px;
 
     font-size: 17px;
 
     line-height: 1.6;
-
 }
 
 .feedback.correct {
-
     display: block;
 
     background: #eaf8f0;
 
     color: #176448;
-
 }
 
 .feedback.wrong {
-
     display: block;
 
     background: #fff1f1;
 
     color: #923c3c;
-
 }
 
 .feedback-title {
-
     font-size: 20px;
 
     font-weight: 800;
 
     margin-bottom: 7px;
-
 }
 
-
-/* =====================================================
-   BUTTON ROW
-===================================================== */
+/* =========================
+   NEXT BUTTON
+========================= */
 
 .button-row {
-
     display: flex;
 
     justify-content: flex-end;
 
     margin-top: 30px;
-
 }
 
 .next-button {
-
     display: none;
 
     border: none;
@@ -633,9 +363,7 @@ header {
 
     color: white;
 
-    padding:
-        15px
-        30px;
+    padding: 15px 30px;
 
     border-radius: 12px;
 
@@ -644,44 +372,33 @@ header {
     font-weight: 800;
 
     cursor: pointer;
-
 }
 
 .next-button:hover {
-
     background: #11734d;
-
 }
 
-
-/* =====================================================
+/* =========================
    RESULT
-===================================================== */
+========================= */
 
 #result {
-
     display: none;
 
     text-align: center;
 
-    padding:
-        30px
-        10px;
-
+    padding: 30px 10px;
 }
 
 .result-title {
-
     font-size: 38px;
 
     font-weight: 800;
 
     margin-bottom: 20px;
-
 }
 
 .score {
-
     font-size: 70px;
 
     font-weight: 800;
@@ -689,30 +406,24 @@ header {
     color: #239966;
 
     margin-bottom: 15px;
-
 }
 
 .result-message {
-
     font-size: 20px;
 
     color: #637a72;
 
     margin-bottom: 35px;
-
 }
 
 .restart-button {
-
     border: none;
 
     background: #19895d;
 
     color: white;
 
-    padding:
-        15px
-        30px;
+    padding: 15px 30px;
 
     border-radius: 12px;
 
@@ -721,22 +432,13 @@ header {
     font-weight: 800;
 
     cursor: pointer;
-
 }
 
-.restart-button:hover {
-
-    background: #11734d;
-
-}
-
-
-/* =====================================================
+/* =========================
    ERROR
-===================================================== */
+========================= */
 
 #errorBox {
-
     display: none;
 
     padding: 30px;
@@ -752,42 +454,32 @@ header {
     line-height: 1.7;
 
     font-size: 16px;
-
 }
 
 #errorBox strong {
-
     display: block;
 
     font-size: 20px;
 
     margin-bottom: 10px;
-
 }
 
-
-/* =====================================================
+/* =========================
    LOADING
-===================================================== */
+========================= */
 
 #loading {
-
     text-align: center;
 
-    padding:
-        100px
-        20px;
+    padding: 100px 20px;
 
     font-size: 20px;
 
     color: #617970;
-
 }
 
 .spinner {
-
     width: 38px;
-
     height: 38px;
 
     margin:
@@ -798,393 +490,283 @@ header {
     border:
         4px solid #dcece5;
 
-    border-top-color:
-        #299d69;
+    border-top-color: #299d69;
 
     border-radius: 50%;
 
     animation:
         spin 0.8s linear infinite;
-
 }
 
 @keyframes spin {
 
     to {
-
-        transform:
-            rotate(360deg);
-
+        transform: rotate(360deg);
     }
 
 }
 
+.option {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
 
-/* =====================================================
+.question,
+.feedback {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+    .topbar {
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .progress-text,
+    .level-text {
+        font-size: 13px;
+    }
+
+    .button-row {
+        justify-content: stretch;
+    }
+
+    .next-button {
+        width: 100%;
+    }
+}
+
+/* =========================
    MOBILE
-===================================================== */
+========================= */
 
 @media (max-width: 760px) {
 
     header {
-
         height: 105px;
 
         padding:
             0
             20px;
-
     }
 
     .logo-main {
-
         font-size: 23px;
-
     }
 
     .logo-sub {
-
         font-size: 11px;
 
         margin-top: 8px;
-
     }
 
     .back-link {
-
         font-size: 13px;
-
     }
 
     .hero {
-
         padding:
             45px
             15px
             30px;
-
     }
 
     .hero h1 {
-
         font-size: 46px;
-
     }
 
     .hero p {
-
         font-size: 17px;
-
     }
 
     .container {
-
         width: 94%;
-
     }
 
     .card {
-
-        padding:
-            25px
-            20px;
+        padding: 25px 20px;
 
         border-radius: 22px;
-
     }
 
     .options {
-
         grid-template-columns: 1fr;
-
     }
 
     .question {
-
         font-size: 24px;
-
-        line-height: 1.55;
-
-    }
-
-    .question-blank {
-
-        min-width: 110px;
-
     }
 
     .option {
-
         min-height: 68px;
 
-        padding:
-            16px
-            20px;
-
         font-size: 16px;
-
     }
 
 }
 
 
 /* =====================================================
-   VERY SMALL MOBILE
+   APLUS ACHIEVER V6 — ADAPTIVE SPACED REPETITION
 ===================================================== */
 
-@media (max-width: 420px) {
-
-    .hero h1 {
-
-        font-size: 40px;
-
-    }
-
-    .card {
-
-        padding:
-            22px
-            16px;
-
-    }
-
-    .question {
-
-        font-size: 21px;
-
-    }
-
-    .question-blank {
-
-        min-width: 90px;
-
-    }
-
+.v6-tools{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:18px 0 22px;
 }
 
-
-/* ===== APLUS ACHIEVER V2 Learning Dashboard ===== */
-.dashboard-button{
-    border:1px solid #b7dfc5;
-    background:#f3fbf6;
-    color:#187a43;
-    border-radius:10px;
-    padding:9px 13px;
-    font-weight:700;
+.v6-tool{
+    border:1px solid #cfe6da;
+    background:#f6fbf8;
+    color:#176b4b;
+    border-radius:12px;
+    padding:10px 14px;
+    font-size:13px;
+    font-weight:800;
     cursor:pointer;
 }
-.dashboard-button:hover{background:#e8f7ee}
-.dashboard-overlay{
-    position:fixed; inset:0; z-index:9999;
-    background:rgba(0,0,0,.42);
-    display:none; align-items:center; justify-content:center;
-    padding:20px;
-}
-.dashboard-panel{
-    width:min(900px,100%); max-height:90vh; overflow:auto;
-    background:#fff; border-radius:20px; padding:24px;
-    box-shadow:0 20px 60px rgba(0,0,0,.22);
-}
-.dashboard-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
-.dashboard-head h2{margin:0;color:#176b3a}
-.close-dashboard{
-    border:0;background:#f1f3f4;border-radius:50%;width:36px;height:36px;
-    font-size:20px;cursor:pointer;
-}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
-.stat-card{background:#f7fbf8;border:1px solid #dceee3;border-radius:14px;padding:15px}
-.stat-card .label{font-size:12px;color:#667085;margin-bottom:6px}
-.stat-card .value{font-size:25px;font-weight:800;color:#176b3a}
-.progress-wrap{margin:18px 0;padding:16px;background:#f8faf9;border-radius:14px}
-.progress-track{height:10px;background:#e6ece8;border-radius:99px;overflow:hidden}
-.progress-fill{height:100%;width:0;background:#43a866;border-radius:99px;transition:width .3s}
-.dashboard-section{margin-top:22px}
-.dashboard-section h3{font-size:16px;margin:0 0 10px;color:#263238}
-.weak-list{display:flex;flex-direction:column;gap:8px}
-.weak-item{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;padding:10px 12px;background:#fafafa;border-radius:10px}
-.weak-rank{font-weight:800;color:#999}
-.weak-word{font-weight:700}
-.weak-meta{font-size:12px;color:#777}
-.dashboard-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.danger-button{border:1px solid #efb4b4;background:#fff5f5;color:#b42318;border-radius:10px;padding:9px 13px;font-weight:700;cursor:pointer}
-.review-all-button{border:0;background:#238b4e;color:white;border-radius:10px;padding:10px 15px;font-weight:700;cursor:pointer}
-@media(max-width:700px){
- .stats-grid{grid-template-columns:repeat(2,1fr)}
- .dashboard-panel{padding:17px}
+
+.v6-tool:hover{
+    background:#e8f6ef;
 }
 
-
-/* ===== APLUS ACHIEVER V3 Student Learning Centre ===== */
-.learning-centre-btn{
-    border:0;background:#176b3a;color:#fff;border-radius:10px;
-    padding:9px 14px;font-weight:800;cursor:pointer;
-}
-.learning-centre-btn:hover{background:#12582f}
-.learning-centre-overlay{
-    position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.45);
-    display:none;align-items:center;justify-content:center;padding:14px;
-}
-.learning-centre{
-    width:min(1040px,100%);max-height:94vh;overflow:auto;background:#fff;
-    border-radius:22px;box-shadow:0 25px 80px rgba(0,0,0,.25);padding:24px;
-}
-.lc-header{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
-.lc-title{margin:0;color:#176b3a;font-size:26px}
-.lc-subtitle{margin:5px 0 0;color:#667085;font-size:13px}
-.lc-close{border:0;background:#f1f3f4;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer}
-.lc-hero{
-    margin-top:18px;padding:20px;border-radius:18px;
-    background:#f3fbf6;border:1px solid #d8eee0;
-}
-.lc-hero-top{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.streak-number{font-size:38px;font-weight:900;color:#176b3a}
-.streak-label{font-size:13px;color:#667085}
-.lc-badge{font-size:12px;font-weight:800;padding:7px 11px;border-radius:99px;background:#fff;border:1px solid #cfe6d7;color:#176b3a}
-.lc-progress{margin-top:15px}
-.lc-progress-track{height:11px;background:#e2ebe5;border-radius:99px;overflow:hidden}
-.lc-progress-fill{height:100%;width:0;border-radius:99px;background:#43a866;transition:width .35s}
-.lc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
-.lc-stat{padding:15px;border:1px solid #e4e9e6;border-radius:14px;background:#fff}
-.lc-stat-label{font-size:11px;color:#667085}
-.lc-stat-value{font-size:23px;font-weight:900;color:#176b3a;margin-top:5px}
-.lc-section{margin-top:22px}
-.lc-section h3{font-size:17px;margin:0 0 11px;color:#263238}
-.level-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
-.level-card{border:1px solid #e1e8e3;border-radius:12px;padding:11px;background:#fff}
-.level-name{font-size:12px;font-weight:800}
-.level-percent{font-size:18px;font-weight:900;color:#176b3a;margin:3px 0}
-.level-mini{height:6px;background:#e8ede9;border-radius:99px;overflow:hidden}
-.level-mini>span{display:block;height:100%;background:#43a866;border-radius:99px}
-.daily-card{border:1px solid #dceee3;background:#f8fcf9;border-radius:15px;padding:16px}
-.daily-row{display:flex;justify-content:space-between;gap:12px;align-items:center}
-.daily-title{font-weight:900;color:#176b3a}
-.daily-meta{font-size:12px;color:#667085;margin-top:4px}
-.lc-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:13px}
-.lc-action{border:1px solid #b7dfc5;background:#f3fbf6;color:#176b3a;border-radius:10px;padding:9px 13px;font-weight:800;cursor:pointer}
-.lc-action.primary{background:#176b3a;color:#fff;border-color:#176b3a}
-.lc-action.danger{color:#b42318;background:#fff5f5;border-color:#efb4b4}
-.today-list{display:flex;flex-direction:column;gap:8px}
-.today-item{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:9px;padding:10px 12px;background:#fafafa;border-radius:10px}
-.today-num{font-weight:900;color:#999}
-.today-word{font-weight:800}
-.today-info{font-size:11px;color:#777}
-.empty-lc{padding:16px;text-align:center;color:#777;background:#fafafa;border-radius:12px}
-@media(max-width:800px){
- .lc-grid{grid-template-columns:repeat(2,1fr)}
- .level-grid{grid-template-columns:repeat(2,1fr)}
- .lc-hero-top{align-items:flex-start}
+.v6-due{
+    background:#e8f7ef;
+    border-color:#a8d9bf;
 }
 
-
-/* ===== APLUS ACHIEVER V4 Intelligent Review Engine ===== */
-.smart-review-btn{
-    border:1px solid #9acfb0;background:#eefaf2;color:#176b3a;
-    border-radius:10px;padding:9px 14px;font-weight:800;cursor:pointer;
-}
-.smart-review-btn:hover{background:#e2f5e9}
-.smart-overlay{
-    position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.45);
-    display:none;align-items:center;justify-content:center;padding:14px;
-}
-.smart-panel{
-    width:min(980px,100%);max-height:94vh;overflow:auto;background:#fff;
-    border-radius:22px;padding:24px;box-shadow:0 25px 80px rgba(0,0,0,.25);
-}
-.smart-header{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}
-.smart-title{margin:0;color:#176b3a;font-size:25px}
-.smart-sub{margin:5px 0 0;color:#667085;font-size:13px}
-.smart-close{border:0;background:#f1f3f4;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer}
-.smart-score{
-    margin-top:18px;padding:17px;border-radius:16px;background:#f4fbf6;
-    border:1px solid #d8eee0;display:flex;justify-content:space-between;gap:20px;align-items:center
-}
-.smart-score-number{font-size:34px;font-weight:900;color:#176b3a}
-.smart-score-label{font-size:12px;color:#667085}
-.smart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:15px}
-.smart-stat{border:1px solid #e3e9e5;border-radius:13px;padding:14px;background:#fff}
-.smart-stat-label{font-size:11px;color:#667085}
-.smart-stat-value{font-size:21px;font-weight:900;color:#176b3a;margin-top:4px}
-.smart-section{margin-top:22px}
-.smart-section h3{margin:0 0 10px;font-size:16px;color:#263238}
-.smart-reasons{display:flex;gap:8px;flex-wrap:wrap}
-.smart-reason{padding:7px 10px;border-radius:99px;background:#f7f8f7;border:1px solid #e3e7e4;font-size:12px;color:#4b5563}
-.smart-list{display:flex;flex-direction:column;gap:8px}
-.smart-item{display:grid;grid-template-columns:34px 1fr auto;gap:9px;align-items:center;padding:11px 12px;background:#fafafa;border-radius:11px}
-.smart-rank{font-weight:900;color:#999}
-.smart-word{font-weight:800}
-.smart-meta{font-size:11px;color:#777;margin-top:3px}
-.smart-priority{font-weight:900;color:#176b3a;font-size:12px}
-.smart-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}
-.smart-action{border:1px solid #b7dfc5;background:#f3fbf6;color:#176b3a;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
-.smart-action.primary{background:#176b3a;color:#fff;border-color:#176b3a}
-@media(max-width:700px){
- .smart-grid{grid-template-columns:1fr}
- .smart-panel{padding:17px}
- .smart-score{align-items:flex-start}
+.v6-badge{
+    display:inline-block;
+    margin:0 0 18px;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#e8f7ef;
+    color:#16734e;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.8px;
 }
 
+.v6-overlay{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(12,43,32,.38);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+}
 
-/* ===== APLUS ACHIEVER V5 AI Learning Algorithm + Student Profile ===== */
-.ai-profile-btn{
-    border:1px solid #b8dcbf;background:#f1faf3;color:#176b3a;border-radius:10px;
-    padding:9px 14px;font-weight:800;cursor:pointer;
+.v6-panel{
+    width:min(900px,96vw);
+    max-height:88vh;
+    overflow:auto;
+    background:#fff;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 30px 80px rgba(0,0,0,.18);
+    position:relative;
 }
-.ai-profile-overlay{
-    position:fixed;inset:0;z-index:10002;background:rgba(0,0,0,.46);
-    display:none;align-items:center;justify-content:center;padding:14px;
+
+.v6-close{
+    position:absolute;
+    right:15px;
+    top:13px;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:#edf7f2;
+    color:#176b4b;
+    font-size:24px;
+    cursor:pointer;
 }
-.ai-profile-panel{
-    width:min(1050px,100%);max-height:95vh;overflow:auto;background:#fff;border-radius:22px;
-    padding:24px;box-shadow:0 25px 80px rgba(0,0,0,.25)
+
+.v6-panel h2{
+    margin:0 48px 22px 0;
+    color:#123c2d;
 }
-.ai-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
-.ai-title{margin:0;color:#176b3a;font-size:25px}
-.ai-sub{margin:5px 0 0;color:#667085;font-size:13px}
-.ai-close{border:0;background:#f1f3f4;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer}
-.profile-banner{
-    margin-top:18px;padding:20px;border-radius:18px;background:#f3fbf6;border:1px solid #d8eee0;
-    display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center
+
+.v6-stats{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:12px;
+    margin-bottom:22px;
 }
-.profile-state{font-size:29px;font-weight:900;color:#176b3a}
-.profile-description{font-size:13px;color:#667085;margin-top:5px;line-height:1.5}
-.readiness{
-    min-width:145px;text-align:center;padding:13px;border-radius:14px;background:#fff;border:1px solid #d8eee0
+
+.v6-stat{
+    background:#f5faf7;
+    border:1px solid #dcebe4;
+    border-radius:16px;
+    padding:17px;
 }
-.readiness-score{font-size:30px;font-weight:900;color:#176b3a}
-.readiness-label{font-size:11px;color:#667085}
-.ai-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:15px}
-.ai-stat{border:1px solid #e3e9e5;border-radius:13px;padding:13px;background:#fff}
-.ai-stat-label{font-size:10px;color:#667085}
-.ai-stat-value{font-size:20px;font-weight:900;color:#176b3a;margin-top:4px}
-.ai-section{margin-top:22px}
-.ai-section h3{font-size:16px;margin:0 0 11px;color:#263238}
-.ability-bars{display:flex;flex-direction:column;gap:10px}
-.ability-row{display:grid;grid-template-columns:75px 1fr 50px;gap:9px;align-items:center}
-.ability-name{font-weight:800;font-size:12px}
-.ability-track{height:9px;background:#e7ece9;border-radius:99px;overflow:hidden}
-.ability-fill{height:100%;width:0;background:#43a866;border-radius:99px}
-.ability-score{font-size:12px;font-weight:900;color:#176b3a;text-align:right}
-.ai-advice{padding:15px;border-radius:14px;background:#fafafa;border:1px solid #e4e8e5;line-height:1.6}
-.ai-advice strong{color:#176b3a}
-.ai-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}
-.ai-action{border:1px solid #b7dfc5;background:#f3fbf6;color:#176b3a;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
-.ai-action.primary{background:#176b3a;color:#fff;border-color:#176b3a}
-@media(max-width:800px){
- .ai-stats{grid-template-columns:repeat(2,1fr)}
- .profile-banner{grid-template-columns:1fr}
+
+.v6-stat strong{
+    display:block;
+    color:#16875a;
+    font-size:28px;
+    margin-top:5px;
+}
+
+.v6-list{
+    display:grid;
+    gap:8px;
+}
+
+.v6-row{
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    padding:12px 14px;
+    border-radius:12px;
+    background:#f7fbf9;
+}
+
+.v6-pill{
+    display:inline-block;
+    padding:5px 9px;
+    border-radius:999px;
+    background:#e8f7ef;
+    color:#176b4b;
+    font-size:12px;
+    font-weight:800;
+}
+
+.v6-action{
+    border:0;
+    border-radius:12px;
+    padding:12px 17px;
+    background:#19895d;
+    color:#fff;
+    font-weight:800;
+    cursor:pointer;
+    margin:5px 6px 0 0;
+}
+
+.v6-action.secondary{
+    background:#e8f5ef;
+    color:#176b4b;
+}
+
+@media(max-width:760px){
+    .v6-stats{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .v6-panel{padding:24px 18px;}
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
+<!-- =========================
      HEADER
-===================================================== -->
+========================= -->
 
 <header>
 
@@ -1195,7 +777,7 @@ header {
         </div>
 
         <div class="logo-sub">
-            PSLE Vocabulary Learning System
+            AI LEARNING
         </div>
 
     </div>
@@ -1211,9 +793,10 @@ header {
 </header>
 
 
-<!-- =====================================================
+
+<!-- =========================
      HERO
-===================================================== -->
+========================= -->
 
 <section class="hero">
 
@@ -1232,18 +815,17 @@ header {
 </section>
 
 
-<!-- =====================================================
+
+<!-- =========================
      MAIN
-===================================================== -->
+========================= -->
 
 <main class="container">
 
     <div class="card">
 
 
-        <!-- =================================================
-             LOADING
-        ================================================= -->
+        <!-- LOADING -->
 
         <div id="loading">
 
@@ -1254,9 +836,8 @@ header {
         </div>
 
 
-        <!-- =================================================
-             ERROR
-        ================================================= -->
+
+        <!-- ERROR -->
 
         <div id="errorBox">
 
@@ -1269,17 +850,12 @@ header {
         </div>
 
 
-        <!-- =================================================
-             QUIZ
-        ================================================= -->
 
-        <div
-            id="quiz"
-            style="display:none;"
-        >
+        <!-- QUIZ -->
 
+        <div id="quiz"
+             style="display:none;">
 
-            <!-- TOP BAR -->
 
             <div class="topbar">
 
@@ -1290,28 +866,33 @@ header {
                     Question 1 of 10
                 </div>
 
-                <div class="study-controls">
-                    <button type="button" class="mistake-button" id="mistakeButton"
-                            onclick="startMistakeReview()">
-                        Mistakes <span id="mistakeCount">0</span>
-                    </button>
-<button type="button" class="dashboard-button" onclick="openDashboard()">Dashboard</button>
-<button type="button" class="learning-centre-btn" onclick="openLearningCentre()">Student Centre</button>
-<button type="button" class="smart-review-btn" onclick="openSmartReview()">Smart Review</button>
-<button type="button" class="ai-profile-btn" onclick="openAIProfile()">AI Profile</button>
-
-                    <div
-                        class="level-text"
-                        id="levelText"
-                    >
-                        Level 1
-                    </div>
+                <div
+                    class="level-text"
+                    id="levelText"
+                >
+                    Level 1
                 </div>
 
             </div>
 
 
-            <!-- PROGRESS -->
+
+            <div class="v6-tools">
+                <button type="button" class="v6-tool v6-due" onclick="startDueReview()">
+                    🔁 Review Due <span id="v6DueCount">0</span>
+                </button>
+                <button type="button" class="v6-tool" onclick="openV6Dashboard()">
+                    📊 Learning Dashboard
+                </button>
+                <button type="button" class="v6-tool" onclick="startWeakReview()">
+                    🎯 Weak Words
+                </button>
+                <button type="button" class="v6-tool" onclick="startChallengeReview()">
+                    🚀 Challenge
+                </button>
+            </div>
+
+            <div id="v6ModeBadge" class="v6-badge" style="display:none;"></div>
 
             <div class="progress">
 
@@ -1323,48 +904,35 @@ header {
             </div>
 
 
-            <!-- QUESTION LABEL -->
-
-            <div id="reviewBadge" class="review-badge" style="display:none;">
-                MISTAKE REVIEW
-            </div>
-
             <div class="question-label">
-
                 CHOOSE THE BEST ANSWER
-
             </div>
 
-
-            <!-- QUESTION -->
 
             <div
                 class="question"
                 id="questionText"
-            ></div>
+            >
+            </div>
 
-
-            <!-- OPTIONS -->
 
             <div
                 class="options"
                 id="options"
-            ></div>
+            >
+            </div>
 
-
-            <!-- FEEDBACK -->
 
             <div
                 class="feedback"
                 id="feedback"
-            ></div>
+            >
+            </div>
 
-
-            <!-- NEXT -->
 
             <div class="button-row">
 
-                <button
+                <button type="button"
                     class="next-button"
                     id="nextButton"
                     onclick="nextQuestion()"
@@ -1377,16 +945,14 @@ header {
         </div>
 
 
-        <!-- =================================================
-             RESULT
-        ================================================= -->
+
+        <!-- RESULT -->
 
         <div id="result">
 
             <div class="result-title">
                 Today's Challenge Complete
             </div>
-
 
             <div
                 class="score"
@@ -1395,48 +961,43 @@ header {
                 0 / 10
             </div>
 
-
             <div
                 class="result-message"
                 id="resultMessage"
-            ></div>
-
-
-            <div id="mistakeSummary" class="mistake-summary" style="display:none;"></div>
-
-            <div class="result-actions">
-                <button
-                    class="restart-button"
-                    onclick="restartQuiz()"
-                >
-                    Try Again
-                </button>
-
-                <button
-                    id="reviewResultButton"
-                    class="secondary-button"
-                    type="button"
-                    onclick="startMistakeReview()"
-                >
-                    Review Mistakes
-                </button>
+            >
             </div>
+
+            <button
+                class="restart-button"
+                onclick="restartQuiz()"
+            >
+                Try Again
+            </button>
 
         </div>
 
 
     </div>
 
+
+        <div id="v6Overlay" class="v6-overlay" style="display:none;">
+            <div class="v6-panel">
+                <button class="v6-close" onclick="closeV6Overlay()">×</button>
+                <div id="v6OverlayContent"></div>
+            </div>
+        </div>
+
 </main>
 
 
-<!-- =====================================================
-     VOCABULARY DATABASE
 
-     DO NOT CHANGE THIS FILE.
+<!-- =====================================================
+     VOCABULARY
 ===================================================== -->
 
-<script src="./data/vocabulary.js"></script>
+<script src="./data/vocabulary.js">
+</script>
+
 
 
 <!-- =====================================================
@@ -1445,140 +1006,45 @@ header {
 
 <script>
 
-/* ===== APLUS ACHIEVER V2 Dashboard + Progress Tracking ===== */
-const PROGRESS_STORAGE_KEY = "aplusAchieverPSLEVocabularyProgressV1";
-
-function loadProgress() {
-    try {
-        return JSON.parse(localStorage.getItem(PROGRESS_STORAGE_KEY) || '{"answered":0,"correct":0,"wrong":0}');
-    } catch(e) {
-        return {answered:0, correct:0, wrong:0};
-    }
-}
-function saveProgress(p) {
-    localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(p));
-}
-function recordProgress(isCorrect) {
-    const p = loadProgress();
-    p.answered++;
-    if (isCorrect) p.correct++;
-    else p.wrong++;
-    saveProgress(p);
-}
-
-function getMasteredMistakes() {
-    return Object.values(loadMistakes()).filter(x => x.mastered);
-}
-
-function openDashboard() {
-    updateDashboard();
-    const el = document.getElementById("dashboardOverlay");
-    if (el) el.style.display = "flex";
-}
-function closeDashboard(event) {
-    if (event && event.target && event.target.id !== "dashboardOverlay") return;
-    const el = document.getElementById("dashboardOverlay");
-    if (el) el.style.display = "none";
-}
-
-function updateDashboard() {
-    const mistakes = loadMistakes();
-    const all = Object.values(mistakes);
-    const active = all.filter(x => !x.mastered);
-    const mastered = all.filter(x => x.mastered);
-    const p = loadProgress();
-    const accuracy = p.answered ? Math.round((p.correct / p.answered) * 100) : 0;
-    const mastery = all.length ? Math.round((mastered.length / all.length) * 100) : 0;
-
-    const setText = (id, value) => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = value;
-    };
-    setText("dashMistakes", active.length);
-    setText("dashMastered", mastered.length);
-    setText("dashTotal", all.length);
-    setText("dashAccuracy", accuracy + "%");
-    setText("dashMasteryText", mastery + "%");
-
-    const bar = document.getElementById("dashMasteryBar");
-    if (bar) bar.style.width = mastery + "%";
-
-    const list = document.getElementById("weakWordList");
-    if (!list) return;
-
-    const weak = active.sort((a,b) => {
-        const aw = Number(a.wrongCount || 0), bw = Number(b.wrongCount || 0);
-        if (bw !== aw) return bw - aw;
-        return Number(a.lastWrong || 0) - Number(b.lastWrong || 0);
-    }).slice(0,10);
-
-    if (!weak.length) {
-        list.innerHTML = '<div style="padding:16px;text-align:center;color:#777">🎉 No active mistakes. Excellent!</div>';
-        return;
-    }
-    list.innerHTML = weak.map((m,i) => `
-      <div class="weak-item">
-        <div class="weak-rank">#${i+1}</div>
-        <div>
-          <div class="weak-word">${escapeHtmlDashboard(m.word || "")}</div>
-          <div class="weak-meta">Wrong ${m.wrongCount || 0} time(s) · Review correct ${m.correctCount || 0}/3</div>
-        </div>
-        <div class="weak-meta">Level ${escapeHtmlDashboard(String(m.level || "—"))}</div>
-      </div>
-    `).join("");
-}
-
-function escapeHtmlDashboard(s) {
-    return String(s).replace(/[&<>"']/g, c => ({
-        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
-    }[c]));
-}
-
-function clearMasteredMistakes() {
-    const mistakes = loadMistakes();
-    let changed = false;
-    Object.keys(mistakes).forEach(k => {
-        if (mistakes[k].mastered) {
-            delete mistakes[k];
-            changed = true;
-        }
-    });
-    if (changed) saveMistakes(mistakes);
-    updateMistakeUI();
-    updateDashboard();
-}
-
-
-
-
 "use strict";
+
 
 /* =====================================================
    GLOBAL VARIABLES
 ===================================================== */
 
 let vocabularyData = [];
-let questions = [];
-let currentQuestion = 0;
-let score = 0;
-let answered = false;
-let reviewMode = false;
 
-/*
- * Mistake data is stored locally in the student's browser.
- *
- * Each word has:
- *   wrong       = number of wrong attempts
- *   correct     = number of correct review attempts
- *   lastWrong   = last time the word was answered incorrectly
- *   mastered    = true after 3 successful review attempts
- */
-const MISTAKE_STORAGE_KEY = "aplusAchieverPSLEVocabularyMistakesV1";
+let questions = [];
+
+let currentQuestion = 0;
+
+let score = 0;
+
+let answered = false;
 
 
 /* =====================================================
-   START APPLICATION
+   START
 ===================================================== */
+
+window.addEventListener("error", function (event) {
+    if (
+        event &&
+        event.target &&
+        event.target.tagName === "SCRIPT" &&
+        event.target.src &&
+        event.target.src.includes("vocabulary.js")
+    ) {
+        showError(
+            new Error(
+                "Could not load ./data/vocabulary.js. " +
+                "Check that the file exists at data/vocabulary.js " +
+                "and that GitHub Pages can access it."
+            )
+        );
+    }
+}, true);
 
 window.addEventListener(
     "load",
@@ -1592,46 +1058,58 @@ window.addEventListener(
 
 
 /* =====================================================
-   INITIALISE APP
+   INITIALISE
 ===================================================== */
 
 function initialiseApp() {
 
     try {
 
-        if (!window.vocabulary) {
+        /*
+         * vocabulary.js should create:
+         *
+         * window.vocabulary
+         */
+
+        const rawVocabulary =
+            window.vocabulary ||
+            window.VOCABULARY ||
+            window.vocabularyData ||
+            window.Vocabulary ||
+            [];
+
+        if (!Array.isArray(rawVocabulary)) {
             throw new Error(
-                "window.vocabulary is not available."
+                "vocabulary.js loaded, but no vocabulary array was found. " +
+                "Please make sure it contains: window.vocabulary = [...];"
             );
         }
 
-        if (!Array.isArray(window.vocabulary)) {
-            throw new Error(
-                "window.vocabulary is not an array."
-            );
-        }
-
-        if (window.vocabulary.length === 0) {
+        if (rawVocabulary.length === 0) {
             throw new Error(
                 "The vocabulary database is empty."
             );
         }
 
         vocabularyData =
-            window.vocabulary.filter(
-                function (word) {
-                    return (
-                        word &&
-                        word.word
-                    );
-                }
+            rawVocabulary.filter(
+                word =>
+                    word &&
+                    typeof word.word === "string" &&
+                    word.word.trim()
             );
 
-        if (vocabularyData.length === 0) {
+
+        if (
+            vocabularyData.length === 0
+        ) {
+
             throw new Error(
                 "No valid vocabulary entries were found."
             );
+
         }
+
 
         console.log(
             "APLUS vocabulary loaded:",
@@ -1639,17 +1117,25 @@ function initialiseApp() {
             "words"
         );
 
-        updateMistakeUI();
+
         createDailyQuestions();
+
+
         showQuestion();
 
+
         document
-            .getElementById("loading")
+            .getElementById(
+                "loading"
+            )
             .style.display =
             "none";
 
+
         document
-            .getElementById("quiz")
+            .getElementById(
+                "quiz"
+            )
             .style.display =
             "block";
 
@@ -1662,345 +1148,11 @@ function initialiseApp() {
             error
         );
 
-        showError(error);
-
-    }
-
-}
-
-
-/* =====================================================
-   MISTAKE STORAGE
-===================================================== */
-
-function loadMistakes() {
-
-    try {
-
-        const raw =
-            localStorage.getItem(
-                MISTAKE_STORAGE_KEY
-            );
-
-        if (!raw) {
-            return {};
-        }
-
-        const data = JSON.parse(raw);
-
-        if (!data || typeof data !== "object") {
-            return {};
-        }
-
-        return data;
-
-    } catch (error) {
-
-        console.warn(
-            "Could not read mistake data:",
+        showError(
             error
         );
 
-        return {};
     }
-}
-
-
-function saveMistakes(data) {
-
-    try {
-
-        localStorage.setItem(
-            MISTAKE_STORAGE_KEY,
-            JSON.stringify(data)
-        );
-
-    } catch (error) {
-
-        console.warn(
-            "Could not save mistake data:",
-            error
-        );
-    }
-}
-
-
-function getMistakeKey(word) {
-
-    /*
-     * Prefer the stable vocabulary id.
-     * Fall back to the word itself.
-     */
-    return String(
-        word.id != null
-            ? word.id
-            : word.word
-    );
-}
-
-
-function recordWrongAnswer(word) {
-
-    const mistakes = loadMistakes();
-    const key = getMistakeKey(word);
-
-    if (!mistakes[key]) {
-
-        mistakes[key] = {
-            id: word.id,
-            word: word.word,
-            wrong: 0,
-            correct: 0,
-            lastWrong: 0,
-            mastered: false
-        };
-
-    }
-
-    mistakes[key].word = word.word;
-    mistakes[key].wrong =
-        Number(mistakes[key].wrong || 0) + 1;
-    mistakes[key].lastWrong =
-        Date.now();
-
-    /*
-     * A new wrong answer means the student
-     * still needs this word.
-     */
-    mistakes[key].mastered = false;
-
-    saveMistakes(mistakes);
-    updateMistakeUI();
-}
-
-
-function recordCorrectReview(word) {
-
-    const mistakes = loadMistakes();
-    const key = getMistakeKey(word);
-
-    if (!mistakes[key]) {
-        return;
-    }
-
-    mistakes[key].correct =
-        Number(mistakes[key].correct || 0) + 1;
-
-    /*
-     * Three successful review attempts = mastered.
-     */
-    if (mistakes[key].correct >= 3) {
-        mistakes[key].mastered = true;
-    }
-
-    saveMistakes(mistakes);
-    updateMistakeUI();
-}
-
-
-function getActiveMistakes() {
-
-    const mistakes = loadMistakes();
-
-    return Object.values(mistakes)
-        .filter(function (item) {
-
-            return (
-                item &&
-                item.word &&
-                !item.mastered
-            );
-
-        })
-        .map(function (item) {
-
-            const vocabularyWord =
-                vocabularyData.find(
-                    function (word) {
-                        return (
-                            String(
-                                word.id != null
-                                    ? word.id
-                                    : word.word
-                            ) ===
-                            String(
-                                item.id != null
-                                    ? item.id
-                                    : item.word
-                            )
-                        );
-                    }
-                );
-
-            if (!vocabularyWord) {
-                return null;
-            }
-
-            return {
-                word: vocabularyWord,
-                stats: item
-            };
-
-        })
-        .filter(Boolean);
-}
-
-
-function getMistakeCount() {
-    return getActiveMistakes().length;
-}
-
-
-function updateMistakeUI() {
-
-    const count =
-        getMistakeCount();
-
-    const countElement =
-        document.getElementById(
-            "mistakeCount"
-        );
-
-    if (countElement) {
-        countElement.textContent =
-            count;
-    }
-
-    const button =
-        document.getElementById(
-            "mistakeButton"
-        );
-
-    if (button) {
-        button.disabled =
-            count === 0;
-    }
-
-    const resultButton =
-        document.getElementById(
-            "reviewResultButton"
-        );
-
-    if (resultButton) {
-        resultButton.disabled =
-            count === 0;
-    }
-
-    if (typeof updateDashboard === 'function') updateDashboard();}
-
-
-/* =====================================================
-   START MISTAKE REVIEW
-===================================================== */
-
-function startMistakeReview() {
-
-    const active =
-        getActiveMistakes();
-
-    if (!active.length) {
-
-        alert(
-            "Great! You have no active mistakes to review. 🎉"
-        );
-
-        return;
-    }
-
-    reviewMode = true;
-    currentQuestion = 0;
-    score = 0;
-    questions = [];
-
-    /*
-     * Sort by:
-     * 1. higher wrong count first
-     * 2. older mistakes first
-     *
-     * This makes the hardest words appear earlier.
-     */
-    active.sort(
-        function (a, b) {
-
-            const wrongA =
-                Number(
-                    a.stats.wrong || 0
-                );
-
-            const wrongB =
-                Number(
-                    b.stats.wrong || 0
-                );
-
-            if (wrongA !== wrongB) {
-                return wrongB - wrongA;
-            }
-
-            return (
-                Number(
-                    a.stats.lastWrong || 0
-                ) -
-                Number(
-                    b.stats.lastWrong || 0
-                )
-            );
-        }
-    );
-
-    /*
-     * Review up to 10 words at a time.
-     */
-    const selected =
-        active.slice(0, 10);
-
-    questions =
-        selected.map(
-            function (item) {
-
-                /*
-                 * Use the normal question engine,
-                 * while keeping the original vocabulary
-                 * record untouched.
-                 */
-                return createQuestion(
-                    item.word,
-                    Number(item.word.level) || 1
-                );
-
-            }
-        );
-
-    document
-        .getElementById("result")
-        .style.display =
-        "none";
-
-    document
-        .getElementById("quiz")
-        .style.display =
-        "block";
-
-    document
-        .getElementById("reviewBadge")
-        .style.display =
-        "inline-block";
-
-    showQuestion();
-}
-
-
-/* =====================================================
-   EXIT REVIEW MODE
-===================================================== */
-
-function exitReviewMode() {
-
-    reviewMode = false;
-
-    document
-        .getElementById("reviewBadge")
-        .style.display =
-        "none";
 
 }
 
@@ -2012,22 +1164,33 @@ function exitReviewMode() {
 function showError(error) {
 
     document
-        .getElementById("loading")
+        .getElementById(
+            "loading"
+        )
         .style.display =
         "none";
 
+
     document
-        .getElementById("quiz")
+        .getElementById(
+            "quiz"
+        )
         .style.display =
         "none";
 
+
     document
-        .getElementById("errorBox")
+        .getElementById(
+            "errorBox"
+        )
         .style.display =
         "block";
 
+
     document
-        .getElementById("errorMessage")
+        .getElementById(
+            "errorMessage"
+        )
         .innerHTML =
 
         "Please check that your GitHub files are arranged as:<br><br>" +
@@ -2053,6 +1216,17 @@ function createDailyQuestions() {
 
     questions = [];
 
+
+    /*
+     * We want exactly 10 questions.
+     *
+     * Level 1 → Level 10
+     *
+     * Therefore each question comes
+     * from a different difficulty level.
+     */
+
+
     for (
         let level = 1;
         level <= 10;
@@ -2061,22 +1235,26 @@ function createDailyQuestions() {
 
         let pool =
             vocabularyData.filter(
-                function (word) {
-
-                    return (
-                        Number(word.level) ===
-                        level
-                    );
-
-                }
+                word =>
+                    Number(word.level) === level
             );
 
-        if (pool.length === 0) {
+
+        /*
+         * If a level is missing,
+         * use the complete vocabulary
+         * as a fallback.
+         */
+
+        if (
+            pool.length === 0
+        ) {
 
             pool =
                 vocabularyData;
 
         }
+
 
         let word =
             pool[
@@ -2085,6 +1263,7 @@ function createDailyQuestions() {
                     pool.length
                 )
             ];
+
 
         questions.push(
             createQuestion(
@@ -2107,6 +1286,15 @@ function createQuestion(
     level
 ) {
 
+    /*
+     * Three question styles:
+     *
+     * meaning
+     * synonym
+     * context
+     */
+
+
     let type =
         level <= 3
             ? "meaning"
@@ -2118,16 +1306,52 @@ function createQuestion(
                 ]
             );
 
-    if (type === "synonym") {
 
-        return createSynonymQuestion(
-            word,
-            level
-        );
+    if (
+        type === "synonym"
+    ) {
+
+        let correct =
+            getCorrectMeaning(
+                word
+            );
+
+
+        return {
+
+            level:
+                level,
+
+            word:
+                word,
+
+            question:
+                'Which word is closest in meaning to "' +
+                word.word +
+                '"?',
+
+            answer:
+                correct,
+
+            options:
+                shuffle([
+                    correct,
+                    ...getWrongMeanings(word, 3)
+                ]),
+
+            explanation:
+                getExplanation(
+                    word
+                )
+
+        };
 
     }
 
-    if (type === "context") {
+
+    if (
+        type === "context"
+    ) {
 
         return createContextQuestion(
             word,
@@ -2135,6 +1359,7 @@ function createQuestion(
         );
 
     }
+
 
     return createMeaningQuestion(
         word,
@@ -2154,13 +1379,17 @@ function createMeaningQuestion(
 ) {
 
     let correct =
-        getCorrectMeaning(word);
+        getCorrectMeaning(
+            word
+        );
+
 
     let wrongAnswers =
         getWrongMeanings(
             word,
             3
         );
+
 
     let options =
         shuffle(
@@ -2170,70 +1399,30 @@ function createMeaningQuestion(
             ]
         );
 
+
     return {
 
-        level: level,
-        word: word,
-        type: "meaning",
+        level:
+            level,
+
+        word:
+            word,
 
         question:
             'What does "' +
-            escapeHTML(word.word) +
+            word.word +
             '" mean?',
 
-        answer: correct,
-        options: options,
+        answer:
+            correct,
+
+        options:
+            options,
 
         explanation:
-            getExplanation(word)
-
-    };
-
-}
-
-
-/* =====================================================
-   SYNONYM QUESTION
-===================================================== */
-
-function createSynonymQuestion(
-    word,
-    level
-) {
-
-    let correct =
-        getCorrectMeaning(word);
-
-    let wrongAnswers =
-        getWrongMeanings(
-            word,
-            3
-        );
-
-    let options =
-        shuffle(
-            [
-                correct,
-                ...wrongAnswers
-            ]
-        );
-
-    return {
-
-        level: level,
-        word: word,
-        type: "synonym",
-
-        question:
-            'Which meaning is closest to "' +
-            escapeHTML(word.word) +
-            '"?',
-
-        answer: correct,
-        options: options,
-
-        explanation:
-            getExplanation(word)
+            getExplanation(
+                word
+            )
 
     };
 
@@ -2250,110 +1439,60 @@ function createContextQuestion(
 ) {
 
     let example =
-        typeof word.example === "string"
-            ? word.example.trim()
-            : "";
-
-    let sentence = "";
-
-    let wordPattern =
-        new RegExp(
-            "\\b" +
-            escapeRegExp(word.word) +
-            "\\b",
-            "i"
+        word.example ||
+        (
+            "The student used the word " +
+            word.word +
+            " correctly."
         );
 
+
+    /*
+     * Replace the word with a blank.
+     */
+
+    let sentence =
+        example.replace(
+            new RegExp(
+                "\\b" +
+                escapeRegExp(
+                    word.word
+                ) +
+                "\\b",
+                "i"
+            ),
+            "_____"
+        );
+
+
+    /*
+     * If the example doesn't
+     * contain the word, create
+     * a simple sentence.
+     */
+
     if (
-        example &&
-        wordPattern.test(example)
+        sentence === example
     ) {
 
         sentence =
-            escapeHTML(example).replace(
-                new RegExp(
-                    "\\b" +
-                    escapeRegExp(word.word) +
-                    "\\b",
-                    "i"
-                ),
-                '<span class="question-blank">&nbsp;</span>'
-            );
+            "The student was " +
+            word.word +
+            " when answering the question.";
 
     }
 
-    else {
-
-        let partOfSpeech =
-            String(
-                word.partOfSpeech || ""
-            )
-            .toLowerCase()
-            .trim();
-
-        if (
-            partOfSpeech.includes("adjective")
-        ) {
-
-            sentence =
-                "The student was " +
-                '<span class="question-blank">&nbsp;</span>' +
-                " when answering the question.";
-
-        }
-
-        else if (
-            partOfSpeech.includes("verb")
-        ) {
-
-            sentence =
-                "The teacher asked the student to " +
-                '<span class="question-blank">&nbsp;</span>' +
-                " the task.";
-
-        }
-
-        else if (
-            partOfSpeech.includes("noun")
-        ) {
-
-            sentence =
-                "The student showed great " +
-                '<span class="question-blank">&nbsp;</span>' +
-                " during the activity.";
-
-        }
-
-        else if (
-            partOfSpeech.includes("adverb")
-        ) {
-
-            sentence =
-                "The student answered the question " +
-                '<span class="question-blank">&nbsp;</span>' +
-                ".";
-
-        }
-
-        else {
-
-            sentence =
-                "The student used the word " +
-                '<span class="question-blank">&nbsp;</span>' +
-                " correctly.";
-
-        }
-
-    }
 
     let correct =
         word.word;
+
 
     let wrongWords =
         getWrongWords(
             word,
             3
         );
+
 
     let options =
         shuffle(
@@ -2363,21 +1502,29 @@ function createContextQuestion(
             ]
         );
 
+
     return {
 
-        level: level,
-        word: word,
-        type: "context",
+        level:
+            level,
+
+        word:
+            word,
 
         question:
             "Choose the word that best completes the sentence:<br><br>" +
             sentence,
 
-        answer: correct,
-        options: options,
+        answer:
+            correct,
+
+        options:
+            options,
 
         explanation:
-            getExplanation(word)
+            getExplanation(
+                word
+            )
 
     };
 
@@ -2388,29 +1535,34 @@ function createContextQuestion(
    CORRECT MEANING
 ===================================================== */
 
-function getCorrectMeaning(word) {
+function getCorrectMeaning(
+    word
+) {
 
     if (
         word.meaning &&
-        String(word.meaning).trim()
+        word.meaning.trim()
     ) {
 
-        return String(
-            word.meaning
-        ).trim();
+        return word.meaning;
 
     }
+
 
     if (
         word.chinese &&
-        String(word.chinese).trim()
+        word.chinese.trim()
     ) {
 
-        return String(
-            word.chinese
-        ).trim();
+        return word.chinese;
 
     }
+
+
+    /*
+     * Fallback so the question
+     * never breaks.
+     */
 
     return (
         "the meaning of the word " +
@@ -2430,35 +1582,36 @@ function getWrongMeanings(
 ) {
 
     let candidates =
-        vocabularyData.filter(
-            function (item) {
-
-                return (
+        vocabularyData
+            .filter(
+                item =>
                     item.id !==
-                    correctWord.id
-                    &&
+                    correctWord.id &&
                     (
                         item.meaning ||
                         item.chinese
                     )
-                );
+            );
 
-            }
-        );
 
     candidates =
         shuffle(
             candidates.slice()
         );
 
+
     let results = [];
+
 
     for (
         let item of candidates
     ) {
 
         let meaning =
-            getCorrectMeaning(item);
+            getCorrectMeaning(
+                item
+            );
+
 
         if (
             meaning &&
@@ -2474,8 +1627,10 @@ function getWrongMeanings(
 
         }
 
+
         if (
-            results.length >= count
+            results.length >=
+            count
         ) {
 
             break;
@@ -2483,6 +1638,11 @@ function getWrongMeanings(
         }
 
     }
+
+
+    /*
+     * Safety fallback.
+     */
 
     while (
         results.length < count
@@ -2493,6 +1653,7 @@ function getWrongMeanings(
         );
 
     }
+
 
     return results;
 
@@ -2509,58 +1670,27 @@ function getWrongWords(
 ) {
 
     let candidates =
-        vocabularyData.filter(
-            function (item) {
-
-                return (
+        vocabularyData
+            .filter(
+                item =>
                     item.id !==
                     correctWord.id
-                );
+            );
 
-            }
-        );
 
     candidates =
         shuffle(
             candidates.slice()
         );
 
-    let results = [];
 
-    for (
-        let item of candidates
-    ) {
+    const results = candidates
+        .slice(0, count)
+        .map(item => item.word)
+        .filter(Boolean);
 
-        if (
-            item.word &&
-            item.word !==
-            correctWord.word
-        ) {
-
-            results.push(
-                item.word
-            );
-
-        }
-
-        if (
-            results.length >= count
-        ) {
-
-            break;
-
-        }
-
-    }
-
-    while (
-        results.length < count
-    ) {
-
-        results.push(
-            "another word"
-        );
-
+    while (results.length < count) {
+        results.push("another word");
     }
 
     return results;
@@ -2572,63 +1702,62 @@ function getWrongWords(
    EXPLANATION
 ===================================================== */
 
-function getExplanation(word) {
+function getExplanation(
+    word
+) {
 
     let text = "";
 
-    if (word.meaning) {
+
+    if (
+        word.meaning
+    ) {
 
         text +=
             "Meaning: " +
-            escapeHTML(
-                word.meaning
-            );
+            word.meaning;
 
     }
 
-    if (word.chinese) {
+
+    if (
+        word.chinese
+    ) {
 
         text +=
             "<br>中文： " +
-            escapeHTML(
-                word.chinese
-            );
+            word.chinese;
 
     }
 
-    if (word.example) {
+
+    if (
+        word.example
+    ) {
 
         text +=
             "<br><br>Example: " +
-            escapeHTML(
-                word.example
-            );
+            word.example;
 
     }
 
+
     if (
         word.synonyms &&
-        Array.isArray(word.synonyms) &&
         word.synonyms.length
     ) {
 
         text +=
             "<br><br>Synonyms: " +
-            word.synonyms
-                .map(
-                    function (item) {
-
-                        return escapeHTML(
-                            item
-                        );
-
-                    }
-                )
-                .join(", ");
+            word.synonyms.join(
+                ", "
+            );
 
     }
 
+
     return text;
+
 }
 
 
@@ -2640,28 +1769,39 @@ function showQuestion() {
 
     answered = false;
 
+
     let q =
         questions[
             currentQuestion
         ];
 
+
     if (!q) {
+
         return;
+
     }
 
+
     document
-        .getElementById("progressText")
+        .getElementById(
+            "progressText"
+        )
         .textContent =
         "Question " +
         (currentQuestion + 1) +
         " of " +
         questions.length;
 
+
     document
-        .getElementById("levelText")
+        .getElementById(
+            "levelText"
+        )
         .textContent =
         "Level " +
         q.level;
+
 
     let percentage =
         (
@@ -2669,92 +1809,102 @@ function showQuestion() {
             questions.length
         ) * 100;
 
+
     document
-        .getElementById("progressBar")
+        .getElementById(
+            "progressBar"
+        )
         .style.width =
         percentage + "%";
 
+
     document
-        .getElementById("questionText")
+        .getElementById(
+            "questionText"
+        )
         .innerHTML =
         q.question;
 
+
     let options =
-        q.options || [];
+        q.options ||
+        [];
 
-    if (!options.length) {
 
-        if (q.type === "context") {
+    /*
+     * Meaning questions already have
+     * options.
+     *
+     * Synonym questions need options.
+     */
 
-            options =
-                shuffle(
-                    [
-                        q.answer,
-                        ...getWrongWords(
-                            q.word,
-                            3
-                        )
-                    ]
-                );
+    if (
+        !q.options
+    ) {
 
-        }
+        let correct =
+            q.answer;
 
-        else {
 
-            options =
-                shuffle(
-                    [
-                        q.answer,
-                        ...getWrongMeanings(
-                            q.word,
-                            3
-                        )
-                    ]
-                );
+        let wrong =
+            getWrongMeanings(
+                q.word,
+                3
+            );
 
-        }
+
+        options =
+            shuffle(
+                [
+                    correct,
+                    ...wrong
+                ]
+            );
+
 
         q.options =
             options;
 
     }
 
+
     let optionsContainer =
         document.getElementById(
             "options"
         );
 
+
     optionsContainer.innerHTML =
         "";
 
+
     options.forEach(
-        function (option) {
+        function(option) {
 
             let button =
                 document.createElement(
                     "button"
                 );
 
-            button.type =
-                "button";
 
             button.className =
                 "option";
 
+
             button.textContent =
                 option;
 
-            button.addEventListener(
-                "click",
-                function () {
+
+            button.onclick =
+                function() {
 
                     checkAnswer(
                         option,
                         button
                     );
 
-                }
-            );
+                };
+
 
             optionsContainer.appendChild(
                 button
@@ -2763,19 +1913,27 @@ function showQuestion() {
         }
     );
 
-    let feedback =
-        document.getElementById(
-            "feedback"
-        );
-
-    feedback.className =
-        "feedback";
-
-    feedback.innerHTML =
-        "";
 
     document
-        .getElementById("nextButton")
+        .getElementById(
+            "feedback"
+        )
+        .className =
+        "feedback";
+
+
+    document
+        .getElementById(
+            "feedback"
+        )
+        .innerHTML =
+        "";
+
+
+    document
+        .getElementById(
+            "nextButton"
+        )
         .style.display =
         "none";
 
@@ -2791,31 +1949,41 @@ function checkAnswer(
     clickedButton
 ) {
 
-    if (answered) {
+    if (
+        answered
+    ) {
+
         return;
+
     }
 
+
     answered = true;
+
 
     let q =
         questions[
             currentQuestion
         ];
 
+
     let correct =
         selected ===
         q.answer;
+
 
     let buttons =
         document.querySelectorAll(
             ".option"
         );
 
+
     buttons.forEach(
-        function (button) {
+        function(button) {
 
             button.disabled =
                 true;
+
 
             if (
                 button.textContent ===
@@ -2831,25 +1999,20 @@ function checkAnswer(
         }
     );
 
-    if (correct) {
+
+    if (
+        correct
+    ) {
 
         score++;
+
 
         clickedButton.classList.add(
             "correct"
         );
 
-        /*
-         * Only count a correct answer as
-         * review progress when the question
-         * comes from Mistake Review.
-         */
-        if (reviewMode) {
-            recordCorrectReview(q.word);
-        }
 
-            if (typeof updateLearningCentre === 'function') updateLearningCentre();
-showFeedback(
+        showFeedback(
             true,
             "Correct! ✓",
             q.explanation
@@ -2863,25 +2026,23 @@ showFeedback(
             "wrong"
         );
 
-        /*
-         * Every wrong answer enters or remains
-         * in the mistake system.
-         */
-        recordWrongAnswer(q.word);
 
         showFeedback(
             false,
             "Not quite.",
             'The correct answer is "' +
-            escapeHTML(q.answer) +
+            q.answer +
             '".<br><br>' +
             q.explanation
         );
 
     }
 
+
     document
-        .getElementById("nextButton")
+        .getElementById(
+            "nextButton"
+        )
         .style.display =
         "block";
 
@@ -2903,10 +2064,12 @@ function showFeedback(
             "feedback"
         );
 
+
     feedback.className =
         correct
             ? "feedback correct"
             : "feedback wrong";
+
 
     feedback.innerHTML =
         '<div class="feedback-title">' +
@@ -2924,7 +2087,15 @@ function showFeedback(
 ===================================================== */
 
 function nextQuestion() {
-    if (smartReviewMode) return nextSmartQuestion();
+
+    /*
+     * V6 stability guard:
+     * Never advance before an answer has been submitted.
+     */
+
+    if (!answered) {
+        return;
+    }
 
     currentQuestion++;
 
@@ -2951,21 +2122,30 @@ function nextQuestion() {
 function showResult() {
 
     document
-        .getElementById("quiz")
+        .getElementById(
+            "quiz"
+        )
         .style.display =
         "none";
 
+
     document
-        .getElementById("result")
+        .getElementById(
+            "result"
+        )
         .style.display =
         "block";
 
+
     document
-        .getElementById("score")
+        .getElementById(
+            "score"
+        )
         .textContent =
         score +
         " / " +
         questions.length;
+
 
     let percentage =
         Math.round(
@@ -2974,48 +2154,32 @@ function showResult() {
             100
         );
 
+
     let message;
 
-    if (reviewMode) {
 
-        if (percentage === 100) {
-
-            message =
-                "Excellent! Keep reviewing until every difficult word is mastered. 🌟";
-
-        }
-
-        else if (percentage >= 80) {
-
-            message =
-                "Great review session! Keep working on the remaining mistakes. 💪";
-
-        }
-
-        else {
-
-            message =
-                "Keep practising. Every mistake helps you learn. 🌱";
-
-        }
-
-    }
-
-    else if (percentage === 100) {
+    if (
+        percentage ===
+        100
+    ) {
 
         message =
             "Outstanding! Perfect score! 🌟";
 
     }
 
-    else if (percentage >= 80) {
+    else if (
+        percentage >= 80
+    ) {
 
         message =
             "Excellent work! Your vocabulary is getting stronger. 💪";
 
     }
 
-    else if (percentage >= 60) {
+    else if (
+        percentage >= 60
+    ) {
 
         message =
             "Good effort! Keep practising your vocabulary. 📚";
@@ -3029,59 +2193,13 @@ function showResult() {
 
     }
 
+
     document
-        .getElementById("resultMessage")
+        .getElementById(
+            "resultMessage"
+        )
         .textContent =
         message;
-
-    const activeCount =
-        getMistakeCount();
-
-    const summary =
-        document.getElementById(
-            "mistakeSummary"
-        );
-
-    if (activeCount > 0) {
-
-        summary.style.display =
-            "block";
-
-        summary.innerHTML =
-            "<strong>" +
-            activeCount +
-            "</strong> active " +
-            (activeCount === 1
-                ? "mistake"
-                : "mistakes") +
-            " still need review.";
-
-    }
-
-    else {
-
-        summary.style.display =
-            "block";
-
-        summary.innerHTML =
-            "🎉 <strong>All active mistakes are cleared.</strong> Keep up the great work!";
-
-    }
-
-    const reviewButton =
-        document.getElementById(
-            "reviewResultButton"
-        );
-
-    reviewButton.disabled =
-        activeCount === 0;
-
-    /*
-     * Daily 10 completion exits review mode.
-     * Review completion also exits review mode,
-     * so the result page is clean and neutral.
-     */
-    exitReviewMode();
 
 }
 
@@ -3093,31 +2211,31 @@ function showResult() {
 function restartQuiz() {
 
     currentQuestion = 0;
+
     score = 0;
+
     questions = [];
 
+
     document
-        .getElementById("result")
+        .getElementById(
+            "result"
+        )
         .style.display =
         "none";
 
+
     document
-        .getElementById("quiz")
+        .getElementById(
+            "quiz"
+        )
         .style.display =
         "block";
 
-    if (reviewMode) {
 
-        startMistakeReview();
+    createDailyQuestions();
 
-    }
-
-    else {
-
-        createDailyQuestions();
-        showQuestion();
-
-    }
+    showQuestion();
 
 }
 
@@ -3126,7 +2244,9 @@ function restartQuiz() {
    RANDOM CHOICE
 ===================================================== */
 
-function randomChoice(array) {
+function randomChoice(
+    array
+) {
 
     return array[
         Math.floor(
@@ -3142,7 +2262,9 @@ function randomChoice(array) {
    SHUFFLE
 ===================================================== */
 
-function shuffle(array) {
+function shuffle(
+    array
+) {
 
     for (
         let i =
@@ -3157,6 +2279,7 @@ function shuffle(array) {
                 (i + 1)
             );
 
+
         [
             array[i],
             array[j]
@@ -3168,6 +2291,7 @@ function shuffle(array) {
 
     }
 
+
     return array;
 
 }
@@ -3177,7 +2301,9 @@ function shuffle(array) {
    ESCAPE REGEX
 ===================================================== */
 
-function escapeRegExp(string) {
+function escapeRegExp(
+    string
+) {
 
     return String(
         string
@@ -3193,768 +2319,320 @@ function escapeRegExp(string) {
    ESCAPE HTML
 ===================================================== */
 
-function escapeHTML(value) {
+function escapeHTML(
+    value
+) {
 
-    return String(value)
-        .replace(
-            /&/g,
-            "&amp;"
-        )
-        .replace(
-            /</g,
-            "&lt;"
-        )
-        .replace(
-            />/g,
-            "&gt;"
-        )
-        .replace(
-            /"/g,
-            "&quot;"
-        )
-        .replace(
-            /'/g,
-            "&#039;"
-        );
+    return String(
+        value
+    )
+
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+
+    .replace(
+        /</g,
+        "&lt;"
+    )
+
+    .replace(
+        />/g,
+        "&gt;"
+    )
+
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+
+    .replace(
+        /'/g,
+        "&#039;"
+    );
 
 }
-
-
-// Vocabulary Dashboard keyboard shortcuts
-document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") closeDashboard();
-    if ((e.key === "d" || e.key === "D") && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) {
-        openDashboard();
-    }
-});
-
-
-/* ===== APLUS ACHIEVER V5 AI Learning Algorithm + Student Ability Profile ===== */
-const AI_PROFILE_KEY = "aplusAchieverPSLEAIProfileV1";
-let adaptiveMode = false;
-let adaptiveQuestions = [];
-let adaptiveIndex = 0;
-
-function getAIProfileData() {
-    const p = loadProgress();
-    const lp = loadLevelProgress();
-    const mistakes = loadMistakes();
-    const active = Object.values(mistakes).filter(x=>!x.mastered);
-    const mastered = Object.values(mistakes).filter(x=>x.mastered);
-    const total = Number(p.answered||0);
-    const accuracy = total ? Number(p.correct||0)/total : 0;
-
-    const levels = {};
-    for (let i=1;i<=10;i++) {
-        const x = lp[String(i)] || {answered:0,correct:0};
-        levels[i] = {
-            answered:Number(x.answered||0),
-            correct:Number(x.correct||0),
-            accuracy:x.answered ? Number(x.correct||0)/Number(x.answered) : 0
-        };
-    }
-
-    // Ability score blends observed accuracy and sample size.
-    const ability = {};
-    for (let i=1;i<=10;i++) {
-        const x = levels[i];
-        const confidence = Math.min(1, x.answered/10);
-        ability[i] = Math.round(((x.accuracy*confidence) + (accuracy*(1-confidence))) * 100);
-    }
-
-    let avgAbility = total ? Math.round(Object.values(ability).reduce((a,b)=>a+b,0)/10) : 0;
-
-    // Readiness rewards accuracy, consistency and mastery, but requires evidence.
-    const masteryRatio = (active.length+mastered.length)
-        ? mastered.length/(active.length+mastered.length) : 0;
-    const streak = Number(loadStreak().current||0);
-    let readiness = total
-        ? Math.round(accuracy*55 + Math.min(streak,14)/14*15 + masteryRatio*20 + Math.min(total,100)/100*10)
-        : 0;
-    readiness = Math.max(0,Math.min(100,readiness));
-
-    let state, description;
-    if (!total) {
-        state="Getting Started";
-        description="The profile will learn your strengths after your first questions.";
-    } else if (readiness>=85) {
-        state="🏆 Advanced & Ready";
-        description="Strong overall performance. The engine can challenge you with higher-level vocabulary while revisiting your weak words.";
-    } else if (readiness>=70) {
-        state="💪 Strong & Developing";
-        description="Good foundation. Your next sessions should mix consolidation with carefully selected harder words.";
-    } else if (readiness>=50) {
-        state="📚 Developing";
-        description="Your profile is improving. The engine will focus on reinforcement and targeted weak-word practice.";
-    } else {
-        state="🌱 Building Foundations";
-        description="The priority is accuracy and vocabulary retention before increasing difficulty.";
-    }
-
-    return {progress:p, levels, ability, active, mastered, accuracy, avgAbility, readiness, streak, state, description};
-}
-
-function recommendedDifficulty(profile) {
-    const a = profile.avgAbility;
-    if (a>=90) return {min:7,max:10,label:"Level 7–10 · Challenge"};
-    if (a>=80) return {min:6,max:9,label:"Level 6–9 · Upper Intermediate"};
-    if (a>=70) return {min:5,max:8,label:"Level 5–8 · Developing"};
-    if (a>=60) return {min:4,max:7,label:"Level 4–7 · Reinforcement"};
-    if (a>=45) return {min:2,max:5,label:"Level 2–5 · Foundation + Growth"};
-    return {min:1,max:3,label:"Level 1–3 · Foundation"};
-}
-
-function adaptiveCandidateWords() {
-    const profile = getAIProfileData();
-    const mistakes = loadMistakes();
-    const mistakeMap = {};
-    Object.values(mistakes).forEach(m => mistakeMap[smartWordKey(m.word)] = m);
-
-    if (!window.vocabulary || !Array.isArray(window.vocabulary)) return [];
-
-    const diff = recommendedDifficulty(profile);
-    return window.vocabulary.map(v => {
-        const k = smartWordKey(v.word);
-        const m = mistakeMap[k];
-        const level = Number(v.level||1);
-        let score = 0;
-
-        // Keep the majority around the recommended difficulty.
-        if (level>=diff.min && level<=diff.max) score += 35;
-        else if (Math.abs(level-diff.min)<=1 || Math.abs(level-diff.max)<=1) score += 18;
-
-        // Target weaknesses.
-        if (m && !m.mastered) {
-            score += Math.min(Number(m.wrongCount||0)*15,60);
-            score += Math.min(Number(m.correctCount||0)*-7,0);
-        }
-
-        // Target levels where the student is weak.
-        const la = profile.levels[level] ? profile.levels[level].accuracy : profile.accuracy;
-        if (profile.levels[level] && profile.levels[level].answered) score += (1-la)*35;
-
-        // Slightly prefer words that have been unseen.
-        score += m ? 0 : 8;
-
-        score += Math.random()*10;
-        return {v,score};
-    }).sort((a,b)=>b.score-a.score).slice(0,40).map(x=>x.v);
-}
-
-function startAdaptiveQuiz() {
-    const candidates = adaptiveCandidateWords();
-    if (!candidates.length) {
-        alert("The vocabulary bank is not available yet.");
-        return;
-    }
-
-    // Select 10 while balancing difficulty and weak words.
-    const selected = [];
-    const used = new Set();
-    const profile = getAIProfileData();
-    const diff = recommendedDifficulty(profile);
-
-    // First take weak/mistake words.
-    const weak = candidates.filter(v => {
-        const m = loadMistakes()[smartWordKey(v.word)];
-        return m && !m.mastered;
-    });
-    weak.slice(0,4).forEach(v => {
-        if (!used.has(smartWordKey(v.word))) {selected.push(v);used.add(smartWordKey(v.word));}
-    });
-
-    // Then fill with recommended difficulty.
-    candidates.forEach(v => {
-        if (selected.length>=10) return;
-        const k=smartWordKey(v.word);
-        if (used.has(k)) return;
-        const lv=Number(v.level||1);
-        if (lv>=diff.min && lv<=diff.max) {selected.push(v);used.add(k);}
-    });
-
-    // Final fill.
-    candidates.forEach(v => {
-        if (selected.length>=10) return;
-        const k=smartWordKey(v.word);
-        if (!used.has(k)) {selected.push(v);used.add(k);}
-    });
-
-    adaptiveQuestions = selected.slice(0,10);
-    adaptiveIndex = 0;
-    adaptiveMode = true;
-    smartReviewMode = false;
-    reviewMode = false;
-    score = 0;
-    answered = false;
-
-    const badge=document.getElementById("reviewBadge");
-    if (badge) {badge.style.display="block";badge.textContent="ADAPTIVE AI 10";}
-
-    showAdaptiveQuestion();
-}
-
-function showAdaptiveQuestion() {
-    if (adaptiveIndex>=adaptiveQuestions.length) {
-        adaptiveMode=false;
-        showResult();
-        return;
-    }
-
-    const target=adaptiveQuestions[adaptiveIndex];
-
-    // Try the site's native question-generation functions.
-    if (typeof generateQuestionFromWord === "function") {
-        currentQuestion=generateQuestionFromWord(target);
-    } else if (typeof createQuestionForWord === "function") {
-        currentQuestion=createQuestionForWord(target);
-    } else {
-        // Compatible fallback.
-        const pool=window.vocabulary.filter(x=>smartWordKey(x.word)!==smartWordKey(target.word));
-        const opts=pool.sort(()=>Math.random()-.5).slice(0,3).map(x=>x.meaning);
-        opts.push(target.meaning);
-        currentQuestion={
-            word:target.word, level:target.level, type:"meaning",
-            answer:target.meaning,
-            options:opts.sort(()=>Math.random()-.5),
-            explanation:target.example||""
-        };
-    }
-
-    renderSmartQuestion(currentQuestion);
-}
-
-function nextAdaptiveQuestion() {
-    adaptiveIndex++;
-    if (adaptiveIndex>=adaptiveQuestions.length) {
-        adaptiveMode=false;
-        showResult();
-        return;
-    }
-    answered=false;
-    showAdaptiveQuestion();
-}
-
-/* Route Next button to adaptive mode when active. */
-if (typeof nextQuestion === "function") {
-    // Wrapped below only once after page's original function has loaded.
-}
-
-function openAIProfile() {
-    updateAIProfile();
-    const el=document.getElementById("aiProfileOverlay");
-    if (el) el.style.display="flex";
-}
-function closeAIProfile(event) {
-    if (event && event.target && event.target.id!=="aiProfileOverlay") return;
-    const el=document.getElementById("aiProfileOverlay");
-    if (el) el.style.display="none";
-}
-
-function updateAIProfile() {
-    const p=getAIProfileData();
-    const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
-    set("aiProfileState",p.state);
-    set("aiProfileDescription",p.description);
-    set("aiReadiness",p.readiness);
-    set("aiAccuracy",Math.round(p.accuracy*100)+"%");
-    set("aiAnswered",p.progress.answered||0);
-    set("aiWeak",p.active.length);
-    set("aiMastered",p.mastered.length);
-    set("aiStreak",(p.streak||0)+" 🔥");
-
-    const grid=document.getElementById("aiAbilityBars");
-    if (grid) {
-        grid.innerHTML=Object.keys(p.ability).map(level=>`
-          <div class="ability-row">
-            <div class="ability-name">Level ${level}</div>
-            <div class="ability-track"><div class="ability-fill" style="width:${p.ability[level]}%"></div></div>
-            <div class="ability-score">${p.ability[level]}%</div>
-          </div>
-        `).join("");
-    }
-
-    const diff=recommendedDifficulty(p);
-    set("aiDifficultyAdvice",diff.label);
-
-    let advice;
-    if (p.active.length>=10) {
-        advice="<strong>Priority:</strong> clear your weak-word backlog first. The adaptive engine will place up to 4 high-priority mistakes into each session.";
-    } else if (p.accuracy<0.65 && p.progress.answered>=10) {
-        advice="<strong>Priority:</strong> improve accuracy before increasing difficulty. Expect more Level 1–5 reinforcement.";
-    } else if (p.accuracy>=0.9) {
-        advice="<strong>Priority:</strong> challenge and retention. Expect harder levels mixed with spaced review of previously difficult words.";
-    } else {
-        advice="<strong>Priority:</strong> balanced growth. The engine mixes your weaker levels with words near your current ability.";
-    }
-    const a=document.getElementById("aiAdvice"); if(a)a.innerHTML=advice;
-}
-
-/* Adaptive next-button routing. */
-if ("adaptiveMode" in window || true) {
-    const originalNextQuestion = window.nextQuestion;
-    if (typeof originalNextQuestion === "function" && !window.__v5NextWrapped) {
-        window.nextQuestion = function() {
-            if (adaptiveMode) return nextAdaptiveQuestion();
-            return originalNextQuestion();
-        };
-        window.__v5NextWrapped=true;
-    }
-}
-
-/* Keep profile/dashboard data live after each answer. */
-document.addEventListener("keydown",function(e){
-    if ((e.key==="a" || e.key==="A") && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) openAIProfile();
-});
-
-/* V5 profile is refreshed whenever these functions are available. */
 
 </script>
 
 
-
-<div id="dashboardOverlay" class="dashboard-overlay" onclick="closeDashboard(event)">
-  <div class="dashboard-panel" onclick="event.stopPropagation()">
-    <div class="dashboard-head">
-      <h2>📊 Vocabulary Dashboard</h2>
-      <button class="close-dashboard" type="button" onclick="closeDashboard()">×</button>
-    </div>
-
-    <div class="stats-grid">
-      <div class="stat-card"><div class="label">Active Mistakes</div><div class="value" id="dashMistakes">0</div></div>
-      <div class="stat-card"><div class="label">Mastered</div><div class="value" id="dashMastered">0</div></div>
-      <div class="stat-card"><div class="label">Total Mistake Records</div><div class="value" id="dashTotal">0</div></div>
-      <div class="stat-card"><div class="label">Accuracy</div><div class="value" id="dashAccuracy">0%</div></div>
-    </div>
-
-    <div class="progress-wrap">
-      <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-weight:700">
-        <span>Mastery Progress</span><span id="dashMasteryText">0%</span>
-      </div>
-      <div class="progress-track"><div id="dashMasteryBar" class="progress-fill"></div></div>
-    </div>
-
-    <div class="dashboard-section">
-      <h3>🔥 Top 10 Weak Words</h3>
-      <div id="weakWordList" class="weak-list"></div>
-    </div>
-
-    <div class="dashboard-actions">
-      <button type="button" class="review-all-button" onclick="closeDashboard();startMistakeReview()">Review Active Mistakes</button>
-      <button type="button" class="danger-button" onclick="clearMasteredMistakes()">Clear Mastered Records</button>
-    </div>
-  </div>
-</div>
-
-
-<div id="learningCentreOverlay" class="learning-centre-overlay" onclick="closeLearningCentre(event)">
-  <div class="learning-centre" onclick="event.stopPropagation()">
-    <div class="lc-header">
-      <div>
-        <h2 class="lc-title">🎓 Student Learning Centre</h2>
-        <p class="lc-subtitle">Your PSLE English Vocabulary learning progress</p>
-      </div>
-      <button class="lc-close" type="button" onclick="closeLearningCentre()">×</button>
-    </div>
-
-    <div class="lc-hero">
-      <div class="lc-hero-top">
-        <div>
-          <div class="streak-number" id="lcStreak">0 🔥</div>
-          <div class="streak-label">Day Learning Streak</div>
-        </div>
-        <div class="lc-badge" id="lcLevelBadge">Getting Started</div>
-      </div>
-      <div class="lc-progress">
-        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:800;margin-bottom:7px">
-          <span>Overall Accuracy</span><span id="lcAccuracy">0%</span>
-        </div>
-        <div class="lc-progress-track"><div id="lcAccuracyBar" class="lc-progress-fill"></div></div>
-      </div>
-    </div>
-
-    <div class="lc-grid">
-      <div class="lc-stat"><div class="lc-stat-label">Questions Answered</div><div class="lc-stat-value" id="lcAnswered">0</div></div>
-      <div class="lc-stat"><div class="lc-stat-label">Correct Answers</div><div class="lc-stat-value" id="lcCorrect">0</div></div>
-      <div class="lc-stat"><div class="lc-stat-label">Active Mistakes</div><div class="lc-stat-value" id="lcMistakes">0</div></div>
-      <div class="lc-stat"><div class="lc-stat-label">Mastered Words</div><div class="lc-stat-value" id="lcMastered">0</div></div>
-    </div>
-
-    <div class="lc-section">
-      <h3>📈 Level 1–10 Mastery</h3>
-      <div id="lcLevelGrid" class="level-grid"></div>
-    </div>
-
-    <div class="lc-section">
-      <h3>🎯 Today's Learning</h3>
-      <div class="daily-card">
-        <div class="daily-row">
-          <div>
-            <div class="daily-title" id="lcDailyTitle">Daily 10</div>
-            <div class="daily-meta" id="lcDailyMeta">0 / 10 completed</div>
-          </div>
-          <div class="lc-badge" id="lcDailyBadge">START</div>
-        </div>
-        <div class="lc-actions">
-          <button class="lc-action primary" type="button" onclick="closeLearningCentre();restartQuiz()">Start / Continue Daily 10</button>
-          <button class="lc-action" type="button" onclick="closeLearningCentre();startMistakeReview()">Review Mistakes</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="lc-section">
-      <h3>🧠 Today's Recommended Review</h3>
-      <div id="lcTodayList" class="today-list"></div>
-    </div>
-
-    <div class="lc-actions">
-      <button class="lc-action danger" type="button" onclick="resetLearningProgress()">Reset Learning Statistics</button>
-    </div>
-  </div>
-</div>
-
-
-<div id="smartReviewOverlay" class="smart-overlay" onclick="closeSmartReview(event)">
-  <div class="smart-panel" onclick="event.stopPropagation()">
-    <div class="smart-header">
-      <div>
-        <h2 class="smart-title">🧠 Smart Review Engine</h2>
-        <p class="smart-sub">Your next 10 questions are selected from your actual learning history.</p>
-      </div>
-      <button class="smart-close" type="button" onclick="closeSmartReview()">×</button>
-    </div>
-
-    <div class="smart-score">
-      <div>
-        <div class="smart-score-number" id="smartScore">0</div>
-        <div class="smart-score-label">Smart Review Priority Score</div>
-      </div>
-      <div style="max-width:500px">
-        <div style="font-weight:800;color:#176b3a" id="smartRecommendation">Build your first learning record.</div>
-        <div class="smart-meta" id="smartExplanation">The engine will adapt after you answer questions.</div>
-      </div>
-    </div>
-
-    <div class="smart-grid">
-      <div class="smart-stat"><div class="smart-stat-label">Due for Review</div><div class="smart-stat-value" id="smartDue">0</div></div>
-      <div class="smart-stat"><div class="smart-stat-label">High Priority</div><div class="smart-stat-value" id="smartHigh">0</div></div>
-      <div class="smart-stat"><div class="smart-stat-label">Active Mistakes</div><div class="smart-stat-value" id="smartActive">0</div></div>
-    </div>
-
-    <div class="smart-section">
-      <h3>Why these words?</h3>
-      <div class="smart-reasons">
-        <span class="smart-reason">❌ Frequent mistakes</span>
-        <span class="smart-reason">⏰ Time since last mistake</span>
-        <span class="smart-reason">🔁 Review history</span>
-        <span class="smart-reason">📈 Difficulty Level</span>
-        <span class="smart-reason">🎯 Not yet mastered</span>
-      </div>
-    </div>
-
-    <div class="smart-section">
-      <h3>🎯 Next Recommended 10</h3>
-      <div id="smartList" class="smart-list"></div>
-    </div>
-
-    <div class="smart-actions">
-      <button type="button" class="smart-action primary" onclick="closeSmartReview();startSmartReview()">Start Smart Review — 10 Questions</button>
-      <button type="button" class="smart-action" onclick="closeSmartReview();startMistakeReview()">Review All Active Mistakes</button>
-    </div>
-  </div>
-</div>
-
-
-<div id="aiProfileOverlay" class="ai-profile-overlay" onclick="closeAIProfile(event)">
-  <div class="ai-profile-panel" onclick="event.stopPropagation()">
-    <div class="ai-head">
-      <div>
-        <h2 class="ai-title">🤖 AI Student Ability Profile</h2>
-        <p class="ai-sub">Adaptive PSLE English Vocabulary analysis based on your learning history</p>
-      </div>
-      <button class="ai-close" type="button" onclick="closeAIProfile()">×</button>
-    </div>
-
-    <div class="profile-banner">
-      <div>
-        <div class="profile-state" id="aiProfileState">Getting Started</div>
-        <div class="profile-description" id="aiProfileDescription">
-          Answer more questions to build your personal ability profile.
-        </div>
-      </div>
-      <div class="readiness">
-        <div class="readiness-score" id="aiReadiness">0</div>
-        <div class="readiness-label">Learning Readiness</div>
-      </div>
-    </div>
-
-    <div class="ai-stats">
-      <div class="ai-stat"><div class="ai-stat-label">Overall Accuracy</div><div class="ai-stat-value" id="aiAccuracy">0%</div></div>
-      <div class="ai-stat"><div class="ai-stat-label">Questions</div><div class="ai-stat-value" id="aiAnswered">0</div></div>
-      <div class="ai-stat"><div class="ai-stat-label">Weak Words</div><div class="ai-stat-value" id="aiWeak">0</div></div>
-      <div class="ai-stat"><div class="ai-stat-label">Mastered</div><div class="ai-stat-value" id="aiMastered">0</div></div>
-      <div class="ai-stat"><div class="ai-stat-label">Learning Streak</div><div class="ai-stat-value" id="aiStreak">0 🔥</div></div>
-    </div>
-
-    <div class="ai-section">
-      <h3>📊 Ability by Level</h3>
-      <div id="aiAbilityBars" class="ability-bars"></div>
-    </div>
-
-    <div class="ai-section">
-      <h3>🧠 Adaptive Learning Strategy</h3>
-      <div class="ai-advice" id="aiAdvice">Complete more questions and the system will generate a personalised strategy.</div>
-    </div>
-
-    <div class="ai-section">
-      <h3>🎯 Recommended Difficulty</h3>
-      <div class="ai-advice" id="aiDifficultyAdvice">Level 1–2</div>
-    </div>
-
-    <div class="ai-actions">
-      <button class="ai-action primary" type="button" onclick="closeAIProfile();startAdaptiveQuiz()">Start Adaptive 10</button>
-      <button class="ai-action" type="button" onclick="closeAIProfile();openSmartReview()">Open Smart Review</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- =========================================================
-     APLUS ACHIEVER V6 STABILITY / SMART ENGINE REPAIR LAYER
-     Keeps the vocabulary database unchanged.
-========================================================= -->
 <script>
-(function () {
+/* =====================================================
+   APLUS ACHIEVER V6 — ADAPTIVE SPACED REPETITION ENGINE
+===================================================== */
+
+(function(){
     "use strict";
 
-    /* ---------- Safe global state ---------- */
-    window.smartReviewMode = false;
-    window.smartReviewWords = [];
-    window.smartReviewIndex = 0;
-    window.adaptiveMode = false;
-    window.adaptiveQuestions = [];
-    window.adaptiveIndex = 0;
+    const V6_KEY = "aplusAchieverPSLEV6SRSV1";
+    let v6Mode = "daily";
 
-    const SMART_HISTORY_KEY = "aplusAchieverPSLESmartHistoryV1";
-    const LEVEL_PROGRESS_KEY = "aplusAchieverPSLELevelProgressV1";
-    const STREAK_KEY = "aplusAchieverPSLEStreakV1";
-    const DAILY_KEY = "aplusAchieverPSLEDailyProgressV1";
-
-    function wordKey(word) {
-        if (!word) return "";
-        return String(word.id != null ? word.id : word.word).toLowerCase().trim();
-    }
-    window.smartWordKey = wordKey;
-
-    function safeJSON(key, fallback) {
-        try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); }
-        catch (e) { return fallback; }
-    }
-    function saveJSON(key, value) {
-        try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+    function loadSRS(){
+        try{
+            const raw = localStorage.getItem(V6_KEY);
+            return raw ? JSON.parse(raw) : {};
+        }catch(e){ return {}; }
     }
 
-    /* ---------- V3 learning centre data ---------- */
-    window.loadLevelProgress = function () {
-        return safeJSON(LEVEL_PROGRESS_KEY, {});
-    };
-    window.recordLevelProgress = function (level, correct) {
-        const p = window.loadLevelProgress();
-        const k = String(level || 1);
-        if (!p[k]) p[k] = { answered: 0, correct: 0, wrong: 0 };
-        p[k].answered++;
-        if (correct) p[k].correct++; else p[k].wrong++;
-        saveJSON(LEVEL_PROGRESS_KEY, p);
-    };
-    window.loadStreak = function () {
-        return safeJSON(STREAK_KEY, { current: 0, lastDate: "" });
-    };
-    window.registerLearningDay = function () {
-        const x = window.loadStreak();
-        const today = new Date().toISOString().slice(0,10);
-        if (x.lastDate === today) return;
-        if (x.lastDate) {
-            const prev = new Date(x.lastDate + "T00:00:00");
-            const now = new Date(today + "T00:00:00");
-            const days = Math.round((now - prev) / 86400000);
-            x.current = days === 1 ? Number(x.current || 0) + 1 : 1;
-        } else x.current = 1;
-        x.lastDate = today;
-        saveJSON(STREAK_KEY, x);
-    };
-    window.loadDailyProgress = function () {
-        return safeJSON(DAILY_KEY, { date: "", answered: 0, correct: 0 });
-    };
-    window.recordDailyQuestion = function () {
-        const d = window.loadDailyProgress();
-        const today = new Date().toISOString().slice(0,10);
-        if (d.date !== today) { d.date = today; d.answered = 0; d.correct = 0; }
-        d.answered = Math.min(10, Number(d.answered || 0) + 1);
-        saveJSON(DAILY_KEY, d);
-    };
-    window.recordDailyCorrect = function () {
-        const d = window.loadDailyProgress();
-        d.correct = Number(d.correct || 0) + 1;
-        saveJSON(DAILY_KEY, d);
-    };
+    function saveSRS(data){
+        try{ localStorage.setItem(V6_KEY, JSON.stringify(data)); }catch(e){}
+    }
 
-    /* ---------- Smart history ---------- */
-    function loadSmartHistory() { return safeJSON(SMART_HISTORY_KEY, {}); }
-    function saveSmartHistory(x) { saveJSON(SMART_HISTORY_KEY, x); }
-    window.updateSmartHistory = function (word, level, correct, mode) {
-        const h = loadSmartHistory();
-        const k = wordKey(word);
-        if (!k) return;
-        const now = Date.now();
-        if (!h[k]) h[k] = { word: word.word || word, level: Number(level || 1), answered:0, correct:0, wrong:0, lastAnswered:0, lastWrong:0, lastCorrect:0, consecutiveCorrect:0, reviewCount:0, lastMode:"" };
-        const x = h[k];
-        x.word = word.word || x.word;
-        x.level = Number(level || x.level || 1);
-        x.answered++;
-        x.lastAnswered = now;
-        x.lastMode = mode || "daily";
-        if (correct) {
-            x.correct++; x.lastCorrect = now; x.consecutiveCorrect = Number(x.consecutiveCorrect || 0) + 1;
-        } else {
-            x.wrong++; x.lastWrong = now; x.consecutiveCorrect = 0;
+    function getCard(word){
+        const data = loadSRS();
+        if(!data[word.word]){
+            data[word.word] = {
+                word:word.word,
+                id:word.id || word.word,
+                level:Number(word.level || 1),
+                seen:0, correct:0, wrong:0, streak:0,
+                stage:0, interval:0, ease:2.3,
+                lastAnswered:0, lastCorrect:0, lastWrong:0,
+                nextReview:Date.now()
+            };
+            saveSRS(data);
         }
-        if (mode === "review" || mode === "smart" || mode === "adaptive") x.reviewCount++;
-        saveSmartHistory(h);
-    };
+        return data[word.word];
+    }
 
-    window.smartPriority = function (x) {
-        const now = Date.now();
-        const ageWrong = x.lastWrong ? Math.min(30, (now-x.lastWrong)/86400000) : 0;
-        const ageAnswered = x.lastAnswered ? Math.min(30, (now-x.lastAnswered)/86400000) : 30;
-        const acc = x.answered ? x.correct/x.answered : 0;
-        return Number(x.wrong||0)*24 + (1-acc)*35 + ageWrong*1.5 + ageAnswered*0.8 + Number(x.level||1)*0.6 - Number(x.consecutiveCorrect||0)*8;
-    };
+    function recordSRS(word, correct){
+        if(!word || !word.word) return;
 
-    function getSmartCandidates() {
-        const h = loadSmartHistory();
-        const mistakes = typeof loadMistakes === "function" ? loadMistakes() : {};
+        const data = loadSRS();
+        const c = data[word.word] || getCard(word);
+        const intervals = [1,3,7,14,30,60];
+
+        c.level = Number(word.level || c.level || 1);
+        c.seen++;
+        c.lastAnswered = Date.now();
+
+        if(correct){
+            c.correct++;
+            c.streak++;
+            c.lastCorrect = Date.now();
+            c.stage = Math.min(5, Number(c.stage || 0) + 1);
+            c.interval = intervals[c.stage] || 60;
+            c.ease = Math.min(2.8, Number(c.ease || 2.3) + 0.05);
+            c.nextReview = Date.now() + c.interval * 86400000;
+        }else{
+            c.wrong++;
+            c.streak = 0;
+            c.lastWrong = Date.now();
+            c.stage = Math.max(0, Number(c.stage || 0) - 2);
+            c.interval = 0;
+            c.ease = Math.max(1.6, Number(c.ease || 2.3) - 0.15);
+            c.nextReview = Date.now() + 2 * 3600000;
+        }
+
+        data[word.word] = c;
+        saveSRS(data);
+        updateV6DueCount();
+    }
+
+    function allCards(){
+        return Object.values(loadSRS());
+    }
+
+    function vocabularyMap(){
         const map = {};
-        Object.values(h).forEach(x => map[wordKey(x.word)] = Object.assign({}, x));
-        Object.values(mistakes).forEach(m => {
-            const k = wordKey(m.word);
-            if (!map[k]) map[k] = { word:m.word, level:Number(m.level||1), answered:0, correct:0, wrong:0, lastAnswered:0, lastWrong:0, lastCorrect:0, consecutiveCorrect:0 };
-            map[k].wrong = Math.max(Number(map[k].wrong||0), Number(m.wrong||m.wrongCount||0));
-            map[k].lastWrong = Math.max(Number(map[k].lastWrong||0), Number(m.lastWrong||0));
+        (window.vocabulary || window.vocabularyData || []).forEach(function(w){
+            if(w && w.word) map[w.word] = w;
         });
-        return Object.values(map).filter(x => x && x.word).map(x => {
-            const vocab = (window.vocabulary || []).find(v => wordKey(v) === wordKey(x.word) || String(v.word).toLowerCase() === String(x.word).toLowerCase());
-            return vocab ? Object.assign({vocab:vocab}, x) : null;
-        }).filter(Boolean).sort((a,b)=>window.smartPriority(b)-window.smartPriority(a));
+        return map;
     }
 
-    window.openSmartReview = function () {
-        const list = getSmartCandidates();
-        const overlay = document.getElementById("smartReviewOverlay");
-        const smartList = document.getElementById("smartList");
-        if (smartList) {
-            if (!list.length) smartList.innerHTML = '<div class="empty-lc">Start answering questions first. Smart Review will learn your weak words automatically.</div>';
-            else smartList.innerHTML = list.slice(0,10).map((x,i)=>'<div class="smart-item"><div class="smart-rank">#'+(i+1)+'</div><div><div class="smart-word">'+escapeHTML(x.word)+'</div><div class="smart-meta">Level '+(x.level||1)+' · Wrong '+(x.wrong||0)+' · Accuracy '+(x.answered?Math.round(x.correct/x.answered*100):0)+'%</div></div><div class="smart-priority">'+Math.round(window.smartPriority(x))+'</div></div>').join('');
+    function dueCards(){
+        const now = Date.now();
+        return allCards()
+            .filter(function(c){ return Number(c.nextReview || 0) <= now; })
+            .sort(function(a,b){
+                const sa = Number(a.wrong||0)*3 - Number(a.streak||0);
+                const sb = Number(b.wrong||0)*3 - Number(b.streak||0);
+                return sb-sa || Number(a.nextReview||0)-Number(b.nextReview||0);
+            });
+    }
+
+    function makeQuestion(word){
+        return createQuestion(word, Number(word.level || 1));
+    }
+
+    function startMode(mode, words, label){
+        if(!words.length){
+            alert("No suitable words are available for this review yet.");
+            return;
         }
-        const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
-        set("smartScore", list.length ? Math.round(window.smartPriority(list[0])) : 0);
-        set("smartActive", typeof getMistakeCount === "function" ? getMistakeCount() : 0);
-        set("smartHigh", list.length);
-        set("smartDue", list.filter(x=>x.lastWrong && Date.now()-x.lastWrong>3*86400000).length);
-        set("smartRecommendation", list.length ? "Prioritise the words with the highest error frequency and lowest accuracy." : "Complete a few Daily 10 questions to build your Smart Review profile.");
-        if (overlay) overlay.style.display="flex";
-    };
-    window.closeSmartReview = function (event) {
-        if (event && event.target && event.target.id !== "smartReviewOverlay") return;
-        const e=document.getElementById("smartReviewOverlay"); if(e)e.style.display="none";
-    };
-    window.startSmartReview = function () {
-        const candidates=getSmartCandidates().slice(0,10);
-        if (!candidates.length) { alert("Complete some vocabulary questions first. Smart Review needs learning data."); return; }
-        window.smartReviewMode=true; window.adaptiveMode=false; window.reviewMode=true;
-        window.smartReviewWords=candidates.map(x=>x.vocab); window.smartReviewIndex=0;
-        questions=window.smartReviewWords.map(v=>createQuestion(v,Number(v.level||1)));
-        currentQuestion=0; score=0; answered=false;
-        const b=document.getElementById("reviewBadge"); if(b){b.style.display="block";b.textContent="SMART REVIEW";}
-        const r=document.getElementById("result"); if(r)r.style.display="none";
-        const q=document.getElementById("quiz"); if(q)q.style.display="block";
-        closeSmartReview(); showQuestion();
-    };
-    window.nextSmartQuestion = function () {
-        window.smartReviewIndex++;
-        currentQuestion++;
-        if (currentQuestion >= questions.length) { window.smartReviewMode=false; showResult(); return; }
-        answered=false; showQuestion();
-    };
 
-    /* ---------- Student Centre ---------- */
-    window.openLearningCentre=function(){ window.updateLearningCentre(); const e=document.getElementById("learningCentreOverlay"); if(e)e.style.display="flex"; };
-    window.closeLearningCentre=function(event){ if(event&&event.target&&event.target.id!=="learningCentreOverlay")return; const e=document.getElementById("learningCentreOverlay");if(e)e.style.display="none"; };
-    window.updateLearningCentre=function(){
-        const p=typeof loadProgress==='function'?loadProgress():{answered:0,correct:0};
-        const mistakes=typeof loadMistakes==='function'?loadMistakes():{}; const all=Object.values(mistakes); const active=all.filter(x=>!x.mastered), mastered=all.filter(x=>x.mastered);
-        const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
-        set('lcStreak',(window.loadStreak().current||0)+' 🔥'); set('lcMistakes',active.length); set('lcMastered',mastered.length); set('lcAnswered',p.answered||0); set('lcCorrect',p.correct||0); set('lcAccuracy',p.answered?Math.round(p.correct/p.answered*100)+'%':'0%');
-        const bar=document.getElementById('lcAccuracyBar'); if(bar)bar.style.width=(p.answered?Math.round(p.correct/p.answered*100):0)+'%';
-        const lp=window.loadLevelProgress(), grid=document.getElementById('lcLevelGrid');
-        if(grid)grid.innerHTML=Array.from({length:10},(_,i)=>{const x=lp[String(i+1)]||{answered:0,correct:0};const a=x.answered?Math.round(x.correct/x.answered*100):0;return '<div class="level-card"><div class="level-name">Level '+(i+1)+'</div><div class="level-percent">'+a+'%</div><div class="level-mini"><span style="width:'+a+'%"></span></div></div>';}).join('');
-        const d=window.loadDailyProgress(), todayList=document.getElementById('lcTodayList'); if(todayList)todayList.innerHTML='<div class="empty-lc">Today: '+(d.answered||0)+' / 10 questions · '+(d.correct||0)+' correct</div>';
-    };
+        questions = words.map(makeQuestion);
+        currentQuestion = 0;
+        score = 0;
+        answered = false;
+        v6Mode = mode;
 
-    /* ---------- AI profile repair ---------- */
-    const oldAI = window.getAIProfileData;
-    window.getAIProfileData = function(){
-        const p=typeof loadProgress==='function'?loadProgress():{answered:0,correct:0}; const lp=window.loadLevelProgress(); const mistakes=typeof loadMistakes==='function'?loadMistakes():{};
-        const all=Object.values(mistakes), active=all.filter(x=>!x.mastered), mastered=all.filter(x=>x.mastered); const total=Number(p.answered||0), accuracy=total?Number(p.correct||0)/total:0;
-        const levels={},ability={}; for(let i=1;i<=10;i++){const x=lp[String(i)]||{answered:0,correct:0};levels[i]={answered:Number(x.answered||0),correct:Number(x.correct||0),accuracy:x.answered?x.correct/x.answered:0};const c=Math.min(1,levels[i].answered/10);ability[i]=Math.round((levels[i].accuracy*c+accuracy*(1-c))*100);}
-        const avgAbility=total?Math.round(Object.values(ability).reduce((a,b)=>a+b,0)/10):0; const masteryRatio=all.length?mastered.length/all.length:0; const streak=Number(window.loadStreak().current||0); let readiness=total?Math.round(accuracy*55+Math.min(streak,14)/14*15+masteryRatio*20+Math.min(total,100)/100*10):0;
-        let state='Getting Started',description='The profile will learn your strengths after your first questions.'; if(total){if(readiness>=85){state='🏆 Advanced & Ready';description='Strong overall performance. The engine can challenge you with higher-level vocabulary while revisiting weak words.';}else if(readiness>=70){state='💪 Strong & Developing';description='Good foundation. The next sessions should mix consolidation with carefully selected harder words.';}else if(readiness>=50){state='📚 Developing';description='The profile is improving. The engine will focus on reinforcement and targeted weak-word practice.';}else{state='🌱 Building Foundations';description='The priority is accuracy and vocabulary retention before increasing difficulty.';}}
-        return {progress:p,levels,ability,active,mastered,accuracy,avgAbility,readiness,streak,state,description};
-    };
+        const badge = document.getElementById("v6ModeBadge");
+        if(badge){
+            badge.textContent = label;
+            badge.style.display = "inline-block";
+        }
 
-    function recommendedDifficulty(p){const a=p.avgAbility;if(a>=90)return{min:7,max:10,label:'Level 7–10 · Challenge'};if(a>=80)return{min:6,max:9,label:'Level 6–9 · Upper Intermediate'};if(a>=70)return{min:5,max:8,label:'Level 5–8 · Developing'};if(a>=60)return{min:4,max:7,label:'Level 4–7 · Reinforcement'};if(a>=45)return{min:2,max:5,label:'Level 2–5 · Foundation + Growth'};return{min:1,max:3,label:'Level 1–3 · Foundation'};}
-    window.startAdaptiveQuiz=function(){
-        const p=window.getAIProfileData(),d=recommendedDifficulty(p),mist=typeof loadMistakes==='function'?loadMistakes():{},map={};Object.values(mist).forEach(m=>map[wordKey(m.word)]=m);
-        const pool=(window.vocabulary||[]).map(v=>{let s=0,lv=Number(v.level||1),m=map[wordKey(v.word)];if(lv>=d.min&&lv<=d.max)s+=35;if(m&&!m.mastered)s+=Math.min(Number(m.wrong||m.wrongCount||0)*15,60);if(p.levels[lv]&&p.levels[lv].answered)s+=(1-p.levels[lv].accuracy)*35;s+=Math.random()*10;return{v,s};}).sort((a,b)=>b.s-a.s).slice(0,30).map(x=>x.v);
-        const selected=[],used=new Set();pool.filter(v=>map[wordKey(v.word)]&&!map[wordKey(v.word)].mastered).slice(0,4).forEach(v=>{selected.push(v);used.add(wordKey(v.word));});pool.forEach(v=>{if(selected.length<10&&!used.has(wordKey(v.word))){selected.push(v);used.add(wordKey(v.word));}}); if(!selected.length)return alert('The vocabulary bank is not available yet.');
-        window.adaptiveMode=true;window.smartReviewMode=false;window.reviewMode=false;window.adaptiveQuestions=selected;window.adaptiveIndex=0;questions=selected.map(v=>createQuestion(v,Number(v.level||1)));currentQuestion=0;score=0;answered=false;
-        const b=document.getElementById('reviewBadge');if(b){b.style.display='block';b.textContent='ADAPTIVE AI 10';}const r=document.getElementById('result');if(r)r.style.display='none';const q=document.getElementById('quiz');if(q)q.style.display='block';showQuestion();
-    };
-    window.nextAdaptiveQuestion=function(){window.adaptiveIndex++;currentQuestion++;if(currentQuestion>=questions.length){window.adaptiveMode=false;showResult();return;}answered=false;showQuestion();};
-
-    /* ---------- Replace nextQuestion with safe routing ---------- */
-    window.nextQuestion=function(){
-        if(window.adaptiveMode)return window.nextAdaptiveQuestion();
-        if(window.smartReviewMode)return window.nextSmartQuestion();
-        currentQuestion++;
-        if(currentQuestion>=questions.length){showResult();return;}
+        document.getElementById("result").style.display = "none";
+        document.getElementById("quiz").style.display = "block";
         showQuestion();
-    };
-
-    /* ---------- Patch answer tracking without changing the quiz UI ---------- */
-    const originalCheckAnswer=window.checkAnswer;
-    if(typeof originalCheckAnswer==='function' && !window.__v6CheckPatched){
-        window.checkAnswer=function(selected,button){
-            const q=questions[currentQuestion]; const correct=q&&selected===q.answer;
-            originalCheckAnswer(selected,button);
-            if(q&&q.word){
-                if(typeof recordProgress==='function')recordProgress(correct);
-                if(typeof recordLevelProgress==='function')recordLevelProgress(q.level,correct);
-                if(typeof registerLearningDay==='function')registerLearningDay();
-                if(!window.reviewMode&&!window.smartReviewMode&&!window.adaptiveMode){if(typeof recordDailyQuestion==='function')recordDailyQuestion();if(correct&&typeof recordDailyCorrect==='function')recordDailyCorrect();}
-                window.updateSmartHistory(q.word,q.level,correct,window.smartReviewMode?'smart':window.adaptiveMode?'adaptive':window.reviewMode?'review':'daily');
-                if(typeof updateDashboard==='function')updateDashboard();
-                if(typeof updateLearningCentre==='function')updateLearningCentre();
-                if(typeof updateAIProfile==='function')updateAIProfile();
-            }
-        };
-        window.__v6CheckPatched=true;
     }
 
-    /* ---------- Keyboard / initial refresh ---------- */
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeDashboard();closeLearningCentre();closeSmartReview();closeAIProfile();}});
-    window.addEventListener('load',function(){setTimeout(function(){if(typeof updateMistakeUI==='function')updateMistakeUI();if(typeof updateDashboard==='function')updateDashboard();if(typeof updateLearningCentre==='function')updateLearningCentre();},100);});
+    window.startDueReview = function(){
+        const map = vocabularyMap();
+        const words = dueCards()
+            .map(function(c){ return map[c.word]; })
+            .filter(Boolean)
+            .slice(0,10);
+
+        if(!words.length){
+            alert("You are fully caught up — no words are due right now.");
+            return;
+        }
+        startMode("due", words, "SPACED REPETITION — DUE NOW");
+    };
+
+    window.startWeakReview = function(){
+        const map = vocabularyMap();
+        const words = allCards()
+            .filter(function(c){ return Number(c.wrong||0) > 0; })
+            .sort(function(a,b){
+                return (Number(b.wrong||0)-Number(b.streak||0)) -
+                       (Number(a.wrong||0)-Number(a.streak||0));
+            })
+            .map(function(c){ return map[c.word]; })
+            .filter(Boolean)
+            .slice(0,10);
+
+        if(!words.length){
+            alert("No weak words yet. Complete some Daily 10 questions first.");
+            return;
+        }
+        startMode("weak", words, "TARGETED WEAK-WORD REVIEW");
+    };
+
+    window.startChallengeReview = function(){
+        const pool = (window.vocabulary || window.vocabularyData || [])
+            .filter(function(w){ return w && Number(w.level||1) >= 7; });
+
+        shuffle(pool);
+        startMode("challenge", pool.slice(0,10), "CHALLENGE — LEVEL 7–10");
+    };
+
+    window.openV6Dashboard = function(){
+        const cards = allCards();
+        const due = dueCards();
+        const seen = cards.filter(function(c){ return c.seen > 0; });
+        const mastered = cards.filter(function(c){ return Number(c.stage||0) >= 5; });
+        const correct = cards.reduce(function(s,c){ return s+Number(c.correct||0); },0);
+        const wrong = cards.reduce(function(s,c){ return s+Number(c.wrong||0); },0);
+        const total = correct + wrong;
+        const acc = total ? Math.round(correct/total*100) : 0;
+
+        const weak = cards
+            .filter(function(c){ return Number(c.wrong||0) > 0; })
+            .sort(function(a,b){ return Number(b.wrong||0)-Number(a.wrong||0); })
+            .slice(0,10);
+
+        const content = `
+            <h2>📊 APLUS Vocabulary Dashboard</h2>
+            <div class="v6-stats">
+                <div class="v6-stat">Due Now<strong>${due.length}</strong></div>
+                <div class="v6-stat">Words Seen<strong>${seen.length}</strong></div>
+                <div class="v6-stat">Mastered<strong>${mastered.length}</strong></div>
+                <div class="v6-stat">Accuracy<strong>${acc}%</strong></div>
+            </div>
+            <h3>🧠 Spaced Repetition</h3>
+            <p>
+                Correct answers move a word through
+                <strong>1 → 3 → 7 → 14 → 30 → 60 days</strong>.
+                A wrong answer brings it back for short-term review.
+            </p>
+            <h3>🎯 Top Weak Words</h3>
+            <div class="v6-list">
+                ${
+                    weak.length
+                    ? weak.map(function(c){
+                        return `<div class="v6-row">
+                            <span>${escapeHTML(c.word)}</span>
+                            <span class="v6-pill">${Number(c.wrong||0)} mistakes</span>
+                        </div>`;
+                    }).join("")
+                    : "<p>No weak words recorded yet.</p>"
+                }
+            </div>
+            <div style="margin-top:18px;">
+                <button class="v6-action" onclick="startDueReview()">Review Due</button>
+                <button class="v6-action secondary" onclick="startWeakReview()">Weak Words</button>
+                <button class="v6-action secondary" onclick="startChallengeReview()">Challenge</button>
+            </div>
+        `;
+
+        openV6Overlay(content);
+    };
+
+    function openV6Overlay(content){
+        const o = document.getElementById("v6Overlay");
+        const c = document.getElementById("v6OverlayContent");
+        if(!o || !c) return;
+        c.innerHTML = content;
+        o.style.display = "flex";
+    }
+
+    window.closeV6Overlay = function(){
+        const o = document.getElementById("v6Overlay");
+        if(o) o.style.display = "none";
+    };
+
+    function updateV6DueCount(){
+        const el = document.getElementById("v6DueCount");
+        if(el) el.textContent = dueCards().length;
+    }
+
+    /*
+     * Wrap the original answer function without changing its feedback,
+     * scoring, or button behaviour.
+     */
+    const originalCheckAnswer = window.checkAnswer;
+
+    window.checkAnswer = function(selected, clickedButton){
+        const q = questions[currentQuestion];
+
+        if(!q || answered){
+            return;
+        }
+
+        originalCheckAnswer(selected, clickedButton);
+
+        if(answered && q.word){
+            recordSRS(q.word, selected === q.answer);
+        }
+    };
+
+    document.addEventListener("keydown", function(e){
+        if(e.key === "Escape"){
+            closeV6Overlay();
+        }
+
+        if(
+            (e.key === "Enter" || e.key === " ") &&
+            answered &&
+            document.getElementById("nextButton") &&
+            document.getElementById("nextButton").style.display !== "none"
+        ){
+            e.preventDefault();
+            nextQuestion();
+        }
+    });
+
+    window.addEventListener("load", function(){
+        setTimeout(updateV6DueCount, 300);
+    });
+
 })();
 </script>
 
 </body>
-
 </html>
