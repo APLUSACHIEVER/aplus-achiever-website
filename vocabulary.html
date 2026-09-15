@@ -29,7 +29,8 @@ header{background:#fff;border-bottom:1px solid #dfece6;padding:18px 5%;display:f
 <script src="data/vocabulary.js"></script>
 <script>
 'use strict';
-const VOCAB=Array.isArray(window.vocabulary)?window.vocabulary:[];
+const VOCAB=Array.isArray(window.vocabulary)?window.vocabulary.filter(w=>w&&w.word):[];
+window.V12_VOCAB=VOCAB;
 const KEY='aplusAchieverPSLEV10TutorV1';
 let db={total:0,correct:0,words:{},days:{},diagnostic:null};
 let mode='daily',questions=[],index=0,current=null,currentQ=null,answered=false,choice='',score=0,sessionWrong=[],sessionCorrect=[],questionStart=0;
@@ -48,43 +49,78 @@ function dailyDone(){let d=db.days[today()]||{q:0,c:0};return Math.min(10,d.q||0
 function pick(arr,n){let a=[...arr].sort(()=>Math.random()-.5);return a.slice(0,n)}
 function rankScore(w){let s=wordState(w),forget=s.last?Math.min(1,(Date.now()-s.last)/86400000/(s.mastery>=80?30:7)):1;let error=s.seen?1-acc(s):.5;let weakness=s.mastery<60?1:(100-s.mastery)/100;let dueBoost=s.next&&s.next<=Date.now()?1:0;let fit=Math.max(0,1-Math.abs((w.level||1)-targetLevel())/6);let unseen=s.seen?0:.35;return forget*.28+error*.28+weakness*.18+dueBoost*.14+fit*.08+unseen*.04+Math.random()*.03}
 function choose(mode){if(mode==='diagnostic'){let q=[];for(let l=1;l<=10;l++){let a=VOCAB.filter(w=>Number(w.level)===l);if(a.length)q.push(pick(a,2)[0])}return pick(q,20)}if(mode==='due'){let a=due();return pick(a.length?a:weak().length?weak():VOCAB,10)}if(mode==='weak'){let a=weak();return pick(a.length?a:VOCAB.filter(w=>w.level<=targetLevel()+1),10)}if(mode==='challenge'){let a=VOCAB.filter(w=>Number(w.level)>=Math.max(7,targetLevel()+2)&&wordState(w).mastery<90);return pick(a.length?a:VOCAB.filter(w=>Number(w.level)>=7),10)}let ranked=[...VOCAB].sort((a,b)=>rankScore(b)-rankScore(a));let out=ranked.slice(0,6);let pool=VOCAB.filter(w=>!out.includes(w)&&Math.abs(Number(w.level)-targetLevel())<=1);out=out.concat(pick(pool,4));return out.length<10?out.concat(pick(VOCAB.filter(w=>!out.includes(w)),10-out.length)):out.slice(0,10)}
-function makeQuestion(w,i){let type=i%3===1?'fill':(i%3===2?'context':'meaning');if(!w.example||!w.meaning)type='meaning';if(type==='fill'){let sentence=w.example.replace(new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i'),'_____');if(sentence===w.example)type='meaning';else return {type:'fill',text:sentence,answer:w.word}}
-if(type==='context')return {type:'context',text:'Which meaning best fits "'+w.word+'" in the context of this example?',answer:w.meaning,opts:options(w)};
-return {type:'meaning',text:'What is the best meaning of '+w.word+'?',answer:w.meaning,opts:options(w)}}
+function makeQuestion(w,i){
+  if(!w || !w.word){
+    throw new Error('Question data is missing a valid vocabulary word.');
+  }
+  const meaning=String(w.meaning||'').trim();
+  const example=String(w.example||'').trim();
+  let type=i%3===1?'fill':(i%3===2?'context':'meaning');
+  if(!meaning) type='fill';
+  if(type==='fill' && example){
+    const re=new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i');
+    const sentence=example.replace(re,'_____');
+    if(sentence!==example) return {type:'fill',text:sentence,answer:w.word};
+  }
+  if(type==='context' && meaning){
+    return {type:'context',text:'What does "'+w.word+'" mean in this context?',answer:meaning,opts:options(w)};
+  }
+  return {type:'meaning',text:'What is the best meaning of "'+w.word+'"?',answer:meaning||'Meaning not available',opts:options(w)};
+}
 function options(w){let pool=VOCAB.filter(x=>x.id!==w.id&&x.meaning&&Math.abs(Number(x.level)-Number(w.level||1))<=2);let opts=[w.meaning];for(let x of pick(pool,20)){if(!opts.includes(x.meaning))opts.push(x.meaning);if(opts.length===4)break}while(opts.length<4){let x=VOCAB[Math.floor(Math.random()*VOCAB.length)];if(x&&x.meaning&&!opts.includes(x.meaning))opts.push(x.meaning)}return pick(opts,4)}
 function escapeRegExp(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
-function startMode(m){if(!VOCAB.length){toast('Vocabulary data could not load. Check data/vocabulary.js');return}mode=m;questions=choose(m);if(!questions.length){toast('No suitable words found yet.');return}index=0;score=0;sessionWrong=[];sessionCorrect=[];show('quiz');renderQuestion()}
+function startMode(m){if(!VOCAB.length){toast('Vocabulary data could not load. Check data/vocabulary.js');return}mode=m;questions=choose(m).filter(w=>w&&w.word);if(!questions.length){toast('No suitable words found yet.');return}index=0;score=0;sessionWrong=[];sessionCorrect=[];show('quiz');renderQuestion()}
 function renderQuestion(){
-current=questions[index];currentQ=makeQuestion(current,index);answered=false;choice='';hintStep=0;answerRevealed=false;questionStart=Date.now();
-document.getElementById('counter').textContent=(index+1)+' / '+questions.length;
-document.getElementById('qbar').style.width=((index)/questions.length*100)+'%';
-document.getElementById('modeLabel').textContent=mode==='diagnostic'?'AI DIAGNOSTIC':mode==='daily'?'AI DAILY 10':mode.toUpperCase()+' REVIEW';
-document.getElementById('typeLabel').textContent=currentQ.type==='fill'?'FILL IN THE BLANK':currentQ.type==='context'?'CONTEXT MEANING':'WORD MEANING';
-document.getElementById('question').textContent=currentQ.text;
-let box=document.getElementById('options');box.innerHTML='';
-document.getElementById('inputWrap').classList.add('hidden');document.getElementById('answerInput').value='';
-document.getElementById('checkBtn').classList.remove('hidden');document.getElementById('nextBtn').classList.add('hidden');
-let f=document.getElementById('feedback');f.className='feedback hidden';f.innerHTML='';let c=document.getElementById('wordCard');c.className='word-card hidden';c.innerHTML='';
-const hp=document.getElementById('hintPanel');hp.className='hint-panel hidden';hp.innerHTML='';
-if(currentQ.type!=='fill'){
- currentQ.opts.forEach(o=>{let b=document.createElement('button');b.className='option';b.textContent=o;b.onclick=()=>{if(!answered){choice=o;document.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')}};box.appendChild(b)})
-}else{
- document.getElementById('inputWrap').classList.remove('hidden');
- renderHintPanel();
-}
+  try{
+    current=questions[index];
+    if(!current || !current.word) throw new Error('The selected question is invalid.');
+    currentQ=makeQuestion(current,index);
+    if(!currentQ || !currentQ.text) throw new Error('The question text could not be created.');
+    answered=false;choice='';hintStep=0;answerRevealed=false;questionStart=Date.now();
+    document.getElementById('counter').textContent=(index+1)+' / '+questions.length;
+    document.getElementById('qbar').style.width=((index)/questions.length*100)+'%';
+    document.getElementById('modeLabel').textContent=mode==='diagnostic'?'AI DIAGNOSTIC':mode==='daily'?'AI DAILY 10':mode.toUpperCase()+' REVIEW';
+    document.getElementById('typeLabel').textContent=currentQ.type==='fill'?'FILL IN THE BLANK':currentQ.type==='context'?'CONTEXT MEANING':'WORD MEANING';
+    document.getElementById('question').textContent=currentQ.text;
+    const box=document.getElementById('options'); box.innerHTML='';
+    document.getElementById('inputWrap').classList.add('hidden');document.getElementById('answerInput').value='';
+    document.getElementById('checkBtn').classList.remove('hidden');document.getElementById('nextBtn').classList.add('hidden');
+    const f=document.getElementById('feedback');f.className='feedback hidden';f.innerHTML='';
+    const c=document.getElementById('wordCard');c.className='word-card hidden';c.innerHTML='';
+    const hp=document.getElementById('hintPanel');hp.className='hint-panel hidden';hp.innerHTML='';
+    if(currentQ.type!=='fill'){
+      const opts=Array.isArray(currentQ.opts)?currentQ.opts:[];
+      if(!opts.length) throw new Error('No answer choices could be generated for this question.');
+      opts.forEach(o=>{
+        const b=document.createElement('button'); b.type='button'; b.className='option'; b.textContent=o;
+        b.onclick=()=>{if(!answered){choice=o;document.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')}};
+        box.appendChild(b);
+      });
+    }else{
+      document.getElementById('inputWrap').classList.remove('hidden');
+      renderHintPanel();
+    }
+  }catch(err){
+    console.error('V12 renderQuestion error:',err);
+    const q=document.getElementById('question'); if(q) q.textContent='We could not create this question.';
+    const box=document.getElementById('options'); if(box) box.innerHTML='<div class="feedback wrong"><h3>⚠️ Tutor Error</h3><p>'+esc(err.message||String(err))+'</p><p>Please try another Daily 10.</p></div>';
+    const check=document.getElementById('checkBtn'); if(check) check.classList.add('hidden');
+  }
 }
 function submitAnswer(){
 if(answered)return;
 let ans=currentQ.type==='fill'?document.getElementById('answerInput').value.trim():choice;
 if(!ans){toast('Please choose or enter an answer first.');return}
 answered=true;
+const responseMs=Date.now()-(questionStart||Date.now());
 let correct=currentQ.type==='fill'?norm(ans)===norm(current.word):ans===currentQ.answer;
 if(correct)score++;
 let s=wordState(current);s.seen++;s.last=Date.now();
 const hintsUsed=hintStep; const revealed=answerRevealed;
 if(correct){s.correct++;s.streak++;let gain=revealed?3:hintsUsed===0?12:hintsUsed===1?10:hintsUsed===2?7:5;s.mastery=Math.min(100,s.mastery+gain);let days=s.streak>=6?30:s.streak>=4?14:s.streak>=2?7:3;s.next=Date.now()+days*86400000;sessionCorrect.push(current.word)}
 else{s.wrong++;s.streak=0;s.mastery=Math.max(0,s.mastery-8);s.next=Date.now()+2*3600000;sessionWrong.push(current.word)}
-db.total++;if(correct)db.correct++;let d=db.days[today()]||{q:0,c:0};d.q=(d.q||0)+1;d.c=(d.c||0)+(correct?1:0);db.days[today()]=d;
+db.total++;if(correct)db.correct++;
+if(current){const rs=wordState(current);rs.lastResponseMs=responseMs;rs.fastCount=(rs.fastCount||0)+(responseMs<5000?1:0);rs.slowCount=(rs.slowCount||0)+(responseMs>15000?1:0);rs.lastResult=correct?'correct':'wrong';}let d=db.days[today()]||{q:0,c:0};d.q=(d.q||0)+1;d.c=(d.c||0)+(correct?1:0);db.days[today()]=d;
 if(!db.hints)db.hints={used:0,revealed:0};db.hints.used+=hintsUsed;if(revealed)db.hints.revealed++;
 if(mode==='diagnostic'&&index===questions.length-1)setDiagnostic();save();showFeedback(correct,ans,hintsUsed,revealed);updateUI()
 }
@@ -159,22 +195,7 @@ window.V11_resetDemo=function(){
     localStorage.removeItem(KEY); db={total:0,correct:0,words:{},days:{},diagnostic:null}; showHome(); toast('Learning data reset.'); updateUI();
   }
 };
-// Add response-time and error-pattern tracking without changing the existing quiz controller.
-const V11_oldSubmit=window.submitAnswer;
-window.submitAnswer=function(){
-  const started=questionStart||Date.now();
-  const before=score;
-  V11_oldSubmit();
-  if(answered && current){
-    const ms=Date.now()-started;
-    const s=wordState(current);
-    s.lastResponseMs=ms;
-    s.fastCount=(s.fastCount||0)+(ms<5000?1:0);
-    s.slowCount=(s.slowCount||0)+(ms>15000?1:0);
-    if(score>before)s.lastResult='correct';else s.lastResult='wrong';
-    save();
-  }
-};
+// V12 keeps one stable submitAnswer controller; response-time tracking is handled there.
 // Make the engine slightly more diagnostic: target level uses both accuracy and mastery.
 const V11_oldTarget=window.targetLevel;
 window.targetLevel=function(){
