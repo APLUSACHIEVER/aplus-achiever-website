@@ -1076,9 +1076,6 @@ header {
 }
 
 
-let smartReviewMode = false;
-let smartReviewWords = [];
-let smartReviewIndex = 0;
 /* ===== APLUS ACHIEVER V4 Intelligent Review Engine ===== */
 .smart-review-btn{
     border:1px solid #9acfb0;background:#eefaf2;color:#176b3a;
@@ -3719,6 +3716,244 @@ document.addEventListener("keydown",function(e){
     </div>
   </div>
 </div>
+
+
+<!-- =========================================================
+     APLUS ACHIEVER V6 STABILITY / SMART ENGINE REPAIR LAYER
+     Keeps the vocabulary database unchanged.
+========================================================= -->
+<script>
+(function () {
+    "use strict";
+
+    /* ---------- Safe global state ---------- */
+    window.smartReviewMode = false;
+    window.smartReviewWords = [];
+    window.smartReviewIndex = 0;
+    window.adaptiveMode = false;
+    window.adaptiveQuestions = [];
+    window.adaptiveIndex = 0;
+
+    const SMART_HISTORY_KEY = "aplusAchieverPSLESmartHistoryV1";
+    const LEVEL_PROGRESS_KEY = "aplusAchieverPSLELevelProgressV1";
+    const STREAK_KEY = "aplusAchieverPSLEStreakV1";
+    const DAILY_KEY = "aplusAchieverPSLEDailyProgressV1";
+
+    function wordKey(word) {
+        if (!word) return "";
+        return String(word.id != null ? word.id : word.word).toLowerCase().trim();
+    }
+    window.smartWordKey = wordKey;
+
+    function safeJSON(key, fallback) {
+        try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); }
+        catch (e) { return fallback; }
+    }
+    function saveJSON(key, value) {
+        try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+    }
+
+    /* ---------- V3 learning centre data ---------- */
+    window.loadLevelProgress = function () {
+        return safeJSON(LEVEL_PROGRESS_KEY, {});
+    };
+    window.recordLevelProgress = function (level, correct) {
+        const p = window.loadLevelProgress();
+        const k = String(level || 1);
+        if (!p[k]) p[k] = { answered: 0, correct: 0, wrong: 0 };
+        p[k].answered++;
+        if (correct) p[k].correct++; else p[k].wrong++;
+        saveJSON(LEVEL_PROGRESS_KEY, p);
+    };
+    window.loadStreak = function () {
+        return safeJSON(STREAK_KEY, { current: 0, lastDate: "" });
+    };
+    window.registerLearningDay = function () {
+        const x = window.loadStreak();
+        const today = new Date().toISOString().slice(0,10);
+        if (x.lastDate === today) return;
+        if (x.lastDate) {
+            const prev = new Date(x.lastDate + "T00:00:00");
+            const now = new Date(today + "T00:00:00");
+            const days = Math.round((now - prev) / 86400000);
+            x.current = days === 1 ? Number(x.current || 0) + 1 : 1;
+        } else x.current = 1;
+        x.lastDate = today;
+        saveJSON(STREAK_KEY, x);
+    };
+    window.loadDailyProgress = function () {
+        return safeJSON(DAILY_KEY, { date: "", answered: 0, correct: 0 });
+    };
+    window.recordDailyQuestion = function () {
+        const d = window.loadDailyProgress();
+        const today = new Date().toISOString().slice(0,10);
+        if (d.date !== today) { d.date = today; d.answered = 0; d.correct = 0; }
+        d.answered = Math.min(10, Number(d.answered || 0) + 1);
+        saveJSON(DAILY_KEY, d);
+    };
+    window.recordDailyCorrect = function () {
+        const d = window.loadDailyProgress();
+        d.correct = Number(d.correct || 0) + 1;
+        saveJSON(DAILY_KEY, d);
+    };
+
+    /* ---------- Smart history ---------- */
+    function loadSmartHistory() { return safeJSON(SMART_HISTORY_KEY, {}); }
+    function saveSmartHistory(x) { saveJSON(SMART_HISTORY_KEY, x); }
+    window.updateSmartHistory = function (word, level, correct, mode) {
+        const h = loadSmartHistory();
+        const k = wordKey(word);
+        if (!k) return;
+        const now = Date.now();
+        if (!h[k]) h[k] = { word: word.word || word, level: Number(level || 1), answered:0, correct:0, wrong:0, lastAnswered:0, lastWrong:0, lastCorrect:0, consecutiveCorrect:0, reviewCount:0, lastMode:"" };
+        const x = h[k];
+        x.word = word.word || x.word;
+        x.level = Number(level || x.level || 1);
+        x.answered++;
+        x.lastAnswered = now;
+        x.lastMode = mode || "daily";
+        if (correct) {
+            x.correct++; x.lastCorrect = now; x.consecutiveCorrect = Number(x.consecutiveCorrect || 0) + 1;
+        } else {
+            x.wrong++; x.lastWrong = now; x.consecutiveCorrect = 0;
+        }
+        if (mode === "review" || mode === "smart" || mode === "adaptive") x.reviewCount++;
+        saveSmartHistory(h);
+    };
+
+    window.smartPriority = function (x) {
+        const now = Date.now();
+        const ageWrong = x.lastWrong ? Math.min(30, (now-x.lastWrong)/86400000) : 0;
+        const ageAnswered = x.lastAnswered ? Math.min(30, (now-x.lastAnswered)/86400000) : 30;
+        const acc = x.answered ? x.correct/x.answered : 0;
+        return Number(x.wrong||0)*24 + (1-acc)*35 + ageWrong*1.5 + ageAnswered*0.8 + Number(x.level||1)*0.6 - Number(x.consecutiveCorrect||0)*8;
+    };
+
+    function getSmartCandidates() {
+        const h = loadSmartHistory();
+        const mistakes = typeof loadMistakes === "function" ? loadMistakes() : {};
+        const map = {};
+        Object.values(h).forEach(x => map[wordKey(x.word)] = Object.assign({}, x));
+        Object.values(mistakes).forEach(m => {
+            const k = wordKey(m.word);
+            if (!map[k]) map[k] = { word:m.word, level:Number(m.level||1), answered:0, correct:0, wrong:0, lastAnswered:0, lastWrong:0, lastCorrect:0, consecutiveCorrect:0 };
+            map[k].wrong = Math.max(Number(map[k].wrong||0), Number(m.wrong||m.wrongCount||0));
+            map[k].lastWrong = Math.max(Number(map[k].lastWrong||0), Number(m.lastWrong||0));
+        });
+        return Object.values(map).filter(x => x && x.word).map(x => {
+            const vocab = (window.vocabulary || []).find(v => wordKey(v) === wordKey(x.word) || String(v.word).toLowerCase() === String(x.word).toLowerCase());
+            return vocab ? Object.assign({vocab:vocab}, x) : null;
+        }).filter(Boolean).sort((a,b)=>window.smartPriority(b)-window.smartPriority(a));
+    }
+
+    window.openSmartReview = function () {
+        const list = getSmartCandidates();
+        const overlay = document.getElementById("smartReviewOverlay");
+        const smartList = document.getElementById("smartList");
+        if (smartList) {
+            if (!list.length) smartList.innerHTML = '<div class="empty-lc">Start answering questions first. Smart Review will learn your weak words automatically.</div>';
+            else smartList.innerHTML = list.slice(0,10).map((x,i)=>'<div class="smart-item"><div class="smart-rank">#'+(i+1)+'</div><div><div class="smart-word">'+escapeHTML(x.word)+'</div><div class="smart-meta">Level '+(x.level||1)+' · Wrong '+(x.wrong||0)+' · Accuracy '+(x.answered?Math.round(x.correct/x.answered*100):0)+'%</div></div><div class="smart-priority">'+Math.round(window.smartPriority(x))+'</div></div>').join('');
+        }
+        const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+        set("smartScore", list.length ? Math.round(window.smartPriority(list[0])) : 0);
+        set("smartActive", typeof getMistakeCount === "function" ? getMistakeCount() : 0);
+        set("smartHigh", list.length);
+        set("smartDue", list.filter(x=>x.lastWrong && Date.now()-x.lastWrong>3*86400000).length);
+        set("smartRecommendation", list.length ? "Prioritise the words with the highest error frequency and lowest accuracy." : "Complete a few Daily 10 questions to build your Smart Review profile.");
+        if (overlay) overlay.style.display="flex";
+    };
+    window.closeSmartReview = function (event) {
+        if (event && event.target && event.target.id !== "smartReviewOverlay") return;
+        const e=document.getElementById("smartReviewOverlay"); if(e)e.style.display="none";
+    };
+    window.startSmartReview = function () {
+        const candidates=getSmartCandidates().slice(0,10);
+        if (!candidates.length) { alert("Complete some vocabulary questions first. Smart Review needs learning data."); return; }
+        window.smartReviewMode=true; window.adaptiveMode=false; window.reviewMode=true;
+        window.smartReviewWords=candidates.map(x=>x.vocab); window.smartReviewIndex=0;
+        questions=window.smartReviewWords.map(v=>createQuestion(v,Number(v.level||1)));
+        currentQuestion=0; score=0; answered=false;
+        const b=document.getElementById("reviewBadge"); if(b){b.style.display="block";b.textContent="SMART REVIEW";}
+        const r=document.getElementById("result"); if(r)r.style.display="none";
+        const q=document.getElementById("quiz"); if(q)q.style.display="block";
+        closeSmartReview(); showQuestion();
+    };
+    window.nextSmartQuestion = function () {
+        window.smartReviewIndex++;
+        currentQuestion++;
+        if (currentQuestion >= questions.length) { window.smartReviewMode=false; showResult(); return; }
+        answered=false; showQuestion();
+    };
+
+    /* ---------- Student Centre ---------- */
+    window.openLearningCentre=function(){ window.updateLearningCentre(); const e=document.getElementById("learningCentreOverlay"); if(e)e.style.display="flex"; };
+    window.closeLearningCentre=function(event){ if(event&&event.target&&event.target.id!=="learningCentreOverlay")return; const e=document.getElementById("learningCentreOverlay");if(e)e.style.display="none"; };
+    window.updateLearningCentre=function(){
+        const p=typeof loadProgress==='function'?loadProgress():{answered:0,correct:0};
+        const mistakes=typeof loadMistakes==='function'?loadMistakes():{}; const all=Object.values(mistakes); const active=all.filter(x=>!x.mastered), mastered=all.filter(x=>x.mastered);
+        const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+        set('lcStreak',(window.loadStreak().current||0)+' 🔥'); set('lcMistakes',active.length); set('lcMastered',mastered.length); set('lcAnswered',p.answered||0); set('lcCorrect',p.correct||0); set('lcAccuracy',p.answered?Math.round(p.correct/p.answered*100)+'%':'0%');
+        const bar=document.getElementById('lcAccuracyBar'); if(bar)bar.style.width=(p.answered?Math.round(p.correct/p.answered*100):0)+'%';
+        const lp=window.loadLevelProgress(), grid=document.getElementById('lcLevelGrid');
+        if(grid)grid.innerHTML=Array.from({length:10},(_,i)=>{const x=lp[String(i+1)]||{answered:0,correct:0};const a=x.answered?Math.round(x.correct/x.answered*100):0;return '<div class="level-card"><div class="level-name">Level '+(i+1)+'</div><div class="level-percent">'+a+'%</div><div class="level-mini"><span style="width:'+a+'%"></span></div></div>';}).join('');
+        const d=window.loadDailyProgress(), todayList=document.getElementById('lcTodayList'); if(todayList)todayList.innerHTML='<div class="empty-lc">Today: '+(d.answered||0)+' / 10 questions · '+(d.correct||0)+' correct</div>';
+    };
+
+    /* ---------- AI profile repair ---------- */
+    const oldAI = window.getAIProfileData;
+    window.getAIProfileData = function(){
+        const p=typeof loadProgress==='function'?loadProgress():{answered:0,correct:0}; const lp=window.loadLevelProgress(); const mistakes=typeof loadMistakes==='function'?loadMistakes():{};
+        const all=Object.values(mistakes), active=all.filter(x=>!x.mastered), mastered=all.filter(x=>x.mastered); const total=Number(p.answered||0), accuracy=total?Number(p.correct||0)/total:0;
+        const levels={},ability={}; for(let i=1;i<=10;i++){const x=lp[String(i)]||{answered:0,correct:0};levels[i]={answered:Number(x.answered||0),correct:Number(x.correct||0),accuracy:x.answered?x.correct/x.answered:0};const c=Math.min(1,levels[i].answered/10);ability[i]=Math.round((levels[i].accuracy*c+accuracy*(1-c))*100);}
+        const avgAbility=total?Math.round(Object.values(ability).reduce((a,b)=>a+b,0)/10):0; const masteryRatio=all.length?mastered.length/all.length:0; const streak=Number(window.loadStreak().current||0); let readiness=total?Math.round(accuracy*55+Math.min(streak,14)/14*15+masteryRatio*20+Math.min(total,100)/100*10):0;
+        let state='Getting Started',description='The profile will learn your strengths after your first questions.'; if(total){if(readiness>=85){state='🏆 Advanced & Ready';description='Strong overall performance. The engine can challenge you with higher-level vocabulary while revisiting weak words.';}else if(readiness>=70){state='💪 Strong & Developing';description='Good foundation. The next sessions should mix consolidation with carefully selected harder words.';}else if(readiness>=50){state='📚 Developing';description='The profile is improving. The engine will focus on reinforcement and targeted weak-word practice.';}else{state='🌱 Building Foundations';description='The priority is accuracy and vocabulary retention before increasing difficulty.';}}
+        return {progress:p,levels,ability,active,mastered,accuracy,avgAbility,readiness,streak,state,description};
+    };
+
+    function recommendedDifficulty(p){const a=p.avgAbility;if(a>=90)return{min:7,max:10,label:'Level 7–10 · Challenge'};if(a>=80)return{min:6,max:9,label:'Level 6–9 · Upper Intermediate'};if(a>=70)return{min:5,max:8,label:'Level 5–8 · Developing'};if(a>=60)return{min:4,max:7,label:'Level 4–7 · Reinforcement'};if(a>=45)return{min:2,max:5,label:'Level 2–5 · Foundation + Growth'};return{min:1,max:3,label:'Level 1–3 · Foundation'};}
+    window.startAdaptiveQuiz=function(){
+        const p=window.getAIProfileData(),d=recommendedDifficulty(p),mist=typeof loadMistakes==='function'?loadMistakes():{},map={};Object.values(mist).forEach(m=>map[wordKey(m.word)]=m);
+        const pool=(window.vocabulary||[]).map(v=>{let s=0,lv=Number(v.level||1),m=map[wordKey(v.word)];if(lv>=d.min&&lv<=d.max)s+=35;if(m&&!m.mastered)s+=Math.min(Number(m.wrong||m.wrongCount||0)*15,60);if(p.levels[lv]&&p.levels[lv].answered)s+=(1-p.levels[lv].accuracy)*35;s+=Math.random()*10;return{v,s};}).sort((a,b)=>b.s-a.s).slice(0,30).map(x=>x.v);
+        const selected=[],used=new Set();pool.filter(v=>map[wordKey(v.word)]&&!map[wordKey(v.word)].mastered).slice(0,4).forEach(v=>{selected.push(v);used.add(wordKey(v.word));});pool.forEach(v=>{if(selected.length<10&&!used.has(wordKey(v.word))){selected.push(v);used.add(wordKey(v.word));}}); if(!selected.length)return alert('The vocabulary bank is not available yet.');
+        window.adaptiveMode=true;window.smartReviewMode=false;window.reviewMode=false;window.adaptiveQuestions=selected;window.adaptiveIndex=0;questions=selected.map(v=>createQuestion(v,Number(v.level||1)));currentQuestion=0;score=0;answered=false;
+        const b=document.getElementById('reviewBadge');if(b){b.style.display='block';b.textContent='ADAPTIVE AI 10';}const r=document.getElementById('result');if(r)r.style.display='none';const q=document.getElementById('quiz');if(q)q.style.display='block';showQuestion();
+    };
+    window.nextAdaptiveQuestion=function(){window.adaptiveIndex++;currentQuestion++;if(currentQuestion>=questions.length){window.adaptiveMode=false;showResult();return;}answered=false;showQuestion();};
+
+    /* ---------- Replace nextQuestion with safe routing ---------- */
+    window.nextQuestion=function(){
+        if(window.adaptiveMode)return window.nextAdaptiveQuestion();
+        if(window.smartReviewMode)return window.nextSmartQuestion();
+        currentQuestion++;
+        if(currentQuestion>=questions.length){showResult();return;}
+        showQuestion();
+    };
+
+    /* ---------- Patch answer tracking without changing the quiz UI ---------- */
+    const originalCheckAnswer=window.checkAnswer;
+    if(typeof originalCheckAnswer==='function' && !window.__v6CheckPatched){
+        window.checkAnswer=function(selected,button){
+            const q=questions[currentQuestion]; const correct=q&&selected===q.answer;
+            originalCheckAnswer(selected,button);
+            if(q&&q.word){
+                if(typeof recordProgress==='function')recordProgress(correct);
+                if(typeof recordLevelProgress==='function')recordLevelProgress(q.level,correct);
+                if(typeof registerLearningDay==='function')registerLearningDay();
+                if(!window.reviewMode&&!window.smartReviewMode&&!window.adaptiveMode){if(typeof recordDailyQuestion==='function')recordDailyQuestion();if(correct&&typeof recordDailyCorrect==='function')recordDailyCorrect();}
+                window.updateSmartHistory(q.word,q.level,correct,window.smartReviewMode?'smart':window.adaptiveMode?'adaptive':window.reviewMode?'review':'daily');
+                if(typeof updateDashboard==='function')updateDashboard();
+                if(typeof updateLearningCentre==='function')updateLearningCentre();
+                if(typeof updateAIProfile==='function')updateAIProfile();
+            }
+        };
+        window.__v6CheckPatched=true;
+    }
+
+    /* ---------- Keyboard / initial refresh ---------- */
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeDashboard();closeLearningCentre();closeSmartReview();closeAIProfile();}});
+    window.addEventListener('load',function(){setTimeout(function(){if(typeof updateMistakeUI==='function')updateMistakeUI();if(typeof updateDashboard==='function')updateDashboard();if(typeof updateLearningCentre==='function')updateLearningCentre();},100);});
+})();
+</script>
 
 </body>
 
