@@ -1013,6 +1013,68 @@ header {
  .dashboard-panel{padding:17px}
 }
 
+
+/* ===== APLUS ACHIEVER V3 Student Learning Centre ===== */
+.learning-centre-btn{
+    border:0;background:#176b3a;color:#fff;border-radius:10px;
+    padding:9px 14px;font-weight:800;cursor:pointer;
+}
+.learning-centre-btn:hover{background:#12582f}
+.learning-centre-overlay{
+    position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.45);
+    display:none;align-items:center;justify-content:center;padding:14px;
+}
+.learning-centre{
+    width:min(1040px,100%);max-height:94vh;overflow:auto;background:#fff;
+    border-radius:22px;box-shadow:0 25px 80px rgba(0,0,0,.25);padding:24px;
+}
+.lc-header{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
+.lc-title{margin:0;color:#176b3a;font-size:26px}
+.lc-subtitle{margin:5px 0 0;color:#667085;font-size:13px}
+.lc-close{border:0;background:#f1f3f4;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer}
+.lc-hero{
+    margin-top:18px;padding:20px;border-radius:18px;
+    background:#f3fbf6;border:1px solid #d8eee0;
+}
+.lc-hero-top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.streak-number{font-size:38px;font-weight:900;color:#176b3a}
+.streak-label{font-size:13px;color:#667085}
+.lc-badge{font-size:12px;font-weight:800;padding:7px 11px;border-radius:99px;background:#fff;border:1px solid #cfe6d7;color:#176b3a}
+.lc-progress{margin-top:15px}
+.lc-progress-track{height:11px;background:#e2ebe5;border-radius:99px;overflow:hidden}
+.lc-progress-fill{height:100%;width:0;border-radius:99px;background:#43a866;transition:width .35s}
+.lc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.lc-stat{padding:15px;border:1px solid #e4e9e6;border-radius:14px;background:#fff}
+.lc-stat-label{font-size:11px;color:#667085}
+.lc-stat-value{font-size:23px;font-weight:900;color:#176b3a;margin-top:5px}
+.lc-section{margin-top:22px}
+.lc-section h3{font-size:17px;margin:0 0 11px;color:#263238}
+.level-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.level-card{border:1px solid #e1e8e3;border-radius:12px;padding:11px;background:#fff}
+.level-name{font-size:12px;font-weight:800}
+.level-percent{font-size:18px;font-weight:900;color:#176b3a;margin:3px 0}
+.level-mini{height:6px;background:#e8ede9;border-radius:99px;overflow:hidden}
+.level-mini>span{display:block;height:100%;background:#43a866;border-radius:99px}
+.daily-card{border:1px solid #dceee3;background:#f8fcf9;border-radius:15px;padding:16px}
+.daily-row{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.daily-title{font-weight:900;color:#176b3a}
+.daily-meta{font-size:12px;color:#667085;margin-top:4px}
+.lc-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:13px}
+.lc-action{border:1px solid #b7dfc5;background:#f3fbf6;color:#176b3a;border-radius:10px;padding:9px 13px;font-weight:800;cursor:pointer}
+.lc-action.primary{background:#176b3a;color:#fff;border-color:#176b3a}
+.lc-action.danger{color:#b42318;background:#fff5f5;border-color:#efb4b4}
+.today-list{display:flex;flex-direction:column;gap:8px}
+.today-item{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:9px;padding:10px 12px;background:#fafafa;border-radius:10px}
+.today-num{font-weight:900;color:#999}
+.today-word{font-weight:800}
+.today-info{font-size:11px;color:#777}
+.empty-lc{padding:16px;text-align:center;color:#777;background:#fafafa;border-radius:12px}
+@media(max-width:800px){
+ .lc-grid{grid-template-columns:repeat(2,1fr)}
+ .level-grid{grid-template-columns:repeat(2,1fr)}
+ .lc-hero-top{align-items:flex-start}
+}
+
 </style>
 
 </head>
@@ -1135,6 +1197,7 @@ header {
                         Mistakes <span id="mistakeCount">0</span>
                     </button>
 <button type="button" class="dashboard-button" onclick="openDashboard()">Dashboard</button>
+<button type="button" class="learning-centre-btn" onclick="openLearningCentre()">Student Centre</button>
 
                     <div
                         class="level-text"
@@ -2684,7 +2747,8 @@ function checkAnswer(
             recordCorrectReview(q.word);
         }
 
-        showFeedback(
+            if (typeof updateLearningCentre === 'function') updateLearningCentre();
+showFeedback(
             true,
             "Correct! ✓",
             q.explanation
@@ -3095,6 +3159,73 @@ document.addEventListener("keydown", function(e) {
     <div class="dashboard-actions">
       <button type="button" class="review-all-button" onclick="closeDashboard();startMistakeReview()">Review Active Mistakes</button>
       <button type="button" class="danger-button" onclick="clearMasteredMistakes()">Clear Mastered Records</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="learningCentreOverlay" class="learning-centre-overlay" onclick="closeLearningCentre(event)">
+  <div class="learning-centre" onclick="event.stopPropagation()">
+    <div class="lc-header">
+      <div>
+        <h2 class="lc-title">🎓 Student Learning Centre</h2>
+        <p class="lc-subtitle">Your PSLE English Vocabulary learning progress</p>
+      </div>
+      <button class="lc-close" type="button" onclick="closeLearningCentre()">×</button>
+    </div>
+
+    <div class="lc-hero">
+      <div class="lc-hero-top">
+        <div>
+          <div class="streak-number" id="lcStreak">0 🔥</div>
+          <div class="streak-label">Day Learning Streak</div>
+        </div>
+        <div class="lc-badge" id="lcLevelBadge">Getting Started</div>
+      </div>
+      <div class="lc-progress">
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:800;margin-bottom:7px">
+          <span>Overall Accuracy</span><span id="lcAccuracy">0%</span>
+        </div>
+        <div class="lc-progress-track"><div id="lcAccuracyBar" class="lc-progress-fill"></div></div>
+      </div>
+    </div>
+
+    <div class="lc-grid">
+      <div class="lc-stat"><div class="lc-stat-label">Questions Answered</div><div class="lc-stat-value" id="lcAnswered">0</div></div>
+      <div class="lc-stat"><div class="lc-stat-label">Correct Answers</div><div class="lc-stat-value" id="lcCorrect">0</div></div>
+      <div class="lc-stat"><div class="lc-stat-label">Active Mistakes</div><div class="lc-stat-value" id="lcMistakes">0</div></div>
+      <div class="lc-stat"><div class="lc-stat-label">Mastered Words</div><div class="lc-stat-value" id="lcMastered">0</div></div>
+    </div>
+
+    <div class="lc-section">
+      <h3>📈 Level 1–10 Mastery</h3>
+      <div id="lcLevelGrid" class="level-grid"></div>
+    </div>
+
+    <div class="lc-section">
+      <h3>🎯 Today's Learning</h3>
+      <div class="daily-card">
+        <div class="daily-row">
+          <div>
+            <div class="daily-title" id="lcDailyTitle">Daily 10</div>
+            <div class="daily-meta" id="lcDailyMeta">0 / 10 completed</div>
+          </div>
+          <div class="lc-badge" id="lcDailyBadge">START</div>
+        </div>
+        <div class="lc-actions">
+          <button class="lc-action primary" type="button" onclick="closeLearningCentre();restartQuiz()">Start / Continue Daily 10</button>
+          <button class="lc-action" type="button" onclick="closeLearningCentre();startMistakeReview()">Review Mistakes</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="lc-section">
+      <h3>🧠 Today's Recommended Review</h3>
+      <div id="lcTodayList" class="today-list"></div>
+    </div>
+
+    <div class="lc-actions">
+      <button class="lc-action danger" type="button" onclick="resetLearningProgress()">Reset Learning Statistics</button>
     </div>
   </div>
 </div>
