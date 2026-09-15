@@ -918,2456 +918,512 @@ header {
 </head>
 
 
+
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-
-    <div class="logo">
-
-        <div class="logo-main">
-            APLUS ACHIEVER
-        </div>
-
-        <div class="logo-sub">
-            AI LEARNING
-        </div>
-
-    </div>
-
-
-    <a
-        href="https://aplusachiever.com"
-        class="back-link"
-    >
-        ← Back to APLUS
-    </a>
-
+  <div class="logo">
+    <div class="logo-main">APLUS ACHIEVER</div>
+    <div class="logo-sub">PSLE AI PERSONAL TUTOR</div>
+  </div>
+  <a href="https://aplusachiever.com" class="back-link">← Back to APLUS</a>
 </header>
 
-
-
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero">
-
-    <div class="badge">
-        PSLE ENGLISH
-    </div>
-
-    <h1>
-        Daily <span>10</span>
-    </h1>
-
-    <p>
-        Build stronger vocabulary, one question at a time.
-    </p>
-
+  <div class="badge">PSLE ENGLISH</div>
+  <h1>AI Personal <span>Tutor</span></h1>
+  <p>Your vocabulary practice adapts to you.</p>
 </section>
 
-
-
-<!-- =========================
-     MAIN
-========================= -->
-
 <main class="container">
-
-    <div class="card">
-
-
-        <!-- LOADING -->
-
-        <div id="loading">
-
-            <div class="spinner"></div>
-
-            Loading today's challenge...
-
-        </div>
-
-
-
-        <!-- ERROR -->
-
-        <div id="errorBox">
-
-            <strong>
-                Vocabulary could not be loaded.
-            </strong>
-
-            <div id="errorMessage"></div>
-
-        </div>
-
-
-
-        <!-- QUIZ -->
-
-        <div id="quiz"
-             style="display:none;">
-
-
-            <div class="topbar">
-
-                <div
-                    class="progress-text"
-                    id="progressText"
-                >
-                    Question 1 of 10
-                </div>
-
-                <div
-                    class="level-text"
-                    id="levelText"
-                >
-                    Level 1
-                </div>
-
-            </div>
-
-
-
-            <div class="v7-tools">
-                <button type="button" class="v7-tool v7-ai" onclick="startAIBrain()">🧠 AI Daily 10</button>
-                <button type="button" class="v7-tool" onclick="openAIBrain()">🤖 AI Learning Brain</button>
-                <button type="button" class="v7-tool" onclick="startDueReview()">🔁 Review Due <span id="v7DueCount">0</span></button>
-                <button type="button" class="v7-tool" onclick="startWeakReview()">🎯 Weak Words</button>
-                <button type="button" class="v7-tool" onclick="startChallengeReview()">🚀 Challenge</button>
-            </div>
-            <div id="v7ModeBadge" class="v7-badge" style="display:none;"></div>
-                <button type="button" class="v6-tool v6-due" onclick="startDueReview()">
-                    🔁 Review Due <span id="v6DueCount">0</span>
-                </button>
-                <button type="button" class="v6-tool" onclick="openV6Dashboard()">
-                    📊 Learning Dashboard
-                </button>
-                <button type="button" class="v6-tool" onclick="startWeakReview()">
-                    🎯 Weak Words
-                </button>
-                <button type="button" class="v6-tool" onclick="startChallengeReview()">
-                    🚀 Challenge
-                </button>
-            </div>
-
-            <div id="v6ModeBadge" class="v6-badge" style="display:none;"></div>
-
-            <div class="progress">
-
-                <div
-                    class="progress-bar"
-                    id="progressBar"
-                ></div>
-
-            </div>
-
-
-            <div class="question-label">
-                CHOOSE THE BEST ANSWER
-            </div>
-
-
-            <div
-                class="question"
-                id="questionText"
-            >
-            </div>
-
-
-            <div
-                class="options"
-                id="options"
-            >
-            </div>
-
-
-            <div
-                class="feedback"
-                id="feedback"
-            >
-            </div>
-
-
-            <div class="button-row">
-
-                <button type="button"
-                    class="next-button"
-                    id="nextButton"
-                    onclick="nextQuestion()"
-                >
-                    Next Question →
-                </button>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- RESULT -->
-
-        <div id="result">
-
-            <div class="result-title">
-                Today's Challenge Complete
-            </div>
-
-            <div
-                class="score"
-                id="score"
-            >
-                0 / 10
-            </div>
-
-            <div
-                class="result-message"
-                id="resultMessage"
-            >
-            </div>
-
-            <button
-                class="restart-button"
-                onclick="restartQuiz()"
-            >
-                Try Again
-            </button>
-
-        </div>
-
-
+  <div class="card">
+    <div class="mode-grid">
+      <button class="mode-btn primary" onclick="startQuiz('daily')">
+        <b>AI Daily 10</b><small>Best mix for today</small>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('due')">
+        <b>Review Due</b><small>Words at risk of forgetting</small>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('weak')">
+        <b>Weak Words</b><small>Target your mistakes</small>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('challenge')">
+        <b>Challenge</b><small>Stretch your level</small>
+      </button>
+      <button class="mode-btn" onclick="openTutorReport()">
+        <b>AI Tutor Report</b><small>Diagnosis & 7-day plan</small>
+      </button>
     </div>
 
+    <div id="loading" style="display:none;"><div class="spinner"></div>Loading your AI tutor...</div>
+    <div id="errorBox" style="display:none;"><strong>Vocabulary could not be loaded.</strong><div id="errorMessage"></div></div>
 
-        <div id="v6Overlay" class="v6-overlay" style="display:none;">
-            <div class="v6-panel">
-                <button class="v6-close" onclick="closeV6Overlay()">×</button>
-                <div id="v6OverlayContent"></div>
-            </div>
+    <div id="dashboard" class="tutor-dashboard">
+      <div class="dashboard-head">
+        <div>
+          <div class="eyebrow">AI PERSONAL TUTOR</div>
+          <h2 id="tutorState">Building Foundations</h2>
+          <p id="tutorRecommendation"></p>
         </div>
-
-
-<div id="v7Overlay" class="v7-overlay" style="display:none;">
-    <div class="v7-panel">
-        <button class="v7-close" type="button" onclick="closeAIBrain()">×</button>
-        <div id="v7Content"></div>
+        <div class="readiness"><span id="readinessScore">0</span><small>/100</small><label>Readiness</label></div>
+      </div>
+      <div class="stats">
+        <div><b id="statAccuracy">0%</b><span>Accuracy</span></div>
+        <div><b id="statQuestions">0</b><span>Questions</span></div>
+        <div><b id="statMastery">0</b><span>Mastered</span></div>
+        <div><b id="statDue">0</b><span>Due</span></div>
+        <div><b id="statStreak">0</b><span>Day Streak</span></div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-title">Today's AI plan</div>
+        <div id="todayPlan"></div>
+      </div>
+      <button class="start-large" onclick="startQuiz('daily')">Start AI Daily 10 →</button>
     </div>
-</div>
 
+    <div id="quiz" style="display:none;">
+      <div class="topbar">
+        <div class="progress-text" id="progressText">Question 1 of 10</div>
+        <div class="level-text" id="levelText">Level 1</div>
+      </div>
+      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+      <div class="ai-reason" id="aiReason"></div>
+      <div class="question-label">CHOOSE THE BEST ANSWER</div>
+      <div class="question" id="questionText"></div>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback"></div>
+      <div class="button-row">
+        <button class="next-button" id="nextButton" onclick="goToNextQuestion()" disabled>Next Question →</button>
+      </div>
+    </div>
+
+    <div id="result" style="display:none;">
+      <div class="result-title" id="resultTitle">Tutor Session Complete</div>
+      <div class="score" id="score">0 / 10</div>
+      <div class="result-message" id="resultMessage"></div>
+      <div id="diagnosis" class="diagnosis"></div>
+      <div class="result-buttons">
+        <button class="restart" onclick="startQuiz('daily')">Start Another 10</button>
+        <button class="restart secondary" onclick="openTutorReport()">View AI Tutor Report</button>
+      </div>
+    </div>
+
+    <div id="report" style="display:none;">
+      <div class="result-title">AI Tutor Report</div>
+      <div id="reportContent"></div>
+      <button class="restart" onclick="showDashboard()">Back to Dashboard</button>
+    </div>
+  </div>
 </main>
 
+<footer class="footer">APLUS ACHIEVER · PSLE English AI Learning System</footer>
 
-
-<!-- =====================================================
-     VOCABULARY
-===================================================== -->
-
-<script src="./data/vocabulary.js">
-</script>
-
-
-
-<!-- =====================================================
-     DAILY 10 ENGINE
-===================================================== -->
-
+<script src="./data/vocabulary.js"></script>
 <script>
-
 "use strict";
 
+/* ============================================================
+   V8 — ONE STABLE QUIZ CONTROLLER
+   No nextQuestion/checkAnswer/showQuestion wrappers.
+   The entire session is controlled by these functions:
+   startQuiz → renderQuestion → submitAnswer → goToNextQuestion
+   ============================================================ */
 
-/* =====================================================
-   GLOBAL VARIABLES
-===================================================== */
+const V8_KEY = "aplusAchieverPSLEV8TutorV1";
+const V8_DAILY_KEY = "aplusAchieverPSLEV8DailyV1";
 
-let vocabularyData = [];
-
-let questions = [];
-
+let tutorDB = loadDB();
+let quizMode = "daily";
+let activeQuestions = [];
 let currentQuestion = 0;
+let sessionScore = 0;
+let sessionAnswered = false;
+let sessionStartedAt = 0;
+let sessionWrong = [];
+let sessionCorrect = [];
+let sessionResponseMs = 0;
 
-let score = 0;
-
-let answered = false;
-
-
-/* =====================================================
-   START
-===================================================== */
-
-window.addEventListener("error", function (event) {
-    if (
-        event &&
-        event.target &&
-        event.target.tagName === "SCRIPT" &&
-        event.target.src &&
-        event.target.src.includes("vocabulary.js")
-    ) {
-        showError(
-            new Error(
-                "Could not load ./data/vocabulary.js. " +
-                "Check that the file exists at data/vocabulary.js " +
-                "and that GitHub Pages can access it."
-            )
-        );
-    }
-}, true);
-
-window.addEventListener(
-    "load",
-    function () {
-        setTimeout(
-            initialiseApp,
-            50
-        );
-    }
-);
-
-
-/* =====================================================
-   INITIALISE
-===================================================== */
-
-function initialiseApp() {
-
-    try {
-
-        /*
-         * vocabulary.js should create:
-         *
-         * window.vocabulary
-         */
-
-        const rawVocabulary =
-            window.vocabulary ||
-            window.VOCABULARY ||
-            window.vocabularyData ||
-            window.Vocabulary ||
-            [];
-
-        if (!Array.isArray(rawVocabulary)) {
-            throw new Error(
-                "vocabulary.js loaded, but no vocabulary array was found. " +
-                "Please make sure it contains: window.vocabulary = [...];"
-            );
-        }
-
-        if (rawVocabulary.length === 0) {
-            throw new Error(
-                "The vocabulary database is empty."
-            );
-        }
-
-        vocabularyData =
-            rawVocabulary.filter(
-                word =>
-                    word &&
-                    typeof word.word === "string" &&
-                    word.word.trim()
-            );
-
-
-        if (
-            vocabularyData.length === 0
-        ) {
-
-            throw new Error(
-                "No valid vocabulary entries were found."
-            );
-
-        }
-
-
-        console.log(
-            "APLUS vocabulary loaded:",
-            vocabularyData.length,
-            "words"
-        );
-
-
-        createDailyQuestions();
-
-
-        showQuestion();
-
-
-        document
-            .getElementById(
-                "loading"
-            )
-            .style.display =
-            "none";
-
-
-        document
-            .getElementById(
-                "quiz"
-            )
-            .style.display =
-            "block";
-
-    }
-
-    catch (error) {
-
-        console.error(
-            "APLUS Daily 10 error:",
-            error
-        );
-
-        showError(
-            error
-        );
-
-    }
-
+function loadDB() {
+  try {
+    const x = JSON.parse(localStorage.getItem(V8_KEY));
+    return x && x.words ? x : {words:{}, days:{}, totalQuestions:0, totalCorrect:0, streak:0, lastDay:""};
+  } catch(e) {
+    return {words:{}, days:{}, totalQuestions:0, totalCorrect:0, streak:0, lastDay:""};
+  }
 }
-
-
-/* =====================================================
-   ERROR
-===================================================== */
-
-function showError(error) {
-
-    document
-        .getElementById(
-            "loading"
-        )
-        .style.display =
-        "none";
-
-
-    document
-        .getElementById(
-            "quiz"
-        )
-        .style.display =
-        "none";
-
-
-    document
-        .getElementById(
-            "errorBox"
-        )
-        .style.display =
-        "block";
-
-
-    document
-        .getElementById(
-            "errorMessage"
-        )
-        .innerHTML =
-
-        "Please check that your GitHub files are arranged as:<br><br>" +
-
-        "<strong>index.html</strong><br>" +
-
-        "└── <strong>data/vocabulary.js</strong><br><br>" +
-
-        "Technical message: " +
-
-        escapeHTML(
-            error.message
-        );
-
-}
-
-
-/* =====================================================
-   CREATE DAILY QUESTIONS
-===================================================== */
-
-function createDailyQuestions() {
-
-    questions = [];
-
-
-    /*
-     * We want exactly 10 questions.
-     *
-     * Level 1 → Level 10
-     *
-     * Therefore each question comes
-     * from a different difficulty level.
-     */
-
-
-    for (
-        let level = 1;
-        level <= 10;
-        level++
-    ) {
-
-        let pool =
-            vocabularyData.filter(
-                word =>
-                    Number(word.level) === level
-            );
-
-
-        /*
-         * If a level is missing,
-         * use the complete vocabulary
-         * as a fallback.
-         */
-
-        if (
-            pool.length === 0
-        ) {
-
-            pool =
-                vocabularyData;
-
-        }
-
-
-        let word =
-            pool[
-                Math.floor(
-                    Math.random() *
-                    pool.length
-                )
-            ];
-
-
-        questions.push(
-            createQuestion(
-                word,
-                level
-            )
-        );
-
-    }
-
-}
-
-
-/* =====================================================
-   CREATE QUESTION
-===================================================== */
-
-function createQuestion(
-    word,
-    level
-) {
-
-    /*
-     * Three question styles:
-     *
-     * meaning
-     * synonym
-     * context
-     */
-
-
-    let type =
-        level <= 3
-            ? "meaning"
-            : randomChoice(
-                [
-                    "meaning",
-                    "synonym",
-                    "context"
-                ]
-            );
-
-
-    if (
-        type === "synonym"
-    ) {
-
-        let correct =
-            getCorrectMeaning(
-                word
-            );
-
-
-        return {
-
-            level:
-                level,
-
-            word:
-                word,
-
-            question:
-                'Which word is closest in meaning to "' +
-                word.word +
-                '"?',
-
-            answer:
-                correct,
-
-            options:
-                shuffle([
-                    correct,
-                    ...getWrongMeanings(word, 3)
-                ]),
-
-            explanation:
-                getExplanation(
-                    word
-                )
-
-        };
-
-    }
-
-
-    if (
-        type === "context"
-    ) {
-
-        return createContextQuestion(
-            word,
-            level
-        );
-
-    }
-
-
-    return createMeaningQuestion(
-        word,
-        level
-    );
-
-}
-
-
-/* =====================================================
-   MEANING QUESTION
-===================================================== */
-
-function createMeaningQuestion(
-    word,
-    level
-) {
-
-    let correct =
-        getCorrectMeaning(
-            word
-        );
-
-
-    let wrongAnswers =
-        getWrongMeanings(
-            word,
-            3
-        );
-
-
-    let options =
-        shuffle(
-            [
-                correct,
-                ...wrongAnswers
-            ]
-        );
-
-
-    return {
-
-        level:
-            level,
-
-        word:
-            word,
-
-        question:
-            'What does "' +
-            word.word +
-            '" mean?',
-
-        answer:
-            correct,
-
-        options:
-            options,
-
-        explanation:
-            getExplanation(
-                word
-            )
-
+function saveDB(){ localStorage.setItem(V8_KEY, JSON.stringify(tutorDB)); }
+function todayKey(){ return new Date().toISOString().slice(0,10); }
+
+function wordState(w){
+  const key = w.word.toLowerCase();
+  if(!tutorDB.words[key]){
+    tutorDB.words[key] = {
+      word:w.word, level:Number(w.level)||1, seen:0, correct:0, wrong:0,
+      streak:0, mastery:0, confidence:0, lastSeen:0, lastWrong:0,
+      lastCorrect:0, nextReview:0, avgResponse:0, responseSamples:0,
+      difficulty:Number(w.level)||1, errors:[], lastQuestionType:""
     };
-
+  }
+  return tutorDB.words[key];
 }
 
-
-/* =====================================================
-   CONTEXT QUESTION
-===================================================== */
-
-function createContextQuestion(
-    word,
-    level
-) {
-
-    let example =
-        word.example ||
-        (
-            "The student used the word " +
-            word.word +
-            " correctly."
-        );
-
-
-    /*
-     * Replace the word with a blank.
-     */
-
-    let sentence =
-        example.replace(
-            new RegExp(
-                "\\b" +
-                escapeRegExp(
-                    word.word
-                ) +
-                "\\b",
-                "i"
-            ),
-            "_____"
-        );
-
-
-    /*
-     * If the example doesn't
-     * contain the word, create
-     * a simple sentence.
-     */
-
-    if (
-        sentence === example
-    ) {
-
-        sentence =
-            "The student was " +
-            word.word +
-            " when answering the question.";
-
-    }
-
-
-    let correct =
-        word.word;
-
-
-    let wrongWords =
-        getWrongWords(
-            word,
-            3
-        );
-
-
-    let options =
-        shuffle(
-            [
-                correct,
-                ...wrongWords
-            ]
-        );
-
-
-    return {
-
-        level:
-            level,
-
-        word:
-            word,
-
-        question:
-            "Choose the word that best completes the sentence:<br><br>" +
-            sentence,
-
-        answer:
-            correct,
-
-        options:
-            options,
-
-        explanation:
-            getExplanation(
-                word
-            )
-
-    };
-
+function daysSince(ts){
+  return ts ? (Date.now()-ts)/86400000 : 999;
 }
 
-
-/* =====================================================
-   CORRECT MEANING
-===================================================== */
-
-function getCorrectMeaning(
-    word
-) {
-
-    if (
-        word.meaning &&
-        word.meaning.trim()
-    ) {
-
-        return word.meaning;
-
-    }
-
-
-    if (
-        word.chinese &&
-        word.chinese.trim()
-    ) {
-
-        return word.chinese;
-
-    }
-
-
-    /*
-     * Fallback so the question
-     * never breaks.
-     */
-
-    return (
-        "the meaning of the word " +
-        word.word
-    );
-
+function recalcWord(s){
+  const total=s.correct+s.wrong;
+  const acc=total?s.correct/total:0;
+  const consistency=Math.min(1,s.streak/4);
+  const sample=Math.min(1,total/8);
+  s.confidence=Math.round((acc*.55+consistency*.25+sample*.20)*100)/100;
+  const responsePenalty = s.avgResponse>0 ? Math.max(0, Math.min(.12,(s.avgResponse-7000)/30000)) : 0;
+  s.mastery=Math.max(0,Math.min(1,s.confidence-responsePenalty));
 }
 
+function updateWord(w, correct, responseMs, qType){
+  const s=wordState(w);
+  const now=Date.now();
+  s.seen++;
+  if(correct){
+    s.correct++; s.streak++; s.lastCorrect=now;
+  }else{
+    s.wrong++; s.streak=0; s.lastWrong=now;
+    s.errors=(s.errors||[]); s.errors.push({t:now,type:qType||"mcq"});
+    if(s.errors.length>12) s.errors.shift();
+  }
+  if(responseMs>0){
+    s.responseSamples++;
+    s.avgResponse = s.responseSamples===1 ? responseMs :
+      Math.round((s.avgResponse*(s.responseSamples-1)+responseMs)/s.responseSamples);
+  }
+  s.lastSeen=now;
+  s.lastQuestionType=qType||"mcq";
+  recalcWord(s);
 
-/* =====================================================
-   WRONG MEANINGS
-===================================================== */
-
-function getWrongMeanings(
-    correctWord,
-    count
-) {
-
-    let candidates =
-        vocabularyData
-            .filter(
-                item =>
-                    item.id !==
-                    correctWord.id &&
-                    (
-                        item.meaning ||
-                        item.chinese
-                    )
-            );
-
-
-    candidates =
-        shuffle(
-            candidates.slice()
-        );
-
-
-    let results = [];
-
-
-    for (
-        let item of candidates
-    ) {
-
-        let meaning =
-            getCorrectMeaning(
-                item
-            );
-
-
-        if (
-            meaning &&
-            meaning !==
-            getCorrectMeaning(
-                correctWord
-            )
-        ) {
-
-            results.push(
-                meaning
-            );
-
-        }
-
-
-        if (
-            results.length >=
-            count
-        ) {
-
-            break;
-
-        }
-
-    }
-
-
-    /*
-     * Safety fallback.
-     */
-
-    while (
-        results.length < count
-    ) {
-
-        results.push(
-            "another possible meaning"
-        );
-
-    }
-
-
-    return results;
-
+  const base = correct
+    ? (s.mastery>=.90 ? 30 : s.mastery>=.80 ? 14 : s.mastery>=.68 ? 7 : s.mastery>=.52 ? 3 : 1)
+    : 0.0833; // 2 hours
+  s.nextReview = now + base*86400000;
+  saveDB();
 }
 
-
-/* =====================================================
-   WRONG WORDS
-===================================================== */
-
-function getWrongWords(
-    correctWord,
-    count
-) {
-
-    let candidates =
-        vocabularyData
-            .filter(
-                item =>
-                    item.id !==
-                    correctWord.id
-            );
-
-
-    candidates =
-        shuffle(
-            candidates.slice()
-        );
-
-
-    const results = candidates
-        .slice(0, count)
-        .map(item => item.word)
-        .filter(Boolean);
-
-    while (results.length < count) {
-        results.push("another word");
-    }
-
-    return results;
-
+function getAbility(){
+  const arr=Object.values(tutorDB.words);
+  const total=tutorDB.totalQuestions;
+  const acc=total?tutorDB.totalCorrect/total:0;
+  const conf=arr.length?arr.reduce((a,s)=>a+s.confidence,0)/arr.length:0;
+  const mastered=arr.filter(s=>s.mastery>=.90).length;
+  const sample=Math.min(1,total/50);
+  const levelScores=[];
+  for(let lv=1;lv<=10;lv++){
+    const xs=arr.filter(s=>s.level===lv);
+    if(!xs.length){levelScores.push({level:lv,score:0,sample:0});continue;}
+    const avg=xs.reduce((a,s)=>a+s.confidence,0)/xs.length;
+    levelScores.push({level:lv,score:Math.round(avg*100),sample:xs.length});
+  }
+  const levelScore=levelScores.filter(x=>x.sample).reduce((a,x)=>a+x.score,0) /
+                   Math.max(1,levelScores.filter(x=>x.sample).length);
+  const readiness=Math.round(Math.min(100,(acc*40+conf*30+(levelScore/100)*15+sample*10+Math.min(1,mastered/20)*5)));
+  let target=2;
+  if(readiness>=87) target=8;
+  else if(readiness>=78) target=7;
+  else if(readiness>=68) target=6;
+  else if(readiness>=55) target=5;
+  else if(readiness>=40) target=4;
+  else if(readiness>=25) target=3;
+  return {readiness,accuracy:acc,confidence:conf,mastered,total,levelScores,target};
 }
 
-
-/* =====================================================
-   EXPLANATION
-===================================================== */
-
-function getExplanation(
-    word
-) {
-
-    let text = "";
-
-
-    if (
-        word.meaning
-    ) {
-
-        text +=
-            "Meaning: " +
-            word.meaning;
-
-    }
-
-
-    if (
-        word.chinese
-    ) {
-
-        text +=
-            "<br>中文： " +
-            word.chinese;
-
-    }
-
-
-    if (
-        word.example
-    ) {
-
-        text +=
-            "<br><br>Example: " +
-            word.example;
-
-    }
-
-
-    if (
-        word.synonyms &&
-        word.synonyms.length
-    ) {
-
-        text +=
-            "<br><br>Synonyms: " +
-            word.synonyms.join(
-                ", "
-            );
-
-    }
-
-
-    return text;
-
+function due(s){ return s.nextReview && s.nextReview<=Date.now(); }
+function forgettingRisk(s){
+  if(!s.seen) return .25;
+  const age=daysSince(s.lastSeen);
+  const halfLife=Math.max(.7,1+s.mastery*20);
+  return Math.max(0,Math.min(1,age/(age+halfLife)));
+}
+function weakness(s){
+  const total=s.correct+s.wrong;
+  const acc=total?s.correct/total:0;
+  return Math.min(1,(1-acc)*.7+(s.wrong>=2?.2:0)+(s.streak===0?.1:0));
+}
+function scoreWord(w,mode){
+  const s=wordState(w);
+  let score=forgettingRisk(s)*30 + weakness(s)*28 + (due(s)?18:0) + (1-s.confidence)*18;
+  const a=getAbility();
+  const diff=Math.abs(Number(w.level)-a.target);
+  score += Math.max(0,10-diff*4);
+  if(mode==="weak") score += weakness(s)*25;
+  if(mode==="due") score += (due(s)?25:0)+forgettingRisk(s)*15;
+  if(mode==="challenge") score += Number(w.level)>=Math.min(10,a.target+2)?28:0;
+  if(!s.seen) score += mode==="daily"?8:0;
+  return score;
 }
 
+function chooseWords(mode,count=10){
+  const pool=(window.vocabulary||[]).slice();
+  if(!pool.length) throw new Error("Vocabulary database is empty.");
+  pool.sort((a,b)=>scoreWord(b,mode)-scoreWord(a,mode));
+  const a=getAbility();
+  const used=new Set();
+  const result=[];
 
-/* =====================================================
-   SHOW QUESTION
-===================================================== */
-
-function showQuestion() {
-
-    answered = false;
-
-
-    let q =
-        questions[
-            currentQuestion
-        ];
-
-
-    if (!q) {
-
-        return;
-
+  function add(filter,n){
+    for(const w of pool){
+      if(result.length>=count) break;
+      if(used.has(w.word.toLowerCase())) continue;
+      if(filter(w)){
+        used.add(w.word.toLowerCase()); result.push(w);
+      }
     }
-
-
-    document
-        .getElementById(
-            "progressText"
-        )
-        .textContent =
-        "Question " +
-        (currentQuestion + 1) +
-        " of " +
-        questions.length;
-
-
-    document
-        .getElementById(
-            "levelText"
-        )
-        .textContent =
-        "Level " +
-        q.level;
-
-
-    let percentage =
-        (
-            (currentQuestion + 1) /
-            questions.length
-        ) * 100;
-
-
-    document
-        .getElementById(
-            "progressBar"
-        )
-        .style.width =
-        percentage + "%";
-
-
-    document
-        .getElementById(
-            "questionText"
-        )
-        .innerHTML =
-        q.question;
-
-
-    let options =
-        q.options ||
-        [];
-
-
-    /*
-     * Meaning questions already have
-     * options.
-     *
-     * Synonym questions need options.
-     */
-
-    if (
-        !q.options
-    ) {
-
-        let correct =
-            q.answer;
-
-
-        let wrong =
-            getWrongMeanings(
-                q.word,
-                3
-            );
-
-
-        options =
-            shuffle(
-                [
-                    correct,
-                    ...wrong
-                ]
-            );
-
-
-        q.options =
-            options;
-
-    }
-
-
-    let optionsContainer =
-        document.getElementById(
-            "options"
-        );
-
-
-    optionsContainer.innerHTML =
-        "";
-
-
-    options.forEach(
-        function(option) {
-
-            let button =
-                document.createElement(
-                    "button"
-                );
-
-
-            button.className =
-                "option";
-
-
-            button.textContent =
-                option;
-
-
-            button.onclick =
-                function() {
-
-                    checkAnswer(
-                        option,
-                        button
-                    );
-
-                };
-
-
-            optionsContainer.appendChild(
-                button
-            );
-
-        }
-    );
-
-
-    document
-        .getElementById(
-            "feedback"
-        )
-        .className =
-        "feedback";
-
-
-    document
-        .getElementById(
-            "feedback"
-        )
-        .innerHTML =
-        "";
-
-
-    document
-        .getElementById(
-            "nextButton"
-        )
-        .style.display =
-        "none";
-
+  }
+  if(mode==="weak") add(w=>weakness(wordState(w))>.35,Math.min(4,count));
+  if(mode==="due") add(w=>due(wordState(w)),Math.min(5,count));
+  if(mode==="challenge") add(w=>Number(w.level)>=Math.min(10,a.target+2),Math.min(5,count));
+  add(w=>Number(w.level)>=Math.max(1,a.target-2)&&Number(w.level)<=Math.min(10,a.target+2),count);
+  add(w=>!wordState(w).seen,count);
+  for(const w of pool){
+    if(result.length>=count) break;
+    if(!used.has(w.word.toLowerCase())){used.add(w.word.toLowerCase());result.push(w);}
+  }
+  return result.slice(0,count);
 }
 
-
-/* =====================================================
-   CHECK ANSWER
-===================================================== */
-
-function checkAnswer(
-    selected,
-    clickedButton
-) {
-
-    if (
-        answered
-    ) {
-
-        return;
-
-    }
-
-
-    answered = true;
-
-
-    let q =
-        questions[
-            currentQuestion
-        ];
-
-
-    let correct =
-        selected ===
-        q.answer;
-
-
-    let buttons =
-        document.querySelectorAll(
-            ".option"
-        );
-
-
-    buttons.forEach(
-        function(button) {
-
-            button.disabled =
-                true;
-
-
-            if (
-                button.textContent ===
-                q.answer
-            ) {
-
-                button.classList.add(
-                    "correct"
-                );
-
-            }
-
-        }
-    );
-
-
-    if (
-        correct
-    ) {
-
-        score++;
-
-
-        clickedButton.classList.add(
-            "correct"
-        );
-
-
-        showFeedback(
-            true,
-            "Correct! ✓",
-            q.explanation
-        );
-
-    }
-
-    else {
-
-        clickedButton.classList.add(
-            "wrong"
-        );
-
-
-        showFeedback(
-            false,
-            "Not quite.",
-            'The correct answer is "' +
-            q.answer +
-            '".<br><br>' +
-            q.explanation
-        );
-
-    }
-
-
-    document
-        .getElementById(
-            "nextButton"
-        )
-        .style.display =
-        "block";
-
+function questionFor(w){
+  const others=(window.vocabulary||[]).filter(x=>x.word!==w.word);
+  const meaning = w.meaning || ("the meaning of " + w.word);
+  const candidates = others
+    .filter(x=>x.meaning)
+    .sort(()=>Math.random()-.5)
+    .slice(0,3)
+    .map(x=>x.meaning);
+  const options=[meaning,...candidates].sort(()=>Math.random()-.5);
+  return {
+    word:w,
+    prompt:'What is the best meaning of <strong>'+escapeHTML(w.word)+'</strong>?',
+    options,
+    answer:meaning,
+    type:"meaning"
+  };
 }
 
-
-/* =====================================================
-   FEEDBACK
-===================================================== */
-
-function showFeedback(
-    correct,
-    title,
-    text
-) {
-
-    let feedback =
-        document.getElementById(
-            "feedback"
-        );
-
-
-    feedback.className =
-        correct
-            ? "feedback correct"
-            : "feedback wrong";
-
-
-    feedback.innerHTML =
-        '<div class="feedback-title">' +
-        title +
-        "</div>" +
-        "<div>" +
-        text +
-        "</div>";
-
+function escapeHTML(x){
+  return String(x??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
 }
 
-
-/* =====================================================
-   NEXT QUESTION
-===================================================== */
-
-function nextQuestion() {
-
-    /*
-     * V6 stability guard:
-     * Never advance before an answer has been submitted.
-     */
-
-    if (!answered) {
-        return;
-    }
-
-    currentQuestion++;
-
-    if (
-        currentQuestion >=
-        questions.length
-    ) {
-
-        showResult();
-
-        return;
-
-    }
-
-    showQuestion();
-
+function reasonFor(w,mode){
+  const s=wordState(w);
+  if(mode==="weak" || weakness(s)>.35) return "AI focus: this word is currently one of your weaker areas.";
+  if(mode==="due" || due(s)) return "AI focus: this word is due for spaced review.";
+  if(mode==="challenge") return "AI focus: stretching you slightly above your current comfort zone.";
+  if(!s.seen) return "AI focus: new word selected to broaden your PSLE vocabulary coverage.";
+  if(forgettingRisk(s)>.45) return "AI focus: your forgetting risk is rising, so this word is being refreshed.";
+  return "AI focus: this word fits your current ability and today's learning plan.";
 }
 
-
-/* =====================================================
-   RESULT
-===================================================== */
-
-function showResult() {
-
-    document
-        .getElementById(
-            "quiz"
-        )
-        .style.display =
-        "none";
-
-
-    document
-        .getElementById(
-            "result"
-        )
-        .style.display =
-        "block";
-
-
-    document
-        .getElementById(
-            "score"
-        )
-        .textContent =
-        score +
-        " / " +
-        questions.length;
-
-
-    let percentage =
-        Math.round(
-            score /
-            questions.length *
-            100
-        );
-
-
-    let message;
-
-
-    if (
-        percentage ===
-        100
-    ) {
-
-        message =
-            "Outstanding! Perfect score! 🌟";
-
-    }
-
-    else if (
-        percentage >= 80
-    ) {
-
-        message =
-            "Excellent work! Your vocabulary is getting stronger. 💪";
-
-    }
-
-    else if (
-        percentage >= 60
-    ) {
-
-        message =
-            "Good effort! Keep practising your vocabulary. 📚";
-
-    }
-
-    else {
-
-        message =
-            "Keep going! Every mistake is a chance to learn. 🌱";
-
-    }
-
-
-    document
-        .getElementById(
-            "resultMessage"
-        )
-        .textContent =
-        message;
-
+function startQuiz(mode){
+  quizMode=mode||"daily";
+  activeQuestions=chooseWords(quizMode,10).map(questionFor);
+  currentQuestion=0; sessionScore=0; sessionAnswered=false;
+  sessionWrong=[]; sessionCorrect=[]; sessionStartedAt=Date.now();
+  document.getElementById("dashboard").style.display="none";
+  document.getElementById("report").style.display="none";
+  document.getElementById("result").style.display="none";
+  document.getElementById("quiz").style.display="block";
+  renderQuestion();
 }
 
-
-/* =====================================================
-   RESTART
-===================================================== */
-
-function restartQuiz() {
-
-    currentQuestion = 0;
-
-    score = 0;
-
-    questions = [];
-
-
-    document
-        .getElementById(
-            "result"
-        )
-        .style.display =
-        "none";
-
-
-    document
-        .getElementById(
-            "quiz"
-        )
-        .style.display =
-        "block";
-
-
-    createDailyQuestions();
-
-    showQuestion();
-
+function renderQuestion(){
+  if(currentQuestion>=activeQuestions.length){finishQuiz();return;}
+  const q=activeQuestions[currentQuestion];
+  sessionAnswered=false; sessionStartedAt=Date.now();
+  document.getElementById("progressText").textContent=`Question ${currentQuestion+1} of ${activeQuestions.length}`;
+  document.getElementById("levelText").textContent=`Level ${q.word.level}`;
+  document.getElementById("progressBar").style.width=((currentQuestion/activeQuestions.length)*100)+"%";
+  document.getElementById("aiReason").textContent=reasonFor(q.word,quizMode);
+  document.getElementById("questionText").innerHTML=q.prompt;
+  document.getElementById("feedback").textContent="";
+  const nb=document.getElementById("nextButton"); nb.disabled=true; nb.textContent="Next Question →";
+  const box=document.getElementById("options"); box.innerHTML="";
+  q.options.forEach((opt,i)=>{
+    const b=document.createElement("button");
+    b.className="option"; b.textContent=opt;
+    b.onclick=()=>submitAnswer(i,b);
+    box.appendChild(b);
+  });
 }
 
-
-/* =====================================================
-   RANDOM CHOICE
-===================================================== */
-
-function randomChoice(
-    array
-) {
-
-    return array[
-        Math.floor(
-            Math.random() *
-            array.length
-        )
-    ];
-
+function submitAnswer(index,button){
+  if(sessionAnswered) return;
+  sessionAnswered=true;
+  const q=activeQuestions[currentQuestion];
+  const chosen=q.options[index];
+  const correct=chosen===q.answer;
+  const responseMs=Date.now()-sessionStartedAt;
+  sessionResponseMs=responseMs;
+  document.querySelectorAll("#options .option").forEach(b=>b.disabled=true);
+  if(correct){ sessionScore++; sessionCorrect.push(q.word); button.classList.add("correct"); }
+  else { sessionWrong.push(q.word); button.classList.add("wrong"); }
+  updateWord(q.word,correct,responseMs,q.type);
+  tutorDB.totalQuestions++;
+  if(correct) tutorDB.totalCorrect++;
+  const f=document.getElementById("feedback");
+  f.innerHTML=correct
+    ? "✓ Correct — "+escapeHTML(q.word.word)+" is becoming stronger."
+    : "✗ Not quite. Correct answer: <strong>"+escapeHTML(q.answer)+"</strong>";
+  document.getElementById("nextButton").disabled=false;
+  document.getElementById("nextButton").textContent=currentQuestion===activeQuestions.length-1?"See Tutor Report →":"Next Question →";
+  saveDB();
 }
 
-
-/* =====================================================
-   SHUFFLE
-===================================================== */
-
-function shuffle(
-    array
-) {
-
-    for (
-        let i =
-            array.length - 1;
-        i > 0;
-        i--
-    ) {
-
-        let j =
-            Math.floor(
-                Math.random() *
-                (i + 1)
-            );
-
-
-        [
-            array[i],
-            array[j]
-        ] =
-        [
-            array[j],
-            array[i]
-        ];
-
-    }
-
-
-    return array;
-
+function goToNextQuestion(){
+  if(!sessionAnswered) return;
+  currentQuestion++;
+  renderQuestion();
 }
 
-
-/* =====================================================
-   ESCAPE REGEX
-===================================================== */
-
-function escapeRegExp(
-    string
-) {
-
-    return String(
-        string
-    ).replace(
-        /[.*+?^${}()|[\]\\]/g,
-        "\\$&"
-    );
-
+function finishQuiz(){
+  document.getElementById("quiz").style.display="none";
+  document.getElementById("result").style.display="block";
+  document.getElementById("progressBar").style.width="100%";
+  const total=activeQuestions.length||10, pct=Math.round(sessionScore/total*100);
+  document.getElementById("score").textContent=sessionScore+" / "+total;
+  document.getElementById("resultTitle").textContent=quizMode==="daily"?"Today's AI Session Complete":"AI Review Complete";
+  document.getElementById("resultMessage").textContent=
+    pct>=90?"Excellent. The tutor will raise the challenge gradually.":
+    pct>=70?"Good progress. The tutor will reinforce the words that need more work.":
+    "Keep going. The tutor will prioritise today's weaker words for review.";
+  document.getElementById("diagnosis").innerHTML=buildDiagnosis(pct);
+  updateStreak();
+  saveDB();
 }
 
-
-/* =====================================================
-   ESCAPE HTML
-===================================================== */
-
-function escapeHTML(
-    value
-) {
-
-    return String(
-        value
-    )
-
-    .replace(
-        /&/g,
-        "&amp;"
-    )
-
-    .replace(
-        /</g,
-        "&lt;"
-    )
-
-    .replace(
-        />/g,
-        "&gt;"
-    )
-
-    .replace(
-        /"/g,
-        "&quot;"
-    )
-
-    .replace(
-        /'/g,
-        "&#039;"
-    );
-
+function buildDiagnosis(pct){
+  const wrong=sessionWrong;
+  const weak=wrong.map(w=>w.word).slice(0,6);
+  const a=getAbility();
+  return `<div class="diag-grid">
+    <div><b>${pct}%</b><span>Session accuracy</span></div>
+    <div><b>${Math.round(a.readiness)}</b><span>New readiness</span></div>
+    <div><b>${weak.length}</b><span>Words to revisit</span></div>
+  </div>
+  <div class="diag-text"><b>AI diagnosis:</b> ${weak.length
+    ? "The tutor will prioritise <strong>"+weak.map(escapeHTML).join(", ")+"</strong> in upcoming review."
+    : "No immediate weak-word cluster detected. The tutor can introduce more Level "+Math.min(10,a.target+1)+" material."}</div>`;
 }
 
+function updateStreak(){
+  const t=todayKey();
+  if(tutorDB.lastDay===t) return;
+  const prev=new Date(Date.now()-86400000).toISOString().slice(0,10);
+  tutorDB.streak=tutorDB.lastDay===prev?tutorDB.streak+1:1;
+  tutorDB.lastDay=t;
+}
+
+function getDueCount(){ return Object.values(tutorDB.words).filter(due).length; }
+function getWeak(){
+  return Object.values(tutorDB.words).sort((a,b)=>weakness(b)-weakness(a)).filter(s=>s.seen).slice(0,8);
+}
+
+function stateName(a){
+  if(a.readiness>=87)return"🏆 Advanced & Ready";
+  if(a.readiness>=68)return"💪 Strong & Developing";
+  if(a.readiness>=40)return"📚 Developing";
+  return"🌱 Building Foundations";
+}
+
+function recommendation(a){
+  if(a.readiness<40)return"Build accuracy and confidence with Levels 1–4 before pushing higher.";
+  if(a.readiness<68)return"Consolidate your core vocabulary, then gradually move into higher PSLE levels.";
+  if(a.readiness<87)return"Your foundation is strong. The tutor will mix reinforcement with Level "+Math.min(10,a.target+1)+" stretch words.";
+  return"Ready for advanced vocabulary. The tutor will focus on retention, speed and Level 7–10 challenge.";
+}
+
+function refreshDashboard(){
+  const a=getAbility();
+  document.getElementById("tutorState").textContent=stateName(a);
+  document.getElementById("tutorRecommendation").textContent=recommendation(a);
+  document.getElementById("readinessScore").textContent=a.readiness;
+  document.getElementById("statAccuracy").textContent=Math.round(a.accuracy*100)+"%";
+  document.getElementById("statQuestions").textContent=tutorDB.totalQuestions;
+  document.getElementById("statMastery").textContent=a.mastered;
+  document.getElementById("statDue").textContent=getDueCount();
+  document.getElementById("statStreak").textContent=tutorDB.streak;
+  const weak=getWeak().slice(0,3).map(s=>s.word).join(", ");
+  document.getElementById("todayPlan").innerHTML=
+    `<b>Target Level:</b> ${a.target} · <b>Priority:</b> ${getDueCount()?getDueCount()+" due words":(weak||"new vocabulary")}<br>
+     <span>Recommended: 10 questions combining retention, weak words and a small difficulty stretch.</span>`;
+}
+
+function showDashboard(){
+  document.getElementById("quiz").style.display="none";
+  document.getElementById("result").style.display="none";
+  document.getElementById("report").style.display="none";
+  document.getElementById("dashboard").style.display="block";
+  refreshDashboard();
+}
+
+function openTutorReport(){
+  document.getElementById("dashboard").style.display="none";
+  document.getElementById("quiz").style.display="none";
+  document.getElementById("result").style.display="none";
+  document.getElementById("report").style.display="block";
+  const a=getAbility(), weak=getWeak(), levels=a.levelScores;
+  const plan=[
+    `Day 1–2: review your ${Math.min(5,Math.max(1,getDueCount()))} highest-priority words.`,
+    `Day 3–4: practise 10 mixed Level ${Math.max(1,a.target-1)}–${Math.min(10,a.target+1)} words.`,
+    `Day 5: targeted weak-word session using your lowest-confidence words.`,
+    `Day 6: Level ${Math.min(10,a.target+1)} challenge with faster responses.`,
+    `Day 7: AI reassessment and automatic adjustment of your target level.`
+  ];
+  document.getElementById("reportContent").innerHTML=`
+    <div class="report-summary"><b>${stateName(a)}</b><span>${recommendation(a)}</span></div>
+    <div class="report-grid">
+      <div><b>${a.readiness}</b><small>Readiness</small></div>
+      <div><b>${Math.round(a.accuracy*100)}%</b><small>Accuracy</small></div>
+      <div><b>${a.mastered}</b><small>Mastered</small></div>
+      <div><b>${getDueCount()}</b><small>Due now</small></div>
+    </div>
+    <h3>Weak-word radar</h3>
+    <div class="chips">${(weak.length?weak:["No established weak words yet."]).map(s=>`<span>${escapeHTML(s.word||s)}</span>`).join("")}</div>
+    <h3>Ability by level</h3>
+    <div class="level-bars">${levels.map(x=>`<div class="lv"><span>Level ${x.level}</span><div><i style="width:${x.score}%"></i></div><b>${x.sample?x.score+"%":"—"}</b></div>`).join("")}</div>
+    <h3>7-day tutor plan</h3>
+    <ol>${plan.map(x=>`<li>${x}</li>`).join("")}</ol>`;
+}
+
+function boot(){
+  if(!Array.isArray(window.vocabulary) || !window.vocabulary.length){
+    document.getElementById("loading").style.display="none";
+    document.getElementById("errorBox").style.display="block";
+    document.getElementById("errorMessage").textContent="data/vocabulary.js did not load.";
+    return;
+  }
+  document.getElementById("loading").style.display="none";
+  showDashboard();
+}
+window.addEventListener("load",boot);
 </script>
 
-
-<script>
-/* =====================================================
-   APLUS ACHIEVER V6 — ADAPTIVE SPACED REPETITION ENGINE
-===================================================== */
-
-(function(){
-    "use strict";
-
-    const V6_KEY = "aplusAchieverPSLEV6SRSV1";
-    let v6Mode = "daily";
-
-    function loadSRS(){
-        try{
-            const raw = localStorage.getItem(V6_KEY);
-            return raw ? JSON.parse(raw) : {};
-        }catch(e){ return {}; }
-    }
-
-    function saveSRS(data){
-        try{ localStorage.setItem(V6_KEY, JSON.stringify(data)); }catch(e){}
-    }
-
-    function getCard(word){
-        const data = loadSRS();
-        if(!data[word.word]){
-            data[word.word] = {
-                word:word.word,
-                id:word.id || word.word,
-                level:Number(word.level || 1),
-                seen:0, correct:0, wrong:0, streak:0,
-                stage:0, interval:0, ease:2.3,
-                lastAnswered:0, lastCorrect:0, lastWrong:0,
-                nextReview:Date.now()
-            };
-            saveSRS(data);
-        }
-        return data[word.word];
-    }
-
-    function recordSRS(word, correct){
-        if(!word || !word.word) return;
-
-        const data = loadSRS();
-        const c = data[word.word] || getCard(word);
-        const intervals = [1,3,7,14,30,60];
-
-        c.level = Number(word.level || c.level || 1);
-        c.seen++;
-        c.lastAnswered = Date.now();
-
-        if(correct){
-            c.correct++;
-            c.streak++;
-            c.lastCorrect = Date.now();
-            c.stage = Math.min(5, Number(c.stage || 0) + 1);
-            c.interval = intervals[c.stage] || 60;
-            c.ease = Math.min(2.8, Number(c.ease || 2.3) + 0.05);
-            c.nextReview = Date.now() + c.interval * 86400000;
-        }else{
-            c.wrong++;
-            c.streak = 0;
-            c.lastWrong = Date.now();
-            c.stage = Math.max(0, Number(c.stage || 0) - 2);
-            c.interval = 0;
-            c.ease = Math.max(1.6, Number(c.ease || 2.3) - 0.15);
-            c.nextReview = Date.now() + 2 * 3600000;
-        }
-
-        data[word.word] = c;
-        saveSRS(data);
-        updateV6DueCount();
-    }
-
-    function allCards(){
-        return Object.values(loadSRS());
-    }
-
-    function vocabularyMap(){
-        const map = {};
-        (window.vocabulary || window.vocabularyData || []).forEach(function(w){
-            if(w && w.word) map[w.word] = w;
-        });
-        return map;
-    }
-
-    function dueCards(){
-        const now = Date.now();
-        return allCards()
-            .filter(function(c){ return Number(c.nextReview || 0) <= now; })
-            .sort(function(a,b){
-                const sa = Number(a.wrong||0)*3 - Number(a.streak||0);
-                const sb = Number(b.wrong||0)*3 - Number(b.streak||0);
-                return sb-sa || Number(a.nextReview||0)-Number(b.nextReview||0);
-            });
-    }
-
-    function makeQuestion(word){
-        return createQuestion(word, Number(word.level || 1));
-    }
-
-    function startMode(mode, words, label){
-        if(!words.length){
-            alert("No suitable words are available for this review yet.");
-            return;
-        }
-
-        questions = words.map(makeQuestion);
-        currentQuestion = 0;
-        score = 0;
-        answered = false;
-        v6Mode = mode;
-
-        const badge = document.getElementById("v6ModeBadge");
-        if(badge){
-            badge.textContent = label;
-            badge.style.display = "inline-block";
-        }
-
-        document.getElementById("result").style.display = "none";
-        document.getElementById("quiz").style.display = "block";
-        showQuestion();
-    }
-
-    window.startDueReview = function(){
-        const map = vocabularyMap();
-        const words = dueCards()
-            .map(function(c){ return map[c.word]; })
-            .filter(Boolean)
-            .slice(0,10);
-
-        if(!words.length){
-            alert("You are fully caught up — no words are due right now.");
-            return;
-        }
-        startMode("due", words, "SPACED REPETITION — DUE NOW");
-    };
-
-    window.startWeakReview = function(){
-        const map = vocabularyMap();
-        const words = allCards()
-            .filter(function(c){ return Number(c.wrong||0) > 0; })
-            .sort(function(a,b){
-                return (Number(b.wrong||0)-Number(b.streak||0)) -
-                       (Number(a.wrong||0)-Number(a.streak||0));
-            })
-            .map(function(c){ return map[c.word]; })
-            .filter(Boolean)
-            .slice(0,10);
-
-        if(!words.length){
-            alert("No weak words yet. Complete some Daily 10 questions first.");
-            return;
-        }
-        startMode("weak", words, "TARGETED WEAK-WORD REVIEW");
-    };
-
-    window.startChallengeReview = function(){
-        const pool = (window.vocabulary || window.vocabularyData || [])
-            .filter(function(w){ return w && Number(w.level||1) >= 7; });
-
-        shuffle(pool);
-        startMode("challenge", pool.slice(0,10), "CHALLENGE — LEVEL 7–10");
-    };
-
-    window.openV6Dashboard = function(){
-        const cards = allCards();
-        const due = dueCards();
-        const seen = cards.filter(function(c){ return c.seen > 0; });
-        const mastered = cards.filter(function(c){ return Number(c.stage||0) >= 5; });
-        const correct = cards.reduce(function(s,c){ return s+Number(c.correct||0); },0);
-        const wrong = cards.reduce(function(s,c){ return s+Number(c.wrong||0); },0);
-        const total = correct + wrong;
-        const acc = total ? Math.round(correct/total*100) : 0;
-
-        const weak = cards
-            .filter(function(c){ return Number(c.wrong||0) > 0; })
-            .sort(function(a,b){ return Number(b.wrong||0)-Number(a.wrong||0); })
-            .slice(0,10);
-
-        const content = `
-            <h2>📊 APLUS Vocabulary Dashboard</h2>
-            <div class="v6-stats">
-                <div class="v6-stat">Due Now<strong>${due.length}</strong></div>
-                <div class="v6-stat">Words Seen<strong>${seen.length}</strong></div>
-                <div class="v6-stat">Mastered<strong>${mastered.length}</strong></div>
-                <div class="v6-stat">Accuracy<strong>${acc}%</strong></div>
-            </div>
-            <h3>🧠 Spaced Repetition</h3>
-            <p>
-                Correct answers move a word through
-                <strong>1 → 3 → 7 → 14 → 30 → 60 days</strong>.
-                A wrong answer brings it back for short-term review.
-            </p>
-            <h3>🎯 Top Weak Words</h3>
-            <div class="v6-list">
-                ${
-                    weak.length
-                    ? weak.map(function(c){
-                        return `<div class="v6-row">
-                            <span>${escapeHTML(c.word)}</span>
-                            <span class="v6-pill">${Number(c.wrong||0)} mistakes</span>
-                        </div>`;
-                    }).join("")
-                    : "<p>No weak words recorded yet.</p>"
-                }
-            </div>
-            <div style="margin-top:18px;">
-                <button class="v6-action" onclick="startDueReview()">Review Due</button>
-                <button class="v6-action secondary" onclick="startWeakReview()">Weak Words</button>
-                <button class="v6-action secondary" onclick="startChallengeReview()">Challenge</button>
-            </div>
-        `;
-
-        openV6Overlay(content);
-    };
-
-    function openV6Overlay(content){
-        const o = document.getElementById("v6Overlay");
-        const c = document.getElementById("v6OverlayContent");
-        if(!o || !c) return;
-        c.innerHTML = content;
-        o.style.display = "flex";
-    }
-
-    window.closeV6Overlay = function(){
-        const o = document.getElementById("v6Overlay");
-        if(o) o.style.display = "none";
-    };
-
-    function updateV6DueCount(){
-        const el = document.getElementById("v6DueCount");
-        if(el) el.textContent = dueCards().length;
-    }
-
-    /*
-     * Wrap the original answer function without changing its feedback,
-     * scoring, or button behaviour.
-     */
-    const originalCheckAnswer = window.checkAnswer;
-
-    window.checkAnswer = function(selected, clickedButton){
-        const q = questions[currentQuestion];
-
-        if(!q || answered){
-            return;
-        }
-
-        originalCheckAnswer(selected, clickedButton);
-
-        if(answered && q.word){
-            recordSRS(q.word, selected === q.answer);
-        }
-    };
-
-    document.addEventListener("keydown", function(e){
-        if(e.key === "Escape"){
-            closeV6Overlay();
-        }
-
-        if(
-            (e.key === "Enter" || e.key === " ") &&
-            answered &&
-            document.getElementById("nextButton") &&
-            document.getElementById("nextButton").style.display !== "none"
-        ){
-            e.preventDefault();
-            nextQuestion();
-        }
-    });
-
-    window.addEventListener("load", function(){
-        setTimeout(updateV6DueCount, 300);
-    });
-
-})();
-</script>
-
-
-<script>
-/* =====================================================
-   APLUS ACHIEVER V7 — TRUE AI LEARNING BRAIN
-   Local adaptive engine: ability + forgetting + errors +
-   difficulty + confidence + recency + streak.
-===================================================== */
-(function(){
-    "use strict";
-
-    const V7_KEY = "aplusAchieverPSLEV7BrainV1";
-    let v7Mode = "daily";
-    let v7Questions = [];
-
-    function readBrain(){
-        try{
-            const x = localStorage.getItem(V7_KEY);
-            return x ? JSON.parse(x) : {words:{}, sessions:[], days:{}};
-        }catch(e){
-            return {words:{}, sessions:[], days:{}};
-        }
-    }
-    function saveBrain(x){
-        try{ localStorage.setItem(V7_KEY, JSON.stringify(x)); }catch(e){}
-    }
-    function now(){ return Date.now(); }
-    function clamp(x,a,b){ return Math.max(a,Math.min(b,x)); }
-    function dayKey(){
-        const d=new Date();
-        return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
-    }
-    function vocab(){
-        return window.vocabulary || window.vocabularyData || [];
-    }
-    function escapeText(s){
-        if(typeof escapeHTML==="function") return escapeHTML(String(s));
-        return String(s).replace(/[&<>"']/g,function(c){
-            return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
-        });
-    }
-
-    /* ---------- Word-level learner model ---------- */
-    function getWordState(word){
-        const b=readBrain();
-        if(!b.words[word.word]){
-            b.words[word.word]={
-                word:word.word,
-                level:Number(word.level||1),
-                seen:0,
-                correct:0,
-                wrong:0,
-                consecutive:0,
-                confidence:0,
-                mastery:0,
-                lastSeen:0,
-                lastWrong:0,
-                lastCorrect:0,
-                avgResponse:0,
-                nextReview:now(),
-                difficulty:Number(word.level||1),
-                volatility:0
-            };
-            saveBrain(b);
-        }
-        return b.words[word.word];
-    }
-
-    function updateWord(word, correct, responseMs){
-        if(!word || !word.word) return;
-
-        const b=readBrain();
-        const s=b.words[word.word] || getWordState(word);
-
-        s.level=Number(word.level||s.level||1);
-        s.seen++;
-        s.lastSeen=now();
-
-        if(responseMs>0){
-            s.avgResponse = s.avgResponse ?
-                s.avgResponse*.7 + responseMs*.3 :
-                responseMs;
-        }
-
-        if(correct){
-            s.correct++;
-            s.consecutive++;
-            s.lastCorrect=now();
-        }else{
-            s.wrong++;
-            s.consecutive=0;
-            s.lastWrong=now();
-        }
-
-        const acc=s.seen ? s.correct/s.seen : 0;
-        const consistency=Math.min(1,s.consecutive/5);
-        const sample=Math.min(1,s.seen/10);
-
-        s.confidence=clamp(
-            acc*.55 + consistency*.25 + sample*.20,
-            0,1
-        );
-
-        /* Mastery is deliberately harder than raw accuracy. */
-        s.mastery=clamp(
-            acc*.45 +
-            Math.min(1,s.consecutive/6)*.25 +
-            Math.min(1,s.seen/8)*.15 +
-            (s.wrong===0 ? .15 : 0),
-            0,1
-        );
-
-        /*
-         * Adaptive forgetting interval.
-         * Strong + correct = longer interval.
-         * Weak / wrong = very short interval.
-         */
-        let hours;
-        if(!correct){
-            hours=2;
-        }else if(s.mastery>=.90){
-            hours=24*30;
-        }else if(s.mastery>=.80){
-            hours=24*14;
-        }else if(s.mastery>=.68){
-            hours=24*7;
-        }else if(s.mastery>=.52){
-            hours=24*3;
-        }else{
-            hours=24;
-        }
-
-        /* Faster repetition for slow/unstable learners. */
-        if(s.volatility>.35) hours*=.65;
-
-        s.nextReview=now()+hours*3600000;
-
-        /* A simple volatility signal: recent failures vs successes. */
-        const recentWrong=Math.min(5,s.wrong);
-        const recentRight=Math.min(5,s.correct);
-        s.volatility=clamp(
-            Math.abs(recentWrong-recentRight)/5,
-            0,1
-        );
-
-        b.words[word.word]=s;
-        saveBrain(b);
-        updateV7DueCount();
-    }
-
-    /* ---------- Forgetting model ---------- */
-    function forgettingRisk(s){
-        if(!s.seen) return 1;
-        const ageHours=Math.max(0,(now()-(s.lastSeen||now()))/3600000);
-        const mastery=Number(s.mastery||0);
-        const halfLife=12 + mastery*24*21;
-        return clamp(1-Math.exp(-ageHours/halfLife),0,1);
-    }
-
-    function errorRisk(s){
-        const total=Number(s.seen||0);
-        if(!total) return 1;
-        const acc=Number(s.correct||0)/total;
-        return clamp(1-acc,0,1);
-    }
-
-    function urgency(s){
-        if(!s.seen) return 1;
-        const overdue=Math.max(0,now()-Number(s.nextReview||now()));
-        return clamp(overdue/(24*3600000*7),0,1);
-    }
-
-    /* ---------- Student ability ---------- */
-    function ability(){
-        const b=readBrain();
-        const states=Object.values(b.words);
-
-        if(!states.length){
-            return {
-                readiness:20,
-                accuracy:0,
-                confidence:0,
-                mastered:0,
-                due:0,
-                target:2,
-                min:1,
-                max:3,
-                levelAbilities:Array(10).fill(0),
-                total:0
-            };
-        }
-
-        const totalSeen=states.reduce((a,s)=>a+Number(s.seen||0),0);
-        const totalCorrect=states.reduce((a,s)=>a+Number(s.correct||0),0);
-        const accuracy=totalSeen ? totalCorrect/totalSeen : 0;
-
-        const weighted=states.reduce(function(sum,s){
-            return sum + Number(s.confidence||0);
-        },0)/states.length;
-
-        const mastered=states.filter(s=>Number(s.mastery||0)>=.8).length;
-        const due=states.filter(s=>Number(s.nextReview||0)<=now()).length;
-
-        const levels=[];
-        for(let i=1;i<=10;i++){
-            const x=states.filter(s=>Number(s.level||1)===i);
-            if(!x.length){
-                levels.push(0);
-            }else{
-                levels.push(
-                    x.reduce((a,s)=>a+Number(s.confidence||0),0)/x.length
-                );
-            }
-        }
-
-        const levelScore=levels.reduce((sum,x)=>sum+x,0)/10;
-
-        const readiness=clamp(
-            accuracy*.40 +
-            weighted*.30 +
-            levelScore*.15 +
-            Math.min(1,totalSeen/100)*.10 +
-            Math.min(1,mastered/30)*.05,
-            0,1
-        );
-
-        let target;
-        if(readiness<.25) target=2;
-        else if(readiness<.40) target=3;
-        else if(readiness<.55) target=4;
-        else if(readiness<.68) target=5;
-        else if(readiness<.78) target=6;
-        else if(readiness<.87) target=7;
-        else target=8;
-
-        return {
-            readiness:Math.round(readiness*100),
-            accuracy:Math.round(accuracy*100),
-            confidence:Math.round(weighted*100),
-            mastered,
-            due,
-            target,
-            min:Math.max(1,target-2),
-            max:Math.min(10,target+2),
-            levelAbilities:levels.map(x=>Math.round(x*100)),
-            total:totalSeen
-        };
-    }
-
-    /* ---------- AI selection ---------- */
-    function scoreWord(w, mode){
-        const s=getWordState(w);
-
-        const unseen=s.seen===0 ? 1 : 0;
-        const forget=forgettingRisk(s);
-        const error=errorRisk(s);
-        const due=urgency(s);
-        const weakness=1-Number(s.mastery||0);
-        const level=Number(w.level||1);
-        const a=ability();
-
-        const difficultyFit=1-Math.min(1,Math.abs(level-a.target)/5);
-        const challenge=mode==="challenge" ? level/10 : 0;
-        const dueBoost=mode==="due" ? due : 0;
-
-        /*
-         * Main AI priority:
-         * 30% forgetting
-         * 25% errors
-         * 20% mastery weakness
-         * 15% due status
-         * 10% difficulty fit
-         */
-        let score=
-            forget*.30+
-            error*.25+
-            weakness*.20+
-            due*.15+
-            difficultyFit*.10+
-            challenge*.15+
-            unseen*.12+
-            Math.random()*.035;
-
-        if(mode==="weak") score += error*.30 + weakness*.20;
-        if(mode==="due") score += due*.35 + forget*.15;
-
-        return score;
-    }
-
-    function chooseWords(mode,count){
-        const a=ability();
-        let pool=vocab().filter(function(w){
-            if(!w || !w.word) return false;
-            const lv=Number(w.level||1);
-
-            if(mode==="challenge") return lv>=Math.max(7,a.target);
-            if(mode==="due") return true;
-            if(mode==="weak") return true;
-
-            return lv>=a.min && lv<=a.max;
-        });
-
-        pool.sort(function(x,y){ return scoreWord(y,mode)-scoreWord(x,mode); });
-
-        const chosen=[];
-        const used=new Set();
-
-        /*
-         * Balanced composition:
-         * weak + due + target + stretch + new.
-         */
-        function add(filter){
-            for(const w of pool){
-                if(chosen.length>=count) return;
-                if(used.has(w.word)) continue;
-                if(!filter(w)) continue;
-                used.add(w.word);
-                chosen.push(w);
-            }
-        }
-
-        if(mode==="ai"){
-            add(function(w){
-                const s=getWordState(w);
-                return s.seen>0 && (errorRisk(s)>.30 || forgettingRisk(s)>.45);
-            });
-
-            add(function(w){
-                const s=getWordState(w);
-                return Number(s.nextReview||0)<=now();
-            });
-
-            add(function(w){
-                return Math.abs(Number(w.level||1)-a.target)<=1;
-            });
-
-            add(function(w){
-                return Number(w.level||1)===Math.min(10,a.target+1);
-            });
-
-            add(function(w){
-                return getWordState(w).seen===0;
-            });
-        }else{
-            add(function(){return true;});
-        }
-
-        return chosen.slice(0,count);
-    }
-
-    function makeQuestions(words){
-        return words.map(function(w){
-            return createQuestion(w,Number(w.level||1));
-        });
-    }
-
-    function startAI(mode,label){
-        const words=chooseWords(mode,10);
-
-        if(!words.length){
-            alert("The AI needs more vocabulary records before it can build this session.");
-            return;
-        }
-
-        v7Questions=makeQuestions(words);
-        questions=v7Questions;
-        currentQuestion=0;
-        score=0;
-        answered=false;
-        v7Mode=mode;
-
-        const badge=document.getElementById("v7ModeBadge");
-        if(badge){
-            badge.textContent=label;
-            badge.style.display="inline-block";
-        }
-
-        const result=document.getElementById("result");
-        const quiz=document.getElementById("quiz");
-        if(result) result.style.display="none";
-        if(quiz) quiz.style.display="block";
-
-        closeAIBrain();
-        showQuestion();
-    }
-
-    window.startAIBrain=function(){
-        startAI("ai","AI ADAPTIVE DAILY 10");
-    };
-
-    window.startDueReview=function(){
-        startAI("due","AI — DUE & FORGETTING RISK");
-    };
-
-    window.startWeakReview=function(){
-        startAI("weak","AI — WEAK WORDS");
-    };
-
-    window.startChallengeReview=function(){
-        startAI("challenge","AI — CHALLENGE MODE");
-    };
-
-    /* ---------- AI explanation/dashboard ---------- */
-    window.openAIBrain=function(){
-        const a=ability();
-        const b=readBrain();
-        const states=Object.values(b.words);
-
-        const weakest=states
-            .filter(s=>s.seen>0)
-            .sort(function(x,y){
-                const sx=errorRisk(x)*.6+forgettingRisk(x)*.25+(1-x.mastery)*.15;
-                const sy=errorRisk(y)*.6+forgettingRisk(y)*.25+(1-y.mastery)*.15;
-                return sy-sx;
-            })
-            .slice(0,8);
-
-        let state="🌱 Building Foundations";
-        if(a.readiness>=85) state="🏆 Advanced & Ready";
-        else if(a.readiness>=70) state="💪 Strong & Developing";
-        else if(a.readiness>=50) state="📚 Developing";
-
-        let recommendation;
-        if(a.due>0){
-            recommendation="Start with due words first. The AI has detected that some words are at higher forgetting risk.";
-        }else if(a.readiness<50){
-            recommendation="Focus on weak words and target Levels "+a.min+"–"+a.max+" before pushing difficulty higher.";
-        }else if(a.readiness<75){
-            recommendation="Mix weak words, due words and target-level vocabulary. Add a small amount of stretch practice.";
-        }else{
-            recommendation="The learner is ready for more challenging vocabulary. The AI will still protect weak words from being forgotten.";
-        }
-
-        const levelRows=a.levelAbilities.map(function(x,i){
-            return `<div class="v7-row">
-                <span>Level ${i+1}</span>
-                <span class="v7-tag">${x}% ability</span>
-            </div>`;
-        }).join("");
-
-        const weakRows=weakest.length ? weakest.map(function(s){
-            return `<div class="v7-row">
-                <span>${escapeText(s.word)}</span>
-                <span class="v7-tag">${Math.round(Number(s.mastery||0)*100)}% mastery</span>
-            </div>`;
-        }).join("") : "<p>No weak-word history yet.</p>";
-
-        const content=`
-            <h2>🧠 APLUS ACHIEVER — AI Learning Brain</h2>
-
-            <div class="v7-section">
-                <div>Current Ability</div>
-                <div class="v7-brain">${a.readiness}/100</div>
-                <strong>${state}</strong>
-                <p class="v7-reason">${recommendation}</p>
-                <div class="v7-progress">
-                    <span style="width:${a.readiness}%"></span>
-                </div>
-            </div>
-
-            <div class="v7-grid">
-                <div class="v7-card">Accuracy<strong>${a.accuracy}%</strong></div>
-                <div class="v7-card">Confidence<strong>${a.confidence}%</strong></div>
-                <div class="v7-card">Due<strong>${a.due}</strong></div>
-                <div class="v7-card">Target Level<strong>${a.target}</strong></div>
-            </div>
-
-            <div class="v7-section">
-                <h3>🎯 AI Recommendation</h3>
-                <p>
-                    Today's adaptive range:
-                    <strong>Level ${a.min}–${a.max}</strong>.
-                    The AI will prioritize weak, forgotten and unstable words,
-                    then fill the remaining questions with appropriate new/challenge words.
-                </p>
-                <button class="v7-action" onclick="startAIBrain()">🧠 Start AI Daily 10</button>
-                <button class="v7-action secondary" onclick="startDueReview()">🔁 Review Due</button>
-            </div>
-
-            <div class="v7-section">
-                <h3>📈 Ability by Level</h3>
-                ${levelRows}
-            </div>
-
-            <div class="v7-section">
-                <h3>⚠️ AI Weak-Word Radar</h3>
-                ${weakRows}
-            </div>
-        `;
-
-        const overlay=document.getElementById("v7Overlay");
-        const target=document.getElementById("v7Content");
-        if(overlay && target){
-            target.innerHTML=content;
-            overlay.style.display="flex";
-        }
-    };
-
-    window.closeAIBrain=function(){
-        const overlay=document.getElementById("v7Overlay");
-        if(overlay) overlay.style.display="none";
-    };
-
-    function updateV7DueCount(){
-        const el=document.getElementById("v7DueCount");
-        if(el){
-            const b=readBrain();
-            el.textContent=Object.values(b.words)
-                .filter(s=>Number(s.nextReview||0)<=now())
-                .length;
-        }
-    }
-
-    /*
-     * Wrap the existing checkAnswer once.
-     * Response time is measured from question display when available.
-     */
-    const originalCheckAnswer=window.checkAnswer;
-    let v7StartTime=0;
-
-    const originalShowQuestion=window.showQuestion;
-
-    if(typeof originalShowQuestion==="function"){
-        window.showQuestion=function(){
-            v7StartTime=now();
-            return originalShowQuestion.apply(this,arguments);
-        };
-    }
-
-    window.checkAnswer=function(selected,clickedButton){
-        const q=questions[currentQuestion];
-        const wasAnswered=answered;
-
-        if(typeof originalCheckAnswer==="function"){
-            originalCheckAnswer(selected,clickedButton);
-        }
-
-        if(!wasAnswered && answered && q && q.word){
-            updateWord(q.word,selected===q.answer,now()-v7StartTime);
-        }
-    };
-
-    /*
-     * Keep the V7 brain isolated from the old V6 SRS store.
-     * Existing learning data remains intact.
-     */
-    window.addEventListener("load",function(){
-        setTimeout(updateV7DueCount,300);
-    });
-
-    document.addEventListener("keydown",function(e){
-        if(e.key==="Escape") closeAIBrain();
-        if((e.key==="Enter" || e.key===" ") &&
-           answered &&
-           document.getElementById("nextButton") &&
-           document.getElementById("nextButton").style.display!=="none"){
-            e.preventDefault();
-            nextQuestion();
-        }
-    });
-
-})();
-</script>
-
+<style>
+.mode-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:28px}
+.mode-btn{border:1px solid #dceae3;background:#f7fbf9;border-radius:15px;padding:15px 10px;cursor:pointer;color:#315b4c}
+.mode-btn.primary{background:#08734f;color:#fff;border-color:#08734f}
+.mode-btn b,.mode-btn small{display:block}.mode-btn small{margin-top:5px;opacity:.72}
+.tutor-dashboard{padding:5px 0 10px}.dashboard-head{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:2px;color:#08734f;font-weight:800}.dashboard-head h2{margin:6px 0;font-size:30px}.dashboard-head p{color:#71857d;max-width:680px}
+.readiness{width:110px;height:110px;border:8px solid #dceae3;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#08734f;font-weight:800}.readiness span{font-size:30px}.readiness small{font-size:12px}.readiness label{font-size:10px;color:#71857d}
+.stats,.report-grid,.diag-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:22px 0}.stats>div,.report-grid>div,.diag-grid>div{background:#f7fbf9;border-radius:14px;padding:16px;text-align:center}.stats b,.report-grid b,.diag-grid b{display:block;font-size:24px;color:#08734f}.stats span,.report-grid small,.diag-grid span{font-size:12px;color:#71857d}
+.plan-card{background:#f2f7f4;border:1px solid #dceae3;border-radius:16px;padding:18px;margin:15px 0}.plan-title{font-weight:800;margin-bottom:8px}.plan-card span{color:#71857d}
+.start-large{width:100%;padding:16px;border:0;border-radius:14px;background:#08734f;color:#fff;font-size:17px;font-weight:800;cursor:pointer}
+.ai-reason{background:#f2f7f4;border-left:4px solid #299d69;padding:10px 14px;border-radius:8px;margin:15px 0;color:#49675c;font-size:14px}
+.option.correct{border-color:#299d69;background:#eef9f2}.option.wrong{border-color:#d76b6b;background:#fff2f2}
+.next-button:disabled{opacity:.45;cursor:not-allowed}.diagnosis{margin:20px 0}.diag-grid{grid-template-columns:repeat(3,1fr)}.diag-text{background:#f7fbf9;padding:16px;border-radius:14px}
+.result-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.secondary{background:#49675c}
+.report-summary{background:#f2f7f4;padding:18px;border-radius:15px}.report-summary b,.report-summary span{display:block}.report-summary b{font-size:22px;color:#08734f}.report-summary span{margin-top:6px;color:#71857d}
+.report-grid{grid-template-columns:repeat(4,1fr)}#report h3{margin-top:28px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chips span{background:#f2f7f4;border:1px solid #dceae3;padding:8px 12px;border-radius:20px;font-size:13px}
+.level-bars{display:grid;gap:9px}.lv{display:grid;grid-template-columns:70px 1fr 42px;gap:8px;align-items:center;font-size:12px}.lv>div{height:9px;background:#e7efeb;border-radius:9px;overflow:hidden}.lv i{display:block;height:100%;background:#299d69;border-radius:9px}
+@media(max-width:900px){.mode-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.mode-grid{grid-template-columns:1fr}.dashboard-head{align-items:flex-start}.readiness{width:90px;height:90px}.stats,.report-grid{grid-template-columns:repeat(2,1fr)}.diag-grid{grid-template-columns:1fr}.dashboard-head h2{font-size:24px}}
+</style>
 </body>
 </html>
