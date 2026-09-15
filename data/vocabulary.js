@@ -13757,6 +13757,26 @@ window.vocabularyInfo = {
     5: {
       name: "Challenge",
       target: 100
+    },
+     6: {
+      name: "Foundation",
+      target: 200
+    },
+    7: {
+      name: "Core",
+      target: 250
+    },
+    8: {
+      name: "PSLE",
+      target: 250
+    },
+    9: {
+      name: "Advanced",
+      target: 200
+    },
+    10: {
+      name: "Challenge",
+      target: 100
     }
   }
 };
