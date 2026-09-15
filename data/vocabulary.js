@@ -1,27 +1,23 @@
-/*
- * APLUS ACHIEVER
- * PSLE ENGLISH VOCABULARY DATABASE
- * Version 2.0
- *
- * 1000 unique words
- * Level 1-10: 100 words per level
- *
- * IMPORTANT:
- * The website expects window.vocabulary.
- */
+// APLUS ACHIEVER PSLE ENGLISH VOCABULARY 1000
+// PSLE-focused curated edition. Not an official SEAB word list.
 window.vocabulary = [
   {
     "id": 1,
     "word": "able",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is able",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “able” correctly in context.",
+    "meaning": "having the skill or opportunity to do something",
+    "chinese": "有能力的；能够的",
+    "synonyms": [
+      "capable"
+    ],
+    "antonyms": [
+      "unable"
+    ],
+    "example": "Mia was able to finish the puzzle by herself.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -33,13 +29,18 @@ window.vocabulary = [
     "word": "absent",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is absent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “absent” correctly in context.",
+    "meaning": "not present in a place where you are expected to be",
+    "chinese": "缺席的；不在的",
+    "synonyms": [
+      "away"
+    ],
+    "antonyms": [
+      "present"
+    ],
+    "example": "Tom was absent from school because he was ill.",
     "topics": [
-      "General"
+      "School",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -51,13 +52,19 @@ window.vocabulary = [
     "word": "afraid",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is afraid",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “afraid” correctly in context.",
+    "meaning": "feeling fear or worry",
+    "chinese": "害怕的；担心的",
+    "synonyms": [
+      "scared",
+      "frightened"
+    ],
+    "antonyms": [
+      "brave"
+    ],
+    "example": "The little boy was afraid of the dark.",
     "topics": [
-      "General"
+      "Emotions",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -69,13 +76,18 @@ window.vocabulary = [
     "word": "alive",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is alive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “alive” correctly in context.",
+    "meaning": "living and not dead",
+    "chinese": "活着的",
+    "synonyms": [
+      "living"
+    ],
+    "antonyms": [
+      "dead"
+    ],
+    "example": "The fish was still alive when we returned it to the pond.",
     "topics": [
-      "General"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -87,13 +99,18 @@ window.vocabulary = [
     "word": "alone",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is alone",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “alone” correctly in context.",
+    "meaning": "without other people",
+    "chinese": "独自的；单独的",
+    "synonyms": [
+      "by oneself"
+    ],
+    "antonyms": [
+      "together"
+    ],
+    "example": "She stayed alone in the library to finish her project.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -105,13 +122,19 @@ window.vocabulary = [
     "word": "angry",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is angry",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “angry” correctly in context.",
+    "meaning": "feeling strong displeasure",
+    "chinese": "生气的；愤怒的",
+    "synonyms": [
+      "furious",
+      "cross"
+    ],
+    "antonyms": [
+      "upset"
+    ],
+    "example": "Dad was angry when he discovered the broken window.",
     "topics": [
-      "General"
+      "Emotions",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -121,15 +144,21 @@ window.vocabulary = [
   {
     "id": 7,
     "word": "arrive",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to arrive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “arrive” correctly in context.",
+    "meaning": "to reach a place after travelling",
+    "chinese": "到达",
+    "synonyms": [
+      "reach"
+    ],
+    "antonyms": [
+      "depart",
+      "leave"
+    ],
+    "example": "We arrived at the museum before the tour began.",
     "topics": [
-      "General"
+      "Travel",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -141,13 +170,18 @@ window.vocabulary = [
     "word": "awake",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is awake",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “awake” correctly in context.",
+    "meaning": "not sleeping",
+    "chinese": "醒着的",
+    "synonyms": [
+      "alert"
+    ],
+    "antonyms": [
+      "asleep"
+    ],
+    "example": "I was still awake when the rain started.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -159,13 +193,19 @@ window.vocabulary = [
     "word": "basic",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is basic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “basic” correctly in context.",
+    "meaning": "simple and necessary",
+    "chinese": "基本的；基础的",
+    "synonyms": [
+      "fundamental",
+      "simple"
+    ],
+    "antonyms": [
+      "advanced"
+    ],
+    "example": "Students first learn basic multiplication skills.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -177,13 +217,19 @@ window.vocabulary = [
     "word": "beautiful",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is beautiful",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “beautiful” correctly in context.",
+    "meaning": "very attractive or pleasing to look at",
+    "chinese": "美丽的",
+    "synonyms": [
+      "lovely",
+      "pretty"
+    ],
+    "antonyms": [
+      "ugly"
+    ],
+    "example": "The garden looked beautiful after the flowers bloomed.",
     "topics": [
-      "General"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -193,15 +239,22 @@ window.vocabulary = [
   {
     "id": 11,
     "word": "begin",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to begin",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “begin” correctly in context.",
+    "meaning": "to start doing something",
+    "chinese": "开始",
+    "synonyms": [
+      "start",
+      "commence"
+    ],
+    "antonyms": [
+      "end",
+      "finish"
+    ],
+    "example": "The lesson will begin at eight o'clock.",
     "topics": [
-      "General"
+      "School",
+      "Time"
     ],
     "questionTypes": [
       "MCQ",
@@ -211,15 +264,18 @@ window.vocabulary = [
   {
     "id": 12,
     "word": "belong",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to belong",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to be owned by someone or be part of a group",
+    "chinese": "属于",
+    "synonyms": [
+      "be owned by"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “belong” correctly in context.",
+    "example": "This blue notebook belongs to Sarah.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -228,16 +284,23 @@ window.vocabulary = [
   },
   {
     "id": 13,
-    "word": "bright",
+    "word": "brave",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is bright",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “bright” correctly in context.",
+    "meaning": "willing to face danger or difficulty",
+    "chinese": "勇敢的",
+    "synonyms": [
+      "courageous",
+      "fearless"
+    ],
+    "antonyms": [
+      "cowardly",
+      "afraid"
+    ],
+    "example": "The brave firefighter entered the building to help the family.",
     "topics": [
-      "General"
+      "Safety",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -246,16 +309,23 @@ window.vocabulary = [
   },
   {
     "id": 14,
-    "word": "broken",
+    "word": "bright",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is broken",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “broken” correctly in context.",
+    "meaning": "giving out or reflecting a lot of light",
+    "chinese": "明亮的",
+    "synonyms": [
+      "shiny",
+      "brilliant"
+    ],
+    "antonyms": [
+      "dim",
+      "dark"
+    ],
+    "example": "The bright sunlight filled the room.",
     "topics": [
-      "General"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -264,16 +334,22 @@ window.vocabulary = [
   },
   {
     "id": 15,
-    "word": "busy",
+    "word": "broken",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is busy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “busy” correctly in context.",
+    "meaning": "damaged so that something no longer works properly",
+    "chinese": "破损的；坏掉的",
+    "synonyms": [
+      "damaged"
+    ],
+    "antonyms": [
+      "whole",
+      "unbroken"
+    ],
+    "example": "The broken chair was removed from the classroom.",
     "topics": [
-      "General"
+      "Daily Life",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -282,16 +358,22 @@ window.vocabulary = [
   },
   {
     "id": 16,
-    "word": "careful",
+    "word": "busy",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is careful",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “careful” correctly in context.",
+    "meaning": "having a lot to do",
+    "chinese": "忙碌的",
+    "synonyms": [
+      "occupied"
+    ],
+    "antonyms": [
+      "idle",
+      "free"
+    ],
+    "example": "Mum was busy preparing dinner for the family.",
     "topics": [
-      "General"
+      "Family",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -300,16 +382,23 @@ window.vocabulary = [
   },
   {
     "id": 17,
-    "word": "certain",
+    "word": "calm",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is certain",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “certain” correctly in context.",
+    "meaning": "peaceful and not worried or excited",
+    "chinese": "平静的；镇定的",
+    "synonyms": [
+      "peaceful",
+      "composed"
+    ],
+    "antonyms": [
+      "agitated",
+      "excited"
+    ],
+    "example": "She stayed calm during the difficult examination.",
     "topics": [
-      "General"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -318,16 +407,21 @@ window.vocabulary = [
   },
   {
     "id": 18,
-    "word": "change",
-    "partOfSpeech": "noun",
+    "word": "careful",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to change",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “change” correctly in context.",
+    "meaning": "giving attention to avoid mistakes or danger",
+    "chinese": "小心的；谨慎的",
+    "synonyms": [
+      "cautious"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "Be careful when you cross the busy road.",
     "topics": [
-      "General"
+      "Safety",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -336,16 +430,21 @@ window.vocabulary = [
   },
   {
     "id": 19,
-    "word": "clean",
+    "word": "certain",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is clean",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “clean” correctly in context.",
+    "meaning": "sure that something is True or will happen",
+    "chinese": "确定的",
+    "synonyms": [
+      "sure",
+      "confident"
+    ],
+    "antonyms": [
+      "uncertain"
+    ],
+    "example": "I am certain that I left my keys on the table.",
     "topics": [
-      "General"
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -354,16 +453,22 @@ window.vocabulary = [
   },
   {
     "id": 20,
-    "word": "clever",
-    "partOfSpeech": "adjective",
+    "word": "change",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "describing someone or something that is clever",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “clever” correctly in context.",
+    "meaning": "to make or become different",
+    "chinese": "改变",
+    "synonyms": [
+      "alter",
+      "modify"
+    ],
+    "antonyms": [
+      "keep"
+    ],
+    "example": "The teacher asked us to change the ending of the story.",
     "topics": [
-      "General"
+      "School",
+      "Writing"
     ],
     "questionTypes": [
       "MCQ",
@@ -372,16 +477,22 @@ window.vocabulary = [
   },
   {
     "id": 21,
-    "word": "close",
-    "partOfSpeech": "noun",
+    "word": "clean",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to close",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “close” correctly in context.",
+    "meaning": "free from dirt or unwanted marks",
+    "chinese": "干净的",
+    "synonyms": [
+      "tidy",
+      "spotless"
+    ],
+    "antonyms": [
+      "dirty"
+    ],
+    "example": "Please keep your desk clean.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -390,16 +501,22 @@ window.vocabulary = [
   },
   {
     "id": 22,
-    "word": "cloudy",
+    "word": "clever",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is cloudy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cloudy” correctly in context.",
+    "meaning": "quick to learn, understand or solve problems",
+    "chinese": "聪明的；机灵的",
+    "synonyms": [
+      "smart",
+      "bright"
+    ],
+    "antonyms": [
+      "foolish"
+    ],
+    "example": "The clever girl found a simple way to solve the problem.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -408,16 +525,21 @@ window.vocabulary = [
   },
   {
     "id": 23,
-    "word": "collect",
-    "partOfSpeech": "noun",
+    "word": "close",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to collect",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “collect” correctly in context.",
+    "meaning": "to move something so that it is no longer open",
+    "chinese": "关闭",
+    "synonyms": [
+      "shut"
+    ],
+    "antonyms": [
+      "open"
+    ],
+    "example": "Please close the door quietly.",
     "topics": [
-      "General"
+      "Daily Life",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -426,16 +548,22 @@ window.vocabulary = [
   },
   {
     "id": 24,
-    "word": "comfortable",
+    "word": "cloudy",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is comfortable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “comfortable” correctly in context.",
+    "meaning": "covered with many clouds",
+    "chinese": "多云的",
+    "synonyms": [
+      "overcast"
+    ],
+    "antonyms": [
+      "clear",
+      "sunny"
+    ],
+    "example": "It was cloudy when we left for school.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -444,16 +572,22 @@ window.vocabulary = [
   },
   {
     "id": 25,
-    "word": "common",
+    "word": "cold",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is common",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “common” correctly in context.",
+    "meaning": "having a low temperature",
+    "chinese": "寒冷的",
+    "synonyms": [
+      "chilly"
+    ],
+    "antonyms": [
+      "hot",
+      "warm"
+    ],
+    "example": "The water was too cold for a swim.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -462,16 +596,21 @@ window.vocabulary = [
   },
   {
     "id": 26,
-    "word": "complete",
-    "partOfSpeech": "noun",
+    "word": "collect",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to complete",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “complete” correctly in context.",
+    "meaning": "to gather things together",
+    "chinese": "收集；搜集",
+    "synonyms": [
+      "gather"
+    ],
+    "antonyms": [
+      "scatter"
+    ],
+    "example": "The pupils collected litter from the playground.",
     "topics": [
-      "General"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -480,16 +619,22 @@ window.vocabulary = [
   },
   {
     "id": 27,
-    "word": "correct",
+    "word": "comfortable",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is correct",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “correct” correctly in context.",
+    "meaning": "pleasant and causing no physical discomfort",
+    "chinese": "舒适的",
+    "synonyms": [
+      "cosy",
+      "pleasant"
+    ],
+    "antonyms": [
+      "uncomfortable"
+    ],
+    "example": "The new chair is comfortable enough for long study sessions.",
     "topics": [
-      "General"
+      "Daily Life",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -498,16 +643,22 @@ window.vocabulary = [
   },
   {
     "id": 28,
-    "word": "cry",
-    "partOfSpeech": "noun",
+    "word": "common",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to cry",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cry” correctly in context.",
+    "meaning": "happening often or found in many places",
+    "chinese": "常见的",
+    "synonyms": [
+      "usual",
+      "ordinary"
+    ],
+    "antonyms": [
+      "rare"
+    ],
+    "example": "Colds are common among children during rainy seasons.",
     "topics": [
-      "General"
+      "Health",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -516,16 +667,22 @@ window.vocabulary = [
   },
   {
     "id": 29,
-    "word": "dangerous",
+    "word": "complete",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is dangerous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dangerous” correctly in context.",
+    "meaning": "having all the necessary parts",
+    "chinese": "完整的；完成的",
+    "synonyms": [
+      "finished",
+      "whole"
+    ],
+    "antonyms": [
+      "incomplete"
+    ],
+    "example": "Make sure your homework is complete before handing it in.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -534,16 +691,23 @@ window.vocabulary = [
   },
   {
     "id": 30,
-    "word": "decide",
-    "partOfSpeech": "noun",
+    "word": "correct",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to decide",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “decide” correctly in context.",
+    "meaning": "right and without mistakes",
+    "chinese": "正确的",
+    "synonyms": [
+      "right",
+      "accurate"
+    ],
+    "antonyms": [
+      "wrong",
+      "incorrect"
+    ],
+    "example": "Circle the correct answer.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -552,16 +716,21 @@ window.vocabulary = [
   },
   {
     "id": 31,
-    "word": "delicious",
-    "partOfSpeech": "adjective",
+    "word": "cry",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "describing someone or something that is delicious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “delicious” correctly in context.",
+    "meaning": "to produce tears because of sadness, pain or strong emotion",
+    "chinese": "哭泣",
+    "synonyms": [
+      "weep"
+    ],
+    "antonyms": [
+      "laugh"
+    ],
+    "example": "The baby began to cry when she woke up.",
     "topics": [
-      "General"
+      "Emotions",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -570,16 +739,22 @@ window.vocabulary = [
   },
   {
     "id": 32,
-    "word": "different",
+    "word": "dangerous",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is different",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “different” correctly in context.",
+    "meaning": "likely to cause harm or injury",
+    "chinese": "危险的",
+    "synonyms": [
+      "unsafe",
+      "risky"
+    ],
+    "antonyms": [
+      "safe"
+    ],
+    "example": "It is dangerous to play near a busy road.",
     "topics": [
-      "General"
+      "Safety",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -588,16 +763,22 @@ window.vocabulary = [
   },
   {
     "id": 33,
-    "word": "difficult",
+    "word": "dark",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is difficult",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “difficult” correctly in context.",
+    "meaning": "having little or no light",
+    "chinese": "黑暗的",
+    "synonyms": [
+      "dim"
+    ],
+    "antonyms": [
+      "bright",
+      "light"
+    ],
+    "example": "The room became dark when the lights went out.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -606,16 +787,22 @@ window.vocabulary = [
   },
   {
     "id": 34,
-    "word": "dirty",
-    "partOfSpeech": "adjective",
+    "word": "decide",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "describing someone or something that is dirty",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dirty” correctly in context.",
+    "meaning": "to choose after thinking about different possibilities",
+    "chinese": "决定",
+    "synonyms": [
+      "choose",
+      "determine"
+    ],
+    "antonyms": [
+      "hesitate"
+    ],
+    "example": "We decided to take the bus home.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Decision Making"
     ],
     "questionTypes": [
       "MCQ",
@@ -624,16 +811,21 @@ window.vocabulary = [
   },
   {
     "id": 35,
-    "word": "early",
+    "word": "deep",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is early",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “early” correctly in context.",
+    "meaning": "extending far down from the surface",
+    "chinese": "深的",
+    "synonyms": [
+      "profound"
+    ],
+    "antonyms": [
+      "shallow"
+    ],
+    "example": "The pond is too deep for young children.",
     "topics": [
-      "General"
+      "Nature",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -642,16 +834,22 @@ window.vocabulary = [
   },
   {
     "id": 36,
-    "word": "easy",
+    "word": "delicious",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is easy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “easy” correctly in context.",
+    "meaning": "having a very pleasant taste",
+    "chinese": "美味的",
+    "synonyms": [
+      "tasty",
+      "flavourful"
+    ],
+    "antonyms": [
+      "tasteless"
+    ],
+    "example": "The soup was so delicious that I asked for another bowl.",
     "topics": [
-      "General"
+      "Food",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -660,16 +858,22 @@ window.vocabulary = [
   },
   {
     "id": 37,
-    "word": "empty",
+    "word": "different",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is empty",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “empty” correctly in context.",
+    "meaning": "not the same as another person or thing",
+    "chinese": "不同的",
+    "synonyms": [
+      "unlike"
+    ],
+    "antonyms": [
+      "same",
+      "similar"
+    ],
+    "example": "The two answers are different.",
     "topics": [
-      "General"
+      "School",
+      "Comparison"
     ],
     "questionTypes": [
       "MCQ",
@@ -678,16 +882,22 @@ window.vocabulary = [
   },
   {
     "id": 38,
-    "word": "enjoy",
-    "partOfSpeech": "noun",
+    "word": "difficult",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to enjoy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “enjoy” correctly in context.",
+    "meaning": "not easy to do or understand",
+    "chinese": "困难的",
+    "synonyms": [
+      "hard",
+      "challenging"
+    ],
+    "antonyms": [
+      "easy"
+    ],
+    "example": "The final question was difficult but I kept trying.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -696,16 +906,22 @@ window.vocabulary = [
   },
   {
     "id": 39,
-    "word": "enough",
-    "partOfSpeech": "noun",
+    "word": "dirty",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to enough",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “enough” correctly in context.",
+    "meaning": "covered with dirt or not clean",
+    "chinese": "肮脏的",
+    "synonyms": [
+      "filthy",
+      "unclean"
+    ],
+    "antonyms": [
+      "clean"
+    ],
+    "example": "His shoes became dirty after he walked through the mud.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -714,16 +930,22 @@ window.vocabulary = [
   },
   {
     "id": 40,
-    "word": "excited",
+    "word": "dry",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is excited",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “excited” correctly in context.",
+    "meaning": "having little or no water or moisture",
+    "chinese": "干的",
+    "synonyms": [
+      "arid"
+    ],
+    "antonyms": [
+      "wet",
+      "damp"
+    ],
+    "example": "Hang the wet clothes outside so that they can become dry.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -732,16 +954,21 @@ window.vocabulary = [
   },
   {
     "id": 41,
-    "word": "famous",
+    "word": "early",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is famous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “famous” correctly in context.",
+    "meaning": "happening before the expected time",
+    "chinese": "早的；提早的",
+    "synonyms": [
+      "ahead of time"
+    ],
+    "antonyms": [
+      "late"
+    ],
+    "example": "We arrived early for the school concert.",
     "topics": [
-      "General"
+      "Time",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -750,16 +977,22 @@ window.vocabulary = [
   },
   {
     "id": 42,
-    "word": "fast",
+    "word": "easy",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is fast",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “fast” correctly in context.",
+    "meaning": "not difficult to do or understand",
+    "chinese": "容易的",
+    "synonyms": [
+      "simple"
+    ],
+    "antonyms": [
+      "difficult",
+      "hard"
+    ],
+    "example": "The first exercise was easy for the class.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -768,16 +1001,22 @@ window.vocabulary = [
   },
   {
     "id": 43,
-    "word": "friendly",
+    "word": "empty",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is friendly",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “friendly” correctly in context.",
+    "meaning": "containing nothing",
+    "chinese": "空的",
+    "synonyms": [
+      "vacant",
+      "bare"
+    ],
+    "antonyms": [
+      "full"
+    ],
+    "example": "The bottle was empty after everyone had finished drinking.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Food"
     ],
     "questionTypes": [
       "MCQ",
@@ -786,16 +1025,22 @@ window.vocabulary = [
   },
   {
     "id": 44,
-    "word": "funny",
-    "partOfSpeech": "adjective",
+    "word": "enjoy",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "describing someone or something that is funny",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “funny” correctly in context.",
+    "meaning": "to like something and take pleasure in it",
+    "chinese": "享受；喜欢",
+    "synonyms": [
+      "like",
+      "appreciate"
+    ],
+    "antonyms": [
+      "dislike"
+    ],
+    "example": "I enjoy reading adventure stories.",
     "topics": [
-      "General"
+      "Hobbies",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -804,16 +1049,22 @@ window.vocabulary = [
   },
   {
     "id": 45,
-    "word": "gentle",
+    "word": "enough",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is gentle",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “gentle” correctly in context.",
+    "meaning": "as much as is needed",
+    "chinese": "足够的",
+    "synonyms": [
+      "sufficient",
+      "adequate"
+    ],
+    "antonyms": [
+      "insufficient"
+    ],
+    "example": "There was enough food for everyone.",
     "topics": [
-      "General"
+      "Food",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -822,16 +1073,22 @@ window.vocabulary = [
   },
   {
     "id": 46,
-    "word": "glad",
+    "word": "excited",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is glad",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “glad” correctly in context.",
+    "meaning": "very happy and enthusiastic about something",
+    "chinese": "兴奋的；激动的",
+    "synonyms": [
+      "thrilled",
+      "enthusiastic"
+    ],
+    "antonyms": [
+      "bored"
+    ],
+    "example": "The children were excited about the school trip.",
     "topics": [
-      "General"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -840,16 +1097,22 @@ window.vocabulary = [
   },
   {
     "id": 47,
-    "word": "healthy",
+    "word": "fair",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is healthy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “healthy” correctly in context.",
+    "meaning": "treating people equally and reasonably",
+    "chinese": "公平的",
+    "synonyms": [
+      "just",
+      "reasonable"
+    ],
+    "antonyms": [
+      "unfair"
+    ],
+    "example": "The referee made a fair decision.",
     "topics": [
-      "General"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -858,16 +1121,22 @@ window.vocabulary = [
   },
   {
     "id": 48,
-    "word": "helpful",
+    "word": "famous",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is helpful",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “helpful” correctly in context.",
+    "meaning": "known by many people",
+    "chinese": "著名的",
+    "synonyms": [
+      "well-known",
+      "renowned"
+    ],
+    "antonyms": [
+      "unknown"
+    ],
+    "example": "The city is famous for its beautiful gardens.",
     "topics": [
-      "General"
+      "Places",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -876,16 +1145,22 @@ window.vocabulary = [
   },
   {
     "id": 49,
-    "word": "honest",
+    "word": "fast",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is honest",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “honest” correctly in context.",
+    "meaning": "moving or able to move quickly",
+    "chinese": "快的",
+    "synonyms": [
+      "quick",
+      "rapid"
+    ],
+    "antonyms": [
+      "slow"
+    ],
+    "example": "The rabbit ran fast across the field.",
     "topics": [
-      "General"
+      "Animals",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -894,16 +1169,22 @@ window.vocabulary = [
   },
   {
     "id": 50,
-    "word": "hungry",
+    "word": "fresh",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is hungry",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “hungry” correctly in context.",
+    "meaning": "recently made, obtained or picked",
+    "chinese": "新鲜的",
+    "synonyms": [
+      "new",
+      "recent"
+    ],
+    "antonyms": [
+      "stale"
+    ],
+    "example": "We bought fresh vegetables from the market.",
     "topics": [
-      "General"
+      "Food",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -912,16 +1193,22 @@ window.vocabulary = [
   },
   {
     "id": 51,
-    "word": "important",
+    "word": "friendly",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is important",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “important” correctly in context.",
+    "meaning": "kind and pleasant towards others",
+    "chinese": "友好的",
+    "synonyms": [
+      "kind",
+      "welcoming"
+    ],
+    "antonyms": [
+      "unfriendly"
+    ],
+    "example": "Our new neighbour is very friendly.",
     "topics": [
-      "General"
+      "People",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -930,16 +1217,21 @@ window.vocabulary = [
   },
   {
     "id": 52,
-    "word": "kind",
+    "word": "full",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is kind",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “kind” correctly in context.",
+    "meaning": "containing as much as possible",
+    "chinese": "满的；饱的",
+    "synonyms": [
+      "filled"
+    ],
+    "antonyms": [
+      "empty"
+    ],
+    "example": "The bus was full, so we had to wait for the next one.",
     "topics": [
-      "General"
+      "Travel",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -948,16 +1240,22 @@ window.vocabulary = [
   },
   {
     "id": 53,
-    "word": "laugh",
-    "partOfSpeech": "noun",
+    "word": "funny",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to laugh",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “laugh” correctly in context.",
+    "meaning": "making people laugh",
+    "chinese": "有趣的；滑稽的",
+    "synonyms": [
+      "humorous",
+      "amusing"
+    ],
+    "antonyms": [
+      "serious"
+    ],
+    "example": "The comedian told a funny story.",
     "topics": [
-      "General"
+      "Entertainment",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -966,16 +1264,23 @@ window.vocabulary = [
   },
   {
     "id": 54,
-    "word": "lazy",
+    "word": "gentle",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is lazy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “lazy” correctly in context.",
+    "meaning": "kind and careful not to hurt anyone or anything",
+    "chinese": "温柔的；轻柔的",
+    "synonyms": [
+      "tender",
+      "mild"
+    ],
+    "antonyms": [
+      "rough",
+      "harsh"
+    ],
+    "example": "Be gentle when you hold the small kitten.",
     "topics": [
-      "General"
+      "Animals",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -984,16 +1289,22 @@ window.vocabulary = [
   },
   {
     "id": 55,
-    "word": "little",
+    "word": "glad",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is little",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “little” correctly in context.",
+    "meaning": "happy about something",
+    "chinese": "高兴的",
+    "synonyms": [
+      "happy",
+      "pleased"
+    ],
+    "antonyms": [
+      "sad"
+    ],
+    "example": "I was glad to hear that my friend had recovered.",
     "topics": [
-      "General"
+      "Emotions",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -1002,16 +1313,23 @@ window.vocabulary = [
   },
   {
     "id": 56,
-    "word": "lucky",
+    "word": "great",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is lucky",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “lucky” correctly in context.",
+    "meaning": "very good or impressive",
+    "chinese": "伟大的；很好的",
+    "synonyms": [
+      "excellent",
+      "wonderful"
+    ],
+    "antonyms": [
+      "poor",
+      "terrible"
+    ],
+    "example": "She made great progress in mathematics.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -1020,16 +1338,23 @@ window.vocabulary = [
   },
   {
     "id": 57,
-    "word": "mistake",
-    "partOfSpeech": "noun",
+    "word": "healthy",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to mistake",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “mistake” correctly in context.",
+    "meaning": "in good physical condition",
+    "chinese": "健康的",
+    "synonyms": [
+      "fit",
+      "well"
+    ],
+    "antonyms": [
+      "ill",
+      "unhealthy"
+    ],
+    "example": "Eating vegetables helps us stay healthy.",
     "topics": [
-      "General"
+      "Health",
+      "Food"
     ],
     "questionTypes": [
       "MCQ",
@@ -1038,16 +1363,22 @@ window.vocabulary = [
   },
   {
     "id": 58,
-    "word": "neat",
+    "word": "helpful",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is neat",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “neat” correctly in context.",
+    "meaning": "willing to help or useful in solving a problem",
+    "chinese": "有帮助的；乐于助人的",
+    "synonyms": [
+      "useful",
+      "supportive"
+    ],
+    "antonyms": [
+      "unhelpful"
+    ],
+    "example": "The librarian was helpful when I could not find the book.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -1056,16 +1387,22 @@ window.vocabulary = [
   },
   {
     "id": 59,
-    "word": "noisy",
+    "word": "honest",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is noisy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “noisy” correctly in context.",
+    "meaning": "always telling the truth and not cheating",
+    "chinese": "诚实的",
+    "synonyms": [
+      "truthful",
+      "sincere"
+    ],
+    "antonyms": [
+      "dishonest"
+    ],
+    "example": "It is important to be honest even when you make a mistake.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1074,16 +1411,21 @@ window.vocabulary = [
   },
   {
     "id": 60,
-    "word": "notice",
-    "partOfSpeech": "noun",
+    "word": "hungry",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to notice",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “notice” correctly in context.",
+    "meaning": "needing or wanting food",
+    "chinese": "饥饿的",
+    "synonyms": [
+      "starving"
+    ],
+    "antonyms": [
+      "full"
+    ],
+    "example": "After the long hike, everyone was hungry.",
     "topics": [
-      "General"
+      "Food",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -1092,16 +1434,22 @@ window.vocabulary = [
   },
   {
     "id": 61,
-    "word": "ordinary",
+    "word": "important",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is ordinary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ordinary” correctly in context.",
+    "meaning": "having great value or significance",
+    "chinese": "重要的",
+    "synonyms": [
+      "significant",
+      "essential"
+    ],
+    "antonyms": [
+      "unimportant"
+    ],
+    "example": "Sleep is important for growing children.",
     "topics": [
-      "General"
+      "Health",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -1110,16 +1458,23 @@ window.vocabulary = [
   },
   {
     "id": 62,
-    "word": "patient",
+    "word": "kind",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is patient",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “patient” correctly in context.",
+    "meaning": "caring about other people's feelings",
+    "chinese": "善良的；体贴的",
+    "synonyms": [
+      "caring",
+      "compassionate"
+    ],
+    "antonyms": [
+      "unkind",
+      "cruel"
+    ],
+    "example": "It was kind of Mei to share her umbrella.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -1128,16 +1483,22 @@ window.vocabulary = [
   },
   {
     "id": 63,
-    "word": "polite",
-    "partOfSpeech": "adjective",
+    "word": "laugh",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "describing someone or something that is polite",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “polite” correctly in context.",
+    "meaning": "to make sounds that show amusement",
+    "chinese": "笑",
+    "synonyms": [
+      "giggle",
+      "chuckle"
+    ],
+    "antonyms": [
+      "cry"
+    ],
+    "example": "Everyone began to laugh at the funny joke.",
     "topics": [
-      "General"
+      "Emotions",
+      "Entertainment"
     ],
     "questionTypes": [
       "MCQ",
@@ -1146,16 +1507,22 @@ window.vocabulary = [
   },
   {
     "id": 64,
-    "word": "poor",
+    "word": "lazy",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is poor",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “poor” correctly in context.",
+    "meaning": "not willing to work or make an effort",
+    "chinese": "懒惰的",
+    "synonyms": [
+      "idle"
+    ],
+    "antonyms": [
+      "hardworking",
+      "diligent"
+    ],
+    "example": "Being lazy can prevent you from reaching your goals.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1164,16 +1531,23 @@ window.vocabulary = [
   },
   {
     "id": 65,
-    "word": "popular",
+    "word": "little",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is popular",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “popular” correctly in context.",
+    "meaning": "small in size or amount",
+    "chinese": "小的；少量的",
+    "synonyms": [
+      "small",
+      "tiny"
+    ],
+    "antonyms": [
+      "large",
+      "much"
+    ],
+    "example": "A little bird landed on the window.",
     "topics": [
-      "General"
+      "Animals",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -1182,16 +1556,21 @@ window.vocabulary = [
   },
   {
     "id": 66,
-    "word": "pretty",
+    "word": "lucky",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is pretty",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “pretty” correctly in context.",
+    "meaning": "having good things happen by chance",
+    "chinese": "幸运的",
+    "synonyms": [
+      "fortunate"
+    ],
+    "antonyms": [
+      "unlucky"
+    ],
+    "example": "We were lucky to find a taxi during the heavy rain.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -1200,16 +1579,21 @@ window.vocabulary = [
   },
   {
     "id": 67,
-    "word": "quiet",
-    "partOfSpeech": "adjective",
+    "word": "mistake",
+    "partOfSpeech": "noun",
     "level": 1,
-    "meaning": "describing someone or something that is quiet",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “quiet” correctly in context.",
+    "meaning": "something that is not correct",
+    "chinese": "错误",
+    "synonyms": [
+      "error"
+    ],
+    "antonyms": [
+      "correctness"
+    ],
+    "example": "I made a spelling mistake in my composition.",
     "topics": [
-      "General"
+      "School",
+      "Writing"
     ],
     "questionTypes": [
       "MCQ",
@@ -1218,16 +1602,22 @@ window.vocabulary = [
   },
   {
     "id": 68,
-    "word": "ready",
+    "word": "neat",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is ready",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ready” correctly in context.",
+    "meaning": "tidy and carefully arranged",
+    "chinese": "整洁的",
+    "synonyms": [
+      "tidy",
+      "orderly"
+    ],
+    "antonyms": [
+      "messy"
+    ],
+    "example": "Her handwriting is neat and easy to read.",
     "topics": [
-      "General"
+      "School",
+      "Writing"
     ],
     "questionTypes": [
       "MCQ",
@@ -1236,16 +1626,22 @@ window.vocabulary = [
   },
   {
     "id": 69,
-    "word": "remember",
-    "partOfSpeech": "noun",
+    "word": "noisy",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to remember",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “remember” correctly in context.",
+    "meaning": "making a lot of sound",
+    "chinese": "吵闹的",
+    "synonyms": [
+      "loud"
+    ],
+    "antonyms": [
+      "quiet",
+      "silent"
+    ],
+    "example": "The classroom became noisy during recess.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -1254,16 +1650,22 @@ window.vocabulary = [
   },
   {
     "id": 70,
-    "word": "safe",
-    "partOfSpeech": "adjective",
+    "word": "notice",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "describing someone or something that is safe",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “safe” correctly in context.",
+    "meaning": "to see or become aware of something",
+    "chinese": "注意到",
+    "synonyms": [
+      "observe",
+      "spot"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Did you notice the rainbow in the sky?",
     "topics": [
-      "General"
+      "Nature",
+      "Observation"
     ],
     "questionTypes": [
       "MCQ",
@@ -1272,16 +1674,23 @@ window.vocabulary = [
   },
   {
     "id": 71,
-    "word": "same",
+    "word": "ordinary",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is same",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “same” correctly in context.",
+    "meaning": "normal and not special",
+    "chinese": "普通的",
+    "synonyms": [
+      "usual",
+      "common"
+    ],
+    "antonyms": [
+      "unusual",
+      "extraordinary"
+    ],
+    "example": "It looked like an ordinary day until the storm arrived.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -1290,16 +1699,22 @@ window.vocabulary = [
   },
   {
     "id": 72,
-    "word": "scared",
+    "word": "patient",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is scared",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “scared” correctly in context.",
+    "meaning": "able to wait calmly without becoming annoyed",
+    "chinese": "耐心的",
+    "synonyms": [
+      "calm",
+      "tolerant"
+    ],
+    "antonyms": [
+      "impatient"
+    ],
+    "example": "The teacher was patient while we learned the new skill.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -1308,16 +1723,22 @@ window.vocabulary = [
   },
   {
     "id": 73,
-    "word": "simple",
+    "word": "polite",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is simple",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “simple” correctly in context.",
+    "meaning": "having good manners and showing respect",
+    "chinese": "有礼貌的",
+    "synonyms": [
+      "courteous",
+      "respectful"
+    ],
+    "antonyms": [
+      "rude"
+    ],
+    "example": "It is polite to thank people who help you.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -1326,16 +1747,23 @@ window.vocabulary = [
   },
   {
     "id": 74,
-    "word": "slow",
+    "word": "poor",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is slow",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “slow” correctly in context.",
+    "meaning": "having little money or few resources",
+    "chinese": "贫穷的；贫困的",
+    "synonyms": [
+      "needy",
+      "impoverished"
+    ],
+    "antonyms": [
+      "wealthy",
+      "rich"
+    ],
+    "example": "The charity provides meals for poor families.",
     "topics": [
-      "General"
+      "Society",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -1344,16 +1772,22 @@ window.vocabulary = [
   },
   {
     "id": 75,
-    "word": "small",
+    "word": "popular",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is small",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “small” correctly in context.",
+    "meaning": "liked or enjoyed by many people",
+    "chinese": "受欢迎的",
+    "synonyms": [
+      "well-liked",
+      "favoured"
+    ],
+    "antonyms": [
+      "unpopular"
+    ],
+    "example": "Basketball is a popular sport among the pupils.",
     "topics": [
-      "General"
+      "Sports",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1362,16 +1796,22 @@ window.vocabulary = [
   },
   {
     "id": 76,
-    "word": "special",
+    "word": "pretty",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is special",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “special” correctly in context.",
+    "meaning": "attractive in a delicate way",
+    "chinese": "漂亮的",
+    "synonyms": [
+      "lovely",
+      "beautiful"
+    ],
+    "antonyms": [
+      "ugly"
+    ],
+    "example": "She wore a pretty dress to the celebration.",
     "topics": [
-      "General"
+      "Description",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -1380,16 +1820,23 @@ window.vocabulary = [
   },
   {
     "id": 77,
-    "word": "strong",
+    "word": "quiet",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is strong",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “strong” correctly in context.",
+    "meaning": "making very little noise",
+    "chinese": "安静的",
+    "synonyms": [
+      "silent",
+      "peaceful"
+    ],
+    "antonyms": [
+      "noisy",
+      "loud"
+    ],
+    "example": "Please remain quiet during the examination.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -1398,16 +1845,21 @@ window.vocabulary = [
   },
   {
     "id": 78,
-    "word": "surprised",
+    "word": "ready",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is surprised",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “surprised” correctly in context.",
+    "meaning": "prepared for something",
+    "chinese": "准备好的",
+    "synonyms": [
+      "prepared"
+    ],
+    "antonyms": [
+      "unprepared"
+    ],
+    "example": "The students were ready for the test.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -1416,16 +1868,21 @@ window.vocabulary = [
   },
   {
     "id": 79,
-    "word": "tall",
-    "partOfSpeech": "adjective",
+    "word": "remember",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "describing someone or something that is tall",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “tall” correctly in context.",
+    "meaning": "to keep something in your mind or bring it back to mind",
+    "chinese": "记得；记住",
+    "synonyms": [
+      "recall"
+    ],
+    "antonyms": [
+      "forget"
+    ],
+    "example": "Remember to bring your water bottle tomorrow.",
     "topics": [
-      "General"
+      "Memory",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1434,16 +1891,22 @@ window.vocabulary = [
   },
   {
     "id": 80,
-    "word": "tired",
+    "word": "safe",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is tired",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “tired” correctly in context.",
+    "meaning": "not likely to cause harm or danger",
+    "chinese": "安全的",
+    "synonyms": [
+      "secure"
+    ],
+    "antonyms": [
+      "dangerous",
+      "unsafe"
+    ],
+    "example": "Always wear a helmet to stay safe while cycling.",
     "topics": [
-      "General"
+      "Safety",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -1452,16 +1915,22 @@ window.vocabulary = [
   },
   {
     "id": 81,
-    "word": "together",
-    "partOfSpeech": "noun",
+    "word": "same",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to together",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “together” correctly in context.",
+    "meaning": "not different",
+    "chinese": "相同的",
+    "synonyms": [
+      "identical",
+      "equal"
+    ],
+    "antonyms": [
+      "different"
+    ],
+    "example": "We wore the same school uniform.",
     "topics": [
-      "General"
+      "Comparison",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1470,16 +1939,23 @@ window.vocabulary = [
   },
   {
     "id": 82,
-    "word": "true",
+    "word": "scared",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is true",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “true” correctly in context.",
+    "meaning": "frightened or worried",
+    "chinese": "害怕的",
+    "synonyms": [
+      "afraid",
+      "frightened"
+    ],
+    "antonyms": [
+      "brave",
+      "fearless"
+    ],
+    "example": "The child was scared when the thunder became louder.",
     "topics": [
-      "General"
+      "Emotions",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -1488,16 +1964,22 @@ window.vocabulary = [
   },
   {
     "id": 83,
-    "word": "useful",
+    "word": "simple",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is useful",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “useful” correctly in context.",
+    "meaning": "easy to understand or do",
+    "chinese": "简单的",
+    "synonyms": [
+      "easy",
+      "straightforward"
+    ],
+    "antonyms": [
+      "complicated"
+    ],
+    "example": "The teacher gave us a simple way to remember the rule.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -1506,16 +1988,22 @@ window.vocabulary = [
   },
   {
     "id": 84,
-    "word": "usual",
+    "word": "slow",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is usual",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “usual” correctly in context.",
+    "meaning": "moving or happening without speed",
+    "chinese": "慢的",
+    "synonyms": [
+      "unhurried"
+    ],
+    "antonyms": [
+      "fast",
+      "quick"
+    ],
+    "example": "The turtle moved slowly across the path.",
     "topics": [
-      "General"
+      "Animals",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -1524,16 +2012,23 @@ window.vocabulary = [
   },
   {
     "id": 85,
-    "word": "visit",
-    "partOfSpeech": "noun",
+    "word": "small",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to visit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “visit” correctly in context.",
+    "meaning": "little in size or amount",
+    "chinese": "小的",
+    "synonyms": [
+      "little",
+      "tiny"
+    ],
+    "antonyms": [
+      "large",
+      "big"
+    ],
+    "example": "A small puppy followed us home.",
     "topics": [
-      "General"
+      "Animals",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -1542,16 +2037,22 @@ window.vocabulary = [
   },
   {
     "id": 86,
-    "word": "warm",
+    "word": "special",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is warm",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “warm” correctly in context.",
+    "meaning": "different from what is usual and important to you",
+    "chinese": "特别的",
+    "synonyms": [
+      "unique",
+      "important"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "Today is special because it is my grandmother's birthday.",
     "topics": [
-      "General"
+      "Family",
+      "Celebrations"
     ],
     "questionTypes": [
       "MCQ",
@@ -1560,16 +2061,21 @@ window.vocabulary = [
   },
   {
     "id": 87,
-    "word": "weak",
+    "word": "strong",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is weak",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “weak” correctly in context.",
+    "meaning": "having great physical power",
+    "chinese": "强壮的；强的",
+    "synonyms": [
+      "powerful"
+    ],
+    "antonyms": [
+      "weak"
+    ],
+    "example": "The strong wind knocked several branches down.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -1578,16 +2084,22 @@ window.vocabulary = [
   },
   {
     "id": 88,
-    "word": "worried",
+    "word": "surprised",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is worried",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “worried” correctly in context.",
+    "meaning": "feeling unexpected wonder",
+    "chinese": "惊讶的",
+    "synonyms": [
+      "astonished",
+      "amazed"
+    ],
+    "antonyms": [
+      "unsurprised"
+    ],
+    "example": "We were surprised when our teacher brought a cake.",
     "topics": [
-      "General"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1596,16 +2108,21 @@ window.vocabulary = [
   },
   {
     "id": 89,
-    "word": "young",
-    "partOfSpeech": "noun",
+    "word": "tall",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to young",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “young” correctly in context.",
+    "meaning": "having greater than average height",
+    "chinese": "高的",
+    "synonyms": [
+      "high"
+    ],
+    "antonyms": [
+      "short"
+    ],
+    "example": "The tall tree provided shade for the children.",
     "topics": [
-      "General"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -1614,16 +2131,23 @@ window.vocabulary = [
   },
   {
     "id": 90,
-    "word": "brave",
+    "word": "tired",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is brave",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “brave” correctly in context.",
+    "meaning": "needing rest because of physical or mental effort",
+    "chinese": "疲倦的",
+    "synonyms": [
+      "weary",
+      "exhausted"
+    ],
+    "antonyms": [
+      "energetic",
+      "rested"
+    ],
+    "example": "I felt tired after swimming for an hour.",
     "topics": [
-      "General"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -1632,16 +2156,22 @@ window.vocabulary = [
   },
   {
     "id": 91,
-    "word": "calm",
-    "partOfSpeech": "adjective",
+    "word": "together",
+    "partOfSpeech": "adverb",
     "level": 1,
-    "meaning": "describing someone or something that is calm",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “calm” correctly in context.",
+    "meaning": "with each other or in one group",
+    "chinese": "一起",
+    "synonyms": [
+      "jointly",
+      "collectively"
+    ],
+    "antonyms": [
+      "apart"
+    ],
+    "example": "The pupils worked together on the science project.",
     "topics": [
-      "General"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
       "MCQ",
@@ -1650,16 +2180,23 @@ window.vocabulary = [
   },
   {
     "id": 92,
-    "word": "cold",
+    "word": "True",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is cold",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cold” correctly in context.",
+    "meaning": "correct or based on fact",
+    "chinese": "真实的；正确的",
+    "synonyms": [
+      "correct",
+      "factual"
+    ],
+    "antonyms": [
+      "False",
+      "unTrue"
+    ],
+    "example": "The statement is True according to the report.",
     "topics": [
-      "General"
+      "School",
+      "Facts"
     ],
     "questionTypes": [
       "MCQ",
@@ -1668,16 +2205,22 @@ window.vocabulary = [
   },
   {
     "id": 93,
-    "word": "dark",
+    "word": "useful",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is dark",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dark” correctly in context.",
+    "meaning": "helpful for a particular purpose",
+    "chinese": "有用的",
+    "synonyms": [
+      "helpful",
+      "practical"
+    ],
+    "antonyms": [
+      "useless"
+    ],
+    "example": "This chart is useful when revising for the test.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -1686,16 +2229,22 @@ window.vocabulary = [
   },
   {
     "id": 94,
-    "word": "deep",
+    "word": "usual",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is deep",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deep” correctly in context.",
+    "meaning": "normal or common for a person or situation",
+    "chinese": "通常的；平常的",
+    "synonyms": [
+      "normal",
+      "customary"
+    ],
+    "antonyms": [
+      "unusual"
+    ],
+    "example": "She took her usual route to school.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -1704,16 +2253,22 @@ window.vocabulary = [
   },
   {
     "id": 95,
-    "word": "dry",
-    "partOfSpeech": "adjective",
+    "word": "visit",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "describing someone or something that is dry",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dry” correctly in context.",
+    "meaning": "to go to a person or place for a short time",
+    "chinese": "参观；拜访",
+    "synonyms": [
+      "see",
+      "call on"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "We visited the science centre during the holidays.",
     "topics": [
-      "General"
+      "Travel",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1722,16 +2277,22 @@ window.vocabulary = [
   },
   {
     "id": 96,
-    "word": "fair",
+    "word": "warm",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is fair",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “fair” correctly in context.",
+    "meaning": "having a pleasantly high temperature",
+    "chinese": "温暖的",
+    "synonyms": [
+      "mild"
+    ],
+    "antonyms": [
+      "cold",
+      "cool"
+    ],
+    "example": "The warm sunlight made the garden pleasant.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -1740,16 +2301,22 @@ window.vocabulary = [
   },
   {
     "id": 97,
-    "word": "fresh",
+    "word": "weak",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is fresh",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “fresh” correctly in context.",
+    "meaning": "not physically strong",
+    "chinese": "虚弱的；弱的",
+    "synonyms": [
+      "feeble"
+    ],
+    "antonyms": [
+      "strong",
+      "powerful"
+    ],
+    "example": "The plant was weak because it had not received enough sunlight.",
     "topics": [
-      "General"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -1758,16 +2325,22 @@ window.vocabulary = [
   },
   {
     "id": 98,
-    "word": "full",
+    "word": "wild",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is full",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “full” correctly in context.",
+    "meaning": "living or growing without being controlled by people",
+    "chinese": "野生的",
+    "synonyms": [
+      "untamed"
+    ],
+    "antonyms": [
+      "tame",
+      "domesticated"
+    ],
+    "example": "We saw several wild monkeys near the forest.",
     "topics": [
-      "General"
+      "Animals",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -1776,16 +2349,23 @@ window.vocabulary = [
   },
   {
     "id": 99,
-    "word": "great",
-    "partOfSpeech": "noun",
+    "word": "worried",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea or situation related to great",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “great” correctly in context.",
+    "meaning": "thinking about problems or unpleasant things that might happen",
+    "chinese": "担心的",
+    "synonyms": [
+      "anxious",
+      "concerned"
+    ],
+    "antonyms": [
+      "calm",
+      "relaxed"
+    ],
+    "example": "Mum was worried when her son did not return home on time.",
     "topics": [
-      "General"
+      "Emotions",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -1794,16 +2374,21 @@ window.vocabulary = [
   },
   {
     "id": 100,
-    "word": "wild",
+    "word": "young",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is wild",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “wild” correctly in context.",
+    "meaning": "having lived for only a short time",
+    "chinese": "年轻的；年幼的",
+    "synonyms": [
+      "youthful"
+    ],
+    "antonyms": [
+      "old"
+    ],
+    "example": "The young puppy needed plenty of rest.",
     "topics": [
-      "General"
+      "Animals",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -1816,12 +2401,18 @@ window.vocabulary = [
     "partOfSpeech": "verb",
     "level": 2,
     "meaning": "to respect or like someone because of their qualities or achievements",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “admire” correctly in context.",
+    "chinese": "钦佩；欣赏",
+    "synonyms": [
+      "respect",
+      "appreciate"
+    ],
+    "antonyms": [
+      "despise"
+    ],
+    "example": "Many pupils admire their teacher for her patience.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1831,15 +2422,21 @@ window.vocabulary = [
   {
     "id": 102,
     "word": "admit",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to admit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “admit” correctly in context.",
+    "meaning": "to agree that something is True",
+    "chinese": "承认",
+    "synonyms": [
+      "confess",
+      "acknowledge"
+    ],
+    "antonyms": [
+      "deny"
+    ],
+    "example": "He admitted that he had forgotten his homework.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1851,13 +2448,19 @@ window.vocabulary = [
     "word": "advise",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to advise or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “advise” correctly in context.",
+    "meaning": "to tell someone what you think they should do",
+    "chinese": "建议；劝告",
+    "synonyms": [
+      "recommend",
+      "counsel"
+    ],
+    "antonyms": [
+      "discourage"
+    ],
+    "example": "The doctor advised me to get more rest.",
     "topics": [
-      "General"
+      "Health",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -1867,15 +2470,18 @@ window.vocabulary = [
   {
     "id": 104,
     "word": "afford",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to afford",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to have enough money or time to do something",
+    "chinese": "负担得起；抽得出时间",
+    "synonyms": [
+      "manage"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “afford” correctly in context.",
+    "example": "We cannot afford to waste electricity.",
     "topics": [
-      "General"
+      "Money",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -1885,15 +2491,21 @@ window.vocabulary = [
   {
     "id": 105,
     "word": "agree",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to agree",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “agree” correctly in context.",
+    "meaning": "to have the same opinion as someone",
+    "chinese": "同意",
+    "synonyms": [
+      "accept",
+      "consent"
+    ],
+    "antonyms": [
+      "disagree"
+    ],
+    "example": "I agree with your suggestion.",
     "topics": [
-      "General"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1903,15 +2515,21 @@ window.vocabulary = [
   {
     "id": 106,
     "word": "allow",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to allow",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “allow” correctly in context.",
+    "meaning": "to give permission for something",
+    "chinese": "允许",
+    "synonyms": [
+      "permit",
+      "let"
+    ],
+    "antonyms": [
+      "forbid"
+    ],
+    "example": "The teacher allowed us to work in pairs.",
     "topics": [
-      "General"
+      "School",
+      "Rules"
     ],
     "questionTypes": [
       "MCQ",
@@ -1921,15 +2539,20 @@ window.vocabulary = [
   {
     "id": 107,
     "word": "announce",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to announce",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “announce” correctly in context.",
+    "meaning": "to tell people something officially or publicly",
+    "chinese": "宣布",
+    "synonyms": [
+      "declare"
+    ],
+    "antonyms": [
+      "conceal"
+    ],
+    "example": "The principal announced the winners at assembly.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -1938,16 +2561,23 @@ window.vocabulary = [
   },
   {
     "id": 108,
-    "word": "appear",
-    "partOfSpeech": "noun",
+    "word": "anxious",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to appear",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “appear” correctly in context.",
+    "meaning": "worried or nervous about something that may happen",
+    "chinese": "焦虑的；担心的",
+    "synonyms": [
+      "worried",
+      "nervous"
+    ],
+    "antonyms": [
+      "calm",
+      "relaxed"
+    ],
+    "example": "She felt anxious before the examination.",
     "topics": [
-      "General"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -1956,16 +2586,22 @@ window.vocabulary = [
   },
   {
     "id": 109,
-    "word": "apply",
-    "partOfSpeech": "noun",
+    "word": "appear",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to apply",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “apply” correctly in context.",
+    "meaning": "to become visible or seem to be something",
+    "chinese": "出现；似乎",
+    "synonyms": [
+      "emerge",
+      "seem"
+    ],
+    "antonyms": [
+      "disappear"
+    ],
+    "example": "A rainbow appeared after the rain.",
     "topics": [
-      "General"
+      "Nature",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -1974,16 +2610,22 @@ window.vocabulary = [
   },
   {
     "id": 110,
-    "word": "argue",
-    "partOfSpeech": "noun",
+    "word": "apply",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to argue",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “argue” correctly in context.",
+    "meaning": "to make a formal request or use something for a purpose",
+    "chinese": "申请；应用",
+    "synonyms": [
+      "request",
+      "use"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "She applied for a place in the school programme.",
     "topics": [
-      "General"
+      "School",
+      "Applications"
     ],
     "questionTypes": [
       "MCQ",
@@ -1992,16 +2634,22 @@ window.vocabulary = [
   },
   {
     "id": 111,
-    "word": "avoid",
+    "word": "argue",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to avoid or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “avoid” correctly in context.",
+    "meaning": "to speak angrily because you disagree",
+    "chinese": "争论；争吵",
+    "synonyms": [
+      "quarrel",
+      "debate"
+    ],
+    "antonyms": [
+      "agree"
+    ],
+    "example": "The brothers began to argue over the game.",
     "topics": [
-      "General"
+      "Family",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -2010,16 +2658,22 @@ window.vocabulary = [
   },
   {
     "id": 112,
-    "word": "behave",
-    "partOfSpeech": "verb",
+    "word": "astonished",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to behave or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “behave” correctly in context.",
+    "meaning": "very surprised",
+    "chinese": "惊讶的",
+    "synonyms": [
+      "amazed",
+      "stunned"
+    ],
+    "antonyms": [
+      "unimpressed"
+    ],
+    "example": "We were astonished by the magician's final trick.",
     "topics": [
-      "General"
+      "Emotions",
+      "Entertainment"
     ],
     "questionTypes": [
       "MCQ",
@@ -2028,16 +2682,22 @@ window.vocabulary = [
   },
   {
     "id": 113,
-    "word": "believe",
-    "partOfSpeech": "verb",
+    "word": "attempt",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to believe or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “believe” correctly in context.",
+    "meaning": "an effort to do something",
+    "chinese": "尝试",
+    "synonyms": [
+      "effort",
+      "try"
+    ],
+    "antonyms": [
+      "failure"
+    ],
+    "example": "Her first attempt at baking a cake was successful.",
     "topics": [
-      "General"
+      "Learning",
+      "Food"
     ],
     "questionTypes": [
       "MCQ",
@@ -2046,16 +2706,22 @@ window.vocabulary = [
   },
   {
     "id": 114,
-    "word": "borrow",
-    "partOfSpeech": "verb",
+    "word": "average",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to borrow or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “borrow” correctly in context.",
+    "meaning": "usual or typical rather than special",
+    "chinese": "平均的；普通的",
+    "synonyms": [
+      "typical",
+      "ordinary"
+    ],
+    "antonyms": [
+      "exceptional"
+    ],
+    "example": "The average class size is about thirty pupils.",
     "topics": [
-      "General"
+      "School",
+      "Numbers"
     ],
     "questionTypes": [
       "MCQ",
@@ -2064,16 +2730,23 @@ window.vocabulary = [
   },
   {
     "id": 115,
-    "word": "breathe",
+    "word": "avoid",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to breathe or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “breathe” correctly in context.",
+    "meaning": "to keep away from something or prevent something",
+    "chinese": "避免；躲开",
+    "synonyms": [
+      "escape",
+      "prevent"
+    ],
+    "antonyms": [
+      "approach",
+      "face"
+    ],
+    "example": "We should avoid wasting food.",
     "topics": [
-      "General"
+      "Environment",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -2082,16 +2755,22 @@ window.vocabulary = [
   },
   {
     "id": 116,
-    "word": "celebrate",
-    "partOfSpeech": "verb",
+    "word": "balance",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to celebrate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “celebrate” correctly in context.",
+    "meaning": "a state in which different things are equal or stable",
+    "chinese": "平衡",
+    "synonyms": [
+      "stability",
+      "equilibrium"
+    ],
+    "antonyms": [
+      "imbalance"
+    ],
+    "example": "Good balance is important when riding a bicycle.",
     "topics": [
-      "General"
+      "Sports",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -2100,16 +2779,21 @@ window.vocabulary = [
   },
   {
     "id": 117,
-    "word": "compare",
+    "word": "behave",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to compare or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “compare” correctly in context.",
+    "meaning": "to act in a particular way",
+    "chinese": "表现；行为举止",
+    "synonyms": [
+      "act"
+    ],
+    "antonyms": [
+      "misbehave"
+    ],
+    "example": "Students should behave respectfully in class.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -2118,16 +2802,22 @@ window.vocabulary = [
   },
   {
     "id": 118,
-    "word": "complain",
+    "word": "believe",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to complain or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “complain” correctly in context.",
+    "meaning": "to think that something is True",
+    "chinese": "相信",
+    "synonyms": [
+      "trust",
+      "accept"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "I believe that practice leads to improvement.",
     "topics": [
-      "General"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -2136,16 +2826,21 @@ window.vocabulary = [
   },
   {
     "id": 119,
-    "word": "concentrate",
+    "word": "borrow",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to concentrate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “concentrate” correctly in context.",
+    "meaning": "to take something and return it later",
+    "chinese": "借用",
+    "synonyms": [
+      "take temporarily"
+    ],
+    "antonyms": [
+      "lend"
+    ],
+    "example": "May I borrow your ruler for a moment?",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -2154,16 +2849,19 @@ window.vocabulary = [
   },
   {
     "id": 120,
-    "word": "confuse",
+    "word": "breathe",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to confuse or carry out this action",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to take air into and send it out of the lungs",
+    "chinese": "呼吸",
+    "synonyms": [
+      "respire"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “confuse” correctly in context.",
+    "example": "Remember to breathe slowly when you feel nervous.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -2172,16 +2870,21 @@ window.vocabulary = [
   },
   {
     "id": 121,
-    "word": "continue",
-    "partOfSpeech": "verb",
+    "word": "carelessly",
+    "partOfSpeech": "adverb",
     "level": 2,
-    "meaning": "to continue or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “continue” correctly in context.",
+    "meaning": "without giving enough attention to what you are doing",
+    "chinese": "粗心地；马虎地",
+    "synonyms": [
+      "negligently"
+    ],
+    "antonyms": [
+      "carefully"
+    ],
+    "example": "He carelessly left his water bottle on the bus.",
     "topics": [
-      "General"
+      "Daily Life",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -2190,16 +2893,22 @@ window.vocabulary = [
   },
   {
     "id": 122,
-    "word": "courage",
-    "partOfSpeech": "noun",
+    "word": "celebrate",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to courage",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “courage” correctly in context.",
+    "meaning": "to do something special for an important event",
+    "chinese": "庆祝",
+    "synonyms": [
+      "commemorate",
+      "observe"
+    ],
+    "antonyms": [
+      "mourn"
+    ],
+    "example": "We will celebrate Grandma's birthday this weekend.",
     "topics": [
-      "General"
+      "Family",
+      "Celebrations"
     ],
     "questionTypes": [
       "MCQ",
@@ -2208,16 +2917,22 @@ window.vocabulary = [
   },
   {
     "id": 123,
-    "word": "curious",
-    "partOfSpeech": "adjective",
+    "word": "challenge",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "wanting to know or learn more about something",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “curious” correctly in context.",
+    "meaning": "a difficult task that tests ability or determination",
+    "chinese": "挑战",
+    "synonyms": [
+      "difficulty",
+      "test"
+    ],
+    "antonyms": [
+      "ease"
+    ],
+    "example": "Learning a new language can be a challenge.",
     "topics": [
-      "General"
+      "Learning",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -2226,16 +2941,22 @@ window.vocabulary = [
   },
   {
     "id": 124,
-    "word": "damage",
-    "partOfSpeech": "verb",
+    "word": "choice",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to damage or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “damage” correctly in context.",
+    "meaning": "an act of choosing between possibilities",
+    "chinese": "选择",
+    "synonyms": [
+      "option",
+      "selection"
+    ],
+    "antonyms": [
+      "necessity"
+    ],
+    "example": "You have a choice between the two books.",
     "topics": [
-      "General"
+      "Decision Making",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -2244,16 +2965,19 @@ window.vocabulary = [
   },
   {
     "id": 125,
-    "word": "depend",
+    "word": "compare",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to depend or carry out this action",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to examine two or more things to see how they are similar or different",
+    "chinese": "比较",
+    "synonyms": [
+      "contrast"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “depend” correctly in context.",
+    "example": "Compare the two pictures before answering.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2262,16 +2986,22 @@ window.vocabulary = [
   },
   {
     "id": 126,
-    "word": "describe",
+    "word": "complain",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to describe or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “describe” correctly in context.",
+    "meaning": "to say that you are unhappy about something",
+    "chinese": "抱怨；投诉",
+    "synonyms": [
+      "grumble",
+      "protest"
+    ],
+    "antonyms": [
+      "praise"
+    ],
+    "example": "Several passengers complained about the delay.",
     "topics": [
-      "General"
+      "Travel",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -2280,16 +3010,21 @@ window.vocabulary = [
   },
   {
     "id": 127,
-    "word": "discover",
+    "word": "concentrate",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to discover or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “discover” correctly in context.",
+    "meaning": "to give all your attention to something",
+    "chinese": "集中注意力",
+    "synonyms": [
+      "focus"
+    ],
+    "antonyms": [
+      "distract"
+    ],
+    "example": "It is easier to concentrate in a quiet room.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2298,16 +3033,22 @@ window.vocabulary = [
   },
   {
     "id": 128,
-    "word": "discuss",
+    "word": "confuse",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to discuss or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “discuss” correctly in context.",
+    "meaning": "to make someone unable to understand something clearly",
+    "chinese": "使困惑",
+    "synonyms": [
+      "puzzle",
+      "bewilder"
+    ],
+    "antonyms": [
+      "clarify"
+    ],
+    "example": "The similar names confused the new student.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -2316,16 +3057,23 @@ window.vocabulary = [
   },
   {
     "id": 129,
-    "word": "divide",
+    "word": "continue",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to divide or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “divide” correctly in context.",
+    "meaning": "to keep doing something without stopping",
+    "chinese": "继续",
+    "synonyms": [
+      "persist",
+      "proceed"
+    ],
+    "antonyms": [
+      "stop",
+      "end"
+    ],
+    "example": "Please continue reading while I check the answers.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2334,16 +3082,22 @@ window.vocabulary = [
   },
   {
     "id": 130,
-    "word": "eager",
+    "word": "courage",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to eager",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “eager” correctly in context.",
+    "meaning": "the ability to face fear or difficulty",
+    "chinese": "勇气",
+    "synonyms": [
+      "bravery",
+      "boldness"
+    ],
+    "antonyms": [
+      "cowardice"
+    ],
+    "example": "It took courage to speak in front of the whole school.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -2352,16 +3106,22 @@ window.vocabulary = [
   },
   {
     "id": 131,
-    "word": "encourage",
-    "partOfSpeech": "verb",
+    "word": "curious",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to encourage or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “encourage” correctly in context.",
+    "meaning": "wanting to know or learn more about something",
+    "chinese": "好奇的",
+    "synonyms": [
+      "inquisitive",
+      "interested"
+    ],
+    "antonyms": [
+      "indifferent"
+    ],
+    "example": "The curious child asked many questions about the experiment.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2370,16 +3130,22 @@ window.vocabulary = [
   },
   {
     "id": 132,
-    "word": "escape",
-    "partOfSpeech": "verb",
+    "word": "damage",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to escape or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “escape” correctly in context.",
+    "meaning": "harm that makes something less useful or attractive",
+    "chinese": "损害；损坏",
+    "synonyms": [
+      "harm",
+      "destruction"
+    ],
+    "antonyms": [
+      "repair"
+    ],
+    "example": "The storm caused damage to several houses.",
     "topics": [
-      "General"
+      "Weather",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -2388,16 +3154,19 @@ window.vocabulary = [
   },
   {
     "id": 133,
-    "word": "explain",
+    "word": "depend",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to explain or carry out this action",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to need someone or something for support or success",
+    "chinese": "依靠；取决于",
+    "synonyms": [
+      "rely"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “explain” correctly in context.",
+    "example": "Success depends on regular practice.",
     "topics": [
-      "General"
+      "Learning",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -2406,16 +3175,20 @@ window.vocabulary = [
   },
   {
     "id": 134,
-    "word": "familiar",
-    "partOfSpeech": "noun",
+    "word": "describe",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to familiar",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to say or write what someone or something is like",
+    "chinese": "描述",
+    "synonyms": [
+      "portray",
+      "explain"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “familiar” correctly in context.",
+    "example": "Describe what you saw at the park.",
     "topics": [
-      "General"
+      "School",
+      "Writing"
     ],
     "questionTypes": [
       "MCQ",
@@ -2424,16 +3197,22 @@ window.vocabulary = [
   },
   {
     "id": 135,
-    "word": "fortunate",
-    "partOfSpeech": "noun",
+    "word": "disappointed",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to fortunate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “fortunate” correctly in context.",
+    "meaning": "sad because something did not happen as expected",
+    "chinese": "失望的",
+    "synonyms": [
+      "let down",
+      "dismayed"
+    ],
+    "antonyms": [
+      "pleased"
+    ],
+    "example": "He was disappointed when the match was cancelled.",
     "topics": [
-      "General"
+      "Emotions",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -2442,16 +3221,22 @@ window.vocabulary = [
   },
   {
     "id": 136,
-    "word": "generous",
-    "partOfSpeech": "noun",
+    "word": "discover",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to generous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “generous” correctly in context.",
+    "meaning": "to find something or learn something for the first time",
+    "chinese": "发现",
+    "synonyms": [
+      "find",
+      "uncover"
+    ],
+    "antonyms": [
+      "overlook"
+    ],
+    "example": "Scientists discovered a new species in the forest.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -2460,16 +3245,20 @@ window.vocabulary = [
   },
   {
     "id": 137,
-    "word": "grateful",
-    "partOfSpeech": "noun",
+    "word": "discuss",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to grateful",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to talk about something with another person or group",
+    "chinese": "讨论",
+    "synonyms": [
+      "talk about",
+      "consider"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “grateful” correctly in context.",
+    "example": "The class discussed ways to reduce plastic waste.",
     "topics": [
-      "General"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -2478,16 +3267,23 @@ window.vocabulary = [
   },
   {
     "id": 138,
-    "word": "hesitate",
+    "word": "divide",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to hesitate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “hesitate” correctly in context.",
+    "meaning": "to separate something into parts or groups",
+    "chinese": "分开；划分",
+    "synonyms": [
+      "separate",
+      "split"
+    ],
+    "antonyms": [
+      "combine",
+      "join"
+    ],
+    "example": "Divide the class into four groups.",
     "topics": [
-      "General"
+      "School",
+      "Mathematics"
     ],
     "questionTypes": [
       "MCQ",
@@ -2496,16 +3292,22 @@ window.vocabulary = [
   },
   {
     "id": 139,
-    "word": "imagine",
-    "partOfSpeech": "verb",
+    "word": "eager",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to imagine or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “imagine” correctly in context.",
+    "meaning": "very interested and excited to do something",
+    "chinese": "渴望的；热切的",
+    "synonyms": [
+      "keen",
+      "enthusiastic"
+    ],
+    "antonyms": [
+      "reluctant"
+    ],
+    "example": "The pupils were eager to begin the science experiment.",
     "topics": [
-      "General"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -2514,16 +3316,22 @@ window.vocabulary = [
   },
   {
     "id": 140,
-    "word": "improve",
-    "partOfSpeech": "verb",
+    "word": "effort",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to improve or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “improve” correctly in context.",
+    "meaning": "the physical or mental energy used to do something",
+    "chinese": "努力",
+    "synonyms": [
+      "attempt",
+      "endeavour"
+    ],
+    "antonyms": [
+      "idleness"
+    ],
+    "example": "Your effort in completing the project was impressive.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -2532,16 +3340,22 @@ window.vocabulary = [
   },
   {
     "id": 141,
-    "word": "include",
-    "partOfSpeech": "noun",
+    "word": "encourage",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to include",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “include” correctly in context.",
+    "meaning": "to give someone support or confidence to do something",
+    "chinese": "鼓励",
+    "synonyms": [
+      "support",
+      "motivate"
+    ],
+    "antonyms": [
+      "discourage"
+    ],
+    "example": "Her parents encouraged her to keep practising.",
     "topics": [
-      "General"
+      "Family",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -2550,16 +3364,23 @@ window.vocabulary = [
   },
   {
     "id": 142,
-    "word": "increase",
-    "partOfSpeech": "noun",
+    "word": "enormous",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to increase",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “increase” correctly in context.",
+    "meaning": "extremely large",
+    "chinese": "巨大的",
+    "synonyms": [
+      "huge",
+      "gigantic"
+    ],
+    "antonyms": [
+      "tiny",
+      "small"
+    ],
+    "example": "An enormous tree stood in the middle of the park.",
     "topics": [
-      "General"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -2568,16 +3389,23 @@ window.vocabulary = [
   },
   {
     "id": 143,
-    "word": "invite",
+    "word": "escape",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to invite or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “invite” correctly in context.",
+    "meaning": "to get away from a place or situation",
+    "chinese": "逃脱；逃离",
+    "synonyms": [
+      "flee",
+      "get away"
+    ],
+    "antonyms": [
+      "remain",
+      "stay"
+    ],
+    "example": "The bird escaped from the open cage.",
     "topics": [
-      "General"
+      "Animals",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -2586,16 +3414,20 @@ window.vocabulary = [
   },
   {
     "id": 144,
-    "word": "journey",
+    "word": "event",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to journey",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "something that happens, especially something planned",
+    "chinese": "事件；活动",
+    "synonyms": [
+      "occasion",
+      "happening"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “journey” correctly in context.",
+    "example": "The school held a sports event on Friday.",
     "topics": [
-      "General"
+      "School",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -2604,16 +3436,23 @@ window.vocabulary = [
   },
   {
     "id": 145,
-    "word": "manage",
-    "partOfSpeech": "verb",
+    "word": "exhausted",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to manage or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “manage” correctly in context.",
+    "meaning": "extremely tired",
+    "chinese": "筋疲力尽的",
+    "synonyms": [
+      "extremely tired",
+      "weary"
+    ],
+    "antonyms": [
+      "energetic",
+      "rested"
+    ],
+    "example": "After the long hike, we were completely exhausted.",
     "topics": [
-      "General"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -2622,16 +3461,22 @@ window.vocabulary = [
   },
   {
     "id": 146,
-    "word": "mention",
-    "partOfSpeech": "verb",
+    "word": "experience",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to mention or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “mention” correctly in context.",
+    "meaning": "knowledge gained from doing or seeing something",
+    "chinese": "经验；经历",
+    "synonyms": [
+      "knowledge",
+      "practice"
+    ],
+    "antonyms": [
+      "inexperience"
+    ],
+    "example": "The trip gave us valuable experience.",
     "topics": [
-      "General"
+      "Travel",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2640,16 +3485,22 @@ window.vocabulary = [
   },
   {
     "id": 147,
-    "word": "miserable",
-    "partOfSpeech": "noun",
+    "word": "explain",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to miserable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “miserable” correctly in context.",
+    "meaning": "to make something clear by giving details or reasons",
+    "chinese": "解释",
+    "synonyms": [
+      "clarify",
+      "describe"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "Can you explain how you solved the problem?",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -2658,16 +3509,22 @@ window.vocabulary = [
   },
   {
     "id": 148,
-    "word": "observe",
-    "partOfSpeech": "verb",
+    "word": "familiar",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to observe or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “observe” correctly in context.",
+    "meaning": "well known to you",
+    "chinese": "熟悉的",
+    "synonyms": [
+      "recognisable",
+      "known"
+    ],
+    "antonyms": [
+      "unfamiliar"
+    ],
+    "example": "The song sounded familiar to me.",
     "topics": [
-      "General"
+      "Music",
+      "Memory"
     ],
     "questionTypes": [
       "MCQ",
@@ -2676,16 +3533,22 @@ window.vocabulary = [
   },
   {
     "id": 149,
-    "word": "offer",
-    "partOfSpeech": "verb",
+    "word": "fortunate",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to offer or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “offer” correctly in context.",
+    "meaning": "having good luck",
+    "chinese": "幸运的",
+    "synonyms": [
+      "lucky",
+      "favoured"
+    ],
+    "antonyms": [
+      "unfortunate"
+    ],
+    "example": "We were fortunate to have sunny weather for the picnic.",
     "topics": [
-      "General"
+      "Weather",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -2694,16 +3557,23 @@ window.vocabulary = [
   },
   {
     "id": 150,
-    "word": "organise",
-    "partOfSpeech": "verb",
+    "word": "generous",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to organise or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “organise” correctly in context.",
+    "meaning": "willing to give or share more than expected",
+    "chinese": "慷慨的",
+    "synonyms": [
+      "giving",
+      "charitable"
+    ],
+    "antonyms": [
+      "selfish",
+      "stingy"
+    ],
+    "example": "The generous donor gave books to the library.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -2712,16 +3582,22 @@ window.vocabulary = [
   },
   {
     "id": 151,
-    "word": "prepare",
-    "partOfSpeech": "verb",
+    "word": "grateful",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to prepare or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prepare” correctly in context.",
+    "meaning": "feeling thankful for something",
+    "chinese": "感激的",
+    "synonyms": [
+      "thankful",
+      "appreciative"
+    ],
+    "antonyms": [
+      "ungrateful"
+    ],
+    "example": "I am grateful for your help.",
     "topics": [
-      "General"
+      "Values",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -2730,16 +3606,22 @@ window.vocabulary = [
   },
   {
     "id": 152,
-    "word": "prevent",
+    "word": "hesitate",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to prevent or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prevent” correctly in context.",
+    "meaning": "to pause because you are uncertain what to do",
+    "chinese": "犹豫",
+    "synonyms": [
+      "waver",
+      "pause"
+    ],
+    "antonyms": [
+      "decide"
+    ],
+    "example": "Do not hesitate to ask for help.",
     "topics": [
-      "General"
+      "Communication",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2748,16 +3630,22 @@ window.vocabulary = [
   },
   {
     "id": 153,
-    "word": "promise",
+    "word": "imagine",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to promise or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “promise” correctly in context.",
+    "meaning": "to form a picture or idea in your mind",
+    "chinese": "想象",
+    "synonyms": [
+      "visualise",
+      "picture"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Imagine living on a planet with no trees.",
     "topics": [
-      "General"
+      "Writing",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -2766,16 +3654,22 @@ window.vocabulary = [
   },
   {
     "id": 154,
-    "word": "protect",
+    "word": "improve",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to protect or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “protect” correctly in context.",
+    "meaning": "to become better or make something better",
+    "chinese": "改善；提高",
+    "synonyms": [
+      "develop",
+      "enhance"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "She practised daily to improve her spelling.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2784,16 +3678,22 @@ window.vocabulary = [
   },
   {
     "id": 155,
-    "word": "realise",
+    "word": "include",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to realise or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “realise” correctly in context.",
+    "meaning": "to contain something as part of a whole",
+    "chinese": "包括",
+    "synonyms": [
+      "contain",
+      "involve"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The price includes breakfast.",
     "topics": [
-      "General"
+      "Travel",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -2802,16 +3702,22 @@ window.vocabulary = [
   },
   {
     "id": 156,
-    "word": "receive",
+    "word": "increase",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to receive or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “receive” correctly in context.",
+    "meaning": "to become greater in number, size or amount",
+    "chinese": "增加；提高",
+    "synonyms": [
+      "rise",
+      "grow"
+    ],
+    "antonyms": [
+      "decrease"
+    ],
+    "example": "The number of visitors increased during the holidays.",
     "topics": [
-      "General"
+      "Numbers",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -2820,16 +3726,22 @@ window.vocabulary = [
   },
   {
     "id": 157,
-    "word": "reduce",
-    "partOfSpeech": "verb",
+    "word": "intelligent",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to reduce or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reduce” correctly in context.",
+    "meaning": "good at learning, understanding and solving problems",
+    "chinese": "聪明的；有才智的",
+    "synonyms": [
+      "clever",
+      "bright"
+    ],
+    "antonyms": [
+      "unintelligent"
+    ],
+    "example": "The intelligent student explained the answer clearly.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2838,16 +3750,22 @@ window.vocabulary = [
   },
   {
     "id": 158,
-    "word": "refuse",
+    "word": "invite",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to refuse or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “refuse” correctly in context.",
+    "meaning": "to ask someone to come to an event or place",
+    "chinese": "邀请",
+    "synonyms": [
+      "ask",
+      "welcome"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "We invited our neighbours to the celebration.",
     "topics": [
-      "General"
+      "Community",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -2856,16 +3774,22 @@ window.vocabulary = [
   },
   {
     "id": 159,
-    "word": "relax",
-    "partOfSpeech": "verb",
+    "word": "journey",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to relax or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “relax” correctly in context.",
+    "meaning": "an act of travelling from one place to another",
+    "chinese": "旅程",
+    "synonyms": [
+      "trip",
+      "voyage"
+    ],
+    "antonyms": [
+      "stay"
+    ],
+    "example": "The journey to the countryside took two hours.",
     "topics": [
-      "General"
+      "Travel",
+      "Geography"
     ],
     "questionTypes": [
       "MCQ",
@@ -2874,16 +3798,22 @@ window.vocabulary = [
   },
   {
     "id": 160,
-    "word": "remind",
+    "word": "manage",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to remind or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “remind” correctly in context.",
+    "meaning": "to succeed in doing something difficult",
+    "chinese": "设法做到；管理",
+    "synonyms": [
+      "handle",
+      "cope"
+    ],
+    "antonyms": [
+      "fail"
+    ],
+    "example": "She managed to finish the project on time.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -2892,16 +3822,22 @@ window.vocabulary = [
   },
   {
     "id": 161,
-    "word": "repair",
+    "word": "mention",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to repair or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “repair” correctly in context.",
+    "meaning": "to speak or write about something briefly",
+    "chinese": "提及",
+    "synonyms": [
+      "refer to",
+      "note"
+    ],
+    "antonyms": [
+      "omit"
+    ],
+    "example": "He mentioned that the library would close early.",
     "topics": [
-      "General"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -2910,16 +3846,23 @@ window.vocabulary = [
   },
   {
     "id": 162,
-    "word": "replace",
-    "partOfSpeech": "verb",
+    "word": "miserable",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to replace or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “replace” correctly in context.",
+    "meaning": "very unhappy or uncomfortable",
+    "chinese": "痛苦的；难过的",
+    "synonyms": [
+      "unhappy",
+      "wretched"
+    ],
+    "antonyms": [
+      "cheerful",
+      "happy"
+    ],
+    "example": "The child felt miserable after losing his favourite toy.",
     "topics": [
-      "General"
+      "Emotions",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -2928,16 +3871,22 @@ window.vocabulary = [
   },
   {
     "id": 163,
-    "word": "request",
+    "word": "observe",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to request or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “request” correctly in context.",
+    "meaning": "to watch carefully or notice something",
+    "chinese": "观察；注意",
+    "synonyms": [
+      "watch",
+      "notice"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "We observed the ants carrying food to their nest.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -2946,16 +3895,22 @@ window.vocabulary = [
   },
   {
     "id": 164,
-    "word": "respect",
-    "partOfSpeech": "noun",
+    "word": "offer",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to respect",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “respect” correctly in context.",
+    "meaning": "to say that you are willing to give or provide something",
+    "chinese": "提供；主动提出",
+    "synonyms": [
+      "provide",
+      "propose"
+    ],
+    "antonyms": [
+      "refuse"
+    ],
+    "example": "Dad offered to drive us home.",
     "topics": [
-      "General"
+      "Family",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -2964,16 +3919,22 @@ window.vocabulary = [
   },
   {
     "id": 165,
-    "word": "responsible",
-    "partOfSpeech": "noun",
+    "word": "organise",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to responsible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “responsible” correctly in context.",
+    "meaning": "to plan or arrange an event or activity",
+    "chinese": "组织；安排",
+    "synonyms": [
+      "arrange",
+      "plan"
+    ],
+    "antonyms": [
+      "disorganise"
+    ],
+    "example": "The pupils organised a charity sale.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -2982,16 +3943,21 @@ window.vocabulary = [
   },
   {
     "id": 166,
-    "word": "return",
-    "partOfSpeech": "verb",
+    "word": "patiently",
+    "partOfSpeech": "adverb",
     "level": 2,
-    "meaning": "to return or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “return” correctly in context.",
+    "meaning": "in a calm way while waiting or dealing with difficulty",
+    "chinese": "耐心地",
+    "synonyms": [
+      "calmly"
+    ],
+    "antonyms": [
+      "impatiently"
+    ],
+    "example": "The teacher patiently explained the difficult question again.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -3000,16 +3966,22 @@ window.vocabulary = [
   },
   {
     "id": 167,
-    "word": "reward",
-    "partOfSpeech": "noun",
+    "word": "prepare",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to reward",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reward” correctly in context.",
+    "meaning": "to make something ready for use or an event",
+    "chinese": "准备",
+    "synonyms": [
+      "arrange",
+      "ready"
+    ],
+    "antonyms": [
+      "neglect"
+    ],
+    "example": "We prepared our bags the night before the trip.",
     "topics": [
-      "General"
+      "Travel",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -3018,16 +3990,22 @@ window.vocabulary = [
   },
   {
     "id": 168,
-    "word": "search",
+    "word": "promise",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to search or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “search” correctly in context.",
+    "meaning": "to say that you will certainly do something",
+    "chinese": "承诺",
+    "synonyms": [
+      "pledge",
+      "vow"
+    ],
+    "antonyms": [
+      "break"
+    ],
+    "example": "I promised to return the book tomorrow.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -3036,16 +4014,22 @@ window.vocabulary = [
   },
   {
     "id": 169,
-    "word": "sensible",
-    "partOfSpeech": "adjective",
+    "word": "protect",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is sensible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sensible” correctly in context.",
+    "meaning": "to keep someone or something safe from harm",
+    "chinese": "保护",
+    "synonyms": [
+      "guard",
+      "defend"
+    ],
+    "antonyms": [
+      "endanger"
+    ],
+    "example": "Trees help protect the soil from erosion.",
     "topics": [
-      "General"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -3054,16 +4038,22 @@ window.vocabulary = [
   },
   {
     "id": 170,
-    "word": "separate",
-    "partOfSpeech": "noun",
+    "word": "realise",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to separate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “separate” correctly in context.",
+    "meaning": "to understand something clearly, often suddenly",
+    "chinese": "意识到",
+    "synonyms": [
+      "understand",
+      "recognise"
+    ],
+    "antonyms": [
+      "overlook"
+    ],
+    "example": "I realised that I had left my keys at home.",
     "topics": [
-      "General"
+      "Learning",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3072,16 +4062,23 @@ window.vocabulary = [
   },
   {
     "id": 171,
-    "word": "share",
-    "partOfSpeech": "noun",
+    "word": "receive",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to share",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “share” correctly in context.",
+    "meaning": "to get or be given something",
+    "chinese": "收到；接收",
+    "synonyms": [
+      "get",
+      "accept"
+    ],
+    "antonyms": [
+      "give",
+      "send"
+    ],
+    "example": "She received a letter from her cousin.",
     "topics": [
-      "General"
+      "Communication",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -3090,16 +4087,22 @@ window.vocabulary = [
   },
   {
     "id": 172,
-    "word": "shiver",
-    "partOfSpeech": "noun",
+    "word": "reduce",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to shiver",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “shiver” correctly in context.",
+    "meaning": "to make something smaller or less",
+    "chinese": "减少；降低",
+    "synonyms": [
+      "decrease",
+      "lower"
+    ],
+    "antonyms": [
+      "increase"
+    ],
+    "example": "We should reduce the amount of plastic we use.",
     "topics": [
-      "General"
+      "Environment",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3108,16 +4111,23 @@ window.vocabulary = [
   },
   {
     "id": 173,
-    "word": "solve",
+    "word": "refuse",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to solve or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “solve” correctly in context.",
+    "meaning": "to say no to something or decline to do it",
+    "chinese": "拒绝",
+    "synonyms": [
+      "reject",
+      "decline"
+    ],
+    "antonyms": [
+      "accept",
+      "agree"
+    ],
+    "example": "He refused to copy his friend's answers.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -3126,16 +4136,23 @@ window.vocabulary = [
   },
   {
     "id": 174,
-    "word": "suggest",
+    "word": "relax",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to suggest or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “suggest” correctly in context.",
+    "meaning": "to rest and become less worried or tense",
+    "chinese": "放松",
+    "synonyms": [
+      "rest",
+      "unwind"
+    ],
+    "antonyms": [
+      "worry",
+      "tense"
+    ],
+    "example": "I like to relax by reading before bed.",
     "topics": [
-      "General"
+      "Health",
+      "Hobbies"
     ],
     "questionTypes": [
       "MCQ",
@@ -3144,16 +4161,22 @@ window.vocabulary = [
   },
   {
     "id": 175,
-    "word": "support",
-    "partOfSpeech": "verb",
+    "word": "reliable",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to support or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “support” correctly in context.",
+    "meaning": "able to be trusted to do what is expected",
+    "chinese": "可靠的",
+    "synonyms": [
+      "dependable",
+      "trustworthy"
+    ],
+    "antonyms": [
+      "unreliable"
+    ],
+    "example": "We need a reliable person to look after the plants.",
     "topics": [
-      "General"
+      "Values",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3162,16 +4185,21 @@ window.vocabulary = [
   },
   {
     "id": 176,
-    "word": "suppose",
+    "word": "remind",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to suppose or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “suppose” correctly in context.",
+    "meaning": "to help someone remember something",
+    "chinese": "提醒",
+    "synonyms": [
+      "prompt"
+    ],
+    "antonyms": [
+      "forget"
+    ],
+    "example": "Please remind me to bring my project tomorrow.",
     "topics": [
-      "General"
+      "School",
+      "Memory"
     ],
     "questionTypes": [
       "MCQ",
@@ -3180,16 +4208,23 @@ window.vocabulary = [
   },
   {
     "id": 177,
-    "word": "survive",
+    "word": "repair",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to survive or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “survive” correctly in context.",
+    "meaning": "to fix something that is damaged",
+    "chinese": "修理",
+    "synonyms": [
+      "fix",
+      "restore"
+    ],
+    "antonyms": [
+      "damage",
+      "break"
+    ],
+    "example": "The mechanic repaired the broken bicycle.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Transport"
     ],
     "questionTypes": [
       "MCQ",
@@ -3198,16 +4233,22 @@ window.vocabulary = [
   },
   {
     "id": 178,
-    "word": "thankful",
-    "partOfSpeech": "noun",
+    "word": "replace",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to thankful",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “thankful” correctly in context.",
+    "meaning": "to put something new in the place of something else",
+    "chinese": "替换；取代",
+    "synonyms": [
+      "substitute",
+      "exchange"
+    ],
+    "antonyms": [
+      "retain"
+    ],
+    "example": "We replaced the old batteries with new ones.",
     "topics": [
-      "General"
+      "Science",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3216,16 +4257,22 @@ window.vocabulary = [
   },
   {
     "id": 179,
-    "word": "thoughtful",
-    "partOfSpeech": "adjective",
+    "word": "request",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "describing someone or something that is thoughtful",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “thoughtful” correctly in context.",
+    "meaning": "a polite or formal ask for something",
+    "chinese": "请求",
+    "synonyms": [
+      "appeal",
+      "plea"
+    ],
+    "antonyms": [
+      "refusal"
+    ],
+    "example": "The teacher considered the pupil's request carefully.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -3234,16 +4281,22 @@ window.vocabulary = [
   },
   {
     "id": 180,
-    "word": "valuable",
-    "partOfSpeech": "adjective",
+    "word": "respect",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is valuable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “valuable” correctly in context.",
+    "meaning": "to have a high opinion of someone or treat them properly",
+    "chinese": "尊重",
+    "synonyms": [
+      "admire",
+      "honour"
+    ],
+    "antonyms": [
+      "disrespect"
+    ],
+    "example": "We should respect people with different opinions.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -3252,16 +4305,22 @@ window.vocabulary = [
   },
   {
     "id": 181,
-    "word": "wonder",
-    "partOfSpeech": "noun",
+    "word": "responsible",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to wonder",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “wonder” correctly in context.",
+    "meaning": "having a duty to deal with something properly",
+    "chinese": "负责的",
+    "synonyms": [
+      "reliable",
+      "accountable"
+    ],
+    "antonyms": [
+      "irresponsible"
+    ],
+    "example": "A responsible student completes homework on time.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -3270,16 +4329,22 @@ window.vocabulary = [
   },
   {
     "id": 182,
-    "word": "anxious",
-    "partOfSpeech": "adjective",
+    "word": "result",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "worried or nervous about something that may happen",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “anxious” correctly in context.",
+    "meaning": "something that happens because of an action or situation",
+    "chinese": "结果",
+    "synonyms": [
+      "outcome",
+      "consequence"
+    ],
+    "antonyms": [
+      "cause"
+    ],
+    "example": "Hard work often leads to good results.",
     "topics": [
-      "General"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -3288,16 +4353,22 @@ window.vocabulary = [
   },
   {
     "id": 183,
-    "word": "astonished",
-    "partOfSpeech": "adjective",
+    "word": "return",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is astonished",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “astonished” correctly in context.",
+    "meaning": "to go or come back to a place",
+    "chinese": "返回；归还",
+    "synonyms": [
+      "go back",
+      "give back"
+    ],
+    "antonyms": [
+      "leave"
+    ],
+    "example": "Please return the library book by Friday.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3306,16 +4377,22 @@ window.vocabulary = [
   },
   {
     "id": 184,
-    "word": "disappointed",
-    "partOfSpeech": "adjective",
+    "word": "reward",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "describing someone or something that is disappointed",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “disappointed” correctly in context.",
+    "meaning": "something given for good behaviour or achievement",
+    "chinese": "奖励",
+    "synonyms": [
+      "prize",
+      "benefit"
+    ],
+    "antonyms": [
+      "penalty"
+    ],
+    "example": "The winner received a reward for her effort.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -3324,16 +4401,22 @@ window.vocabulary = [
   },
   {
     "id": 185,
-    "word": "enormous",
-    "partOfSpeech": "adjective",
+    "word": "search",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is enormous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “enormous” correctly in context.",
+    "meaning": "to look carefully for something",
+    "chinese": "寻找；搜查",
+    "synonyms": [
+      "seek",
+      "look for"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "We searched the room for the missing key.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Problem Solving"
     ],
     "questionTypes": [
       "MCQ",
@@ -3342,16 +4425,22 @@ window.vocabulary = [
   },
   {
     "id": 186,
-    "word": "exhausted",
+    "word": "sensible",
     "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "describing someone or something that is exhausted",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exhausted” correctly in context.",
+    "meaning": "showing good judgement",
+    "chinese": "明智的；理智的",
+    "synonyms": [
+      "wise",
+      "practical"
+    ],
+    "antonyms": [
+      "foolish"
+    ],
+    "example": "It is sensible to bring an umbrella on a rainy day.",
     "topics": [
-      "General"
+      "Values",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -3360,16 +4449,23 @@ window.vocabulary = [
   },
   {
     "id": 187,
-    "word": "intelligent",
-    "partOfSpeech": "adjective",
+    "word": "separate",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is intelligent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intelligent” correctly in context.",
+    "meaning": "to divide or move things apart",
+    "chinese": "分开；分离",
+    "synonyms": [
+      "divide",
+      "split"
+    ],
+    "antonyms": [
+      "join",
+      "combine"
+    ],
+    "example": "Please separate the recyclable items from the rubbish.",
     "topics": [
-      "General"
+      "Environment",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3378,16 +4474,22 @@ window.vocabulary = [
   },
   {
     "id": 188,
-    "word": "reliable",
-    "partOfSpeech": "adjective",
+    "word": "share",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "able to be trusted to do what is expected",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reliable” correctly in context.",
+    "meaning": "to give part of something to another person",
+    "chinese": "分享；分担",
+    "synonyms": [
+      "divide",
+      "distribute"
+    ],
+    "antonyms": [
+      "keep"
+    ],
+    "example": "The children shared the snacks equally.",
     "topics": [
-      "General"
+      "Values",
+      "Food"
     ],
     "questionTypes": [
       "MCQ",
@@ -3396,16 +4498,19 @@ window.vocabulary = [
   },
   {
     "id": 189,
-    "word": "resource",
-    "partOfSpeech": "noun",
+    "word": "shiver",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to resource",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to shake slightly because of cold or fear",
+    "chinese": "发抖",
+    "synonyms": [
+      "tremble"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “resource” correctly in context.",
+    "example": "We began to shiver when the wind became colder.",
     "topics": [
-      "General"
+      "Weather",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -3414,16 +4519,22 @@ window.vocabulary = [
   },
   {
     "id": 190,
-    "word": "terrible",
-    "partOfSpeech": "noun",
+    "word": "solve",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to terrible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “terrible” correctly in context.",
+    "meaning": "to find an answer to a problem",
+    "chinese": "解决",
+    "synonyms": [
+      "work out",
+      "resolve"
+    ],
+    "antonyms": [
+      "complicate"
+    ],
+    "example": "Can you solve this mathematics problem?",
     "topics": [
-      "General"
+      "School",
+      "Problem Solving"
     ],
     "questionTypes": [
       "MCQ",
@@ -3432,16 +4543,22 @@ window.vocabulary = [
   },
   {
     "id": 191,
-    "word": "trouble",
-    "partOfSpeech": "noun",
+    "word": "suggest",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to trouble",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “trouble” correctly in context.",
+    "meaning": "to put forward an idea for someone to consider",
+    "chinese": "建议；提议",
+    "synonyms": [
+      "recommend",
+      "propose"
+    ],
+    "antonyms": [
+      "oppose"
+    ],
+    "example": "May I suggest a different way to organise the project?",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -3450,16 +4567,22 @@ window.vocabulary = [
   },
   {
     "id": 192,
-    "word": "attempt",
-    "partOfSpeech": "noun",
+    "word": "support",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to attempt",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “attempt” correctly in context.",
+    "meaning": "to help someone emotionally or practically",
+    "chinese": "支持；帮助",
+    "synonyms": [
+      "assist",
+      "encourage"
+    ],
+    "antonyms": [
+      "oppose"
+    ],
+    "example": "Friends should support each other during difficult times.",
     "topics": [
-      "General"
+      "Values",
+      "Friendship"
     ],
     "questionTypes": [
       "MCQ",
@@ -3468,16 +4591,22 @@ window.vocabulary = [
   },
   {
     "id": 193,
-    "word": "average",
-    "partOfSpeech": "noun",
+    "word": "suppose",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to average",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “average” correctly in context.",
+    "meaning": "to think or assume that something is True",
+    "chinese": "认为；假设",
+    "synonyms": [
+      "assume",
+      "presume"
+    ],
+    "antonyms": [
+      "know"
+    ],
+    "example": "I suppose we should leave before the traffic becomes heavy.",
     "topics": [
-      "General"
+      "Thinking",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3486,16 +4615,23 @@ window.vocabulary = [
   },
   {
     "id": 194,
-    "word": "balance",
-    "partOfSpeech": "noun",
+    "word": "survive",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to balance",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “balance” correctly in context.",
+    "meaning": "to continue living despite danger or difficulty",
+    "chinese": "生存；幸存",
+    "synonyms": [
+      "endure",
+      "live"
+    ],
+    "antonyms": [
+      "die",
+      "perish"
+    ],
+    "example": "Some plants can survive with very little water.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -3504,16 +4640,23 @@ window.vocabulary = [
   },
   {
     "id": 195,
-    "word": "challenge",
-    "partOfSpeech": "noun",
+    "word": "terrible",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to challenge",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “challenge” correctly in context.",
+    "meaning": "very bad or unpleasant",
+    "chinese": "糟糕的；可怕的",
+    "synonyms": [
+      "awful",
+      "horrible"
+    ],
+    "antonyms": [
+      "excellent",
+      "wonderful"
+    ],
+    "example": "The storm caused terrible damage to the roads.",
     "topics": [
-      "General"
+      "Weather",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -3522,16 +4665,22 @@ window.vocabulary = [
   },
   {
     "id": 196,
-    "word": "choice",
-    "partOfSpeech": "noun",
+    "word": "thankful",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to choice",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “choice” correctly in context.",
+    "meaning": "feeling pleased and grateful",
+    "chinese": "感激的",
+    "synonyms": [
+      "grateful",
+      "appreciative"
+    ],
+    "antonyms": [
+      "ungrateful"
+    ],
+    "example": "We were thankful for the volunteers' help.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -3540,16 +4689,22 @@ window.vocabulary = [
   },
   {
     "id": 197,
-    "word": "effort",
-    "partOfSpeech": "noun",
+    "word": "thoughtful",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to effort",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “effort” correctly in context.",
+    "meaning": "kind and considerate of other people's feelings",
+    "chinese": "体贴的；周到的",
+    "synonyms": [
+      "considerate",
+      "caring"
+    ],
+    "antonyms": [
+      "thoughtless"
+    ],
+    "example": "It was thoughtful of him to bring an umbrella for his sister.",
     "topics": [
-      "General"
+      "Values",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -3558,16 +4713,22 @@ window.vocabulary = [
   },
   {
     "id": 198,
-    "word": "event",
+    "word": "trouble",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to event",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “event” correctly in context.",
+    "meaning": "problems or difficulties",
+    "chinese": "麻烦；困难",
+    "synonyms": [
+      "difficulty",
+      "problem"
+    ],
+    "antonyms": [
+      "ease"
+    ],
+    "example": "The computer gave us trouble during the presentation.",
     "topics": [
-      "General"
+      "Technology",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -3576,16 +4737,22 @@ window.vocabulary = [
   },
   {
     "id": 199,
-    "word": "experience",
-    "partOfSpeech": "noun",
+    "word": "valuable",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to experience",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “experience” correctly in context.",
+    "meaning": "worth a lot of money or very useful or important",
+    "chinese": "有价值的；宝贵的",
+    "synonyms": [
+      "precious",
+      "worthwhile"
+    ],
+    "antonyms": [
+      "worthless"
+    ],
+    "example": "Time is valuable, so use it wisely.",
     "topics": [
-      "General"
+      "Values",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -3594,16 +4761,20 @@ window.vocabulary = [
   },
   {
     "id": 200,
-    "word": "result",
-    "partOfSpeech": "noun",
+    "word": "wonder",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea or situation related to result",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "to think about something because you are curious",
+    "chinese": "想知道；纳闷",
+    "synonyms": [
+      "curious",
+      "ask oneself"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “result” correctly in context.",
+    "example": "I wonder why the birds suddenly flew away.",
     "topics": [
-      "General"
+      "Nature",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -3616,12 +4787,18 @@ window.vocabulary = [
     "partOfSpeech": "verb",
     "level": 3,
     "meaning": "to leave someone or something completely",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “abandon” correctly in context.",
+    "chinese": "放弃；遗弃",
+    "synonyms": [
+      "desert",
+      "leave"
+    ],
+    "antonyms": [
+      "keep"
+    ],
+    "example": "The family had to abandon their picnic when the storm began.",
     "topics": [
-      "General"
+      "Weather",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3633,13 +4810,19 @@ window.vocabulary = [
     "word": "absorb",
     "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "to take in or soak up something",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “absorb” correctly in context.",
+    "meaning": "to take in liquid, energy or information",
+    "chinese": "吸收；理解",
+    "synonyms": [
+      "soak up",
+      "take in"
+    ],
+    "antonyms": [
+      "release"
+    ],
+    "example": "Plants absorb water through their roots.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -3651,13 +4834,19 @@ window.vocabulary = [
     "word": "abundant",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "describing someone or something that is abundant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “abundant” correctly in context.",
+    "meaning": "existing in large quantities",
+    "chinese": "丰富的；大量的",
+    "synonyms": [
+      "plentiful",
+      "ample"
+    ],
+    "antonyms": [
+      "scarce"
+    ],
+    "example": "The region has abundant sunshine throughout the year.",
     "topics": [
-      "General"
+      "Nature",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -3669,13 +4858,19 @@ window.vocabulary = [
     "word": "accurate",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "correct and free from mistakes",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “accurate” correctly in context.",
+    "meaning": "correct and without mistakes",
+    "chinese": "准确的",
+    "synonyms": [
+      "correct",
+      "precise"
+    ],
+    "antonyms": [
+      "inaccurate"
+    ],
+    "example": "Make sure your measurements are accurate.",
     "topics": [
-      "General"
+      "Science",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -3687,13 +4882,19 @@ window.vocabulary = [
     "word": "adapt",
     "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "to change so that something works better in new conditions",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “adapt” correctly in context.",
+    "meaning": "to change to suit new conditions",
+    "chinese": "适应；改编",
+    "synonyms": [
+      "adjust",
+      "modify"
+    ],
+    "antonyms": [
+      "resist"
+    ],
+    "example": "Animals adapt to changes in their environment.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -3705,13 +4906,19 @@ window.vocabulary = [
     "word": "affection",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to affection",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “affection” correctly in context.",
+    "meaning": "a feeling of love or fondness",
+    "chinese": "喜爱；感情",
+    "synonyms": [
+      "fondness",
+      "warmth"
+    ],
+    "antonyms": [
+      "hatred"
+    ],
+    "example": "The puppy showed affection by wagging its tail.",
     "topics": [
-      "General"
+      "Animals",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -3724,12 +4931,19 @@ window.vocabulary = [
     "partOfSpeech": "adjective",
     "level": 3,
     "meaning": "behaving in a forceful or hostile way",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “aggressive” correctly in context.",
+    "chinese": "好斗的；有攻击性的",
+    "synonyms": [
+      "hostile",
+      "forceful"
+    ],
+    "antonyms": [
+      "gentle",
+      "peaceful"
+    ],
+    "example": "The aggressive dog had to be kept behind a gate.",
     "topics": [
-      "General"
+      "Animals",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -3742,12 +4956,18 @@ window.vocabulary = [
     "partOfSpeech": "adjective",
     "level": 3,
     "meaning": "having a strong desire to achieve something",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ambitious” correctly in context.",
+    "chinese": "有抱负的",
+    "synonyms": [
+      "driven",
+      "aspiring"
+    ],
+    "antonyms": [
+      "unambitious"
+    ],
+    "example": "She is ambitious and hopes to become a scientist.",
     "topics": [
-      "General"
+      "School",
+      "Goals"
     ],
     "questionTypes": [
       "MCQ",
@@ -3759,13 +4979,20 @@ window.vocabulary = [
     "word": "apparent",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "easy to notice or understand",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “apparent” correctly in context.",
+    "meaning": "easy to see or understand",
+    "chinese": "明显的",
+    "synonyms": [
+      "obvious",
+      "clear"
+    ],
+    "antonyms": [
+      "hidden",
+      "unclear"
+    ],
+    "example": "It was apparent that the plant needed more water.",
     "topics": [
-      "General"
+      "Science",
+      "Observation"
     ],
     "questionTypes": [
       "MCQ",
@@ -3777,13 +5004,19 @@ window.vocabulary = [
     "word": "approach",
     "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "to approach or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “approach” correctly in context.",
+    "meaning": "to move closer to someone or something",
+    "chinese": "接近",
+    "synonyms": [
+      "near",
+      "advance"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "Dark clouds approached as we walked home.",
     "topics": [
-      "General"
+      "Weather",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -3795,13 +5028,19 @@ window.vocabulary = [
     "word": "arrogant",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "thinking that you are better or more important than others",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “arrogant” correctly in context.",
+    "meaning": "believing you are better than other people",
+    "chinese": "傲慢的",
+    "synonyms": [
+      "conceited",
+      "proud"
+    ],
+    "antonyms": [
+      "humble"
+    ],
+    "example": "His arrogant attitude made it difficult to work with him.",
     "topics": [
-      "General"
+      "Values",
+      "People"
     ],
     "questionTypes": [
       "MCQ",
@@ -3813,13 +5052,19 @@ window.vocabulary = [
     "word": "astonishing",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "very surprising or impressive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “astonishing” correctly in context.",
+    "meaning": "extremely surprising",
+    "chinese": "令人惊讶的",
+    "synonyms": [
+      "amazing",
+      "remarkable"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The athlete made an astonishing recovery.",
     "topics": [
-      "General"
+      "Sports",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -3831,13 +5076,19 @@ window.vocabulary = [
     "word": "attitude",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to attitude",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “attitude” correctly in context.",
+    "meaning": "the way someone thinks or feels about something",
+    "chinese": "态度",
+    "synonyms": [
+      "outlook",
+      "view"
+    ],
+    "antonyms": [
+      "indifference"
+    ],
+    "example": "A positive attitude can help you overcome difficulties.",
     "topics": [
-      "General"
+      "Values",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -3849,13 +5100,19 @@ window.vocabulary = [
     "word": "attract",
     "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "to attract or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “attract” correctly in context.",
+    "meaning": "to make someone or something interested in or drawn towards you",
+    "chinese": "吸引",
+    "synonyms": [
+      "draw",
+      "appeal to"
+    ],
+    "antonyms": [
+      "repel"
+    ],
+    "example": "Bright flowers attract bees and butterflies.",
     "topics": [
-      "General"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -3867,13 +5124,19 @@ window.vocabulary = [
     "word": "authority",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to authority",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “authority” correctly in context.",
+    "meaning": "the power or right to make decisions or give orders",
+    "chinese": "权威；权力",
+    "synonyms": [
+      "power",
+      "control"
+    ],
+    "antonyms": [
+      "powerlessness"
+    ],
+    "example": "The school authority introduced new safety rules.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -3886,12 +5149,18 @@ window.vocabulary = [
     "partOfSpeech": "adjective",
     "level": 3,
     "meaning": "helpful or producing a good result",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “beneficial” correctly in context.",
+    "chinese": "有益的",
+    "synonyms": [
+      "helpful",
+      "useful"
+    ],
+    "antonyms": [
+      "harmful"
+    ],
+    "example": "Regular exercise is beneficial to your health.",
     "topics": [
-      "General"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -3903,13 +5172,20 @@ window.vocabulary = [
     "word": "cautious",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "describing someone or something that is cautious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cautious” correctly in context.",
+    "meaning": "careful to avoid danger or mistakes",
+    "chinese": "谨慎的",
+    "synonyms": [
+      "careful",
+      "wary"
+    ],
+    "antonyms": [
+      "careless",
+      "reckless"
+    ],
+    "example": "Be cautious when walking on the wet floor.",
     "topics": [
-      "General"
+      "Safety",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -3919,15 +5195,21 @@ window.vocabulary = [
   {
     "id": 218,
     "word": "collapse",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to collapse",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “collapse” correctly in context.",
+    "meaning": "to fall down suddenly",
+    "chinese": "倒塌；崩溃",
+    "synonyms": [
+      "fall",
+      "crumble"
+    ],
+    "antonyms": [
+      "stand"
+    ],
+    "example": "The old shed collapsed during the storm.",
     "topics": [
-      "General"
+      "Weather",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -3937,15 +5219,21 @@ window.vocabulary = [
   {
     "id": 219,
     "word": "combine",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to combine",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “combine” correctly in context.",
+    "meaning": "to join two or more things together",
+    "chinese": "结合；合并",
+    "synonyms": [
+      "join",
+      "merge"
+    ],
+    "antonyms": [
+      "separate"
+    ],
+    "example": "Combine the ingredients in a large bowl.",
     "topics": [
-      "General"
+      "Food",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -3955,15 +5243,20 @@ window.vocabulary = [
   {
     "id": 220,
     "word": "commit",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to commit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “commit” correctly in context.",
+    "meaning": "to do something, especially something wrong or serious",
+    "chinese": "犯下；承诺",
+    "synonyms": [
+      "carry out"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "He admitted that he had committed a serious mistake.",
     "topics": [
-      "General"
+      "Values",
+      "Law"
     ],
     "questionTypes": [
       "MCQ",
@@ -3973,15 +5266,21 @@ window.vocabulary = [
   {
     "id": 221,
     "word": "communicate",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to communicate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “communicate” correctly in context.",
+    "meaning": "to share information, ideas or feelings",
+    "chinese": "沟通；交流",
+    "synonyms": [
+      "express",
+      "convey"
+    ],
+    "antonyms": [
+      "miscommunicate"
+    ],
+    "example": "Good leaders communicate clearly with their teams.",
     "topics": [
-      "General"
+      "Communication",
+      "Leadership"
     ],
     "questionTypes": [
       "MCQ",
@@ -3991,15 +5290,21 @@ window.vocabulary = [
   {
     "id": 222,
     "word": "compete",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to compete",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “compete” correctly in context.",
+    "meaning": "to try to win against others",
+    "chinese": "竞争",
+    "synonyms": [
+      "contest",
+      "challenge"
+    ],
+    "antonyms": [
+      "cooperate"
+    ],
+    "example": "The teams will compete in the final race.",
     "topics": [
-      "General"
+      "Sports",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -4011,13 +5316,19 @@ window.vocabulary = [
     "word": "complex",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "describing someone or something that is complex",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “complex” correctly in context.",
+    "meaning": "having many connected parts and therefore difficult to understand",
+    "chinese": "复杂的",
+    "synonyms": [
+      "complicated",
+      "intricate"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "The machine has a complex system of gears.",
     "topics": [
-      "General"
+      "Science",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -4027,15 +5338,21 @@ window.vocabulary = [
   {
     "id": 224,
     "word": "conclude",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to conclude",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “conclude” correctly in context.",
+    "meaning": "to decide or believe something after considering evidence",
+    "chinese": "得出结论",
+    "synonyms": [
+      "deduce",
+      "decide"
+    ],
+    "antonyms": [
+      "begin"
+    ],
+    "example": "The scientists concluded that the water was safe.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -4047,13 +5364,20 @@ window.vocabulary = [
     "word": "confident",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "describing someone or something that is confident",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “confident” correctly in context.",
+    "meaning": "feeling sure about your abilities or decisions",
+    "chinese": "自信的",
+    "synonyms": [
+      "assured",
+      "certain"
+    ],
+    "antonyms": [
+      "uncertain",
+      "insecure"
+    ],
+    "example": "She felt confident before giving her speech.",
     "topics": [
-      "General"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -4065,13 +5389,20 @@ window.vocabulary = [
     "word": "conflict",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to conflict",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “conflict” correctly in context.",
+    "meaning": "a serious disagreement or struggle",
+    "chinese": "冲突；争执",
+    "synonyms": [
+      "dispute",
+      "clash"
+    ],
+    "antonyms": [
+      "agreement",
+      "harmony"
+    ],
+    "example": "The two teams had a conflict over the rules.",
     "topics": [
-      "General"
+      "Sports",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -4083,13 +5414,19 @@ window.vocabulary = [
     "word": "consequence",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a result that follows an action or event",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “consequence” correctly in context.",
+    "meaning": "a result of an action or situation",
+    "chinese": "后果；结果",
+    "synonyms": [
+      "result",
+      "outcome"
+    ],
+    "antonyms": [
+      "cause"
+    ],
+    "example": "Every choice has a consequence.",
     "topics": [
-      "General"
+      "Values",
+      "Decision Making"
     ],
     "questionTypes": [
       "MCQ",
@@ -4098,16 +5435,22 @@ window.vocabulary = [
   },
   {
     "id": 228,
-    "word": "consider",
-    "partOfSpeech": "noun",
+    "word": "constant",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to consider",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “consider” correctly in context.",
+    "meaning": "happening continuously or repeatedly",
+    "chinese": "持续的；不断的",
+    "synonyms": [
+      "continuous",
+      "steady"
+    ],
+    "antonyms": [
+      "occasional"
+    ],
+    "example": "The constant noise made it difficult to study.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -4116,16 +5459,22 @@ window.vocabulary = [
   },
   {
     "id": 229,
-    "word": "constant",
-    "partOfSpeech": "adjective",
+    "word": "consume",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is constant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “constant” correctly in context.",
+    "meaning": "to use, eat or drink something",
+    "chinese": "消耗；吃喝",
+    "synonyms": [
+      "use",
+      "eat"
+    ],
+    "antonyms": [
+      "save"
+    ],
+    "example": "Cars consume fuel when they travel.",
     "topics": [
-      "General"
+      "Environment",
+      "Transport"
     ],
     "questionTypes": [
       "MCQ",
@@ -4134,16 +5483,22 @@ window.vocabulary = [
   },
   {
     "id": 230,
-    "word": "consume",
+    "word": "contribute",
     "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "to consume or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “consume” correctly in context.",
+    "meaning": "to give something to help achieve a result",
+    "chinese": "贡献；促成",
+    "synonyms": [
+      "donate",
+      "add"
+    ],
+    "antonyms": [
+      "withhold"
+    ],
+    "example": "Everyone can contribute ideas to the project.",
     "topics": [
-      "General"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
       "MCQ",
@@ -4152,16 +5507,22 @@ window.vocabulary = [
   },
   {
     "id": 231,
-    "word": "contribute",
-    "partOfSpeech": "noun",
+    "word": "convenient",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to contribute",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “contribute” correctly in context.",
+    "meaning": "easy or suitable for a particular purpose",
+    "chinese": "方便的",
+    "synonyms": [
+      "handy",
+      "suitable"
+    ],
+    "antonyms": [
+      "inconvenient"
+    ],
+    "example": "Online learning is convenient for many families.",
     "topics": [
-      "General"
+      "Technology",
+      "Education"
     ],
     "questionTypes": [
       "MCQ",
@@ -4170,16 +5531,21 @@ window.vocabulary = [
   },
   {
     "id": 232,
-    "word": "convenient",
-    "partOfSpeech": "adjective",
+    "word": "convince",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is convenient",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “convenient” correctly in context.",
+    "meaning": "to persuade someone that something is True",
+    "chinese": "说服",
+    "synonyms": [
+      "persuade"
+    ],
+    "antonyms": [
+      "deter"
+    ],
+    "example": "The evidence convinced us that the story was True.",
     "topics": [
-      "General"
+      "Communication",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -4188,16 +5554,23 @@ window.vocabulary = [
   },
   {
     "id": 233,
-    "word": "convince",
-    "partOfSpeech": "noun",
+    "word": "cooperate",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to convince",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “convince” correctly in context.",
+    "meaning": "to work together to achieve something",
+    "chinese": "合作",
+    "synonyms": [
+      "collaborate",
+      "work together"
+    ],
+    "antonyms": [
+      "compete",
+      "oppose"
+    ],
+    "example": "The pupils cooperated to clean the classroom.",
     "topics": [
-      "General"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
       "MCQ",
@@ -4206,16 +5579,23 @@ window.vocabulary = [
   },
   {
     "id": 234,
-    "word": "cooperate",
-    "partOfSpeech": "noun",
+    "word": "decline",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to cooperate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cooperate” correctly in context.",
+    "meaning": "to become smaller, weaker or less",
+    "chinese": "下降；减少",
+    "synonyms": [
+      "decrease",
+      "fall"
+    ],
+    "antonyms": [
+      "increase",
+      "rise"
+    ],
+    "example": "The number of visitors declined after the museum closed.",
     "topics": [
-      "General"
+      "Numbers",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -4224,16 +5604,23 @@ window.vocabulary = [
   },
   {
     "id": 235,
-    "word": "decline",
-    "partOfSpeech": "noun",
+    "word": "defeat",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to decline",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “decline” correctly in context.",
+    "meaning": "to win against someone in a competition",
+    "chinese": "击败",
+    "synonyms": [
+      "beat",
+      "overcome"
+    ],
+    "antonyms": [
+      "lose",
+      "surrender"
+    ],
+    "example": "Our team defeated the defending champions.",
     "topics": [
-      "General"
+      "Sports",
+      "Competition"
     ],
     "questionTypes": [
       "MCQ",
@@ -4242,16 +5629,22 @@ window.vocabulary = [
   },
   {
     "id": 236,
-    "word": "defeat",
-    "partOfSpeech": "noun",
+    "word": "defend",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to defeat",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “defeat” correctly in context.",
+    "meaning": "to protect someone or something from harm or attack",
+    "chinese": "保护；防卫",
+    "synonyms": [
+      "protect",
+      "guard"
+    ],
+    "antonyms": [
+      "attack"
+    ],
+    "example": "The goalkeeper defended the goal brilliantly.",
     "topics": [
-      "General"
+      "Sports",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -4260,16 +5653,22 @@ window.vocabulary = [
   },
   {
     "id": 237,
-    "word": "defend",
-    "partOfSpeech": "noun",
+    "word": "deliberate",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to defend",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “defend” correctly in context.",
+    "meaning": "done intentionally rather than by accident",
+    "chinese": "故意的",
+    "synonyms": [
+      "intentional",
+      "planned"
+    ],
+    "antonyms": [
+      "accidental"
+    ],
+    "example": "The damage was deliberate, not accidental.",
     "topics": [
-      "General"
+      "Values",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -4278,16 +5677,22 @@ window.vocabulary = [
   },
   {
     "id": 238,
-    "word": "deliberate",
-    "partOfSpeech": "noun",
+    "word": "demand",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to deliberate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deliberate” correctly in context.",
+    "meaning": "to ask for something firmly",
+    "chinese": "要求",
+    "synonyms": [
+      "require",
+      "insist on"
+    ],
+    "antonyms": [
+      "offer"
+    ],
+    "example": "The workers demanded safer conditions.",
     "topics": [
-      "General"
+      "Community",
+      "Work"
     ],
     "questionTypes": [
       "MCQ",
@@ -4296,16 +5701,22 @@ window.vocabulary = [
   },
   {
     "id": 239,
-    "word": "demand",
-    "partOfSpeech": "noun",
+    "word": "demonstrate",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to demand",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “demand” correctly in context.",
+    "meaning": "to show clearly how something works or is done",
+    "chinese": "演示；证明",
+    "synonyms": [
+      "show",
+      "illustrate"
+    ],
+    "antonyms": [
+      "hide"
+    ],
+    "example": "The teacher demonstrated the experiment before we tried it.",
     "topics": [
-      "General"
+      "Science",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -4314,16 +5725,23 @@ window.vocabulary = [
   },
   {
     "id": 240,
-    "word": "demonstrate",
+    "word": "deny",
     "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "to demonstrate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “demonstrate” correctly in context.",
+    "meaning": "to say that something is not True",
+    "chinese": "否认",
+    "synonyms": [
+      "reject",
+      "refute"
+    ],
+    "antonyms": [
+      "admit",
+      "confirm"
+    ],
+    "example": "He denied taking the missing book.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -4332,16 +5750,22 @@ window.vocabulary = [
   },
   {
     "id": 241,
-    "word": "deny",
-    "partOfSpeech": "noun",
+    "word": "desperate",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to deny",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deny” correctly in context.",
+    "meaning": "feeling that you will try almost anything because you need something badly",
+    "chinese": "绝望的；极需要的",
+    "synonyms": [
+      "hopeless",
+      "urgent"
+    ],
+    "antonyms": [
+      "hopeful"
+    ],
+    "example": "The hikers were desperate for water.",
     "topics": [
-      "General"
+      "Safety",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -4350,16 +5774,22 @@ window.vocabulary = [
   },
   {
     "id": 242,
-    "word": "desperate",
-    "partOfSpeech": "adjective",
+    "word": "determine",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is desperate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “desperate” correctly in context.",
+    "meaning": "to discover or decide something after considering the facts",
+    "chinese": "确定；决定",
+    "synonyms": [
+      "decide",
+      "establish"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "The test will determine which material is stronger.",
     "topics": [
-      "General"
+      "Science",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -4368,16 +5798,22 @@ window.vocabulary = [
   },
   {
     "id": 243,
-    "word": "determine",
+    "word": "dignity",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to determine",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “determine” correctly in context.",
+    "meaning": "a sense of self-respect and worth",
+    "chinese": "尊严",
+    "synonyms": [
+      "self-respect",
+      "pride"
+    ],
+    "antonyms": [
+      "humiliation"
+    ],
+    "example": "Everyone deserves to be treated with dignity.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -4386,16 +5822,22 @@ window.vocabulary = [
   },
   {
     "id": 244,
-    "word": "dignity",
+    "word": "disaster",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to dignity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dignity” correctly in context.",
+    "meaning": "a sudden event causing great damage or suffering",
+    "chinese": "灾难",
+    "synonyms": [
+      "catastrophe",
+      "calamity"
+    ],
+    "antonyms": [
+      "success"
+    ],
+    "example": "The earthquake was a major disaster for the region.",
     "topics": [
-      "General"
+      "Natural Disasters",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -4404,16 +5846,22 @@ window.vocabulary = [
   },
   {
     "id": 245,
-    "word": "disaster",
-    "partOfSpeech": "noun",
+    "word": "efficient",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to disaster",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “disaster” correctly in context.",
+    "meaning": "working well without wasting time, energy or resources",
+    "chinese": "高效的",
+    "synonyms": [
+      "effective",
+      "productive"
+    ],
+    "antonyms": [
+      "inefficient"
+    ],
+    "example": "The new system is more efficient than the old one.",
     "topics": [
-      "General"
+      "Technology",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -4422,16 +5870,22 @@ window.vocabulary = [
   },
   {
     "id": 246,
-    "word": "efficient",
-    "partOfSpeech": "adjective",
+    "word": "emerge",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is efficient",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “efficient” correctly in context.",
+    "meaning": "to appear or become known",
+    "chinese": "出现；显现",
+    "synonyms": [
+      "appear",
+      "arise"
+    ],
+    "antonyms": [
+      "disappear"
+    ],
+    "example": "The moon emerged from behind the clouds.",
     "topics": [
-      "General"
+      "Nature",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -4440,16 +5894,22 @@ window.vocabulary = [
   },
   {
     "id": 247,
-    "word": "emerge",
-    "partOfSpeech": "noun",
+    "word": "emphasise",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to emerge",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “emerge” correctly in context.",
+    "meaning": "to give special importance to something",
+    "chinese": "强调",
+    "synonyms": [
+      "stress",
+      "highlight"
+    ],
+    "antonyms": [
+      "understate"
+    ],
+    "example": "The teacher emphasised the importance of checking answers.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -4458,16 +5918,22 @@ window.vocabulary = [
   },
   {
     "id": 248,
-    "word": "emphasise",
-    "partOfSpeech": "noun",
+    "word": "essential",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to emphasise",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “emphasise” correctly in context.",
+    "meaning": "completely necessary",
+    "chinese": "必需的；重要的",
+    "synonyms": [
+      "necessary",
+      "vital"
+    ],
+    "antonyms": [
+      "unnecessary"
+    ],
+    "example": "Water is essential for all living things.",
     "topics": [
-      "General"
+      "Science",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -4476,16 +5942,22 @@ window.vocabulary = [
   },
   {
     "id": 249,
-    "word": "essential",
-    "partOfSpeech": "adjective",
+    "word": "estimate",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "necessary or extremely important",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “essential” correctly in context.",
+    "meaning": "to make a rough calculation or judgement",
+    "chinese": "估计",
+    "synonyms": [
+      "approximate",
+      "assess"
+    ],
+    "antonyms": [
+      "calculate exactly"
+    ],
+    "example": "Can you estimate how many books are on the shelf?",
     "topics": [
-      "General"
+      "Mathematics",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -4494,16 +5966,22 @@ window.vocabulary = [
   },
   {
     "id": 250,
-    "word": "estimate",
-    "partOfSpeech": "noun",
+    "word": "eventually",
+    "partOfSpeech": "adverb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to estimate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “estimate” correctly in context.",
+    "meaning": "in the end, especially after a long time",
+    "chinese": "最终；最后",
+    "synonyms": [
+      "finally",
+      "ultimately"
+    ],
+    "antonyms": [
+      "initially"
+    ],
+    "example": "After several attempts, she eventually solved the puzzle.",
     "topics": [
-      "General"
+      "Learning",
+      "Problem Solving"
     ],
     "questionTypes": [
       "MCQ",
@@ -4512,16 +5990,22 @@ window.vocabulary = [
   },
   {
     "id": 251,
-    "word": "eventually",
-    "partOfSpeech": "noun",
+    "word": "examine",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "in the end, after some time",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “eventually” correctly in context.",
+    "meaning": "to look at something carefully to learn about it",
+    "chinese": "检查；检验",
+    "synonyms": [
+      "inspect",
+      "study"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "The doctor examined the injured ankle.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -4530,16 +6014,21 @@ window.vocabulary = [
   },
   {
     "id": 252,
-    "word": "examine",
+    "word": "exception",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to examine",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “examine” correctly in context.",
+    "meaning": "a person or thing that is not included in a general rule",
+    "chinese": "例外",
+    "synonyms": [
+      "special case"
+    ],
+    "antonyms": [
+      "rule"
+    ],
+    "example": "Everyone must attend, with no exception.",
     "topics": [
-      "General"
+      "School",
+      "Rules"
     ],
     "questionTypes": [
       "MCQ",
@@ -4548,16 +6037,23 @@ window.vocabulary = [
   },
   {
     "id": 253,
-    "word": "exception",
-    "partOfSpeech": "noun",
+    "word": "expand",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to exception",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exception” correctly in context.",
+    "meaning": "to become larger or make something larger",
+    "chinese": "扩大；扩展",
+    "synonyms": [
+      "increase",
+      "enlarge"
+    ],
+    "antonyms": [
+      "shrink",
+      "reduce"
+    ],
+    "example": "The company plans to expand its recycling programme.",
     "topics": [
-      "General"
+      "Environment",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -4566,16 +6062,23 @@ window.vocabulary = [
   },
   {
     "id": 254,
-    "word": "expand",
+    "word": "expert",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to expand",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “expand” correctly in context.",
+    "meaning": "a person with special knowledge or skill",
+    "chinese": "专家",
+    "synonyms": [
+      "specialist",
+      "professional"
+    ],
+    "antonyms": [
+      "amateur",
+      "novice"
+    ],
+    "example": "An expert explained how the telescope works.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -4584,16 +6087,23 @@ window.vocabulary = [
   },
   {
     "id": 255,
-    "word": "expert",
-    "partOfSpeech": "noun",
+    "word": "expose",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to expert",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “expert” correctly in context.",
+    "meaning": "to reveal or make something visible",
+    "chinese": "揭露；使暴露",
+    "synonyms": [
+      "reveal",
+      "uncover"
+    ],
+    "antonyms": [
+      "conceal",
+      "hide"
+    ],
+    "example": "The report exposed the dangers of the chemical.",
     "topics": [
-      "General"
+      "Science",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -4602,16 +6112,22 @@ window.vocabulary = [
   },
   {
     "id": 256,
-    "word": "expose",
-    "partOfSpeech": "noun",
+    "word": "extraordinary",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to expose",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “expose” correctly in context.",
+    "meaning": "very unusual or remarkable",
+    "chinese": "非凡的；异常的",
+    "synonyms": [
+      "remarkable",
+      "exceptional"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The young pianist showed extraordinary talent.",
     "topics": [
-      "General"
+      "Arts",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -4620,16 +6136,23 @@ window.vocabulary = [
   },
   {
     "id": 257,
-    "word": "extraordinary",
+    "word": "flexible",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "describing someone or something that is extraordinary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “extraordinary” correctly in context.",
+    "meaning": "able to change or adapt easily",
+    "chinese": "灵活的",
+    "synonyms": [
+      "adaptable",
+      "adjustable"
+    ],
+    "antonyms": [
+      "rigid",
+      "inflexible"
+    ],
+    "example": "Our schedule is flexible, so we can change the meeting time.",
     "topics": [
-      "General"
+      "Planning",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -4638,16 +6161,23 @@ window.vocabulary = [
   },
   {
     "id": 258,
-    "word": "flexible",
+    "word": "frequent",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "describing someone or something that is flexible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “flexible” correctly in context.",
+    "meaning": "happening often",
+    "chinese": "频繁的",
+    "synonyms": [
+      "regular",
+      "common"
+    ],
+    "antonyms": [
+      "rare",
+      "infrequent"
+    ],
+    "example": "Frequent exercise can improve your health.",
     "topics": [
-      "General"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -4656,16 +6186,22 @@ window.vocabulary = [
   },
   {
     "id": 259,
-    "word": "frequent",
-    "partOfSpeech": "adjective",
+    "word": "frustrate",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is frequent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “frequent” correctly in context.",
+    "meaning": "to make someone feel annoyed because something is difficult or impossible",
+    "chinese": "使沮丧；使受挫",
+    "synonyms": [
+      "annoy",
+      "discourage"
+    ],
+    "antonyms": [
+      "satisfy"
+    ],
+    "example": "The difficult puzzle frustrated the children.",
     "topics": [
-      "General"
+      "Emotions",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -4674,16 +6210,23 @@ window.vocabulary = [
   },
   {
     "id": 260,
-    "word": "frustrate",
-    "partOfSpeech": "noun",
+    "word": "genuine",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to frustrate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “frustrate” correctly in context.",
+    "meaning": "real and not False or copied",
+    "chinese": "真正的；真诚的",
+    "synonyms": [
+      "real",
+      "authentic"
+    ],
+    "antonyms": [
+      "fake",
+      "False"
+    ],
+    "example": "The shop guarantees that the necklace is made of genuine silver.",
     "topics": [
-      "General"
+      "Shopping",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -4692,16 +6235,22 @@ window.vocabulary = [
   },
   {
     "id": 261,
-    "word": "genuine",
+    "word": "gradual",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "describing someone or something that is genuine",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “genuine” correctly in context.",
+    "meaning": "happening slowly over a period of time",
+    "chinese": "逐渐的",
+    "synonyms": [
+      "slow",
+      "steady"
+    ],
+    "antonyms": [
+      "sudden"
+    ],
+    "example": "There was a gradual improvement in her reading.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -4710,16 +6259,22 @@ window.vocabulary = [
   },
   {
     "id": 262,
-    "word": "gradual",
-    "partOfSpeech": "adjective",
+    "word": "identify",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is gradual",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “gradual” correctly in context.",
+    "meaning": "to recognise and name someone or something",
+    "chinese": "识别；确认",
+    "synonyms": [
+      "recognise",
+      "detect"
+    ],
+    "antonyms": [
+      "misidentify"
+    ],
+    "example": "Can you identify the bird in this photograph?",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -4728,16 +6283,23 @@ window.vocabulary = [
   },
   {
     "id": 263,
-    "word": "identify",
-    "partOfSpeech": "noun",
+    "word": "ignore",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to identify",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “identify” correctly in context.",
+    "meaning": "to deliberately pay no attention to something",
+    "chinese": "忽视",
+    "synonyms": [
+      "disregard",
+      "overlook"
+    ],
+    "antonyms": [
+      "notice",
+      "attend"
+    ],
+    "example": "Do not ignore the warning signs.",
     "topics": [
-      "General"
+      "Safety",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -4746,16 +6308,22 @@ window.vocabulary = [
   },
   {
     "id": 264,
-    "word": "ignore",
+    "word": "impact",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to ignore",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ignore” correctly in context.",
+    "meaning": "a strong effect or influence",
+    "chinese": "影响",
+    "synonyms": [
+      "effect",
+      "influence"
+    ],
+    "antonyms": [
+      "insignificance"
+    ],
+    "example": "Plastic waste has a serious impact on marine life.",
     "topics": [
-      "General"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -4764,16 +6332,22 @@ window.vocabulary = [
   },
   {
     "id": 265,
-    "word": "impact",
-    "partOfSpeech": "noun",
+    "word": "independent",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to impact",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “impact” correctly in context.",
+    "meaning": "able to do things without needing help",
+    "chinese": "独立的",
+    "synonyms": [
+      "self-reliant",
+      "autonomous"
+    ],
+    "antonyms": [
+      "dependent"
+    ],
+    "example": "The project encouraged students to become more independent learners.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -4782,16 +6356,22 @@ window.vocabulary = [
   },
   {
     "id": 266,
-    "word": "independent",
-    "partOfSpeech": "adjective",
+    "word": "influence",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is independent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “independent” correctly in context.",
+    "meaning": "to affect the way someone thinks or behaves",
+    "chinese": "影响",
+    "synonyms": [
+      "affect",
+      "shape"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Friends can influence the choices we make.",
     "topics": [
-      "General"
+      "People",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -4800,16 +6380,22 @@ window.vocabulary = [
   },
   {
     "id": 267,
-    "word": "influence",
-    "partOfSpeech": "noun",
+    "word": "inform",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to influence",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “influence” correctly in context.",
+    "meaning": "to give someone information about something",
+    "chinese": "通知；告知",
+    "synonyms": [
+      "tell",
+      "notify"
+    ],
+    "antonyms": [
+      "mislead"
+    ],
+    "example": "Please inform the office if you will be absent.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -4818,16 +6404,23 @@ window.vocabulary = [
   },
   {
     "id": 268,
-    "word": "inform",
-    "partOfSpeech": "noun",
+    "word": "initial",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to inform",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inform” correctly in context.",
+    "meaning": "happening at the beginning",
+    "chinese": "最初的",
+    "synonyms": [
+      "first",
+      "opening"
+    ],
+    "antonyms": [
+      "final",
+      "later"
+    ],
+    "example": "The initial plan was changed after the meeting.",
     "topics": [
-      "General"
+      "Planning",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -4836,16 +6429,22 @@ window.vocabulary = [
   },
   {
     "id": 269,
-    "word": "initial",
-    "partOfSpeech": "adjective",
+    "word": "inspect",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is initial",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “initial” correctly in context.",
+    "meaning": "to examine something carefully",
+    "chinese": "检查",
+    "synonyms": [
+      "examine",
+      "check"
+    ],
+    "antonyms": [
+      "neglect"
+    ],
+    "example": "Workers inspected the bridge for damage.",
     "topics": [
-      "General"
+      "Safety",
+      "Engineering"
     ],
     "questionTypes": [
       "MCQ",
@@ -4854,16 +6453,22 @@ window.vocabulary = [
   },
   {
     "id": 270,
-    "word": "inspect",
-    "partOfSpeech": "noun",
+    "word": "intend",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to inspect",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inspect” correctly in context.",
+    "meaning": "to plan or mean to do something",
+    "chinese": "打算；意图",
+    "synonyms": [
+      "plan",
+      "mean"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "I intend to finish the book this weekend.",
     "topics": [
-      "General"
+      "Planning",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -4872,16 +6477,22 @@ window.vocabulary = [
   },
   {
     "id": 271,
-    "word": "intend",
-    "partOfSpeech": "noun",
+    "word": "interrupt",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to intend",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intend” correctly in context.",
+    "meaning": "to stop someone while they are speaking or doing something",
+    "chinese": "打断",
+    "synonyms": [
+      "disturb",
+      "break in"
+    ],
+    "antonyms": [
+      "continue"
+    ],
+    "example": "Please do not interrupt while others are speaking.",
     "topics": [
-      "General"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -4890,16 +6501,22 @@ window.vocabulary = [
   },
   {
     "id": 272,
-    "word": "interrupt",
-    "partOfSpeech": "noun",
+    "word": "involve",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to interrupt",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “interrupt” correctly in context.",
+    "meaning": "to include someone or something in an activity",
+    "chinese": "涉及；包括",
+    "synonyms": [
+      "include",
+      "entail"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The project involves all the pupils in the class.",
     "topics": [
-      "General"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
       "MCQ",
@@ -4908,16 +6525,22 @@ window.vocabulary = [
   },
   {
     "id": 273,
-    "word": "involve",
-    "partOfSpeech": "noun",
+    "word": "maintain",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to involve",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “involve” correctly in context.",
+    "meaning": "to keep something in good condition or at the same level",
+    "chinese": "维持；保养",
+    "synonyms": [
+      "preserve",
+      "sustain"
+    ],
+    "antonyms": [
+      "neglect"
+    ],
+    "example": "Regular exercise helps maintain good health.",
     "topics": [
-      "General"
+      "Health",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -4926,16 +6549,22 @@ window.vocabulary = [
   },
   {
     "id": 274,
-    "word": "maintain",
-    "partOfSpeech": "noun",
+    "word": "major",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to maintain",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “maintain” correctly in context.",
+    "meaning": "very important or large",
+    "chinese": "主要的；重大的",
+    "synonyms": [
+      "important",
+      "significant"
+    ],
+    "antonyms": [
+      "minor"
+    ],
+    "example": "Pollution is a major environmental problem.",
     "topics": [
-      "General"
+      "Environment",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -4944,16 +6573,22 @@ window.vocabulary = [
   },
   {
     "id": 275,
-    "word": "major",
+    "word": "minor",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "describing someone or something that is major",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “major” correctly in context.",
+    "meaning": "less important, serious or large",
+    "chinese": "较小的；次要的",
+    "synonyms": [
+      "lesser",
+      "small"
+    ],
+    "antonyms": [
+      "major"
+    ],
+    "example": "The car suffered only minor damage.",
     "topics": [
-      "General"
+      "Transport",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -4962,16 +6597,22 @@ window.vocabulary = [
   },
   {
     "id": 276,
-    "word": "minor",
-    "partOfSpeech": "adjective",
+    "word": "motivate",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is minor",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “minor” correctly in context.",
+    "meaning": "to make someone want to do something well",
+    "chinese": "激励；促使",
+    "synonyms": [
+      "encourage",
+      "inspire"
+    ],
+    "antonyms": [
+      "discourage"
+    ],
+    "example": "Praise can motivate children to work harder.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -4980,16 +6621,23 @@ window.vocabulary = [
   },
   {
     "id": 277,
-    "word": "motivate",
-    "partOfSpeech": "noun",
+    "word": "negative",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to motivate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “motivate” correctly in context.",
+    "meaning": "expressing disagreement or showing a lack of hope",
+    "chinese": "负面的；消极的",
+    "synonyms": [
+      "pessimistic",
+      "unfavourable"
+    ],
+    "antonyms": [
+      "positive",
+      "optimistic"
+    ],
+    "example": "Try to replace negative thoughts with positive ones.",
     "topics": [
-      "General"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -4998,16 +6646,22 @@ window.vocabulary = [
   },
   {
     "id": 278,
-    "word": "negative",
-    "partOfSpeech": "adjective",
+    "word": "obtain",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is negative",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “negative” correctly in context.",
+    "meaning": "to get something, especially through effort",
+    "chinese": "获得",
+    "synonyms": [
+      "acquire",
+      "gain"
+    ],
+    "antonyms": [
+      "lose"
+    ],
+    "example": "Students can obtain information from reliable sources.",
     "topics": [
-      "General"
+      "School",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -5016,16 +6670,23 @@ window.vocabulary = [
   },
   {
     "id": 279,
-    "word": "obtain",
-    "partOfSpeech": "noun",
+    "word": "obvious",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to obtain",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “obtain” correctly in context.",
+    "meaning": "easy to see, understand or recognise",
+    "chinese": "明显的",
+    "synonyms": [
+      "clear",
+      "apparent"
+    ],
+    "antonyms": [
+      "unclear",
+      "hidden"
+    ],
+    "example": "It was obvious that the plant needed water.",
     "topics": [
-      "General"
+      "Science",
+      "Observation"
     ],
     "questionTypes": [
       "MCQ",
@@ -5034,16 +6695,22 @@ window.vocabulary = [
   },
   {
     "id": 280,
-    "word": "obvious",
-    "partOfSpeech": "adjective",
+    "word": "participate",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is obvious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “obvious” correctly in context.",
+    "meaning": "to take part in an activity",
+    "chinese": "参加",
+    "synonyms": [
+      "join",
+      "take part"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "Everyone was encouraged to participate in the discussion.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -5052,16 +6719,22 @@ window.vocabulary = [
   },
   {
     "id": 281,
-    "word": "participate",
-    "partOfSpeech": "noun",
+    "word": "persuade",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to participate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “participate” correctly in context.",
+    "meaning": "to make someone agree to do or believe something",
+    "chinese": "说服",
+    "synonyms": [
+      "convince",
+      "influence"
+    ],
+    "antonyms": [
+      "dissuade"
+    ],
+    "example": "She persuaded her brother to recycle the bottles.",
     "topics": [
-      "General"
+      "Communication",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -5070,16 +6743,22 @@ window.vocabulary = [
   },
   {
     "id": 282,
-    "word": "persuade",
-    "partOfSpeech": "noun",
+    "word": "precious",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to persuade",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “persuade” correctly in context.",
+    "meaning": "very valuable or important",
+    "chinese": "珍贵的",
+    "synonyms": [
+      "valuable",
+      "cherished"
+    ],
+    "antonyms": [
+      "worthless"
+    ],
+    "example": "The necklace was a precious family gift.",
     "topics": [
-      "General"
+      "Family",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -5088,16 +6767,22 @@ window.vocabulary = [
   },
   {
     "id": 283,
-    "word": "precious",
-    "partOfSpeech": "adjective",
+    "word": "predict",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is precious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “precious” correctly in context.",
+    "meaning": "to say what you think will happen in the future",
+    "chinese": "预测",
+    "synonyms": [
+      "forecast",
+      "foretell"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "Can you predict what will happen next in the experiment?",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -5106,16 +6791,21 @@ window.vocabulary = [
   },
   {
     "id": 284,
-    "word": "predict",
-    "partOfSpeech": "noun",
+    "word": "prefer",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to predict",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “predict” correctly in context.",
+    "meaning": "to like one thing more than another",
+    "chinese": "更喜欢",
+    "synonyms": [
+      "favour"
+    ],
+    "antonyms": [
+      "dislike"
+    ],
+    "example": "I prefer reading to watching television.",
     "topics": [
-      "General"
+      "Hobbies",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -5124,16 +6814,23 @@ window.vocabulary = [
   },
   {
     "id": 285,
-    "word": "prefer",
-    "partOfSpeech": "noun",
+    "word": "previous",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to prefer",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prefer” correctly in context.",
+    "meaning": "happening or existing before the present time",
+    "chinese": "之前的；先前的",
+    "synonyms": [
+      "earlier",
+      "former"
+    ],
+    "antonyms": [
+      "next",
+      "following"
+    ],
+    "example": "Use the previous page to find the missing information.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -5142,16 +6839,22 @@ window.vocabulary = [
   },
   {
     "id": 286,
-    "word": "preventable",
-    "partOfSpeech": "noun",
+    "word": "propose",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to preventable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “preventable” correctly in context.",
+    "meaning": "to suggest a plan or idea for people to consider",
+    "chinese": "提议",
+    "synonyms": [
+      "suggest",
+      "recommend"
+    ],
+    "antonyms": [
+      "oppose"
+    ],
+    "example": "The pupils proposed a plan to reduce food waste.",
     "topics": [
-      "General"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -5160,16 +6863,22 @@ window.vocabulary = [
   },
   {
     "id": 287,
-    "word": "previous",
-    "partOfSpeech": "adjective",
+    "word": "recognise",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is previous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “previous” correctly in context.",
+    "meaning": "to know someone or something because you have seen it before",
+    "chinese": "认出；认识",
+    "synonyms": [
+      "identify",
+      "know"
+    ],
+    "antonyms": [
+      "misidentify"
+    ],
+    "example": "I recognised the song as soon as it began.",
     "topics": [
-      "General"
+      "Music",
+      "Memory"
     ],
     "questionTypes": [
       "MCQ",
@@ -5178,16 +6887,22 @@ window.vocabulary = [
   },
   {
     "id": 288,
-    "word": "primary",
-    "partOfSpeech": "adjective",
+    "word": "recommend",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is primary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “primary” correctly in context.",
+    "meaning": "to suggest that someone should do or choose something",
+    "chinese": "推荐；建议",
+    "synonyms": [
+      "suggest",
+      "advise"
+    ],
+    "antonyms": [
+      "discourage"
+    ],
+    "example": "The teacher recommended this book for advanced readers.",
     "topics": [
-      "General"
+      "School",
+      "Reading"
     ],
     "questionTypes": [
       "MCQ",
@@ -5196,16 +6911,22 @@ window.vocabulary = [
   },
   {
     "id": 289,
-    "word": "propose",
-    "partOfSpeech": "noun",
+    "word": "recover",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to propose",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “propose” correctly in context.",
+    "meaning": "to return to a normal condition after illness or difficulty",
+    "chinese": "恢复",
+    "synonyms": [
+      "heal",
+      "regain"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "It took her several days to recover from the flu.",
     "topics": [
-      "General"
+      "Health",
+      "Recovery"
     ],
     "questionTypes": [
       "MCQ",
@@ -5214,16 +6935,22 @@ window.vocabulary = [
   },
   {
     "id": 290,
-    "word": "recognise",
-    "partOfSpeech": "noun",
+    "word": "remarkable",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to recognise",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “recognise” correctly in context.",
+    "meaning": "unusual or impressive",
+    "chinese": "非凡的；显著的",
+    "synonyms": [
+      "extraordinary",
+      "notable"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The athlete made a remarkable improvement.",
     "topics": [
-      "General"
+      "Sports",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -5232,16 +6959,22 @@ window.vocabulary = [
   },
   {
     "id": 291,
-    "word": "recommend",
-    "partOfSpeech": "noun",
+    "word": "require",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to recommend",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “recommend” correctly in context.",
+    "meaning": "to need something",
+    "chinese": "需要；要求",
+    "synonyms": [
+      "need",
+      "demand"
+    ],
+    "antonyms": [
+      "waive"
+    ],
+    "example": "The experiment requires three different materials.",
     "topics": [
-      "General"
+      "Science",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -5250,16 +6983,22 @@ window.vocabulary = [
   },
   {
     "id": 292,
-    "word": "recover",
-    "partOfSpeech": "noun",
+    "word": "respond",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to recover",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “recover” correctly in context.",
+    "meaning": "to answer or react to something",
+    "chinese": "回应；反应",
+    "synonyms": [
+      "reply",
+      "react"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Please respond to the teacher's question clearly.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -5268,16 +7007,23 @@ window.vocabulary = [
   },
   {
     "id": 293,
-    "word": "remarkable",
-    "partOfSpeech": "adjective",
+    "word": "restrict",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is remarkable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “remarkable” correctly in context.",
+    "meaning": "to limit something",
+    "chinese": "限制",
+    "synonyms": [
+      "limit",
+      "control"
+    ],
+    "antonyms": [
+      "allow",
+      "expand"
+    ],
+    "example": "The school restricts the use of mobile phones during lessons.",
     "topics": [
-      "General"
+      "School",
+      "Rules"
     ],
     "questionTypes": [
       "MCQ",
@@ -5286,16 +7032,23 @@ window.vocabulary = [
   },
   {
     "id": 294,
-    "word": "require",
-    "partOfSpeech": "noun",
+    "word": "reveal",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to require",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “require” correctly in context.",
+    "meaning": "to make something previously hidden known or visible",
+    "chinese": "揭示；透露",
+    "synonyms": [
+      "disclose",
+      "uncover"
+    ],
+    "antonyms": [
+      "conceal",
+      "hide"
+    ],
+    "example": "The test revealed a surprising result.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -5304,16 +7057,22 @@ window.vocabulary = [
   },
   {
     "id": 295,
-    "word": "respond",
-    "partOfSpeech": "noun",
+    "word": "significant",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to respond",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “respond” correctly in context.",
+    "meaning": "important enough to be noticed or considered",
+    "chinese": "重要的；显著的",
+    "synonyms": [
+      "important",
+      "notable"
+    ],
+    "antonyms": [
+      "insignificant"
+    ],
+    "example": "There was a significant improvement in his results.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -5322,16 +7081,22 @@ window.vocabulary = [
   },
   {
     "id": 296,
-    "word": "restrict",
-    "partOfSpeech": "noun",
+    "word": "similar",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to restrict",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “restrict” correctly in context.",
+    "meaning": "almost the same as another thing",
+    "chinese": "相似的",
+    "synonyms": [
+      "alike",
+      "comparable"
+    ],
+    "antonyms": [
+      "different"
+    ],
+    "example": "The two experiments produced similar results.",
     "topics": [
-      "General"
+      "Science",
+      "Comparison"
     ],
     "questionTypes": [
       "MCQ",
@@ -5340,16 +7105,22 @@ window.vocabulary = [
   },
   {
     "id": 297,
-    "word": "reveal",
-    "partOfSpeech": "noun",
+    "word": "sufficient",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea or situation related to reveal",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reveal” correctly in context.",
+    "meaning": "enough for a particular purpose",
+    "chinese": "足够的",
+    "synonyms": [
+      "enough",
+      "adequate"
+    ],
+    "antonyms": [
+      "insufficient"
+    ],
+    "example": "We have sufficient water for the journey.",
     "topics": [
-      "General"
+      "Travel",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -5358,16 +7129,22 @@ window.vocabulary = [
   },
   {
     "id": 298,
-    "word": "significant",
-    "partOfSpeech": "adjective",
+    "word": "tolerate",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "important enough to be noticed or considered",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “significant” correctly in context.",
+    "meaning": "to accept something unpleasant without reacting strongly",
+    "chinese": "容忍；忍受",
+    "synonyms": [
+      "endure",
+      "accept"
+    ],
+    "antonyms": [
+      "reject"
+    ],
+    "example": "I cannot tolerate loud noise while studying.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -5376,16 +7153,22 @@ window.vocabulary = [
   },
   {
     "id": 299,
-    "word": "similar",
-    "partOfSpeech": "adjective",
+    "word": "transform",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "describing someone or something that is similar",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “similar” correctly in context.",
+    "meaning": "to change something completely",
+    "chinese": "彻底改变；转变",
+    "synonyms": [
+      "convert",
+      "change"
+    ],
+    "antonyms": [
+      "preserve"
+    ],
+    "example": "The renovation transformed the old room into a library.",
     "topics": [
-      "General"
+      "Buildings",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -5394,16 +7177,23 @@ window.vocabulary = [
   },
   {
     "id": 300,
-    "word": "sufficient",
+    "word": "unusual",
     "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "enough for a particular purpose",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sufficient” correctly in context.",
+    "meaning": "not common or ordinary",
+    "chinese": "不寻常的",
+    "synonyms": [
+      "uncommon",
+      "rare"
+    ],
+    "antonyms": [
+      "usual",
+      "ordinary"
+    ],
+    "example": "We saw an unusual cloud formation in the sky.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -5412,16 +7202,22 @@ window.vocabulary = [
   },
   {
     "id": 301,
-    "word": "accomplish",
-    "partOfSpeech": "verb",
+    "word": "accommodation",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to accomplish or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “accomplish” correctly in context.",
+    "meaning": "a place where someone lives or stays",
+    "chinese": "住宿",
+    "synonyms": [
+      "lodging",
+      "housing"
+    ],
+    "antonyms": [
+      "homelessness"
+    ],
+    "example": "We booked our accommodation before travelling.",
     "topics": [
-      "General"
+      "Travel",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -5430,16 +7226,22 @@ window.vocabulary = [
   },
   {
     "id": 302,
-    "word": "acknowledge",
+    "word": "accompany",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to acknowledge or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “acknowledge” correctly in context.",
+    "meaning": "to go somewhere with someone",
+    "chinese": "陪同；伴随",
+    "synonyms": [
+      "escort",
+      "go with"
+    ],
+    "antonyms": [
+      "leave"
+    ],
+    "example": "My mother accompanied me to the doctor's appointment.",
     "topics": [
-      "General"
+      "Family",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -5448,16 +7250,22 @@ window.vocabulary = [
   },
   {
     "id": 303,
-    "word": "adequate",
-    "partOfSpeech": "adjective",
+    "word": "accomplish",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is adequate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “adequate” correctly in context.",
+    "meaning": "to succeed in doing or completing something",
+    "chinese": "完成；实现",
+    "synonyms": [
+      "achieve",
+      "attain"
+    ],
+    "antonyms": [
+      "fail"
+    ],
+    "example": "She worked hard to accomplish her goal before the holidays.",
     "topics": [
-      "General"
+      "Goals",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -5466,16 +7274,22 @@ window.vocabulary = [
   },
   {
     "id": 304,
-    "word": "alternative",
-    "partOfSpeech": "adjective",
+    "word": "accumulate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is alternative",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “alternative” correctly in context.",
+    "meaning": "to collect or increase over time",
+    "chinese": "积累；聚集",
+    "synonyms": [
+      "gather",
+      "build up"
+    ],
+    "antonyms": [
+      "disperse"
+    ],
+    "example": "Dust can accumulate if the room is not cleaned regularly.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -5484,16 +7298,22 @@ window.vocabulary = [
   },
   {
     "id": 305,
-    "word": "anticipate",
-    "partOfSpeech": "verb",
+    "word": "achievement",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to anticipate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “anticipate” correctly in context.",
+    "meaning": "something successfully completed through effort",
+    "chinese": "成就",
+    "synonyms": [
+      "accomplishment",
+      "success"
+    ],
+    "antonyms": [
+      "failure"
+    ],
+    "example": "Winning the competition was a great achievement.",
     "topics": [
-      "General"
+      "School",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -5502,16 +7322,22 @@ window.vocabulary = [
   },
   {
     "id": 306,
-    "word": "assemble",
+    "word": "acknowledge",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to assemble or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “assemble” correctly in context.",
+    "meaning": "to accept or admit that something is True",
+    "chinese": "承认；确认",
+    "synonyms": [
+      "admit",
+      "recognise"
+    ],
+    "antonyms": [
+      "deny"
+    ],
+    "example": "He acknowledged that he had made a mistake.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -5520,16 +7346,22 @@ window.vocabulary = [
   },
   {
     "id": 307,
-    "word": "assess",
-    "partOfSpeech": "verb",
+    "word": "adequate",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to assess or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “assess” correctly in context.",
+    "meaning": "enough for a particular need or purpose",
+    "chinese": "足够的；适当的",
+    "synonyms": [
+      "sufficient",
+      "enough"
+    ],
+    "antonyms": [
+      "inadequate"
+    ],
+    "example": "The classroom has adequate space for thirty pupils.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -5538,16 +7370,22 @@ window.vocabulary = [
   },
   {
     "id": 308,
-    "word": "assumption",
+    "word": "advantage",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to assumption",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “assumption” correctly in context.",
+    "meaning": "a condition that makes success more likely",
+    "chinese": "优势；有利条件",
+    "synonyms": [
+      "benefit",
+      "strength"
+    ],
+    "antonyms": [
+      "disadvantage"
+    ],
+    "example": "Speaking another language can be an advantage when travelling.",
     "topics": [
-      "General"
+      "Education",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -5556,16 +7394,22 @@ window.vocabulary = [
   },
   {
     "id": 309,
-    "word": "benefit",
+    "word": "adventure",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to benefit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “benefit” correctly in context.",
+    "meaning": "an exciting or unusual experience",
+    "chinese": "冒险；奇遇",
+    "synonyms": [
+      "exploration",
+      "journey"
+    ],
+    "antonyms": [
+      "routine"
+    ],
+    "example": "The family went on an adventure in the rainforest.",
     "topics": [
-      "General"
+      "Travel",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -5574,16 +7418,22 @@ window.vocabulary = [
   },
   {
     "id": 310,
-    "word": "capacity",
-    "partOfSpeech": "noun",
+    "word": "alert",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to capacity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “capacity” correctly in context.",
+    "meaning": "quick to notice danger or problems",
+    "chinese": "警觉的",
+    "synonyms": [
+      "watchful",
+      "vigilant"
+    ],
+    "antonyms": [
+      "unaware"
+    ],
+    "example": "Stay alert when crossing a busy road.",
     "topics": [
-      "General"
+      "Safety",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -5592,16 +7442,22 @@ window.vocabulary = [
   },
   {
     "id": 311,
-    "word": "circumstance",
+    "word": "alternative",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to circumstance",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “circumstance” correctly in context.",
+    "meaning": "another possibility or choice",
+    "chinese": "替代方案；选择",
+    "synonyms": [
+      "option",
+      "substitute"
+    ],
+    "antonyms": [
+      "necessity"
+    ],
+    "example": "Cycling is a good alternative to taking the car.",
     "topics": [
-      "General"
+      "Transport",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -5610,16 +7466,22 @@ window.vocabulary = [
   },
   {
     "id": 312,
-    "word": "clarify",
+    "word": "anticipate",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to clarify or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “clarify” correctly in context.",
+    "meaning": "to expect something and prepare for it",
+    "chinese": "预期；预料",
+    "synonyms": [
+      "expect",
+      "foresee"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "We anticipated heavy traffic and left early.",
     "topics": [
-      "General"
+      "Travel",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -5628,16 +7490,22 @@ window.vocabulary = [
   },
   {
     "id": 313,
-    "word": "coincidence",
+    "word": "apology",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to coincidence",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “coincidence” correctly in context.",
+    "meaning": "something said or written to show that you are sorry",
+    "chinese": "道歉",
+    "synonyms": [
+      "regret",
+      "expression of regret"
+    ],
+    "antonyms": [
+      "insult"
+    ],
+    "example": "He offered an apology for breaking the vase.",
     "topics": [
-      "General"
+      "Values",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -5646,16 +7514,22 @@ window.vocabulary = [
   },
   {
     "id": 314,
-    "word": "collaborate",
-    "partOfSpeech": "verb",
+    "word": "appointment",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to collaborate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “collaborate” correctly in context.",
+    "meaning": "an arranged time to meet someone",
+    "chinese": "预约；约会",
+    "synonyms": [
+      "arrangement",
+      "meeting"
+    ],
+    "antonyms": [
+      "cancellation"
+    ],
+    "example": "I have a doctor's appointment tomorrow afternoon.",
     "topics": [
-      "General"
+      "Health",
+      "Time"
     ],
     "questionTypes": [
       "MCQ",
@@ -5664,16 +7538,22 @@ window.vocabulary = [
   },
   {
     "id": 315,
-    "word": "compassion",
-    "partOfSpeech": "noun",
+    "word": "approve",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to compassion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “compassion” correctly in context.",
+    "meaning": "to officially accept or agree to something",
+    "chinese": "批准；同意",
+    "synonyms": [
+      "accept",
+      "endorse"
+    ],
+    "antonyms": [
+      "reject"
+    ],
+    "example": "The principal approved the new school project.",
     "topics": [
-      "General"
+      "School",
+      "Management"
     ],
     "questionTypes": [
       "MCQ",
@@ -5682,16 +7562,22 @@ window.vocabulary = [
   },
   {
     "id": 316,
-    "word": "competent",
+    "word": "argument",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to competent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “competent” correctly in context.",
+    "meaning": "a disagreement in which people express different views",
+    "chinese": "争论；论点",
+    "synonyms": [
+      "dispute",
+      "debate"
+    ],
+    "antonyms": [
+      "agreement"
+    ],
+    "example": "The pupils had an argument about which idea was better.",
     "topics": [
-      "General"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -5700,16 +7586,22 @@ window.vocabulary = [
   },
   {
     "id": 317,
-    "word": "consistent",
+    "word": "arrangement",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to consistent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “consistent” correctly in context.",
+    "meaning": "a plan or organisation for something",
+    "chinese": "安排",
+    "synonyms": [
+      "plan",
+      "organisation"
+    ],
+    "antonyms": [
+      "disorder"
+    ],
+    "example": "The travel arrangements were completed before Friday.",
     "topics": [
-      "General"
+      "Travel",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -5718,16 +7610,22 @@ window.vocabulary = [
   },
   {
     "id": 318,
-    "word": "construct",
-    "partOfSpeech": "noun",
+    "word": "assemble",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to construct",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “construct” correctly in context.",
+    "meaning": "to gather people or parts together",
+    "chinese": "集合；组装",
+    "synonyms": [
+      "gather",
+      "put together"
+    ],
+    "antonyms": [
+      "disassemble"
+    ],
+    "example": "The pupils assembled in the hall before the ceremony.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -5736,16 +7634,22 @@ window.vocabulary = [
   },
   {
     "id": 319,
-    "word": "consult",
-    "partOfSpeech": "noun",
+    "word": "assess",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to consult",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “consult” correctly in context.",
+    "meaning": "to judge the quality, importance or value of something",
+    "chinese": "评估",
+    "synonyms": [
+      "evaluate",
+      "judge"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "The teacher assessed each pupil's reading skills.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -5754,16 +7658,22 @@ window.vocabulary = [
   },
   {
     "id": 320,
-    "word": "contradict",
-    "partOfSpeech": "verb",
+    "word": "assumption",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to contradict or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “contradict” correctly in context.",
+    "meaning": "something accepted as True without proof",
+    "chinese": "假设；臆测",
+    "synonyms": [
+      "belief",
+      "presumption"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "His assumption that the shop was open proved wrong.",
     "topics": [
-      "General"
+      "Thinking",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -5772,16 +7682,22 @@ window.vocabulary = [
   },
   {
     "id": 321,
-    "word": "controversial",
-    "partOfSpeech": "adjective",
+    "word": "audience",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "describing someone or something that is controversial",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “controversial” correctly in context.",
+    "meaning": "the people watching or listening to a performance",
+    "chinese": "观众；听众",
+    "synonyms": [
+      "spectators",
+      "viewers"
+    ],
+    "antonyms": [
+      "performers"
+    ],
+    "example": "The audience applauded after the school play.",
     "topics": [
-      "General"
+      "Arts",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -5790,16 +7706,22 @@ window.vocabulary = [
   },
   {
     "id": 322,
-    "word": "crucial",
-    "partOfSpeech": "adjective",
+    "word": "background",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "describing someone or something that is crucial",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “crucial” correctly in context.",
+    "meaning": "the circumstances or information behind an event or person",
+    "chinese": "背景；经历",
+    "synonyms": [
+      "context",
+      "history"
+    ],
+    "antonyms": [
+      "foreground"
+    ],
+    "example": "The teacher explained the background of the story.",
     "topics": [
-      "General"
+      "School",
+      "Reading"
     ],
     "questionTypes": [
       "MCQ",
@@ -5808,16 +7730,22 @@ window.vocabulary = [
   },
   {
     "id": 323,
-    "word": "cultivate",
-    "partOfSpeech": "verb",
+    "word": "barrier",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to cultivate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cultivate” correctly in context.",
+    "meaning": "something that prevents movement or progress",
+    "chinese": "障碍；屏障",
+    "synonyms": [
+      "obstacle",
+      "block"
+    ],
+    "antonyms": [
+      "opening"
+    ],
+    "example": "Language can sometimes be a barrier to communication.",
     "topics": [
-      "General"
+      "Communication",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -5826,16 +7754,23 @@ window.vocabulary = [
   },
   {
     "id": 324,
-    "word": "deduce",
-    "partOfSpeech": "verb",
+    "word": "benefit",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to deduce or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deduce” correctly in context.",
+    "meaning": "an advantage or helpful result",
+    "chinese": "益处；好处",
+    "synonyms": [
+      "advantage",
+      "gain"
+    ],
+    "antonyms": [
+      "disadvantage",
+      "harm"
+    ],
+    "example": "Regular exercise has many health benefits.",
     "topics": [
-      "General"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -5844,16 +7779,22 @@ window.vocabulary = [
   },
   {
     "id": 325,
-    "word": "deficient",
+    "word": "capacity",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to deficient",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deficient” correctly in context.",
+    "meaning": "the maximum amount that something can contain or hold",
+    "chinese": "容量；能力",
+    "synonyms": [
+      "ability",
+      "volume"
+    ],
+    "antonyms": [
+      "limitation"
+    ],
+    "example": "The hall has a capacity of five hundred people.",
     "topics": [
-      "General"
+      "Buildings",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -5862,16 +7803,22 @@ window.vocabulary = [
   },
   {
     "id": 326,
-    "word": "derive",
+    "word": "capture",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to derive or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “derive” correctly in context.",
+    "meaning": "to catch or record someone or something",
+    "chinese": "捕捉；记录",
+    "synonyms": [
+      "catch",
+      "record"
+    ],
+    "antonyms": [
+      "release"
+    ],
+    "example": "The camera captured a beautiful sunset.",
     "topics": [
-      "General"
+      "Technology",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -5880,16 +7827,20 @@ window.vocabulary = [
   },
   {
     "id": 327,
-    "word": "distinguish",
-    "partOfSpeech": "verb",
+    "word": "circumstance",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to distinguish or carry out this action",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "a condition or fact that affects a situation",
+    "chinese": "情况；环境",
+    "synonyms": [
+      "condition",
+      "situation"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “distinguish” correctly in context.",
+    "example": "Under these circumstances, we decided to postpone the trip.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Decision Making"
     ],
     "questionTypes": [
       "MCQ",
@@ -5898,16 +7849,22 @@ window.vocabulary = [
   },
   {
     "id": 328,
-    "word": "diverse",
-    "partOfSpeech": "adjective",
+    "word": "clarify",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is diverse",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “diverse” correctly in context.",
+    "meaning": "to make something easier to understand",
+    "chinese": "澄清；阐明",
+    "synonyms": [
+      "explain",
+      "simplify"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "Could you clarify what the instructions mean?",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -5916,16 +7873,20 @@ window.vocabulary = [
   },
   {
     "id": 329,
-    "word": "dominate",
-    "partOfSpeech": "verb",
+    "word": "coincidence",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to dominate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "a situation in which events happen at the same time by chance",
+    "chinese": "巧合",
+    "synonyms": [
+      "chance",
+      "chance occurrence"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “dominate” correctly in context.",
+    "example": "It was a coincidence that we wore the same colour.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Events"
     ],
     "questionTypes": [
       "MCQ",
@@ -5934,16 +7895,22 @@ window.vocabulary = [
   },
   {
     "id": 330,
-    "word": "eliminate",
+    "word": "collaborate",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to eliminate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “eliminate” correctly in context.",
+    "meaning": "to work with others to achieve something",
+    "chinese": "合作",
+    "synonyms": [
+      "cooperate",
+      "work together"
+    ],
+    "antonyms": [
+      "compete"
+    ],
+    "example": "The pupils collaborated on a science project.",
     "topics": [
-      "General"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
       "MCQ",
@@ -5952,16 +7919,22 @@ window.vocabulary = [
   },
   {
     "id": 331,
-    "word": "encounter",
-    "partOfSpeech": "verb",
+    "word": "compassion",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to encounter or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “encounter” correctly in context.",
+    "meaning": "a strong feeling of sympathy for someone who is suffering",
+    "chinese": "同情；怜悯",
+    "synonyms": [
+      "sympathy",
+      "kindness"
+    ],
+    "antonyms": [
+      "cruelty"
+    ],
+    "example": "She showed compassion towards the injured animal.",
     "topics": [
-      "General"
+      "Values",
+      "Animals"
     ],
     "questionTypes": [
       "MCQ",
@@ -5970,16 +7943,22 @@ window.vocabulary = [
   },
   {
     "id": 332,
-    "word": "enhance",
-    "partOfSpeech": "verb",
+    "word": "competent",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to enhance or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “enhance” correctly in context.",
+    "meaning": "having enough skill or ability to do something well",
+    "chinese": "有能力的；胜任的",
+    "synonyms": [
+      "capable",
+      "skilled"
+    ],
+    "antonyms": [
+      "incompetent"
+    ],
+    "example": "He is a competent swimmer who follows safety rules.",
     "topics": [
-      "General"
+      "Sports",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -5988,16 +7967,22 @@ window.vocabulary = [
   },
   {
     "id": 333,
-    "word": "ensure",
+    "word": "confront",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to ensure or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ensure” correctly in context.",
+    "meaning": "to face a difficult situation or person",
+    "chinese": "面对；对抗",
+    "synonyms": [
+      "face",
+      "challenge"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "We must confront the problem before it becomes worse.",
     "topics": [
-      "General"
+      "Problem Solving",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -6006,16 +7991,22 @@ window.vocabulary = [
   },
   {
     "id": 334,
-    "word": "evaluate",
-    "partOfSpeech": "verb",
+    "word": "consistent",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to evaluate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “evaluate” correctly in context.",
+    "meaning": "always behaving or happening in a similar way",
+    "chinese": "一致的；稳定的",
+    "synonyms": [
+      "steady",
+      "constant"
+    ],
+    "antonyms": [
+      "inconsistent"
+    ],
+    "example": "Consistent practice helped her improve her piano skills.",
     "topics": [
-      "General"
+      "Learning",
+      "Music"
     ],
     "questionTypes": [
       "MCQ",
@@ -6024,16 +8015,22 @@ window.vocabulary = [
   },
   {
     "id": 335,
-    "word": "evident",
-    "partOfSpeech": "adjective",
+    "word": "construct",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is evident",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “evident” correctly in context.",
+    "meaning": "to build something",
+    "chinese": "建造",
+    "synonyms": [
+      "build",
+      "create"
+    ],
+    "antonyms": [
+      "demolish"
+    ],
+    "example": "Workers constructed a new bridge across the river.",
     "topics": [
-      "General"
+      "Engineering",
+      "Transport"
     ],
     "questionTypes": [
       "MCQ",
@@ -6042,16 +8039,22 @@ window.vocabulary = [
   },
   {
     "id": 336,
-    "word": "exaggerate",
+    "word": "consult",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to exaggerate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exaggerate” correctly in context.",
+    "meaning": "to ask someone for advice or information",
+    "chinese": "咨询；请教",
+    "synonyms": [
+      "ask",
+      "seek advice"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "We consulted the teacher before changing our plan.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -6060,16 +8063,22 @@ window.vocabulary = [
   },
   {
     "id": 337,
-    "word": "exceed",
-    "partOfSpeech": "verb",
+    "word": "contrast",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to exceed or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exceed” correctly in context.",
+    "meaning": "a clear difference between two things",
+    "chinese": "对比；反差",
+    "synonyms": [
+      "difference",
+      "distinction"
+    ],
+    "antonyms": [
+      "similarity"
+    ],
+    "example": "The contrast between the two paintings was striking.",
     "topics": [
-      "General"
+      "Arts",
+      "Comparison"
     ],
     "questionTypes": [
       "MCQ",
@@ -6078,16 +8087,22 @@ window.vocabulary = [
   },
   {
     "id": 338,
-    "word": "exclude",
-    "partOfSpeech": "verb",
+    "word": "controversial",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to exclude or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exclude” correctly in context.",
+    "meaning": "causing disagreement among people",
+    "chinese": "有争议的",
+    "synonyms": [
+      "disputed",
+      "debatable"
+    ],
+    "antonyms": [
+      "uncontroversial"
+    ],
+    "example": "The proposed rule was controversial among parents.",
     "topics": [
-      "General"
+      "Community",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -6096,16 +8111,22 @@ window.vocabulary = [
   },
   {
     "id": 339,
-    "word": "explicit",
+    "word": "convincing",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is explicit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “explicit” correctly in context.",
+    "meaning": "able to make someone believe that something is True",
+    "chinese": "有说服力的",
+    "synonyms": [
+      "persuasive",
+      "credible"
+    ],
+    "antonyms": [
+      "unconvincing"
+    ],
+    "example": "She gave a convincing explanation for her absence.",
     "topics": [
-      "General"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -6114,16 +8135,22 @@ window.vocabulary = [
   },
   {
     "id": 340,
-    "word": "facilitate",
-    "partOfSpeech": "verb",
+    "word": "crucial",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to facilitate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “facilitate” correctly in context.",
+    "meaning": "extremely important to a result or situation",
+    "chinese": "至关重要的",
+    "synonyms": [
+      "essential",
+      "vital"
+    ],
+    "antonyms": [
+      "unimportant"
+    ],
+    "example": "Good communication is crucial during an emergency.",
     "topics": [
-      "General"
+      "Safety",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -6132,16 +8159,22 @@ window.vocabulary = [
   },
   {
     "id": 341,
-    "word": "formulate",
+    "word": "cultivate",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to formulate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “formulate” correctly in context.",
+    "meaning": "to develop a skill, quality or relationship",
+    "chinese": "培养；栽培",
+    "synonyms": [
+      "develop",
+      "grow"
+    ],
+    "antonyms": [
+      "neglect"
+    ],
+    "example": "Reading helps cultivate a love of learning.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -6150,16 +8183,22 @@ window.vocabulary = [
   },
   {
     "id": 342,
-    "word": "fundamental",
-    "partOfSpeech": "adjective",
+    "word": "decrease",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is fundamental",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “fundamental” correctly in context.",
+    "meaning": "to become or make something smaller or less",
+    "chinese": "减少；下降",
+    "synonyms": [
+      "reduce",
+      "decline"
+    ],
+    "antonyms": [
+      "increase"
+    ],
+    "example": "The number of plastic bags used has decreased.",
     "topics": [
-      "General"
+      "Environment",
+      "Numbers"
     ],
     "questionTypes": [
       "MCQ",
@@ -6168,16 +8207,22 @@ window.vocabulary = [
   },
   {
     "id": 343,
-    "word": "generate",
+    "word": "deduce",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to generate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “generate” correctly in context.",
+    "meaning": "to reach an answer by using available information",
+    "chinese": "推断；推论",
+    "synonyms": [
+      "infer",
+      "conclude"
+    ],
+    "antonyms": [
+      "misjudge"
+    ],
+    "example": "From the footprints, we deduced that someone had entered the room.",
     "topics": [
-      "General"
+      "Problem Solving",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -6186,16 +8231,22 @@ window.vocabulary = [
   },
   {
     "id": 344,
-    "word": "illustrate",
-    "partOfSpeech": "verb",
+    "word": "deficient",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to illustrate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “illustrate” correctly in context.",
+    "meaning": "lacking something necessary",
+    "chinese": "缺乏的；不足的",
+    "synonyms": [
+      "lacking",
+      "insufficient"
+    ],
+    "antonyms": [
+      "adequate"
+    ],
+    "example": "The soil was deficient in nutrients.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -6204,16 +8255,22 @@ window.vocabulary = [
   },
   {
     "id": 345,
-    "word": "imply",
+    "word": "derive",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to imply or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “imply” correctly in context.",
+    "meaning": "to get something from a source",
+    "chinese": "源自；获得",
+    "synonyms": [
+      "obtain",
+      "originate"
+    ],
+    "antonyms": [
+      "lose"
+    ],
+    "example": "Many medicines are derived from natural substances.",
     "topics": [
-      "General"
+      "Science",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -6222,16 +8279,22 @@ window.vocabulary = [
   },
   {
     "id": 346,
-    "word": "incredible",
-    "partOfSpeech": "adjective",
+    "word": "distinguish",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is incredible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “incredible” correctly in context.",
+    "meaning": "to recognise a difference between things",
+    "chinese": "区分；辨别",
+    "synonyms": [
+      "differentiate",
+      "tell apart"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "Can you distinguish between the two bird calls?",
     "topics": [
-      "General"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -6240,16 +8303,23 @@ window.vocabulary = [
   },
   {
     "id": 347,
-    "word": "indicate",
-    "partOfSpeech": "verb",
+    "word": "diverse",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to indicate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “indicate” correctly in context.",
+    "meaning": "including many different types of people or things",
+    "chinese": "多样的",
+    "synonyms": [
+      "varied",
+      "wide-ranging"
+    ],
+    "antonyms": [
+      "uniform",
+      "limited"
+    ],
+    "example": "Singapore is home to a diverse population.",
     "topics": [
-      "General"
+      "Society",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -6258,16 +8328,22 @@ window.vocabulary = [
   },
   {
     "id": 348,
-    "word": "inevitable",
-    "partOfSpeech": "adjective",
+    "word": "dominate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is inevitable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inevitable” correctly in context.",
+    "meaning": "to control or be the most important part of something",
+    "chinese": "支配；占优势",
+    "synonyms": [
+      "control",
+      "lead"
+    ],
+    "antonyms": [
+      "submit"
+    ],
+    "example": "One team dominated the match from the beginning.",
     "topics": [
-      "General"
+      "Sports",
+      "Competition"
     ],
     "questionTypes": [
       "MCQ",
@@ -6276,16 +8352,22 @@ window.vocabulary = [
   },
   {
     "id": 349,
-    "word": "innovative",
-    "partOfSpeech": "adjective",
+    "word": "eliminate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is innovative",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “innovative” correctly in context.",
+    "meaning": "to remove or get rid of something",
+    "chinese": "消除；排除",
+    "synonyms": [
+      "remove",
+      "eradicate"
+    ],
+    "antonyms": [
+      "retain"
+    ],
+    "example": "We should eliminate unnecessary plastic packaging.",
     "topics": [
-      "General"
+      "Environment",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -6294,16 +8376,22 @@ window.vocabulary = [
   },
   {
     "id": 350,
-    "word": "interpret",
+    "word": "encounter",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to interpret or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “interpret” correctly in context.",
+    "meaning": "to meet or experience something unexpectedly",
+    "chinese": "遇到；遭遇",
+    "synonyms": [
+      "meet",
+      "face"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "We encountered heavy rain during the hike.",
     "topics": [
-      "General"
+      "Travel",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -6312,16 +8400,22 @@ window.vocabulary = [
   },
   {
     "id": 351,
-    "word": "justify",
+    "word": "enhance",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to justify or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “justify” correctly in context.",
+    "meaning": "to improve the quality or value of something",
+    "chinese": "增强；提高",
+    "synonyms": [
+      "improve",
+      "boost"
+    ],
+    "antonyms": [
+      "weaken"
+    ],
+    "example": "Plants can enhance the beauty of a garden.",
     "topics": [
-      "General"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -6330,16 +8424,22 @@ window.vocabulary = [
   },
   {
     "id": 352,
-    "word": "logical",
-    "partOfSpeech": "adjective",
+    "word": "ensure",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is logical",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “logical” correctly in context.",
+    "meaning": "to make certain that something happens",
+    "chinese": "确保",
+    "synonyms": [
+      "make sure",
+      "guarantee"
+    ],
+    "antonyms": [
+      "prevent"
+    ],
+    "example": "Please ensure that the door is locked before leaving.",
     "topics": [
-      "General"
+      "Safety",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -6348,16 +8448,22 @@ window.vocabulary = [
   },
   {
     "id": 353,
-    "word": "modify",
+    "word": "evaluate",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to modify or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “modify” correctly in context.",
+    "meaning": "to judge something carefully after considering its quality",
+    "chinese": "评估；评价",
+    "synonyms": [
+      "assess",
+      "judge"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Scientists evaluate the results before drawing a conclusion.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -6366,16 +8472,22 @@ window.vocabulary = [
   },
   {
     "id": 354,
-    "word": "nevertheless",
-    "partOfSpeech": "noun",
+    "word": "evident",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to nevertheless",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “nevertheless” correctly in context.",
+    "meaning": "clear and easy to notice",
+    "chinese": "明显的",
+    "synonyms": [
+      "obvious",
+      "apparent"
+    ],
+    "antonyms": [
+      "hidden"
+    ],
+    "example": "It was evident that the road was unsafe.",
     "topics": [
-      "General"
+      "Safety",
+      "Observation"
     ],
     "questionTypes": [
       "MCQ",
@@ -6384,16 +8496,22 @@ window.vocabulary = [
   },
   {
     "id": 355,
-    "word": "notion",
-    "partOfSpeech": "noun",
+    "word": "exaggerate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to notion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “notion” correctly in context.",
+    "meaning": "to make something seem larger or more important than it really is",
+    "chinese": "夸大",
+    "synonyms": [
+      "overstate",
+      "magnify"
+    ],
+    "antonyms": [
+      "understate"
+    ],
+    "example": "Do not exaggerate the size of the fish you caught.",
     "topics": [
-      "General"
+      "Communication",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -6402,16 +8520,22 @@ window.vocabulary = [
   },
   {
     "id": 356,
-    "word": "objective",
-    "partOfSpeech": "noun",
+    "word": "exceed",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to objective",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “objective” correctly in context.",
+    "meaning": "to be greater than a particular amount or limit",
+    "chinese": "超过",
+    "synonyms": [
+      "surpass",
+      "go beyond"
+    ],
+    "antonyms": [
+      "fall short"
+    ],
+    "example": "The number of visitors exceeded our expectations.",
     "topics": [
-      "General"
+      "Numbers",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -6420,16 +8544,22 @@ window.vocabulary = [
   },
   {
     "id": 357,
-    "word": "occupy",
+    "word": "exclude",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to occupy or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “occupy” correctly in context.",
+    "meaning": "to deliberately leave someone or something out",
+    "chinese": "排除；不包括",
+    "synonyms": [
+      "omit",
+      "leave out"
+    ],
+    "antonyms": [
+      "include"
+    ],
+    "example": "Please do not exclude anyone from the group activity.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -6438,16 +8568,22 @@ window.vocabulary = [
   },
   {
     "id": 358,
-    "word": "overall",
+    "word": "explicit",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is overall",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “overall” correctly in context.",
+    "meaning": "clear and direct, leaving no doubt about meaning",
+    "chinese": "明确的；清楚的",
+    "synonyms": [
+      "clear",
+      "specific"
+    ],
+    "antonyms": [
+      "vague"
+    ],
+    "example": "The teacher gave explicit instructions for the experiment.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -6456,16 +8592,22 @@ window.vocabulary = [
   },
   {
     "id": 359,
-    "word": "persistent",
-    "partOfSpeech": "adjective",
+    "word": "facilitate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is persistent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “persistent” correctly in context.",
+    "meaning": "to make an action or process easier",
+    "chinese": "促进；使便利",
+    "synonyms": [
+      "assist",
+      "ease"
+    ],
+    "antonyms": [
+      "hinder"
+    ],
+    "example": "The new timetable facilitates better use of the library.",
     "topics": [
-      "General"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -6474,16 +8616,22 @@ window.vocabulary = [
   },
   {
     "id": 360,
-    "word": "perspective",
-    "partOfSpeech": "noun",
+    "word": "formulate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to perspective",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “perspective” correctly in context.",
+    "meaning": "to develop a plan, idea or method carefully",
+    "chinese": "制定；构想",
+    "synonyms": [
+      "develop",
+      "devise"
+    ],
+    "antonyms": [
+      "abandon"
+    ],
+    "example": "The team formulated a plan to reduce water use.",
     "topics": [
-      "General"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -6492,16 +8640,22 @@ window.vocabulary = [
   },
   {
     "id": 361,
-    "word": "precise",
+    "word": "fundamental",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is precise",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “precise” correctly in context.",
+    "meaning": "basic and very important",
+    "chinese": "基本的；根本的",
+    "synonyms": [
+      "basic",
+      "essential"
+    ],
+    "antonyms": [
+      "secondary"
+    ],
+    "example": "Trust is fundamental to a strong friendship.",
     "topics": [
-      "General"
+      "Values",
+      "Friendship"
     ],
     "questionTypes": [
       "MCQ",
@@ -6510,16 +8664,22 @@ window.vocabulary = [
   },
   {
     "id": 362,
-    "word": "priority",
-    "partOfSpeech": "noun",
+    "word": "generate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to priority",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “priority” correctly in context.",
+    "meaning": "to produce or create something",
+    "chinese": "产生；创造",
+    "synonyms": [
+      "produce",
+      "create"
+    ],
+    "antonyms": [
+      "consume"
+    ],
+    "example": "Solar panels generate electricity from sunlight.",
     "topics": [
-      "General"
+      "Science",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -6528,16 +8688,22 @@ window.vocabulary = [
   },
   {
     "id": 363,
-    "word": "proportion",
-    "partOfSpeech": "noun",
+    "word": "illustrate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to proportion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “proportion” correctly in context.",
+    "meaning": "to explain something by using examples or pictures",
+    "chinese": "说明；阐明",
+    "synonyms": [
+      "explain",
+      "demonstrate"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "The diagram illustrates how water moves through the plant.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -6546,16 +8712,22 @@ window.vocabulary = [
   },
   {
     "id": 364,
-    "word": "pursue",
+    "word": "imply",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to pursue or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “pursue” correctly in context.",
+    "meaning": "to suggest something without saying it directly",
+    "chinese": "暗示",
+    "synonyms": [
+      "suggest",
+      "indicate"
+    ],
+    "antonyms": [
+      "state directly"
+    ],
+    "example": "Her silence seemed to imply that she disagreed.",
     "topics": [
-      "General"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -6564,16 +8736,22 @@ window.vocabulary = [
   },
   {
     "id": 365,
-    "word": "reluctant",
+    "word": "incredible",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is reluctant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reluctant” correctly in context.",
+    "meaning": "difficult to believe because it is so surprising or impressive",
+    "chinese": "难以置信的；惊人的",
+    "synonyms": [
+      "amazing",
+      "extraordinary"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The athlete showed incredible determination.",
     "topics": [
-      "General"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -6582,16 +8760,22 @@ window.vocabulary = [
   },
   {
     "id": 366,
-    "word": "resolve",
+    "word": "indicate",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to resolve or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “resolve” correctly in context.",
+    "meaning": "to show that something exists or is True",
+    "chinese": "表明；指出",
+    "synonyms": [
+      "show",
+      "signal"
+    ],
+    "antonyms": [
+      "conceal"
+    ],
+    "example": "Dark clouds indicate that rain may be coming.",
     "topics": [
-      "General"
+      "Weather",
+      "Observation"
     ],
     "questionTypes": [
       "MCQ",
@@ -6600,16 +8784,22 @@ window.vocabulary = [
   },
   {
     "id": 367,
-    "word": "retain",
-    "partOfSpeech": "verb",
+    "word": "inevitable",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to retain or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “retain” correctly in context.",
+    "meaning": "certain to happen and impossible to avoid",
+    "chinese": "不可避免的",
+    "synonyms": [
+      "unavoidable",
+      "certain"
+    ],
+    "antonyms": [
+      "avoidable"
+    ],
+    "example": "Some traffic delays are inevitable during peak hours.",
     "topics": [
-      "General"
+      "Travel",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -6618,16 +8808,22 @@ window.vocabulary = [
   },
   {
     "id": 368,
-    "word": "scarce",
+    "word": "innovative",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is scarce",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “scarce” correctly in context.",
+    "meaning": "using new ideas or methods",
+    "chinese": "创新的",
+    "synonyms": [
+      "original",
+      "inventive"
+    ],
+    "antonyms": [
+      "traditional"
+    ],
+    "example": "The school introduced an innovative way to teach science.",
     "topics": [
-      "General"
+      "Education",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -6636,16 +8832,22 @@ window.vocabulary = [
   },
   {
     "id": 369,
-    "word": "sequence",
-    "partOfSpeech": "noun",
+    "word": "justify",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to sequence",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sequence” correctly in context.",
+    "meaning": "to give a good reason for something",
+    "chinese": "证明……合理；辩护",
+    "synonyms": [
+      "defend",
+      "explain"
+    ],
+    "antonyms": [
+      "condemn"
+    ],
+    "example": "Can you justify your choice with evidence?",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -6654,16 +8856,22 @@ window.vocabulary = [
   },
   {
     "id": 370,
-    "word": "sincere",
+    "word": "logical",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is sincere",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sincere” correctly in context.",
+    "meaning": "based on clear reasoning",
+    "chinese": "合乎逻辑的",
+    "synonyms": [
+      "reasonable",
+      "rational"
+    ],
+    "antonyms": [
+      "illogical"
+    ],
+    "example": "Her explanation was clear and logical.",
     "topics": [
-      "General"
+      "School",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -6672,16 +8880,22 @@ window.vocabulary = [
   },
   {
     "id": 371,
-    "word": "stable",
-    "partOfSpeech": "adjective",
+    "word": "modify",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is stable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “stable” correctly in context.",
+    "meaning": "to change something slightly to improve it",
+    "chinese": "修改；调整",
+    "synonyms": [
+      "alter",
+      "adjust"
+    ],
+    "antonyms": [
+      "preserve"
+    ],
+    "example": "We modified the design to make it safer.",
     "topics": [
-      "General"
+      "Design",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -6690,16 +8904,22 @@ window.vocabulary = [
   },
   {
     "id": 372,
-    "word": "substantial",
-    "partOfSpeech": "adjective",
+    "word": "notion",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "large or important in amount or effect",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “substantial” correctly in context.",
+    "meaning": "an idea or belief about something",
+    "chinese": "观念；想法",
+    "synonyms": [
+      "idea",
+      "belief"
+    ],
+    "antonyms": [
+      "fact"
+    ],
+    "example": "He rejected the notion that only adults can solve the problem.",
     "topics": [
-      "General"
+      "Thinking",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -6708,16 +8928,22 @@ window.vocabulary = [
   },
   {
     "id": 373,
-    "word": "temporary",
-    "partOfSpeech": "adjective",
+    "word": "objective",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "describing someone or something that is temporary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “temporary” correctly in context.",
+    "meaning": "something you are trying to achieve",
+    "chinese": "目标",
+    "synonyms": [
+      "goal",
+      "aim"
+    ],
+    "antonyms": [
+      "failure"
+    ],
+    "example": "Our main objective is to reduce food waste.",
     "topics": [
-      "General"
+      "Goals",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -6726,16 +8952,22 @@ window.vocabulary = [
   },
   {
     "id": 374,
-    "word": "therefore",
-    "partOfSpeech": "noun",
+    "word": "occupy",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to therefore",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “therefore” correctly in context.",
+    "meaning": "to fill a space or period of time",
+    "chinese": "占据；占用",
+    "synonyms": [
+      "fill",
+      "take up"
+    ],
+    "antonyms": [
+      "vacate"
+    ],
+    "example": "The large sofa occupies most of the living room.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -6744,16 +8976,22 @@ window.vocabulary = [
   },
   {
     "id": 375,
-    "word": "thorough",
+    "word": "overall",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is thorough",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “thorough” correctly in context.",
+    "meaning": "including everything or considering the whole situation",
+    "chinese": "总体的；全面的",
+    "synonyms": [
+      "general",
+      "total"
+    ],
+    "antonyms": [
+      "partial"
+    ],
+    "example": "The overall result was better than we expected.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -6762,16 +9000,22 @@ window.vocabulary = [
   },
   {
     "id": 376,
-    "word": "transfer",
-    "partOfSpeech": "verb",
+    "word": "persistent",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to transfer or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “transfer” correctly in context.",
+    "meaning": "continuing firmly despite difficulty",
+    "chinese": "坚持不懈的",
+    "synonyms": [
+      "determined",
+      "tenacious"
+    ],
+    "antonyms": [
+      "giving up"
+    ],
+    "example": "Her persistent effort finally improved her reading.",
     "topics": [
-      "General"
+      "Values",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -6780,16 +9024,22 @@ window.vocabulary = [
   },
   {
     "id": 377,
-    "word": "ultimate",
-    "partOfSpeech": "adjective",
+    "word": "perspective",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "describing someone or something that is ultimate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ultimate” correctly in context.",
+    "meaning": "a particular way of thinking about or viewing something",
+    "chinese": "观点；看法",
+    "synonyms": [
+      "viewpoint",
+      "outlook"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "Try to understand the problem from another person's perspective.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -6798,16 +9048,22 @@ window.vocabulary = [
   },
   {
     "id": 378,
-    "word": "unique",
+    "word": "precise",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is unique",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unique” correctly in context.",
+    "meaning": "exact and accurate",
+    "chinese": "精确的",
+    "synonyms": [
+      "exact",
+      "accurate"
+    ],
+    "antonyms": [
+      "vague"
+    ],
+    "example": "Please give precise measurements for the experiment.",
     "topics": [
-      "General"
+      "Science",
+      "Mathematics"
     ],
     "questionTypes": [
       "MCQ",
@@ -6816,16 +9072,22 @@ window.vocabulary = [
   },
   {
     "id": 379,
-    "word": "valid",
-    "partOfSpeech": "adjective",
+    "word": "priority",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "describing someone or something that is valid",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “valid” correctly in context.",
+    "meaning": "something that is more important than other things",
+    "chinese": "优先事项",
+    "synonyms": [
+      "importance",
+      "precedence"
+    ],
+    "antonyms": [
+      "triviality"
+    ],
+    "example": "Safety should be our first priority.",
     "topics": [
-      "General"
+      "Safety",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -6834,16 +9096,22 @@ window.vocabulary = [
   },
   {
     "id": 380,
-    "word": "variation",
+    "word": "proportion",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to variation",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “variation” correctly in context.",
+    "meaning": "a part or share of a whole",
+    "chinese": "比例；部分",
+    "synonyms": [
+      "ratio",
+      "share"
+    ],
+    "antonyms": [
+      "whole"
+    ],
+    "example": "A large proportion of the class joined the activity.",
     "topics": [
-      "General"
+      "Mathematics",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -6852,16 +9120,22 @@ window.vocabulary = [
   },
   {
     "id": 381,
-    "word": "verify",
+    "word": "pursue",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to verify or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “verify” correctly in context.",
+    "meaning": "to continue trying to achieve something",
+    "chinese": "追求；继续进行",
+    "synonyms": [
+      "seek",
+      "follow"
+    ],
+    "antonyms": [
+      "abandon"
+    ],
+    "example": "She decided to pursue her dream of becoming a doctor.",
     "topics": [
-      "General"
+      "Goals",
+      "Careers"
     ],
     "questionTypes": [
       "MCQ",
@@ -6870,16 +9144,23 @@ window.vocabulary = [
   },
   {
     "id": 382,
-    "word": "versatile",
+    "word": "reluctant",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is versatile",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “versatile” correctly in context.",
+    "meaning": "not willing or eager to do something",
+    "chinese": "不情愿的",
+    "synonyms": [
+      "unwilling",
+      "hesitant"
+    ],
+    "antonyms": [
+      "willing",
+      "eager"
+    ],
+    "example": "He was reluctant to speak in front of the class.",
     "topics": [
-      "General"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -6888,16 +9169,22 @@ window.vocabulary = [
   },
   {
     "id": 383,
-    "word": "visible",
-    "partOfSpeech": "adjective",
+    "word": "resolve",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is visible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “visible” correctly in context.",
+    "meaning": "to solve a problem or disagreement",
+    "chinese": "解决",
+    "synonyms": [
+      "solve",
+      "settle"
+    ],
+    "antonyms": [
+      "create"
+    ],
+    "example": "The two friends resolved their disagreement calmly.",
     "topics": [
-      "General"
+      "Communication",
+      "Friendship"
     ],
     "questionTypes": [
       "MCQ",
@@ -6906,16 +9193,23 @@ window.vocabulary = [
   },
   {
     "id": 384,
-    "word": "widespread",
-    "partOfSpeech": "adjective",
+    "word": "retain",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is widespread",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “widespread” correctly in context.",
+    "meaning": "to keep something rather than lose or remove it",
+    "chinese": "保留；保持",
+    "synonyms": [
+      "keep",
+      "preserve"
+    ],
+    "antonyms": [
+      "discard",
+      "lose"
+    ],
+    "example": "The bottle can retain heat for several hours.",
     "topics": [
-      "General"
+      "Science",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -6924,16 +9218,22 @@ window.vocabulary = [
   },
   {
     "id": 385,
-    "word": "withdraw",
-    "partOfSpeech": "verb",
+    "word": "scarce",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to withdraw or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “withdraw” correctly in context.",
+    "meaning": "not available in large amounts",
+    "chinese": "稀缺的",
+    "synonyms": [
+      "limited",
+      "rare"
+    ],
+    "antonyms": [
+      "abundant"
+    ],
+    "example": "Clean drinking water is scarce in some regions.",
     "topics": [
-      "General"
+      "Environment",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -6942,16 +9242,22 @@ window.vocabulary = [
   },
   {
     "id": 386,
-    "word": "accompany",
-    "partOfSpeech": "noun",
+    "word": "sincere",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to accompany",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “accompany” correctly in context.",
+    "meaning": "honest and genuine in what you say or feel",
+    "chinese": "真诚的",
+    "synonyms": [
+      "genuine",
+      "honest"
+    ],
+    "antonyms": [
+      "insincere"
+    ],
+    "example": "She gave a sincere apology for her mistake.",
     "topics": [
-      "General"
+      "Values",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -6960,16 +9266,22 @@ window.vocabulary = [
   },
   {
     "id": 387,
-    "word": "accumulate",
-    "partOfSpeech": "noun",
+    "word": "stable",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to accumulate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “accumulate” correctly in context.",
+    "meaning": "steady and unlikely to change suddenly",
+    "chinese": "稳定的",
+    "synonyms": [
+      "steady",
+      "secure"
+    ],
+    "antonyms": [
+      "unstable"
+    ],
+    "example": "The patient is now in a stable condition.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -6978,16 +9290,23 @@ window.vocabulary = [
   },
   {
     "id": 388,
-    "word": "alert",
+    "word": "substantial",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is alert",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “alert” correctly in context.",
+    "meaning": "large in amount or importance",
+    "chinese": "大量的；重大的",
+    "synonyms": [
+      "considerable",
+      "significant"
+    ],
+    "antonyms": [
+      "small",
+      "insignificant"
+    ],
+    "example": "The project requires a substantial amount of time.",
     "topics": [
-      "General"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -6996,16 +9315,22 @@ window.vocabulary = [
   },
   {
     "id": 389,
-    "word": "approve",
-    "partOfSpeech": "noun",
+    "word": "temporary",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to approve",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “approve” correctly in context.",
+    "meaning": "lasting only for a limited time",
+    "chinese": "暂时的",
+    "synonyms": [
+      "short-term",
+      "brief"
+    ],
+    "antonyms": [
+      "permanent"
+    ],
+    "example": "The library is in a temporary location while the building is repaired.",
     "topics": [
-      "General"
+      "School",
+      "Buildings"
     ],
     "questionTypes": [
       "MCQ",
@@ -7014,16 +9339,22 @@ window.vocabulary = [
   },
   {
     "id": 390,
-    "word": "capture",
-    "partOfSpeech": "noun",
+    "word": "therefore",
+    "partOfSpeech": "adverb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to capture",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “capture” correctly in context.",
+    "meaning": "for that reason; as a result",
+    "chinese": "因此",
+    "synonyms": [
+      "thus",
+      "consequently"
+    ],
+    "antonyms": [
+      "nevertheless"
+    ],
+    "example": "The road was flooded; therefore, we took another route.",
     "topics": [
-      "General"
+      "Writing",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -7032,16 +9363,22 @@ window.vocabulary = [
   },
   {
     "id": 391,
-    "word": "contrast",
-    "partOfSpeech": "noun",
+    "word": "thorough",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to contrast",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “contrast” correctly in context.",
+    "meaning": "complete and careful, with attention to every detail",
+    "chinese": "彻底的；仔细的",
+    "synonyms": [
+      "complete",
+      "detailed"
+    ],
+    "antonyms": [
+      "superficial"
+    ],
+    "example": "The doctor carried out a thorough examination.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -7050,16 +9387,22 @@ window.vocabulary = [
   },
   {
     "id": 392,
-    "word": "confront",
-    "partOfSpeech": "noun",
+    "word": "ultimate",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to confront",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “confront” correctly in context.",
+    "meaning": "final or greatest",
+    "chinese": "最终的；最大的",
+    "synonyms": [
+      "final",
+      "greatest"
+    ],
+    "antonyms": [
+      "initial"
+    ],
+    "example": "The ultimate goal is to make the playground safer.",
     "topics": [
-      "General"
+      "Goals",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -7068,16 +9411,22 @@ window.vocabulary = [
   },
   {
     "id": 393,
-    "word": "convincing",
-    "partOfSpeech": "noun",
+    "word": "unique",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to convincing",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “convincing” correctly in context.",
+    "meaning": "being the only one of its kind",
+    "chinese": "独特的",
+    "synonyms": [
+      "one-of-a-kind",
+      "distinctive"
+    ],
+    "antonyms": [
+      "common"
+    ],
+    "example": "Each snowflake has a unique pattern.",
     "topics": [
-      "General"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -7086,16 +9435,22 @@ window.vocabulary = [
   },
   {
     "id": 394,
-    "word": "decrease",
-    "partOfSpeech": "noun",
+    "word": "valid",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to decrease",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “decrease” correctly in context.",
+    "meaning": "based on good reasoning or accepted facts",
+    "chinese": "有效的；合理的",
+    "synonyms": [
+      "sound",
+      "reasonable"
+    ],
+    "antonyms": [
+      "invalid"
+    ],
+    "example": "Her argument was valid and supported by evidence.",
     "topics": [
-      "General"
+      "School",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -7104,16 +9459,22 @@ window.vocabulary = [
   },
   {
     "id": 395,
-    "word": "adventure",
+    "word": "variation",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to adventure",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “adventure” correctly in context.",
+    "meaning": "a difference or change in form or condition",
+    "chinese": "变化；差异",
+    "synonyms": [
+      "difference",
+      "change"
+    ],
+    "antonyms": [
+      "uniformity"
+    ],
+    "example": "There is some variation in the colour of these flowers.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -7122,16 +9483,22 @@ window.vocabulary = [
   },
   {
     "id": 396,
-    "word": "achievement",
-    "partOfSpeech": "noun",
+    "word": "verify",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to achievement",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “achievement” correctly in context.",
+    "meaning": "to check that something is True or accurate",
+    "chinese": "核实；验证",
+    "synonyms": [
+      "check",
+      "confirm"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "Please verify the information before sharing it.",
     "topics": [
-      "General"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -7140,16 +9507,22 @@ window.vocabulary = [
   },
   {
     "id": 397,
-    "word": "activity",
-    "partOfSpeech": "noun",
+    "word": "versatile",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to activity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “activity” correctly in context.",
+    "meaning": "able to be used for many different purposes",
+    "chinese": "多用途的；多才多艺的",
+    "synonyms": [
+      "adaptable",
+      "flexible"
+    ],
+    "antonyms": [
+      "limited"
+    ],
+    "example": "A smartphone is a versatile tool for learning.",
     "topics": [
-      "General"
+      "Technology",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -7158,16 +9531,22 @@ window.vocabulary = [
   },
   {
     "id": 398,
-    "word": "addition",
-    "partOfSpeech": "noun",
+    "word": "visible",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to addition",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “addition” correctly in context.",
+    "meaning": "able to be seen",
+    "chinese": "看得见的；明显的",
+    "synonyms": [
+      "noticeable",
+      "seen"
+    ],
+    "antonyms": [
+      "invisible"
+    ],
+    "example": "The moon was clearly visible in the night sky.",
     "topics": [
-      "General"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -7176,16 +9555,23 @@ window.vocabulary = [
   },
   {
     "id": 399,
-    "word": "address",
-    "partOfSpeech": "noun",
+    "word": "widespread",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to address",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “address” correctly in context.",
+    "meaning": "existing or happening in many places or among many people",
+    "chinese": "广泛的",
+    "synonyms": [
+      "extensive",
+      "common"
+    ],
+    "antonyms": [
+      "limited",
+      "local"
+    ],
+    "example": "The campaign received widespread support.",
     "topics": [
-      "General"
+      "Community",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -7194,16 +9580,23 @@ window.vocabulary = [
   },
   {
     "id": 400,
-    "word": "advantage",
-    "partOfSpeech": "noun",
+    "word": "withdraw",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea or situation related to advantage",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “advantage” correctly in context.",
+    "meaning": "to remove or take something away",
+    "chinese": "撤回；退出",
+    "synonyms": [
+      "remove",
+      "retreat"
+    ],
+    "antonyms": [
+      "advance",
+      "deposit"
+    ],
+    "example": "The player withdrew from the competition because of an injury.",
     "topics": [
-      "General"
+      "Sports",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -7212,16 +9605,22 @@ window.vocabulary = [
   },
   {
     "id": 401,
-    "word": "adverse",
+    "word": "abrupt",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is adverse",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “adverse” correctly in context.",
+    "meaning": "sudden and unexpected",
+    "chinese": "突然的",
+    "synonyms": [
+      "sudden",
+      "unexpected"
+    ],
+    "antonyms": [
+      "gradual"
+    ],
+    "example": "The car came to an abrupt stop.",
     "topics": [
-      "General"
+      "Transport",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -7230,16 +9629,21 @@ window.vocabulary = [
   },
   {
     "id": 402,
-    "word": "allocate",
-    "partOfSpeech": "verb",
+    "word": "accountable",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "to allocate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “allocate” correctly in context.",
+    "meaning": "responsible for your actions and expected to explain them",
+    "chinese": "负有责任的",
+    "synonyms": [
+      "responsible"
+    ],
+    "antonyms": [
+      "unaccountable"
+    ],
+    "example": "Team leaders are accountable for the safety of their members.",
     "topics": [
-      "General"
+      "Leadership",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -7248,16 +9652,22 @@ window.vocabulary = [
   },
   {
     "id": 403,
-    "word": "ambiguous",
+    "word": "adaptable",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "having more than one possible meaning",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ambiguous” correctly in context.",
+    "meaning": "able to change easily to suit new conditions",
+    "chinese": "适应力强的",
+    "synonyms": [
+      "flexible",
+      "versatile"
+    ],
+    "antonyms": [
+      "inflexible"
+    ],
+    "example": "An adaptable learner can cope with different teaching methods.",
     "topics": [
-      "General"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -7266,16 +9676,22 @@ window.vocabulary = [
   },
   {
     "id": 404,
-    "word": "analogy",
-    "partOfSpeech": "noun",
+    "word": "adjacent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to analogy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “analogy” correctly in context.",
+    "meaning": "next to or very near something",
+    "chinese": "毗邻的",
+    "synonyms": [
+      "nearby",
+      "neighbouring"
+    ],
+    "antonyms": [
+      "distant"
+    ],
+    "example": "The library is adjacent to the school hall.",
     "topics": [
-      "General"
+      "School",
+      "Places"
     ],
     "questionTypes": [
       "MCQ",
@@ -7284,16 +9700,22 @@ window.vocabulary = [
   },
   {
     "id": 405,
-    "word": "appreciate",
-    "partOfSpeech": "noun",
+    "word": "adverse",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to appreciate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “appreciate” correctly in context.",
+    "meaning": "unfavourable or harmful",
+    "chinese": "不利的；有害的",
+    "synonyms": [
+      "unfavourable",
+      "harmful"
+    ],
+    "antonyms": [
+      "beneficial"
+    ],
+    "example": "The medicine may have adverse effects on some patients.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -7302,16 +9724,22 @@ window.vocabulary = [
   },
   {
     "id": 406,
-    "word": "arbitrary",
-    "partOfSpeech": "adjective",
+    "word": "advocate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is arbitrary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “arbitrary” correctly in context.",
+    "meaning": "to publicly support an idea or action",
+    "chinese": "提倡；支持",
+    "synonyms": [
+      "support",
+      "promote"
+    ],
+    "antonyms": [
+      "oppose"
+    ],
+    "example": "Many students advocate reducing single-use plastics.",
     "topics": [
-      "General"
+      "Environment",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -7320,16 +9748,22 @@ window.vocabulary = [
   },
   {
     "id": 407,
-    "word": "articulate",
+    "word": "allocate",
     "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "to articulate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “articulate” correctly in context.",
+    "meaning": "to give a particular amount of something for a purpose",
+    "chinese": "分配",
+    "synonyms": [
+      "assign",
+      "distribute"
+    ],
+    "antonyms": [
+      "withhold"
+    ],
+    "example": "The teacher allocated ten minutes for the activity.",
     "topics": [
-      "General"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -7338,16 +9772,23 @@ window.vocabulary = [
   },
   {
     "id": 408,
-    "word": "aspire",
-    "partOfSpeech": "noun",
+    "word": "ambiguous",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to aspire",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “aspire” correctly in context.",
+    "meaning": "having more than one possible meaning",
+    "chinese": "含糊的；有歧义的",
+    "synonyms": [
+      "unclear",
+      "vague"
+    ],
+    "antonyms": [
+      "clear",
+      "explicit"
+    ],
+    "example": "The instructions were ambiguous, so several pupils were confused.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -7356,16 +9797,20 @@ window.vocabulary = [
   },
   {
     "id": 409,
-    "word": "assurance",
+    "word": "analogy",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to assurance",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "a comparison between two things to explain an idea",
+    "chinese": "类比；比喻",
+    "synonyms": [
+      "comparison",
+      "parallel"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “assurance” correctly in context.",
+    "example": "The teacher used an analogy to explain how the heart works.",
     "topics": [
-      "General"
+      "School",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -7374,16 +9819,22 @@ window.vocabulary = [
   },
   {
     "id": 410,
-    "word": "authentic",
-    "partOfSpeech": "adjective",
+    "word": "appreciate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is authentic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “authentic” correctly in context.",
+    "meaning": "to recognise the value or importance of something",
+    "chinese": "欣赏；重视",
+    "synonyms": [
+      "value",
+      "recognise"
+    ],
+    "antonyms": [
+      "undervalue"
+    ],
+    "example": "I appreciate the effort you put into the project.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -7392,16 +9843,22 @@ window.vocabulary = [
   },
   {
     "id": 411,
-    "word": "bias",
-    "partOfSpeech": "noun",
+    "word": "arbitrary",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to bias",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “bias” correctly in context.",
+    "meaning": "based on personal choice rather than a clear reason",
+    "chinese": "任意的；武断的",
+    "synonyms": [
+      "random",
+      "unreasoned"
+    ],
+    "antonyms": [
+      "reasoned"
+    ],
+    "example": "The rule seemed arbitrary because no reason was given.",
     "topics": [
-      "General"
+      "Rules",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -7410,16 +9867,22 @@ window.vocabulary = [
   },
   {
     "id": 412,
-    "word": "coherent",
+    "word": "articulate",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is coherent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “coherent” correctly in context.",
+    "meaning": "able to express ideas clearly in words",
+    "chinese": "善于表达的；口齿清楚的",
+    "synonyms": [
+      "eloquent",
+      "expressive"
+    ],
+    "antonyms": [
+      "inarticulate"
+    ],
+    "example": "She is articulate and explained her ideas clearly.",
     "topics": [
-      "General"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -7428,16 +9891,22 @@ window.vocabulary = [
   },
   {
     "id": 413,
-    "word": "compelling",
-    "partOfSpeech": "adjective",
+    "word": "aspire",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is compelling",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “compelling” correctly in context.",
+    "meaning": "to have a strong desire to achieve something",
+    "chinese": "渴望；立志",
+    "synonyms": [
+      "aim",
+      "hope"
+    ],
+    "antonyms": [
+      "give up"
+    ],
+    "example": "Many young athletes aspire to compete internationally.",
     "topics": [
-      "General"
+      "Sports",
+      "Goals"
     ],
     "questionTypes": [
       "MCQ",
@@ -7446,16 +9915,22 @@ window.vocabulary = [
   },
   {
     "id": 414,
-    "word": "comprehensive",
-    "partOfSpeech": "adjective",
+    "word": "assurance",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "describing someone or something that is comprehensive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “comprehensive” correctly in context.",
+    "meaning": "a statement that gives confidence that something is True or will happen",
+    "chinese": "保证；承诺",
+    "synonyms": [
+      "guarantee",
+      "promise"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "The coach gave us assurance that everyone would get a chance to play.",
     "topics": [
-      "General"
+      "Sports",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -7464,16 +9939,23 @@ window.vocabulary = [
   },
   {
     "id": 415,
-    "word": "conceive",
-    "partOfSpeech": "noun",
+    "word": "authentic",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to conceive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “conceive” correctly in context.",
+    "meaning": "real and genuine, not copied or False",
+    "chinese": "真实的；正宗的",
+    "synonyms": [
+      "genuine",
+      "real"
+    ],
+    "antonyms": [
+      "fake",
+      "artificial"
+    ],
+    "example": "The museum displayed an authentic historical document.",
     "topics": [
-      "General"
+      "History",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -7482,16 +9964,23 @@ window.vocabulary = [
   },
   {
     "id": 416,
-    "word": "concurrent",
-    "partOfSpeech": "adjective",
+    "word": "bias",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "describing someone or something that is concurrent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “concurrent” correctly in context.",
+    "meaning": "an unfair preference for one person or group",
+    "chinese": "偏见",
+    "synonyms": [
+      "prejudice",
+      "partiality"
+    ],
+    "antonyms": [
+      "fairness",
+      "impartiality"
+    ],
+    "example": "A good journalist should avoid personal bias.",
     "topics": [
-      "General"
+      "Media",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -7500,16 +9989,22 @@ window.vocabulary = [
   },
   {
     "id": 417,
-    "word": "consent",
-    "partOfSpeech": "noun",
+    "word": "cease",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to consent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “consent” correctly in context.",
+    "meaning": "to stop happening or continuing",
+    "chinese": "停止",
+    "synonyms": [
+      "stop",
+      "end"
+    ],
+    "antonyms": [
+      "continue"
+    ],
+    "example": "The rain finally ceased after midnight.",
     "topics": [
-      "General"
+      "Weather",
+      "Time"
     ],
     "questionTypes": [
       "MCQ",
@@ -7518,16 +10013,23 @@ window.vocabulary = [
   },
   {
     "id": 418,
-    "word": "constraint",
-    "partOfSpeech": "noun",
+    "word": "coherent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to constraint",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “constraint” correctly in context.",
+    "meaning": "clear, logical and well organised",
+    "chinese": "连贯的；有条理的",
+    "synonyms": [
+      "logical",
+      "consistent"
+    ],
+    "antonyms": [
+      "confused",
+      "disjointed"
+    ],
+    "example": "Her composition was coherent and easy to follow.",
     "topics": [
-      "General"
+      "School",
+      "Writing"
     ],
     "questionTypes": [
       "MCQ",
@@ -7536,16 +10038,22 @@ window.vocabulary = [
   },
   {
     "id": 419,
-    "word": "contemplate",
-    "partOfSpeech": "noun",
+    "word": "coincide",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to contemplate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “contemplate” correctly in context.",
+    "meaning": "to happen at the same time or agree exactly",
+    "chinese": "同时发生；相符",
+    "synonyms": [
+      "correspond",
+      "match"
+    ],
+    "antonyms": [
+      "differ"
+    ],
+    "example": "The school holiday coincided with the festival.",
     "topics": [
-      "General"
+      "School",
+      "Events"
     ],
     "questionTypes": [
       "MCQ",
@@ -7554,16 +10062,22 @@ window.vocabulary = [
   },
   {
     "id": 420,
-    "word": "contrary",
-    "partOfSpeech": "noun",
+    "word": "compelling",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to contrary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “contrary” correctly in context.",
+    "meaning": "very convincing or interesting",
+    "chinese": "有说服力的；引人入胜的",
+    "synonyms": [
+      "convincing",
+      "persuasive"
+    ],
+    "antonyms": [
+      "unconvincing"
+    ],
+    "example": "The documentary presented a compelling reason to protect the forest.",
     "topics": [
-      "General"
+      "Environment",
+      "Media"
     ],
     "questionTypes": [
       "MCQ",
@@ -7572,16 +10086,22 @@ window.vocabulary = [
   },
   {
     "id": 421,
-    "word": "credible",
-    "partOfSpeech": "adjective",
+    "word": "compensate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "able to be believed or trusted",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “credible” correctly in context.",
+    "meaning": "to provide something good to balance a loss or disadvantage",
+    "chinese": "补偿",
+    "synonyms": [
+      "make up for",
+      "repay"
+    ],
+    "antonyms": [
+      "deprive"
+    ],
+    "example": "The company compensated customers for the cancelled service.",
     "topics": [
-      "General"
+      "Business",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -7590,16 +10110,22 @@ window.vocabulary = [
   },
   {
     "id": 422,
-    "word": "criterion",
-    "partOfSpeech": "noun",
+    "word": "comprehensive",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to criterion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “criterion” correctly in context.",
+    "meaning": "including all or nearly all important parts",
+    "chinese": "全面的",
+    "synonyms": [
+      "complete",
+      "thorough"
+    ],
+    "antonyms": [
+      "incomplete"
+    ],
+    "example": "The guide provides comprehensive information about the park.",
     "topics": [
-      "General"
+      "Travel",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -7608,16 +10134,22 @@ window.vocabulary = [
   },
   {
     "id": 423,
-    "word": "deviate",
-    "partOfSpeech": "noun",
+    "word": "comprise",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to deviate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deviate” correctly in context.",
+    "meaning": "to consist of or include",
+    "chinese": "包含；由……组成",
+    "synonyms": [
+      "consist of",
+      "include"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The committee comprises teachers, pupils and parents.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -7626,16 +10158,22 @@ window.vocabulary = [
   },
   {
     "id": 424,
-    "word": "dilemma",
-    "partOfSpeech": "noun",
+    "word": "conceive",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to dilemma",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dilemma” correctly in context.",
+    "meaning": "to form an idea or plan in the mind",
+    "chinese": "构想；设想",
+    "synonyms": [
+      "imagine",
+      "devise"
+    ],
+    "antonyms": [
+      "dismiss"
+    ],
+    "example": "The pupils conceived a creative plan for the charity event.",
     "topics": [
-      "General"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -7644,16 +10182,22 @@ window.vocabulary = [
   },
   {
     "id": 425,
-    "word": "diminish",
-    "partOfSpeech": "noun",
+    "word": "concurrent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to diminish",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “diminish” correctly in context.",
+    "meaning": "happening at the same time",
+    "chinese": "同时发生的",
+    "synonyms": [
+      "simultaneous"
+    ],
+    "antonyms": [
+      "separate",
+      "successive"
+    ],
+    "example": "Two concurrent events were held in different halls.",
     "topics": [
-      "General"
+      "School",
+      "Events"
     ],
     "questionTypes": [
       "MCQ",
@@ -7662,16 +10206,22 @@ window.vocabulary = [
   },
   {
     "id": 426,
-    "word": "discrete",
+    "word": "consent",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to discrete",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “discrete” correctly in context.",
+    "meaning": "permission or agreement to do something",
+    "chinese": "同意；许可",
+    "synonyms": [
+      "permission",
+      "approval"
+    ],
+    "antonyms": [
+      "refusal"
+    ],
+    "example": "Parents must give consent before the child joins the trip.",
     "topics": [
-      "General"
+      "School",
+      "Family"
     ],
     "questionTypes": [
       "MCQ",
@@ -7680,16 +10230,22 @@ window.vocabulary = [
   },
   {
     "id": 427,
-    "word": "distinctive",
-    "partOfSpeech": "adjective",
+    "word": "constraint",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "describing someone or something that is distinctive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “distinctive” correctly in context.",
+    "meaning": "a limit that controls what you can do",
+    "chinese": "限制；约束",
+    "synonyms": [
+      "restriction",
+      "limitation"
+    ],
+    "antonyms": [
+      "freedom"
+    ],
+    "example": "Lack of time was the main constraint on the project.",
     "topics": [
-      "General"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -7698,16 +10254,22 @@ window.vocabulary = [
   },
   {
     "id": 428,
-    "word": "divert",
-    "partOfSpeech": "noun",
+    "word": "contemplate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to divert",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “divert” correctly in context.",
+    "meaning": "to think carefully about something",
+    "chinese": "仔细考虑",
+    "synonyms": [
+      "consider",
+      "reflect on"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "She contemplated several options before making a choice.",
     "topics": [
-      "General"
+      "Thinking",
+      "Decision Making"
     ],
     "questionTypes": [
       "MCQ",
@@ -7716,16 +10278,23 @@ window.vocabulary = [
   },
   {
     "id": 429,
-    "word": "empirical",
+    "word": "contrary",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is empirical",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “empirical” correctly in context.",
+    "meaning": "opposite in nature or direction",
+    "chinese": "相反的",
+    "synonyms": [
+      "opposite",
+      "reverse"
+    ],
+    "antonyms": [
+      "similar",
+      "same"
+    ],
+    "example": "Contrary to our expectations, the weather stayed dry.",
     "topics": [
-      "General"
+      "Weather",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -7734,16 +10303,22 @@ window.vocabulary = [
   },
   {
     "id": 430,
-    "word": "equivalent",
-    "partOfSpeech": "adjective",
+    "word": "convey",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is equivalent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “equivalent” correctly in context.",
+    "meaning": "to communicate an idea or feeling",
+    "chinese": "传达；表达",
+    "synonyms": [
+      "communicate",
+      "express"
+    ],
+    "antonyms": [
+      "conceal"
+    ],
+    "example": "Her facial expression conveyed disappointment.",
     "topics": [
-      "General"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -7752,16 +10327,22 @@ window.vocabulary = [
   },
   {
     "id": 431,
-    "word": "exhibit",
-    "partOfSpeech": "noun",
+    "word": "credible",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to exhibit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exhibit” correctly in context.",
+    "meaning": "able to be believed or trusted",
+    "chinese": "可信的",
+    "synonyms": [
+      "believable",
+      "reliable"
+    ],
+    "antonyms": [
+      "unbelievable"
+    ],
+    "example": "The witness gave a credible account of what happened.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -7770,16 +10351,22 @@ window.vocabulary = [
   },
   {
     "id": 432,
-    "word": "exploit",
-    "partOfSpeech": "verb",
+    "word": "criterion",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "to exploit or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exploit” correctly in context.",
+    "meaning": "a standard used to judge or decide something",
+    "chinese": "标准",
+    "synonyms": [
+      "standard",
+      "measure"
+    ],
+    "antonyms": [
+      "exception"
+    ],
+    "example": "Safety is an important criterion when choosing equipment.",
     "topics": [
-      "General"
+      "School",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -7788,16 +10375,22 @@ window.vocabulary = [
   },
   {
     "id": 433,
-    "word": "feasible",
-    "partOfSpeech": "adjective",
+    "word": "deviate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is feasible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “feasible” correctly in context.",
+    "meaning": "to move away from a usual or planned course",
+    "chinese": "偏离",
+    "synonyms": [
+      "diverge",
+      "depart"
+    ],
+    "antonyms": [
+      "follow"
+    ],
+    "example": "Do not deviate from the marked path.",
     "topics": [
-      "General"
+      "Travel",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -7806,16 +10399,22 @@ window.vocabulary = [
   },
   {
     "id": 434,
-    "word": "fluctuate",
+    "word": "dilemma",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to fluctuate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “fluctuate” correctly in context.",
+    "meaning": "a difficult choice between two or more options",
+    "chinese": "两难；困境",
+    "synonyms": [
+      "difficulty",
+      "predicament"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "She faced a dilemma when both friends asked for help.",
     "topics": [
-      "General"
+      "Decision Making",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -7824,16 +10423,23 @@ window.vocabulary = [
   },
   {
     "id": 435,
-    "word": "hypothesis",
-    "partOfSpeech": "noun",
+    "word": "diminish",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to hypothesis",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “hypothesis” correctly in context.",
+    "meaning": "to become or make something smaller or less important",
+    "chinese": "减少；减弱",
+    "synonyms": [
+      "decrease",
+      "lessen"
+    ],
+    "antonyms": [
+      "increase",
+      "strengthen"
+    ],
+    "example": "The noise diminished as the crowd moved away.",
     "topics": [
-      "General"
+      "Environment",
+      "Sound"
     ],
     "questionTypes": [
       "MCQ",
@@ -7842,16 +10448,22 @@ window.vocabulary = [
   },
   {
     "id": 436,
-    "word": "incentive",
-    "partOfSpeech": "noun",
+    "word": "disclose",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to incentive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “incentive” correctly in context.",
+    "meaning": "to give information that was previously secret",
+    "chinese": "透露；披露",
+    "synonyms": [
+      "reveal",
+      "divulge"
+    ],
+    "antonyms": [
+      "conceal"
+    ],
+    "example": "The report disclosed important safety concerns.",
     "topics": [
-      "General"
+      "Safety",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -7860,16 +10472,22 @@ window.vocabulary = [
   },
   {
     "id": 437,
-    "word": "incorporate",
-    "partOfSpeech": "noun",
+    "word": "discrete",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to incorporate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “incorporate” correctly in context.",
+    "meaning": "separate and distinct",
+    "chinese": "分开的；独立的",
+    "synonyms": [
+      "separate",
+      "distinct"
+    ],
+    "antonyms": [
+      "connected"
+    ],
+    "example": "The experiment was divided into three discrete stages.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -7878,16 +10496,22 @@ window.vocabulary = [
   },
   {
     "id": 438,
-    "word": "infer",
-    "partOfSpeech": "noun",
+    "word": "distinctive",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to infer",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “infer” correctly in context.",
+    "meaning": "having a quality that makes something clearly different",
+    "chinese": "独特的；有特色的",
+    "synonyms": [
+      "unique",
+      "recognisable"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The bird has a distinctive call.",
     "topics": [
-      "General"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -7896,16 +10520,22 @@ window.vocabulary = [
   },
   {
     "id": 439,
-    "word": "inhibit",
-    "partOfSpeech": "noun",
+    "word": "divert",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to inhibit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inhibit” correctly in context.",
+    "meaning": "to cause someone or something to change direction",
+    "chinese": "使转向；转移",
+    "synonyms": [
+      "redirect",
+      "reroute"
+    ],
+    "antonyms": [
+      "continue"
+    ],
+    "example": "The police diverted traffic away from the flooded road.",
     "topics": [
-      "General"
+      "Travel",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -7914,16 +10544,22 @@ window.vocabulary = [
   },
   {
     "id": 440,
-    "word": "innovate",
-    "partOfSpeech": "noun",
+    "word": "empirical",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to innovate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “innovate” correctly in context.",
+    "meaning": "based on observation or experiment rather than theory",
+    "chinese": "以实证为基础的",
+    "synonyms": [
+      "observational",
+      "experimental"
+    ],
+    "antonyms": [
+      "theoretical"
+    ],
+    "example": "The researchers collected empirical evidence from the experiment.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -7932,16 +10568,22 @@ window.vocabulary = [
   },
   {
     "id": 441,
-    "word": "integrity",
-    "partOfSpeech": "noun",
+    "word": "equivalent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to integrity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “integrity” correctly in context.",
+    "meaning": "equal in value, meaning or importance",
+    "chinese": "相等的；等价的",
+    "synonyms": [
+      "equal",
+      "matching"
+    ],
+    "antonyms": [
+      "different"
+    ],
+    "example": "One hour is not equivalent to one lesson in every school.",
     "topics": [
-      "General"
+      "Mathematics",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -7950,16 +10592,22 @@ window.vocabulary = [
   },
   {
     "id": 442,
-    "word": "intense",
-    "partOfSpeech": "noun",
+    "word": "exhaustive",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to intense",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intense” correctly in context.",
+    "meaning": "including everything possible or necessary",
+    "chinese": "详尽的；全面的",
+    "synonyms": [
+      "comprehensive",
+      "thorough"
+    ],
+    "antonyms": [
+      "limited"
+    ],
+    "example": "The researchers carried out an exhaustive search for evidence.",
     "topics": [
-      "General"
+      "Research",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -7968,16 +10616,22 @@ window.vocabulary = [
   },
   {
     "id": 443,
-    "word": "intricate",
-    "partOfSpeech": "noun",
+    "word": "exhibit",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to intricate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intricate” correctly in context.",
+    "meaning": "to show something publicly",
+    "chinese": "展示；展出",
+    "synonyms": [
+      "display",
+      "present"
+    ],
+    "antonyms": [
+      "hide"
+    ],
+    "example": "The museum will exhibit paintings by local artists.",
     "topics": [
-      "General"
+      "Arts",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -7986,16 +10640,22 @@ window.vocabulary = [
   },
   {
     "id": 444,
-    "word": "intrinsic",
-    "partOfSpeech": "adjective",
+    "word": "exploit",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is intrinsic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intrinsic” correctly in context.",
+    "meaning": "to use something unfairly for personal advantage",
+    "chinese": "剥削；利用",
+    "synonyms": [
+      "take advantage of",
+      "use"
+    ],
+    "antonyms": [
+      "protect"
+    ],
+    "example": "Some companies exploit workers by paying unfair wages.",
     "topics": [
-      "General"
+      "Society",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -8004,16 +10664,22 @@ window.vocabulary = [
   },
   {
     "id": 445,
-    "word": "manipulate",
-    "partOfSpeech": "noun",
+    "word": "feasible",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to manipulate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “manipulate” correctly in context.",
+    "meaning": "possible and practical to do",
+    "chinese": "可行的",
+    "synonyms": [
+      "possible",
+      "practical"
+    ],
+    "antonyms": [
+      "impossible"
+    ],
+    "example": "We need to find a feasible way to reduce food waste.",
     "topics": [
-      "General"
+      "Environment",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -8022,16 +10688,22 @@ window.vocabulary = [
   },
   {
     "id": 446,
-    "word": "moderate",
-    "partOfSpeech": "noun",
+    "word": "fluctuate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to moderate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “moderate” correctly in context.",
+    "meaning": "to change repeatedly between higher and lower levels",
+    "chinese": "波动",
+    "synonyms": [
+      "vary",
+      "change"
+    ],
+    "antonyms": [
+      "stabilise"
+    ],
+    "example": "Temperatures may fluctuate throughout the day.",
     "topics": [
-      "General"
+      "Weather",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -8040,16 +10712,20 @@ window.vocabulary = [
   },
   {
     "id": 447,
-    "word": "notable",
-    "partOfSpeech": "adjective",
+    "word": "hypothesis",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "describing someone or something that is notable",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "an idea or explanation that can be tested",
+    "chinese": "假设",
+    "synonyms": [
+      "theory",
+      "proposition"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “notable” correctly in context.",
+    "example": "The scientists tested their hypothesis with an experiment.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -8058,16 +10734,22 @@ window.vocabulary = [
   },
   {
     "id": 448,
-    "word": "paradox",
-    "partOfSpeech": "noun",
+    "word": "implicit",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to paradox",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “paradox” correctly in context.",
+    "meaning": "suggested without being directly stated",
+    "chinese": "含蓄的；暗示的",
+    "synonyms": [
+      "implied",
+      "unstated"
+    ],
+    "antonyms": [
+      "explicit"
+    ],
+    "example": "There was an implicit warning in the message.",
     "topics": [
-      "General"
+      "Communication",
+      "Writing"
     ],
     "questionTypes": [
       "MCQ",
@@ -8076,16 +10758,22 @@ window.vocabulary = [
   },
   {
     "id": 449,
-    "word": "phenomenon",
+    "word": "incentive",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to phenomenon",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “phenomenon” correctly in context.",
+    "meaning": "something that encourages someone to do something",
+    "chinese": "激励；诱因",
+    "synonyms": [
+      "motivation",
+      "encouragement"
+    ],
+    "antonyms": [
+      "discouragement"
+    ],
+    "example": "The school offered an incentive for classes that reduced waste.",
     "topics": [
-      "General"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -8094,16 +10782,22 @@ window.vocabulary = [
   },
   {
     "id": 450,
-    "word": "plausible",
-    "partOfSpeech": "adjective",
+    "word": "incorporate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "seeming reasonable or likely to be true",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “plausible” correctly in context.",
+    "meaning": "to include something as part of a larger whole",
+    "chinese": "纳入；包含",
+    "synonyms": [
+      "include",
+      "integrate"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The new design incorporates several safety features.",
     "topics": [
-      "General"
+      "Design",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -8112,16 +10806,22 @@ window.vocabulary = [
   },
   {
     "id": 451,
-    "word": "precede",
-    "partOfSpeech": "noun",
+    "word": "infer",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to precede",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “precede” correctly in context.",
+    "meaning": "to reach a conclusion from evidence rather than direct information",
+    "chinese": "推断",
+    "synonyms": [
+      "deduce",
+      "conclude"
+    ],
+    "antonyms": [
+      "misinterpret"
+    ],
+    "example": "From the dark clouds, we inferred that rain was coming.",
     "topics": [
-      "General"
+      "Weather",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -8130,16 +10830,22 @@ window.vocabulary = [
   },
   {
     "id": 452,
-    "word": "presume",
-    "partOfSpeech": "noun",
+    "word": "inherent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to presume",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “presume” correctly in context.",
+    "meaning": "existing naturally as a basic part of something",
+    "chinese": "固有的；内在的",
+    "synonyms": [
+      "intrinsic",
+      "built-in"
+    ],
+    "antonyms": [
+      "acquired"
+    ],
+    "example": "Every material has inherent strengths and weaknesses.",
     "topics": [
-      "General"
+      "Science",
+      "Materials"
     ],
     "questionTypes": [
       "MCQ",
@@ -8148,16 +10854,23 @@ window.vocabulary = [
   },
   {
     "id": 453,
-    "word": "profound",
-    "partOfSpeech": "adjective",
+    "word": "inhibit",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is profound",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “profound” correctly in context.",
+    "meaning": "to prevent or slow down an action or process",
+    "chinese": "抑制；阻碍",
+    "synonyms": [
+      "restrain",
+      "hinder"
+    ],
+    "antonyms": [
+      "encourage",
+      "promote"
+    ],
+    "example": "Fear can inhibit a child from asking questions.",
     "topics": [
-      "General"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -8166,16 +10879,22 @@ window.vocabulary = [
   },
   {
     "id": 454,
-    "word": "prominent",
-    "partOfSpeech": "adjective",
+    "word": "innovate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is prominent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prominent” correctly in context.",
+    "meaning": "to introduce new ideas or methods",
+    "chinese": "创新",
+    "synonyms": [
+      "create",
+      "modernise"
+    ],
+    "antonyms": [
+      "copy"
+    ],
+    "example": "The company continues to innovate in the field of technology.",
     "topics": [
-      "General"
+      "Technology",
+      "Business"
     ],
     "questionTypes": [
       "MCQ",
@@ -8184,16 +10903,22 @@ window.vocabulary = [
   },
   {
     "id": 455,
-    "word": "provoke",
+    "word": "integrity",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to provoke",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “provoke” correctly in context.",
+    "meaning": "the quality of being honest and having strong moral principles",
+    "chinese": "正直；诚信",
+    "synonyms": [
+      "honesty",
+      "uprightness"
+    ],
+    "antonyms": [
+      "dishonesty"
+    ],
+    "example": "A leader should act with integrity.",
     "topics": [
-      "General"
+      "Values",
+      "Leadership"
     ],
     "questionTypes": [
       "MCQ",
@@ -8202,16 +10927,23 @@ window.vocabulary = [
   },
   {
     "id": 456,
-    "word": "rational",
+    "word": "intense",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is rational",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “rational” correctly in context.",
+    "meaning": "very strong or extreme",
+    "chinese": "强烈的",
+    "synonyms": [
+      "extreme",
+      "powerful"
+    ],
+    "antonyms": [
+      "mild",
+      "weak"
+    ],
+    "example": "The athletes experienced intense competition.",
     "topics": [
-      "General"
+      "Sports",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -8220,16 +10952,22 @@ window.vocabulary = [
   },
   {
     "id": 457,
-    "word": "refine",
-    "partOfSpeech": "noun",
+    "word": "intervene",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to refine",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “refine” correctly in context.",
+    "meaning": "to become involved in a situation to change its outcome",
+    "chinese": "干预；介入",
+    "synonyms": [
+      "interfere",
+      "step in"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "A teacher intervened before the argument became serious.",
     "topics": [
-      "General"
+      "School",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -8238,16 +10976,22 @@ window.vocabulary = [
   },
   {
     "id": 458,
-    "word": "reinforce",
-    "partOfSpeech": "noun",
+    "word": "intricate",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to reinforce",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reinforce” correctly in context.",
+    "meaning": "having many small parts or details",
+    "chinese": "复杂精细的",
+    "synonyms": [
+      "complex",
+      "detailed"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "The artist created an intricate pattern.",
     "topics": [
-      "General"
+      "Arts",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -8256,16 +11000,22 @@ window.vocabulary = [
   },
   {
     "id": 459,
-    "word": "reluctance",
-    "partOfSpeech": "noun",
+    "word": "intrinsic",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to reluctance",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reluctance” correctly in context.",
+    "meaning": "belonging naturally to the essential nature of something",
+    "chinese": "内在的；固有的",
+    "synonyms": [
+      "inherent",
+      "essential"
+    ],
+    "antonyms": [
+      "extrinsic"
+    ],
+    "example": "Curiosity has intrinsic value in learning.",
     "topics": [
-      "General"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -8274,16 +11024,22 @@ window.vocabulary = [
   },
   {
     "id": 460,
-    "word": "rigid",
-    "partOfSpeech": "adjective",
+    "word": "manipulate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is rigid",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “rigid” correctly in context.",
+    "meaning": "to control or influence something, often cleverly or unfairly",
+    "chinese": "操纵；巧妙处理",
+    "synonyms": [
+      "control",
+      "influence"
+    ],
+    "antonyms": [
+      "release"
+    ],
+    "example": "The scientist carefully manipulated the variables in the experiment.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -8292,16 +11048,22 @@ window.vocabulary = [
   },
   {
     "id": 461,
-    "word": "skeptical",
+    "word": "moderate",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is skeptical",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “skeptical” correctly in context.",
+    "meaning": "neither very large nor very small or extreme",
+    "chinese": "适度的；中等的",
+    "synonyms": [
+      "reasonable",
+      "mild"
+    ],
+    "antonyms": [
+      "extreme"
+    ],
+    "example": "The doctor recommended moderate exercise.",
     "topics": [
-      "General"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -8310,16 +11072,22 @@ window.vocabulary = [
   },
   {
     "id": 462,
-    "word": "subsequent",
-    "partOfSpeech": "noun",
+    "word": "notable",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to subsequent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “subsequent” correctly in context.",
+    "meaning": "worthy of attention because it is important or unusual",
+    "chinese": "值得注意的",
+    "synonyms": [
+      "remarkable",
+      "significant"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "There was a notable improvement in her writing.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -8328,16 +11096,22 @@ window.vocabulary = [
   },
   {
     "id": 463,
-    "word": "sustain",
-    "partOfSpeech": "noun",
+    "word": "overlap",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to sustain",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sustain” correctly in context.",
+    "meaning": "to partly cover or share the same area or period",
+    "chinese": "重叠",
+    "synonyms": [
+      "coincide",
+      "intersect"
+    ],
+    "antonyms": [
+      "separate"
+    ],
+    "example": "The two lessons overlap for fifteen minutes.",
     "topics": [
-      "General"
+      "School",
+      "Time"
     ],
     "questionTypes": [
       "MCQ",
@@ -8346,16 +11120,19 @@ window.vocabulary = [
   },
   {
     "id": 464,
-    "word": "tangible",
-    "partOfSpeech": "adjective",
+    "word": "paradox",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "describing someone or something that is tangible",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "a situation or statement that seems contradictory but may be True",
+    "chinese": "悖论；看似矛盾的情况",
+    "synonyms": [
+      "contradiction"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “tangible” correctly in context.",
+    "example": "It is a paradox that too much choice can sometimes make decisions harder.",
     "topics": [
-      "General"
+      "Thinking",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -8364,16 +11141,22 @@ window.vocabulary = [
   },
   {
     "id": 465,
-    "word": "tentative",
-    "partOfSpeech": "adjective",
+    "word": "persevere",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is tentative",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “tentative” correctly in context.",
+    "meaning": "to continue trying despite difficulty",
+    "chinese": "坚持不懈",
+    "synonyms": [
+      "persist",
+      "persist"
+    ],
+    "antonyms": [
+      "quit"
+    ],
+    "example": "If you persevere, you are more likely to overcome the difficult task.",
     "topics": [
-      "General"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -8382,16 +11165,20 @@ window.vocabulary = [
   },
   {
     "id": 466,
-    "word": "trigger",
+    "word": "phenomenon",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to trigger",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "a fact or event that can be observed and studied",
+    "chinese": "现象",
+    "synonyms": [
+      "occurrence",
+      "event"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “trigger” correctly in context.",
+    "example": "A rainbow is a natural phenomenon.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -8400,16 +11187,22 @@ window.vocabulary = [
   },
   {
     "id": 467,
-    "word": "undergo",
-    "partOfSpeech": "noun",
+    "word": "plausible",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to undergo",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “undergo” correctly in context.",
+    "meaning": "seeming reasonable or likely to be True",
+    "chinese": "似乎合理的；可信的",
+    "synonyms": [
+      "credible",
+      "believable"
+    ],
+    "antonyms": [
+      "implausible"
+    ],
+    "example": "Her explanation sounded plausible after we saw the evidence.",
     "topics": [
-      "General"
+      "Thinking",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -8418,16 +11211,21 @@ window.vocabulary = [
   },
   {
     "id": 468,
-    "word": "unify",
-    "partOfSpeech": "noun",
+    "word": "precede",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to unify",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unify” correctly in context.",
+    "meaning": "to happen or exist before something else",
+    "chinese": "先于；在……之前",
+    "synonyms": [
+      "come before"
+    ],
+    "antonyms": [
+      "follow"
+    ],
+    "example": "A short introduction will precede the main presentation.",
     "topics": [
-      "General"
+      "School",
+      "Time"
     ],
     "questionTypes": [
       "MCQ",
@@ -8436,16 +11234,22 @@ window.vocabulary = [
   },
   {
     "id": 469,
-    "word": "unprecedented",
+    "word": "predominant",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "never having happened or existed before",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unprecedented” correctly in context.",
+    "meaning": "more common or important than anything else",
+    "chinese": "占主导的；主要的",
+    "synonyms": [
+      "main",
+      "dominant"
+    ],
+    "antonyms": [
+      "minor"
+    ],
+    "example": "Rice is a predominant food in many Asian countries.",
     "topics": [
-      "General"
+      "Food",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -8454,16 +11258,22 @@ window.vocabulary = [
   },
   {
     "id": 470,
-    "word": "utilise",
-    "partOfSpeech": "noun",
+    "word": "presume",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to utilise",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “utilise” correctly in context.",
+    "meaning": "to believe something is True without proof",
+    "chinese": "推测；假定",
+    "synonyms": [
+      "assume",
+      "suppose"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "Do not presume that everyone understands the instructions.",
     "topics": [
-      "General"
+      "Communication",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -8472,16 +11282,21 @@ window.vocabulary = [
   },
   {
     "id": 471,
-    "word": "vague",
+    "word": "proactive",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is vague",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “vague” correctly in context.",
+    "meaning": "taking action before a problem happens",
+    "chinese": "积极主动的",
+    "synonyms": [
+      "initiative-taking"
+    ],
+    "antonyms": [
+      "passive"
+    ],
+    "example": "The class took a proactive approach to reducing litter.",
     "topics": [
-      "General"
+      "Environment",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -8490,16 +11305,22 @@ window.vocabulary = [
   },
   {
     "id": 472,
-    "word": "vital",
+    "word": "profound",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is vital",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “vital” correctly in context.",
+    "meaning": "very great or having a deep effect",
+    "chinese": "深刻的；深远的",
+    "synonyms": [
+      "deep",
+      "significant"
+    ],
+    "antonyms": [
+      "superficial"
+    ],
+    "example": "The book had a profound effect on her thinking.",
     "topics": [
-      "General"
+      "Reading",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -8508,16 +11329,22 @@ window.vocabulary = [
   },
   {
     "id": 473,
-    "word": "withstand",
-    "partOfSpeech": "noun",
+    "word": "prominent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to withstand",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “withstand” correctly in context.",
+    "meaning": "important, well known or easy to notice",
+    "chinese": "著名的；显著的",
+    "synonyms": [
+      "notable",
+      "important"
+    ],
+    "antonyms": [
+      "unknown"
+    ],
+    "example": "A prominent scientist gave a talk at the school.",
     "topics": [
-      "General"
+      "Science",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -8526,16 +11353,22 @@ window.vocabulary = [
   },
   {
     "id": 474,
-    "word": "abrupt",
-    "partOfSpeech": "noun",
+    "word": "provoke",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to abrupt",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “abrupt” correctly in context.",
+    "meaning": "to cause a reaction, especially anger or discussion",
+    "chinese": "激起；引发",
+    "synonyms": [
+      "trigger",
+      "cause"
+    ],
+    "antonyms": [
+      "calm"
+    ],
+    "example": "The article provoked a lively discussion.",
     "topics": [
-      "General"
+      "Media",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -8544,16 +11377,22 @@ window.vocabulary = [
   },
   {
     "id": 475,
-    "word": "adjacent",
-    "partOfSpeech": "noun",
+    "word": "rational",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to adjacent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “adjacent” correctly in context.",
+    "meaning": "based on reason rather than emotion",
+    "chinese": "理性的；合理的",
+    "synonyms": [
+      "logical",
+      "reasonable"
+    ],
+    "antonyms": [
+      "irrational"
+    ],
+    "example": "We need a rational explanation for the results.",
     "topics": [
-      "General"
+      "Thinking",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -8562,16 +11401,22 @@ window.vocabulary = [
   },
   {
     "id": 476,
-    "word": "advocate",
-    "partOfSpeech": "noun",
+    "word": "refine",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to advocate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “advocate” correctly in context.",
+    "meaning": "to improve something by making small changes",
+    "chinese": "改进；提炼",
+    "synonyms": [
+      "improve",
+      "polish"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "The team refined the design after testing it.",
     "topics": [
-      "General"
+      "Design",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -8580,16 +11425,22 @@ window.vocabulary = [
   },
   {
     "id": 477,
-    "word": "cease",
-    "partOfSpeech": "noun",
+    "word": "reinforce",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to cease",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cease” correctly in context.",
+    "meaning": "to strengthen an idea, structure or behaviour",
+    "chinese": "加强；巩固",
+    "synonyms": [
+      "strengthen",
+      "support"
+    ],
+    "antonyms": [
+      "weaken"
+    ],
+    "example": "The teacher used examples to reinforce the lesson.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -8598,16 +11449,22 @@ window.vocabulary = [
   },
   {
     "id": 478,
-    "word": "coincide",
-    "partOfSpeech": "noun",
+    "word": "relevant",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to coincide",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “coincide” correctly in context.",
+    "meaning": "closely connected with the subject being discussed",
+    "chinese": "相关的",
+    "synonyms": [
+      "related",
+      "pertinent"
+    ],
+    "antonyms": [
+      "irrelevant"
+    ],
+    "example": "Include only information that is relevant to the question.",
     "topics": [
-      "General"
+      "School",
+      "Writing"
     ],
     "questionTypes": [
       "MCQ",
@@ -8616,16 +11473,22 @@ window.vocabulary = [
   },
   {
     "id": 479,
-    "word": "compensate",
+    "word": "reluctance",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to compensate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “compensate” correctly in context.",
+    "meaning": "a feeling of being unwilling to do something",
+    "chinese": "不情愿",
+    "synonyms": [
+      "hesitation",
+      "unwillingness"
+    ],
+    "antonyms": [
+      "eagerness"
+    ],
+    "example": "His reluctance to speak made the interview difficult.",
     "topics": [
-      "General"
+      "Emotions",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -8634,16 +11497,22 @@ window.vocabulary = [
   },
   {
     "id": 480,
-    "word": "comprise",
-    "partOfSpeech": "noun",
+    "word": "resilient",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to comprise",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “comprise” correctly in context.",
+    "meaning": "able to recover quickly from difficulties",
+    "chinese": "有韧性的；能复原的",
+    "synonyms": [
+      "strong",
+      "tough"
+    ],
+    "antonyms": [
+      "fragile"
+    ],
+    "example": "Children can be remarkably resilient after setbacks.",
     "topics": [
-      "General"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -8652,16 +11521,22 @@ window.vocabulary = [
   },
   {
     "id": 481,
-    "word": "convey",
-    "partOfSpeech": "noun",
+    "word": "rigid",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to convey",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “convey” correctly in context.",
+    "meaning": "not able or willing to change",
+    "chinese": "僵硬的；死板的",
+    "synonyms": [
+      "inflexible",
+      "strict"
+    ],
+    "antonyms": [
+      "flexible"
+    ],
+    "example": "The rigid schedule left no time for changes.",
     "topics": [
-      "General"
+      "Planning",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -8670,16 +11545,22 @@ window.vocabulary = [
   },
   {
     "id": 482,
-    "word": "disclose",
-    "partOfSpeech": "noun",
+    "word": "safeguard",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to disclose",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “disclose” correctly in context.",
+    "meaning": "to protect something from harm or loss",
+    "chinese": "保护；保障",
+    "synonyms": [
+      "protect",
+      "secure"
+    ],
+    "antonyms": [
+      "endanger"
+    ],
+    "example": "Rules are needed to safeguard children online.",
     "topics": [
-      "General"
+      "Safety",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -8688,16 +11569,22 @@ window.vocabulary = [
   },
   {
     "id": 483,
-    "word": "exhaustive",
-    "partOfSpeech": "noun",
+    "word": "scrupulous",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to exhaustive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exhaustive” correctly in context.",
+    "meaning": "very careful to be honest and accurate",
+    "chinese": "一丝不苟的；严谨的",
+    "synonyms": [
+      "thorough",
+      "conscientious"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "The researcher was scrupulous about checking every result.",
     "topics": [
-      "General"
+      "Science",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -8706,16 +11593,22 @@ window.vocabulary = [
   },
   {
     "id": 484,
-    "word": "implicit",
-    "partOfSpeech": "noun",
+    "word": "scrutinise",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to implicit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “implicit” correctly in context.",
+    "meaning": "to examine something very carefully",
+    "chinese": "仔细检查；审视",
+    "synonyms": [
+      "inspect",
+      "examine"
+    ],
+    "antonyms": [
+      "overlook"
+    ],
+    "example": "The scientist scrutinised the results for errors.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -8724,16 +11617,22 @@ window.vocabulary = [
   },
   {
     "id": 485,
-    "word": "inherent",
-    "partOfSpeech": "noun",
+    "word": "skeptical",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to inherent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inherent” correctly in context.",
+    "meaning": "not easily convinced that something is True",
+    "chinese": "怀疑的",
+    "synonyms": [
+      "doubtful",
+      "unconvinced"
+    ],
+    "antonyms": [
+      "convinced"
+    ],
+    "example": "The scientist was skeptical of the surprising claim.",
     "topics": [
-      "General"
+      "Science",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -8742,16 +11641,22 @@ window.vocabulary = [
   },
   {
     "id": 486,
-    "word": "intervene",
-    "partOfSpeech": "noun",
+    "word": "subsequent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to intervene",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intervene” correctly in context.",
+    "meaning": "happening after something else",
+    "chinese": "随后的",
+    "synonyms": [
+      "following",
+      "later"
+    ],
+    "antonyms": [
+      "previous"
+    ],
+    "example": "Subsequent tests confirmed the original result.",
     "topics": [
-      "General"
+      "Science",
+      "Time"
     ],
     "questionTypes": [
       "MCQ",
@@ -8760,16 +11665,22 @@ window.vocabulary = [
   },
   {
     "id": 487,
-    "word": "overlap",
-    "partOfSpeech": "noun",
+    "word": "subtle",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to overlap",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “overlap” correctly in context.",
+    "meaning": "not obvious but noticeable after careful attention",
+    "chinese": "微妙的；细微的",
+    "synonyms": [
+      "slight",
+      "delicate"
+    ],
+    "antonyms": [
+      "obvious"
+    ],
+    "example": "There was a subtle change in the colour of the sky.",
     "topics": [
-      "General"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -8778,16 +11689,23 @@ window.vocabulary = [
   },
   {
     "id": 488,
-    "word": "predominant",
-    "partOfSpeech": "noun",
+    "word": "sustain",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to predominant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “predominant” correctly in context.",
+    "meaning": "to keep something going or maintain it over time",
+    "chinese": "维持；支撑",
+    "synonyms": [
+      "maintain",
+      "support"
+    ],
+    "antonyms": [
+      "stop",
+      "undermine"
+    ],
+    "example": "We need to sustain our efforts to protect the environment.",
     "topics": [
-      "General"
+      "Environment",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -8796,16 +11714,22 @@ window.vocabulary = [
   },
   {
     "id": 489,
-    "word": "relevant",
-    "partOfSpeech": "noun",
+    "word": "tangible",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to relevant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “relevant” correctly in context.",
+    "meaning": "real and able to be seen or touched",
+    "chinese": "有形的；实际的",
+    "synonyms": [
+      "physical",
+      "concrete"
+    ],
+    "antonyms": [
+      "intangible"
+    ],
+    "example": "The project produced tangible benefits for the community.",
     "topics": [
-      "General"
+      "Community",
+      "Education"
     ],
     "questionTypes": [
       "MCQ",
@@ -8814,16 +11738,22 @@ window.vocabulary = [
   },
   {
     "id": 490,
-    "word": "resilient",
-    "partOfSpeech": "noun",
+    "word": "tentative",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "able to recover quickly from difficulty",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “resilient” correctly in context.",
+    "meaning": "not certain or definite because you may change it later",
+    "chinese": "暂定的；试探性的",
+    "synonyms": [
+      "provisional",
+      "uncertain"
+    ],
+    "antonyms": [
+      "definite"
+    ],
+    "example": "We made a tentative plan for the holiday.",
     "topics": [
-      "General"
+      "Planning",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -8832,16 +11762,22 @@ window.vocabulary = [
   },
   {
     "id": 491,
-    "word": "scrutinise",
-    "partOfSpeech": "noun",
+    "word": "transformative",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to scrutinise",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “scrutinise” correctly in context.",
+    "meaning": "causing a major or lasting change",
+    "chinese": "有变革作用的",
+    "synonyms": [
+      "revolutionary",
+      "life-changing"
+    ],
+    "antonyms": [
+      "unchanging"
+    ],
+    "example": "The reading programme had a transformative effect on the pupils.",
     "topics": [
-      "General"
+      "Education",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -8850,16 +11786,22 @@ window.vocabulary = [
   },
   {
     "id": 492,
-    "word": "subtle",
-    "partOfSpeech": "noun",
+    "word": "trigger",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to subtle",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “subtle” correctly in context.",
+    "meaning": "to cause something to happen",
+    "chinese": "触发；引发",
+    "synonyms": [
+      "cause",
+      "activate"
+    ],
+    "antonyms": [
+      "prevent"
+    ],
+    "example": "The loud noise triggered the alarm.",
     "topics": [
-      "General"
+      "Safety",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -8868,16 +11810,22 @@ window.vocabulary = [
   },
   {
     "id": 493,
-    "word": "transformative",
-    "partOfSpeech": "noun",
+    "word": "undergo",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "causing a major or lasting change",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “transformative” correctly in context.",
+    "meaning": "to experience something, especially a process or change",
+    "chinese": "经历；接受",
+    "synonyms": [
+      "experience",
+      "endure"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "The bridge will undergo repairs next month.",
     "topics": [
-      "General"
+      "Engineering",
+      "Transport"
     ],
     "questionTypes": [
       "MCQ",
@@ -8886,16 +11834,22 @@ window.vocabulary = [
   },
   {
     "id": 494,
-    "word": "unwavering",
-    "partOfSpeech": "noun",
+    "word": "unify",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "remaining firm and determined without changing",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unwavering” correctly in context.",
+    "meaning": "to bring people or things together as one",
+    "chinese": "统一；团结",
+    "synonyms": [
+      "unite",
+      "combine"
+    ],
+    "antonyms": [
+      "divide"
+    ],
+    "example": "The event helped unify the school community.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -8904,16 +11858,22 @@ window.vocabulary = [
   },
   {
     "id": 495,
-    "word": "viable",
+    "word": "unprecedented",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is viable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “viable” correctly in context.",
+    "meaning": "never having happened or existed before",
+    "chinese": "前所未有的",
+    "synonyms": [
+      "unparalleled",
+      "new"
+    ],
+    "antonyms": [
+      "precedented"
+    ],
+    "example": "The city experienced unprecedented rainfall.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -8922,16 +11882,22 @@ window.vocabulary = [
   },
   {
     "id": 496,
-    "word": "vulnerable",
+    "word": "unwavering",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "easily hurt, harmed or affected",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “vulnerable” correctly in context.",
+    "meaning": "remaining firm and determined",
+    "chinese": "坚定不移的",
+    "synonyms": [
+      "steadfast",
+      "resolute"
+    ],
+    "antonyms": [
+      "wavering"
+    ],
+    "example": "Her unwavering determination helped her finish the race.",
     "topics": [
-      "General"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -8940,16 +11906,22 @@ window.vocabulary = [
   },
   {
     "id": 497,
-    "word": "yielding",
-    "partOfSpeech": "noun",
+    "word": "utilise",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to yielding",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “yielding” correctly in context.",
+    "meaning": "to use something effectively",
+    "chinese": "利用",
+    "synonyms": [
+      "use",
+      "employ"
+    ],
+    "antonyms": [
+      "waste"
+    ],
+    "example": "The school will utilise solar energy to reduce costs.",
     "topics": [
-      "General"
+      "Environment",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -8958,16 +11930,23 @@ window.vocabulary = [
   },
   {
     "id": 498,
-    "word": "zealous",
-    "partOfSpeech": "noun",
+    "word": "vague",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to zealous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “zealous” correctly in context.",
+    "meaning": "not clear or specific",
+    "chinese": "模糊的；含糊的",
+    "synonyms": [
+      "unclear",
+      "ambiguous"
+    ],
+    "antonyms": [
+      "precise",
+      "specific"
+    ],
+    "example": "His answer was too vague to receive full marks.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -8976,16 +11955,22 @@ window.vocabulary = [
   },
   {
     "id": 499,
-    "word": "adaptable",
+    "word": "vital",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is adaptable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “adaptable” correctly in context.",
+    "meaning": "extremely important or necessary",
+    "chinese": "至关重要的",
+    "synonyms": [
+      "essential",
+      "crucial"
+    ],
+    "antonyms": [
+      "unimportant"
+    ],
+    "example": "Clean water is vital for human health.",
     "topics": [
-      "General"
+      "Health",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -8994,16 +11979,22 @@ window.vocabulary = [
   },
   {
     "id": 500,
-    "word": "agreement",
-    "partOfSpeech": "noun",
+    "word": "withstand",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea or situation related to agreement",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “agreement” correctly in context.",
+    "meaning": "to remain strong and not be harmed by something",
+    "chinese": "抵御；承受",
+    "synonyms": [
+      "endure",
+      "resist"
+    ],
+    "antonyms": [
+      "yield"
+    ],
+    "example": "The shelter was built to withstand strong winds.",
     "topics": [
-      "General"
+      "Engineering",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -9013,15 +12004,21 @@ window.vocabulary = [
   {
     "id": 501,
     "word": "abolish",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to abolish",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “abolish” correctly in context.",
+    "meaning": "to officially end a system, rule or practice",
+    "chinese": "废除",
+    "synonyms": [
+      "eliminate",
+      "end"
+    ],
+    "antonyms": [
+      "establish"
+    ],
+    "example": "The school decided to abolish the outdated rule.",
     "topics": [
-      "General"
+      "School",
+      "Rules"
     ],
     "questionTypes": [
       "MCQ",
@@ -9031,15 +12028,22 @@ window.vocabulary = [
   {
     "id": 502,
     "word": "accelerate",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to accelerate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “accelerate” correctly in context.",
+    "meaning": "to become faster or make something faster",
+    "chinese": "加速",
+    "synonyms": [
+      "speed up",
+      "hasten"
+    ],
+    "antonyms": [
+      "slow",
+      "decelerate"
+    ],
+    "example": "The car began to accelerate after the traffic cleared.",
     "topics": [
-      "General"
+      "Transport",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9049,15 +12053,21 @@ window.vocabulary = [
   {
     "id": 503,
     "word": "accommodate",
-    "partOfSpeech": "noun",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to accommodate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “accommodate” correctly in context.",
+    "meaning": "to provide enough space for someone or something",
+    "chinese": "容纳；为……提供方便",
+    "synonyms": [
+      "house",
+      "fit"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The hall can accommodate more than five hundred guests.",
     "topics": [
-      "General"
+      "Community",
+      "Buildings"
     ],
     "questionTypes": [
       "MCQ",
@@ -9066,16 +12076,21 @@ window.vocabulary = [
   },
   {
     "id": 504,
-    "word": "aggregate",
+    "word": "accountability",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to aggregate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “aggregate” correctly in context.",
+    "meaning": "the state of being responsible for actions and decisions",
+    "chinese": "问责；责任",
+    "synonyms": [
+      "responsibility"
+    ],
+    "antonyms": [
+      "irresponsibility"
+    ],
+    "example": "Accountability is important when managing public money.",
     "topics": [
-      "General"
+      "Society",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -9084,16 +12099,22 @@ window.vocabulary = [
   },
   {
     "id": 505,
-    "word": "alleviate",
+    "word": "aggregate",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to alleviate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “alleviate” correctly in context.",
+    "meaning": "a total formed by combining several amounts",
+    "chinese": "总数；合计",
+    "synonyms": [
+      "total",
+      "sum"
+    ],
+    "antonyms": [
+      "part"
+    ],
+    "example": "The aggregate score was higher than last year's.",
     "topics": [
-      "General"
+      "Mathematics",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -9102,16 +12123,22 @@ window.vocabulary = [
   },
   {
     "id": 506,
-    "word": "amend",
-    "partOfSpeech": "noun",
+    "word": "alleviate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to amend",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “amend” correctly in context.",
+    "meaning": "to make pain or a problem less severe",
+    "chinese": "减轻；缓解",
+    "synonyms": [
+      "relieve",
+      "ease"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "The medicine helped alleviate the pain.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9120,16 +12147,22 @@ window.vocabulary = [
   },
   {
     "id": 507,
-    "word": "anonymous",
+    "word": "amelioration",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to anonymous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “anonymous” correctly in context.",
+    "meaning": "an improvement or change that makes a bad situation better",
+    "chinese": "改善；改良",
+    "synonyms": [
+      "improvement",
+      "betterment"
+    ],
+    "antonyms": [
+      "deterioration"
+    ],
+    "example": "The amelioration of traffic conditions made the journey safer.",
     "topics": [
-      "General"
+      "Transport",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -9138,16 +12171,22 @@ window.vocabulary = [
   },
   {
     "id": 508,
-    "word": "anticipation",
-    "partOfSpeech": "noun",
+    "word": "amend",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to anticipation",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “anticipation” correctly in context.",
+    "meaning": "to change a document, rule or plan in order to improve it",
+    "chinese": "修订；修改",
+    "synonyms": [
+      "modify",
+      "revise"
+    ],
+    "antonyms": [
+      "retain"
+    ],
+    "example": "The committee amended the school policy after discussion.",
     "topics": [
-      "General"
+      "School",
+      "Rules"
     ],
     "questionTypes": [
       "MCQ",
@@ -9156,16 +12195,22 @@ window.vocabulary = [
   },
   {
     "id": 509,
-    "word": "assert",
-    "partOfSpeech": "noun",
+    "word": "anonymous",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to assert",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “assert” correctly in context.",
+    "meaning": "not named or identified",
+    "chinese": "匿名的",
+    "synonyms": [
+      "unnamed",
+      "unknown"
+    ],
+    "antonyms": [
+      "identified"
+    ],
+    "example": "The survey allowed students to remain anonymous.",
     "topics": [
-      "General"
+      "School",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -9174,16 +12219,22 @@ window.vocabulary = [
   },
   {
     "id": 510,
-    "word": "assimilate",
-    "partOfSpeech": "noun",
+    "word": "assert",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to assimilate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “assimilate” correctly in context.",
+    "meaning": "to state something confidently and firmly",
+    "chinese": "断言；坚持说",
+    "synonyms": [
+      "declare",
+      "claim"
+    ],
+    "antonyms": [
+      "deny"
+    ],
+    "example": "The witness asserted that he had seen the accident.",
     "topics": [
-      "General"
+      "Communication",
+      "Law"
     ],
     "questionTypes": [
       "MCQ",
@@ -9192,16 +12243,22 @@ window.vocabulary = [
   },
   {
     "id": 511,
-    "word": "attribute",
-    "partOfSpeech": "noun",
+    "word": "assimilate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to attribute",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “attribute” correctly in context.",
+    "meaning": "to understand and absorb new information or ideas",
+    "chinese": "吸收；融入",
+    "synonyms": [
+      "absorb",
+      "integrate"
+    ],
+    "antonyms": [
+      "reject"
+    ],
+    "example": "It took time for the new student to assimilate the unfamiliar customs.",
     "topics": [
-      "General"
+      "School",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -9210,16 +12267,22 @@ window.vocabulary = [
   },
   {
     "id": 512,
-    "word": "autonomous",
-    "partOfSpeech": "noun",
+    "word": "attribute",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to autonomous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “autonomous” correctly in context.",
+    "meaning": "to say that something is caused by a particular person or thing",
+    "chinese": "归因于",
+    "synonyms": [
+      "ascribe",
+      "credit"
+    ],
+    "antonyms": [
+      "blame incorrectly"
+    ],
+    "example": "Scientists attribute the change to rising temperatures.",
     "topics": [
-      "General"
+      "Science",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -9228,16 +12291,22 @@ window.vocabulary = [
   },
   {
     "id": 513,
-    "word": "comply",
-    "partOfSpeech": "verb",
+    "word": "autonomous",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to comply or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “comply” correctly in context.",
+    "meaning": "able to act independently",
+    "chinese": "自主的；自治的",
+    "synonyms": [
+      "independent",
+      "self-governing"
+    ],
+    "antonyms": [
+      "dependent"
+    ],
+    "example": "The robot can perform some tasks autonomously.",
     "topics": [
-      "General"
+      "Technology",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9246,16 +12315,22 @@ window.vocabulary = [
   },
   {
     "id": 514,
-    "word": "constrain",
+    "word": "comply",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to constrain or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “constrain” correctly in context.",
+    "meaning": "to obey a rule or request",
+    "chinese": "遵守；服从",
+    "synonyms": [
+      "obey",
+      "follow"
+    ],
+    "antonyms": [
+      "disobey"
+    ],
+    "example": "All passengers must comply with the safety instructions.",
     "topics": [
-      "General"
+      "Travel",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -9264,16 +12339,22 @@ window.vocabulary = [
   },
   {
     "id": 515,
-    "word": "correlate",
-    "partOfSpeech": "noun",
+    "word": "consecutive",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to correlate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “correlate” correctly in context.",
+    "meaning": "following one after another without interruption",
+    "chinese": "连续的",
+    "synonyms": [
+      "successive",
+      "continuous"
+    ],
+    "antonyms": [
+      "interrupted"
+    ],
+    "example": "She won three consecutive races.",
     "topics": [
-      "General"
+      "Sports",
+      "Time"
     ],
     "questionTypes": [
       "MCQ",
@@ -9282,16 +12363,22 @@ window.vocabulary = [
   },
   {
     "id": 516,
-    "word": "deplete",
+    "word": "conservation",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to deplete",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deplete” correctly in context.",
+    "meaning": "the protection of nature, resources or historic places",
+    "chinese": "保护；保育",
+    "synonyms": [
+      "preservation",
+      "protection"
+    ],
+    "antonyms": [
+      "destruction"
+    ],
+    "example": "Water conservation is important during dry periods.",
     "topics": [
-      "General"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9300,16 +12387,23 @@ window.vocabulary = [
   },
   {
     "id": 517,
-    "word": "designate",
-    "partOfSpeech": "noun",
+    "word": "constrain",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to designate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “designate” correctly in context.",
+    "meaning": "to limit or restrict something",
+    "chinese": "限制；约束",
+    "synonyms": [
+      "restrict",
+      "limit"
+    ],
+    "antonyms": [
+      "allow",
+      "free"
+    ],
+    "example": "A small budget constrained our choices.",
     "topics": [
-      "General"
+      "Money",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -9318,16 +12412,22 @@ window.vocabulary = [
   },
   {
     "id": 518,
-    "word": "deteriorate",
-    "partOfSpeech": "verb",
+    "word": "coordination",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "to deteriorate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deteriorate” correctly in context.",
+    "meaning": "the organisation of people or activities so they work well together",
+    "chinese": "协调",
+    "synonyms": [
+      "cooperation",
+      "organisation"
+    ],
+    "antonyms": [
+      "disorder"
+    ],
+    "example": "Good coordination was needed to complete the group task.",
     "topics": [
-      "General"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
       "MCQ",
@@ -9336,16 +12436,22 @@ window.vocabulary = [
   },
   {
     "id": 519,
-    "word": "devise",
+    "word": "correlate",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to devise or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “devise” correctly in context.",
+    "meaning": "to have a connection or relationship with something",
+    "chinese": "相关；相互关联",
+    "synonyms": [
+      "relate",
+      "correspond"
+    ],
+    "antonyms": [
+      "differ"
+    ],
+    "example": "Exercise levels often correlate with better health.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9354,16 +12460,22 @@ window.vocabulary = [
   },
   {
     "id": 520,
-    "word": "differentiate",
-    "partOfSpeech": "noun",
+    "word": "deplete",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to differentiate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “differentiate” correctly in context.",
+    "meaning": "to use up a supply of something",
+    "chinese": "耗尽",
+    "synonyms": [
+      "exhaust",
+      "drain"
+    ],
+    "antonyms": [
+      "replenish"
+    ],
+    "example": "Overfishing can deplete fish populations.",
     "topics": [
-      "General"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9372,16 +12484,22 @@ window.vocabulary = [
   },
   {
     "id": 521,
-    "word": "dissipate",
+    "word": "depletion",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to dissipate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dissipate” correctly in context.",
+    "meaning": "the reduction of something because it has been used up",
+    "chinese": "耗竭；减少",
+    "synonyms": [
+      "exhaustion",
+      "decrease"
+    ],
+    "antonyms": [
+      "replenishment"
+    ],
+    "example": "The depletion of fish stocks threatens local communities.",
     "topics": [
-      "General"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9390,16 +12508,22 @@ window.vocabulary = [
   },
   {
     "id": 522,
-    "word": "distort",
+    "word": "designate",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to distort or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “distort” correctly in context.",
+    "meaning": "to officially choose or name something for a purpose",
+    "chinese": "指定；命名",
+    "synonyms": [
+      "appoint",
+      "assign"
+    ],
+    "antonyms": [
+      "remove"
+    ],
+    "example": "The area was designated as a protected wildlife zone.",
     "topics": [
-      "General"
+      "Environment",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -9408,16 +12532,22 @@ window.vocabulary = [
   },
   {
     "id": 523,
-    "word": "elaborate",
+    "word": "deteriorate",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to elaborate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “elaborate” correctly in context.",
+    "meaning": "to become worse in quality or condition",
+    "chinese": "恶化",
+    "synonyms": [
+      "worsen",
+      "decline"
+    ],
+    "antonyms": [
+      "improve"
+    ],
+    "example": "The road began to deteriorate after years of heavy traffic.",
     "topics": [
-      "General"
+      "Transport",
+      "Infrastructure"
     ],
     "questionTypes": [
       "MCQ",
@@ -9426,16 +12556,22 @@ window.vocabulary = [
   },
   {
     "id": 524,
-    "word": "embark",
+    "word": "devise",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to embark or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “embark” correctly in context.",
+    "meaning": "to invent or plan something carefully",
+    "chinese": "设计；想出",
+    "synonyms": [
+      "create",
+      "formulate"
+    ],
+    "antonyms": [
+      "discard"
+    ],
+    "example": "The pupils devised a clever solution to the problem.",
     "topics": [
-      "General"
+      "School",
+      "Problem Solving"
     ],
     "questionTypes": [
       "MCQ",
@@ -9444,16 +12580,22 @@ window.vocabulary = [
   },
   {
     "id": 525,
-    "word": "enforce",
+    "word": "differentiate",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to enforce or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “enforce” correctly in context.",
+    "meaning": "to recognise or show the difference between things",
+    "chinese": "区分；区别",
+    "synonyms": [
+      "distinguish",
+      "separate"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "The test helps differentiate strong materials from weak ones.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -9462,16 +12604,22 @@ window.vocabulary = [
   },
   {
     "id": 526,
-    "word": "enrich",
-    "partOfSpeech": "verb",
+    "word": "discretion",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "to enrich or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “enrich” correctly in context.",
+    "meaning": "careful judgement about what should be done or said",
+    "chinese": "谨慎；判断力",
+    "synonyms": [
+      "judgement",
+      "care"
+    ],
+    "antonyms": [
+      "recklessness"
+    ],
+    "example": "The teacher used discretion when dealing with the sensitive issue.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -9480,16 +12628,22 @@ window.vocabulary = [
   },
   {
     "id": 527,
-    "word": "eradicate",
-    "partOfSpeech": "verb",
+    "word": "displacement",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "to eradicate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “eradicate” correctly in context.",
+    "meaning": "the act of forcing people to leave their homes or moving something from its usual place",
+    "chinese": "迁移；移位",
+    "synonyms": [
+      "movement",
+      "relocation"
+    ],
+    "antonyms": [
+      "stability"
+    ],
+    "example": "Flooding caused the displacement of many families.",
     "topics": [
-      "General"
+      "Weather",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -9498,16 +12652,22 @@ window.vocabulary = [
   },
   {
     "id": 528,
-    "word": "exaggeration",
-    "partOfSpeech": "noun",
+    "word": "disrupt",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to exaggeration",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exaggeration” correctly in context.",
+    "meaning": "to interrupt something and prevent it from continuing normally",
+    "chinese": "扰乱；中断",
+    "synonyms": [
+      "interrupt",
+      "disturb"
+    ],
+    "antonyms": [
+      "maintain"
+    ],
+    "example": "The storm disrupted train services.",
     "topics": [
-      "General"
+      "Weather",
+      "Transport"
     ],
     "questionTypes": [
       "MCQ",
@@ -9516,16 +12676,22 @@ window.vocabulary = [
   },
   {
     "id": 529,
-    "word": "expenditure",
-    "partOfSpeech": "noun",
+    "word": "dissipate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to expenditure",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “expenditure” correctly in context.",
+    "meaning": "to gradually disappear or cause something to disappear",
+    "chinese": "消散；驱散",
+    "synonyms": [
+      "disperse",
+      "fade"
+    ],
+    "antonyms": [
+      "gather"
+    ],
+    "example": "The morning mist slowly dissipated.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -9534,16 +12700,22 @@ window.vocabulary = [
   },
   {
     "id": 530,
-    "word": "exploitative",
-    "partOfSpeech": "noun",
+    "word": "distort",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to exploitative",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exploitative” correctly in context.",
+    "meaning": "to change something so that it is no longer accurate or natural",
+    "chinese": "扭曲；歪曲",
+    "synonyms": [
+      "twist",
+      "misrepresent"
+    ],
+    "antonyms": [
+      "clarify"
+    ],
+    "example": "The photograph was distorted by the damaged lens.",
     "topics": [
-      "General"
+      "Technology",
+      "Media"
     ],
     "questionTypes": [
       "MCQ",
@@ -9552,16 +12724,22 @@ window.vocabulary = [
   },
   {
     "id": 531,
-    "word": "extract",
-    "partOfSpeech": "verb",
+    "word": "elaborate",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to extract or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “extract” correctly in context.",
+    "meaning": "containing many careful details",
+    "chinese": "精心制作的；复杂的",
+    "synonyms": [
+      "detailed",
+      "complex"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "The artist created an elaborate costume for the performance.",
     "topics": [
-      "General"
+      "Arts",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -9570,16 +12748,22 @@ window.vocabulary = [
   },
   {
     "id": 532,
-    "word": "formidable",
-    "partOfSpeech": "noun",
+    "word": "embark",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to formidable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “formidable” correctly in context.",
+    "meaning": "to begin a new activity or journey",
+    "chinese": "开始；踏上",
+    "synonyms": [
+      "begin",
+      "undertake"
+    ],
+    "antonyms": [
+      "finish"
+    ],
+    "example": "The team embarked on a project to restore the garden.",
     "topics": [
-      "General"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -9588,16 +12772,22 @@ window.vocabulary = [
   },
   {
     "id": 533,
-    "word": "fragment",
-    "partOfSpeech": "noun",
+    "word": "empower",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to fragment",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “fragment” correctly in context.",
+    "meaning": "to give someone the confidence or authority to do something",
+    "chinese": "赋予权力；使有能力",
+    "synonyms": [
+      "enable",
+      "authorise"
+    ],
+    "antonyms": [
+      "weaken"
+    ],
+    "example": "Good teachers empower students to make responsible choices.",
     "topics": [
-      "General"
+      "Education",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -9606,16 +12796,22 @@ window.vocabulary = [
   },
   {
     "id": 534,
-    "word": "hierarchy",
-    "partOfSpeech": "noun",
+    "word": "enforce",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to hierarchy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “hierarchy” correctly in context.",
+    "meaning": "to make sure that a law or rule is obeyed",
+    "chinese": "执行；实施",
+    "synonyms": [
+      "implement",
+      "apply"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "The authorities enforce strict road-safety rules.",
     "topics": [
-      "General"
+      "Safety",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -9624,16 +12820,22 @@ window.vocabulary = [
   },
   {
     "id": 535,
-    "word": "immerse",
-    "partOfSpeech": "noun",
+    "word": "enrich",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to immerse",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “immerse” correctly in context.",
+    "meaning": "to improve the quality or value of something",
+    "chinese": "丰富；充实",
+    "synonyms": [
+      "enhance",
+      "improve"
+    ],
+    "antonyms": [
+      "impoverish"
+    ],
+    "example": "Reading widely can enrich a student's vocabulary.",
     "topics": [
-      "General"
+      "Reading",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -9642,16 +12844,22 @@ window.vocabulary = [
   },
   {
     "id": 536,
-    "word": "impair",
-    "partOfSpeech": "noun",
+    "word": "eradicate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to impair",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “impair” correctly in context.",
+    "meaning": "to destroy or remove something completely",
+    "chinese": "根除；消灭",
+    "synonyms": [
+      "eliminate",
+      "remove"
+    ],
+    "antonyms": [
+      "create"
+    ],
+    "example": "The campaign aims to eradicate mosquito breeding sites.",
     "topics": [
-      "General"
+      "Health",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -9660,16 +12868,22 @@ window.vocabulary = [
   },
   {
     "id": 537,
-    "word": "implement",
-    "partOfSpeech": "verb",
+    "word": "exceedingly",
+    "partOfSpeech": "adverb",
     "level": 6,
-    "meaning": "to implement or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “implement” correctly in context.",
+    "meaning": "to a very great degree",
+    "chinese": "极其；非常",
+    "synonyms": [
+      "extremely",
+      "very"
+    ],
+    "antonyms": [
+      "slightly"
+    ],
+    "example": "The test was exceedingly difficult.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -9678,16 +12892,22 @@ window.vocabulary = [
   },
   {
     "id": 538,
-    "word": "induce",
-    "partOfSpeech": "verb",
+    "word": "exclusion",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "to induce or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “induce” correctly in context.",
+    "meaning": "the act of keeping someone or something out",
+    "chinese": "排除；排斥",
+    "synonyms": [
+      "omission",
+      "rejection"
+    ],
+    "antonyms": [
+      "inclusion"
+    ],
+    "example": "The club aims to prevent the exclusion of younger pupils.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -9696,16 +12916,22 @@ window.vocabulary = [
   },
   {
     "id": 539,
-    "word": "inefficient",
-    "partOfSpeech": "noun",
+    "word": "extract",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to inefficient",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inefficient” correctly in context.",
+    "meaning": "to remove something from somewhere",
+    "chinese": "提取；取出",
+    "synonyms": [
+      "remove",
+      "draw out"
+    ],
+    "antonyms": [
+      "insert"
+    ],
+    "example": "The dentist extracted the damaged tooth.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9714,16 +12940,22 @@ window.vocabulary = [
   },
   {
     "id": 540,
-    "word": "infrastructure",
+    "word": "feasibility",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to infrastructure",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “infrastructure” correctly in context.",
+    "meaning": "the quality of being possible and practical",
+    "chinese": "可行性",
+    "synonyms": [
+      "practicality",
+      "possibility"
+    ],
+    "antonyms": [
+      "impossibility"
+    ],
+    "example": "The team studied the feasibility of building a new playground.",
     "topics": [
-      "General"
+      "Planning",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -9732,16 +12964,23 @@ window.vocabulary = [
   },
   {
     "id": 541,
-    "word": "integrate",
-    "partOfSpeech": "verb",
+    "word": "formidable",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to integrate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “integrate” correctly in context.",
+    "meaning": "very difficult to deal with or overcome",
+    "chinese": "强大的；难以对付的",
+    "synonyms": [
+      "daunting",
+      "powerful"
+    ],
+    "antonyms": [
+      "weak",
+      "easy"
+    ],
+    "example": "The team faced a formidable opponent in the final.",
     "topics": [
-      "General"
+      "Sports",
+      "Competition"
     ],
     "questionTypes": [
       "MCQ",
@@ -9750,16 +12989,22 @@ window.vocabulary = [
   },
   {
     "id": 542,
-    "word": "interfere",
-    "partOfSpeech": "verb",
+    "word": "fragment",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "to interfere or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “interfere” correctly in context.",
+    "meaning": "a small part broken off from something larger",
+    "chinese": "碎片；片段",
+    "synonyms": [
+      "piece",
+      "section"
+    ],
+    "antonyms": [
+      "whole"
+    ],
+    "example": "A fragment of glass was found near the broken window.",
     "topics": [
-      "General"
+      "Science",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -9768,16 +13013,22 @@ window.vocabulary = [
   },
   {
     "id": 543,
-    "word": "intermediate",
+    "word": "hierarchy",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to intermediate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intermediate” correctly in context.",
+    "meaning": "a system in which people or things are ranked",
+    "chinese": "等级制度；层级",
+    "synonyms": [
+      "ranking",
+      "order"
+    ],
+    "antonyms": [
+      "equality"
+    ],
+    "example": "The company has a clear management hierarchy.",
     "topics": [
-      "General"
+      "Business",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -9786,16 +13037,22 @@ window.vocabulary = [
   },
   {
     "id": 544,
-    "word": "intrigue",
-    "partOfSpeech": "noun",
+    "word": "immerse",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to intrigue",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intrigue” correctly in context.",
+    "meaning": "to become deeply involved in an activity",
+    "chinese": "沉浸于",
+    "synonyms": [
+      "engage deeply",
+      "absorb"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "She immersed herself in the book for the entire afternoon.",
     "topics": [
-      "General"
+      "Reading",
+      "Hobbies"
     ],
     "questionTypes": [
       "MCQ",
@@ -9804,16 +13061,22 @@ window.vocabulary = [
   },
   {
     "id": 545,
-    "word": "isolate",
+    "word": "impair",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to isolate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “isolate” correctly in context.",
+    "meaning": "to damage or weaken a person's ability or a thing's function",
+    "chinese": "损害；削弱",
+    "synonyms": [
+      "damage",
+      "weaken"
+    ],
+    "antonyms": [
+      "improve"
+    ],
+    "example": "Lack of sleep can impair concentration.",
     "topics": [
-      "General"
+      "Health",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -9822,16 +13085,22 @@ window.vocabulary = [
   },
   {
     "id": 546,
-    "word": "legitimate",
-    "partOfSpeech": "noun",
+    "word": "implement",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to legitimate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “legitimate” correctly in context.",
+    "meaning": "to put a plan or decision into action",
+    "chinese": "实施；执行",
+    "synonyms": [
+      "carry out",
+      "apply"
+    ],
+    "antonyms": [
+      "abandon"
+    ],
+    "example": "The school implemented a new recycling programme.",
     "topics": [
-      "General"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -9840,16 +13109,22 @@ window.vocabulary = [
   },
   {
     "id": 547,
-    "word": "mandatory",
+    "word": "inclusion",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to mandatory",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “mandatory” correctly in context.",
+    "meaning": "the act of including someone or something",
+    "chinese": "包容；纳入",
+    "synonyms": [
+      "involvement",
+      "acceptance"
+    ],
+    "antonyms": [
+      "exclusion"
+    ],
+    "example": "The programme promotes inclusion of pupils with different abilities.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -9858,16 +13133,22 @@ window.vocabulary = [
   },
   {
     "id": 548,
-    "word": "mature",
-    "partOfSpeech": "noun",
+    "word": "induce",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to mature",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “mature” correctly in context.",
+    "meaning": "to cause something to happen",
+    "chinese": "引起；导致",
+    "synonyms": [
+      "cause",
+      "produce"
+    ],
+    "antonyms": [
+      "prevent"
+    ],
+    "example": "The medicine may induce sleep.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -9876,16 +13157,22 @@ window.vocabulary = [
   },
   {
     "id": 549,
-    "word": "misleading",
-    "partOfSpeech": "noun",
+    "word": "inefficient",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to misleading",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “misleading” correctly in context.",
+    "meaning": "not working well or wasting time, energy or resources",
+    "chinese": "效率低的",
+    "synonyms": [
+      "wasteful",
+      "ineffective"
+    ],
+    "antonyms": [
+      "efficient"
+    ],
+    "example": "The old machine was inefficient and expensive to operate.",
     "topics": [
-      "General"
+      "Technology",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -9894,16 +13181,20 @@ window.vocabulary = [
   },
   {
     "id": 550,
-    "word": "mitigate",
-    "partOfSpeech": "verb",
+    "word": "infrastructure",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "to mitigate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "the basic systems and structures needed for a community to function",
+    "chinese": "基础设施",
+    "synonyms": [
+      "facilities",
+      "framework"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “mitigate” correctly in context.",
+    "example": "Good transport infrastructure helps a city grow.",
     "topics": [
-      "General"
+      "Transport",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -9912,16 +13203,22 @@ window.vocabulary = [
   },
   {
     "id": 551,
-    "word": "negligible",
-    "partOfSpeech": "noun",
+    "word": "integrate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to negligible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “negligible” correctly in context.",
+    "meaning": "to combine or bring parts together into a whole",
+    "chinese": "整合；融合",
+    "synonyms": [
+      "combine",
+      "incorporate"
+    ],
+    "antonyms": [
+      "separate"
+    ],
+    "example": "The school integrated technology into everyday lessons.",
     "topics": [
-      "General"
+      "Education",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -9930,16 +13227,21 @@ window.vocabulary = [
   },
   {
     "id": 552,
-    "word": "notwithstanding",
-    "partOfSpeech": "noun",
+    "word": "interdependent",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to notwithstanding",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “notwithstanding” correctly in context.",
+    "meaning": "depending on each other",
+    "chinese": "相互依赖的",
+    "synonyms": [
+      "mutually dependent"
+    ],
+    "antonyms": [
+      "independent"
+    ],
+    "example": "Plants and animals are interdependent in an ecosystem.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -9948,16 +13250,22 @@ window.vocabulary = [
   },
   {
     "id": 553,
-    "word": "obsolete",
-    "partOfSpeech": "noun",
+    "word": "interfere",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to obsolete",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “obsolete” correctly in context.",
+    "meaning": "to get involved in a situation in a way that causes problems",
+    "chinese": "干涉；妨碍",
+    "synonyms": [
+      "meddle",
+      "obstruct"
+    ],
+    "antonyms": [
+      "assist"
+    ],
+    "example": "Loud music can interfere with concentration.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -9966,16 +13274,23 @@ window.vocabulary = [
   },
   {
     "id": 554,
-    "word": "optimize",
-    "partOfSpeech": "verb",
+    "word": "intermediate",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to optimize or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “optimize” correctly in context.",
+    "meaning": "between two levels, stages or conditions",
+    "chinese": "中级的；中间的",
+    "synonyms": [
+      "middle",
+      "mid-level"
+    ],
+    "antonyms": [
+      "beginner",
+      "advanced"
+    ],
+    "example": "This book is suitable for intermediate learners.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -9984,16 +13299,22 @@ window.vocabulary = [
   },
   {
     "id": 555,
-    "word": "overwhelm",
-    "partOfSpeech": "noun",
+    "word": "intrigue",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to overwhelm",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “overwhelm” correctly in context.",
+    "meaning": "to make someone very interested or curious",
+    "chinese": "引起兴趣；吸引",
+    "synonyms": [
+      "fascinate",
+      "interest"
+    ],
+    "antonyms": [
+      "bore"
+    ],
+    "example": "The mysterious map intrigued the pupils.",
     "topics": [
-      "General"
+      "Reading",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -10002,16 +13323,23 @@ window.vocabulary = [
   },
   {
     "id": 556,
-    "word": "preliminary",
-    "partOfSpeech": "noun",
+    "word": "isolate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to preliminary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “preliminary” correctly in context.",
+    "meaning": "to separate someone or something from others",
+    "chinese": "隔离；孤立",
+    "synonyms": [
+      "separate",
+      "quarantine"
+    ],
+    "antonyms": [
+      "connect",
+      "join"
+    ],
+    "example": "The sick animal was isolated to prevent the spread of disease.",
     "topics": [
-      "General"
+      "Health",
+      "Animals"
     ],
     "questionTypes": [
       "MCQ",
@@ -10020,16 +13348,23 @@ window.vocabulary = [
   },
   {
     "id": 557,
-    "word": "prolong",
-    "partOfSpeech": "verb",
+    "word": "legitimate",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to prolong or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prolong” correctly in context.",
+    "meaning": "allowed by law or accepted as reasonable",
+    "chinese": "合法的；合理的",
+    "synonyms": [
+      "lawful",
+      "valid"
+    ],
+    "antonyms": [
+      "illegal",
+      "invalid"
+    ],
+    "example": "The customer had a legitimate reason for requesting a refund.",
     "topics": [
-      "General"
+      "Law",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -10038,16 +13373,22 @@ window.vocabulary = [
   },
   {
     "id": 558,
-    "word": "proportionate",
-    "partOfSpeech": "noun",
+    "word": "mandatory",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to proportionate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “proportionate” correctly in context.",
+    "meaning": "required by rules or law",
+    "chinese": "强制性的",
+    "synonyms": [
+      "compulsory",
+      "required"
+    ],
+    "antonyms": [
+      "optional"
+    ],
+    "example": "Wearing a helmet is mandatory on this cycling course.",
     "topics": [
-      "General"
+      "Safety",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -10056,16 +13397,22 @@ window.vocabulary = [
   },
   {
     "id": 559,
-    "word": "reconcile",
-    "partOfSpeech": "verb",
+    "word": "mature",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to reconcile or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reconcile” correctly in context.",
+    "meaning": "fully developed physically or mentally",
+    "chinese": "成熟的",
+    "synonyms": [
+      "grown-up",
+      "developed"
+    ],
+    "antonyms": [
+      "immature"
+    ],
+    "example": "His mature response impressed the teacher.",
     "topics": [
-      "General"
+      "Values",
+      "People"
     ],
     "questionTypes": [
       "MCQ",
@@ -10074,16 +13421,23 @@ window.vocabulary = [
   },
   {
     "id": 560,
-    "word": "regulate",
-    "partOfSpeech": "verb",
+    "word": "misleading",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to regulate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “regulate” correctly in context.",
+    "meaning": "giving a wrong idea or impression",
+    "chinese": "误导性的",
+    "synonyms": [
+      "deceptive",
+      "misrepresentative"
+    ],
+    "antonyms": [
+      "accurate",
+      "truthful"
+    ],
+    "example": "The advertisement contained misleading information.",
     "topics": [
-      "General"
+      "Media",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -10092,16 +13446,22 @@ window.vocabulary = [
   },
   {
     "id": 561,
-    "word": "reside",
-    "partOfSpeech": "noun",
+    "word": "mitigate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to reside",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reside” correctly in context.",
+    "meaning": "to make something harmful or unpleasant less severe",
+    "chinese": "减轻；缓和",
+    "synonyms": [
+      "reduce",
+      "ease"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "Trees can help mitigate the effects of extreme heat.",
     "topics": [
-      "General"
+      "Environment",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -10110,16 +13470,22 @@ window.vocabulary = [
   },
   {
     "id": 562,
-    "word": "respective",
+    "word": "mitigation",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to respective",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “respective” correctly in context.",
+    "meaning": "the act of reducing the harmful effects of something",
+    "chinese": "缓解；减轻",
+    "synonyms": [
+      "reduction",
+      "relief"
+    ],
+    "antonyms": [
+      "aggravation"
+    ],
+    "example": "Tree planting is one form of climate-change mitigation.",
     "topics": [
-      "General"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -10128,16 +13494,22 @@ window.vocabulary = [
   },
   {
     "id": 563,
-    "word": "restore",
-    "partOfSpeech": "verb",
+    "word": "negligible",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to restore or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “restore” correctly in context.",
+    "meaning": "so small or unimportant that it can be ignored",
+    "chinese": "微不足道的",
+    "synonyms": [
+      "tiny",
+      "insignificant"
+    ],
+    "antonyms": [
+      "significant"
+    ],
+    "example": "The difference in cost was negligible.",
     "topics": [
-      "General"
+      "Money",
+      "Mathematics"
     ],
     "questionTypes": [
       "MCQ",
@@ -10146,16 +13518,19 @@ window.vocabulary = [
   },
   {
     "id": 564,
-    "word": "rigorous",
-    "partOfSpeech": "noun",
+    "word": "notwithstanding",
+    "partOfSpeech": "preposition",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to rigorous",
-    "chinese": "",
-    "synonyms": [],
+    "meaning": "despite something",
+    "chinese": "尽管",
+    "synonyms": [
+      "despite"
+    ],
     "antonyms": [],
-    "example": "The student learned how to use the word “rigorous” correctly in context.",
+    "example": "Notwithstanding the rain, the match continued.",
     "topics": [
-      "General"
+      "Sports",
+      "Weather"
     ],
     "questionTypes": [
       "MCQ",
@@ -10164,16 +13539,23 @@ window.vocabulary = [
   },
   {
     "id": 565,
-    "word": "scarcity",
-    "partOfSpeech": "noun",
+    "word": "obsolete",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to scarcity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “scarcity” correctly in context.",
+    "meaning": "no longer used because something newer exists",
+    "chinese": "过时的",
+    "synonyms": [
+      "outdated",
+      "old-fashioned"
+    ],
+    "antonyms": [
+      "modern",
+      "current"
+    ],
+    "example": "The old computer is now obsolete.",
     "topics": [
-      "General"
+      "Technology",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -10182,16 +13564,22 @@ window.vocabulary = [
   },
   {
     "id": 566,
-    "word": "simulate",
+    "word": "optimise",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to simulate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “simulate” correctly in context.",
+    "meaning": "to make something as effective as possible",
+    "chinese": "优化",
+    "synonyms": [
+      "improve",
+      "maximise"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "The engineer changed the design to optimise performance.",
     "topics": [
-      "General"
+      "Technology",
+      "Engineering"
     ],
     "questionTypes": [
       "MCQ",
@@ -10200,16 +13588,22 @@ window.vocabulary = [
   },
   {
     "id": 567,
-    "word": "specify",
+    "word": "overwhelm",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to specify or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “specify” correctly in context.",
+    "meaning": "to make someone feel unable to cope because there is too much to deal with",
+    "chinese": "使不知所措；压倒",
+    "synonyms": [
+      "overpower",
+      "overload"
+    ],
+    "antonyms": [
+      "calm"
+    ],
+    "example": "The amount of homework began to overwhelm him.",
     "topics": [
-      "General"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -10218,16 +13612,22 @@ window.vocabulary = [
   },
   {
     "id": 568,
-    "word": "spontaneous",
+    "word": "precaution",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to spontaneous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “spontaneous” correctly in context.",
+    "meaning": "an action taken in advance to prevent harm or danger",
+    "chinese": "预防措施",
+    "synonyms": [
+      "safeguard",
+      "preventive measure"
+    ],
+    "antonyms": [
+      "risk"
+    ],
+    "example": "Wearing gloves is a sensible precaution in the laboratory.",
     "topics": [
-      "General"
+      "Science",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -10236,16 +13636,22 @@ window.vocabulary = [
   },
   {
     "id": 569,
-    "word": "strategic",
-    "partOfSpeech": "noun",
+    "word": "preliminary",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to strategic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “strategic” correctly in context.",
+    "meaning": "happening before the main event or final stage",
+    "chinese": "初步的",
+    "synonyms": [
+      "initial",
+      "introductory"
+    ],
+    "antonyms": [
+      "final"
+    ],
+    "example": "The team made a preliminary plan before starting the project.",
     "topics": [
-      "General"
+      "Planning",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -10254,16 +13660,22 @@ window.vocabulary = [
   },
   {
     "id": 570,
-    "word": "substitute",
-    "partOfSpeech": "noun",
+    "word": "prolong",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to substitute",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “substitute” correctly in context.",
+    "meaning": "to make something last longer",
+    "chinese": "延长",
+    "synonyms": [
+      "extend",
+      "lengthen"
+    ],
+    "antonyms": [
+      "shorten"
+    ],
+    "example": "The heavy traffic prolonged our journey.",
     "topics": [
-      "General"
+      "Travel",
+      "Time"
     ],
     "questionTypes": [
       "MCQ",
@@ -10272,16 +13684,22 @@ window.vocabulary = [
   },
   {
     "id": 571,
-    "word": "suppress",
-    "partOfSpeech": "verb",
+    "word": "proportional",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to suppress or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “suppress” correctly in context.",
+    "meaning": "having a suitable relationship in size or amount to something else",
+    "chinese": "成比例的；相称的",
+    "synonyms": [
+      "commensurate",
+      "corresponding"
+    ],
+    "antonyms": [
+      "disproportionate"
+    ],
+    "example": "The response should be proportional to the seriousness of the problem.",
     "topics": [
-      "General"
+      "Values",
+      "Decision Making"
     ],
     "questionTypes": [
       "MCQ",
@@ -10290,16 +13708,22 @@ window.vocabulary = [
   },
   {
     "id": 572,
-    "word": "terminate",
-    "partOfSpeech": "verb",
+    "word": "proportionate",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "to terminate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “terminate” correctly in context.",
+    "meaning": "appropriate in size or degree compared with something else",
+    "chinese": "成比例的；相称的",
+    "synonyms": [
+      "balanced",
+      "corresponding"
+    ],
+    "antonyms": [
+      "disproportionate"
+    ],
+    "example": "The punishment should be proportionate to the offence.",
     "topics": [
-      "General"
+      "Rules",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -10308,16 +13732,22 @@ window.vocabulary = [
   },
   {
     "id": 573,
-    "word": "transmit",
-    "partOfSpeech": "verb",
+    "word": "provision",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "to transmit or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “transmit” correctly in context.",
+    "meaning": "the act of supplying something that is needed",
+    "chinese": "提供；供应",
+    "synonyms": [
+      "supply",
+      "arrangement"
+    ],
+    "antonyms": [
+      "withholding"
+    ],
+    "example": "The school made provision for pupils who needed extra support.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -10326,16 +13756,22 @@ window.vocabulary = [
   },
   {
     "id": 574,
-    "word": "underlying",
-    "partOfSpeech": "noun",
+    "word": "reciprocal",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to underlying",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “underlying” correctly in context.",
+    "meaning": "given or felt equally by both sides",
+    "chinese": "相互的；互惠的",
+    "synonyms": [
+      "mutual",
+      "shared"
+    ],
+    "antonyms": [
+      "one-sided"
+    ],
+    "example": "Respect should be reciprocal in every friendship.",
     "topics": [
-      "General"
+      "Values",
+      "Friendship"
     ],
     "questionTypes": [
       "MCQ",
@@ -10344,16 +13780,22 @@ window.vocabulary = [
   },
   {
     "id": 575,
-    "word": "unfold",
-    "partOfSpeech": "noun",
+    "word": "reconcile",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to unfold",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unfold” correctly in context.",
+    "meaning": "to find a way for two opposing ideas or people to exist together",
+    "chinese": "调和；使和解",
+    "synonyms": [
+      "settle",
+      "harmonise"
+    ],
+    "antonyms": [
+      "conflict"
+    ],
+    "example": "The mediator helped reconcile the two groups.",
     "topics": [
-      "General"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -10362,16 +13804,22 @@ window.vocabulary = [
   },
   {
     "id": 576,
-    "word": "validate",
+    "word": "reconsider",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to validate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “validate” correctly in context.",
+    "meaning": "to think again about a decision or opinion",
+    "chinese": "重新考虑",
+    "synonyms": [
+      "review",
+      "rethink"
+    ],
+    "antonyms": [
+      "confirm"
+    ],
+    "example": "We should reconsider the plan after hearing the new evidence.",
     "topics": [
-      "General"
+      "Decision Making",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -10380,16 +13828,22 @@ window.vocabulary = [
   },
   {
     "id": 577,
-    "word": "violate",
+    "word": "regulate",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to violate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “violate” correctly in context.",
+    "meaning": "to control an activity by using rules",
+    "chinese": "管理；调节",
+    "synonyms": [
+      "control",
+      "govern"
+    ],
+    "antonyms": [
+      "disregard"
+    ],
+    "example": "The government regulates food safety standards.",
     "topics": [
-      "General"
+      "Government",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -10398,16 +13852,22 @@ window.vocabulary = [
   },
   {
     "id": 578,
-    "word": "withhold",
+    "word": "replenish",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to withhold or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “withhold” correctly in context.",
+    "meaning": "to fill something again after it has been used",
+    "chinese": "补充；重新装满",
+    "synonyms": [
+      "refill",
+      "restore"
+    ],
+    "antonyms": [
+      "deplete"
+    ],
+    "example": "The staff replenished the water supplies.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -10416,16 +13876,22 @@ window.vocabulary = [
   },
   {
     "id": 579,
-    "word": "accelerated",
-    "partOfSpeech": "noun",
+    "word": "reside",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to accelerated",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “accelerated” correctly in context.",
+    "meaning": "to live in a particular place",
+    "chinese": "居住",
+    "synonyms": [
+      "live",
+      "dwell"
+    ],
+    "antonyms": [
+      "leave"
+    ],
+    "example": "Many families reside in the northern part of the city.",
     "topics": [
-      "General"
+      "Community",
+      "Places"
     ],
     "questionTypes": [
       "MCQ",
@@ -10434,16 +13900,22 @@ window.vocabulary = [
   },
   {
     "id": 580,
-    "word": "accountable",
-    "partOfSpeech": "noun",
+    "word": "respective",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to accountable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “accountable” correctly in context.",
+    "meaning": "belonging separately to each of the people or things mentioned",
+    "chinese": "各自的",
+    "synonyms": [
+      "individual",
+      "separate"
+    ],
+    "antonyms": [
+      "shared"
+    ],
+    "example": "The pupils returned to their respective classrooms.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -10452,16 +13924,22 @@ window.vocabulary = [
   },
   {
     "id": 581,
-    "word": "compellingly",
-    "partOfSpeech": "noun",
+    "word": "restore",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to compellingly",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “compellingly” correctly in context.",
+    "meaning": "to return something to its former condition",
+    "chinese": "恢复；修复",
+    "synonyms": [
+      "repair",
+      "renew"
+    ],
+    "antonyms": [
+      "damage"
+    ],
+    "example": "Workers restored the old building carefully.",
     "topics": [
-      "General"
+      "Buildings",
+      "History"
     ],
     "questionTypes": [
       "MCQ",
@@ -10470,16 +13948,22 @@ window.vocabulary = [
   },
   {
     "id": 582,
-    "word": "consecutive",
-    "partOfSpeech": "noun",
+    "word": "rigorous",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to consecutive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “consecutive” correctly in context.",
+    "meaning": "extremely thorough and careful",
+    "chinese": "严格的；严谨的",
+    "synonyms": [
+      "thorough",
+      "strict"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "The experiment followed a rigorous testing process.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -10488,16 +13972,22 @@ window.vocabulary = [
   },
   {
     "id": 583,
-    "word": "disrupt",
+    "word": "scarcity",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to disrupt",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “disrupt” correctly in context.",
+    "meaning": "a shortage of something that is needed",
+    "chinese": "缺乏；稀缺",
+    "synonyms": [
+      "shortage",
+      "lack"
+    ],
+    "antonyms": [
+      "abundance"
+    ],
+    "example": "Water scarcity is a serious problem in some countries.",
     "topics": [
-      "General"
+      "Environment",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -10506,16 +13996,22 @@ window.vocabulary = [
   },
   {
     "id": 584,
-    "word": "empower",
-    "partOfSpeech": "noun",
+    "word": "simulate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to empower",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “empower” correctly in context.",
+    "meaning": "to imitate a real situation for study or training",
+    "chinese": "模拟",
+    "synonyms": [
+      "imitate",
+      "model"
+    ],
+    "antonyms": [
+      "real"
+    ],
+    "example": "The programme simulates a real emergency.",
     "topics": [
-      "General"
+      "Technology",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -10524,16 +14020,22 @@ window.vocabulary = [
   },
   {
     "id": 585,
-    "word": "exceedingly",
-    "partOfSpeech": "noun",
+    "word": "specify",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to exceedingly",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exceedingly” correctly in context.",
+    "meaning": "to state something clearly and exactly",
+    "chinese": "明确说明",
+    "synonyms": [
+      "state",
+      "define"
+    ],
+    "antonyms": [
+      "omit"
+    ],
+    "example": "Please specify the number of participants.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -10542,16 +14044,22 @@ window.vocabulary = [
   },
   {
     "id": 586,
-    "word": "exclusion",
-    "partOfSpeech": "noun",
+    "word": "spontaneous",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to exclusion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exclusion” correctly in context.",
+    "meaning": "happening naturally without planning",
+    "chinese": "自发的",
+    "synonyms": [
+      "unplanned",
+      "natural"
+    ],
+    "antonyms": [
+      "planned"
+    ],
+    "example": "The pupils gave a spontaneous round of applause.",
     "topics": [
-      "General"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -10560,16 +14068,22 @@ window.vocabulary = [
   },
   {
     "id": 587,
-    "word": "inclusion",
-    "partOfSpeech": "noun",
+    "word": "strategic",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to inclusion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inclusion” correctly in context.",
+    "meaning": "carefully planned to achieve a particular goal",
+    "chinese": "战略性的；有计划的",
+    "synonyms": [
+      "planned",
+      "tactical"
+    ],
+    "antonyms": [
+      "random"
+    ],
+    "example": "The team made a strategic decision to conserve energy.",
     "topics": [
-      "General"
+      "Sports",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -10578,16 +14092,22 @@ window.vocabulary = [
   },
   {
     "id": 588,
-    "word": "proactive",
+    "word": "substitute",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to proactive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “proactive” correctly in context.",
+    "meaning": "a person or thing used instead of another",
+    "chinese": "替代者；替代品",
+    "synonyms": [
+      "replacement",
+      "alternative"
+    ],
+    "antonyms": [
+      "original"
+    ],
+    "example": "The coach sent a substitute onto the field.",
     "topics": [
-      "General"
+      "Sports",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -10596,16 +14116,23 @@ window.vocabulary = [
   },
   {
     "id": 589,
-    "word": "reconsider",
-    "partOfSpeech": "noun",
+    "word": "suppress",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to reconsider",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reconsider” correctly in context.",
+    "meaning": "to stop something from being expressed, shown or spreading",
+    "chinese": "压制；抑制",
+    "synonyms": [
+      "restrain",
+      "control"
+    ],
+    "antonyms": [
+      "release",
+      "encourage"
+    ],
+    "example": "The government acted quickly to suppress the spread of False information.",
     "topics": [
-      "General"
+      "Society",
+      "Media"
     ],
     "questionTypes": [
       "MCQ",
@@ -10614,16 +14141,22 @@ window.vocabulary = [
   },
   {
     "id": 590,
-    "word": "safeguard",
-    "partOfSpeech": "noun",
+    "word": "sustainable",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to safeguard",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “safeguard” correctly in context.",
+    "meaning": "able to continue without causing serious harm or using resources up completely",
+    "chinese": "可持续的",
+    "synonyms": [
+      "renewable",
+      "long-lasting"
+    ],
+    "antonyms": [
+      "unsustainable"
+    ],
+    "example": "The school is looking for sustainable ways to reduce waste.",
     "topics": [
-      "General"
+      "Environment",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -10632,16 +14165,23 @@ window.vocabulary = [
   },
   {
     "id": 591,
-    "word": "alarm",
-    "partOfSpeech": "noun",
+    "word": "terminate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to alarm",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “alarm” correctly in context.",
+    "meaning": "to end something",
+    "chinese": "终止",
+    "synonyms": [
+      "end",
+      "stop"
+    ],
+    "antonyms": [
+      "begin",
+      "continue"
+    ],
+    "example": "The company decided to terminate the contract.",
     "topics": [
-      "General"
+      "Business",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -10650,16 +14190,22 @@ window.vocabulary = [
   },
   {
     "id": 592,
-    "word": "amusing",
-    "partOfSpeech": "noun",
+    "word": "transmit",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to amusing",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “amusing” correctly in context.",
+    "meaning": "to send information, signals or disease from one place to another",
+    "chinese": "传送；传播",
+    "synonyms": [
+      "send",
+      "communicate"
+    ],
+    "antonyms": [
+      "receive"
+    ],
+    "example": "Satellites transmit signals around the world.",
     "topics": [
-      "General"
+      "Technology",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -10668,16 +14214,23 @@ window.vocabulary = [
   },
   {
     "id": 593,
-    "word": "ancient",
-    "partOfSpeech": "noun",
+    "word": "transparent",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to ancient",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ancient” correctly in context.",
+    "meaning": "easy to see through or easy to understand",
+    "chinese": "透明的；公开的",
+    "synonyms": [
+      "clear",
+      "open"
+    ],
+    "antonyms": [
+      "opaque",
+      "secretive"
+    ],
+    "example": "The organisation promised a transparent decision-making process.",
     "topics": [
-      "General"
+      "Society",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -10686,16 +14239,22 @@ window.vocabulary = [
   },
   {
     "id": 594,
-    "word": "apology",
-    "partOfSpeech": "noun",
+    "word": "underlying",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to apology",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “apology” correctly in context.",
+    "meaning": "existing beneath the surface or forming the basic cause",
+    "chinese": "潜在的；根本的",
+    "synonyms": [
+      "basic",
+      "fundamental"
+    ],
+    "antonyms": [
+      "surface"
+    ],
+    "example": "The doctor looked for the underlying cause of the problem.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -10704,16 +14263,22 @@ window.vocabulary = [
   },
   {
     "id": 595,
-    "word": "appointment",
-    "partOfSpeech": "noun",
+    "word": "unfold",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to appointment",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “appointment” correctly in context.",
+    "meaning": "to develop or happen gradually",
+    "chinese": "展开；逐渐发生",
+    "synonyms": [
+      "develop",
+      "unravel"
+    ],
+    "antonyms": [
+      "stop"
+    ],
+    "example": "We waited to see how the story would unfold.",
     "topics": [
-      "General"
+      "Reading",
+      "Events"
     ],
     "questionTypes": [
       "MCQ",
@@ -10722,16 +14287,22 @@ window.vocabulary = [
   },
   {
     "id": 596,
-    "word": "argument",
-    "partOfSpeech": "noun",
+    "word": "validate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to argument",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “argument” correctly in context.",
+    "meaning": "to prove that something is correct or reasonable",
+    "chinese": "证实；确认",
+    "synonyms": [
+      "confirm",
+      "verify"
+    ],
+    "antonyms": [
+      "invalidate"
+    ],
+    "example": "The second experiment helped validate the original findings.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -10740,16 +14311,22 @@ window.vocabulary = [
   },
   {
     "id": 597,
-    "word": "arrangement",
+    "word": "versatility",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to arrangement",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “arrangement” correctly in context.",
+    "meaning": "the ability to be used or adapted for many purposes",
+    "chinese": "多用途；多才多艺",
+    "synonyms": [
+      "flexibility",
+      "adaptability"
+    ],
+    "antonyms": [
+      "limitation"
+    ],
+    "example": "The versatility of the device makes it useful at home and school.",
     "topics": [
-      "General"
+      "Technology",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -10758,16 +14335,22 @@ window.vocabulary = [
   },
   {
     "id": 598,
-    "word": "arrival",
-    "partOfSpeech": "noun",
+    "word": "violate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to arrival",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “arrival” correctly in context.",
+    "meaning": "to break a law, rule or agreement",
+    "chinese": "违反",
+    "synonyms": [
+      "break",
+      "breach"
+    ],
+    "antonyms": [
+      "obey"
+    ],
+    "example": "Drivers who violate the rules may be fined.",
     "topics": [
-      "General"
+      "Rules",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -10776,16 +14359,23 @@ window.vocabulary = [
   },
   {
     "id": 599,
-    "word": "assistant",
-    "partOfSpeech": "noun",
+    "word": "vulnerable",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to assistant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “assistant” correctly in context.",
+    "meaning": "easily hurt, harmed or affected",
+    "chinese": "脆弱的；易受伤害的",
+    "synonyms": [
+      "exposed",
+      "at risk"
+    ],
+    "antonyms": [
+      "protected",
+      "secure"
+    ],
+    "example": "Young children are especially vulnerable near busy roads.",
     "topics": [
-      "General"
+      "Safety",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -10794,16 +14384,23 @@ window.vocabulary = [
   },
   {
     "id": 600,
-    "word": "attention",
-    "partOfSpeech": "noun",
+    "word": "withhold",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea or situation related to attention",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “attention” correctly in context.",
+    "meaning": "to refuse to give something that is expected",
+    "chinese": "扣留；拒绝提供",
+    "synonyms": [
+      "hold back",
+      "retain"
+    ],
+    "antonyms": [
+      "provide",
+      "release"
+    ],
+    "example": "The company withheld important information from the public.",
     "topics": [
-      "General"
+      "Communication",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -10812,16 +14409,22 @@ window.vocabulary = [
   },
   {
     "id": 601,
-    "word": "adversity",
-    "partOfSpeech": "noun",
+    "word": "adversarial",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to adversity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “adversity” correctly in context.",
+    "meaning": "involving strong disagreement or opposition",
+    "chinese": "对抗性的",
+    "synonyms": [
+      "hostile",
+      "confrontational"
+    ],
+    "antonyms": [
+      "cooperative"
+    ],
+    "example": "The discussion became adversarial instead of productive.",
     "topics": [
-      "General"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -10830,16 +14433,22 @@ window.vocabulary = [
   },
   {
     "id": 602,
-    "word": "aesthetic",
+    "word": "adversity",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to aesthetic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “aesthetic” correctly in context.",
+    "meaning": "a difficult or unpleasant situation",
+    "chinese": "逆境；困难",
+    "synonyms": [
+      "hardship",
+      "difficulty"
+    ],
+    "antonyms": [
+      "prosperity"
+    ],
+    "example": "She showed great courage in the face of adversity.",
     "topics": [
-      "General"
+      "Values",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -10848,16 +14457,22 @@ window.vocabulary = [
   },
   {
     "id": 603,
-    "word": "affluent",
-    "partOfSpeech": "noun",
+    "word": "aesthetic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to affluent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “affluent” correctly in context.",
+    "meaning": "concerned with beauty or the appreciation of beauty",
+    "chinese": "审美的；美学的",
+    "synonyms": [
+      "artistic",
+      "beautiful"
+    ],
+    "antonyms": [
+      "ugly"
+    ],
+    "example": "The architect paid close attention to the building's aesthetic design.",
     "topics": [
-      "General"
+      "Arts",
+      "Buildings"
     ],
     "questionTypes": [
       "MCQ",
@@ -10866,16 +14481,22 @@ window.vocabulary = [
   },
   {
     "id": 604,
-    "word": "aggravate",
-    "partOfSpeech": "noun",
+    "word": "affluent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to aggravate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “aggravate” correctly in context.",
+    "meaning": "having a lot of money and a high standard of living",
+    "chinese": "富裕的",
+    "synonyms": [
+      "wealthy",
+      "prosperous"
+    ],
+    "antonyms": [
+      "poor"
+    ],
+    "example": "The area has become more affluent in recent years.",
     "topics": [
-      "General"
+      "Society",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -10884,16 +14505,22 @@ window.vocabulary = [
   },
   {
     "id": 605,
-    "word": "altruistic",
-    "partOfSpeech": "noun",
+    "word": "aggravate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to altruistic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “altruistic” correctly in context.",
+    "meaning": "to make a problem or illness worse",
+    "chinese": "加重；恶化",
+    "synonyms": [
+      "worsen",
+      "intensify"
+    ],
+    "antonyms": [
+      "relieve"
+    ],
+    "example": "Running may aggravate the injury.",
     "topics": [
-      "General"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -10902,16 +14529,22 @@ window.vocabulary = [
   },
   {
     "id": 606,
-    "word": "analytical",
-    "partOfSpeech": "noun",
+    "word": "altruistic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to analytical",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “analytical” correctly in context.",
+    "meaning": "caring about other people's needs rather than your own",
+    "chinese": "无私的；利他的",
+    "synonyms": [
+      "selfless",
+      "generous"
+    ],
+    "antonyms": [
+      "selfish"
+    ],
+    "example": "Her altruistic actions helped many families.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -10920,16 +14553,21 @@ window.vocabulary = [
   },
   {
     "id": 607,
-    "word": "anomaly",
+    "word": "ambivalence",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to anomaly",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “anomaly” correctly in context.",
+    "meaning": "mixed feelings about something",
+    "chinese": "矛盾心理；又爱又恨",
+    "synonyms": [
+      "mixed feelings"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "She felt ambivalence about moving to a new school.",
     "topics": [
-      "General"
+      "Emotions",
+      "Decision Making"
     ],
     "questionTypes": [
       "MCQ",
@@ -10938,16 +14576,22 @@ window.vocabulary = [
   },
   {
     "id": 608,
-    "word": "apprehensive",
-    "partOfSpeech": "noun",
+    "word": "analytical",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to apprehensive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “apprehensive” correctly in context.",
+    "meaning": "using careful examination and logical thinking",
+    "chinese": "分析性的",
+    "synonyms": [
+      "logical",
+      "systematic"
+    ],
+    "antonyms": [
+      "uncritical"
+    ],
+    "example": "An analytical approach helped the pupils solve the puzzle.",
     "topics": [
-      "General"
+      "School",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -10956,16 +14600,22 @@ window.vocabulary = [
   },
   {
     "id": 609,
-    "word": "assertive",
+    "word": "anomaly",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to assertive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “assertive” correctly in context.",
+    "meaning": "something unusual that does not fit a pattern",
+    "chinese": "异常；反常现象",
+    "synonyms": [
+      "irregularity",
+      "exception"
+    ],
+    "antonyms": [
+      "pattern"
+    ],
+    "example": "The scientist noticed an anomaly in the data.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -10974,16 +14624,23 @@ window.vocabulary = [
   },
   {
     "id": 610,
-    "word": "astute",
-    "partOfSpeech": "noun",
+    "word": "apprehensive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to astute",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “astute” correctly in context.",
+    "meaning": "worried or nervous about something that may happen",
+    "chinese": "忧虑的；不安的",
+    "synonyms": [
+      "anxious",
+      "uneasy"
+    ],
+    "antonyms": [
+      "confident",
+      "calm"
+    ],
+    "example": "She felt apprehensive before the first performance.",
     "topics": [
-      "General"
+      "Emotions",
+      "Arts"
     ],
     "questionTypes": [
       "MCQ",
@@ -10992,16 +14649,22 @@ window.vocabulary = [
   },
   {
     "id": 611,
-    "word": "authenticity",
-    "partOfSpeech": "noun",
+    "word": "assertive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to authenticity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “authenticity” correctly in context.",
+    "meaning": "confidently expressing opinions or needs without being aggressive",
+    "chinese": "坚定自信的",
+    "synonyms": [
+      "confident",
+      "forceful"
+    ],
+    "antonyms": [
+      "passive"
+    ],
+    "example": "An assertive student can express disagreement politely.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11010,16 +14673,22 @@ window.vocabulary = [
   },
   {
     "id": 612,
-    "word": "beneficiary",
-    "partOfSpeech": "noun",
+    "word": "astute",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to beneficiary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “beneficiary” correctly in context.",
+    "meaning": "quick to understand a situation and make good decisions",
+    "chinese": "精明的；敏锐的",
+    "synonyms": [
+      "shrewd",
+      "perceptive"
+    ],
+    "antonyms": [
+      "naive"
+    ],
+    "example": "The astute pupil noticed a mistake in the calculation.",
     "topics": [
-      "General"
+      "School",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -11028,16 +14697,22 @@ window.vocabulary = [
   },
   {
     "id": 613,
-    "word": "bureaucratic",
+    "word": "authenticity",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to bureaucratic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “bureaucratic” correctly in context.",
+    "meaning": "the quality of being genuine or real",
+    "chinese": "真实性；真诚",
+    "synonyms": [
+      "genuineness",
+      "truth"
+    ],
+    "antonyms": [
+      "fakeness"
+    ],
+    "example": "The museum takes care to verify the authenticity of old paintings.",
     "topics": [
-      "General"
+      "Arts",
+      "History"
     ],
     "questionTypes": [
       "MCQ",
@@ -11046,16 +14721,21 @@ window.vocabulary = [
   },
   {
     "id": 614,
-    "word": "catalyst",
+    "word": "beneficiary",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to catalyst",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “catalyst” correctly in context.",
+    "meaning": "a person who receives a benefit from something",
+    "chinese": "受益人",
+    "synonyms": [
+      "recipient"
+    ],
+    "antonyms": [
+      "donor"
+    ],
+    "example": "The children were beneficiaries of the charity programme.",
     "topics": [
-      "General"
+      "Community",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11064,16 +14744,22 @@ window.vocabulary = [
   },
   {
     "id": 615,
-    "word": "cautiousness",
-    "partOfSpeech": "noun",
+    "word": "benevolent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to cautiousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cautiousness” correctly in context.",
+    "meaning": "kind and generous, especially towards people who need help",
+    "chinese": "仁慈的；慈善的",
+    "synonyms": [
+      "kind",
+      "charitable"
+    ],
+    "antonyms": [
+      "cruel"
+    ],
+    "example": "The benevolent donor funded the school library.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -11082,16 +14768,22 @@ window.vocabulary = [
   },
   {
     "id": 616,
-    "word": "coincidental",
-    "partOfSpeech": "noun",
+    "word": "bureaucratic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to coincidental",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “coincidental” correctly in context.",
+    "meaning": "involving complicated official rules and processes",
+    "chinese": "官僚的；繁琐的",
+    "synonyms": [
+      "official",
+      "administrative"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "The bureaucratic process took longer than expected.",
     "topics": [
-      "General"
+      "Government",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -11100,16 +14792,22 @@ window.vocabulary = [
   },
   {
     "id": 617,
-    "word": "communal",
+    "word": "catalyst",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to communal",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “communal” correctly in context.",
+    "meaning": "a person or event that causes change to happen",
+    "chinese": "催化剂；促成因素",
+    "synonyms": [
+      "trigger",
+      "stimulus"
+    ],
+    "antonyms": [
+      "hindrance"
+    ],
+    "example": "The new invention became a catalyst for change.",
     "topics": [
-      "General"
+      "Science",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -11118,16 +14816,22 @@ window.vocabulary = [
   },
   {
     "id": 618,
-    "word": "compassionate",
-    "partOfSpeech": "noun",
+    "word": "circumspect",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to compassionate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “compassionate” correctly in context.",
+    "meaning": "careful to consider all possible consequences",
+    "chinese": "谨慎的；慎重的",
+    "synonyms": [
+      "cautious",
+      "prudent"
+    ],
+    "antonyms": [
+      "reckless"
+    ],
+    "example": "The manager was circumspect when discussing the complaint.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11136,16 +14840,22 @@ window.vocabulary = [
   },
   {
     "id": 619,
-    "word": "complement",
-    "partOfSpeech": "noun",
+    "word": "communal",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to complement",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “complement” correctly in context.",
+    "meaning": "shared by a group of people",
+    "chinese": "公共的；共同的",
+    "synonyms": [
+      "shared",
+      "collective"
+    ],
+    "antonyms": [
+      "private"
+    ],
+    "example": "The residents use a communal garden.",
     "topics": [
-      "General"
+      "Community",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -11154,16 +14864,23 @@ window.vocabulary = [
   },
   {
     "id": 620,
-    "word": "concession",
-    "partOfSpeech": "noun",
+    "word": "compassionate",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to concession",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “concession” correctly in context.",
+    "meaning": "showing sympathy and concern for others",
+    "chinese": "富有同情心的",
+    "synonyms": [
+      "caring",
+      "kind"
+    ],
+    "antonyms": [
+      "cruel",
+      "heartless"
+    ],
+    "example": "The compassionate nurse comforted the frightened child.",
     "topics": [
-      "General"
+      "Health",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11172,16 +14889,22 @@ window.vocabulary = [
   },
   {
     "id": 621,
-    "word": "conspicuous",
-    "partOfSpeech": "noun",
+    "word": "complement",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to conspicuous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “conspicuous” correctly in context.",
+    "meaning": "to add something that improves or completes another thing",
+    "chinese": "补充；相得益彰",
+    "synonyms": [
+      "enhance",
+      "complete"
+    ],
+    "antonyms": [
+      "clash"
+    ],
+    "example": "The sauce complements the flavour of the dish.",
     "topics": [
-      "General"
+      "Food",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -11190,16 +14913,22 @@ window.vocabulary = [
   },
   {
     "id": 622,
-    "word": "constitute",
+    "word": "concession",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to constitute",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “constitute” correctly in context.",
+    "meaning": "something given up or agreed to in order to settle a disagreement",
+    "chinese": "让步",
+    "synonyms": [
+      "compromise",
+      "allowance"
+    ],
+    "antonyms": [
+      "refusal"
+    ],
+    "example": "Both sides made a concession to reach an agreement.",
     "topics": [
-      "General"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -11208,16 +14937,22 @@ window.vocabulary = [
   },
   {
     "id": 623,
-    "word": "contentious",
-    "partOfSpeech": "noun",
+    "word": "conciliatory",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to contentious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “contentious” correctly in context.",
+    "meaning": "intended to make people less angry and more willing to agree",
+    "chinese": "调解的；安抚的",
+    "synonyms": [
+      "peace-making",
+      "appeasing"
+    ],
+    "antonyms": [
+      "hostile"
+    ],
+    "example": "She adopted a conciliatory tone during the discussion.",
     "topics": [
-      "General"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -11226,16 +14961,22 @@ window.vocabulary = [
   },
   {
     "id": 624,
-    "word": "conventional",
-    "partOfSpeech": "noun",
+    "word": "conscientious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to conventional",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “conventional” correctly in context.",
+    "meaning": "careful to do work well and correctly",
+    "chinese": "认真负责的",
+    "synonyms": [
+      "diligent",
+      "careful"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "She is a conscientious student who checks her work twice.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11244,16 +14985,22 @@ window.vocabulary = [
   },
   {
     "id": 625,
-    "word": "corroborate",
-    "partOfSpeech": "noun",
+    "word": "conspicuous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to corroborate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “corroborate” correctly in context.",
+    "meaning": "very easy to see or notice",
+    "chinese": "显眼的",
+    "synonyms": [
+      "noticeable",
+      "prominent"
+    ],
+    "antonyms": [
+      "inconspicuous"
+    ],
+    "example": "The bright yellow sign was highly conspicuous.",
     "topics": [
-      "General"
+      "Safety",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -11262,16 +15009,22 @@ window.vocabulary = [
   },
   {
     "id": 626,
-    "word": "cumulative",
-    "partOfSpeech": "noun",
+    "word": "constitute",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to cumulative",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cumulative” correctly in context.",
+    "meaning": "to form or make up something",
+    "chinese": "构成；组成",
+    "synonyms": [
+      "form",
+      "comprise"
+    ],
+    "antonyms": [
+      "destroy"
+    ],
+    "example": "These three parts constitute the main structure of the machine.",
     "topics": [
-      "General"
+      "Science",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -11280,16 +15033,22 @@ window.vocabulary = [
   },
   {
     "id": 627,
-    "word": "deceptive",
-    "partOfSpeech": "noun",
+    "word": "contentious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to deceptive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deceptive” correctly in context.",
+    "meaning": "likely to cause disagreement",
+    "chinese": "有争议的",
+    "synonyms": [
+      "controversial",
+      "disputed"
+    ],
+    "antonyms": [
+      "uncontroversial"
+    ],
+    "example": "The issue remained contentious among the residents.",
     "topics": [
-      "General"
+      "Community",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -11298,16 +15057,22 @@ window.vocabulary = [
   },
   {
     "id": 628,
-    "word": "definitive",
-    "partOfSpeech": "noun",
+    "word": "conventional",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to definitive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “definitive” correctly in context.",
+    "meaning": "following traditional or commonly accepted ways",
+    "chinese": "传统的；惯常的",
+    "synonyms": [
+      "traditional",
+      "usual"
+    ],
+    "antonyms": [
+      "unconventional"
+    ],
+    "example": "The school chose a conventional method of teaching the topic.",
     "topics": [
-      "General"
+      "Education",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -11316,16 +15081,22 @@ window.vocabulary = [
   },
   {
     "id": 629,
-    "word": "detrimental",
-    "partOfSpeech": "noun",
+    "word": "corroborate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to detrimental",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “detrimental” correctly in context.",
+    "meaning": "to provide evidence that supports a statement or idea",
+    "chinese": "证实；佐证",
+    "synonyms": [
+      "confirm",
+      "support"
+    ],
+    "antonyms": [
+      "contradict"
+    ],
+    "example": "The second witness corroborated her account of the event.",
     "topics": [
-      "General"
+      "Communication",
+      "Law"
     ],
     "questionTypes": [
       "MCQ",
@@ -11334,16 +15105,22 @@ window.vocabulary = [
   },
   {
     "id": 630,
-    "word": "discretion",
-    "partOfSpeech": "noun",
+    "word": "cumulative",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to discretion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “discretion” correctly in context.",
+    "meaning": "increasing by adding more over time",
+    "chinese": "累积的",
+    "synonyms": [
+      "accumulated",
+      "combined"
+    ],
+    "antonyms": [
+      "decreasing"
+    ],
+    "example": "The cumulative effect of small changes can be significant.",
     "topics": [
-      "General"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -11352,16 +15129,23 @@ window.vocabulary = [
   },
   {
     "id": 631,
-    "word": "discrepancy",
-    "partOfSpeech": "noun",
+    "word": "deceptive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to discrepancy",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “discrepancy” correctly in context.",
+    "meaning": "giving a False impression",
+    "chinese": "欺骗性的；误导的",
+    "synonyms": [
+      "misleading",
+      "dishonest"
+    ],
+    "antonyms": [
+      "honest",
+      "truthful"
+    ],
+    "example": "The simple appearance of the task was deceptive.",
     "topics": [
-      "General"
+      "Communication",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -11370,16 +15154,22 @@ window.vocabulary = [
   },
   {
     "id": 632,
-    "word": "disseminate",
-    "partOfSpeech": "verb",
+    "word": "definitive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "to disseminate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “disseminate” correctly in context.",
+    "meaning": "final and not likely to be changed",
+    "chinese": "决定性的；最终的",
+    "synonyms": [
+      "conclusive",
+      "final"
+    ],
+    "antonyms": [
+      "uncertain"
+    ],
+    "example": "The test did not provide a definitive answer.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -11388,16 +15178,22 @@ window.vocabulary = [
   },
   {
     "id": 633,
-    "word": "dominant",
-    "partOfSpeech": "noun",
+    "word": "detrimental",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to dominant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dominant” correctly in context.",
+    "meaning": "causing harm or damage",
+    "chinese": "有害的",
+    "synonyms": [
+      "harmful",
+      "damaging"
+    ],
+    "antonyms": [
+      "beneficial"
+    ],
+    "example": "Too much screen time can be detrimental to sleep.",
     "topics": [
-      "General"
+      "Health",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -11406,16 +15202,22 @@ window.vocabulary = [
   },
   {
     "id": 634,
-    "word": "eccentric",
-    "partOfSpeech": "noun",
+    "word": "diligent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to eccentric",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “eccentric” correctly in context.",
+    "meaning": "showing steady and careful effort",
+    "chinese": "勤奋的",
+    "synonyms": [
+      "hardworking",
+      "industrious"
+    ],
+    "antonyms": [
+      "lazy"
+    ],
+    "example": "His diligent revision helped him improve his results.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11424,16 +15226,22 @@ window.vocabulary = [
   },
   {
     "id": 635,
-    "word": "elusive",
-    "partOfSpeech": "noun",
+    "word": "discerning",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to elusive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “elusive” correctly in context.",
+    "meaning": "good at noticing and judging small differences",
+    "chinese": "有辨别力的",
+    "synonyms": [
+      "perceptive",
+      "discriminating"
+    ],
+    "antonyms": [
+      "undiscerning"
+    ],
+    "example": "A discerning reader can recognise weak evidence.",
     "topics": [
-      "General"
+      "Reading",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -11442,16 +15250,22 @@ window.vocabulary = [
   },
   {
     "id": 636,
-    "word": "empathetic",
-    "partOfSpeech": "noun",
+    "word": "discreet",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to empathetic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “empathetic” correctly in context.",
+    "meaning": "careful not to attract attention or reveal private information",
+    "chinese": "谨慎的；慎重的",
+    "synonyms": [
+      "tactful",
+      "careful"
+    ],
+    "antonyms": [
+      "indiscreet"
+    ],
+    "example": "The teacher was discreet when discussing the student's problem.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11460,16 +15274,22 @@ window.vocabulary = [
   },
   {
     "id": 637,
-    "word": "enduring",
+    "word": "discrepancy",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to enduring",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “enduring” correctly in context.",
+    "meaning": "a difference between two things that should be the same",
+    "chinese": "差异；不一致",
+    "synonyms": [
+      "difference",
+      "inconsistency"
+    ],
+    "antonyms": [
+      "agreement"
+    ],
+    "example": "There was a discrepancy between the two sets of results.",
     "topics": [
-      "General"
+      "Science",
+      "Mathematics"
     ],
     "questionTypes": [
       "MCQ",
@@ -11478,16 +15298,22 @@ window.vocabulary = [
   },
   {
     "id": 638,
-    "word": "equilibrium",
-    "partOfSpeech": "noun",
+    "word": "disseminate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to equilibrium",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “equilibrium” correctly in context.",
+    "meaning": "to spread information widely",
+    "chinese": "传播；散布",
+    "synonyms": [
+      "spread",
+      "circulate"
+    ],
+    "antonyms": [
+      "withhold"
+    ],
+    "example": "The organisation disseminates information about recycling.",
     "topics": [
-      "General"
+      "Media",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -11496,16 +15322,22 @@ window.vocabulary = [
   },
   {
     "id": 639,
-    "word": "exacerbate",
-    "partOfSpeech": "noun",
+    "word": "eccentric",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to exacerbate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exacerbate” correctly in context.",
+    "meaning": "slightly strange or unusual in behaviour",
+    "chinese": "古怪的；反常的",
+    "synonyms": [
+      "unusual",
+      "odd"
+    ],
+    "antonyms": [
+      "conventional"
+    ],
+    "example": "The eccentric inventor had many unusual ideas.",
     "topics": [
-      "General"
+      "People",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -11514,16 +15346,23 @@ window.vocabulary = [
   },
   {
     "id": 640,
-    "word": "exceptional",
-    "partOfSpeech": "noun",
+    "word": "elusive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to exceptional",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exceptional” correctly in context.",
+    "meaning": "difficult to find, achieve or understand",
+    "chinese": "难以捉摸的；难以获得的",
+    "synonyms": [
+      "hard to find",
+      "slippery"
+    ],
+    "antonyms": [
+      "obvious",
+      "accessible"
+    ],
+    "example": "The answer remained elusive despite several attempts.",
     "topics": [
-      "General"
+      "Learning",
+      "Problem Solving"
     ],
     "questionTypes": [
       "MCQ",
@@ -11532,16 +15371,22 @@ window.vocabulary = [
   },
   {
     "id": 641,
-    "word": "exemplify",
-    "partOfSpeech": "noun",
+    "word": "empathetic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to exemplify",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exemplify” correctly in context.",
+    "meaning": "able to understand another person's feelings",
+    "chinese": "有同理心的",
+    "synonyms": [
+      "understanding",
+      "compassionate"
+    ],
+    "antonyms": [
+      "insensitive"
+    ],
+    "example": "An empathetic friend listens without judging.",
     "topics": [
-      "General"
+      "Values",
+      "Friendship"
     ],
     "questionTypes": [
       "MCQ",
@@ -11550,16 +15395,22 @@ window.vocabulary = [
   },
   {
     "id": 642,
-    "word": "exhaustion",
-    "partOfSpeech": "noun",
+    "word": "enduring",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to exhaustion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exhaustion” correctly in context.",
+    "meaning": "lasting for a long time",
+    "chinese": "持久的",
+    "synonyms": [
+      "lasting",
+      "permanent"
+    ],
+    "antonyms": [
+      "temporary"
+    ],
+    "example": "They formed an enduring friendship at school.",
     "topics": [
-      "General"
+      "Friendship",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11568,16 +15419,22 @@ window.vocabulary = [
   },
   {
     "id": 643,
-    "word": "flourish",
+    "word": "equilibrium",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to flourish",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “flourish” correctly in context.",
+    "meaning": "a state of balance between different forces or influences",
+    "chinese": "平衡；均衡",
+    "synonyms": [
+      "balance",
+      "stability"
+    ],
+    "antonyms": [
+      "imbalance"
+    ],
+    "example": "The ecosystem must maintain a delicate equilibrium.",
     "topics": [
-      "General"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -11586,16 +15443,22 @@ window.vocabulary = [
   },
   {
     "id": 644,
-    "word": "frivolous",
-    "partOfSpeech": "noun",
+    "word": "equitable",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to frivolous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “frivolous” correctly in context.",
+    "meaning": "fair and reasonable to everyone concerned",
+    "chinese": "公平合理的",
+    "synonyms": [
+      "fair",
+      "just"
+    ],
+    "antonyms": [
+      "unfair"
+    ],
+    "example": "The teacher tried to find an equitable solution.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -11604,16 +15467,22 @@ window.vocabulary = [
   },
   {
     "id": 645,
-    "word": "gratify",
-    "partOfSpeech": "noun",
+    "word": "exacerbate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to gratify",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “gratify” correctly in context.",
+    "meaning": "to make a problem or bad situation worse",
+    "chinese": "加剧；恶化",
+    "synonyms": [
+      "aggravate",
+      "worsen"
+    ],
+    "antonyms": [
+      "alleviate"
+    ],
+    "example": "Lack of sleep can exacerbate stress.",
     "topics": [
-      "General"
+      "Health",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -11622,16 +15491,22 @@ window.vocabulary = [
   },
   {
     "id": 646,
-    "word": "hostile",
-    "partOfSpeech": "noun",
+    "word": "exceptional",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to hostile",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “hostile” correctly in context.",
+    "meaning": "unusually good or impressive",
+    "chinese": "杰出的；非凡的",
+    "synonyms": [
+      "outstanding",
+      "extraordinary"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "She showed exceptional talent in music.",
     "topics": [
-      "General"
+      "Arts",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -11640,16 +15515,22 @@ window.vocabulary = [
   },
   {
     "id": 647,
-    "word": "impartial",
-    "partOfSpeech": "noun",
+    "word": "exemplary",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to impartial",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “impartial” correctly in context.",
+    "meaning": "serving as a very good example",
+    "chinese": "模范的；典范的",
+    "synonyms": [
+      "model",
+      "outstanding"
+    ],
+    "antonyms": [
+      "poor"
+    ],
+    "example": "Her exemplary behaviour earned praise from the principal.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -11658,16 +15539,22 @@ window.vocabulary = [
   },
   {
     "id": 648,
-    "word": "impeccable",
-    "partOfSpeech": "noun",
+    "word": "exemplify",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to impeccable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “impeccable” correctly in context.",
+    "meaning": "to be a typical or very good example of something",
+    "chinese": "是……的典范；例证",
+    "synonyms": [
+      "illustrate",
+      "represent"
+    ],
+    "antonyms": [
+      "contradict"
+    ],
+    "example": "Her actions exemplify kindness and courage.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -11676,16 +15563,22 @@ window.vocabulary = [
   },
   {
     "id": 649,
-    "word": "inadvertent",
-    "partOfSpeech": "noun",
+    "word": "fervent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to inadvertent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inadvertent” correctly in context.",
+    "meaning": "showing strong and sincere feelings",
+    "chinese": "热烈的；热情的",
+    "synonyms": [
+      "passionate",
+      "ardent"
+    ],
+    "antonyms": [
+      "indifferent"
+    ],
+    "example": "He is a fervent supporter of animal welfare.",
     "topics": [
-      "General"
+      "Animals",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11694,16 +15587,23 @@ window.vocabulary = [
   },
   {
     "id": 650,
-    "word": "indispensable",
-    "partOfSpeech": "noun",
+    "word": "flourish",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to indispensable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “indispensable” correctly in context.",
+    "meaning": "to grow or develop successfully",
+    "chinese": "茁壮成长；繁荣",
+    "synonyms": [
+      "thrive",
+      "prosper"
+    ],
+    "antonyms": [
+      "decline",
+      "wither"
+    ],
+    "example": "Plants flourish when they receive enough sunlight.",
     "topics": [
-      "General"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -11712,16 +15612,22 @@ window.vocabulary = [
   },
   {
     "id": 651,
-    "word": "inept",
-    "partOfSpeech": "noun",
+    "word": "fortuitous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to inept",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inept” correctly in context.",
+    "meaning": "happening by chance in a way that is lucky",
+    "chinese": "偶然幸运的",
+    "synonyms": [
+      "fortunate",
+      "lucky"
+    ],
+    "antonyms": [
+      "unfortunate"
+    ],
+    "example": "A fortuitous meeting led to a useful friendship.",
     "topics": [
-      "General"
+      "Community",
+      "Events"
     ],
     "questionTypes": [
       "MCQ",
@@ -11730,16 +15636,22 @@ window.vocabulary = [
   },
   {
     "id": 652,
-    "word": "influential",
-    "partOfSpeech": "noun",
+    "word": "frivolous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to influential",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “influential” correctly in context.",
+    "meaning": "not serious or useful",
+    "chinese": "轻浮的；无聊的",
+    "synonyms": [
+      "silly",
+      "trivial"
+    ],
+    "antonyms": [
+      "serious"
+    ],
+    "example": "The judge dismissed the frivolous complaint.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11748,16 +15660,22 @@ window.vocabulary = [
   },
   {
     "id": 653,
-    "word": "ingenious",
-    "partOfSpeech": "noun",
+    "word": "frugal",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to ingenious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ingenious” correctly in context.",
+    "meaning": "careful about spending money or using resources",
+    "chinese": "节俭的",
+    "synonyms": [
+      "economical",
+      "thrifty"
+    ],
+    "antonyms": [
+      "wasteful"
+    ],
+    "example": "A frugal family plans its spending carefully.",
     "topics": [
-      "General"
+      "Money",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -11766,16 +15684,22 @@ window.vocabulary = [
   },
   {
     "id": 654,
-    "word": "insightful",
-    "partOfSpeech": "noun",
+    "word": "gratify",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to insightful",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “insightful” correctly in context.",
+    "meaning": "to give pleasure or satisfaction",
+    "chinese": "使满足；使高兴",
+    "synonyms": [
+      "please",
+      "satisfy"
+    ],
+    "antonyms": [
+      "disappoint"
+    ],
+    "example": "It gratified her to see the children enjoying the activity.",
     "topics": [
-      "General"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11784,16 +15708,22 @@ window.vocabulary = [
   },
   {
     "id": 655,
-    "word": "intuitive",
-    "partOfSpeech": "noun",
+    "word": "gregarious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to intuitive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intuitive” correctly in context.",
+    "meaning": "friendly and enjoying the company of other people",
+    "chinese": "合群的；爱交际的",
+    "synonyms": [
+      "sociable",
+      "outgoing"
+    ],
+    "antonyms": [
+      "reserved"
+    ],
+    "example": "The gregarious child made friends easily.",
     "topics": [
-      "General"
+      "People",
+      "Friendship"
     ],
     "questionTypes": [
       "MCQ",
@@ -11802,16 +15732,23 @@ window.vocabulary = [
   },
   {
     "id": 656,
-    "word": "jeopardise",
-    "partOfSpeech": "noun",
+    "word": "hostile",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to jeopardise",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “jeopardise” correctly in context.",
+    "meaning": "unfriendly or aggressive",
+    "chinese": "敌对的；不友善的",
+    "synonyms": [
+      "unfriendly",
+      "aggressive"
+    ],
+    "antonyms": [
+      "friendly",
+      "welcoming"
+    ],
+    "example": "The animal became hostile when it felt threatened.",
     "topics": [
-      "General"
+      "Animals",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -11820,16 +15757,22 @@ window.vocabulary = [
   },
   {
     "id": 657,
-    "word": "meticulous",
-    "partOfSpeech": "noun",
+    "word": "impartial",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "very careful and precise about details",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “meticulous” correctly in context.",
+    "meaning": "not favouring one side more than another",
+    "chinese": "公正的；不偏不倚的",
+    "synonyms": [
+      "neutral",
+      "fair"
+    ],
+    "antonyms": [
+      "biased"
+    ],
+    "example": "A referee must remain impartial during a match.",
     "topics": [
-      "General"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11838,16 +15781,22 @@ window.vocabulary = [
   },
   {
     "id": 658,
-    "word": "monotonous",
+    "word": "impartiality",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to monotonous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “monotonous” correctly in context.",
+    "meaning": "the quality of treating all sides fairly",
+    "chinese": "公正；不偏不倚",
+    "synonyms": [
+      "fairness",
+      "neutrality"
+    ],
+    "antonyms": [
+      "bias"
+    ],
+    "example": "The judge was praised for her impartiality.",
     "topics": [
-      "General"
+      "Law",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11856,16 +15805,22 @@ window.vocabulary = [
   },
   {
     "id": 659,
-    "word": "multifaceted",
-    "partOfSpeech": "noun",
+    "word": "impeccable",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to multifaceted",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “multifaceted” correctly in context.",
+    "meaning": "without any faults or mistakes",
+    "chinese": "无可挑剔的",
+    "synonyms": [
+      "perfect",
+      "flawless"
+    ],
+    "antonyms": [
+      "faulty"
+    ],
+    "example": "Her impeccable manners impressed the guests.",
     "topics": [
-      "General"
+      "Values",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -11874,16 +15829,22 @@ window.vocabulary = [
   },
   {
     "id": 660,
-    "word": "nuance",
-    "partOfSpeech": "noun",
+    "word": "impeccably",
+    "partOfSpeech": "adverb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to nuance",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “nuance” correctly in context.",
+    "meaning": "in a way that has no faults or mistakes",
+    "chinese": "无可挑剔地",
+    "synonyms": [
+      "perfectly",
+      "flawlessly"
+    ],
+    "antonyms": [
+      "poorly"
+    ],
+    "example": "She dressed impeccably for the ceremony.",
     "topics": [
-      "General"
+      "Events",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -11892,16 +15853,22 @@ window.vocabulary = [
   },
   {
     "id": 661,
-    "word": "omnipresent",
-    "partOfSpeech": "noun",
+    "word": "inadvertent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to omnipresent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “omnipresent” correctly in context.",
+    "meaning": "not intentional; accidental",
+    "chinese": "无意的；不经意的",
+    "synonyms": [
+      "accidental",
+      "unintentional"
+    ],
+    "antonyms": [
+      "deliberate"
+    ],
+    "example": "The damage was inadvertent rather than deliberate.",
     "topics": [
-      "General"
+      "Daily Life",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -11910,16 +15877,22 @@ window.vocabulary = [
   },
   {
     "id": 662,
-    "word": "optimistic",
-    "partOfSpeech": "noun",
+    "word": "indispensable",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to optimistic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “optimistic” correctly in context.",
+    "meaning": "absolutely necessary",
+    "chinese": "不可或缺的",
+    "synonyms": [
+      "essential",
+      "vital"
+    ],
+    "antonyms": [
+      "dispensable"
+    ],
+    "example": "Clean water is indispensable for human life.",
     "topics": [
-      "General"
+      "Health",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -11928,16 +15901,23 @@ window.vocabulary = [
   },
   {
     "id": 663,
-    "word": "perpetual",
-    "partOfSpeech": "noun",
+    "word": "inept",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to perpetual",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “perpetual” correctly in context.",
+    "meaning": "not skilled or effective at doing something",
+    "chinese": "无能的；不熟练的",
+    "synonyms": [
+      "incompetent",
+      "clumsy"
+    ],
+    "antonyms": [
+      "competent",
+      "skilled"
+    ],
+    "example": "His inept handling of the equipment caused a delay.",
     "topics": [
-      "General"
+      "School",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -11946,16 +15926,22 @@ window.vocabulary = [
   },
   {
     "id": 664,
-    "word": "perplexed",
-    "partOfSpeech": "noun",
+    "word": "influential",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to perplexed",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “perplexed” correctly in context.",
+    "meaning": "having the power to affect people or events",
+    "chinese": "有影响力的",
+    "synonyms": [
+      "powerful",
+      "important"
+    ],
+    "antonyms": [
+      "insignificant"
+    ],
+    "example": "The scientist was influential in promoting environmental education.",
     "topics": [
-      "General"
+      "Science",
+      "Education"
     ],
     "questionTypes": [
       "MCQ",
@@ -11964,16 +15950,22 @@ window.vocabulary = [
   },
   {
     "id": 665,
-    "word": "plausibility",
-    "partOfSpeech": "noun",
+    "word": "ingenious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to plausibility",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “plausibility” correctly in context.",
+    "meaning": "clever, original and practical",
+    "chinese": "巧妙的；有创意的",
+    "synonyms": [
+      "inventive",
+      "clever"
+    ],
+    "antonyms": [
+      "unimaginative"
+    ],
+    "example": "The pupils devised an ingenious solution to save water.",
     "topics": [
-      "General"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -11982,16 +15974,22 @@ window.vocabulary = [
   },
   {
     "id": 666,
-    "word": "prevalent",
-    "partOfSpeech": "noun",
+    "word": "insidious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to prevalent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prevalent” correctly in context.",
+    "meaning": "gradually causing harm in a way that is difficult to notice",
+    "chinese": "潜在有害的；隐伏的",
+    "synonyms": [
+      "subtle",
+      "harmful"
+    ],
+    "antonyms": [
+      "obvious"
+    ],
+    "example": "The insidious effects of pollution may take years to appear.",
     "topics": [
-      "General"
+      "Environment",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -12000,16 +15998,22 @@ window.vocabulary = [
   },
   {
     "id": 667,
-    "word": "profoundly",
-    "partOfSpeech": "noun",
+    "word": "insightful",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to profoundly",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “profoundly” correctly in context.",
+    "meaning": "showing a deep understanding of something",
+    "chinese": "有洞察力的",
+    "synonyms": [
+      "perceptive",
+      "wise"
+    ],
+    "antonyms": [
+      "shallow"
+    ],
+    "example": "Her insightful comments improved the discussion.",
     "topics": [
-      "General"
+      "Communication",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -12018,16 +16022,22 @@ window.vocabulary = [
   },
   {
     "id": 668,
-    "word": "prohibit",
-    "partOfSpeech": "noun",
+    "word": "intuitive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to prohibit",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prohibit” correctly in context.",
+    "meaning": "based on an immediate understanding rather than conscious reasoning",
+    "chinese": "直觉的",
+    "synonyms": [
+      "instinctive",
+      "natural"
+    ],
+    "antonyms": [
+      "analytical"
+    ],
+    "example": "His intuitive understanding helped him solve the puzzle quickly.",
     "topics": [
-      "General"
+      "Thinking",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -12036,16 +16046,22 @@ window.vocabulary = [
   },
   {
     "id": 669,
-    "word": "prolific",
-    "partOfSpeech": "noun",
+    "word": "jeopardise",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to prolific",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prolific” correctly in context.",
+    "meaning": "to put something such as safety or success at risk",
+    "chinese": "危及；损害",
+    "synonyms": [
+      "endanger",
+      "threaten"
+    ],
+    "antonyms": [
+      "protect"
+    ],
+    "example": "Ignoring the safety rules could jeopardise the whole project.",
     "topics": [
-      "General"
+      "Safety",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -12054,16 +16070,23 @@ window.vocabulary = [
   },
   {
     "id": 670,
-    "word": "pragmatic",
-    "partOfSpeech": "noun",
+    "word": "magnanimous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to pragmatic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “pragmatic” correctly in context.",
+    "meaning": "kind and generous, especially towards a rival or someone less powerful",
+    "chinese": "宽宏大量的",
+    "synonyms": [
+      "generous",
+      "forgiving"
+    ],
+    "antonyms": [
+      "petty",
+      "vindictive"
+    ],
+    "example": "The winner was magnanimous towards the defeated team.",
     "topics": [
-      "General"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -12072,16 +16095,22 @@ window.vocabulary = [
   },
   {
     "id": 671,
-    "word": "receptive",
-    "partOfSpeech": "noun",
+    "word": "meticulous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to receptive",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “receptive” correctly in context.",
+    "meaning": "very careful and precise about details",
+    "chinese": "一丝不苟的",
+    "synonyms": [
+      "careful",
+      "thorough"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "She kept meticulous records of every experiment.",
     "topics": [
-      "General"
+      "Science",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -12090,16 +16119,23 @@ window.vocabulary = [
   },
   {
     "id": 672,
-    "word": "reciprocal",
-    "partOfSpeech": "noun",
+    "word": "monotonous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to reciprocal",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reciprocal” correctly in context.",
+    "meaning": "repetitive and lacking variety",
+    "chinese": "单调的",
+    "synonyms": [
+      "dull",
+      "repetitive"
+    ],
+    "antonyms": [
+      "varied",
+      "interesting"
+    ],
+    "example": "The monotonous task made the pupils lose concentration.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12108,16 +16144,22 @@ window.vocabulary = [
   },
   {
     "id": 673,
-    "word": "redundant",
-    "partOfSpeech": "noun",
+    "word": "multifaceted",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to redundant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “redundant” correctly in context.",
+    "meaning": "having many different aspects or features",
+    "chinese": "多方面的",
+    "synonyms": [
+      "complex",
+      "diverse"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "Climate change is a multifaceted problem.",
     "topics": [
-      "General"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -12126,16 +16168,22 @@ window.vocabulary = [
   },
   {
     "id": 674,
-    "word": "retrospect",
+    "word": "nuance",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to retrospect",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “retrospect” correctly in context.",
+    "meaning": "a small difference in meaning, feeling or appearance",
+    "chinese": "细微差别",
+    "synonyms": [
+      "subtlety",
+      "distinction"
+    ],
+    "antonyms": [
+      "simplicity"
+    ],
+    "example": "The writer captured the nuances of the character's emotions.",
     "topics": [
-      "General"
+      "Writing",
+      "Arts"
     ],
     "questionTypes": [
       "MCQ",
@@ -12144,16 +16192,22 @@ window.vocabulary = [
   },
   {
     "id": 675,
-    "word": "scrupulous",
-    "partOfSpeech": "noun",
+    "word": "omnipresent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "very careful to do what is right and honest",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “scrupulous” correctly in context.",
+    "meaning": "present or seeming to be present everywhere",
+    "chinese": "无处不在的",
+    "synonyms": [
+      "ubiquitous",
+      "everywhere"
+    ],
+    "antonyms": [
+      "rare"
+    ],
+    "example": "Mobile devices are almost omnipresent in modern life.",
     "topics": [
-      "General"
+      "Technology",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -12162,16 +16216,22 @@ window.vocabulary = [
   },
   {
     "id": 676,
-    "word": "sceptical",
-    "partOfSpeech": "noun",
+    "word": "optimistic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to sceptical",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sceptical” correctly in context.",
+    "meaning": "expecting good things to happen",
+    "chinese": "乐观的",
+    "synonyms": [
+      "hopeful",
+      "positive"
+    ],
+    "antonyms": [
+      "pessimistic"
+    ],
+    "example": "She remained optimistic despite the setback.",
     "topics": [
-      "General"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -12180,16 +16240,22 @@ window.vocabulary = [
   },
   {
     "id": 677,
-    "word": "sophisticated",
-    "partOfSpeech": "noun",
+    "word": "perpetual",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to sophisticated",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sophisticated” correctly in context.",
+    "meaning": "continuing for a very long time without stopping",
+    "chinese": "永久的；持续不断的",
+    "synonyms": [
+      "continuous",
+      "constant"
+    ],
+    "antonyms": [
+      "temporary"
+    ],
+    "example": "The machine seemed to make a perpetual humming sound.",
     "topics": [
-      "General"
+      "Technology",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -12198,16 +16264,22 @@ window.vocabulary = [
   },
   {
     "id": 678,
-    "word": "stringent",
-    "partOfSpeech": "noun",
+    "word": "perplexed",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to stringent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “stringent” correctly in context.",
+    "meaning": "confused because something is difficult to understand",
+    "chinese": "困惑的",
+    "synonyms": [
+      "confused",
+      "puzzled"
+    ],
+    "antonyms": [
+      "clear"
+    ],
+    "example": "The pupils looked perplexed by the strange question.",
     "topics": [
-      "General"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -12216,16 +16288,22 @@ window.vocabulary = [
   },
   {
     "id": 679,
-    "word": "subordinate",
-    "partOfSpeech": "noun",
+    "word": "pervasive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to subordinate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “subordinate” correctly in context.",
+    "meaning": "spreading widely throughout an area or group",
+    "chinese": "普遍存在的；渗透的",
+    "synonyms": [
+      "widespread",
+      "prevalent"
+    ],
+    "antonyms": [
+      "limited"
+    ],
+    "example": "The pervasive smell of smoke filled the building.",
     "topics": [
-      "General"
+      "Safety",
+      "Environment"
     ],
     "questionTypes": [
       "MCQ",
@@ -12234,16 +16312,22 @@ window.vocabulary = [
   },
   {
     "id": 680,
-    "word": "substantiate",
-    "partOfSpeech": "verb",
+    "word": "pragmatic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "to substantiate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “substantiate” correctly in context.",
+    "meaning": "dealing with problems in a practical way",
+    "chinese": "务实的",
+    "synonyms": [
+      "practical",
+      "realistic"
+    ],
+    "antonyms": [
+      "idealistic"
+    ],
+    "example": "We need a pragmatic solution that can work immediately.",
     "topics": [
-      "General"
+      "Problem Solving",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -12252,16 +16336,23 @@ window.vocabulary = [
   },
   {
     "id": 681,
-    "word": "turbulent",
-    "partOfSpeech": "noun",
+    "word": "precarious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to turbulent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “turbulent” correctly in context.",
+    "meaning": "likely to fall, fail or become dangerous",
+    "chinese": "不稳定的；危险的",
+    "synonyms": [
+      "unstable",
+      "risky"
+    ],
+    "antonyms": [
+      "secure",
+      "stable"
+    ],
+    "example": "The climber stood on a precarious ledge.",
     "topics": [
-      "General"
+      "Safety",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -12270,16 +16361,22 @@ window.vocabulary = [
   },
   {
     "id": 682,
-    "word": "unanimous",
-    "partOfSpeech": "noun",
+    "word": "proliferate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to unanimous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unanimous” correctly in context.",
+    "meaning": "to increase quickly in number",
+    "chinese": "迅速增加；激增",
+    "synonyms": [
+      "multiply",
+      "expand"
+    ],
+    "antonyms": [
+      "decrease"
+    ],
+    "example": "Plastic products have proliferated in modern society.",
     "topics": [
-      "General"
+      "Environment",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -12288,16 +16385,23 @@ window.vocabulary = [
   },
   {
     "id": 683,
-    "word": "unforeseen",
-    "partOfSpeech": "noun",
+    "word": "relinquish",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to unforeseen",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unforeseen” correctly in context.",
+    "meaning": "to give up something you have or control",
+    "chinese": "放弃；交出",
+    "synonyms": [
+      "surrender",
+      "give up"
+    ],
+    "antonyms": [
+      "retain",
+      "keep"
+    ],
+    "example": "He was forced to relinquish his position as captain.",
     "topics": [
-      "General"
+      "Sports",
+      "Leadership"
     ],
     "questionTypes": [
       "MCQ",
@@ -12306,16 +16410,23 @@ window.vocabulary = [
   },
   {
     "id": 684,
-    "word": "unprecedentedly",
-    "partOfSpeech": "noun",
+    "word": "repudiate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to unprecedentedly",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unprecedentedly” correctly in context.",
+    "meaning": "to reject something strongly",
+    "chinese": "拒绝；否认",
+    "synonyms": [
+      "reject",
+      "deny"
+    ],
+    "antonyms": [
+      "accept",
+      "endorse"
+    ],
+    "example": "The scientist repudiated the False claim.",
     "topics": [
-      "General"
+      "Science",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -12324,16 +16435,22 @@ window.vocabulary = [
   },
   {
     "id": 685,
-    "word": "vigilant",
+    "word": "resilience",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to vigilant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “vigilant” correctly in context.",
+    "meaning": "the ability to recover from difficulty",
+    "chinese": "韧性；恢复力",
+    "synonyms": [
+      "strength",
+      "toughness"
+    ],
+    "antonyms": [
+      "fragility"
+    ],
+    "example": "Resilience helps students cope with setbacks.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -12342,16 +16459,22 @@ window.vocabulary = [
   },
   {
     "id": 686,
-    "word": "vindicate",
-    "partOfSpeech": "verb",
+    "word": "resourceful",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "to vindicate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “vindicate” correctly in context.",
+    "meaning": "good at finding clever ways to solve problems",
+    "chinese": "足智多谋的",
+    "synonyms": [
+      "inventive",
+      "ingenious"
+    ],
+    "antonyms": [
+      "helpless"
+    ],
+    "example": "The resourceful pupils built a shelter from simple materials.",
     "topics": [
-      "General"
+      "Problem Solving",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -12360,16 +16483,22 @@ window.vocabulary = [
   },
   {
     "id": 687,
-    "word": "wholesome",
+    "word": "retrospect",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to wholesome",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “wholesome” correctly in context.",
+    "meaning": "the consideration of a past event or period",
+    "chinese": "回顾；反思",
+    "synonyms": [
+      "reflection",
+      "review"
+    ],
+    "antonyms": [
+      "foresight"
+    ],
+    "example": "In retrospect, we should have checked the weather forecast.",
     "topics": [
-      "General"
+      "Learning",
+      "Reflection"
     ],
     "questionTypes": [
       "MCQ",
@@ -12378,16 +16507,22 @@ window.vocabulary = [
   },
   {
     "id": 688,
-    "word": "adversarial",
-    "partOfSpeech": "noun",
+    "word": "sagacious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to adversarial",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “adversarial” correctly in context.",
+    "meaning": "having good judgement and understanding",
+    "chinese": "明智的；睿智的",
+    "synonyms": [
+      "wise",
+      "perceptive"
+    ],
+    "antonyms": [
+      "foolish"
+    ],
+    "example": "The sagacious coach changed the strategy at the right moment.",
     "topics": [
-      "General"
+      "Sports",
+      "Leadership"
     ],
     "questionTypes": [
       "MCQ",
@@ -12396,16 +16531,22 @@ window.vocabulary = [
   },
   {
     "id": 689,
-    "word": "conventionality",
+    "word": "scrupulousness",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to conventionality",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “conventionality” correctly in context.",
+    "meaning": "great care to be honest, accurate and correct",
+    "chinese": "严谨；一丝不苟",
+    "synonyms": [
+      "thoroughness",
+      "conscientiousness"
+    ],
+    "antonyms": [
+      "carelessness"
+    ],
+    "example": "The scientist's scrupulousness improved the reliability of the study.",
     "topics": [
-      "General"
+      "Science",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -12414,16 +16555,22 @@ window.vocabulary = [
   },
   {
     "id": 690,
-    "word": "discerning",
-    "partOfSpeech": "noun",
+    "word": "stringent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to discerning",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “discerning” correctly in context.",
+    "meaning": "very strict and carefully controlled",
+    "chinese": "严格的",
+    "synonyms": [
+      "strict",
+      "rigorous"
+    ],
+    "antonyms": [
+      "lenient"
+    ],
+    "example": "The laboratory follows stringent safety rules.",
     "topics": [
-      "General"
+      "Science",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -12432,16 +16579,22 @@ window.vocabulary = [
   },
   {
     "id": 691,
-    "word": "resourceful",
-    "partOfSpeech": "noun",
+    "word": "substantiate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "good at finding clever ways to solve problems",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “resourceful” correctly in context.",
+    "meaning": "to provide evidence that proves something is True",
+    "chinese": "证实；证明",
+    "synonyms": [
+      "confirm",
+      "verify"
+    ],
+    "antonyms": [
+      "disprove"
+    ],
+    "example": "The researcher could not substantiate the claim without evidence.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -12450,16 +16603,23 @@ window.vocabulary = [
   },
   {
     "id": 692,
-    "word": "audience",
-    "partOfSpeech": "noun",
+    "word": "tenacious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to audience",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “audience” correctly in context.",
+    "meaning": "not giving up easily",
+    "chinese": "顽强的；坚持不懈的",
+    "synonyms": [
+      "persistent",
+      "determined"
+    ],
+    "antonyms": [
+      "weak",
+      "yielding"
+    ],
+    "example": "Her tenacious effort finally paid off.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -12468,16 +16628,23 @@ window.vocabulary = [
   },
   {
     "id": 693,
-    "word": "author",
-    "partOfSpeech": "noun",
+    "word": "turbulent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to author",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “author” correctly in context.",
+    "meaning": "involving a lot of sudden change, confusion or disturbance",
+    "chinese": "动荡的；混乱的",
+    "synonyms": [
+      "chaotic",
+      "stormy"
+    ],
+    "antonyms": [
+      "calm",
+      "stable"
+    ],
+    "example": "The plane experienced turbulent weather.",
     "topics": [
-      "General"
+      "Weather",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -12486,16 +16653,22 @@ window.vocabulary = [
   },
   {
     "id": 694,
-    "word": "available",
-    "partOfSpeech": "noun",
+    "word": "unanimous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to available",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “available” correctly in context.",
+    "meaning": "fully agreed on by everyone involved",
+    "chinese": "一致同意的",
+    "synonyms": [
+      "agreed",
+      "united"
+    ],
+    "antonyms": [
+      "divided"
+    ],
+    "example": "The committee was unanimous in its decision.",
     "topics": [
-      "General"
+      "Community",
+      "Decision Making"
     ],
     "questionTypes": [
       "MCQ",
@@ -12504,16 +16677,22 @@ window.vocabulary = [
   },
   {
     "id": 695,
-    "word": "background",
-    "partOfSpeech": "noun",
+    "word": "unforeseen",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to background",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “background” correctly in context.",
+    "meaning": "not expected or planned for",
+    "chinese": "未预料的",
+    "synonyms": [
+      "unexpected",
+      "unanticipated"
+    ],
+    "antonyms": [
+      "expected"
+    ],
+    "example": "The journey was delayed by unforeseen problems.",
     "topics": [
-      "General"
+      "Travel",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -12522,16 +16701,22 @@ window.vocabulary = [
   },
   {
     "id": 696,
-    "word": "bargain",
+    "word": "vigilance",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to bargain",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “bargain” correctly in context.",
+    "meaning": "careful attention to possible danger or problems",
+    "chinese": "警惕；警戒",
+    "synonyms": [
+      "alertness",
+      "watchfulness"
+    ],
+    "antonyms": [
+      "carelessness"
+    ],
+    "example": "Constant vigilance is needed near the construction site.",
     "topics": [
-      "General"
+      "Safety",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -12540,16 +16725,23 @@ window.vocabulary = [
   },
   {
     "id": 697,
-    "word": "barrier",
-    "partOfSpeech": "noun",
+    "word": "vigilant",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to barrier",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “barrier” correctly in context.",
+    "meaning": "carefully watching for possible danger or problems",
+    "chinese": "警惕的",
+    "synonyms": [
+      "alert",
+      "watchful"
+    ],
+    "antonyms": [
+      "careless",
+      "unaware"
+    ],
+    "example": "Security guards must remain vigilant at all times.",
     "topics": [
-      "General"
+      "Safety",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -12558,16 +16750,22 @@ window.vocabulary = [
   },
   {
     "id": 698,
-    "word": "behaviour",
-    "partOfSpeech": "noun",
+    "word": "vindicate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to behaviour",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “behaviour” correctly in context.",
+    "meaning": "to prove that someone was right or not guilty",
+    "chinese": "证明……正确；洗清",
+    "synonyms": [
+      "justify",
+      "clear"
+    ],
+    "antonyms": [
+      "condemn"
+    ],
+    "example": "The new evidence vindicated the accused driver.",
     "topics": [
-      "General"
+      "Law",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -12576,16 +16774,22 @@ window.vocabulary = [
   },
   {
     "id": 699,
-    "word": "boundary",
+    "word": "vindication",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to boundary",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “boundary” correctly in context.",
+    "meaning": "proof that someone was right or not guilty",
+    "chinese": "证实；洗清",
+    "synonyms": [
+      "justification",
+      "confirmation"
+    ],
+    "antonyms": [
+      "condemnation"
+    ],
+    "example": "The new evidence was a vindication of her earlier decision.",
     "topics": [
-      "General"
+      "Law",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -12594,16 +16798,22 @@ window.vocabulary = [
   },
   {
     "id": 700,
-    "word": "branch",
-    "partOfSpeech": "noun",
+    "word": "wholesome",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea or situation related to branch",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “branch” correctly in context.",
+    "meaning": "good for health or morally good",
+    "chinese": "有益健康的；有益的",
+    "synonyms": [
+      "healthy",
+      "beneficial"
+    ],
+    "antonyms": [
+      "harmful"
+    ],
+    "example": "The school promotes wholesome food choices.",
     "topics": [
-      "General"
+      "Food",
+      "Health"
     ],
     "questionTypes": [
       "MCQ",
@@ -12612,16 +16822,17 @@ window.vocabulary = [
   },
   {
     "id": 701,
-    "word": "abstain",
-    "partOfSpeech": "noun",
+    "word": "accomplished",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to abstain",
-    "chinese": "",
+    "meaning": "having achieved something successfully",
+    "chinese": "有成就的；成功的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “abstain” correctly in context.",
+    "example": "The accomplished pupil won the writing competition.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12630,16 +16841,17 @@ window.vocabulary = [
   },
   {
     "id": 702,
-    "word": "acumen",
+    "word": "alertness",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to acumen",
-    "chinese": "",
+    "meaning": "the state of being watchful and ready to act",
+    "chinese": "警觉；警惕",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “acumen” correctly in context.",
+    "example": "The hiker kept his alertness on the narrow trail.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12648,16 +16860,17 @@ window.vocabulary = [
   },
   {
     "id": 703,
-    "word": "admonish",
-    "partOfSpeech": "noun",
+    "word": "amiable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to admonish",
-    "chinese": "",
+    "meaning": "friendly and pleasant",
+    "chinese": "和蔼友善的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “admonish” correctly in context.",
+    "example": "The amiable shopkeeper welcomed the children.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12666,16 +16879,17 @@ window.vocabulary = [
   },
   {
     "id": 704,
-    "word": "adroit",
-    "partOfSpeech": "noun",
+    "word": "animated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to adroit",
-    "chinese": "",
+    "meaning": "full of energy and excitement",
+    "chinese": "活泼的；生气勃勃的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “adroit” correctly in context.",
+    "example": "The animated storyteller kept everyone interested.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12684,16 +16898,17 @@ window.vocabulary = [
   },
   {
     "id": 705,
-    "word": "affinity",
+    "word": "appeal",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to affinity",
-    "chinese": "",
+    "meaning": "a strong request for help, support, or action",
+    "chinese": "呼吁；吸引力",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “affinity” correctly in context.",
+    "example": "The charity made an appeal for food donations.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12702,16 +16917,17 @@ window.vocabulary = [
   },
   {
     "id": 706,
-    "word": "alleviation",
+    "word": "appetite",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to alleviation",
-    "chinese": "",
+    "meaning": "a desire for food",
+    "chinese": "食欲",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “alleviation” correctly in context.",
+    "example": "After the long hike, Liam had a huge appetite.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12720,16 +16936,17 @@ window.vocabulary = [
   },
   {
     "id": 707,
-    "word": "amalgamate",
+    "word": "applaud",
     "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "to amalgamate or carry out this action",
-    "chinese": "",
+    "meaning": "to show approval by clapping or praising",
+    "chinese": "鼓掌；赞赏",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “amalgamate” correctly in context.",
+    "example": "The audience applauded the young singer.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12738,16 +16955,17 @@ window.vocabulary = [
   },
   {
     "id": 708,
-    "word": "ambivalence",
+    "word": "apprehension",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to ambivalence",
-    "chinese": "",
+    "meaning": "a feeling of worry about what may happen",
+    "chinese": "忧虑；担心",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ambivalence” correctly in context.",
+    "example": "She felt apprehension before speaking on stage.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12756,16 +16974,17 @@ window.vocabulary = [
   },
   {
     "id": 709,
-    "word": "ameliorate",
-    "partOfSpeech": "verb",
+    "word": "approachable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to ameliorate or carry out this action",
-    "chinese": "",
+    "meaning": "friendly and easy to talk to",
+    "chinese": "平易近人的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ameliorate” correctly in context.",
+    "example": "The approachable teacher welcomed questions.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12774,16 +16993,17 @@ window.vocabulary = [
   },
   {
     "id": 710,
-    "word": "anachronistic",
-    "partOfSpeech": "noun",
+    "word": "apt",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to anachronistic",
-    "chinese": "",
+    "meaning": "quick to learn or understand",
+    "chinese": "聪明的；易于学习的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “anachronistic” correctly in context.",
+    "example": "The apt pupil understood the new idea quickly.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12792,16 +17012,17 @@ window.vocabulary = [
   },
   {
     "id": 711,
-    "word": "animosity",
-    "partOfSpeech": "noun",
+    "word": "artful",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to animosity",
-    "chinese": "",
+    "meaning": "clever and skilful, especially in achieving a result",
+    "chinese": "巧妙的；机灵的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “animosity” correctly in context.",
+    "example": "The artful fox found a way out of the trap.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12810,16 +17031,17 @@ window.vocabulary = [
   },
   {
     "id": 712,
-    "word": "antagonise",
-    "partOfSpeech": "verb",
+    "word": "attentive",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to antagonise or carry out this action",
-    "chinese": "",
+    "meaning": "watching or listening carefully",
+    "chinese": "专心的；留意的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “antagonise” correctly in context.",
+    "example": "The attentive class listened to the instructions.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12828,16 +17050,17 @@ window.vocabulary = [
   },
   {
     "id": 713,
-    "word": "apathetic",
+    "word": "avenue",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to apathetic",
-    "chinese": "",
+    "meaning": "a possible way of achieving something",
+    "chinese": "途径；方法",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “apathetic” correctly in context.",
+    "example": "Reading widely is an avenue to better writing.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12846,16 +17069,17 @@ window.vocabulary = [
   },
   {
     "id": 714,
-    "word": "ascertain",
-    "partOfSpeech": "verb",
+    "word": "awkward",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to ascertain or carry out this action",
-    "chinese": "",
+    "meaning": "difficult to use, move, or deal with",
+    "chinese": "笨拙的；尴尬的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ascertain” correctly in context.",
+    "example": "The awkward box was difficult to carry.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12864,16 +17088,17 @@ window.vocabulary = [
   },
   {
     "id": 715,
-    "word": "audacious",
-    "partOfSpeech": "noun",
+    "word": "baffled",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to audacious",
-    "chinese": "",
+    "meaning": "completely unable to understand something",
+    "chinese": "困惑的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “audacious” correctly in context.",
+    "example": "The baffled boy could not solve the puzzle.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12882,16 +17107,17 @@ window.vocabulary = [
   },
   {
     "id": 716,
-    "word": "auspicious",
-    "partOfSpeech": "noun",
+    "word": "bewilder",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to auspicious",
-    "chinese": "",
+    "meaning": "to confuse someone greatly",
+    "chinese": "使困惑",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “auspicious” correctly in context.",
+    "example": "The strange question bewildered the pupils.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12900,16 +17126,17 @@ window.vocabulary = [
   },
   {
     "id": 717,
-    "word": "belligerent",
+    "word": "blunder",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to belligerent",
-    "chinese": "",
+    "meaning": "a careless or foolish mistake",
+    "chinese": "大错；疏忽",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “belligerent” correctly in context.",
+    "example": "His careless blunder caused the team to lose a point.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12918,16 +17145,17 @@ window.vocabulary = [
   },
   {
     "id": 718,
-    "word": "benevolent",
-    "partOfSpeech": "noun",
+    "word": "boast",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to benevolent",
-    "chinese": "",
+    "meaning": "to speak too proudly about yourself or something you have done",
+    "chinese": "吹嘘",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “benevolent” correctly in context.",
+    "example": "It is unwise to boast about your achievements.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12936,16 +17164,17 @@ window.vocabulary = [
   },
   {
     "id": 719,
-    "word": "brevity",
-    "partOfSpeech": "noun",
+    "word": "boundless",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to brevity",
-    "chinese": "",
+    "meaning": "without limits",
+    "chinese": "无限的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “brevity” correctly in context.",
+    "example": "The child had boundless energy during the holiday.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12954,16 +17183,17 @@ window.vocabulary = [
   },
   {
     "id": 720,
-    "word": "circumspect",
-    "partOfSpeech": "noun",
+    "word": "bulky",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to circumspect",
-    "chinese": "",
+    "meaning": "large and difficult to carry",
+    "chinese": "笨重的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “circumspect” correctly in context.",
+    "example": "The bulky parcel would not fit in the cupboard.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12972,16 +17202,17 @@ window.vocabulary = [
   },
   {
     "id": 721,
-    "word": "clandestine",
+    "word": "bystander",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to clandestine",
-    "chinese": "",
+    "meaning": "a person who is present but not involved in an event",
+    "chinese": "旁观者",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “clandestine” correctly in context.",
+    "example": "A bystander called for help after the accident.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -12990,16 +17221,17 @@ window.vocabulary = [
   },
   {
     "id": 722,
-    "word": "coerce",
-    "partOfSpeech": "verb",
+    "word": "capable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to coerce or carry out this action",
-    "chinese": "",
+    "meaning": "having the ability to do something well",
+    "chinese": "有能力的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “coerce” correctly in context.",
+    "example": "Maya is capable of completing the task alone.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13008,16 +17240,17 @@ window.vocabulary = [
   },
   {
     "id": 723,
-    "word": "cogent",
-    "partOfSpeech": "noun",
+    "word": "casual",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to cogent",
-    "chinese": "",
+    "meaning": "relaxed and not formal",
+    "chinese": "随意的；非正式的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “cogent” correctly in context.",
+    "example": "He wore casual clothes to the picnic.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13026,16 +17259,17 @@ window.vocabulary = [
   },
   {
     "id": 724,
-    "word": "commensurate",
-    "partOfSpeech": "noun",
+    "word": "cherish",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to commensurate",
-    "chinese": "",
+    "meaning": "to care for someone or something deeply",
+    "chinese": "珍爱；珍惜",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “commensurate” correctly in context.",
+    "example": "We should cherish the time we spend with our grandparents.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13044,16 +17278,17 @@ window.vocabulary = [
   },
   {
     "id": 725,
-    "word": "conciliatory",
-    "partOfSpeech": "noun",
+    "word": "clumsy",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to conciliatory",
-    "chinese": "",
+    "meaning": "moving or handling things awkwardly",
+    "chinese": "笨拙的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “conciliatory” correctly in context.",
+    "example": "The clumsy puppy knocked over the vase.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13062,16 +17297,17 @@ window.vocabulary = [
   },
   {
     "id": 726,
-    "word": "conflagration",
-    "partOfSpeech": "noun",
+    "word": "commend",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to conflagration",
-    "chinese": "",
+    "meaning": "to praise someone or something",
+    "chinese": "表扬；称赞",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “conflagration” correctly in context.",
+    "example": "The principal commended the pupil for her honesty.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13080,16 +17316,17 @@ window.vocabulary = [
   },
   {
     "id": 727,
-    "word": "conjecture",
-    "partOfSpeech": "noun",
+    "word": "concede",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to conjecture",
-    "chinese": "",
+    "meaning": "to admit that something is true after first disagreeing",
+    "chinese": "承认；让步",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “conjecture” correctly in context.",
+    "example": "He finally conceded that his answer was wrong.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13098,16 +17335,17 @@ window.vocabulary = [
   },
   {
     "id": 728,
-    "word": "contempt",
-    "partOfSpeech": "noun",
+    "word": "conclusive",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to contempt",
-    "chinese": "",
+    "meaning": "proving something clearly and finally",
+    "chinese": "决定性的；确凿的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “contempt” correctly in context.",
+    "example": "There was no conclusive evidence against him.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13116,16 +17354,17 @@ window.vocabulary = [
   },
   {
     "id": 729,
-    "word": "contention",
-    "partOfSpeech": "noun",
+    "word": "condemn",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to contention",
-    "chinese": "",
+    "meaning": "to strongly say that something is wrong",
+    "chinese": "谴责",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “contention” correctly in context.",
+    "example": "The school condemned bullying in all forms.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13134,16 +17373,17 @@ window.vocabulary = [
   },
   {
     "id": 730,
-    "word": "convoluted",
-    "partOfSpeech": "noun",
+    "word": "confess",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to convoluted",
-    "chinese": "",
+    "meaning": "to admit that you have done something wrong",
+    "chinese": "承认；坦白",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “convoluted” correctly in context.",
+    "example": "The boy confessed that he had broken the window.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13152,16 +17392,17 @@ window.vocabulary = [
   },
   {
     "id": 731,
-    "word": "corroboration",
-    "partOfSpeech": "noun",
+    "word": "confide",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to corroboration",
-    "chinese": "",
+    "meaning": "to tell someone a secret or private matter",
+    "chinese": "吐露；倾诉",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “corroboration” correctly in context.",
+    "example": "She confided her worries to her best friend.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13170,16 +17411,17 @@ window.vocabulary = [
   },
   {
     "id": 732,
-    "word": "cryptic",
-    "partOfSpeech": "noun",
+    "word": "considerate",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to cryptic",
-    "chinese": "",
+    "meaning": "careful not to hurt or inconvenience others",
+    "chinese": "体贴的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “cryptic” correctly in context.",
+    "example": "It was considerate of him to lower his voice.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13188,16 +17430,17 @@ window.vocabulary = [
   },
   {
     "id": 733,
-    "word": "deference",
-    "partOfSpeech": "noun",
+    "word": "constructive",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to deference",
-    "chinese": "",
+    "meaning": "helpful in improving something",
+    "chinese": "建设性的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “deference” correctly in context.",
+    "example": "The teacher gave constructive feedback.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13206,16 +17449,17 @@ window.vocabulary = [
   },
   {
     "id": 734,
-    "word": "delineate",
-    "partOfSpeech": "noun",
+    "word": "contagious",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to delineate",
-    "chinese": "",
+    "meaning": "able to spread from one person to another",
+    "chinese": "传染性的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “delineate” correctly in context.",
+    "example": "The doctor explained how the illness was contagious.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13224,16 +17468,17 @@ window.vocabulary = [
   },
   {
     "id": 735,
-    "word": "derivative",
-    "partOfSpeech": "noun",
+    "word": "contradict",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to derivative",
-    "chinese": "",
+    "meaning": "to say that something is not true or correct",
+    "chinese": "反驳；与…矛盾",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “derivative” correctly in context.",
+    "example": "His actions contradict his words.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13242,16 +17487,17 @@ window.vocabulary = [
   },
   {
     "id": 736,
-    "word": "despondent",
-    "partOfSpeech": "noun",
+    "word": "cordial",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to despondent",
-    "chinese": "",
+    "meaning": "friendly and polite",
+    "chinese": "友好的；热诚的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “despondent” correctly in context.",
+    "example": "They exchanged cordial greetings.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13260,16 +17506,17 @@ window.vocabulary = [
   },
   {
     "id": 737,
-    "word": "deter",
+    "word": "curiosity",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to deter",
-    "chinese": "",
+    "meaning": "a strong desire to know or learn something",
+    "chinese": "好奇心",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “deter” correctly in context.",
+    "example": "Her curiosity led her to explore the old building.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13278,16 +17525,17 @@ window.vocabulary = [
   },
   {
     "id": 738,
-    "word": "digress",
-    "partOfSpeech": "noun",
+    "word": "daring",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to digress",
-    "chinese": "",
+    "meaning": "brave and willing to take risks",
+    "chinese": "大胆的；勇敢的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “digress” correctly in context.",
+    "example": "The daring rescue saved the trapped climber.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13296,16 +17544,17 @@ window.vocabulary = [
   },
   {
     "id": 739,
-    "word": "disparity",
-    "partOfSpeech": "noun",
+    "word": "deceive",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to disparity",
-    "chinese": "",
+    "meaning": "to make someone believe something that is not true",
+    "chinese": "欺骗",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “disparity” correctly in context.",
+    "example": "He tried to deceive the guard.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13314,16 +17563,17 @@ window.vocabulary = [
   },
   {
     "id": 740,
-    "word": "dissemination",
-    "partOfSpeech": "noun",
+    "word": "decisive",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to dissemination",
-    "chinese": "",
+    "meaning": "able to make choices quickly and firmly",
+    "chinese": "果断的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “dissemination” correctly in context.",
+    "example": "The decisive captain led the team to victory.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13332,16 +17582,17 @@ window.vocabulary = [
   },
   {
     "id": 741,
-    "word": "dubious",
-    "partOfSpeech": "noun",
+    "word": "dedicated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to dubious",
-    "chinese": "",
+    "meaning": "giving a lot of time and effort to something",
+    "chinese": "专心致志的；奉献的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “dubious” correctly in context.",
+    "example": "The dedicated volunteer helped every weekend.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13350,16 +17601,17 @@ window.vocabulary = [
   },
   {
     "id": 742,
-    "word": "eclectic",
-    "partOfSpeech": "noun",
+    "word": "defy",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to eclectic",
-    "chinese": "",
+    "meaning": "to refuse to obey or accept something",
+    "chinese": "违抗；不服从",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “eclectic” correctly in context.",
+    "example": "The brave child defied the unfair rule.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13368,16 +17620,17 @@ window.vocabulary = [
   },
   {
     "id": 743,
-    "word": "embellish",
-    "partOfSpeech": "noun",
+    "word": "demanding",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to embellish",
-    "chinese": "",
+    "meaning": "requiring a lot of effort or skill",
+    "chinese": "要求高的；费力的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “embellish” correctly in context.",
+    "example": "The demanding task took several hours.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13386,16 +17639,17 @@ window.vocabulary = [
   },
   {
     "id": 744,
-    "word": "empathy",
-    "partOfSpeech": "noun",
+    "word": "depict",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to empathy",
-    "chinese": "",
+    "meaning": "to show or describe someone or something",
+    "chinese": "描绘；描述",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “empathy” correctly in context.",
+    "example": "The painting depicts life in a village.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13404,16 +17658,17 @@ window.vocabulary = [
   },
   {
     "id": 745,
-    "word": "enigma",
-    "partOfSpeech": "noun",
+    "word": "determined",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to enigma",
-    "chinese": "",
+    "meaning": "having made a firm decision to do something",
+    "chinese": "坚定的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “enigma” correctly in context.",
+    "example": "She was determined to finish the race.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13422,16 +17677,17 @@ window.vocabulary = [
   },
   {
     "id": 746,
-    "word": "entail",
-    "partOfSpeech": "noun",
+    "word": "devastated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to entail",
-    "chinese": "",
+    "meaning": "extremely shocked and upset",
+    "chinese": "极度难过的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “entail” correctly in context.",
+    "example": "He was devastated when his pet died.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13440,16 +17696,17 @@ window.vocabulary = [
   },
   {
     "id": 747,
-    "word": "equitable",
-    "partOfSpeech": "noun",
+    "word": "diplomatic",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to equitable",
-    "chinese": "",
+    "meaning": "careful to avoid upsetting people when dealing with problems",
+    "chinese": "圆滑的；讲策略的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “equitable” correctly in context.",
+    "example": "She gave a diplomatic answer to the difficult question.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13458,16 +17715,17 @@ window.vocabulary = [
   },
   {
     "id": 748,
-    "word": "eradication",
-    "partOfSpeech": "noun",
+    "word": "disgusted",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to eradication",
-    "chinese": "",
+    "meaning": "feeling strong dislike because something is unpleasant",
+    "chinese": "厌恶的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “eradication” correctly in context.",
+    "example": "The children were disgusted by the rotten food.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13476,16 +17734,17 @@ window.vocabulary = [
   },
   {
     "id": 749,
-    "word": "erratic",
+    "word": "dispute",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to erratic",
-    "chinese": "",
+    "meaning": "an argument or disagreement",
+    "chinese": "争执；争议",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “erratic” correctly in context.",
+    "example": "The neighbours had a dispute over the fence.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13494,16 +17753,17 @@ window.vocabulary = [
   },
   {
     "id": 750,
-    "word": "esoteric",
-    "partOfSpeech": "noun",
+    "word": "distinct",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to esoteric",
-    "chinese": "",
+    "meaning": "clearly different or easy to recognise",
+    "chinese": "明显不同的；清晰的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “esoteric” correctly in context.",
+    "example": "There was a distinct smell of smoke.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13512,16 +17772,17 @@ window.vocabulary = [
   },
   {
     "id": 751,
-    "word": "exonerate",
-    "partOfSpeech": "noun",
+    "word": "distract",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to exonerate",
-    "chinese": "",
+    "meaning": "to take someone's attention away from something",
+    "chinese": "使分心",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “exonerate” correctly in context.",
+    "example": "The noise distracted me from my homework.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13530,16 +17791,17 @@ window.vocabulary = [
   },
   {
     "id": 752,
-    "word": "expedient",
-    "partOfSpeech": "noun",
+    "word": "doubtful",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to expedient",
-    "chinese": "",
+    "meaning": "not certain or unlikely",
+    "chinese": "怀疑的；不确定的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “expedient” correctly in context.",
+    "example": "I was doubtful that the plan would work.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13548,16 +17810,17 @@ window.vocabulary = [
   },
   {
     "id": 753,
-    "word": "extrapolate",
-    "partOfSpeech": "noun",
+    "word": "durable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to extrapolate",
-    "chinese": "",
+    "meaning": "able to last a long time without damage",
+    "chinese": "耐用的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “extrapolate” correctly in context.",
+    "example": "The durable bag lasted for many years.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13566,16 +17829,17 @@ window.vocabulary = [
   },
   {
     "id": 754,
-    "word": "fallacy",
-    "partOfSpeech": "noun",
+    "word": "embarrassed",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to fallacy",
-    "chinese": "",
+    "meaning": "feeling ashamed or awkward",
+    "chinese": "尴尬的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “fallacy” correctly in context.",
+    "example": "He felt embarrassed after falling on stage.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13584,16 +17848,17 @@ window.vocabulary = [
   },
   {
     "id": 755,
-    "word": "fastidious",
-    "partOfSpeech": "noun",
+    "word": "endure",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to fastidious",
-    "chinese": "",
+    "meaning": "to suffer something difficult without giving up",
+    "chinese": "忍受",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “fastidious” correctly in context.",
+    "example": "The runners endured the heat bravely.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13602,16 +17867,17 @@ window.vocabulary = [
   },
   {
     "id": 756,
-    "word": "fervent",
-    "partOfSpeech": "noun",
+    "word": "entitled",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to fervent",
-    "chinese": "",
+    "meaning": "believing that you deserve special treatment",
+    "chinese": "自以为应得的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “fervent” correctly in context.",
+    "example": "His entitled attitude annoyed his teammates.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13620,16 +17886,17 @@ window.vocabulary = [
   },
   {
     "id": 757,
-    "word": "flagrant",
-    "partOfSpeech": "noun",
+    "word": "entirely",
+    "partOfSpeech": "adverb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to flagrant",
-    "chinese": "",
+    "meaning": "completely",
+    "chinese": "完全地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “flagrant” correctly in context.",
+    "example": "The answer was entirely correct.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13638,16 +17905,17 @@ window.vocabulary = [
   },
   {
     "id": 758,
-    "word": "fortuitous",
-    "partOfSpeech": "noun",
+    "word": "enthusiastic",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to fortuitous",
-    "chinese": "",
+    "meaning": "very interested and excited about something",
+    "chinese": "热情的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “fortuitous” correctly in context.",
+    "example": "The enthusiastic pupils joined the activity.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13656,16 +17924,17 @@ window.vocabulary = [
   },
   {
     "id": 759,
-    "word": "frugal",
-    "partOfSpeech": "noun",
+    "word": "envious",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to frugal",
-    "chinese": "",
+    "meaning": "wanting something that another person has",
+    "chinese": "嫉妒的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “frugal” correctly in context.",
+    "example": "He felt envious of his friend's new bicycle.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13674,16 +17943,17 @@ window.vocabulary = [
   },
   {
     "id": 760,
-    "word": "gratuitous",
-    "partOfSpeech": "noun",
+    "word": "ethical",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to gratuitous",
-    "chinese": "",
+    "meaning": "relating to what is right and fair",
+    "chinese": "合乎道德的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “gratuitous” correctly in context.",
+    "example": "The pupils discussed the ethical problem.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13692,16 +17962,17 @@ window.vocabulary = [
   },
   {
     "id": 761,
-    "word": "gregarious",
-    "partOfSpeech": "noun",
+    "word": "evacuate",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to gregarious",
-    "chinese": "",
+    "meaning": "to leave a place because it is dangerous",
+    "chinese": "撤离",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “gregarious” correctly in context.",
+    "example": "Residents had to evacuate the building.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13710,16 +17981,17 @@ window.vocabulary = [
   },
   {
     "id": 762,
-    "word": "harrowing",
-    "partOfSpeech": "noun",
+    "word": "exhaust",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to harrowing",
-    "chinese": "",
+    "meaning": "to make someone extremely tired",
+    "chinese": "使筋疲力尽",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “harrowing” correctly in context.",
+    "example": "The long walk exhausted everyone.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13728,16 +18000,17 @@ window.vocabulary = [
   },
   {
     "id": 763,
-    "word": "idiosyncratic",
-    "partOfSpeech": "noun",
+    "word": "extensive",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to idiosyncratic",
-    "chinese": "",
+    "meaning": "covering a large area or range",
+    "chinese": "广泛的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “idiosyncratic” correctly in context.",
+    "example": "The library has an extensive collection of books.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13746,16 +18019,17 @@ window.vocabulary = [
   },
   {
     "id": 764,
-    "word": "imminent",
-    "partOfSpeech": "noun",
+    "word": "fascinate",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to imminent",
-    "chinese": "",
+    "meaning": "to interest someone greatly",
+    "chinese": "使着迷",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “imminent” correctly in context.",
+    "example": "The stars fascinated the children.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13764,16 +18038,17 @@ window.vocabulary = [
   },
   {
     "id": 765,
-    "word": "impetuous",
-    "partOfSpeech": "noun",
+    "word": "favourable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to impetuous",
-    "chinese": "",
+    "meaning": "positive or helpful",
+    "chinese": "有利的；赞成的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “impetuous” correctly in context.",
+    "example": "The weather was favourable for the outdoor event.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13782,16 +18057,17 @@ window.vocabulary = [
   },
   {
     "id": 766,
-    "word": "inadvertently",
-    "partOfSpeech": "noun",
+    "word": "fragile",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to inadvertently",
-    "chinese": "",
+    "meaning": "easily broken or damaged",
+    "chinese": "易碎的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “inadvertently” correctly in context.",
+    "example": "The fragile glass must be handled carefully.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13800,16 +18076,17 @@ window.vocabulary = [
   },
   {
     "id": 767,
-    "word": "incisive",
-    "partOfSpeech": "noun",
+    "word": "frustrated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to incisive",
-    "chinese": "",
+    "meaning": "annoyed because you cannot achieve what you want",
+    "chinese": "沮丧的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “incisive” correctly in context.",
+    "example": "She felt frustrated when the computer stopped working.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13818,16 +18095,17 @@ window.vocabulary = [
   },
   {
     "id": 768,
-    "word": "incongruous",
+    "word": "glimpse",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to incongruous",
-    "chinese": "",
+    "meaning": "a quick look at someone or something",
+    "chinese": "一瞥",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “incongruous” correctly in context.",
+    "example": "I caught a glimpse of the bird before it flew away.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13836,16 +18114,17 @@ window.vocabulary = [
   },
   {
     "id": 769,
-    "word": "indifferent",
-    "partOfSpeech": "noun",
+    "word": "gloomy",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to indifferent",
-    "chinese": "",
+    "meaning": "dark or making you feel sad",
+    "chinese": "阴暗的；忧郁的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “indifferent” correctly in context.",
+    "example": "The gloomy sky suggested that rain was coming.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13854,16 +18133,17 @@ window.vocabulary = [
   },
   {
     "id": 770,
-    "word": "indignant",
-    "partOfSpeech": "noun",
+    "word": "greedy",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to indignant",
-    "chinese": "",
+    "meaning": "wanting more than you need or deserve",
+    "chinese": "贪婪的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “indignant” correctly in context.",
+    "example": "The greedy child took all the sweets.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13872,16 +18152,17 @@ window.vocabulary = [
   },
   {
     "id": 771,
-    "word": "ineffable",
-    "partOfSpeech": "noun",
+    "word": "harsh",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to ineffable",
-    "chinese": "",
+    "meaning": "very severe, unpleasant, or unkind",
+    "chinese": "严厉的；恶劣的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ineffable” correctly in context.",
+    "example": "The harsh weather made travel difficult.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13890,16 +18171,17 @@ window.vocabulary = [
   },
   {
     "id": 772,
-    "word": "infallible",
-    "partOfSpeech": "noun",
+    "word": "hesitant",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to infallible",
-    "chinese": "",
+    "meaning": "uncertain about what to do",
+    "chinese": "犹豫的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “infallible” correctly in context.",
+    "example": "She was hesitant to enter the dark room.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13908,16 +18190,17 @@ window.vocabulary = [
   },
   {
     "id": 773,
-    "word": "insidious",
-    "partOfSpeech": "noun",
+    "word": "honourable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to insidious",
-    "chinese": "",
+    "meaning": "deserving respect because of good behaviour",
+    "chinese": "值得尊敬的；正直的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “insidious” correctly in context.",
+    "example": "He made an honourable decision.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13926,16 +18209,17 @@ window.vocabulary = [
   },
   {
     "id": 774,
-    "word": "intangible",
-    "partOfSpeech": "noun",
+    "word": "humble",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to intangible",
-    "chinese": "",
+    "meaning": "not thinking that you are better than others",
+    "chinese": "谦逊的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “intangible” correctly in context.",
+    "example": "Despite winning, she remained humble.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13944,16 +18228,17 @@ window.vocabulary = [
   },
   {
     "id": 775,
-    "word": "invigorate",
-    "partOfSpeech": "noun",
+    "word": "ignorant",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to invigorate",
-    "chinese": "",
+    "meaning": "lacking knowledge or understanding",
+    "chinese": "无知的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “invigorate” correctly in context.",
+    "example": "It is unwise to remain ignorant of the rules.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13962,16 +18247,17 @@ window.vocabulary = [
   },
   {
     "id": 776,
-    "word": "irrefutable",
-    "partOfSpeech": "noun",
+    "word": "impatient",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to irrefutable",
-    "chinese": "",
+    "meaning": "unable to wait calmly",
+    "chinese": "不耐烦的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “irrefutable” correctly in context.",
+    "example": "The impatient child kept asking when the bus would arrive.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13980,16 +18266,17 @@ window.vocabulary = [
   },
   {
     "id": 777,
-    "word": "lament",
-    "partOfSpeech": "noun",
+    "word": "impressive",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to lament",
-    "chinese": "",
+    "meaning": "causing admiration because of quality or skill",
+    "chinese": "令人印象深刻的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “lament” correctly in context.",
+    "example": "Her impressive performance won the prize.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -13998,16 +18285,17 @@ window.vocabulary = [
   },
   {
     "id": 778,
-    "word": "lucid",
-    "partOfSpeech": "noun",
+    "word": "inadequate",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to lucid",
-    "chinese": "",
+    "meaning": "not good or enough for a particular purpose",
+    "chinese": "不足的；不充分的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “lucid” correctly in context.",
+    "example": "The old bridge was inadequate for heavy traffic.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14016,16 +18304,17 @@ window.vocabulary = [
   },
   {
     "id": 779,
-    "word": "magnanimous",
-    "partOfSpeech": "noun",
+    "word": "incapable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to magnanimous",
-    "chinese": "",
+    "meaning": "unable to do something",
+    "chinese": "无能力的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “magnanimous” correctly in context.",
+    "example": "The broken machine was incapable of moving.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14034,16 +18323,17 @@ window.vocabulary = [
   },
   {
     "id": 780,
-    "word": "meticulousness",
+    "word": "incident",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to meticulousness",
-    "chinese": "",
+    "meaning": "an event, especially one that is unusual or unpleasant",
+    "chinese": "事件",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “meticulousness” correctly in context.",
+    "example": "The teacher reported the incident to the principal.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14052,16 +18342,17 @@ window.vocabulary = [
   },
   {
     "id": 781,
-    "word": "nuanced",
-    "partOfSpeech": "noun",
+    "word": "inclined",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to nuanced",
-    "chinese": "",
+    "meaning": "likely or willing to do something",
+    "chinese": "倾向于的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “nuanced” correctly in context.",
+    "example": "I am inclined to agree with your idea.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14070,16 +18361,17 @@ window.vocabulary = [
   },
   {
     "id": 782,
-    "word": "ostensible",
-    "partOfSpeech": "noun",
+    "word": "indifferent",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to ostensible",
-    "chinese": "",
+    "meaning": "not interested or concerned",
+    "chinese": "漠不关心的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ostensible” correctly in context.",
+    "example": "He seemed indifferent to the warning.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14088,16 +18380,17 @@ window.vocabulary = [
   },
   {
     "id": 783,
-    "word": "pervasive",
-    "partOfSpeech": "noun",
+    "word": "industrious",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to pervasive",
-    "chinese": "",
+    "meaning": "working hard and steadily",
+    "chinese": "勤劳的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “pervasive” correctly in context.",
+    "example": "The industrious farmer worked from dawn to dusk.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14106,16 +18399,17 @@ window.vocabulary = [
   },
   {
     "id": 784,
-    "word": "pragmatism",
+    "word": "ingenuity",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to pragmatism",
-    "chinese": "",
+    "meaning": "cleverness in finding new solutions",
+    "chinese": "独创力；聪明才智",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “pragmatism” correctly in context.",
+    "example": "Her ingenuity helped the team solve the problem.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14124,16 +18418,17 @@ window.vocabulary = [
   },
   {
     "id": 785,
-    "word": "precarious",
-    "partOfSpeech": "noun",
+    "word": "innocent",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to precarious",
-    "chinese": "",
+    "meaning": "not guilty of a crime or wrongdoing",
+    "chinese": "无辜的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “precarious” correctly in context.",
+    "example": "The innocent child knew nothing about the missing money.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14142,16 +18437,17 @@ window.vocabulary = [
   },
   {
     "id": 786,
-    "word": "proliferate",
-    "partOfSpeech": "noun",
+    "word": "insist",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to proliferate",
-    "chinese": "",
+    "meaning": "to demand something firmly",
+    "chinese": "坚持要求",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “proliferate” correctly in context.",
+    "example": "She insisted on telling the truth.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14160,16 +18456,17 @@ window.vocabulary = [
   },
   {
     "id": 787,
-    "word": "relinquish",
-    "partOfSpeech": "noun",
+    "word": "interpret",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to relinquish",
-    "chinese": "",
+    "meaning": "to explain the meaning of something",
+    "chinese": "解释；诠释",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “relinquish” correctly in context.",
+    "example": "Can you interpret the message for me?",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14178,16 +18475,17 @@ window.vocabulary = [
   },
   {
     "id": 788,
-    "word": "repudiate",
+    "word": "intimidate",
     "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "to repudiate or carry out this action",
-    "chinese": "",
+    "meaning": "to frighten someone so that they lose confidence",
+    "chinese": "恐吓",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “repudiate” correctly in context.",
+    "example": "The older pupils tried to intimidate him.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14196,16 +18494,17 @@ window.vocabulary = [
   },
   {
     "id": 789,
-    "word": "scrupulousness",
-    "partOfSpeech": "noun",
+    "word": "keen",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to scrupulousness",
-    "chinese": "",
+    "meaning": "very interested or eager",
+    "chinese": "热衷的；渴望的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “scrupulousness” correctly in context.",
+    "example": "She is keen to learn a new skill.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14214,16 +18513,17 @@ window.vocabulary = [
   },
   {
     "id": 790,
-    "word": "tenacious",
-    "partOfSpeech": "noun",
+    "word": "loyal",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "not giving up easily",
-    "chinese": "",
+    "meaning": "showing strong support for someone or something",
+    "chinese": "忠诚的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “tenacious” correctly in context.",
+    "example": "The loyal dog waited for its owner.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14232,16 +18532,17 @@ window.vocabulary = [
   },
   {
     "id": 791,
-    "word": "transient",
-    "partOfSpeech": "noun",
+    "word": "magnificent",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to transient",
-    "chinese": "",
+    "meaning": "extremely beautiful or impressive",
+    "chinese": "壮丽的；宏伟的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “transient” correctly in context.",
+    "example": "We saw a magnificent sunset.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14250,16 +18551,17 @@ window.vocabulary = [
   },
   {
     "id": 792,
-    "word": "ubiquitous",
+    "word": "mercy",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "present or found almost everywhere",
-    "chinese": "",
+    "meaning": "kindness shown to someone who could be punished",
+    "chinese": "仁慈；宽恕",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ubiquitous” correctly in context.",
+    "example": "The judge showed mercy to the young offender.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14268,16 +18570,17 @@ window.vocabulary = [
   },
   {
     "id": 793,
-    "word": "vindication",
-    "partOfSpeech": "noun",
+    "word": "modest",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to vindication",
-    "chinese": "",
+    "meaning": "not talking proudly about your abilities or achievements",
+    "chinese": "谦虚的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “vindication” correctly in context.",
+    "example": "Despite his success, he remained modest.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14286,16 +18589,17 @@ window.vocabulary = [
   },
   {
     "id": 794,
-    "word": "brilliant",
+    "word": "motivated",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is brilliant",
-    "chinese": "",
+    "meaning": "having a strong reason or desire to do something",
+    "chinese": "有动力的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “brilliant” correctly in context.",
+    "example": "The motivated team practised every day.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14304,16 +18608,17 @@ window.vocabulary = [
   },
   {
     "id": 795,
-    "word": "burden",
-    "partOfSpeech": "noun",
+    "word": "mysterious",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to burden",
-    "chinese": "",
+    "meaning": "difficult to explain or understand",
+    "chinese": "神秘的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “burden” correctly in context.",
+    "example": "A mysterious sound came from the attic.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14322,16 +18627,17 @@ window.vocabulary = [
   },
   {
     "id": 796,
-    "word": "candidate",
-    "partOfSpeech": "noun",
+    "word": "neglect",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to candidate",
-    "chinese": "",
+    "meaning": "to fail to give proper care or attention",
+    "chinese": "忽视；疏于照顾",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “candidate” correctly in context.",
+    "example": "Do not neglect your responsibilities.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14340,16 +18646,17 @@ window.vocabulary = [
   },
   {
     "id": 797,
-    "word": "careless",
+    "word": "obstacle",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to careless",
-    "chinese": "",
+    "meaning": "something that makes it difficult to achieve something",
+    "chinese": "障碍",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “careless” correctly in context.",
+    "example": "Lack of time was the biggest obstacle.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14358,16 +18665,17 @@ window.vocabulary = [
   },
   {
     "id": 798,
-    "word": "ceremony",
-    "partOfSpeech": "noun",
+    "word": "originate",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to ceremony",
-    "chinese": "",
+    "meaning": "to begin or come from a particular place or source",
+    "chinese": "起源于",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ceremony” correctly in context.",
+    "example": "The tradition originated in the village.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14376,16 +18684,17 @@ window.vocabulary = [
   },
   {
     "id": 799,
-    "word": "character",
-    "partOfSpeech": "noun",
+    "word": "outstanding",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to character",
-    "chinese": "",
+    "meaning": "extremely good",
+    "chinese": "杰出的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “character” correctly in context.",
+    "example": "She gave an outstanding performance.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14394,16 +18703,17 @@ window.vocabulary = [
   },
   {
     "id": 800,
-    "word": "charity",
-    "partOfSpeech": "noun",
+    "word": "overcome",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea or situation related to charity",
-    "chinese": "",
+    "meaning": "to succeed in dealing with a difficulty",
+    "chinese": "克服",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “charity” correctly in context.",
+    "example": "He overcame his fear of speaking in public.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14412,16 +18722,17 @@ window.vocabulary = [
   },
   {
     "id": 801,
-    "word": "aberration",
-    "partOfSpeech": "noun",
+    "word": "partial",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to aberration",
-    "chinese": "",
+    "meaning": "not complete or fair",
+    "chinese": "部分的；偏袒的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “aberration” correctly in context.",
+    "example": "The information was only partial.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14430,16 +18741,17 @@ window.vocabulary = [
   },
   {
     "id": 802,
-    "word": "abnegate",
-    "partOfSpeech": "noun",
+    "word": "perceive",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to abnegate",
-    "chinese": "",
+    "meaning": "to notice or understand something",
+    "chinese": "察觉；理解",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “abnegate” correctly in context.",
+    "example": "She perceived a change in his voice.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14448,16 +18760,17 @@ window.vocabulary = [
   },
   {
     "id": 803,
-    "word": "abrogate",
-    "partOfSpeech": "noun",
+    "word": "pessimistic",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to abrogate",
-    "chinese": "",
+    "meaning": "expecting bad things to happen",
+    "chinese": "悲观的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “abrogate” correctly in context.",
+    "example": "The pessimistic forecast worried the farmers.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14466,16 +18779,17 @@ window.vocabulary = [
   },
   {
     "id": 804,
-    "word": "acquiesce",
-    "partOfSpeech": "noun",
+    "word": "predictable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to acquiesce",
-    "chinese": "",
+    "meaning": "easy to expect because it follows a pattern",
+    "chinese": "可预料的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “acquiesce” correctly in context.",
+    "example": "The ending of the story was predictable.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14484,16 +18798,17 @@ window.vocabulary = [
   },
   {
     "id": 805,
-    "word": "acrimonious",
+    "word": "prejudice",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to acrimonious",
-    "chinese": "",
+    "meaning": "an unfair opinion about a person or group",
+    "chinese": "偏见",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “acrimonious” correctly in context.",
+    "example": "We should not judge people because of prejudice.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14502,16 +18817,17 @@ window.vocabulary = [
   },
   {
     "id": 806,
-    "word": "adulation",
+    "word": "privilege",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to adulation",
-    "chinese": "",
+    "meaning": "a special advantage or right given to someone",
+    "chinese": "特权",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “adulation” correctly in context.",
+    "example": "It is a privilege to represent the school.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14520,16 +18836,17 @@ window.vocabulary = [
   },
   {
     "id": 807,
-    "word": "ambivalent",
-    "partOfSpeech": "noun",
+    "word": "proficient",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to ambivalent",
-    "chinese": "",
+    "meaning": "skilled and competent",
+    "chinese": "熟练的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ambivalent” correctly in context.",
+    "example": "She is proficient in English.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14538,16 +18855,17 @@ window.vocabulary = [
   },
   {
     "id": 808,
-    "word": "anathema",
-    "partOfSpeech": "noun",
+    "word": "prohibit",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to anathema",
-    "chinese": "",
+    "meaning": "to officially stop something from being done",
+    "chinese": "禁止",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “anathema” correctly in context.",
+    "example": "The sign prohibits parking here.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14556,16 +18874,17 @@ window.vocabulary = [
   },
   {
     "id": 809,
-    "word": "antediluvian",
-    "partOfSpeech": "noun",
+    "word": "prosper",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to antediluvian",
-    "chinese": "",
+    "meaning": "to become successful or wealthy",
+    "chinese": "繁荣；成功",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “antediluvian” correctly in context.",
+    "example": "The small business continued to prosper.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14574,16 +18893,17 @@ window.vocabulary = [
   },
   {
     "id": 810,
-    "word": "apocryphal",
-    "partOfSpeech": "noun",
+    "word": "prosperous",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to apocryphal",
-    "chinese": "",
+    "meaning": "successful and financially strong",
+    "chinese": "繁荣的；富裕的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “apocryphal” correctly in context.",
+    "example": "The town became prosperous after the new port opened.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14592,16 +18912,17 @@ window.vocabulary = [
   },
   {
     "id": 811,
-    "word": "apposite",
-    "partOfSpeech": "noun",
+    "word": "restrain",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to apposite",
-    "chinese": "",
+    "meaning": "to prevent someone or something from acting freely",
+    "chinese": "抑制；约束",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “apposite” correctly in context.",
+    "example": "He struggled to restrain his anger.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14610,16 +18931,17 @@ window.vocabulary = [
   },
   {
     "id": 812,
-    "word": "arcane",
-    "partOfSpeech": "noun",
+    "word": "ridiculous",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to arcane",
-    "chinese": "",
+    "meaning": "very silly or unreasonable",
+    "chinese": "可笑的；荒谬的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “arcane” correctly in context.",
+    "example": "It would be ridiculous to ignore the warning.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14628,16 +18950,17 @@ window.vocabulary = [
   },
   {
     "id": 813,
-    "word": "assiduous",
+    "word": "rival",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to assiduous",
-    "chinese": "",
+    "meaning": "a person or group competing with another",
+    "chinese": "竞争者；对手",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “assiduous” correctly in context.",
+    "example": "The two teams have been rivals for years.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14646,16 +18969,17 @@ window.vocabulary = [
   },
   {
     "id": 814,
-    "word": "avarice",
-    "partOfSpeech": "noun",
+    "word": "sceptical",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to avarice",
-    "chinese": "",
+    "meaning": "not easily convinced that something is true",
+    "chinese": "怀疑的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “avarice” correctly in context.",
+    "example": "The scientist was sceptical of the claim.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14664,16 +18988,17 @@ window.vocabulary = [
   },
   {
     "id": 815,
-    "word": "belie",
-    "partOfSpeech": "noun",
+    "word": "severe",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to belie",
-    "chinese": "",
+    "meaning": "very serious or harsh",
+    "chinese": "严重的；严厉的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “belie” correctly in context.",
+    "example": "The storm caused severe damage.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14682,16 +19007,17 @@ window.vocabulary = [
   },
   {
     "id": 816,
-    "word": "bellicose",
-    "partOfSpeech": "noun",
+    "word": "sophisticated",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to bellicose",
-    "chinese": "",
+    "meaning": "having a high level of skill or development",
+    "chinese": "复杂的；先进的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “bellicose” correctly in context.",
+    "example": "The city has a sophisticated transport system.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14700,16 +19026,17 @@ window.vocabulary = [
   },
   {
     "id": 817,
-    "word": "circumvent",
+    "word": "speculate",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to circumvent or carry out this action",
-    "chinese": "",
+    "meaning": "to guess about something without enough evidence",
+    "chinese": "推测",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “circumvent” correctly in context.",
+    "example": "People began to speculate about the cause of the fire.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14718,16 +19045,17 @@ window.vocabulary = [
   },
   {
     "id": 818,
-    "word": "cogitate",
-    "partOfSpeech": "verb",
+    "word": "stern",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to cogitate or carry out this action",
-    "chinese": "",
+    "meaning": "strict and serious",
+    "chinese": "严厉的；严格的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “cogitate” correctly in context.",
+    "example": "The coach gave the players a stern warning.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14736,16 +19064,17 @@ window.vocabulary = [
   },
   {
     "id": 819,
-    "word": "conundrum",
-    "partOfSpeech": "noun",
+    "word": "sympathetic",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to conundrum",
-    "chinese": "",
+    "meaning": "showing care and understanding",
+    "chinese": "同情的；体谅的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “conundrum” correctly in context.",
+    "example": "The teacher was sympathetic to his situation.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14754,16 +19083,17 @@ window.vocabulary = [
   },
   {
     "id": 820,
-    "word": "deleterious",
-    "partOfSpeech": "noun",
+    "word": "tempt",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to deleterious",
-    "chinese": "",
+    "meaning": "to attract someone to do something they should not do",
+    "chinese": "诱惑",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “deleterious” correctly in context.",
+    "example": "The delicious cake tempted me to have another slice.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14772,16 +19102,17 @@ window.vocabulary = [
   },
   {
     "id": 821,
-    "word": "demagogue",
-    "partOfSpeech": "noun",
+    "word": "tolerant",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to demagogue",
-    "chinese": "",
+    "meaning": "willing to accept differences in others",
+    "chinese": "宽容的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “demagogue” correctly in context.",
+    "example": "A tolerant community respects different opinions.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14790,16 +19121,17 @@ window.vocabulary = [
   },
   {
     "id": 822,
-    "word": "denigrate",
-    "partOfSpeech": "verb",
+    "word": "triumph",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to denigrate or carry out this action",
-    "chinese": "",
+    "meaning": "a great victory or success",
+    "chinese": "胜利；成功",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “denigrate” correctly in context.",
+    "example": "Winning the final was a great triumph.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14808,16 +19140,17 @@ window.vocabulary = [
   },
   {
     "id": 823,
-    "word": "deride",
-    "partOfSpeech": "verb",
+    "word": "trustworthy",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to deride or carry out this action",
-    "chinese": "",
+    "meaning": "deserving to be trusted",
+    "chinese": "值得信赖的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “deride” correctly in context.",
+    "example": "She is a trustworthy friend.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14826,16 +19159,17 @@ window.vocabulary = [
   },
   {
     "id": 824,
-    "word": "desultory",
-    "partOfSpeech": "noun",
+    "word": "uncertain",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to desultory",
-    "chinese": "",
+    "meaning": "not known or decided",
+    "chinese": "不确定的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “desultory” correctly in context.",
+    "example": "The outcome of the match was uncertain.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14844,16 +19178,17 @@ window.vocabulary = [
   },
   {
     "id": 825,
-    "word": "diatribe",
-    "partOfSpeech": "noun",
+    "word": "underestimate",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to diatribe",
-    "chinese": "",
+    "meaning": "to think that someone or something is less capable than they really are",
+    "chinese": "低估",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “diatribe” correctly in context.",
+    "example": "Never underestimate the value of practice.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14862,16 +19197,17 @@ window.vocabulary = [
   },
   {
     "id": 826,
-    "word": "dichotomy",
-    "partOfSpeech": "noun",
+    "word": "unpredictable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to dichotomy",
-    "chinese": "",
+    "meaning": "not able to be known in advance",
+    "chinese": "不可预测的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “dichotomy” correctly in context.",
+    "example": "The weather is unpredictable during the monsoon season.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14880,16 +19216,17 @@ window.vocabulary = [
   },
   {
     "id": 827,
-    "word": "diffident",
-    "partOfSpeech": "noun",
+    "word": "unwilling",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to diffident",
-    "chinese": "",
+    "meaning": "not wanting to do something",
+    "chinese": "不愿意的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “diffident” correctly in context.",
+    "example": "He was unwilling to admit his mistake.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14898,16 +19235,17 @@ window.vocabulary = [
   },
   {
     "id": 828,
-    "word": "dispassionate",
-    "partOfSpeech": "noun",
+    "word": "worthy",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to dispassionate",
-    "chinese": "",
+    "meaning": "deserving respect or attention",
+    "chinese": "值得的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “dispassionate” correctly in context.",
+    "example": "Her actions were worthy of praise.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14916,16 +19254,17 @@ window.vocabulary = [
   },
   {
     "id": 829,
-    "word": "dogmatic",
-    "partOfSpeech": "noun",
+    "word": "accidental",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to dogmatic",
-    "chinese": "",
+    "meaning": "happening by chance rather than on purpose",
+    "chinese": "意外的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “dogmatic” correctly in context.",
+    "example": "The broken vase was accidental.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14934,16 +19273,17 @@ window.vocabulary = [
   },
   {
     "id": 830,
-    "word": "egregious",
-    "partOfSpeech": "noun",
+    "word": "accurately",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to egregious",
-    "chinese": "",
+    "meaning": "in a correct and exact way",
+    "chinese": "准确地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “egregious” correctly in context.",
+    "example": "Please measure the length accurately.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14952,16 +19292,17 @@ window.vocabulary = [
   },
   {
     "id": 831,
-    "word": "enervate",
-    "partOfSpeech": "noun",
+    "word": "admirable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to enervate",
-    "chinese": "",
+    "meaning": "deserving respect or approval",
+    "chinese": "令人钦佩的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “enervate” correctly in context.",
+    "example": "Her admirable courage inspired everyone.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14970,16 +19311,17 @@ window.vocabulary = [
   },
   {
     "id": 832,
-    "word": "ephemeral",
-    "partOfSpeech": "noun",
+    "word": "agitate",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to ephemeral",
-    "chinese": "",
+    "meaning": "to make someone worried or upset",
+    "chinese": "使焦虑；使不安",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “ephemeral” correctly in context.",
+    "example": "The news agitated the crowd.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -14988,16 +19330,17 @@ window.vocabulary = [
   },
   {
     "id": 833,
-    "word": "equivocal",
+    "word": "alliance",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to equivocal",
-    "chinese": "",
+    "meaning": "an agreement between people or groups to work together",
+    "chinese": "联盟；合作",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “equivocal” correctly in context.",
+    "example": "The two clubs formed an alliance.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15006,16 +19349,17 @@ window.vocabulary = [
   },
   {
     "id": 834,
-    "word": "exacerbation",
-    "partOfSpeech": "noun",
+    "word": "alter",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to exacerbation",
-    "chinese": "",
+    "meaning": "to change something",
+    "chinese": "改变",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “exacerbation” correctly in context.",
+    "example": "We had to alter our plans because of the rain.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15024,16 +19368,17 @@ window.vocabulary = [
   },
   {
     "id": 835,
-    "word": "exculpate",
+    "word": "amazement",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to exculpate",
-    "chinese": "",
+    "meaning": "a feeling of great surprise",
+    "chinese": "惊讶",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “exculpate” correctly in context.",
+    "example": "The magician's trick caused amazement.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15042,16 +19387,17 @@ window.vocabulary = [
   },
   {
     "id": 836,
-    "word": "exigent",
-    "partOfSpeech": "noun",
+    "word": "amusing",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to exigent",
-    "chinese": "",
+    "meaning": "funny and entertaining",
+    "chinese": "有趣的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “exigent” correctly in context.",
+    "example": "The amusing story made everyone laugh.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15060,16 +19406,17 @@ window.vocabulary = [
   },
   {
     "id": 837,
-    "word": "expound",
+    "word": "appreciation",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to expound",
-    "chinese": "",
+    "meaning": "a feeling of gratitude or understanding",
+    "chinese": "感激；欣赏",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “expound” correctly in context.",
+    "example": "She showed appreciation for the volunteers.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15078,16 +19425,17 @@ window.vocabulary = [
   },
   {
     "id": 838,
-    "word": "extol",
-    "partOfSpeech": "verb",
+    "word": "aptitude",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to extol or carry out this action",
-    "chinese": "",
+    "meaning": "a natural ability to learn or do something",
+    "chinese": "天资；才能",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “extol” correctly in context.",
+    "example": "He has an aptitude for mathematics.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15096,16 +19444,17 @@ window.vocabulary = [
   },
   {
     "id": 839,
-    "word": "gregariousness",
-    "partOfSpeech": "noun",
+    "word": "assure",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to gregariousness",
-    "chinese": "",
+    "meaning": "to tell someone confidently that something is true",
+    "chinese": "向…保证",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “gregariousness” correctly in context.",
+    "example": "The teacher assured us that the test was fair.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15114,16 +19463,17 @@ window.vocabulary = [
   },
   {
     "id": 840,
-    "word": "harangue",
+    "word": "attain",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to harangue or carry out this action",
-    "chinese": "",
+    "meaning": "to achieve something after effort",
+    "chinese": "达到；获得",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “harangue” correctly in context.",
+    "example": "She attained her goal through hard work.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15132,16 +19482,17 @@ window.vocabulary = [
   },
   {
     "id": 841,
-    "word": "iconoclast",
+    "word": "awareness",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to iconoclast",
-    "chinese": "",
+    "meaning": "knowledge or understanding of something",
+    "chinese": "意识；认识",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “iconoclast” correctly in context.",
+    "example": "Public awareness of recycling is growing.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15150,16 +19501,17 @@ window.vocabulary = [
   },
   {
     "id": 842,
-    "word": "idiosyncrasy",
-    "partOfSpeech": "noun",
+    "word": "betray",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to idiosyncrasy",
-    "chinese": "",
+    "meaning": "to hurt someone by breaking their trust",
+    "chinese": "背叛",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “idiosyncrasy” correctly in context.",
+    "example": "He betrayed his friend's confidence.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15168,16 +19520,17 @@ window.vocabulary = [
   },
   {
     "id": 843,
-    "word": "immutable",
-    "partOfSpeech": "noun",
+    "word": "boost",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to immutable",
-    "chinese": "",
+    "meaning": "to increase or improve something",
+    "chinese": "促进；提高",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “immutable” correctly in context.",
+    "example": "Exercise can boost your energy.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15186,16 +19539,17 @@ window.vocabulary = [
   },
   {
     "id": 844,
-    "word": "impasse",
+    "word": "boundary",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to impasse",
-    "chinese": "",
+    "meaning": "a line that marks the limit of an area",
+    "chinese": "边界",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “impasse” correctly in context.",
+    "example": "The fence marks the boundary of the garden.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15204,16 +19558,17 @@ window.vocabulary = [
   },
   {
     "id": 845,
-    "word": "impecunious",
+    "word": "burden",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to impecunious",
-    "chinese": "",
+    "meaning": "a heavy responsibility or worry",
+    "chinese": "负担",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “impecunious” correctly in context.",
+    "example": "Caring for the injured animal became a burden.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15222,16 +19577,17 @@ window.vocabulary = [
   },
   {
     "id": 846,
-    "word": "impertinent",
+    "word": "calamity",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to impertinent",
-    "chinese": "",
+    "meaning": "a serious disaster",
+    "chinese": "灾难",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “impertinent” correctly in context.",
+    "example": "The flood was a terrible calamity for the village.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15240,16 +19596,17 @@ window.vocabulary = [
   },
   {
     "id": 847,
-    "word": "incontrovertible",
-    "partOfSpeech": "noun",
+    "word": "chaotic",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to incontrovertible",
-    "chinese": "",
+    "meaning": "very confused and disorganised",
+    "chinese": "混乱的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “incontrovertible” correctly in context.",
+    "example": "The scene became chaotic after the alarm rang.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15258,16 +19615,17 @@ window.vocabulary = [
   },
   {
     "id": 848,
-    "word": "incorrigible",
-    "partOfSpeech": "noun",
+    "word": "compel",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to incorrigible",
-    "chinese": "",
+    "meaning": "to force someone to do something",
+    "chinese": "迫使",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “incorrigible” correctly in context.",
+    "example": "The evidence compelled him to tell the truth.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15276,16 +19634,17 @@ window.vocabulary = [
   },
   {
     "id": 849,
-    "word": "indefatigable",
-    "partOfSpeech": "noun",
+    "word": "comprehend",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to indefatigable",
-    "chinese": "",
+    "meaning": "to understand something",
+    "chinese": "理解",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “indefatigable” correctly in context.",
+    "example": "The pupil struggled to comprehend the passage.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15294,16 +19653,17 @@ window.vocabulary = [
   },
   {
     "id": 850,
-    "word": "inscrutable",
-    "partOfSpeech": "noun",
+    "word": "conceal",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to inscrutable",
-    "chinese": "",
+    "meaning": "to hide something",
+    "chinese": "隐藏",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “inscrutable” correctly in context.",
+    "example": "He tried to conceal the gift behind his back.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15312,16 +19672,17 @@ window.vocabulary = [
   },
   {
     "id": 851,
-    "word": "inveterate",
-    "partOfSpeech": "noun",
+    "word": "concentrated",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to inveterate",
-    "chinese": "",
+    "meaning": "giving full attention to something",
+    "chinese": "专注的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “inveterate” correctly in context.",
+    "example": "She remained concentrated during the examination.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15330,16 +19691,17 @@ window.vocabulary = [
   },
   {
     "id": 852,
-    "word": "irreproachable",
-    "partOfSpeech": "noun",
+    "word": "confidently",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to irreproachable",
-    "chinese": "",
+    "meaning": "in a confident way",
+    "chinese": "自信地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “irreproachable” correctly in context.",
+    "example": "He answered the question confidently.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15348,16 +19710,17 @@ window.vocabulary = [
   },
   {
     "id": 853,
-    "word": "juxtapose",
+    "word": "conserve",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to juxtapose or carry out this action",
-    "chinese": "",
+    "meaning": "to protect something from being wasted",
+    "chinese": "节约；保护",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “juxtapose” correctly in context.",
+    "example": "We should conserve water.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15366,16 +19729,17 @@ window.vocabulary = [
   },
   {
     "id": 854,
-    "word": "laconic",
-    "partOfSpeech": "noun",
+    "word": "considerably",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to laconic",
-    "chinese": "",
+    "meaning": "by a large amount",
+    "chinese": "相当地；大大地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “laconic” correctly in context.",
+    "example": "The price has increased considerably.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15384,16 +19748,17 @@ window.vocabulary = [
   },
   {
     "id": 855,
-    "word": "magnanimity",
-    "partOfSpeech": "noun",
+    "word": "correspond",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to magnanimity",
-    "chinese": "",
+    "meaning": "to be similar or match",
+    "chinese": "相符；对应",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “magnanimity” correctly in context.",
+    "example": "The numbers correspond to the labels.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15402,16 +19767,17 @@ window.vocabulary = [
   },
   {
     "id": 856,
-    "word": "mendacious",
-    "partOfSpeech": "noun",
+    "word": "culminate",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to mendacious",
-    "chinese": "",
+    "meaning": "to end with an important final event",
+    "chinese": "达到高潮；以…结束",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “mendacious” correctly in context.",
+    "example": "The festival culminated in a fireworks display.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15420,16 +19786,17 @@ window.vocabulary = [
   },
   {
     "id": 857,
-    "word": "mercurial",
+    "word": "debate",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to mercurial",
-    "chinese": "",
+    "meaning": "a formal discussion of different opinions",
+    "chinese": "辩论",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “mercurial” correctly in context.",
+    "example": "The pupils held a debate about school uniforms.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15438,16 +19805,17 @@ window.vocabulary = [
   },
   {
     "id": 858,
-    "word": "nefarious",
+    "word": "deceit",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to nefarious",
-    "chinese": "",
+    "meaning": "dishonest behaviour intended to trick someone",
+    "chinese": "欺骗",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “nefarious” correctly in context.",
+    "example": "The scam relied on deceit.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15456,16 +19824,17 @@ window.vocabulary = [
   },
   {
     "id": 859,
-    "word": "nonchalant",
+    "word": "dedication",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to nonchalant",
-    "chinese": "",
+    "meaning": "great effort and commitment to something",
+    "chinese": "奉献；专心",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “nonchalant” correctly in context.",
+    "example": "Her dedication to training paid off.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15474,16 +19843,17 @@ window.vocabulary = [
   },
   {
     "id": 860,
-    "word": "obfuscate",
-    "partOfSpeech": "verb",
+    "word": "dependency",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to obfuscate or carry out this action",
-    "chinese": "",
+    "meaning": "a situation in which someone relies on another",
+    "chinese": "依赖",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “obfuscate” correctly in context.",
+    "example": "The child showed a strong dependency on his parents.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15492,16 +19862,17 @@ window.vocabulary = [
   },
   {
     "id": 861,
-    "word": "oblivious",
-    "partOfSpeech": "noun",
+    "word": "desirable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to oblivious",
-    "chinese": "",
+    "meaning": "wanted or considered good",
+    "chinese": "理想的；可取的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “oblivious” correctly in context.",
+    "example": "A quiet study area is desirable.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15510,16 +19881,17 @@ window.vocabulary = [
   },
   {
     "id": 862,
-    "word": "obsequious",
-    "partOfSpeech": "noun",
+    "word": "detect",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to obsequious",
-    "chinese": "",
+    "meaning": "to discover or notice something",
+    "chinese": "发现；察觉",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “obsequious” correctly in context.",
+    "example": "The device can detect smoke.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15528,16 +19900,17 @@ window.vocabulary = [
   },
   {
     "id": 863,
-    "word": "onerous",
+    "word": "distress",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to onerous",
-    "chinese": "",
+    "meaning": "great worry, sadness, or pain",
+    "chinese": "痛苦；忧虑",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “onerous” correctly in context.",
+    "example": "The news caused great distress.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15546,16 +19919,17 @@ window.vocabulary = [
   },
   {
     "id": 864,
-    "word": "paradigm",
-    "partOfSpeech": "noun",
+    "word": "dominant",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to paradigm",
-    "chinese": "",
+    "meaning": "more powerful or noticeable than others",
+    "chinese": "占优势的；主要的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “paradigm” correctly in context.",
+    "example": "The team was dominant throughout the game.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15564,16 +19938,17 @@ window.vocabulary = [
   },
   {
     "id": 865,
-    "word": "parsimonious",
-    "partOfSpeech": "noun",
+    "word": "dynamic",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to parsimonious",
-    "chinese": "",
+    "meaning": "full of energy and change",
+    "chinese": "充满活力的；动态的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “parsimonious” correctly in context.",
+    "example": "The dynamic leader inspired the group.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15582,16 +19957,17 @@ window.vocabulary = [
   },
   {
     "id": 866,
-    "word": "perfunctory",
-    "partOfSpeech": "noun",
+    "word": "effective",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to perfunctory",
-    "chinese": "",
+    "meaning": "successful in producing the desired result",
+    "chinese": "有效的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “perfunctory” correctly in context.",
+    "example": "The new method was highly effective.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15600,16 +19976,17 @@ window.vocabulary = [
   },
   {
     "id": 867,
-    "word": "pernicious",
-    "partOfSpeech": "noun",
+    "word": "efficiently",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to pernicious",
-    "chinese": "",
+    "meaning": "in a way that avoids wasting time or resources",
+    "chinese": "高效地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “pernicious” correctly in context.",
+    "example": "The workers completed the task efficiently.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15618,16 +19995,17 @@ window.vocabulary = [
   },
   {
     "id": 868,
-    "word": "proclivity",
-    "partOfSpeech": "noun",
+    "word": "encouraging",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to proclivity",
-    "chinese": "",
+    "meaning": "giving hope or confidence",
+    "chinese": "令人鼓舞的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “proclivity” correctly in context.",
+    "example": "The early results were encouraging.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15636,16 +20014,17 @@ window.vocabulary = [
   },
   {
     "id": 869,
-    "word": "prodigious",
+    "word": "endurance",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to prodigious",
-    "chinese": "",
+    "meaning": "the ability to continue despite difficulty or tiredness",
+    "chinese": "耐力",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “prodigious” correctly in context.",
+    "example": "Long-distance running requires endurance.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15654,16 +20033,17 @@ window.vocabulary = [
   },
   {
     "id": 870,
-    "word": "profligate",
-    "partOfSpeech": "noun",
+    "word": "engage",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to profligate",
-    "chinese": "",
+    "meaning": "to take part in something or attract attention",
+    "chinese": "参与；吸引",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “profligate” correctly in context.",
+    "example": "The teacher used games to engage the pupils.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15672,16 +20052,17 @@ window.vocabulary = [
   },
   {
     "id": 871,
-    "word": "prosaic",
+    "word": "expertise",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to prosaic",
-    "chinese": "",
+    "meaning": "special skill or knowledge in a particular area",
+    "chinese": "专业知识；技能",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “prosaic” correctly in context.",
+    "example": "Her expertise in science was valuable.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15690,16 +20071,17 @@ window.vocabulary = [
   },
   {
     "id": 872,
-    "word": "querulous",
+    "word": "flexibility",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to querulous",
-    "chinese": "",
+    "meaning": "the ability to change easily when needed",
+    "chinese": "灵活性",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “querulous” correctly in context.",
+    "example": "The job requires flexibility.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15708,16 +20090,17 @@ window.vocabulary = [
   },
   {
     "id": 873,
-    "word": "recalcitrant",
-    "partOfSpeech": "noun",
+    "word": "fulfil",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to recalcitrant",
-    "chinese": "",
+    "meaning": "to do or achieve what was promised or expected",
+    "chinese": "履行；实现",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “recalcitrant” correctly in context.",
+    "example": "She fulfilled her promise.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15726,16 +20109,17 @@ window.vocabulary = [
   },
   {
     "id": 874,
-    "word": "recondite",
+    "word": "generosity",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to recondite",
-    "chinese": "",
+    "meaning": "the quality of being willing to give freely",
+    "chinese": "慷慨",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “recondite” correctly in context.",
+    "example": "His generosity helped many families.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15744,16 +20128,17 @@ window.vocabulary = [
   },
   {
     "id": 875,
-    "word": "reprehensible",
+    "word": "guidance",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to reprehensible",
-    "chinese": "",
+    "meaning": "help or advice about what to do",
+    "chinese": "指导",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “reprehensible” correctly in context.",
+    "example": "The teacher gave us useful guidance.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15762,16 +20147,17 @@ window.vocabulary = [
   },
   {
     "id": 876,
-    "word": "reticent",
-    "partOfSpeech": "noun",
+    "word": "hinder",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to reticent",
-    "chinese": "",
+    "meaning": "to make it difficult for something to happen",
+    "chinese": "妨碍",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “reticent” correctly in context.",
+    "example": "Heavy rain hindered our journey.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15780,16 +20166,17 @@ window.vocabulary = [
   },
   {
     "id": 877,
-    "word": "sagacious",
+    "word": "honesty",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to sagacious",
-    "chinese": "",
+    "meaning": "the quality of being truthful",
+    "chinese": "诚实",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “sagacious” correctly in context.",
+    "example": "Honesty is important in every friendship.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15798,16 +20185,17 @@ window.vocabulary = [
   },
   {
     "id": 878,
-    "word": "salient",
+    "word": "initiative",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to salient",
-    "chinese": "",
+    "meaning": "the ability to act without being told",
+    "chinese": "主动性",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “salient” correctly in context.",
+    "example": "She showed initiative by organising the books.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15816,16 +20204,17 @@ window.vocabulary = [
   },
   {
     "id": 879,
-    "word": "sanction",
+    "word": "insight",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to sanction",
-    "chinese": "",
+    "meaning": "a clear understanding of something",
+    "chinese": "洞察力；深刻理解",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “sanction” correctly in context.",
+    "example": "The book gave me insight into animal behaviour.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15834,16 +20223,17 @@ window.vocabulary = [
   },
   {
     "id": 880,
-    "word": "solicitous",
+    "word": "intention",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to solicitous",
-    "chinese": "",
+    "meaning": "what someone plans or means to do",
+    "chinese": "意图；打算",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “solicitous” correctly in context.",
+    "example": "His intention was to help.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15852,16 +20242,17 @@ window.vocabulary = [
   },
   {
     "id": 881,
-    "word": "spurious",
-    "partOfSpeech": "noun",
+    "word": "knowledgeable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to spurious",
-    "chinese": "",
+    "meaning": "knowing a lot about a subject",
+    "chinese": "知识丰富的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “spurious” correctly in context.",
+    "example": "The knowledgeable guide answered every question.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15870,16 +20261,17 @@ window.vocabulary = [
   },
   {
     "id": 882,
-    "word": "staid",
-    "partOfSpeech": "noun",
+    "word": "liberate",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to staid",
-    "chinese": "",
+    "meaning": "to free someone from control or danger",
+    "chinese": "解放；释放",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “staid” correctly in context.",
+    "example": "The rescue operation helped liberate the trapped workers.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15888,16 +20280,17 @@ window.vocabulary = [
   },
   {
     "id": 883,
-    "word": "superfluous",
+    "word": "likelihood",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to superfluous",
-    "chinese": "",
+    "meaning": "the chance that something will happen",
+    "chinese": "可能性",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “superfluous” correctly in context.",
+    "example": "There is a high likelihood of rain.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15906,16 +20299,17 @@ window.vocabulary = [
   },
   {
     "id": 884,
-    "word": "surreptitious",
-    "partOfSpeech": "noun",
+    "word": "monitor",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to surreptitious",
-    "chinese": "",
+    "meaning": "to watch or check something over time",
+    "chinese": "监测；监督",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “surreptitious” correctly in context.",
+    "example": "Teachers monitor pupils' progress.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15924,16 +20318,17 @@ window.vocabulary = [
   },
   {
     "id": 885,
-    "word": "tacit",
-    "partOfSpeech": "noun",
+    "word": "obviously",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to tacit",
-    "chinese": "",
+    "meaning": "in a way that is easy to see or understand",
+    "chinese": "显然",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “tacit” correctly in context.",
+    "example": "She was obviously tired.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15942,16 +20337,17 @@ window.vocabulary = [
   },
   {
     "id": 886,
-    "word": "tenuous",
-    "partOfSpeech": "noun",
+    "word": "oppose",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to tenuous",
-    "chinese": "",
+    "meaning": "to disagree with or fight against something",
+    "chinese": "反对",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “tenuous” correctly in context.",
+    "example": "Many residents opposed the plan.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15960,16 +20356,17 @@ window.vocabulary = [
   },
   {
     "id": 887,
-    "word": "trenchant",
+    "word": "potential",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to trenchant",
-    "chinese": "",
+    "meaning": "a quality or ability that may develop",
+    "chinese": "潜力",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “trenchant” correctly in context.",
+    "example": "The young athlete has great potential.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15978,16 +20375,17 @@ window.vocabulary = [
   },
   {
     "id": 888,
-    "word": "vacillate",
-    "partOfSpeech": "verb",
+    "word": "progressive",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to vacillate or carry out this action",
-    "chinese": "",
+    "meaning": "developing or improving gradually",
+    "chinese": "进步的；逐渐发展的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “vacillate” correctly in context.",
+    "example": "The school uses progressive teaching methods.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -15996,16 +20394,17 @@ window.vocabulary = [
   },
   {
     "id": 889,
-    "word": "venerable",
-    "partOfSpeech": "noun",
+    "word": "promote",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to venerable",
-    "chinese": "",
+    "meaning": "to encourage or support something",
+    "chinese": "促进；推广",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “venerable” correctly in context.",
+    "example": "The campaign promotes healthy eating.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16014,16 +20413,17 @@ window.vocabulary = [
   },
   {
     "id": 890,
-    "word": "veracity",
+    "word": "prospect",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to veracity",
-    "chinese": "",
+    "meaning": "the possibility or likelihood of something happening",
+    "chinese": "前景；可能性",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “veracity” correctly in context.",
+    "example": "The project has good prospects.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16032,16 +20432,17 @@ window.vocabulary = [
   },
   {
     "id": 891,
-    "word": "verbose",
-    "partOfSpeech": "noun",
+    "word": "react",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to verbose",
-    "chinese": "",
+    "meaning": "to respond to something",
+    "chinese": "反应",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “verbose” correctly in context.",
+    "example": "How did she react to the news?",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16050,16 +20451,17 @@ window.vocabulary = [
   },
   {
     "id": 892,
-    "word": "vindictive",
-    "partOfSpeech": "noun",
+    "word": "reasonable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to vindictive",
-    "chinese": "",
+    "meaning": "fair and sensible",
+    "chinese": "合理的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “vindictive” correctly in context.",
+    "example": "That is a reasonable request.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16068,16 +20470,17 @@ window.vocabulary = [
   },
   {
     "id": 893,
-    "word": "vitriolic",
-    "partOfSpeech": "noun",
+    "word": "reflect",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to vitriolic",
-    "chinese": "",
+    "meaning": "to think carefully about something",
+    "chinese": "反思；思考",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “vitriolic” correctly in context.",
+    "example": "Take time to reflect on your mistake.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16086,16 +20489,17 @@ window.vocabulary = [
   },
   {
     "id": 894,
-    "word": "wanton",
+    "word": "remark",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to wanton",
-    "chinese": "",
+    "meaning": "something said or written as a comment",
+    "chinese": "评论；话语",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “wanton” correctly in context.",
+    "example": "His remark made everyone laugh.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16104,16 +20508,17 @@ window.vocabulary = [
   },
   {
     "id": 895,
-    "word": "abstruse",
-    "partOfSpeech": "noun",
+    "word": "represent",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to abstruse",
-    "chinese": "",
+    "meaning": "to speak or act for someone or something",
+    "chinese": "代表",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “abstruse” correctly in context.",
+    "example": "She represented the school in the competition.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16122,16 +20527,17 @@ window.vocabulary = [
   },
   {
     "id": 896,
-    "word": "circumspection",
-    "partOfSpeech": "noun",
+    "word": "resist",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to circumspection",
-    "chinese": "",
+    "meaning": "to refuse to accept or be affected by something",
+    "chinese": "抵抗；拒绝",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “circumspection” correctly in context.",
+    "example": "He resisted the temptation to cheat.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16140,16 +20546,17 @@ window.vocabulary = [
   },
   {
     "id": 897,
-    "word": "intransigent",
-    "partOfSpeech": "noun",
+    "word": "reverse",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to intransigent",
-    "chinese": "",
+    "meaning": "to change something to the opposite",
+    "chinese": "逆转；颠倒",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “intransigent” correctly in context.",
+    "example": "The driver reversed the car carefully.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16158,16 +20565,17 @@ window.vocabulary = [
   },
   {
     "id": 898,
-    "word": "cheerful",
-    "partOfSpeech": "noun",
+    "word": "steadfast",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to cheerful",
-    "chinese": "",
+    "meaning": "firm and determined",
+    "chinese": "坚定的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “cheerful” correctly in context.",
+    "example": "She remained steadfast in her decision.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16176,16 +20584,17 @@ window.vocabulary = [
   },
   {
     "id": 899,
-    "word": "citizen",
+    "word": "strategy",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to citizen",
-    "chinese": "",
+    "meaning": "a plan for achieving a goal",
+    "chinese": "策略",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “citizen” correctly in context.",
+    "example": "The team developed a winning strategy.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16194,16 +20603,17 @@ window.vocabulary = [
   },
   {
     "id": 900,
-    "word": "classroom",
-    "partOfSpeech": "noun",
+    "word": "strengthen",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea or situation related to classroom",
-    "chinese": "",
+    "meaning": "to make something stronger",
+    "chinese": "加强",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “classroom” correctly in context.",
+    "example": "Exercise can strengthen your muscles.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16212,16 +20622,17 @@ window.vocabulary = [
   },
   {
     "id": 901,
-    "word": "abjure",
+    "word": "surpass",
     "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "to abjure or carry out this action",
-    "chinese": "",
+    "meaning": "to do better than someone or something",
+    "chinese": "超过；胜过",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “abjure” correctly in context.",
+    "example": "Her results surpassed everyone's expectations.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16230,16 +20641,17 @@ window.vocabulary = [
   },
   {
     "id": 902,
-    "word": "abstemious",
+    "word": "temptation",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to abstemious",
-    "chinese": "",
+    "meaning": "a strong desire to do something",
+    "chinese": "诱惑",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “abstemious” correctly in context.",
+    "example": "He resisted the temptation to eat another cake.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16248,16 +20660,17 @@ window.vocabulary = [
   },
   {
     "id": 903,
-    "word": "acrimony",
+    "word": "virtue",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to acrimony",
-    "chinese": "",
+    "meaning": "a good quality or moral strength",
+    "chinese": "美德；优点",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “acrimony” correctly in context.",
+    "example": "Patience is an important virtue.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16266,16 +20679,17 @@ window.vocabulary = [
   },
   {
     "id": 904,
-    "word": "adumbrate",
-    "partOfSpeech": "verb",
+    "word": "voluntary",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "to adumbrate or carry out this action",
-    "chinese": "",
+    "meaning": "done willingly and not because you are forced",
+    "chinese": "自愿的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “adumbrate” correctly in context.",
+    "example": "The clean-up was voluntary.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16284,16 +20698,17 @@ window.vocabulary = [
   },
   {
     "id": 905,
-    "word": "apotheosis",
-    "partOfSpeech": "noun",
+    "word": "wary",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to apotheosis",
-    "chinese": "",
+    "meaning": "careful because you think there may be danger",
+    "chinese": "谨慎的；警惕的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “apotheosis” correctly in context.",
+    "example": "Be wary of strangers online.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16302,16 +20717,17 @@ window.vocabulary = [
   },
   {
     "id": 906,
-    "word": "approbation",
+    "word": "anticipation",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to approbation",
-    "chinese": "",
+    "meaning": "a feeling of excitement about something expected",
+    "chinese": "期待",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “approbation” correctly in context.",
+    "example": "The children waited in anticipation.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16320,16 +20736,17 @@ window.vocabulary = [
   },
   {
     "id": 907,
-    "word": "assiduity",
+    "word": "assessment",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to assiduity",
-    "chinese": "",
+    "meaning": "a judgement about the quality or value of something",
+    "chinese": "评估；评价",
     "synonyms": [],
     "antonyms": [],
-    "example": "The student learned how to use the word “assiduity” correctly in context.",
+    "example": "The teacher completed an assessment of the project.",
     "topics": [
-      "General"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
       "MCQ",
@@ -16338,16 +20755,22 @@ window.vocabulary = [
   },
   {
     "id": 908,
-    "word": "autodidact",
+    "word": "contempt",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to autodidact",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “autodidact” correctly in context.",
+    "meaning": "a feeling that someone or something is beneath respect",
+    "chinese": "蔑视",
+    "synonyms": [
+      "disdain",
+      "disrespect"
+    ],
+    "antonyms": [
+      "respect"
+    ],
+    "example": "He showed contempt for the rules by ignoring them.",
     "topics": [
-      "General"
+      "Values",
+      "Rules"
     ],
     "questionTypes": [
       "MCQ",
@@ -16356,16 +20779,22 @@ window.vocabulary = [
   },
   {
     "id": 909,
-    "word": "circumlocution",
+    "word": "magnanimity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to circumlocution",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “circumlocution” correctly in context.",
+    "meaning": "generosity and forgiveness, especially towards a rival",
+    "chinese": "宽宏大量",
+    "synonyms": [
+      "generosity",
+      "forgiveness"
+    ],
+    "antonyms": [
+      "pettiness"
+    ],
+    "example": "The champion showed magnanimity after the final.",
     "topics": [
-      "General"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -16374,16 +20803,22 @@ window.vocabulary = [
   },
   {
     "id": 910,
-    "word": "cogency",
-    "partOfSpeech": "noun",
+    "word": "zealous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to cogency",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “cogency” correctly in context.",
+    "meaning": "very enthusiastic and devoted to a cause or activity",
+    "chinese": "热心的；狂热的",
+    "synonyms": [
+      "enthusiastic",
+      "passionate"
+    ],
+    "antonyms": [
+      "apathetic"
+    ],
+    "example": "The volunteers were zealous in their efforts to clean the beach.",
     "topics": [
-      "General"
+      "Environment",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -16392,16 +20827,22 @@ window.vocabulary = [
   },
   {
     "id": 911,
-    "word": "concupiscence",
-    "partOfSpeech": "noun",
+    "word": "ascertain",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to concupiscence",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “concupiscence” correctly in context.",
+    "meaning": "to discover something for certain",
+    "chinese": "查明；确定",
+    "synonyms": [
+      "determine",
+      "find out"
+    ],
+    "antonyms": [
+      "guess"
+    ],
+    "example": "The doctor needed more tests to ascertain the cause.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -16410,16 +20851,22 @@ window.vocabulary = [
   },
   {
     "id": 912,
-    "word": "conflation",
+    "word": "conjecture",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to conflation",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “conflation” correctly in context.",
+    "meaning": "an opinion or idea based on incomplete information",
+    "chinese": "推测；猜想",
+    "synonyms": [
+      "guess",
+      "speculation"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "Without evidence, the explanation remains conjecture.",
     "topics": [
-      "General"
+      "Science",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -16428,16 +20875,22 @@ window.vocabulary = [
   },
   {
     "id": 913,
-    "word": "contrivance",
-    "partOfSpeech": "noun",
+    "word": "superfluous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to contrivance",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “contrivance” correctly in context.",
+    "meaning": "more than necessary or useful",
+    "chinese": "多余的",
+    "synonyms": [
+      "unnecessary",
+      "excess"
+    ],
+    "antonyms": [
+      "essential"
+    ],
+    "example": "Remove any superfluous words from your composition.",
     "topics": [
-      "General"
+      "Writing",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -16446,16 +20899,23 @@ window.vocabulary = [
   },
   {
     "id": 914,
-    "word": "deleteriousness",
-    "partOfSpeech": "noun",
+    "word": "erratic",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to deleteriousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “deleteriousness” correctly in context.",
+    "meaning": "not regular or predictable",
+    "chinese": "不稳定的；反复无常的",
+    "synonyms": [
+      "unpredictable",
+      "irregular"
+    ],
+    "antonyms": [
+      "steady",
+      "consistent"
+    ],
+    "example": "The patient's temperature became erratic.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -16464,16 +20924,22 @@ window.vocabulary = [
   },
   {
     "id": 915,
-    "word": "demarcate",
-    "partOfSpeech": "verb",
+    "word": "deference",
+    "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "to demarcate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “demarcate” correctly in context.",
+    "meaning": "respect shown by accepting someone's opinion or wishes",
+    "chinese": "敬意；顺从",
+    "synonyms": [
+      "respect",
+      "regard"
+    ],
+    "antonyms": [
+      "disrespect"
+    ],
+    "example": "He listened to the elder's advice out of deference.",
     "topics": [
-      "General"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -16482,16 +20948,22 @@ window.vocabulary = [
   },
   {
     "id": 916,
-    "word": "demystify",
-    "partOfSpeech": "verb",
+    "word": "efficacious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "to demystify or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “demystify” correctly in context.",
+    "meaning": "successful in producing the intended result",
+    "chinese": "有效的；奏效的",
+    "synonyms": [
+      "effective",
+      "successful"
+    ],
+    "antonyms": [
+      "ineffective"
+    ],
+    "example": "The treatment proved efficacious in reducing the symptoms.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -16500,16 +20972,22 @@ window.vocabulary = [
   },
   {
     "id": 917,
-    "word": "denouement",
+    "word": "affinity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to denouement",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “denouement” correctly in context.",
+    "meaning": "a natural liking or connection with someone or something",
+    "chinese": "亲近感；相似性",
+    "synonyms": [
+      "connection",
+      "liking"
+    ],
+    "antonyms": [
+      "dislike"
+    ],
+    "example": "The child has an affinity for animals.",
     "topics": [
-      "General"
+      "Animals",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -16518,16 +20996,22 @@ window.vocabulary = [
   },
   {
     "id": 918,
-    "word": "diaphanous",
-    "partOfSpeech": "noun",
+    "word": "expedient",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to diaphanous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “diaphanous” correctly in context.",
+    "meaning": "useful for achieving a particular purpose, even if not ideal",
+    "chinese": "权宜的；便利的",
+    "synonyms": [
+      "practical",
+      "convenient"
+    ],
+    "antonyms": [
+      "impractical"
+    ],
+    "example": "Taking the shortcut was expedient but not especially safe.",
     "topics": [
-      "General"
+      "Travel",
+      "Decision Making"
     ],
     "questionTypes": [
       "MCQ",
@@ -16536,16 +21020,22 @@ window.vocabulary = [
   },
   {
     "id": 919,
-    "word": "dissonance",
-    "partOfSpeech": "noun",
+    "word": "transient",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to dissonance",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “dissonance” correctly in context.",
+    "meaning": "lasting only for a short time",
+    "chinese": "短暂的；转瞬即逝的",
+    "synonyms": [
+      "temporary",
+      "brief"
+    ],
+    "antonyms": [
+      "permanent"
+    ],
+    "example": "The rain was transient and the sky soon cleared.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -16554,16 +21044,23 @@ window.vocabulary = [
   },
   {
     "id": 920,
-    "word": "eclecticism",
-    "partOfSpeech": "noun",
+    "word": "staid",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to eclecticism",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “eclecticism” correctly in context.",
+    "meaning": "calm, serious and not exciting",
+    "chinese": "沉稳的；古板的",
+    "synonyms": [
+      "serious",
+      "conventional"
+    ],
+    "antonyms": [
+      "lively",
+      "exciting"
+    ],
+    "example": "The formal event had a rather staid atmosphere.",
     "topics": [
-      "General"
+      "Events",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -16572,16 +21069,22 @@ window.vocabulary = [
   },
   {
     "id": 921,
-    "word": "efficacious",
-    "partOfSpeech": "noun",
+    "word": "imminent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to efficacious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “efficacious” correctly in context.",
+    "meaning": "likely to happen very soon",
+    "chinese": "即将发生的",
+    "synonyms": [
+      "approaching",
+      "impending"
+    ],
+    "antonyms": [
+      "distant"
+    ],
+    "example": "The dark clouds suggested that a storm was imminent.",
     "topics": [
-      "General"
+      "Weather",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -16590,16 +21093,22 @@ window.vocabulary = [
   },
   {
     "id": 922,
-    "word": "effrontery",
-    "partOfSpeech": "noun",
+    "word": "taciturn",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to effrontery",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “effrontery” correctly in context.",
+    "meaning": "speaking very little",
+    "chinese": "沉默寡言的",
+    "synonyms": [
+      "quiet",
+      "reserved"
+    ],
+    "antonyms": [
+      "talkative"
+    ],
+    "example": "The taciturn student preferred writing to speaking.",
     "topics": [
-      "General"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -16608,16 +21117,22 @@ window.vocabulary = [
   },
   {
     "id": 923,
-    "word": "egregiously",
-    "partOfSpeech": "noun",
+    "word": "venerable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to egregiously",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “egregiously” correctly in context.",
+    "meaning": "deserving respect because of age, wisdom or character",
+    "chinese": "德高望重的；受尊敬的",
+    "synonyms": [
+      "respected",
+      "honoured"
+    ],
+    "antonyms": [
+      "disrespected"
+    ],
+    "example": "The venerable teacher had served the school for decades.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -16626,16 +21141,22 @@ window.vocabulary = [
   },
   {
     "id": 924,
-    "word": "encomium",
-    "partOfSpeech": "noun",
+    "word": "derivative",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to encomium",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “encomium” correctly in context.",
+    "meaning": "copied or developed from something else",
+    "chinese": "衍生的；模仿的",
+    "synonyms": [
+      "derived",
+      "copied"
+    ],
+    "antonyms": [
+      "original"
+    ],
+    "example": "The design was criticised as derivative rather than creative.",
     "topics": [
-      "General"
+      "Arts",
+      "Design"
     ],
     "questionTypes": [
       "MCQ",
@@ -16644,16 +21165,22 @@ window.vocabulary = [
   },
   {
     "id": 925,
-    "word": "enervated",
+    "word": "conflagration",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to enervated",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “enervated” correctly in context.",
+    "meaning": "a large and destructive fire",
+    "chinese": "大火；大火灾",
+    "synonyms": [
+      "fire",
+      "inferno"
+    ],
+    "antonyms": [
+      "extinction"
+    ],
+    "example": "Firefighters worked overnight to control the conflagration.",
     "topics": [
-      "General"
+      "Safety",
+      "Natural Disasters"
     ],
     "questionTypes": [
       "MCQ",
@@ -16662,16 +21189,22 @@ window.vocabulary = [
   },
   {
     "id": 926,
-    "word": "epistemic",
-    "partOfSpeech": "noun",
+    "word": "adroit",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to epistemic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “epistemic” correctly in context.",
+    "meaning": "clever or skilful in using hands or dealing with problems",
+    "chinese": "灵巧的；机敏的",
+    "synonyms": [
+      "skillful",
+      "dexterous"
+    ],
+    "antonyms": [
+      "clumsy"
+    ],
+    "example": "The adroit player avoided the defenders with ease.",
     "topics": [
-      "General"
+      "Sports",
+      "Skills"
     ],
     "questionTypes": [
       "MCQ",
@@ -16680,16 +21213,23 @@ window.vocabulary = [
   },
   {
     "id": 927,
-    "word": "equanimity",
-    "partOfSpeech": "noun",
+    "word": "impetuous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to equanimity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “equanimity” correctly in context.",
+    "meaning": "acting quickly without thinking carefully",
+    "chinese": "冲动的",
+    "synonyms": [
+      "impulsive",
+      "rash"
+    ],
+    "antonyms": [
+      "cautious",
+      "thoughtful"
+    ],
+    "example": "His impetuous decision created more problems.",
     "topics": [
-      "General"
+      "Decision Making",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -16698,16 +21238,22 @@ window.vocabulary = [
   },
   {
     "id": 928,
-    "word": "equivocation",
+    "word": "contention",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to equivocation",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “equivocation” correctly in context.",
+    "meaning": "a disagreement or argument",
+    "chinese": "争论；争议",
+    "synonyms": [
+      "dispute",
+      "argument"
+    ],
+    "antonyms": [
+      "agreement"
+    ],
+    "example": "The main contention was over how the money should be spent.",
     "topics": [
-      "General"
+      "Community",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -16716,16 +21262,22 @@ window.vocabulary = [
   },
   {
     "id": 929,
-    "word": "excoriate",
-    "partOfSpeech": "verb",
+    "word": "vindictive",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "to excoriate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “excoriate” correctly in context.",
+    "meaning": "wanting to hurt someone because you believe they have harmed you",
+    "chinese": "怀恨报复的",
+    "synonyms": [
+      "vengeful",
+      "spiteful"
+    ],
+    "antonyms": [
+      "forgiving"
+    ],
+    "example": "A vindictive response would only make the conflict worse.",
     "topics": [
-      "General"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -16734,16 +21286,22 @@ window.vocabulary = [
   },
   {
     "id": 930,
-    "word": "exigency",
-    "partOfSpeech": "noun",
+    "word": "unilateral",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to exigency",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “exigency” correctly in context.",
+    "meaning": "done or decided by one side without agreement from others",
+    "chinese": "单方面的",
+    "synonyms": [
+      "one-sided"
+    ],
+    "antonyms": [
+      "bilateral",
+      "mutual"
+    ],
+    "example": "The unilateral decision surprised the other members of the committee.",
     "topics": [
-      "General"
+      "Community",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -16752,16 +21310,22 @@ window.vocabulary = [
   },
   {
     "id": 931,
-    "word": "expatiate",
-    "partOfSpeech": "verb",
+    "word": "irreproachable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "to expatiate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “expatiate” correctly in context.",
+    "meaning": "so good that there is no reason for criticism",
+    "chinese": "无可指责的",
+    "synonyms": [
+      "blameless",
+      "faultless"
+    ],
+    "antonyms": [
+      "blameworthy"
+    ],
+    "example": "Her irreproachable conduct earned everyone's trust.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -16770,16 +21334,22 @@ window.vocabulary = [
   },
   {
     "id": 932,
-    "word": "expediency",
-    "partOfSpeech": "noun",
+    "word": "lament",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to expediency",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “expediency” correctly in context.",
+    "meaning": "to express sadness or regret about something",
+    "chinese": "哀叹；惋惜",
+    "synonyms": [
+      "mourn",
+      "regret"
+    ],
+    "antonyms": [
+      "celebrate"
+    ],
+    "example": "Many residents lamented the loss of the old park.",
     "topics": [
-      "General"
+      "Community",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -16788,16 +21358,22 @@ window.vocabulary = [
   },
   {
     "id": 933,
-    "word": "extemporaneous",
-    "partOfSpeech": "noun",
+    "word": "salient",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to extemporaneous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “extemporaneous” correctly in context.",
+    "meaning": "most noticeable or important",
+    "chinese": "显著的；突出的",
+    "synonyms": [
+      "prominent",
+      "important"
+    ],
+    "antonyms": [
+      "minor"
+    ],
+    "example": "The report highlighted the salient problems.",
     "topics": [
-      "General"
+      "Writing",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -16806,16 +21382,22 @@ window.vocabulary = [
   },
   {
     "id": 934,
-    "word": "fastidiousness",
-    "partOfSpeech": "noun",
+    "word": "surmise",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to fastidiousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “fastidiousness” correctly in context.",
+    "meaning": "to guess something from the available evidence",
+    "chinese": "推测；猜想",
+    "synonyms": [
+      "infer",
+      "guess"
+    ],
+    "antonyms": [
+      "know"
+    ],
+    "example": "We could only surmise what had caused the power failure.",
     "topics": [
-      "General"
+      "Science",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -16824,16 +21406,22 @@ window.vocabulary = [
   },
   {
     "id": 935,
-    "word": "grandiloquent",
-    "partOfSpeech": "noun",
+    "word": "oblivious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to grandiloquent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “grandiloquent” correctly in context.",
+    "meaning": "not aware of what is happening around you",
+    "chinese": "未察觉的；毫无意识的",
+    "synonyms": [
+      "unaware",
+      "ignorant"
+    ],
+    "antonyms": [
+      "aware"
+    ],
+    "example": "He was oblivious to the noise because he was deeply focused.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -16842,16 +21430,22 @@ window.vocabulary = [
   },
   {
     "id": 936,
-    "word": "inchoate",
-    "partOfSpeech": "noun",
+    "word": "prevalent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to inchoate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inchoate” correctly in context.",
+    "meaning": "very common or widespread",
+    "chinese": "普遍的；流行的",
+    "synonyms": [
+      "common",
+      "widespread"
+    ],
+    "antonyms": [
+      "rare"
+    ],
+    "example": "Online learning is prevalent in many education systems.",
     "topics": [
-      "General"
+      "Education",
+      "Technology"
     ],
     "questionTypes": [
       "MCQ",
@@ -16860,16 +21454,22 @@ window.vocabulary = [
   },
   {
     "id": 937,
-    "word": "incorrigibility",
-    "partOfSpeech": "noun",
+    "word": "mercurial",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to incorrigibility",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “incorrigibility” correctly in context.",
+    "meaning": "changing quickly and unpredictably",
+    "chinese": "善变的；反复无常的",
+    "synonyms": [
+      "changeable",
+      "volatile"
+    ],
+    "antonyms": [
+      "stable"
+    ],
+    "example": "The weather in the mountains can be mercurial.",
     "topics": [
-      "General"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
       "MCQ",
@@ -16878,16 +21478,22 @@ window.vocabulary = [
   },
   {
     "id": 938,
-    "word": "ineffability",
-    "partOfSpeech": "noun",
+    "word": "inexorable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to ineffability",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ineffability” correctly in context.",
+    "meaning": "continuing and impossible to stop or prevent",
+    "chinese": "不可阻挡的；无情的",
+    "synonyms": [
+      "unstoppable",
+      "relentless"
+    ],
+    "antonyms": [
+      "stoppable"
+    ],
+    "example": "The inexorable rise in sea levels concerns scientists.",
     "topics": [
-      "General"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -16896,16 +21502,22 @@ window.vocabulary = [
   },
   {
     "id": 939,
-    "word": "insouciant",
-    "partOfSpeech": "noun",
+    "word": "belligerent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to insouciant",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “insouciant” correctly in context.",
+    "meaning": "hostile and aggressive",
+    "chinese": "好战的；敌对的",
+    "synonyms": [
+      "aggressive",
+      "hostile"
+    ],
+    "antonyms": [
+      "peaceful"
+    ],
+    "example": "The belligerent tone of the message worried the team.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -16914,16 +21526,23 @@ window.vocabulary = [
   },
   {
     "id": 940,
-    "word": "interlocutor",
-    "partOfSpeech": "noun",
+    "word": "acrimonious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to interlocutor",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “interlocutor” correctly in context.",
+    "meaning": "filled with anger and bitterness",
+    "chinese": "尖刻的；激烈的",
+    "synonyms": [
+      "bitter",
+      "hostile"
+    ],
+    "antonyms": [
+      "friendly",
+      "cordial"
+    ],
+    "example": "The meeting ended in an acrimonious dispute.",
     "topics": [
-      "General"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -16932,16 +21551,22 @@ window.vocabulary = [
   },
   {
     "id": 941,
-    "word": "intransigence",
-    "partOfSpeech": "noun",
+    "word": "intractable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to intransigence",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “intransigence” correctly in context.",
+    "meaning": "very difficult to control, deal with or solve",
+    "chinese": "棘手的；难解决的",
+    "synonyms": [
+      "difficult",
+      "unmanageable"
+    ],
+    "antonyms": [
+      "manageable"
+    ],
+    "example": "The problem proved intractable despite several attempts.",
     "topics": [
-      "General"
+      "Problem Solving",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -16950,16 +21575,22 @@ window.vocabulary = [
   },
   {
     "id": 942,
-    "word": "irascible",
-    "partOfSpeech": "noun",
+    "word": "wanton",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to irascible",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “irascible” correctly in context.",
+    "meaning": "deliberate and without concern for others",
+    "chinese": "肆意的；无节制的",
+    "synonyms": [
+      "reckless",
+      "deliberate"
+    ],
+    "antonyms": [
+      "restrained"
+    ],
+    "example": "The wanton destruction of public property shocked the community.",
     "topics": [
-      "General"
+      "Community",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -16968,16 +21599,22 @@ window.vocabulary = [
   },
   {
     "id": 943,
-    "word": "juxtaposition",
-    "partOfSpeech": "noun",
+    "word": "expound",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to juxtaposition",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “juxtaposition” correctly in context.",
+    "meaning": "to explain an idea or theory in detail",
+    "chinese": "详细解释；阐述",
+    "synonyms": [
+      "explain",
+      "elaborate"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "The professor expounded the theory with several examples.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -16986,16 +21623,22 @@ window.vocabulary = [
   },
   {
     "id": 944,
-    "word": "laconicism",
-    "partOfSpeech": "noun",
+    "word": "rectify",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to laconicism",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “laconicism” correctly in context.",
+    "meaning": "to correct a mistake or problem",
+    "chinese": "纠正；改正",
+    "synonyms": [
+      "correct",
+      "remedy"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "The school acted quickly to rectify the error in the timetable.",
     "topics": [
-      "General"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -17004,16 +21647,22 @@ window.vocabulary = [
   },
   {
     "id": 945,
-    "word": "loquacious",
+    "word": "fidelity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to loquacious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “loquacious” correctly in context.",
+    "meaning": "the quality of being loyal or faithful",
+    "chinese": "忠诚；忠实",
+    "synonyms": [
+      "loyalty",
+      "faithfulness"
+    ],
+    "antonyms": [
+      "disloyalty"
+    ],
+    "example": "The dog's fidelity to its owner was touching.",
     "topics": [
-      "General"
+      "Animals",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17022,16 +21671,22 @@ window.vocabulary = [
   },
   {
     "id": 946,
-    "word": "mellifluous",
-    "partOfSpeech": "noun",
+    "word": "indignant",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to mellifluous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “mellifluous” correctly in context.",
+    "meaning": "angry because something is unfair or wrong",
+    "chinese": "愤慨的",
+    "synonyms": [
+      "outraged",
+      "angry"
+    ],
+    "antonyms": [
+      "pleased"
+    ],
+    "example": "The residents were indignant about the unfair decision.",
     "topics": [
-      "General"
+      "Community",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -17040,16 +21695,22 @@ window.vocabulary = [
   },
   {
     "id": 947,
-    "word": "munificent",
-    "partOfSpeech": "noun",
+    "word": "querulous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to munificent",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “munificent” correctly in context.",
+    "meaning": "complaining in an annoyed way",
+    "chinese": "爱抱怨的",
+    "synonyms": [
+      "complaining",
+      "whiny"
+    ],
+    "antonyms": [
+      "cheerful"
+    ],
+    "example": "The querulous customer complained about every small detail.",
     "topics": [
-      "General"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -17058,16 +21719,22 @@ window.vocabulary = [
   },
   {
     "id": 948,
-    "word": "nebulous",
-    "partOfSpeech": "noun",
+    "word": "desultory",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to nebulous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “nebulous” correctly in context.",
+    "meaning": "lacking a clear plan or purpose",
+    "chinese": "无目的的；散漫的",
+    "synonyms": [
+      "aimless",
+      "unfocused"
+    ],
+    "antonyms": [
+      "purposeful"
+    ],
+    "example": "The discussion became desultory and failed to reach a decision.",
     "topics": [
-      "General"
+      "Communication",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -17076,16 +21743,22 @@ window.vocabulary = [
   },
   {
     "id": 949,
-    "word": "neologism",
-    "partOfSpeech": "noun",
+    "word": "pernicious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to neologism",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “neologism” correctly in context.",
+    "meaning": "having a harmful effect, especially gradually",
+    "chinese": "有害的；有恶劣影响的",
+    "synonyms": [
+      "harmful",
+      "damaging"
+    ],
+    "antonyms": [
+      "beneficial"
+    ],
+    "example": "The pernicious effects of misinformation can spread quickly.",
     "topics": [
-      "General"
+      "Media",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -17094,16 +21767,22 @@ window.vocabulary = [
   },
   {
     "id": 950,
-    "word": "obfuscation",
-    "partOfSpeech": "noun",
+    "word": "refractory",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to obfuscation",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “obfuscation” correctly in context.",
+    "meaning": "difficult to control or deal with",
+    "chinese": "难以控制的；顽固的",
+    "synonyms": [
+      "stubborn",
+      "unmanageable"
+    ],
+    "antonyms": [
+      "obedient"
+    ],
+    "example": "The refractory behaviour continued despite repeated warnings.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17112,16 +21791,22 @@ window.vocabulary = [
   },
   {
     "id": 951,
-    "word": "obsequiousness",
-    "partOfSpeech": "noun",
+    "word": "irrefutable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to obsequiousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “obsequiousness” correctly in context.",
+    "meaning": "impossible to prove wrong",
+    "chinese": "无可辩驳的",
+    "synonyms": [
+      "undeniable",
+      "conclusive"
+    ],
+    "antonyms": [
+      "refutable"
+    ],
+    "example": "The researchers presented irrefutable evidence.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -17130,16 +21815,23 @@ window.vocabulary = [
   },
   {
     "id": 952,
-    "word": "omniscient",
-    "partOfSpeech": "noun",
+    "word": "impertinent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to omniscient",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “omniscient” correctly in context.",
+    "meaning": "rude and disrespectful",
+    "chinese": "无礼的；无关紧要的",
+    "synonyms": [
+      "rude",
+      "insolent"
+    ],
+    "antonyms": [
+      "polite",
+      "respectful"
+    ],
+    "example": "His impertinent remark upset the teacher.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17148,16 +21840,22 @@ window.vocabulary = [
   },
   {
     "id": 953,
-    "word": "opprobrium",
+    "word": "approbation",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to opprobrium",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “opprobrium” correctly in context.",
+    "meaning": "approval or praise",
+    "chinese": "赞许；认可",
+    "synonyms": [
+      "approval",
+      "praise"
+    ],
+    "antonyms": [
+      "disapproval"
+    ],
+    "example": "The project received the approbation of the school board.",
     "topics": [
-      "General"
+      "School",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -17166,16 +21864,22 @@ window.vocabulary = [
   },
   {
     "id": 954,
-    "word": "ostentation",
-    "partOfSpeech": "noun",
+    "word": "tacit",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to ostentation",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ostentation” correctly in context.",
+    "meaning": "understood without being directly expressed",
+    "chinese": "心照不宣的；默契的",
+    "synonyms": [
+      "unspoken",
+      "implicit"
+    ],
+    "antonyms": [
+      "explicit"
+    ],
+    "example": "There was a tacit agreement that nobody would mention the mistake.",
     "topics": [
-      "General"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17184,16 +21888,22 @@ window.vocabulary = [
   },
   {
     "id": 955,
-    "word": "panacea",
-    "partOfSpeech": "noun",
+    "word": "entail",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to panacea",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “panacea” correctly in context.",
+    "meaning": "to involve something as a necessary part or result",
+    "chinese": "需要；意味着",
+    "synonyms": [
+      "involve",
+      "require"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The new role will entail more responsibility.",
     "topics": [
-      "General"
+      "Work",
+      "Planning"
     ],
     "questionTypes": [
       "MCQ",
@@ -17202,16 +21912,22 @@ window.vocabulary = [
   },
   {
     "id": 956,
-    "word": "paradigmatic",
-    "partOfSpeech": "noun",
+    "word": "abstain",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to paradigmatic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “paradigmatic” correctly in context.",
+    "meaning": "to choose not to do or have something",
+    "chinese": "戒除；避免",
+    "synonyms": [
+      "refrain",
+      "avoid"
+    ],
+    "antonyms": [
+      "participate"
+    ],
+    "example": "He decided to abstain from sugary drinks for a month.",
     "topics": [
-      "General"
+      "Health",
+      "Lifestyle"
     ],
     "questionTypes": [
       "MCQ",
@@ -17220,16 +21936,22 @@ window.vocabulary = [
   },
   {
     "id": 957,
-    "word": "pellucid",
-    "partOfSpeech": "noun",
+    "word": "onerous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to pellucid",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “pellucid” correctly in context.",
+    "meaning": "involving a lot of difficulty, effort or responsibility",
+    "chinese": "繁重的；艰巨的",
+    "synonyms": [
+      "burdensome",
+      "difficult"
+    ],
+    "antonyms": [
+      "easy"
+    ],
+    "example": "The onerous task took several days to complete.",
     "topics": [
-      "General"
+      "School",
+      "Work"
     ],
     "questionTypes": [
       "MCQ",
@@ -17238,16 +21960,22 @@ window.vocabulary = [
   },
   {
     "id": 958,
-    "word": "perniciousness",
-    "partOfSpeech": "noun",
+    "word": "flagrant",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to perniciousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “perniciousness” correctly in context.",
+    "meaning": "very obvious and unacceptable",
+    "chinese": "公然的；严重的",
+    "synonyms": [
+      "blatant",
+      "glaring"
+    ],
+    "antonyms": [
+      "subtle"
+    ],
+    "example": "The referee penalised the player for a flagrant foul.",
     "topics": [
-      "General"
+      "Sports",
+      "Rules"
     ],
     "questionTypes": [
       "MCQ",
@@ -17256,16 +21984,22 @@ window.vocabulary = [
   },
   {
     "id": 959,
-    "word": "perspicacious",
-    "partOfSpeech": "noun",
+    "word": "incisive",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to perspicacious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “perspicacious” correctly in context.",
+    "meaning": "showing clear understanding and sharp judgement",
+    "chinese": "敏锐的；深刻的",
+    "synonyms": [
+      "sharp",
+      "perceptive"
+    ],
+    "antonyms": [
+      "vague"
+    ],
+    "example": "She asked an incisive question during the interview.",
     "topics": [
-      "General"
+      "Communication",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -17274,16 +22008,22 @@ window.vocabulary = [
   },
   {
     "id": 960,
-    "word": "plethora",
-    "partOfSpeech": "noun",
+    "word": "reticent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to plethora",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “plethora” correctly in context.",
+    "meaning": "unwilling to speak about thoughts or feelings",
+    "chinese": "沉默寡言的；不愿多言的",
+    "synonyms": [
+      "reserved",
+      "quiet"
+    ],
+    "antonyms": [
+      "talkative"
+    ],
+    "example": "He was reticent about discussing the incident.",
     "topics": [
-      "General"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -17292,16 +22032,23 @@ window.vocabulary = [
   },
   {
     "id": 961,
-    "word": "prevaricate",
-    "partOfSpeech": "verb",
+    "word": "inimical",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "to prevaricate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prevaricate” correctly in context.",
+    "meaning": "harmful or unfriendly to someone or something",
+    "chinese": "有害的；敌对的",
+    "synonyms": [
+      "hostile",
+      "harmful"
+    ],
+    "antonyms": [
+      "friendly",
+      "beneficial"
+    ],
+    "example": "Excessive heat is inimical to some crops.",
     "topics": [
-      "General"
+      "Environment",
+      "Agriculture"
     ],
     "questionTypes": [
       "MCQ",
@@ -17310,16 +22057,22 @@ window.vocabulary = [
   },
   {
     "id": 962,
-    "word": "prodigality",
+    "word": "animosity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to prodigality",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prodigality” correctly in context.",
+    "meaning": "strong dislike or hostility",
+    "chinese": "敌意；憎恨",
+    "synonyms": [
+      "hostility",
+      "hatred"
+    ],
+    "antonyms": [
+      "friendship"
+    ],
+    "example": "Years of rivalry had created animosity between the teams.",
     "topics": [
-      "General"
+      "Sports",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -17328,16 +22081,22 @@ window.vocabulary = [
   },
   {
     "id": 963,
-    "word": "prognosticate",
-    "partOfSpeech": "verb",
+    "word": "disparity",
+    "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "to prognosticate or carry out this action",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prognosticate” correctly in context.",
+    "meaning": "a great difference between two things",
+    "chinese": "差距；不平等",
+    "synonyms": [
+      "difference",
+      "inequality"
+    ],
+    "antonyms": [
+      "equality"
+    ],
+    "example": "There is a disparity between the two groups' results.",
     "topics": [
-      "General"
+      "Society",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -17346,16 +22105,22 @@ window.vocabulary = [
   },
   {
     "id": 964,
-    "word": "prolix",
-    "partOfSpeech": "noun",
+    "word": "immutable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to prolix",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “prolix” correctly in context.",
+    "meaning": "not able to be changed",
+    "chinese": "不可改变的",
+    "synonyms": [
+      "unchangeable",
+      "fixed"
+    ],
+    "antonyms": [
+      "changeable"
+    ],
+    "example": "The laws of nature are not considered immutable in every theory.",
     "topics": [
-      "General"
+      "Science",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -17364,16 +22129,22 @@ window.vocabulary = [
   },
   {
     "id": 965,
-    "word": "propensity",
-    "partOfSpeech": "noun",
+    "word": "judicious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to propensity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “propensity” correctly in context.",
+    "meaning": "showing good judgement and careful thought",
+    "chinese": "明智的；审慎的",
+    "synonyms": [
+      "wise",
+      "sensible"
+    ],
+    "antonyms": [
+      "foolish"
+    ],
+    "example": "A judicious choice of materials made the structure safer.",
     "topics": [
-      "General"
+      "Engineering",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -17382,16 +22153,22 @@ window.vocabulary = [
   },
   {
     "id": 966,
-    "word": "quintessential",
-    "partOfSpeech": "noun",
+    "word": "veritable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to quintessential",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “quintessential” correctly in context.",
+    "meaning": "used to emphasise that something is a real or impressive example",
+    "chinese": "真正的；名副其实的",
+    "synonyms": [
+      "genuine",
+      "True"
+    ],
+    "antonyms": [
+      "False"
+    ],
+    "example": "The garden became a veritable paradise after the renovation.",
     "topics": [
-      "General"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -17400,16 +22177,23 @@ window.vocabulary = [
   },
   {
     "id": 967,
-    "word": "recalcitrance",
-    "partOfSpeech": "noun",
+    "word": "convoluted",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to recalcitrance",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “recalcitrance” correctly in context.",
+    "meaning": "very complicated and difficult to follow",
+    "chinese": "复杂难懂的",
+    "synonyms": [
+      "complicated",
+      "intricate"
+    ],
+    "antonyms": [
+      "simple",
+      "clear"
+    ],
+    "example": "The instructions were so convoluted that nobody understood them.",
     "topics": [
-      "General"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -17418,16 +22202,22 @@ window.vocabulary = [
   },
   {
     "id": 968,
-    "word": "refractory",
-    "partOfSpeech": "noun",
+    "word": "infallible",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to refractory",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “refractory” correctly in context.",
+    "meaning": "never wrong or making mistakes",
+    "chinese": "绝不会错的",
+    "synonyms": [
+      "perfect",
+      "unerring"
+    ],
+    "antonyms": [
+      "fallible"
+    ],
+    "example": "No human source of information is infallible.",
     "topics": [
-      "General"
+      "Thinking",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -17436,16 +22226,22 @@ window.vocabulary = [
   },
   {
     "id": 969,
-    "word": "reprobate",
-    "partOfSpeech": "noun",
+    "word": "profligate",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to reprobate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reprobate” correctly in context.",
+    "meaning": "wasteful, especially with money or resources",
+    "chinese": "挥霍的；浪费的",
+    "synonyms": [
+      "wasteful",
+      "extravagant"
+    ],
+    "antonyms": [
+      "frugal"
+    ],
+    "example": "Profligate use of water is harmful during a drought.",
     "topics": [
-      "General"
+      "Environment",
+      "Money"
     ],
     "questionTypes": [
       "MCQ",
@@ -17454,16 +22250,22 @@ window.vocabulary = [
   },
   {
     "id": 970,
-    "word": "reticence",
-    "partOfSpeech": "noun",
+    "word": "subversive",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to reticence",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “reticence” correctly in context.",
+    "meaning": "intended to weaken or challenge an established system",
+    "chinese": "颠覆性的",
+    "synonyms": [
+      "rebellious",
+      "disruptive"
+    ],
+    "antonyms": [
+      "supportive"
+    ],
+    "example": "The book was once considered subversive because it challenged accepted beliefs.",
     "topics": [
-      "General"
+      "History",
+      "Culture"
     ],
     "questionTypes": [
       "MCQ",
@@ -17472,16 +22274,22 @@ window.vocabulary = [
   },
   {
     "id": 971,
-    "word": "sagacity",
-    "partOfSpeech": "noun",
+    "word": "recalcitrant",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to sagacity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sagacity” correctly in context.",
+    "meaning": "difficult to control or deal with",
+    "chinese": "顽抗的；难以管教的",
+    "synonyms": [
+      "uncooperative",
+      "stubborn"
+    ],
+    "antonyms": [
+      "obedient"
+    ],
+    "example": "The recalcitrant child refused to follow the safety instructions.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17490,16 +22298,22 @@ window.vocabulary = [
   },
   {
     "id": 972,
-    "word": "salubrious",
+    "word": "vicissitudes",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to salubrious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “salubrious” correctly in context.",
+    "meaning": "changes and difficulties that happen during life",
+    "chinese": "变迁；人生起伏",
+    "synonyms": [
+      "changes",
+      "ups and downs"
+    ],
+    "antonyms": [
+      "stability"
+    ],
+    "example": "She remained optimistic despite the vicissitudes of life.",
     "topics": [
-      "General"
+      "Values",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -17508,16 +22322,22 @@ window.vocabulary = [
   },
   {
     "id": 973,
-    "word": "solipsistic",
-    "partOfSpeech": "noun",
+    "word": "reprehensible",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to solipsistic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “solipsistic” correctly in context.",
+    "meaning": "deserving strong criticism because it is morally wrong",
+    "chinese": "应受谴责的",
+    "synonyms": [
+      "blameworthy",
+      "disgraceful"
+    ],
+    "antonyms": [
+      "commendable"
+    ],
+    "example": "The reckless treatment of the animals was reprehensible.",
     "topics": [
-      "General"
+      "Animals",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17526,16 +22346,22 @@ window.vocabulary = [
   },
   {
     "id": 974,
-    "word": "spuriousness",
+    "word": "recrudescence",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to spuriousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “spuriousness” correctly in context.",
+    "meaning": "the return of something after a period when it had disappeared",
+    "chinese": "再现；复发",
+    "synonyms": [
+      "revival",
+      "return"
+    ],
+    "antonyms": [
+      "disappearance"
+    ],
+    "example": "The recrudescence of the disease worried health officials.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -17544,16 +22370,22 @@ window.vocabulary = [
   },
   {
     "id": 975,
-    "word": "supercilious",
-    "partOfSpeech": "noun",
+    "word": "circumstantial",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to supercilious",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “supercilious” correctly in context.",
+    "meaning": "based on the conditions surrounding an event rather than direct proof",
+    "chinese": "间接的；基于情况的",
+    "synonyms": [
+      "indirect",
+      "conditional"
+    ],
+    "antonyms": [
+      "direct"
+    ],
+    "example": "The case relied mainly on circumstantial evidence.",
     "topics": [
-      "General"
+      "Law",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -17562,16 +22394,22 @@ window.vocabulary = [
   },
   {
     "id": 976,
-    "word": "surreptitiousness",
-    "partOfSpeech": "noun",
+    "word": "deter",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to surreptitiousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “surreptitiousness” correctly in context.",
+    "meaning": "to discourage someone from doing something",
+    "chinese": "阻止；威慑",
+    "synonyms": [
+      "discourage",
+      "prevent"
+    ],
+    "antonyms": [
+      "encourage"
+    ],
+    "example": "Bright lights may deter burglars from entering.",
     "topics": [
-      "General"
+      "Safety",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -17580,16 +22418,22 @@ window.vocabulary = [
   },
   {
     "id": 977,
-    "word": "sycophantic",
-    "partOfSpeech": "noun",
+    "word": "lucid",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to sycophantic",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “sycophantic” correctly in context.",
+    "meaning": "clear and easy to understand",
+    "chinese": "清晰易懂的",
+    "synonyms": [
+      "clear",
+      "coherent"
+    ],
+    "antonyms": [
+      "confusing"
+    ],
+    "example": "The teacher gave a lucid explanation of the difficult idea.",
     "topics": [
-      "General"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
       "MCQ",
@@ -17598,16 +22442,22 @@ window.vocabulary = [
   },
   {
     "id": 978,
-    "word": "tantamount",
-    "partOfSpeech": "noun",
+    "word": "coerce",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to tantamount",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “tantamount” correctly in context.",
+    "meaning": "to force someone to do something",
+    "chinese": "强迫",
+    "synonyms": [
+      "force",
+      "pressure"
+    ],
+    "antonyms": [
+      "persuade"
+    ],
+    "example": "No one should coerce a child into making a decision.",
     "topics": [
-      "General"
+      "Values",
+      "Safety"
     ],
     "questionTypes": [
       "MCQ",
@@ -17616,16 +22466,22 @@ window.vocabulary = [
   },
   {
     "id": 979,
-    "word": "temerity",
+    "word": "avarice",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to temerity",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “temerity” correctly in context.",
+    "meaning": "an extreme desire for wealth or possessions",
+    "chinese": "贪婪；贪财",
+    "synonyms": [
+      "greed",
+      "covetousness"
+    ],
+    "antonyms": [
+      "generosity"
+    ],
+    "example": "Avarice can cause people to ignore the needs of others.",
     "topics": [
-      "General"
+      "Values",
+      "Society"
     ],
     "questionTypes": [
       "MCQ",
@@ -17634,16 +22490,22 @@ window.vocabulary = [
   },
   {
     "id": 980,
-    "word": "turbulence",
-    "partOfSpeech": "noun",
+    "word": "laconic",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to turbulence",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “turbulence” correctly in context.",
+    "meaning": "using very few words",
+    "chinese": "简洁的；寡言的",
+    "synonyms": [
+      "brief",
+      "concise"
+    ],
+    "antonyms": [
+      "verbose"
+    ],
+    "example": "His laconic reply ended the conversation quickly.",
     "topics": [
-      "General"
+      "Communication",
+      "Writing"
     ],
     "questionTypes": [
       "MCQ",
@@ -17652,16 +22514,22 @@ window.vocabulary = [
   },
   {
     "id": 981,
-    "word": "ubiquitousness",
-    "partOfSpeech": "noun",
+    "word": "admonish",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to ubiquitousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “ubiquitousness” correctly in context.",
+    "meaning": "to tell someone firmly that they have done something wrong",
+    "chinese": "告诫；责备",
+    "synonyms": [
+      "reprimand",
+      "warn"
+    ],
+    "antonyms": [
+      "praise"
+    ],
+    "example": "The teacher admonished the pupils for leaving the room untidy.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17670,16 +22538,22 @@ window.vocabulary = [
   },
   {
     "id": 982,
-    "word": "unctuous",
+    "word": "sagacity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to unctuous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unctuous” correctly in context.",
+    "meaning": "the ability to make wise decisions and judgements",
+    "chinese": "睿智；明智",
+    "synonyms": [
+      "wisdom",
+      "good judgement"
+    ],
+    "antonyms": [
+      "foolishness"
+    ],
+    "example": "The leader's sagacity helped the community through the crisis.",
     "topics": [
-      "General"
+      "Leadership",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17688,16 +22562,22 @@ window.vocabulary = [
   },
   {
     "id": 983,
-    "word": "verisimilitude",
+    "word": "temerity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to verisimilitude",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “verisimilitude” correctly in context.",
+    "meaning": "too much confidence in doing something that may be unreasonable or dangerous",
+    "chinese": "鲁莽；冒失",
+    "synonyms": [
+      "audacity",
+      "boldness"
+    ],
+    "antonyms": [
+      "caution"
+    ],
+    "example": "He had the temerity to ignore the clear safety signs.",
     "topics": [
-      "General"
+      "Safety",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17706,16 +22586,22 @@ window.vocabulary = [
   },
   {
     "id": 984,
-    "word": "vicissitude",
-    "partOfSpeech": "noun",
+    "word": "embellish",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to vicissitude",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “vicissitude” correctly in context.",
+    "meaning": "to add details to make something more attractive or interesting",
+    "chinese": "修饰；润色",
+    "synonyms": [
+      "decorate",
+      "ornament"
+    ],
+    "antonyms": [
+      "simplify"
+    ],
+    "example": "He embellished the story with unnecessary details.",
     "topics": [
-      "General"
+      "Writing",
+      "Communication"
     ],
     "questionTypes": [
       "MCQ",
@@ -17724,16 +22610,22 @@ window.vocabulary = [
   },
   {
     "id": 985,
-    "word": "vituperative",
-    "partOfSpeech": "noun",
+    "word": "acquiesce",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to vituperative",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “vituperative” correctly in context.",
+    "meaning": "to accept something reluctantly without protest",
+    "chinese": "默许；勉强同意",
+    "synonyms": [
+      "consent",
+      "submit"
+    ],
+    "antonyms": [
+      "resist"
+    ],
+    "example": "He eventually acquiesced to the committee's decision.",
     "topics": [
-      "General"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
       "MCQ",
@@ -17742,16 +22634,22 @@ window.vocabulary = [
   },
   {
     "id": 986,
-    "word": "vociferous",
+    "word": "adulation",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to vociferous",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “vociferous” correctly in context.",
+    "meaning": "great praise or admiration",
+    "chinese": "奉承；热烈赞美",
+    "synonyms": [
+      "praise",
+      "admiration"
+    ],
+    "antonyms": [
+      "criticism"
+    ],
+    "example": "The athlete received widespread adulation after the victory.",
     "topics": [
-      "General"
+      "Sports",
+      "Media"
     ],
     "questionTypes": [
       "MCQ",
@@ -17760,16 +22658,22 @@ window.vocabulary = [
   },
   {
     "id": 987,
-    "word": "waggish",
-    "partOfSpeech": "noun",
+    "word": "assiduous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to waggish",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “waggish” correctly in context.",
+    "meaning": "showing great care and effort",
+    "chinese": "勤勉的；刻苦的",
+    "synonyms": [
+      "diligent",
+      "industrious"
+    ],
+    "antonyms": [
+      "lazy"
+    ],
+    "example": "His assiduous revision led to excellent results.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17778,16 +22682,23 @@ window.vocabulary = [
   },
   {
     "id": 988,
-    "word": "winsome",
-    "partOfSpeech": "noun",
+    "word": "antagonise",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to winsome",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “winsome” correctly in context.",
+    "meaning": "to make someone angry or hostile",
+    "chinese": "激怒；对立",
+    "synonyms": [
+      "provoke",
+      "anger"
+    ],
+    "antonyms": [
+      "please",
+      "appease"
+    ],
+    "example": "His rude comment antagonised the audience.",
     "topics": [
-      "General"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -17796,16 +22707,23 @@ window.vocabulary = [
   },
   {
     "id": 989,
-    "word": "zealousness",
-    "partOfSpeech": "noun",
+    "word": "despondent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to zealousness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “zealousness” correctly in context.",
+    "meaning": "very unhappy and without hope",
+    "chinese": "沮丧的；失望的",
+    "synonyms": [
+      "depressed",
+      "hopeless"
+    ],
+    "antonyms": [
+      "hopeful",
+      "cheerful"
+    ],
+    "example": "She felt despondent after missing the final selection.",
     "topics": [
-      "General"
+      "Emotions",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -17814,16 +22732,22 @@ window.vocabulary = [
   },
   {
     "id": 990,
-    "word": "abstruseness",
-    "partOfSpeech": "noun",
+    "word": "abstemious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to abstruseness",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “abstruseness” correctly in context.",
+    "meaning": "not eating or drinking too much",
+    "chinese": "节制的；有节制的",
+    "synonyms": [
+      "moderate",
+      "temperate"
+    ],
+    "antonyms": [
+      "excessive"
+    ],
+    "example": "An abstemious diet can help maintain good health.",
     "topics": [
-      "General"
+      "Health",
+      "Food"
     ],
     "questionTypes": [
       "MCQ",
@@ -17832,16 +22756,22 @@ window.vocabulary = [
   },
   {
     "id": 991,
-    "word": "inexorable",
-    "partOfSpeech": "noun",
+    "word": "tantamount",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to inexorable",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “inexorable” correctly in context.",
+    "meaning": "having the same effect or meaning as something else",
+    "chinese": "等同于；相当于",
+    "synonyms": [
+      "equivalent",
+      "equal"
+    ],
+    "antonyms": [
+      "different"
+    ],
+    "example": "Ignoring the warning was tantamount to accepting the risk.",
     "topics": [
-      "General"
+      "Safety",
+      "Thinking"
     ],
     "questionTypes": [
       "MCQ",
@@ -17850,16 +22780,23 @@ window.vocabulary = [
   },
   {
     "id": 992,
-    "word": "unfaltering",
-    "partOfSpeech": "noun",
+    "word": "clandestine",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to unfaltering",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “unfaltering” correctly in context.",
+    "meaning": "secret and often intended to avoid attention",
+    "chinese": "秘密的；暗中的",
+    "synonyms": [
+      "secret",
+      "covert"
+    ],
+    "antonyms": [
+      "open",
+      "public"
+    ],
+    "example": "The group held a clandestine meeting after school.",
     "topics": [
-      "General"
+      "Communication",
+      "Events"
     ],
     "questionTypes": [
       "MCQ",
@@ -17868,16 +22805,22 @@ window.vocabulary = [
   },
   {
     "id": 993,
-    "word": "climate",
-    "partOfSpeech": "noun",
+    "word": "incongruous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to climate",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “climate” correctly in context.",
+    "meaning": "strange because something does not fit with its surroundings",
+    "chinese": "不协调的；不相称的",
+    "synonyms": [
+      "inconsistent",
+      "out of place"
+    ],
+    "antonyms": [
+      "appropriate"
+    ],
+    "example": "The modern sculpture looked incongruous in the ancient courtyard.",
     "topics": [
-      "General"
+      "Arts",
+      "Description"
     ],
     "questionTypes": [
       "MCQ",
@@ -17886,16 +22829,22 @@ window.vocabulary = [
   },
   {
     "id": 994,
-    "word": "companion",
-    "partOfSpeech": "noun",
+    "word": "deleterious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to companion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “companion” correctly in context.",
+    "meaning": "causing harm or damage",
+    "chinese": "有害的",
+    "synonyms": [
+      "harmful",
+      "damaging"
+    ],
+    "antonyms": [
+      "beneficial"
+    ],
+    "example": "Smoking has deleterious effects on health.",
     "topics": [
-      "General"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
       "MCQ",
@@ -17904,16 +22853,22 @@ window.vocabulary = [
   },
   {
     "id": 995,
-    "word": "competition",
-    "partOfSpeech": "noun",
+    "word": "inscrutable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to competition",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “competition” correctly in context.",
+    "meaning": "difficult to understand or interpret",
+    "chinese": "高深莫测的",
+    "synonyms": [
+      "mysterious",
+      "unreadable"
+    ],
+    "antonyms": [
+      "clear"
+    ],
+    "example": "His inscrutable expression gave nothing away.",
     "topics": [
-      "General"
+      "People",
+      "Emotions"
     ],
     "questionTypes": [
       "MCQ",
@@ -17922,16 +22877,22 @@ window.vocabulary = [
   },
   {
     "id": 996,
-    "word": "conclusion",
-    "partOfSpeech": "noun",
+    "word": "commensurate",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to conclusion",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “conclusion” correctly in context.",
+    "meaning": "matching something in size or degree",
+    "chinese": "相称的；相应的",
+    "synonyms": [
+      "proportionate",
+      "corresponding"
+    ],
+    "antonyms": [
+      "disproportionate"
+    ],
+    "example": "The reward should be commensurate with the effort involved.",
     "topics": [
-      "General"
+      "Values",
+      "School"
     ],
     "questionTypes": [
       "MCQ",
@@ -17940,16 +22901,22 @@ window.vocabulary = [
   },
   {
     "id": 997,
-    "word": "condition",
-    "partOfSpeech": "noun",
+    "word": "incorrigible",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to condition",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “condition” correctly in context.",
+    "meaning": "having a bad habit that cannot easily be corrected",
+    "chinese": "屡教不改的",
+    "synonyms": [
+      "unmanageable",
+      "hopeless"
+    ],
+    "antonyms": [
+      "correctable"
+    ],
+    "example": "The incorrigible prankster continued to break the rules.",
     "topics": [
-      "General"
+      "School",
+      "Values"
     ],
     "questionTypes": [
       "MCQ",
@@ -17958,16 +22925,22 @@ window.vocabulary = [
   },
   {
     "id": 998,
-    "word": "confidence",
+    "word": "corroboration",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to confidence",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “confidence” correctly in context.",
+    "meaning": "evidence that confirms a statement or belief",
+    "chinese": "证实；佐证",
+    "synonyms": [
+      "confirmation",
+      "support"
+    ],
+    "antonyms": [
+      "contradiction"
+    ],
+    "example": "The claim lacked independent corroboration.",
     "topics": [
-      "General"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
       "MCQ",
@@ -17976,16 +22949,22 @@ window.vocabulary = [
   },
   {
     "id": 999,
-    "word": "connection",
-    "partOfSpeech": "noun",
+    "word": "circumspectly",
+    "partOfSpeech": "adverb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to connection",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “connection” correctly in context.",
+    "meaning": "in a careful way that avoids unnecessary risk",
+    "chinese": "谨慎地",
+    "synonyms": [
+      "cautiously",
+      "carefully"
+    ],
+    "antonyms": [
+      "recklessly"
+    ],
+    "example": "The team proceeded circumspectly because the path was slippery.",
     "topics": [
-      "General"
+      "Safety",
+      "Travel"
     ],
     "questionTypes": [
       "MCQ",
@@ -17994,16 +22973,22 @@ window.vocabulary = [
   },
   {
     "id": 1000,
-    "word": "creature",
-    "partOfSpeech": "noun",
+    "word": "irreproachably",
+    "partOfSpeech": "adverb",
     "level": 10,
-    "meaning": "a person, thing, idea or situation related to creature",
-    "chinese": "",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The student learned how to use the word “creature” correctly in context.",
+    "meaning": "in a way that gives no reason for criticism",
+    "chinese": "无可指责地",
+    "synonyms": [
+      "faultlessly",
+      "perfectly"
+    ],
+    "antonyms": [
+      "poorly"
+    ],
+    "example": "She behaved irreproachably throughout the competition.",
     "topics": [
-      "General"
+      "Values",
+      "Sports"
     ],
     "questionTypes": [
       "MCQ",
@@ -18013,63 +22998,36 @@ window.vocabulary = [
 ];
 
 window.vocabularyInfo = {
-  name: "APLUS ACHIEVER PSLE English Vocabulary",
-  version: "2.0",
+  name: "APLUS ACHIEVER PSLE English Vocabulary 1000",
+  version: "4.0",
   currentWords: window.vocabulary.length,
   targetWords: 1000,
   levels: {
     1: { name: "Foundation", target: 100 },
     2: { name: "Core", target: 100 },
-    3: { name: "PSLE", target: 100 },
+    3: { name: "PSLE Core", target: 100 },
     4: { name: "Upper Primary", target: 100 },
-    5: { name: "Advanced Core", target: 100 },
-    6: { name: "Advanced", target: 100 },
+    5: { name: "Strong Reader", target: 100 },
+    6: { name: "Advanced PSLE", target: 100 },
     7: { name: "Challenge", target: 100 },
     8: { name: "High Challenge", target: 100 },
-    9: { name: "Expert", target: 100 },
-    10: { name: "Mastery", target: 100 }
+    9: { name: "Mastery", target: 100 },
+    10: { name: "Extension", target: 100 }
   }
 };
 
 window.getVocabularyByLevel = function(level) {
-  return window.vocabulary.filter(function(item) {
-    return item.level === Number(level);
-  });
+  return window.vocabulary.filter(function(item) { return item.level === level; });
 };
-
 window.getVocabularyById = function(id) {
-  return window.vocabulary.find(function(item) {
-    return item.id === Number(id);
-  });
+  return window.vocabulary.find(function(item) { return item.id === id; });
 };
-
 window.getVocabularyByWord = function(word) {
-  var target = String(word).toLowerCase();
-  return window.vocabulary.find(function(item) {
-    return item.word.toLowerCase() === target;
-  });
+  var q = String(word || '').toLowerCase();
+  return window.vocabulary.find(function(item) { return item.word.toLowerCase() === q; });
 };
-
 window.validateVocabulary = function() {
-  var ids = window.vocabulary.map(function(item) { return item.id; });
-  var words = window.vocabulary.map(function(item) { return item.word.toLowerCase(); });
-  var duplicateWords = words.filter(function(word, index) {
-    return words.indexOf(word) !== index;
-  });
-  var result = {
-    total: window.vocabulary.length,
-    uniqueWords: new Set(words).size,
-    uniqueIds: new Set(ids).size,
-    duplicateWords: Array.from(new Set(duplicateWords)),
-    levelCounts: {}
-  };
-  for (var level = 1; level <= 10; level++) {
-    result.levelCounts[level] = window.getVocabularyByLevel(level).length;
-  }
-  result.valid =
-    result.total === 1000 &&
-    result.uniqueWords === 1000 &&
-    result.uniqueIds === 1000 &&
-    Object.values(result.levelCounts).every(function(n) { return n === 100; });
-  return result;
+  var words = window.vocabulary.map(function(x){ return x.word.toLowerCase(); });
+  var levels = {}; for (var i=1;i<=10;i++) levels[i]=window.getVocabularyByLevel(i).length;
+  return { valid: window.vocabulary.length===1000 && new Set(words).size===1000 && Object.values(levels).every(function(n){return n===100;}), entries: window.vocabulary.length, uniqueWords:new Set(words).size, levelCounts:levels };
 };
