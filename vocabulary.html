@@ -1,97 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>APLU​S ACHIEVER — Daily 10</title>
+<title>APLUS ACHIEVER — Daily 10</title>
+
 
 <style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+
     margin: 0;
+
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
     background: #f4faf7;
+
     color: #123c2d;
+
 }
 
-/* =========================
+
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header {
+
     height: 130px;
+
     background: white;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 0 5%;
+
     border-top: 1px solid #ead6c8;
+
     border-bottom: 1px solid #e8efeb;
+
 }
 
 .logo {
+
     line-height: 1;
+
 }
 
 .logo-main {
+
     font-size: 34px;
+
     font-weight: 800;
+
     letter-spacing: 2px;
+
     color: #176448;
+
 }
 
 .logo-sub {
+
     margin-top: 14px;
 
     font-size: 16px;
+
     font-weight: 700;
+
     letter-spacing: 4px;
 
     color: #637c75;
+
 }
 
 .back-link {
+
     color: #087047;
+
     text-decoration: none;
 
     font-size: 16px;
+
     font-weight: 700;
+
 }
 
 .back-link:hover {
+
     text-decoration: underline;
+
 }
 
-/* =========================
+
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
+
     text-align: center;
 
     padding:
         66px
         20px
         38px;
+
 }
 
 .badge {
+
     display: inline-block;
 
-    padding: 12px 28px;
+    padding:
+        12px
+        28px;
 
     border-radius: 30px;
 
@@ -100,49 +146,62 @@ header {
     color: #126448;
 
     font-size: 15px;
+
     font-weight: 800;
 
     letter-spacing: 1px;
+
 }
 
 .hero h1 {
+
     margin:
         22px
         0
         12px;
 
     font-size: 64px;
+
     line-height: 1;
 
     color: #123c2d;
+
 }
 
 .hero h1 span {
+
     color: #27a56b;
+
 }
 
 .hero p {
+
     margin: 0;
 
     font-size: 21px;
 
     color: #657c76;
+
 }
 
-/* =========================
-   MAIN CARD
-========================= */
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
 
 .container {
+
     width: min(1360px, 90%);
 
     margin:
         10px
         auto
         100px;
+
 }
 
 .card {
+
     background: white;
 
     border-radius: 32px;
@@ -152,37 +211,55 @@ header {
     box-shadow:
         0 18px 50px
         rgba(28, 80, 58, 0.08);
+
 }
 
-/* =========================
+
+/* =====================================================
    TOP BAR
-========================= */
+===================================================== */
 
 .topbar {
+
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     margin-bottom: 32px;
+
 }
 
 .progress-text {
+
     font-size: 16px;
+
     font-weight: 700;
 
     color: #57736a;
+
 }
 
 .level-text {
+
     font-size: 15px;
+
     font-weight: 800;
 
     color: #209261;
+
 }
 
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
 .progress {
+
     width: 100%;
+
     height: 9px;
 
     background: #e7f0eb;
@@ -192,10 +269,13 @@ header {
     overflow: hidden;
 
     margin-bottom: 42px;
+
 }
 
 .progress-bar {
+
     height: 100%;
+
     width: 10%;
 
     background: #28a66d;
@@ -204,14 +284,18 @@ header {
 
     transition:
         width 0.3s ease;
+
 }
 
-/* =========================
+
+/* =====================================================
    QUESTION
-========================= */
+===================================================== */
 
 .question-label {
+
     font-size: 14px;
+
     font-weight: 800;
 
     color: #2ba06c;
@@ -219,38 +303,73 @@ header {
     letter-spacing: 1.5px;
 
     margin-bottom: 14px;
+
 }
 
 .question {
+
     font-size: 32px;
-    line-height: 1.4;
+
+    line-height: 1.5;
 
     font-weight: 700;
 
     color: #173d2f;
 
     margin-bottom: 34px;
+
 }
 
-/* =========================
+
+/* =====================================================
+   FILL-IN-THE-BLANK
+===================================================== */
+
+.question-blank {
+
+    display: inline-block;
+
+    min-width: 150px;
+
+    height: 1.05em;
+
+    margin:
+        0
+        8px;
+
+    border-bottom:
+        3px solid #27a56b;
+
+    vertical-align:
+        baseline;
+
+}
+
+
+/* =====================================================
    OPTIONS
-========================= */
+===================================================== */
 
 .options {
+
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
     gap: 16px;
+
 }
 
 .option {
+
     width: 100%;
 
     min-height: 76px;
 
-    padding: 18px 22px;
+    padding:
+        18px
+        24px;
 
     border:
         2px solid #dcebe4;
@@ -263,98 +382,152 @@ header {
 
     text-align: left;
 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     font-size: 18px;
+
     font-weight: 600;
 
     color: #244a3c;
 
     transition:
         all 0.15s ease;
+
+    /* Prevent browser text caret */
+    user-select: none;
+
+    -webkit-user-select: none;
+
 }
 
 .option:hover {
+
     border-color: #42ad7c;
 
     background: #f3fbf7;
 
-    transform: translateY(-1px);
+    transform:
+        translateY(-1px);
+
+}
+
+.option:focus {
+
+    outline: none;
+
+}
+
+.option:focus-visible {
+
+    outline:
+        3px solid
+        rgba(39, 165, 107, 0.25);
+
+    outline-offset: 2px;
+
 }
 
 .option.correct {
+
     border-color: #239660;
 
     background: #e3f6ec;
 
     color: #126448;
+
 }
 
 .option.wrong {
+
     border-color: #d76868;
 
     background: #fff0f0;
 
     color: #a73535;
+
 }
 
 .option:disabled {
+
     cursor: default;
+
+    transform: none;
+
 }
 
-/* =========================
+
+/* =====================================================
    FEEDBACK
-========================= */
+===================================================== */
 
 .feedback {
+
     display: none;
 
     margin-top: 30px;
 
-    padding: 22px 24px;
+    padding:
+        22px
+        24px;
 
     border-radius: 16px;
 
     font-size: 17px;
 
     line-height: 1.6;
+
 }
 
 .feedback.correct {
+
     display: block;
 
     background: #eaf8f0;
 
     color: #176448;
+
 }
 
 .feedback.wrong {
+
     display: block;
 
     background: #fff1f1;
 
     color: #923c3c;
+
 }
 
 .feedback-title {
+
     font-size: 20px;
 
     font-weight: 800;
 
     margin-bottom: 7px;
+
 }
 
-/* =========================
-   NEXT BUTTON
-========================= */
+
+/* =====================================================
+   BUTTON ROW
+===================================================== */
 
 .button-row {
+
     display: flex;
 
     justify-content: flex-end;
 
     margin-top: 30px;
+
 }
 
 .next-button {
+
     display: none;
 
     border: none;
@@ -363,7 +536,9 @@ header {
 
     color: white;
 
-    padding: 15px 30px;
+    padding:
+        15px
+        30px;
 
     border-radius: 12px;
 
@@ -372,33 +547,44 @@ header {
     font-weight: 800;
 
     cursor: pointer;
+
 }
 
 .next-button:hover {
+
     background: #11734d;
+
 }
 
-/* =========================
+
+/* =====================================================
    RESULT
-========================= */
+===================================================== */
 
 #result {
+
     display: none;
 
     text-align: center;
 
-    padding: 30px 10px;
+    padding:
+        30px
+        10px;
+
 }
 
 .result-title {
+
     font-size: 38px;
 
     font-weight: 800;
 
     margin-bottom: 20px;
+
 }
 
 .score {
+
     font-size: 70px;
 
     font-weight: 800;
@@ -406,24 +592,30 @@ header {
     color: #239966;
 
     margin-bottom: 15px;
+
 }
 
 .result-message {
+
     font-size: 20px;
 
     color: #637a72;
 
     margin-bottom: 35px;
+
 }
 
 .restart-button {
+
     border: none;
 
     background: #19895d;
 
     color: white;
 
-    padding: 15px 30px;
+    padding:
+        15px
+        30px;
 
     border-radius: 12px;
 
@@ -432,13 +624,22 @@ header {
     font-weight: 800;
 
     cursor: pointer;
+
 }
 
-/* =========================
+.restart-button:hover {
+
+    background: #11734d;
+
+}
+
+
+/* =====================================================
    ERROR
-========================= */
+===================================================== */
 
 #errorBox {
+
     display: none;
 
     padding: 30px;
@@ -454,32 +655,42 @@ header {
     line-height: 1.7;
 
     font-size: 16px;
+
 }
 
 #errorBox strong {
+
     display: block;
 
     font-size: 20px;
 
     margin-bottom: 10px;
+
 }
 
-/* =========================
+
+/* =====================================================
    LOADING
-========================= */
+===================================================== */
 
 #loading {
+
     text-align: center;
 
-    padding: 100px 20px;
+    padding:
+        100px
+        20px;
 
     font-size: 20px;
 
     color: #617970;
+
 }
 
 .spinner {
+
     width: 38px;
+
     height: 38px;
 
     margin:
@@ -490,101 +701,181 @@ header {
     border:
         4px solid #dcece5;
 
-    border-top-color: #299d69;
+    border-top-color:
+        #299d69;
 
     border-radius: 50%;
 
     animation:
         spin 0.8s linear infinite;
+
 }
 
 @keyframes spin {
 
     to {
-        transform: rotate(360deg);
+
+        transform:
+            rotate(360deg);
+
     }
 
 }
 
-/* =========================
+
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media (max-width: 760px) {
 
     header {
+
         height: 105px;
 
         padding:
             0
             20px;
+
     }
 
     .logo-main {
+
         font-size: 23px;
+
     }
 
     .logo-sub {
+
         font-size: 11px;
 
         margin-top: 8px;
+
     }
 
     .back-link {
+
         font-size: 13px;
+
     }
 
     .hero {
+
         padding:
             45px
             15px
             30px;
+
     }
 
     .hero h1 {
+
         font-size: 46px;
+
     }
 
     .hero p {
+
         font-size: 17px;
+
     }
 
     .container {
+
         width: 94%;
+
     }
 
     .card {
-        padding: 25px 20px;
+
+        padding:
+            25px
+            20px;
 
         border-radius: 22px;
+
     }
 
     .options {
+
         grid-template-columns: 1fr;
+
     }
 
     .question {
+
         font-size: 24px;
+
+        line-height: 1.55;
+
+    }
+
+    .question-blank {
+
+        min-width: 110px;
+
     }
 
     .option {
+
         min-height: 68px;
 
+        padding:
+            16px
+            20px;
+
         font-size: 16px;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+    .card {
+
+        padding:
+            22px
+            16px;
+
+    }
+
+    .question {
+
+        font-size: 21px;
+
+    }
+
+    .question-blank {
+
+        min-width: 90px;
+
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
@@ -611,10 +902,9 @@ header {
 </header>
 
 
-
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section class="hero">
 
@@ -633,17 +923,18 @@ header {
 </section>
 
 
-
-<!-- =========================
+<!-- =====================================================
      MAIN
-========================= -->
+===================================================== -->
 
 <main class="container">
 
     <div class="card">
 
 
-        <!-- LOADING -->
+        <!-- =================================================
+             LOADING
+        ================================================= -->
 
         <div id="loading">
 
@@ -654,8 +945,9 @@ header {
         </div>
 
 
-
-        <!-- ERROR -->
+        <!-- =================================================
+             ERROR
+        ================================================= -->
 
         <div id="errorBox">
 
@@ -668,12 +960,17 @@ header {
         </div>
 
 
+        <!-- =================================================
+             QUIZ
+        ================================================= -->
 
-        <!-- QUIZ -->
+        <div
+            id="quiz"
+            style="display:none;"
+        >
 
-        <div id="quiz"
-             style="display:none;">
 
+            <!-- TOP BAR -->
 
             <div class="topbar">
 
@@ -683,6 +980,7 @@ header {
                 >
                     Question 1 of 10
                 </div>
+
 
                 <div
                     class="level-text"
@@ -694,6 +992,8 @@ header {
             </div>
 
 
+            <!-- PROGRESS -->
+
             <div class="progress">
 
                 <div
@@ -704,31 +1004,40 @@ header {
             </div>
 
 
+            <!-- QUESTION LABEL -->
+
             <div class="question-label">
+
                 CHOOSE THE BEST ANSWER
+
             </div>
 
+
+            <!-- QUESTION -->
 
             <div
                 class="question"
                 id="questionText"
-            >
-            </div>
+            ></div>
 
+
+            <!-- OPTIONS -->
 
             <div
                 class="options"
                 id="options"
-            >
-            </div>
+            ></div>
 
+
+            <!-- FEEDBACK -->
 
             <div
                 class="feedback"
                 id="feedback"
-            >
-            </div>
+            ></div>
 
+
+            <!-- NEXT -->
 
             <div class="button-row">
 
@@ -745,14 +1054,16 @@ header {
         </div>
 
 
-
-        <!-- RESULT -->
+        <!-- =================================================
+             RESULT
+        ================================================= -->
 
         <div id="result">
 
             <div class="result-title">
                 Today's Challenge Complete
             </div>
+
 
             <div
                 class="score"
@@ -761,11 +1072,12 @@ header {
                 0 / 10
             </div>
 
+
             <div
                 class="result-message"
                 id="resultMessage"
-            >
-            </div>
+            ></div>
+
 
             <button
                 class="restart-button"
@@ -782,13 +1094,13 @@ header {
 </main>
 
 
-
 <!-- =====================================================
-     VOCABULARY
+     VOCABULARY DATABASE
+
+     DO NOT CHANGE THIS FILE.
 ===================================================== -->
 
 <script src="./data/vocabulary.js"></script>
-
 
 
 <!-- =====================================================
@@ -816,7 +1128,7 @@ let answered = false;
 
 
 /* =====================================================
-   START
+   START APPLICATION
 ===================================================== */
 
 window.addEventListener(
@@ -833,7 +1145,7 @@ window.addEventListener(
 
 
 /* =====================================================
-   INITIALISE
+   INITIALISE APP
 ===================================================== */
 
 function initialiseApp() {
@@ -841,14 +1153,12 @@ function initialiseApp() {
     try {
 
         /*
-         * vocabulary.js should create:
+         * vocabulary.js must create:
          *
          * window.vocabulary
          */
 
-        if (
-            !window.vocabulary
-        ) {
+        if (!window.vocabulary) {
 
             throw new Error(
                 "window.vocabulary is not available."
@@ -857,11 +1167,7 @@ function initialiseApp() {
         }
 
 
-        if (
-            !Array.isArray(
-                window.vocabulary
-            )
-        ) {
+        if (!Array.isArray(window.vocabulary)) {
 
             throw new Error(
                 "window.vocabulary is not an array."
@@ -870,9 +1176,7 @@ function initialiseApp() {
         }
 
 
-        if (
-            window.vocabulary.length === 0
-        ) {
+        if (window.vocabulary.length === 0) {
 
             throw new Error(
                 "The vocabulary database is empty."
@@ -882,17 +1186,19 @@ function initialiseApp() {
 
 
         vocabularyData =
-            window.vocabulary
-                .filter(
-                    word =>
+            window.vocabulary.filter(
+                function(word) {
+
+                    return (
                         word &&
                         word.word
-                );
+                    );
+
+                }
+            );
 
 
-        if (
-            vocabularyData.length === 0
-        ) {
+        if (vocabularyData.length === 0) {
 
             throw new Error(
                 "No valid vocabulary entries were found."
@@ -902,7 +1208,7 @@ function initialiseApp() {
 
 
         console.log(
-            "AP​LUS vocabulary loaded:",
+            "APLU​S vocabulary loaded:",
             vocabularyData.length,
             "words"
         );
@@ -915,17 +1221,13 @@ function initialiseApp() {
 
 
         document
-            .getElementById(
-                "loading"
-            )
+            .getElementById("loading")
             .style.display =
             "none";
 
 
         document
-            .getElementById(
-                "quiz"
-            )
+            .getElementById("quiz")
             .style.display =
             "block";
 
@@ -938,9 +1240,7 @@ function initialiseApp() {
             error
         );
 
-        showError(
-            error
-        );
+        showError(error);
 
     }
 
@@ -954,33 +1254,25 @@ function initialiseApp() {
 function showError(error) {
 
     document
-        .getElementById(
-            "loading"
-        )
+        .getElementById("loading")
         .style.display =
         "none";
 
 
     document
-        .getElementById(
-            "quiz"
-        )
+        .getElementById("quiz")
         .style.display =
         "none";
 
 
     document
-        .getElementById(
-            "errorBox"
-        )
+        .getElementById("errorBox")
         .style.display =
         "block";
 
 
     document
-        .getElementById(
-            "errorMessage"
-        )
+        .getElementById("errorMessage")
         .innerHTML =
 
         "Please check that your GitHub files are arranged as:<br><br>" +
@@ -1008,14 +1300,10 @@ function createDailyQuestions() {
 
 
     /*
-     * We want exactly 10 questions.
+     * One question from each level.
      *
      * Level 1 → Level 10
-     *
-     * Therefore each question comes
-     * from a different difficulty level.
      */
-
 
     for (
         let level = 1;
@@ -1025,20 +1313,23 @@ function createDailyQuestions() {
 
         let pool =
             vocabularyData.filter(
-                word =>
-                    Number(word.level) === level
+                function(word) {
+
+                    return (
+                        Number(word.level) ===
+                        level
+                    );
+
+                }
             );
 
 
         /*
-         * If a level is missing,
-         * use the complete vocabulary
-         * as a fallback.
+         * If a level does not exist,
+         * use the complete database.
          */
 
-        if (
-            pool.length === 0
-        ) {
+        if (pool.length === 0) {
 
             pool =
                 vocabularyData;
@@ -1077,13 +1368,12 @@ function createQuestion(
 ) {
 
     /*
-     * Three question styles:
+     * Levels 1–3:
+     * meaning questions
      *
-     * meaning
-     * synonym
-     * context
+     * Levels 4–10:
+     * mixed question types
      */
-
 
     let type =
         level <= 3
@@ -1097,45 +1387,17 @@ function createQuestion(
             );
 
 
-    if (
-        type === "synonym"
-    ) {
+    if (type === "synonym") {
 
-        let correct =
-            getCorrectMeaning(
-                word
-            );
-
-
-        return {
-
-            level:
-                level,
-
-            word:
-                word,
-
-            question:
-                'Which word is closest in meaning to "' +
-                word.word +
-                '"?',
-
-            answer:
-                correct,
-
-            explanation:
-                getExplanation(
-                    word
-                )
-
-        };
+        return createSynonymQuestion(
+            word,
+            level
+        );
 
     }
 
 
-    if (
-        type === "context"
-    ) {
+    if (type === "context") {
 
         return createContextQuestion(
             word,
@@ -1163,9 +1425,7 @@ function createMeaningQuestion(
 ) {
 
     let correct =
-        getCorrectMeaning(
-            word
-        );
+        getCorrectMeaning(word);
 
 
     let wrongAnswers =
@@ -1186,27 +1446,85 @@ function createMeaningQuestion(
 
     return {
 
-        level:
-            level,
+        level: level,
 
-        word:
-            word,
+        word: word,
+
+        type: "meaning",
 
         question:
             'What does "' +
-            word.word +
+            escapeHTML(word.word) +
             '" mean?',
 
-        answer:
-            correct,
+        answer: correct,
 
-        options:
-            options,
+        options: options,
 
         explanation:
-            getExplanation(
-                word
-            )
+            getExplanation(word)
+
+    };
+
+}
+
+
+/* =====================================================
+   SYNONYM QUESTION
+===================================================== */
+
+function createSynonymQuestion(
+    word,
+    level
+) {
+
+    /*
+     * For synonym questions,
+     * the answer is the word's meaning.
+     *
+     * This keeps the question consistent
+     * with the vocabulary database.
+     */
+
+    let correct =
+        getCorrectMeaning(word);
+
+
+    let wrongAnswers =
+        getWrongMeanings(
+            word,
+            3
+        );
+
+
+    let options =
+        shuffle(
+            [
+                correct,
+                ...wrongAnswers
+            ]
+        );
+
+
+    return {
+
+        level: level,
+
+        word: word,
+
+        type: "synonym",
+
+        question:
+            'Which meaning is closest to "' +
+            escapeHTML(word.word) +
+            '"?',
+
+        answer: correct,
+
+        options: options,
+
+        explanation:
+            getExplanation(word)
 
     };
 
@@ -1222,54 +1540,157 @@ function createContextQuestion(
     level
 ) {
 
+    /*
+     * IMPORTANT:
+     *
+     * We always prefer the example supplied
+     * in vocabulary.js.
+     *
+     * The vocabulary itself is NOT changed.
+     */
+
+
     let example =
-        word.example ||
-        (
-            "The student used the word " +
-            word.word +
-            " correctly."
-        );
+        typeof word.example === "string"
+            ? word.example.trim()
+            : "";
+
+
+    let sentence = "";
 
 
     /*
-     * Replace the word with a blank.
+     * Check whether the original example
+     * actually contains the vocabulary word.
      */
 
-    let sentence =
-        example.replace(
-            new RegExp(
-                "\\b" +
-                escapeRegExp(
-                    word.word
-                ) +
-                "\\b",
-                "i"
-            ),
-            "_____"
+    let wordPattern =
+        new RegExp(
+            "\\b" +
+            escapeRegExp(word.word) +
+            "\\b",
+            "i"
         );
 
-
-    /*
-     * If the example doesn't
-     * contain the word, create
-     * a simple sentence.
-     */
 
     if (
-        sentence === example
+        example &&
+        wordPattern.test(example)
     ) {
 
+        /*
+         * Replace ONLY the target word
+         * with a proper visual blank.
+         */
+
         sentence =
-            "The student was " +
-            word.word +
-            " when answering the question.";
+            escapeHTML(example).replace(
+                new RegExp(
+                    "\\b" +
+                    escapeRegExp(word.word) +
+                    "\\b",
+                    "i"
+                ),
+                '<span class="question-blank">&nbsp;</span>'
+            );
+
+    }
+
+    else {
+
+        /*
+         * IMPORTANT FIX
+         *
+         * Do NOT generate:
+         *
+         * The student was facilitate...
+         *
+         * because "facilitate" is a verb.
+         *
+         * Instead, use a sentence structure
+         * appropriate for the word's part of speech.
+         */
+
+        let partOfSpeech =
+            String(
+                word.partOfSpeech || ""
+            )
+            .toLowerCase()
+            .trim();
+
+
+        if (
+            partOfSpeech.includes("adjective")
+        ) {
+
+            sentence =
+                "The student was " +
+                '<span class="question-blank">&nbsp;</span>' +
+                " when answering the question.";
+
+        }
+
+        else if (
+            partOfSpeech.includes("verb")
+        ) {
+
+            sentence =
+                "The teacher asked the student to " +
+                '<span class="question-blank">&nbsp;</span>' +
+                " the task.";
+
+        }
+
+        else if (
+            partOfSpeech.includes("noun")
+        ) {
+
+            sentence =
+                "The student showed great " +
+                '<span class="question-blank">&nbsp;</span>' +
+                " during the activity.";
+
+        }
+
+        else if (
+            partOfSpeech.includes("adverb")
+        ) {
+
+            sentence =
+                "The student answered the question " +
+                '<span class="question-blank">&nbsp;</span>' +
+                ".";
+
+        }
+
+        else {
+
+            /*
+             * Generic fallback
+             */
+
+            sentence =
+                "The student used the word " +
+                '<span class="question-blank">&nbsp;</span>' +
+                " correctly.";
+
+        }
 
     }
 
 
+    /*
+     * Context answer is the vocabulary word itself.
+     */
+
     let correct =
         word.word;
 
+
+    /*
+     * Get three different vocabulary words
+     * as distractors.
+     */
 
     let wrongWords =
         getWrongWords(
@@ -1289,26 +1710,22 @@ function createContextQuestion(
 
     return {
 
-        level:
-            level,
+        level: level,
 
-        word:
-            word,
+        word: word,
+
+        type: "context",
 
         question:
             "Choose the word that best completes the sentence:<br><br>" +
             sentence,
 
-        answer:
-            correct,
+        answer: correct,
 
-        options:
-            options,
+        options: options,
 
         explanation:
-            getExplanation(
-                word
-            )
+            getExplanation(word)
 
     };
 
@@ -1319,34 +1736,31 @@ function createContextQuestion(
    CORRECT MEANING
 ===================================================== */
 
-function getCorrectMeaning(
-    word
-) {
+function getCorrectMeaning(word) {
 
     if (
         word.meaning &&
-        word.meaning.trim()
+        String(word.meaning).trim()
     ) {
 
-        return word.meaning;
+        return String(
+            word.meaning
+        ).trim();
 
     }
 
 
     if (
         word.chinese &&
-        word.chinese.trim()
+        String(word.chinese).trim()
     ) {
 
-        return word.chinese;
+        return String(
+            word.chinese
+        ).trim();
 
     }
 
-
-    /*
-     * Fallback so the question
-     * never breaks.
-     */
 
     return (
         "the meaning of the word " +
@@ -1366,16 +1780,21 @@ function getWrongMeanings(
 ) {
 
     let candidates =
-        vocabularyData
-            .filter(
-                item =>
+        vocabularyData.filter(
+            function(item) {
+
+                return (
                     item.id !==
-                    correctWord.id &&
+                    correctWord.id
+                    &&
                     (
                         item.meaning ||
                         item.chinese
                     )
-            );
+                );
+
+            }
+        );
 
 
     candidates =
@@ -1392,9 +1811,7 @@ function getWrongMeanings(
     ) {
 
         let meaning =
-            getCorrectMeaning(
-                item
-            );
+            getCorrectMeaning(item);
 
 
         if (
@@ -1413,8 +1830,7 @@ function getWrongMeanings(
 
 
         if (
-            results.length >=
-            count
+            results.length >= count
         ) {
 
             break;
@@ -1454,12 +1870,16 @@ function getWrongWords(
 ) {
 
     let candidates =
-        vocabularyData
-            .filter(
-                item =>
+        vocabularyData.filter(
+            function(item) {
+
+                return (
                     item.id !==
                     correctWord.id
-            );
+                );
+
+            }
+        );
 
 
     candidates =
@@ -1468,15 +1888,53 @@ function getWrongWords(
         );
 
 
-    return candidates
-        .slice(
-            0,
-            count
-        )
-        .map(
-            item =>
+    let results = [];
+
+
+    for (
+        let item of candidates
+    ) {
+
+        if (
+            item.word &&
+            item.word !==
+            correctWord.word
+        ) {
+
+            results.push(
                 item.word
+            );
+
+        }
+
+
+        if (
+            results.length >= count
+        ) {
+
+            break;
+
+        }
+
+    }
+
+
+    /*
+     * Safety fallback
+     */
+
+    while (
+        results.length < count
+    ) {
+
+        results.push(
+            "another word"
         );
+
+    }
+
+
+    return results;
 
 }
 
@@ -1485,56 +1943,63 @@ function getWrongWords(
    EXPLANATION
 ===================================================== */
 
-function getExplanation(
-    word
-) {
+function getExplanation(word) {
 
     let text = "";
 
 
-    if (
-        word.meaning
-    ) {
+    if (word.meaning) {
 
         text +=
             "Meaning: " +
-            word.meaning;
+            escapeHTML(
+                word.meaning
+            );
 
     }
 
 
-    if (
-        word.chinese
-    ) {
+    if (word.chinese) {
 
         text +=
             "<br>中文： " +
-            word.chinese;
+            escapeHTML(
+                word.chinese
+            );
 
     }
 
 
-    if (
-        word.example
-    ) {
+    if (word.example) {
 
         text +=
             "<br><br>Example: " +
-            word.example;
+            escapeHTML(
+                word.example
+            );
 
     }
 
 
     if (
         word.synonyms &&
+        Array.isArray(word.synonyms) &&
         word.synonyms.length
     ) {
 
         text +=
             "<br><br>Synonyms: " +
-            word.synonyms.join(
-                ", "
-            );
+            word.synonyms
+                .map(
+                    function(item) {
+
+                        return escapeHTML(
+                            item
+                        );
+
+                    }
+                )
+                .join(", ");
 
     }
 
@@ -1566,10 +2031,12 @@ function showQuestion() {
     }
 
 
+    /*
+     * Progress text
+     */
+
     document
-        .getElementById(
-            "progressText"
-        )
+        .getElementById("progressText")
         .textContent =
         "Question " +
         (currentQuestion + 1) +
@@ -1577,14 +2044,20 @@ function showQuestion() {
         questions.length;
 
 
+    /*
+     * Level
+     */
+
     document
-        .getElementById(
-            "levelText"
-        )
+        .getElementById("levelText")
         .textContent =
         "Level " +
         q.level;
 
+
+    /*
+     * Progress bar
+     */
 
     let percentage =
         (
@@ -1594,55 +2067,66 @@ function showQuestion() {
 
 
     document
-        .getElementById(
-            "progressBar"
-        )
+        .getElementById("progressBar")
         .style.width =
         percentage + "%";
 
 
+    /*
+     * Question
+     */
+
     document
-        .getElementById(
-            "questionText"
-        )
+        .getElementById("questionText")
         .innerHTML =
         q.question;
 
 
+    /*
+     * Options
+     */
+
     let options =
-        q.options ||
-        [];
+        q.options || [];
 
 
     /*
-     * Meaning questions already have
-     * options.
-     *
-     * Synonym questions need options.
+     * Safety:
+     * If an older question object does not have
+     * options, generate them here.
      */
 
-    if (
-        !q.options
-    ) {
+    if (!options.length) {
 
-        let correct =
-            q.answer;
+        if (q.type === "context") {
 
+            options =
+                shuffle(
+                    [
+                        q.answer,
+                        ...getWrongWords(
+                            q.word,
+                            3
+                        )
+                    ]
+                );
 
-        let wrong =
-            getWrongMeanings(
-                q.word,
-                3
-            );
+        }
 
+        else {
 
-        options =
-            shuffle(
-                [
-                    correct,
-                    ...wrong
-                ]
-            );
+            options =
+                shuffle(
+                    [
+                        q.answer,
+                        ...getWrongMeanings(
+                            q.word,
+                            3
+                        )
+                    ]
+                );
+
+        }
 
 
         q.options =
@@ -1661,6 +2145,10 @@ function showQuestion() {
         "";
 
 
+    /*
+     * Create buttons
+     */
+
     options.forEach(
         function(option) {
 
@@ -1670,15 +2158,25 @@ function showQuestion() {
                 );
 
 
+            button.type =
+                "button";
+
+
             button.className =
                 "option";
 
+
+            /*
+             * textContent prevents HTML injection
+             * from vocabulary options.
+             */
 
             button.textContent =
                 option;
 
 
-            button.onclick =
+            button.addEventListener(
+                "click",
                 function() {
 
                     checkAnswer(
@@ -1686,7 +2184,8 @@ function showQuestion() {
                         button
                     );
 
-                };
+                }
+            );
 
 
             optionsContainer.appendChild(
@@ -1697,26 +2196,30 @@ function showQuestion() {
     );
 
 
-    document
-        .getElementById(
+    /*
+     * Reset feedback
+     */
+
+    let feedback =
+        document.getElementById(
             "feedback"
-        )
-        .className =
+        );
+
+
+    feedback.className =
         "feedback";
 
 
-    document
-        .getElementById(
-            "feedback"
-        )
-        .innerHTML =
+    feedback.innerHTML =
         "";
 
 
+    /*
+     * Hide Next button
+     */
+
     document
-        .getElementById(
-            "nextButton"
-        )
+        .getElementById("nextButton")
         .style.display =
         "none";
 
@@ -1732,9 +2235,7 @@ function checkAnswer(
     clickedButton
 ) {
 
-    if (
-        answered
-    ) {
+    if (answered) {
 
         return;
 
@@ -1761,6 +2262,10 @@ function checkAnswer(
         );
 
 
+    /*
+     * Disable all options
+     */
+
     buttons.forEach(
         function(button) {
 
@@ -1783,9 +2288,11 @@ function checkAnswer(
     );
 
 
-    if (
-        correct
-    ) {
+    /*
+     * Correct answer
+     */
+
+    if (correct) {
 
         score++;
 
@@ -1803,6 +2310,11 @@ function checkAnswer(
 
     }
 
+
+    /*
+     * Wrong answer
+     */
+
     else {
 
         clickedButton.classList.add(
@@ -1814,7 +2326,7 @@ function checkAnswer(
             false,
             "Not quite.",
             'The correct answer is "' +
-            q.answer +
+            escapeHTML(q.answer) +
             '".<br><br>' +
             q.explanation
         );
@@ -1822,10 +2334,12 @@ function checkAnswer(
     }
 
 
+    /*
+     * Show next button
+     */
+
     document
-        .getElementById(
-            "nextButton"
-        )
+        .getElementById("nextButton")
         .style.display =
         "block";
 
@@ -1855,11 +2369,17 @@ function showFeedback(
 
 
     feedback.innerHTML =
+
         '<div class="feedback-title">' +
+
         title +
+
         "</div>" +
+
         "<div>" +
+
         text +
+
         "</div>";
 
 }
@@ -1898,25 +2418,19 @@ function nextQuestion() {
 function showResult() {
 
     document
-        .getElementById(
-            "quiz"
-        )
+        .getElementById("quiz")
         .style.display =
         "none";
 
 
     document
-        .getElementById(
-            "result"
-        )
+        .getElementById("result")
         .style.display =
         "block";
 
 
     document
-        .getElementById(
-            "score"
-        )
+        .getElementById("score")
         .textContent =
         score +
         " / " +
@@ -1934,28 +2448,21 @@ function showResult() {
     let message;
 
 
-    if (
-        percentage ===
-        100
-    ) {
+    if (percentage === 100) {
 
         message =
             "Outstanding! Perfect score! 🌟";
 
     }
 
-    else if (
-        percentage >= 80
-    ) {
+    else if (percentage >= 80) {
 
         message =
             "Excellent work! Your vocabulary is getting stronger. 💪";
 
     }
 
-    else if (
-        percentage >= 60
-    ) {
+    else if (percentage >= 60) {
 
         message =
             "Good effort! Keep practising your vocabulary. 📚";
@@ -1971,9 +2478,7 @@ function showResult() {
 
 
     document
-        .getElementById(
-            "resultMessage"
-        )
+        .getElementById("resultMessage")
         .textContent =
         message;
 
@@ -1994,22 +2499,19 @@ function restartQuiz() {
 
 
     document
-        .getElementById(
-            "result"
-        )
+        .getElementById("result")
         .style.display =
         "none";
 
 
     document
-        .getElementById(
-            "quiz"
-        )
+        .getElementById("quiz")
         .style.display =
         "block";
 
 
     createDailyQuestions();
+
 
     showQuestion();
 
@@ -2020,9 +2522,7 @@ function restartQuiz() {
    RANDOM CHOICE
 ===================================================== */
 
-function randomChoice(
-    array
-) {
+function randomChoice(array) {
 
     return array[
         Math.floor(
@@ -2038,14 +2538,14 @@ function randomChoice(
    SHUFFLE
 ===================================================== */
 
-function shuffle(
-    array
-) {
+function shuffle(array) {
 
     for (
         let i =
             array.length - 1;
+
         i > 0;
+
         i--
     ) {
 
@@ -2077,9 +2577,7 @@ function shuffle(
    ESCAPE REGEX
 ===================================================== */
 
-function escapeRegExp(
-    string
-) {
+function escapeRegExp(string) {
 
     return String(
         string
@@ -2095,42 +2593,40 @@ function escapeRegExp(
    ESCAPE HTML
 ===================================================== */
 
-function escapeHTML(
-    value
-) {
+function escapeHTML(value) {
 
-    return String(
-        value
-    )
+    return String(value)
 
-    .replace(
-        /&/g,
-        "&amp;"
-    )
+        .replace(
+            /&/g,
+            "&amp;"
+        )
 
-    .replace(
-        /</g,
-        "&lt;"
-    )
+        .replace(
+            /</g,
+            "&lt;"
+        )
 
-    .replace(
-        />/g,
-        "&gt;"
-    )
+        .replace(
+            />/g,
+            "&gt;"
+        )
 
-    .replace(
-        /"/g,
-        "&quot;"
-    )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
 
-    .replace(
-        /'/g,
-        "&#039;"
-    );
+        .replace(
+            /'/g,
+            "&#039;"
+        );
 
 }
 
 </script>
 
+
 </body>
+
 </html>
