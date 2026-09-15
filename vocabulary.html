@@ -15,7 +15,7 @@ header{background:#fff;border-bottom:1px solid #dfece6;padding:18px 5%;display:f
 .hint-panel{margin-top:16px;padding:16px 18px;border:1px solid #dbeae3;background:#f7fbf9;border-radius:15px}.hint-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}.hint-title{font-weight:900;color:#176448}.hint-step{padding:12px 13px;background:#fff;border-radius:11px;margin:8px 0;line-height:1.5}.hint-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.hint-btn{border:1px solid #cfe2d9;background:#fff;color:#176448;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}.hint-btn.primary{background:#176448;color:#fff}.ai-note{margin-top:10px;padding:10px 12px;border-radius:10px;background:#edf8f2;font-size:13px}.revealed-answer{padding:13px;border-radius:11px;background:#fff7df;border:1px solid #eedb9c;margin-top:10px;font-weight:800}.mastery-change{font-weight:900;color:#176448}.feedback .micro{font-size:13px;color:#5e746c}
 </style></head>
 <body>
-<header><div><div class="logo">APLUS ACHIEVER</div><div class="sub">PSLE ENGLISH VOCABULARY</div></div><div class="pill">AI TUTOR 2.0 • V12</div></header>
+<header><div><div class="logo">APLUS ACHIEVER</div><div class="sub">PSLE ENGLISH VOCABULARY</div></div><div class="pill">AI TUTOR 2.0 • V12.2</div></header>
 <main class="container">
 <section class="hero"><div class="pill">1000-WORD ADAPTIVE SYSTEM</div><h1>Your <span>PSLE AI</span> Personal Tutor</h1><p>Diagnose → Learn → Review → Challenge → Master</p></section>
 <div class="actions"><button class="btn primary" onclick="startMode('daily')">AI Daily 10</button><button class="btn" onclick="startMode('diagnostic')">AI Diagnostic</button><button class="btn" onclick="startMode('due')">Review Due</button><button class="btn" onclick="startMode('weak')">Weak Words</button><button class="btn" onclick="startMode('challenge')">Challenge</button></div><div class="actions" style="margin-top:10px"><button class="btn" onclick="V11_masteryCheck()">Mastery Check</button><button class="btn" onclick="V11_parentReport()">Parent Report</button><button class="btn" onclick="showTutor()">AI Tutor Dashboard</button><button class="btn" onclick="V11_resetDemo()">Reset Learning Data</button><button class="btn" onclick="showHome()">Home</button></div>
@@ -25,7 +25,7 @@ header{background:#fff;border-bottom:1px solid #dfece6;padding:18px 5%;display:f
 <section id="quiz" class="card hidden"><div class="quiz-top"><span id="modeLabel">AI DAILY 10</span><span id="counter">1 / 10</span></div><div class="progress" style="margin:13px 0 22px"><i id="qbar"></i></div><div class="section-title" id="typeLabel">MEANING</div><div class="question" id="question"></div><div id="options" class="options"></div><div id="inputWrap" class="hidden"><input id="answerInput" class="input" autocomplete="off" placeholder="Type the word..."><p class="small">Spelling is checked flexibly.</p></div><div id="hintPanel" class="hint-panel hidden"></div><div class="controls"><button class="btn" onclick="speakCurrent()">🔊 Hear Word</button><button id="checkBtn" class="btn primary" onclick="submitAnswer()">Check Answer</button><button id="nextBtn" class="btn primary hidden" onclick="nextQuestion()">Next Question →</button></div><div id="feedback" class="feedback hidden"></div><div id="wordCard" class="word-card hidden"></div></section>
 <section id="result" class="card hidden result"><div class="section-title">SESSION COMPLETE</div><div id="score" class="score">0/10</div><h2 id="resultTitle"></h2><p id="resultText" class="small"></p><div id="diagnosis" class="diagnosis"></div><button class="btn primary" onclick="startMode('daily')">Another AI 10 →</button><button class="btn" onclick="showTutor()">Open Tutor Dashboard</button></section>
 <section id="tutor" class="card hidden"><div class="section-title">AI TUTOR DASHBOARD</div><h2>Your Learning Profile</h2><div id="tutorContent"></div><button class="btn primary" onclick="startMode('daily')">Continue Learning →</button><button class="btn" onclick="showHome()">Home</button></section>
-<div class="footer">APLUS ACHIEVER • PSLE AI Tutor 2.0 V12</div></main><div id="toast" class="toast"></div>
+<div class="footer">APLUS ACHIEVER • PSLE AI Tutor 2.0 V12.2</div></main><div id="toast" class="toast"></div>
 <script src="data/vocabulary.js"></script>
 <script>
 'use strict';
@@ -33,7 +33,7 @@ const VOCAB=Array.isArray(window.vocabulary)?window.vocabulary.filter(w=>w&&w.wo
 window.V12_VOCAB=VOCAB;
 const KEY='aplusAchieverPSLEV10TutorV1';
 let db={total:0,correct:0,words:{},days:{},diagnostic:null};
-let mode='daily',questions=[],index=0,current=null,currentQ=null,answered=false,choice='',score=0,sessionWrong=[],sessionCorrect=[],questionStart=0;
+let mode='daily',questions=[],index=0,current=null,currentQ=null,answered=false,choice='',score=0,sessionWrong=[],sessionCorrect=[],questionStart=0,hintStep=0,answerRevealed=false;
 function load(){try{let x=JSON.parse(localStorage.getItem(KEY));if(x&&x.words)db=Object.assign(db,x)}catch(e){}updateUI()}
 function save(){localStorage.setItem(KEY,JSON.stringify(db))}
 function today(){return new Date().toISOString().slice(0,10)}
