@@ -253,6 +253,103 @@ header {
 
 
 /* =====================================================
+   MISTAKE REVIEW
+===================================================== */
+
+.study-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.mistake-button {
+    border: 1px solid #cfe4d9;
+    background: #f3faf6;
+    color: #176448;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.mistake-button:hover {
+    background: #e4f5ec;
+    border-color: #42ad7c;
+    transform: translateY(-1px);
+}
+
+.mistake-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+    transform: none;
+}
+
+.review-badge {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #fff1df;
+    color: #a45b16;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.secondary-button {
+    border: 1px solid #cfe4d9;
+    background: white;
+    color: #176448;
+    padding: 15px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: #f3faf6;
+}
+
+.mistake-summary {
+    margin: 0 auto 28px;
+    max-width: 650px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: #f7fbf9;
+    color: #4d6b61;
+    line-height: 1.6;
+    text-align: left;
+}
+
+@media (max-width: 760px) {
+    .topbar {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .study-controls {
+        gap: 8px;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .mistake-button {
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+}
+
+/* =====================================================
    PROGRESS
 ===================================================== */
 
@@ -981,12 +1078,18 @@ header {
                     Question 1 of 10
                 </div>
 
+                <div class="study-controls">
+                    <button type="button" class="mistake-button" id="mistakeButton"
+                            onclick="startMistakeReview()">
+                        Mistakes <span id="mistakeCount">0</span>
+                    </button>
 
-                <div
-                    class="level-text"
-                    id="levelText"
-                >
-                    Level 1
+                    <div
+                        class="level-text"
+                        id="levelText"
+                    >
+                        Level 1
+                    </div>
                 </div>
 
             </div>
@@ -1005,6 +1108,10 @@ header {
 
 
             <!-- QUESTION LABEL -->
+
+            <div id="reviewBadge" class="review-badge" style="display:none;">
+                MISTAKE REVIEW
+            </div>
 
             <div class="question-label">
 
@@ -1079,12 +1186,25 @@ header {
             ></div>
 
 
-            <button
-                class="restart-button"
-                onclick="restartQuiz()"
-            >
-                Try Again
-            </button>
+            <div id="mistakeSummary" class="mistake-summary" style="display:none;"></div>
+
+            <div class="result-actions">
+                <button
+                    class="restart-button"
+                    onclick="restartQuiz()"
+                >
+                    Try Again
+                </button>
+
+                <button
+                    id="reviewResultButton"
+                    class="secondary-button"
+                    type="button"
+                    onclick="startMistakeReview()"
+                >
+                    Review Mistakes
+                </button>
+            </div>
 
         </div>
 
@@ -1111,20 +1231,27 @@ header {
 
 "use strict";
 
-
 /* =====================================================
    GLOBAL VARIABLES
 ===================================================== */
 
 let vocabularyData = [];
-
 let questions = [];
-
 let currentQuestion = 0;
-
 let score = 0;
-
 let answered = false;
+let reviewMode = false;
+
+/*
+ * Mistake data is stored locally in the student's browser.
+ *
+ * Each word has:
+ *   wrong       = number of wrong attempts
+ *   correct     = number of correct review attempts
+ *   lastWrong   = last time the word was answered incorrectly
+ *   mastered    = true after 3 successful review attempts
+ */
+const MISTAKE_STORAGE_KEY = "aplusAchieverPSLEVocabularyMistakesV1";
 
 
 /* =====================================================
@@ -1134,12 +1261,10 @@ let answered = false;
 window.addEventListener(
     "load",
     function () {
-
         setTimeout(
             initialiseApp,
             50
         );
-
     }
 );
 
@@ -1152,79 +1277,54 @@ function initialiseApp() {
 
     try {
 
-        /*
-         * vocabulary.js must create:
-         *
-         * window.vocabulary
-         */
-
         if (!window.vocabulary) {
-
             throw new Error(
                 "window.vocabulary is not available."
             );
-
         }
 
-
         if (!Array.isArray(window.vocabulary)) {
-
             throw new Error(
                 "window.vocabulary is not an array."
             );
-
         }
 
-
         if (window.vocabulary.length === 0) {
-
             throw new Error(
                 "The vocabulary database is empty."
             );
-
         }
-
 
         vocabularyData =
             window.vocabulary.filter(
-                function(word) {
-
+                function (word) {
                     return (
                         word &&
                         word.word
                     );
-
                 }
             );
 
-
         if (vocabularyData.length === 0) {
-
             throw new Error(
                 "No valid vocabulary entries were found."
             );
-
         }
 
-
         console.log(
-            "APLU​S vocabulary loaded:",
+            "APLUS vocabulary loaded:",
             vocabularyData.length,
             "words"
         );
 
-
+        updateMistakeUI();
         createDailyQuestions();
-
-
         showQuestion();
-
 
         document
             .getElementById("loading")
             .style.display =
             "none";
-
 
         document
             .getElementById("quiz")
@@ -1248,6 +1348,341 @@ function initialiseApp() {
 
 
 /* =====================================================
+   MISTAKE STORAGE
+===================================================== */
+
+function loadMistakes() {
+
+    try {
+
+        const raw =
+            localStorage.getItem(
+                MISTAKE_STORAGE_KEY
+            );
+
+        if (!raw) {
+            return {};
+        }
+
+        const data = JSON.parse(raw);
+
+        if (!data || typeof data !== "object") {
+            return {};
+        }
+
+        return data;
+
+    } catch (error) {
+
+        console.warn(
+            "Could not read mistake data:",
+            error
+        );
+
+        return {};
+    }
+}
+
+
+function saveMistakes(data) {
+
+    try {
+
+        localStorage.setItem(
+            MISTAKE_STORAGE_KEY,
+            JSON.stringify(data)
+        );
+
+    } catch (error) {
+
+        console.warn(
+            "Could not save mistake data:",
+            error
+        );
+    }
+}
+
+
+function getMistakeKey(word) {
+
+    /*
+     * Prefer the stable vocabulary id.
+     * Fall back to the word itself.
+     */
+    return String(
+        word.id != null
+            ? word.id
+            : word.word
+    );
+}
+
+
+function recordWrongAnswer(word) {
+
+    const mistakes = loadMistakes();
+    const key = getMistakeKey(word);
+
+    if (!mistakes[key]) {
+
+        mistakes[key] = {
+            id: word.id,
+            word: word.word,
+            wrong: 0,
+            correct: 0,
+            lastWrong: 0,
+            mastered: false
+        };
+
+    }
+
+    mistakes[key].word = word.word;
+    mistakes[key].wrong =
+        Number(mistakes[key].wrong || 0) + 1;
+    mistakes[key].lastWrong =
+        Date.now();
+
+    /*
+     * A new wrong answer means the student
+     * still needs this word.
+     */
+    mistakes[key].mastered = false;
+
+    saveMistakes(mistakes);
+    updateMistakeUI();
+}
+
+
+function recordCorrectReview(word) {
+
+    const mistakes = loadMistakes();
+    const key = getMistakeKey(word);
+
+    if (!mistakes[key]) {
+        return;
+    }
+
+    mistakes[key].correct =
+        Number(mistakes[key].correct || 0) + 1;
+
+    /*
+     * Three successful review attempts = mastered.
+     */
+    if (mistakes[key].correct >= 3) {
+        mistakes[key].mastered = true;
+    }
+
+    saveMistakes(mistakes);
+    updateMistakeUI();
+}
+
+
+function getActiveMistakes() {
+
+    const mistakes = loadMistakes();
+
+    return Object.values(mistakes)
+        .filter(function (item) {
+
+            return (
+                item &&
+                item.word &&
+                !item.mastered
+            );
+
+        })
+        .map(function (item) {
+
+            const vocabularyWord =
+                vocabularyData.find(
+                    function (word) {
+                        return (
+                            String(
+                                word.id != null
+                                    ? word.id
+                                    : word.word
+                            ) ===
+                            String(
+                                item.id != null
+                                    ? item.id
+                                    : item.word
+                            )
+                        );
+                    }
+                );
+
+            if (!vocabularyWord) {
+                return null;
+            }
+
+            return {
+                word: vocabularyWord,
+                stats: item
+            };
+
+        })
+        .filter(Boolean);
+}
+
+
+function getMistakeCount() {
+    return getActiveMistakes().length;
+}
+
+
+function updateMistakeUI() {
+
+    const count =
+        getMistakeCount();
+
+    const countElement =
+        document.getElementById(
+            "mistakeCount"
+        );
+
+    if (countElement) {
+        countElement.textContent =
+            count;
+    }
+
+    const button =
+        document.getElementById(
+            "mistakeButton"
+        );
+
+    if (button) {
+        button.disabled =
+            count === 0;
+    }
+
+    const resultButton =
+        document.getElementById(
+            "reviewResultButton"
+        );
+
+    if (resultButton) {
+        resultButton.disabled =
+            count === 0;
+    }
+}
+
+
+/* =====================================================
+   START MISTAKE REVIEW
+===================================================== */
+
+function startMistakeReview() {
+
+    const active =
+        getActiveMistakes();
+
+    if (!active.length) {
+
+        alert(
+            "Great! You have no active mistakes to review. 🎉"
+        );
+
+        return;
+    }
+
+    reviewMode = true;
+    currentQuestion = 0;
+    score = 0;
+    questions = [];
+
+    /*
+     * Sort by:
+     * 1. higher wrong count first
+     * 2. older mistakes first
+     *
+     * This makes the hardest words appear earlier.
+     */
+    active.sort(
+        function (a, b) {
+
+            const wrongA =
+                Number(
+                    a.stats.wrong || 0
+                );
+
+            const wrongB =
+                Number(
+                    b.stats.wrong || 0
+                );
+
+            if (wrongA !== wrongB) {
+                return wrongB - wrongA;
+            }
+
+            return (
+                Number(
+                    a.stats.lastWrong || 0
+                ) -
+                Number(
+                    b.stats.lastWrong || 0
+                )
+            );
+        }
+    );
+
+    /*
+     * Review up to 10 words at a time.
+     */
+    const selected =
+        active.slice(0, 10);
+
+    questions =
+        selected.map(
+            function (item) {
+
+                /*
+                 * Use the normal question engine,
+                 * while keeping the original vocabulary
+                 * record untouched.
+                 */
+                return createQuestion(
+                    item.word,
+                    Number(item.word.level) || 1
+                );
+
+            }
+        );
+
+    document
+        .getElementById("result")
+        .style.display =
+        "none";
+
+    document
+        .getElementById("quiz")
+        .style.display =
+        "block";
+
+    document
+        .getElementById("reviewBadge")
+        .style.display =
+        "inline-block";
+
+    showQuestion();
+}
+
+
+/* =====================================================
+   EXIT REVIEW MODE
+===================================================== */
+
+function exitReviewMode() {
+
+    reviewMode = false;
+
+    document
+        .getElementById("reviewBadge")
+        .style.display =
+        "none";
+
+}
+
+
+/* =====================================================
    ERROR
 ===================================================== */
 
@@ -1258,18 +1693,15 @@ function showError(error) {
         .style.display =
         "none";
 
-
     document
         .getElementById("quiz")
         .style.display =
         "none";
 
-
     document
         .getElementById("errorBox")
         .style.display =
         "block";
-
 
     document
         .getElementById("errorMessage")
@@ -1298,13 +1730,6 @@ function createDailyQuestions() {
 
     questions = [];
 
-
-    /*
-     * One question from each level.
-     *
-     * Level 1 → Level 10
-     */
-
     for (
         let level = 1;
         level <= 10;
@@ -1313,7 +1738,7 @@ function createDailyQuestions() {
 
         let pool =
             vocabularyData.filter(
-                function(word) {
+                function (word) {
 
                     return (
                         Number(word.level) ===
@@ -1323,19 +1748,12 @@ function createDailyQuestions() {
                 }
             );
 
-
-        /*
-         * If a level does not exist,
-         * use the complete database.
-         */
-
         if (pool.length === 0) {
 
             pool =
                 vocabularyData;
 
         }
-
 
         let word =
             pool[
@@ -1344,7 +1762,6 @@ function createDailyQuestions() {
                     pool.length
                 )
             ];
-
 
         questions.push(
             createQuestion(
@@ -1367,14 +1784,6 @@ function createQuestion(
     level
 ) {
 
-    /*
-     * Levels 1–3:
-     * meaning questions
-     *
-     * Levels 4–10:
-     * mixed question types
-     */
-
     let type =
         level <= 3
             ? "meaning"
@@ -1386,7 +1795,6 @@ function createQuestion(
                 ]
             );
 
-
     if (type === "synonym") {
 
         return createSynonymQuestion(
@@ -1396,7 +1804,6 @@ function createQuestion(
 
     }
 
-
     if (type === "context") {
 
         return createContextQuestion(
@@ -1405,7 +1812,6 @@ function createQuestion(
         );
 
     }
-
 
     return createMeaningQuestion(
         word,
@@ -1427,13 +1833,11 @@ function createMeaningQuestion(
     let correct =
         getCorrectMeaning(word);
 
-
     let wrongAnswers =
         getWrongMeanings(
             word,
             3
         );
-
 
     let options =
         shuffle(
@@ -1443,13 +1847,10 @@ function createMeaningQuestion(
             ]
         );
 
-
     return {
 
         level: level,
-
         word: word,
-
         type: "meaning",
 
         question:
@@ -1458,7 +1859,6 @@ function createMeaningQuestion(
             '" mean?',
 
         answer: correct,
-
         options: options,
 
         explanation:
@@ -1478,24 +1878,14 @@ function createSynonymQuestion(
     level
 ) {
 
-    /*
-     * For synonym questions,
-     * the answer is the word's meaning.
-     *
-     * This keeps the question consistent
-     * with the vocabulary database.
-     */
-
     let correct =
         getCorrectMeaning(word);
-
 
     let wrongAnswers =
         getWrongMeanings(
             word,
             3
         );
-
 
     let options =
         shuffle(
@@ -1505,13 +1895,10 @@ function createSynonymQuestion(
             ]
         );
 
-
     return {
 
         level: level,
-
         word: word,
-
         type: "synonym",
 
         question:
@@ -1520,7 +1907,6 @@ function createSynonymQuestion(
             '"?',
 
         answer: correct,
-
         options: options,
 
         explanation:
@@ -1540,29 +1926,12 @@ function createContextQuestion(
     level
 ) {
 
-    /*
-     * IMPORTANT:
-     *
-     * We always prefer the example supplied
-     * in vocabulary.js.
-     *
-     * The vocabulary itself is NOT changed.
-     */
-
-
     let example =
         typeof word.example === "string"
             ? word.example.trim()
             : "";
 
-
     let sentence = "";
-
-
-    /*
-     * Check whether the original example
-     * actually contains the vocabulary word.
-     */
 
     let wordPattern =
         new RegExp(
@@ -1572,16 +1941,10 @@ function createContextQuestion(
             "i"
         );
 
-
     if (
         example &&
         wordPattern.test(example)
     ) {
-
-        /*
-         * Replace ONLY the target word
-         * with a proper visual blank.
-         */
 
         sentence =
             escapeHTML(example).replace(
@@ -1598,26 +1961,12 @@ function createContextQuestion(
 
     else {
 
-        /*
-         * IMPORTANT FIX
-         *
-         * Do NOT generate:
-         *
-         * The student was facilitate...
-         *
-         * because "facilitate" is a verb.
-         *
-         * Instead, use a sentence structure
-         * appropriate for the word's part of speech.
-         */
-
         let partOfSpeech =
             String(
                 word.partOfSpeech || ""
             )
             .toLowerCase()
             .trim();
-
 
         if (
             partOfSpeech.includes("adjective")
@@ -1665,10 +2014,6 @@ function createContextQuestion(
 
         else {
 
-            /*
-             * Generic fallback
-             */
-
             sentence =
                 "The student used the word " +
                 '<span class="question-blank">&nbsp;</span>' +
@@ -1678,26 +2023,14 @@ function createContextQuestion(
 
     }
 
-
-    /*
-     * Context answer is the vocabulary word itself.
-     */
-
     let correct =
         word.word;
-
-
-    /*
-     * Get three different vocabulary words
-     * as distractors.
-     */
 
     let wrongWords =
         getWrongWords(
             word,
             3
         );
-
 
     let options =
         shuffle(
@@ -1707,13 +2040,10 @@ function createContextQuestion(
             ]
         );
 
-
     return {
 
         level: level,
-
         word: word,
-
         type: "context",
 
         question:
@@ -1721,7 +2051,6 @@ function createContextQuestion(
             sentence,
 
         answer: correct,
-
         options: options,
 
         explanation:
@@ -1749,7 +2078,6 @@ function getCorrectMeaning(word) {
 
     }
 
-
     if (
         word.chinese &&
         String(word.chinese).trim()
@@ -1760,7 +2088,6 @@ function getCorrectMeaning(word) {
         ).trim();
 
     }
-
 
     return (
         "the meaning of the word " +
@@ -1781,7 +2108,7 @@ function getWrongMeanings(
 
     let candidates =
         vocabularyData.filter(
-            function(item) {
+            function (item) {
 
                 return (
                     item.id !==
@@ -1796,15 +2123,12 @@ function getWrongMeanings(
             }
         );
 
-
     candidates =
         shuffle(
             candidates.slice()
         );
 
-
     let results = [];
-
 
     for (
         let item of candidates
@@ -1812,7 +2136,6 @@ function getWrongMeanings(
 
         let meaning =
             getCorrectMeaning(item);
-
 
         if (
             meaning &&
@@ -1828,7 +2151,6 @@ function getWrongMeanings(
 
         }
 
-
         if (
             results.length >= count
         ) {
@@ -1839,11 +2161,6 @@ function getWrongMeanings(
 
     }
 
-
-    /*
-     * Safety fallback.
-     */
-
     while (
         results.length < count
     ) {
@@ -1853,7 +2170,6 @@ function getWrongMeanings(
         );
 
     }
-
 
     return results;
 
@@ -1871,7 +2187,7 @@ function getWrongWords(
 
     let candidates =
         vocabularyData.filter(
-            function(item) {
+            function (item) {
 
                 return (
                     item.id !==
@@ -1881,15 +2197,12 @@ function getWrongWords(
             }
         );
 
-
     candidates =
         shuffle(
             candidates.slice()
         );
 
-
     let results = [];
-
 
     for (
         let item of candidates
@@ -1907,7 +2220,6 @@ function getWrongWords(
 
         }
 
-
         if (
             results.length >= count
         ) {
@@ -1918,11 +2230,6 @@ function getWrongWords(
 
     }
 
-
-    /*
-     * Safety fallback
-     */
-
     while (
         results.length < count
     ) {
@@ -1932,7 +2239,6 @@ function getWrongWords(
         );
 
     }
-
 
     return results;
 
@@ -1947,7 +2253,6 @@ function getExplanation(word) {
 
     let text = "";
 
-
     if (word.meaning) {
 
         text +=
@@ -1957,7 +2262,6 @@ function getExplanation(word) {
             );
 
     }
-
 
     if (word.chinese) {
 
@@ -1969,7 +2273,6 @@ function getExplanation(word) {
 
     }
 
-
     if (word.example) {
 
         text +=
@@ -1979,7 +2282,6 @@ function getExplanation(word) {
             );
 
     }
-
 
     if (
         word.synonyms &&
@@ -1991,7 +2293,7 @@ function getExplanation(word) {
             "<br><br>Synonyms: " +
             word.synonyms
                 .map(
-                    function(item) {
+                    function (item) {
 
                         return escapeHTML(
                             item
@@ -2003,9 +2305,7 @@ function getExplanation(word) {
 
     }
 
-
     return text;
-
 }
 
 
@@ -2017,23 +2317,14 @@ function showQuestion() {
 
     answered = false;
 
-
     let q =
         questions[
             currentQuestion
         ];
 
-
     if (!q) {
-
         return;
-
     }
-
-
-    /*
-     * Progress text
-     */
 
     document
         .getElementById("progressText")
@@ -2043,21 +2334,11 @@ function showQuestion() {
         " of " +
         questions.length;
 
-
-    /*
-     * Level
-     */
-
     document
         .getElementById("levelText")
         .textContent =
         "Level " +
         q.level;
-
-
-    /*
-     * Progress bar
-     */
 
     let percentage =
         (
@@ -2065,36 +2346,18 @@ function showQuestion() {
             questions.length
         ) * 100;
 
-
     document
         .getElementById("progressBar")
         .style.width =
         percentage + "%";
-
-
-    /*
-     * Question
-     */
 
     document
         .getElementById("questionText")
         .innerHTML =
         q.question;
 
-
-    /*
-     * Options
-     */
-
     let options =
         q.options || [];
-
-
-    /*
-     * Safety:
-     * If an older question object does not have
-     * options, generate them here.
-     */
 
     if (!options.length) {
 
@@ -2128,56 +2391,39 @@ function showQuestion() {
 
         }
 
-
         q.options =
             options;
 
     }
-
 
     let optionsContainer =
         document.getElementById(
             "options"
         );
 
-
     optionsContainer.innerHTML =
         "";
 
-
-    /*
-     * Create buttons
-     */
-
     options.forEach(
-        function(option) {
+        function (option) {
 
             let button =
                 document.createElement(
                     "button"
                 );
 
-
             button.type =
                 "button";
-
 
             button.className =
                 "option";
 
-
-            /*
-             * textContent prevents HTML injection
-             * from vocabulary options.
-             */
-
             button.textContent =
                 option;
 
-
             button.addEventListener(
                 "click",
-                function() {
+                function () {
 
                     checkAnswer(
                         option,
@@ -2187,7 +2433,6 @@ function showQuestion() {
                 }
             );
 
-
             optionsContainer.appendChild(
                 button
             );
@@ -2195,28 +2440,16 @@ function showQuestion() {
         }
     );
 
-
-    /*
-     * Reset feedback
-     */
-
     let feedback =
         document.getElementById(
             "feedback"
         );
 
-
     feedback.className =
         "feedback";
 
-
     feedback.innerHTML =
         "";
-
-
-    /*
-     * Hide Next button
-     */
 
     document
         .getElementById("nextButton")
@@ -2236,42 +2469,30 @@ function checkAnswer(
 ) {
 
     if (answered) {
-
         return;
-
     }
 
-
     answered = true;
-
 
     let q =
         questions[
             currentQuestion
         ];
 
-
     let correct =
         selected ===
         q.answer;
-
 
     let buttons =
         document.querySelectorAll(
             ".option"
         );
 
-
-    /*
-     * Disable all options
-     */
-
     buttons.forEach(
-        function(button) {
+        function (button) {
 
             button.disabled =
                 true;
-
 
             if (
                 button.textContent ===
@@ -2287,20 +2508,22 @@ function checkAnswer(
         }
     );
 
-
-    /*
-     * Correct answer
-     */
-
     if (correct) {
 
         score++;
-
 
         clickedButton.classList.add(
             "correct"
         );
 
+        /*
+         * Only count a correct answer as
+         * review progress when the question
+         * comes from Mistake Review.
+         */
+        if (reviewMode) {
+            recordCorrectReview(q.word);
+        }
 
         showFeedback(
             true,
@@ -2310,17 +2533,17 @@ function checkAnswer(
 
     }
 
-
-    /*
-     * Wrong answer
-     */
-
     else {
 
         clickedButton.classList.add(
             "wrong"
         );
 
+        /*
+         * Every wrong answer enters or remains
+         * in the mistake system.
+         */
+        recordWrongAnswer(q.word);
 
         showFeedback(
             false,
@@ -2332,11 +2555,6 @@ function checkAnswer(
         );
 
     }
-
-
-    /*
-     * Show next button
-     */
 
     document
         .getElementById("nextButton")
@@ -2361,25 +2579,17 @@ function showFeedback(
             "feedback"
         );
 
-
     feedback.className =
         correct
             ? "feedback correct"
             : "feedback wrong";
 
-
     feedback.innerHTML =
-
         '<div class="feedback-title">' +
-
         title +
-
         "</div>" +
-
         "<div>" +
-
         text +
-
         "</div>";
 
 }
@@ -2393,7 +2603,6 @@ function nextQuestion() {
 
     currentQuestion++;
 
-
     if (
         currentQuestion >=
         questions.length
@@ -2404,7 +2613,6 @@ function nextQuestion() {
         return;
 
     }
-
 
     showQuestion();
 
@@ -2422,12 +2630,10 @@ function showResult() {
         .style.display =
         "none";
 
-
     document
         .getElementById("result")
         .style.display =
         "block";
-
 
     document
         .getElementById("score")
@@ -2436,7 +2642,6 @@ function showResult() {
         " / " +
         questions.length;
 
-
     let percentage =
         Math.round(
             score /
@@ -2444,11 +2649,34 @@ function showResult() {
             100
         );
 
-
     let message;
 
+    if (reviewMode) {
 
-    if (percentage === 100) {
+        if (percentage === 100) {
+
+            message =
+                "Excellent! Keep reviewing until every difficult word is mastered. 🌟";
+
+        }
+
+        else if (percentage >= 80) {
+
+            message =
+                "Great review session! Keep working on the remaining mistakes. 💪";
+
+        }
+
+        else {
+
+            message =
+                "Keep practising. Every mistake helps you learn. 🌱";
+
+        }
+
+    }
+
+    else if (percentage === 100) {
 
         message =
             "Outstanding! Perfect score! 🌟";
@@ -2476,11 +2704,59 @@ function showResult() {
 
     }
 
-
     document
         .getElementById("resultMessage")
         .textContent =
         message;
+
+    const activeCount =
+        getMistakeCount();
+
+    const summary =
+        document.getElementById(
+            "mistakeSummary"
+        );
+
+    if (activeCount > 0) {
+
+        summary.style.display =
+            "block";
+
+        summary.innerHTML =
+            "<strong>" +
+            activeCount +
+            "</strong> active " +
+            (activeCount === 1
+                ? "mistake"
+                : "mistakes") +
+            " still need review.";
+
+    }
+
+    else {
+
+        summary.style.display =
+            "block";
+
+        summary.innerHTML =
+            "🎉 <strong>All active mistakes are cleared.</strong> Keep up the great work!";
+
+    }
+
+    const reviewButton =
+        document.getElementById(
+            "reviewResultButton"
+        );
+
+    reviewButton.disabled =
+        activeCount === 0;
+
+    /*
+     * Daily 10 completion exits review mode.
+     * Review completion also exits review mode,
+     * so the result page is clean and neutral.
+     */
+    exitReviewMode();
 
 }
 
@@ -2492,28 +2768,31 @@ function showResult() {
 function restartQuiz() {
 
     currentQuestion = 0;
-
     score = 0;
-
     questions = [];
-
 
     document
         .getElementById("result")
         .style.display =
         "none";
 
-
     document
         .getElementById("quiz")
         .style.display =
         "block";
 
+    if (reviewMode) {
 
-    createDailyQuestions();
+        startMistakeReview();
 
+    }
 
-    showQuestion();
+    else {
+
+        createDailyQuestions();
+        showQuestion();
+
+    }
 
 }
 
@@ -2543,9 +2822,7 @@ function shuffle(array) {
     for (
         let i =
             array.length - 1;
-
         i > 0;
-
         i--
     ) {
 
@@ -2554,7 +2831,6 @@ function shuffle(array) {
                 Math.random() *
                 (i + 1)
             );
-
 
         [
             array[i],
@@ -2566,7 +2842,6 @@ function shuffle(array) {
         ];
 
     }
-
 
     return array;
 
@@ -2596,27 +2871,22 @@ function escapeRegExp(string) {
 function escapeHTML(value) {
 
     return String(value)
-
         .replace(
             /&/g,
             "&amp;"
         )
-
         .replace(
             /</g,
             "&lt;"
         )
-
         .replace(
             />/g,
             "&gt;"
         )
-
         .replace(
             /"/g,
             "&quot;"
         )
-
         .replace(
             /'/g,
             "&#039;"
