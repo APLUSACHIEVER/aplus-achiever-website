@@ -13,17 +13,17 @@ header{background:#fff;border-bottom:1px solid #dfece6;padding:18px 5%;display:f
 @media(max-width:850px){.actions{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.grid2,.dashboard-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:36px}}@media(max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}.grid2,.dashboard-grid,.weak-list{grid-template-columns:1fr}.question{font-size:25px}.controls{flex-direction:column}.controls .btn{width:100%}}
 </style></head>
 <body>
-<header><div><div class="logo">APLUS ACHIEVER</div><div class="sub">PSLE ENGLISH VOCABULARY</div></div><div class="pill">AI PERSONAL TUTOR • V10</div></header>
+<header><div><div class="logo">APLUS ACHIEVER</div><div class="sub">PSLE ENGLISH VOCABULARY</div></div><div class="pill">AI TUTOR 2.0 • V11</div></header>
 <main class="container">
 <section class="hero"><div class="pill">1000-WORD ADAPTIVE SYSTEM</div><h1>Your <span>PSLE AI</span> Personal Tutor</h1><p>Diagnose → Learn → Review → Challenge → Master</p></section>
-<div class="actions"><button class="btn primary" onclick="startMode('daily')">AI Daily 10</button><button class="btn" onclick="startMode('diagnostic')">AI Diagnostic</button><button class="btn" onclick="startMode('due')">Review Due</button><button class="btn" onclick="startMode('weak')">Weak Words</button><button class="btn" onclick="startMode('challenge')">Challenge</button></div>
+<div class="actions"><button class="btn primary" onclick="startMode('daily')">AI Daily 10</button><button class="btn" onclick="startMode('diagnostic')">AI Diagnostic</button><button class="btn" onclick="startMode('due')">Review Due</button><button class="btn" onclick="startMode('weak')">Weak Words</button><button class="btn" onclick="startMode('challenge')">Challenge</button></div><div class="actions" style="margin-top:10px"><button class="btn" onclick="V11_masteryCheck()">Mastery Check</button><button class="btn" onclick="V11_parentReport()">Parent Report</button><button class="btn" onclick="showTutor()">AI Tutor Dashboard</button><button class="btn" onclick="V11_resetDemo()">Reset Learning Data</button><button class="btn" onclick="showHome()">Home</button></div>
 <div class="stats"><div class="stat"><strong id="sAcc">0%</strong><small>Accuracy</small></div><div class="stat"><strong id="sQ">0</strong><small>Questions</small></div><div class="stat"><strong id="sMaster">0</strong><small>Mastered</small></div><div class="stat"><strong id="sDue">0</strong><small>Due</small></div><div class="stat"><strong id="sLevel">1</strong><small>Target Level</small></div><div class="stat"><strong id="sStreak">0</strong><small>Day Streak</small></div></div>
 <section id="home" class="card"><div class="grid2"><div><div class="section-title">AI Learning Engine</div><h2 id="homeTitle">Your personalised plan</h2><p id="homeAdvice" class="small">The tutor will build your profile from your answers.</p><div class="progress"><i id="dailyBar"></i></div><p id="dailyText" class="small">0 / 10 today</p><button class="btn primary" onclick="startMode('daily')">Start Today's 10 →</button></div><div class="plan"><h3>What the tutor adapts</h3><p>🎯 Accuracy & consistency</p><p>🧠 Word mastery</p><p>⏰ Forgetting & review timing</p><p>📈 Difficulty & stretch</p><p>🧩 Question type variety</p></div></div></section>
 <section id="diagnosticCard" class="card hidden"><div class="section-title">AI Diagnostic</div><h2>Find your current PSLE vocabulary level</h2><p class="small">20 questions across Levels 1–10. The tutor uses the result to set your first target range.</p><button class="btn primary" onclick="startMode('diagnostic')">Start Diagnostic →</button></section>
 <section id="quiz" class="card hidden"><div class="quiz-top"><span id="modeLabel">AI DAILY 10</span><span id="counter">1 / 10</span></div><div class="progress" style="margin:13px 0 22px"><i id="qbar"></i></div><div class="section-title" id="typeLabel">MEANING</div><div class="question" id="question"></div><div id="options" class="options"></div><div id="inputWrap" class="hidden"><input id="answerInput" class="input" autocomplete="off" placeholder="Type the word..."><p class="small">Spelling is checked flexibly.</p></div><div class="controls"><button class="btn" onclick="speakCurrent()">🔊 Hear Word</button><button id="checkBtn" class="btn primary" onclick="submitAnswer()">Check Answer</button><button id="nextBtn" class="btn primary hidden" onclick="nextQuestion()">Next Question →</button></div><div id="feedback" class="feedback hidden"></div><div id="wordCard" class="word-card hidden"></div></section>
 <section id="result" class="card hidden result"><div class="section-title">SESSION COMPLETE</div><div id="score" class="score">0/10</div><h2 id="resultTitle"></h2><p id="resultText" class="small"></p><div id="diagnosis" class="diagnosis"></div><button class="btn primary" onclick="startMode('daily')">Another AI 10 →</button><button class="btn" onclick="showTutor()">Open Tutor Dashboard</button></section>
 <section id="tutor" class="card hidden"><div class="section-title">AI TUTOR DASHBOARD</div><h2>Your Learning Profile</h2><div id="tutorContent"></div><button class="btn primary" onclick="startMode('daily')">Continue Learning →</button><button class="btn" onclick="showHome()">Home</button></section>
-<div class="footer">APLUS ACHIEVER • PSLE AI Personal Tutor V10</div></main><div id="toast" class="toast"></div>
+<div class="footer">APLUS ACHIEVER • PSLE AI Tutor 2.0 V11</div></main><div id="toast" class="toast"></div>
 <script src="data/vocabulary.js"></script>
 <script>
 'use strict';
@@ -71,4 +71,77 @@ function esc(x){return String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&l
 document.addEventListener('keydown',e=>{if(e.key==='Enter'){if(!answered&&currentQ&&currentQ.type==='fill')submitAnswer();else if(answered)nextQuestion()}});
 load();
 if(!VOCAB.length)console.error('APLUS ACHIEVER: data/vocabulary.js did not load.');
-</script></body></html>
+</script>
+<style>
+.v11-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:15px}.v11-mini .box{min-height:100px}.v11-ring{font-size:38px;font-weight:900;color:#176448}.v11-alert{padding:14px 16px;border-radius:14px;background:#fff8e8;border:1px solid #f0d79b;margin-top:14px}.v11-report{position:fixed;inset:0;background:#0008;z-index:50;display:flex;align-items:center;justify-content:center;padding:18px}.v11-report-card{background:#fff;max-width:850px;width:100%;max-height:90vh;overflow:auto;border-radius:22px;padding:26px}.v11-report-card h2{margin-top:0;color:#176448}.v11-table{width:100%;border-collapse:collapse;margin-top:12px}.v11-table th,.v11-table td{padding:9px;border-bottom:1px solid #e5eee9;text-align:left}.v11-chip{display:inline-block;padding:6px 10px;border-radius:14px;background:#e7f4ed;margin:3px;font-size:12px;font-weight:800}@media(max-width:850px){.v11-mini{grid-template-columns:1fr 1fr}}@media(max-width:520px){.v11-mini{grid-template-columns:1fr}}
+</style>
+<div id="v11Report" class="v11-report hidden" onclick="if(event.target===this)V11_closeReport()"></div>
+<script>
+(function(){
+'use strict';
+window.V11_masteryCheck=function(){
+  if(!VOCAB.length){toast('Vocabulary data could not load.');return;}
+  mode='mastery';
+  questions=V11_chooseMastery(10); index=0; score=0; sessionWrong=[]; sessionCorrect=[];
+  if(!questions.length){toast('No mastery items available yet.');return;}
+  show('quiz'); renderQuestion();
+};
+function V11_chooseMastery(n){
+  let seen=VOCAB.filter(w=>wordState(w).seen>0);
+  let candidates=seen.filter(w=>wordState(w).mastery<90).sort((a,b)=>{
+    const A=wordState(a),B=wordState(b);
+    return (B.seen-A.seen)||(A.mastery-B.mastery)||(B.wrong-A.wrong);
+  });
+  if(candidates.length<n)candidates=candidates.concat(VOCAB.filter(w=>!seen.includes(w)).slice(0,n-candidates.length));
+  return pick(candidates,n);
+}
+window.V11_parentReport=function(){
+  const weakList=weak().slice(0,8), target=targetLevel(), d=db.days[today()]||{q:0,c:0};
+  let rows='';
+  weakList.forEach(w=>{const s=wordState(w);rows+=`<tr><td><b>${esc(w.word)}</b></td><td>Level ${esc(w.level||'—')}</td><td>${Math.round(acc(s)*100)}%</td><td>${s.wrong}</td><td>${Math.round(s.mastery)}%</td></tr>`});
+  const plan=due().length?'Review due words before new difficulty.':weakList.length?'Focus on the top weak words, then attempt a small stretch.':'Continue Daily 10 and add 2–3 challenge words.';
+  document.getElementById('v11Report').innerHTML=`<div class="v11-report-card"><div class="section-title">PARENT PROGRESS REPORT</div><h2>PSLE AI Tutor 2.0</h2><div class="v11-mini"><div class="box"><small>Readiness</small><div class="v11-ring">${readiness()}%</div></div><div class="box"><small>Accuracy</small><div class="v11-ring">${overall()}%</div></div><div class="box"><small>Mastered</small><div class="v11-ring">${mastered()}</div></div><div class="box"><small>Target</small><div class="v11-ring">L${target}</div></div></div><div class="v11-alert"><b>Today's learning:</b> ${d.q||0} questions · ${d.c||0} correct · streak ${streak()} day(s).</div><h3>AI Tutor Assessment</h3><p>${esc(recommendation())}</p><h3>Top Areas to Strengthen</h3>${rows?`<table class="v11-table"><tr><th>Word</th><th>Level</th><th>Accuracy</th><th>Wrong</th><th>Mastery</th></tr>${rows}</table>`:'<p>No weak words yet. The learner is building a clean profile.</p>'}<h3>7-Day Learning Plan</h3><p>${esc(plan)}</p><p>• Days 1–2: due + weak words<br>• Days 3–4: Daily 10 at target level<br>• Day 5: mixed question types<br>• Day 6: Level 7–10 challenge<br>• Day 7: Mastery Check</p><div class="controls"><button class="btn" onclick="V11_closeReport()">Close</button><button class="btn primary" onclick="window.print()">Print Report</button></div></div>`;
+  document.getElementById('v11Report').classList.remove('hidden');
+};
+window.V11_closeReport=function(){document.getElementById('v11Report').classList.add('hidden')};
+window.V11_resetDemo=function(){
+  if(confirm('Reset all vocabulary learning data on this browser? This cannot be undone.')){
+    localStorage.removeItem(KEY); db={total:0,correct:0,words:{},days:{},diagnostic:null}; showHome(); toast('Learning data reset.'); updateUI();
+  }
+};
+// Add response-time and error-pattern tracking without changing the existing quiz controller.
+const V11_oldSubmit=window.submitAnswer;
+window.submitAnswer=function(){
+  const started=questionStart||Date.now();
+  const before=score;
+  V11_oldSubmit();
+  if(answered && current){
+    const ms=Date.now()-started;
+    const s=wordState(current);
+    s.lastResponseMs=ms;
+    s.fastCount=(s.fastCount||0)+(ms<5000?1:0);
+    s.slowCount=(s.slowCount||0)+(ms>15000?1:0);
+    if(score>before)s.lastResult='correct';else s.lastResult='wrong';
+    save();
+  }
+};
+// Make the engine slightly more diagnostic: target level uses both accuracy and mastery.
+const V11_oldTarget=window.targetLevel;
+window.targetLevel=function(){
+  if(db.diagnostic && db.total<30)return db.diagnostic.target||3;
+  const a=overall(), m=mastered()/Math.max(1,VOCAB.length)*100;
+  let t=V11_oldTarget();
+  if(a<55||m<1)t=Math.min(t,3);
+  else if(a>=88&&m>=8)t=Math.max(t,7);
+  return Math.max(1,Math.min(10,t));
+};
+// Upgrade the home advice with a concrete next action.
+const V11_oldUpdate=window.updateUI;
+window.updateUI=function(){
+  V11_oldUpdate();
+  const el=document.getElementById('homeTitle');
+  if(el)el.textContent=db.total===0?'Start with a diagnostic':'Your AI Tutor plan is ready';
+};
+})();
+</script>
+</body></html>
