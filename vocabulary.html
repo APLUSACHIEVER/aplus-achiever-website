@@ -16,11 +16,28 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 
 @media(max-width:1000px){.hero{grid-template-columns:1fr}.actions{grid-template-columns:repeat(3,1fr)}.secondary-actions{grid-template-columns:repeat(3,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.grid2,.dashboard-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){header{height:70px;padding:0 14px}.brand-logo{width:150px;height:50px}.pill{font-size:10px;padding:7px 9px}.container{padding:15px 12px 45px}.hero-main{padding:25px 21px;border-radius:20px}.hero-side{border-radius:20px}.actions,.secondary-actions,.stats,.grid2,.dashboard-grid,.weak-list{grid-template-columns:1fr}.action-card{min-height:108px}.question{font-size:25px}.controls{flex-direction:column}.controls .btn{width:100%}.card{padding:19px;border-radius:18px}.section-heading{align-items:flex-start;gap:5px;flex-direction:column}}
+
+/* V16 — AI Personal Learning Path */
+.path-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 24px;margin:0 0 22px;box-shadow:var(--shadow)}
+.path-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px}.path-head h2{margin:0;color:var(--deep);font-size:22px}.path-badge{padding:7px 11px;border-radius:999px;background:#eaf7f1;color:var(--green);font-size:11px;font-weight:900;letter-spacing:.7px}
+.path-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:10px}.path-step{background:#f7fbf9;border:1px solid #e3efe9;border-radius:15px;padding:14px}.path-step .num{font-size:11px;font-weight:900;color:var(--green2);letter-spacing:.7px}.path-step strong{display:block;margin:5px 0 3px;color:var(--deep);font-size:15px}.path-step small{color:var(--muted);line-height:1.45}.path-focus{background:linear-gradient(135deg,#eaf8f1,#f8fcfa);border-radius:15px;padding:15px}.path-focus b{color:var(--deep)}.path-focus p{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.5}.path-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px}.path-note{font-size:12px;color:var(--muted)}
+@media(max-width:900px){.path-grid{grid-template-columns:1fr 1fr}.path-focus{grid-column:1/-1}}
+@media(max-width:600px){.path-grid{grid-template-columns:1fr}.path-focus{grid-column:auto}.path-head,.path-cta{align-items:flex-start;flex-direction:column}.path-cta .btn{width:100%}}
 </style></head>
 <body>
 <header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 5.0 · V15</div></div></header>
 <main class="container">
-<section class="hero"><div class="hero-main"><div class="hero-kicker">PSLE ENGLISH · 1000-WORD ADAPTIVE SYSTEM</div><h1>Build your vocabulary<br>for <span>PSLE success.</span></h1><p>The tutor learns from your answers and chooses what you should practise next.</p><div class="hero-cta"><button class="btn primary" onclick="startMode('daily')">▶ Start Daily 10</button><button class="btn" onclick="showTutor()">View My Progress</button></div></div><div class="hero-side"><h3>Today's Progress</h3><div class="readiness"><div class="ring"><b id="heroAcc">0%</b></div><div class="side-stat"><strong id="heroDaily">0 / 10</strong> questions<br><strong id="heroMaster">0</strong> mastered</div></div><div style="margin-top:18px" class="progress"><i id="heroBar"></i></div><p class="small" style="margin:9px 0 0">Keep your streak going.</p></div></section>
+<section class="hero"><div class="hero-main"><div class="hero-kicker">PSLE ENGLISH · 1000-WORD ADAPTIVE SYSTEM</div><h1>Build your vocabulary<br>for <span>PSLE success.</span></h1><p>The tutor learns from your answers and chooses what you should practise next.</p><div class="hero-cta"><button class="btn primary" onclick="startMode('path')">▶ Start My Learning Path</button><button class="btn" onclick="showTutor()">View My Progress</button></div></div><div class="hero-side"><h3>Today's Progress</h3><div class="readiness"><div class="ring"><b id="heroAcc">0%</b></div><div class="side-stat"><strong id="heroDaily">0 / 10</strong> questions<br><strong id="heroMaster">0</strong> mastered</div></div><div style="margin-top:18px" class="progress"><i id="heroBar"></i></div><p class="small" style="margin:9px 0 0">Keep your streak going.</p></div></section>
+<section class="path-card">
+  <div class="path-head"><h2>🧠 Today's AI Learning Path</h2><span class="path-badge">PERSONALISED FOR YOU</span></div>
+  <div class="path-grid">
+    <div class="path-focus"><b id="pathFocusTitle">Your tutor is ready</b><p id="pathFocusText">Your next 10 questions will be selected from your learning history.</p></div>
+    <div class="path-step"><span class="num">01 · REVIEW</span><strong id="pathStep1">Due &amp; weak words</strong><small>Strengthen words that need attention.</small></div>
+    <div class="path-step"><span class="num">02 · LEARN</span><strong id="pathStep2">Build your target level</strong><small>Practise words around your current ability.</small></div>
+    <div class="path-step"><span class="num">03 · STRETCH</span><strong id="pathStep3">Challenge when ready</strong><small>Move higher only when your recall is stable.</small></div>
+  </div>
+  <div class="path-cta"><span class="path-note" id="pathNote">The tutor chooses the best starting point automatically.</span><button class="btn primary" onclick="startMode('path')">Start My Learning Path →</button></div>
+</section>
 <div class="section-heading"><h2>Start Learning</h2><span>Choose what you need today</span></div>
 <div class="actions"><button class="action-card primary" onclick="startMode('daily')"><span class="action-icon">🎯</span><strong>AI Daily 10</strong><small>Your personalised 10-question practice.</small></button><button class="action-card" onclick="startMode('diagnostic')"><span class="action-icon">🧠</span><strong>AI Diagnostic</strong><small>Find your current vocabulary level.</small></button><button class="action-card" onclick="startMode('due')"><span class="action-icon">🔄</span><strong>Review Due</strong><small>Revise words that are due today.</small></button><button class="action-card" onclick="startMode('weak')"><span class="action-icon">💡</span><strong>Weak Words</strong><small>Focus on words you need most.</small></button><button class="action-card" onclick="startMode('challenge')"><span class="action-icon">🏆</span><strong>Challenge</strong><small>Stretch yourself with harder words.</small></button></div>
 <div class="secondary-actions"><button class="btn" onclick="V11_masteryCheck()">✓ Mastery Check</button><button class="btn" onclick="V11_parentReport()">▣ Parent Report</button><button class="btn" onclick="showTutor()">◉ My Dashboard</button><button class="btn" onclick="V11_resetDemo()">↺ Reset Data</button><button class="btn" onclick="showHome()">⌂ Home</button></div>
@@ -66,7 +83,33 @@ function rankScore(w){
   const unstable=recent.length>=2&&recent.slice(-2).includes('wrong')?.08:0;
   return daysSince*.22+error*.24+weakness*.18+dueBoost*.18+fit*.08+unseen*.04+slowBias+unstable+Math.random()*.025;
 }
+function chooseLearningPath(){
+  const now=Date.now(), used=new Set(), out=[];
+  const add=(arr,n)=>{for(const w of arr){if(out.length>=10||n<=0)break;if(w&&!used.has(w.id)){out.push(w);used.add(w.id);n--;}}};
+  const dueWords=due().sort((a,b)=>masteryPriority(b)-masteryPriority(a));
+  const weakWords=weak().sort((a,b)=>masteryPriority(b)-masteryPriority(a));
+  const learning=VOCAB.filter(w=>{const st=masteryState(w);return st.key==='learning'}).sort((a,b)=>masteryPriority(b)-masteryPriority(a));
+  const target=Number(targetLevel());
+  const targetWords=VOCAB.filter(w=>{const lv=Number(w.level||1);return !wordState(w).seen&&lv>=Math.max(1,target-1)&&lv<=Math.min(10,target+1)}).sort((a,b)=>Math.abs(Number(a.level)-target)-Math.abs(Number(b.level)-target));
+  add(dueWords,3); add(weakWords,3); add(learning,2); add(targetWords,2);
+  if(out.length<10)add([...VOCAB].sort((a,b)=>masteryPriority(b)-masteryPriority(a)),10-out.length);
+  return out.slice(0,10);
+}
+function updateLearningPath(){
+  const d=due().length, w=weak().length, m=mastered(), t=targetLevel();
+  const title=document.getElementById('pathFocusTitle'), text=document.getElementById('pathFocusText'), note=document.getElementById('pathNote');
+  if(!title)return;
+  if(d){title.textContent='Review first — '+d+' word'+(d===1?' is':'s are')+' due';text.textContent='Your tutor will bring due words into today’s path before adding new learning.';note.textContent='Priority: review overdue vocabulary, then build and stretch.';}
+  else if(w){title.textContent='Strengthen your weak words';text.textContent='You have '+w+' word'+(w===1?'':'s')+' that need more reliable recall.';note.textContent='Priority: weak words → target level '+t+' → stretch.';}
+  else if(!db.total){title.textContent='Start by discovering your level';text.textContent='The tutor will learn from your first 10 questions and adjust the path automatically.';note.textContent='No learning history yet — the tutor will build your profile as you practise.';}
+  else {title.textContent='You are ready to build further';text.textContent='Your path will focus on target Level '+t+' and introduce new words without wasting time on stable mastery.';note.textContent='Priority: target Level '+t+' → new words → stretch.';}
+  const s1=document.getElementById('pathStep1'),s2=document.getElementById('pathStep2'),s3=document.getElementById('pathStep3');
+  if(s1)s1.textContent=d?'Review '+d+' due word'+(d===1?'':'s'):w?'Strengthen '+w+' weak word'+(w===1?'':'s'):'Check your recall';
+  if(s2)s2.textContent='Practise Level '+t;
+  if(s3)s3.textContent=m>=10?'Stretch beyond Level '+t:'Stretch when ready';
+}
 function choose(mode){
+  if(mode==='path') return chooseLearningPath();
   if(mode==='diagnostic'){
     const q=[];
     for(let l=1;l<=10;l++){const a=VOCAB.filter(w=>Number(w.level)===l);if(a.length)q.push(pick(a,2)[0]);}
@@ -180,7 +223,7 @@ function renderQuestion(){
     answered=false;choice='';questionStart=Date.now();
     document.getElementById('counter').textContent=(index+1)+' / '+questions.length;
     document.getElementById('qbar').style.width=((index)/questions.length*100)+'%';
-    document.getElementById('modeLabel').textContent=mode==='diagnostic'?'AI DIAGNOSTIC':mode==='daily'?'AI DAILY 10':mode.toUpperCase()+' REVIEW';
+    document.getElementById('modeLabel').textContent=mode==='diagnostic'?'AI DIAGNOSTIC':mode==='daily'?'AI DAILY 10':mode==='path'?'AI LEARNING PATH':mode.toUpperCase()+' REVIEW';
     document.getElementById('typeLabel').textContent=currentQ.type==='cloze'?'CHOOSE THE WORD':currentQ.type==='context'?'CONTEXT MEANING':currentQ.type==='synonym'?'SYNONYM':'WORD MEANING';
     document.getElementById('question').textContent=currentQ.text;
     const box=document.getElementById('options'); box.innerHTML='';
@@ -299,7 +342,7 @@ function adaptiveFast(){let f=0,t=0;VOCAB.forEach(w=>{let s=wordState(w);f+=s.fa
 function adaptiveSlow(){let f=0,t=0;VOCAB.forEach(w=>{let s=wordState(w);f+=s.slowCount||0;t+=(s.fastCount||0)+(s.slowCount||0)});return t?Math.round(f/t*100):0}
 function readiness(){let a=overall(),m=mastered()/Math.max(1,VOCAB.length)*100,sample=Math.min(100,db.total/50*100),d=db.diagnostic?db.diagnostic.score:0;return Math.min(100,Math.round(a*.5+m*.2+sample*.15+d*.15))}
 function recommendation(){if(!db.total)return 'Take the AI Diagnostic first.';if(due().length)return 'Review due words first.';if(weak().length)return 'Strengthen your weak words before increasing difficulty.';return 'You are ready for a controlled stretch into higher-level vocabulary.'}
-function updateUI(){document.getElementById('sAcc').textContent=overall()+'%';document.getElementById('sQ').textContent=db.total;document.getElementById('sMaster').textContent=mastered();document.getElementById('sDue').textContent=due().length;document.getElementById('sLevel').textContent=targetLevel();document.getElementById('sStreak').textContent=streak();let d=dailyDone();document.getElementById('dailyBar').style.width=(d/10*100)+'%';document.getElementById('heroAcc').textContent=overall()+'%';document.getElementById('heroDaily').textContent=d+' / 10';document.getElementById('heroMaster').textContent=mastered();document.getElementById('heroBar').style.width=(d/10*100)+'%';document.getElementById('dailyText').textContent=d+' / 10 today';document.getElementById('homeAdvice').textContent=!db.total?'Start with AI Diagnostic or Daily 10. The tutor learns from every answer.':recommendation()+' Target Level '+targetLevel()+'.'}
+function updateUI(){updateLearningPath();document.getElementById('sAcc').textContent=overall()+'%';document.getElementById('sQ').textContent=db.total;document.getElementById('sMaster').textContent=mastered();document.getElementById('sDue').textContent=due().length;document.getElementById('sLevel').textContent=targetLevel();document.getElementById('sStreak').textContent=streak();let d=dailyDone();document.getElementById('dailyBar').style.width=(d/10*100)+'%';document.getElementById('heroAcc').textContent=overall()+'%';document.getElementById('heroDaily').textContent=d+' / 10';document.getElementById('heroMaster').textContent=mastered();document.getElementById('heroBar').style.width=(d/10*100)+'%';document.getElementById('dailyText').textContent=d+' / 10 today';document.getElementById('homeAdvice').textContent=!db.total?'Start with AI Diagnostic or Daily 10. The tutor learns from every answer.':recommendation()+' Target Level '+targetLevel()+'.'}
 function show(id){['home','diagnosticCard','quiz','result','tutor'].forEach(x=>document.getElementById(x).classList.toggle('hidden',x!==id))}
 function showHome(){show('home');updateUI()}
 function speakCurrent(){if(!current)return;if('speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(current.word);u.lang='en-SG';u.rate=.8;speechSynthesis.speak(u)}else toast('Speech is not supported.')}
