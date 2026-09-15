@@ -355,7 +355,9 @@ header {
 }
 
 .next-button {
-    display: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     border: none;
 
@@ -1424,6 +1426,11 @@ window.addEventListener("load",boot);
 .level-bars{display:grid;gap:9px}.lv{display:grid;grid-template-columns:70px 1fr 42px;gap:8px;align-items:center;font-size:12px}.lv>div{height:9px;background:#e7efeb;border-radius:9px;overflow:hidden}.lv i{display:block;height:100%;background:#299d69;border-radius:9px}
 @media(max-width:900px){.mode-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:700px){.mode-grid{grid-template-columns:1fr}.dashboard-head{align-items:flex-start}.readiness{width:90px;height:90px}.stats,.report-grid{grid-template-columns:repeat(2,1fr)}.diag-grid{grid-template-columns:1fr}.dashboard-head h2{font-size:24px}}
+</style>
+<style>
+/* V8.1 FINAL BUTTON FIX: never hide the Next Question button */
+#nextButton.next-button { display:inline-flex !important; visibility:visible !important; }
+#nextButton.next-button:disabled { opacity:.45; cursor:not-allowed; }
 </style>
 </body>
 </html>
