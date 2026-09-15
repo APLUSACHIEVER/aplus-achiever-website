@@ -1126,6 +1126,57 @@ let smartReviewIndex = 0;
  .smart-score{align-items:flex-start}
 }
 
+
+/* ===== APLUS ACHIEVER V5 AI Learning Algorithm + Student Profile ===== */
+.ai-profile-btn{
+    border:1px solid #b8dcbf;background:#f1faf3;color:#176b3a;border-radius:10px;
+    padding:9px 14px;font-weight:800;cursor:pointer;
+}
+.ai-profile-overlay{
+    position:fixed;inset:0;z-index:10002;background:rgba(0,0,0,.46);
+    display:none;align-items:center;justify-content:center;padding:14px;
+}
+.ai-profile-panel{
+    width:min(1050px,100%);max-height:95vh;overflow:auto;background:#fff;border-radius:22px;
+    padding:24px;box-shadow:0 25px 80px rgba(0,0,0,.25)
+}
+.ai-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
+.ai-title{margin:0;color:#176b3a;font-size:25px}
+.ai-sub{margin:5px 0 0;color:#667085;font-size:13px}
+.ai-close{border:0;background:#f1f3f4;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer}
+.profile-banner{
+    margin-top:18px;padding:20px;border-radius:18px;background:#f3fbf6;border:1px solid #d8eee0;
+    display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center
+}
+.profile-state{font-size:29px;font-weight:900;color:#176b3a}
+.profile-description{font-size:13px;color:#667085;margin-top:5px;line-height:1.5}
+.readiness{
+    min-width:145px;text-align:center;padding:13px;border-radius:14px;background:#fff;border:1px solid #d8eee0
+}
+.readiness-score{font-size:30px;font-weight:900;color:#176b3a}
+.readiness-label{font-size:11px;color:#667085}
+.ai-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:15px}
+.ai-stat{border:1px solid #e3e9e5;border-radius:13px;padding:13px;background:#fff}
+.ai-stat-label{font-size:10px;color:#667085}
+.ai-stat-value{font-size:20px;font-weight:900;color:#176b3a;margin-top:4px}
+.ai-section{margin-top:22px}
+.ai-section h3{font-size:16px;margin:0 0 11px;color:#263238}
+.ability-bars{display:flex;flex-direction:column;gap:10px}
+.ability-row{display:grid;grid-template-columns:75px 1fr 50px;gap:9px;align-items:center}
+.ability-name{font-weight:800;font-size:12px}
+.ability-track{height:9px;background:#e7ece9;border-radius:99px;overflow:hidden}
+.ability-fill{height:100%;width:0;background:#43a866;border-radius:99px}
+.ability-score{font-size:12px;font-weight:900;color:#176b3a;text-align:right}
+.ai-advice{padding:15px;border-radius:14px;background:#fafafa;border:1px solid #e4e8e5;line-height:1.6}
+.ai-advice strong{color:#176b3a}
+.ai-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}
+.ai-action{border:1px solid #b7dfc5;background:#f3fbf6;color:#176b3a;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
+.ai-action.primary{background:#176b3a;color:#fff;border-color:#176b3a}
+@media(max-width:800px){
+ .ai-stats{grid-template-columns:repeat(2,1fr)}
+ .profile-banner{grid-template-columns:1fr}
+}
+
 </style>
 
 </head>
@@ -1250,6 +1301,7 @@ let smartReviewIndex = 0;
 <button type="button" class="dashboard-button" onclick="openDashboard()">Dashboard</button>
 <button type="button" class="learning-centre-btn" onclick="openLearningCentre()">Student Centre</button>
 <button type="button" class="smart-review-btn" onclick="openSmartReview()">Smart Review</button>
+<button type="button" class="ai-profile-btn" onclick="openAIProfile()">AI Profile</button>
 
                     <div
                         class="level-text"
@@ -3179,6 +3231,286 @@ document.addEventListener("keydown", function(e) {
     }
 });
 
+
+/* ===== APLUS ACHIEVER V5 AI Learning Algorithm + Student Ability Profile ===== */
+const AI_PROFILE_KEY = "aplusAchieverPSLEAIProfileV1";
+let adaptiveMode = false;
+let adaptiveQuestions = [];
+let adaptiveIndex = 0;
+
+function getAIProfileData() {
+    const p = loadProgress();
+    const lp = loadLevelProgress();
+    const mistakes = loadMistakes();
+    const active = Object.values(mistakes).filter(x=>!x.mastered);
+    const mastered = Object.values(mistakes).filter(x=>x.mastered);
+    const total = Number(p.answered||0);
+    const accuracy = total ? Number(p.correct||0)/total : 0;
+
+    const levels = {};
+    for (let i=1;i<=10;i++) {
+        const x = lp[String(i)] || {answered:0,correct:0};
+        levels[i] = {
+            answered:Number(x.answered||0),
+            correct:Number(x.correct||0),
+            accuracy:x.answered ? Number(x.correct||0)/Number(x.answered) : 0
+        };
+    }
+
+    // Ability score blends observed accuracy and sample size.
+    const ability = {};
+    for (let i=1;i<=10;i++) {
+        const x = levels[i];
+        const confidence = Math.min(1, x.answered/10);
+        ability[i] = Math.round(((x.accuracy*confidence) + (accuracy*(1-confidence))) * 100);
+    }
+
+    let avgAbility = total ? Math.round(Object.values(ability).reduce((a,b)=>a+b,0)/10) : 0;
+
+    // Readiness rewards accuracy, consistency and mastery, but requires evidence.
+    const masteryRatio = (active.length+mastered.length)
+        ? mastered.length/(active.length+mastered.length) : 0;
+    const streak = Number(loadStreak().current||0);
+    let readiness = total
+        ? Math.round(accuracy*55 + Math.min(streak,14)/14*15 + masteryRatio*20 + Math.min(total,100)/100*10)
+        : 0;
+    readiness = Math.max(0,Math.min(100,readiness));
+
+    let state, description;
+    if (!total) {
+        state="Getting Started";
+        description="The profile will learn your strengths after your first questions.";
+    } else if (readiness>=85) {
+        state="🏆 Advanced & Ready";
+        description="Strong overall performance. The engine can challenge you with higher-level vocabulary while revisiting your weak words.";
+    } else if (readiness>=70) {
+        state="💪 Strong & Developing";
+        description="Good foundation. Your next sessions should mix consolidation with carefully selected harder words.";
+    } else if (readiness>=50) {
+        state="📚 Developing";
+        description="Your profile is improving. The engine will focus on reinforcement and targeted weak-word practice.";
+    } else {
+        state="🌱 Building Foundations";
+        description="The priority is accuracy and vocabulary retention before increasing difficulty.";
+    }
+
+    return {progress:p, levels, ability, active, mastered, accuracy, avgAbility, readiness, streak, state, description};
+}
+
+function recommendedDifficulty(profile) {
+    const a = profile.avgAbility;
+    if (a>=90) return {min:7,max:10,label:"Level 7–10 · Challenge"};
+    if (a>=80) return {min:6,max:9,label:"Level 6–9 · Upper Intermediate"};
+    if (a>=70) return {min:5,max:8,label:"Level 5–8 · Developing"};
+    if (a>=60) return {min:4,max:7,label:"Level 4–7 · Reinforcement"};
+    if (a>=45) return {min:2,max:5,label:"Level 2–5 · Foundation + Growth"};
+    return {min:1,max:3,label:"Level 1–3 · Foundation"};
+}
+
+function adaptiveCandidateWords() {
+    const profile = getAIProfileData();
+    const mistakes = loadMistakes();
+    const mistakeMap = {};
+    Object.values(mistakes).forEach(m => mistakeMap[smartWordKey(m.word)] = m);
+
+    if (!window.vocabulary || !Array.isArray(window.vocabulary)) return [];
+
+    const diff = recommendedDifficulty(profile);
+    return window.vocabulary.map(v => {
+        const k = smartWordKey(v.word);
+        const m = mistakeMap[k];
+        const level = Number(v.level||1);
+        let score = 0;
+
+        // Keep the majority around the recommended difficulty.
+        if (level>=diff.min && level<=diff.max) score += 35;
+        else if (Math.abs(level-diff.min)<=1 || Math.abs(level-diff.max)<=1) score += 18;
+
+        // Target weaknesses.
+        if (m && !m.mastered) {
+            score += Math.min(Number(m.wrongCount||0)*15,60);
+            score += Math.min(Number(m.correctCount||0)*-7,0);
+        }
+
+        // Target levels where the student is weak.
+        const la = profile.levels[level] ? profile.levels[level].accuracy : profile.accuracy;
+        if (profile.levels[level] && profile.levels[level].answered) score += (1-la)*35;
+
+        // Slightly prefer words that have been unseen.
+        score += m ? 0 : 8;
+
+        score += Math.random()*10;
+        return {v,score};
+    }).sort((a,b)=>b.score-a.score).slice(0,40).map(x=>x.v);
+}
+
+function startAdaptiveQuiz() {
+    const candidates = adaptiveCandidateWords();
+    if (!candidates.length) {
+        alert("The vocabulary bank is not available yet.");
+        return;
+    }
+
+    // Select 10 while balancing difficulty and weak words.
+    const selected = [];
+    const used = new Set();
+    const profile = getAIProfileData();
+    const diff = recommendedDifficulty(profile);
+
+    // First take weak/mistake words.
+    const weak = candidates.filter(v => {
+        const m = loadMistakes()[smartWordKey(v.word)];
+        return m && !m.mastered;
+    });
+    weak.slice(0,4).forEach(v => {
+        if (!used.has(smartWordKey(v.word))) {selected.push(v);used.add(smartWordKey(v.word));}
+    });
+
+    // Then fill with recommended difficulty.
+    candidates.forEach(v => {
+        if (selected.length>=10) return;
+        const k=smartWordKey(v.word);
+        if (used.has(k)) return;
+        const lv=Number(v.level||1);
+        if (lv>=diff.min && lv<=diff.max) {selected.push(v);used.add(k);}
+    });
+
+    // Final fill.
+    candidates.forEach(v => {
+        if (selected.length>=10) return;
+        const k=smartWordKey(v.word);
+        if (!used.has(k)) {selected.push(v);used.add(k);}
+    });
+
+    adaptiveQuestions = selected.slice(0,10);
+    adaptiveIndex = 0;
+    adaptiveMode = true;
+    smartReviewMode = false;
+    reviewMode = false;
+    score = 0;
+    answered = false;
+
+    const badge=document.getElementById("reviewBadge");
+    if (badge) {badge.style.display="block";badge.textContent="ADAPTIVE AI 10";}
+
+    showAdaptiveQuestion();
+}
+
+function showAdaptiveQuestion() {
+    if (adaptiveIndex>=adaptiveQuestions.length) {
+        adaptiveMode=false;
+        showResult();
+        return;
+    }
+
+    const target=adaptiveQuestions[adaptiveIndex];
+
+    // Try the site's native question-generation functions.
+    if (typeof generateQuestionFromWord === "function") {
+        currentQuestion=generateQuestionFromWord(target);
+    } else if (typeof createQuestionForWord === "function") {
+        currentQuestion=createQuestionForWord(target);
+    } else {
+        // Compatible fallback.
+        const pool=window.vocabulary.filter(x=>smartWordKey(x.word)!==smartWordKey(target.word));
+        const opts=pool.sort(()=>Math.random()-.5).slice(0,3).map(x=>x.meaning);
+        opts.push(target.meaning);
+        currentQuestion={
+            word:target.word, level:target.level, type:"meaning",
+            answer:target.meaning,
+            options:opts.sort(()=>Math.random()-.5),
+            explanation:target.example||""
+        };
+    }
+
+    renderSmartQuestion(currentQuestion);
+}
+
+function nextAdaptiveQuestion() {
+    adaptiveIndex++;
+    if (adaptiveIndex>=adaptiveQuestions.length) {
+        adaptiveMode=false;
+        showResult();
+        return;
+    }
+    answered=false;
+    showAdaptiveQuestion();
+}
+
+/* Route Next button to adaptive mode when active. */
+if (typeof nextQuestion === "function") {
+    // Wrapped below only once after page's original function has loaded.
+}
+
+function openAIProfile() {
+    updateAIProfile();
+    const el=document.getElementById("aiProfileOverlay");
+    if (el) el.style.display="flex";
+}
+function closeAIProfile(event) {
+    if (event && event.target && event.target.id!=="aiProfileOverlay") return;
+    const el=document.getElementById("aiProfileOverlay");
+    if (el) el.style.display="none";
+}
+
+function updateAIProfile() {
+    const p=getAIProfileData();
+    const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+    set("aiProfileState",p.state);
+    set("aiProfileDescription",p.description);
+    set("aiReadiness",p.readiness);
+    set("aiAccuracy",Math.round(p.accuracy*100)+"%");
+    set("aiAnswered",p.progress.answered||0);
+    set("aiWeak",p.active.length);
+    set("aiMastered",p.mastered.length);
+    set("aiStreak",(p.streak||0)+" 🔥");
+
+    const grid=document.getElementById("aiAbilityBars");
+    if (grid) {
+        grid.innerHTML=Object.keys(p.ability).map(level=>`
+          <div class="ability-row">
+            <div class="ability-name">Level ${level}</div>
+            <div class="ability-track"><div class="ability-fill" style="width:${p.ability[level]}%"></div></div>
+            <div class="ability-score">${p.ability[level]}%</div>
+          </div>
+        `).join("");
+    }
+
+    const diff=recommendedDifficulty(p);
+    set("aiDifficultyAdvice",diff.label);
+
+    let advice;
+    if (p.active.length>=10) {
+        advice="<strong>Priority:</strong> clear your weak-word backlog first. The adaptive engine will place up to 4 high-priority mistakes into each session.";
+    } else if (p.accuracy<0.65 && p.progress.answered>=10) {
+        advice="<strong>Priority:</strong> improve accuracy before increasing difficulty. Expect more Level 1–5 reinforcement.";
+    } else if (p.accuracy>=0.9) {
+        advice="<strong>Priority:</strong> challenge and retention. Expect harder levels mixed with spaced review of previously difficult words.";
+    } else {
+        advice="<strong>Priority:</strong> balanced growth. The engine mixes your weaker levels with words near your current ability.";
+    }
+    const a=document.getElementById("aiAdvice"); if(a)a.innerHTML=advice;
+}
+
+/* Adaptive next-button routing. */
+if ("adaptiveMode" in window || true) {
+    const originalNextQuestion = window.nextQuestion;
+    if (typeof originalNextQuestion === "function" && !window.__v5NextWrapped) {
+        window.nextQuestion = function() {
+            if (adaptiveMode) return nextAdaptiveQuestion();
+            return originalNextQuestion();
+        };
+        window.__v5NextWrapped=true;
+    }
+}
+
+/* Keep profile/dashboard data live after each answer. */
+document.addEventListener("keydown",function(e){
+    if ((e.key==="a" || e.key==="A") && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) openAIProfile();
+});
+
+/* V5 profile is refreshed whenever these functions are available. */
+
 </script>
 
 
@@ -3330,6 +3662,60 @@ document.addEventListener("keydown", function(e) {
     <div class="smart-actions">
       <button type="button" class="smart-action primary" onclick="closeSmartReview();startSmartReview()">Start Smart Review — 10 Questions</button>
       <button type="button" class="smart-action" onclick="closeSmartReview();startMistakeReview()">Review All Active Mistakes</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="aiProfileOverlay" class="ai-profile-overlay" onclick="closeAIProfile(event)">
+  <div class="ai-profile-panel" onclick="event.stopPropagation()">
+    <div class="ai-head">
+      <div>
+        <h2 class="ai-title">🤖 AI Student Ability Profile</h2>
+        <p class="ai-sub">Adaptive PSLE English Vocabulary analysis based on your learning history</p>
+      </div>
+      <button class="ai-close" type="button" onclick="closeAIProfile()">×</button>
+    </div>
+
+    <div class="profile-banner">
+      <div>
+        <div class="profile-state" id="aiProfileState">Getting Started</div>
+        <div class="profile-description" id="aiProfileDescription">
+          Answer more questions to build your personal ability profile.
+        </div>
+      </div>
+      <div class="readiness">
+        <div class="readiness-score" id="aiReadiness">0</div>
+        <div class="readiness-label">Learning Readiness</div>
+      </div>
+    </div>
+
+    <div class="ai-stats">
+      <div class="ai-stat"><div class="ai-stat-label">Overall Accuracy</div><div class="ai-stat-value" id="aiAccuracy">0%</div></div>
+      <div class="ai-stat"><div class="ai-stat-label">Questions</div><div class="ai-stat-value" id="aiAnswered">0</div></div>
+      <div class="ai-stat"><div class="ai-stat-label">Weak Words</div><div class="ai-stat-value" id="aiWeak">0</div></div>
+      <div class="ai-stat"><div class="ai-stat-label">Mastered</div><div class="ai-stat-value" id="aiMastered">0</div></div>
+      <div class="ai-stat"><div class="ai-stat-label">Learning Streak</div><div class="ai-stat-value" id="aiStreak">0 🔥</div></div>
+    </div>
+
+    <div class="ai-section">
+      <h3>📊 Ability by Level</h3>
+      <div id="aiAbilityBars" class="ability-bars"></div>
+    </div>
+
+    <div class="ai-section">
+      <h3>🧠 Adaptive Learning Strategy</h3>
+      <div class="ai-advice" id="aiAdvice">Complete more questions and the system will generate a personalised strategy.</div>
+    </div>
+
+    <div class="ai-section">
+      <h3>🎯 Recommended Difficulty</h3>
+      <div class="ai-advice" id="aiDifficultyAdvice">Level 1–2</div>
+    </div>
+
+    <div class="ai-actions">
+      <button class="ai-action primary" type="button" onclick="closeAIProfile();startAdaptiveQuiz()">Start Adaptive 10</button>
+      <button class="ai-action" type="button" onclick="closeAIProfile();openSmartReview()">Open Smart Review</button>
     </div>
   </div>
 </div>
