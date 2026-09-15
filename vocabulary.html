@@ -962,6 +962,57 @@ header {
 
 }
 
+
+/* ===== APLUS ACHIEVER V2 Learning Dashboard ===== */
+.dashboard-button{
+    border:1px solid #b7dfc5;
+    background:#f3fbf6;
+    color:#187a43;
+    border-radius:10px;
+    padding:9px 13px;
+    font-weight:700;
+    cursor:pointer;
+}
+.dashboard-button:hover{background:#e8f7ee}
+.dashboard-overlay{
+    position:fixed; inset:0; z-index:9999;
+    background:rgba(0,0,0,.42);
+    display:none; align-items:center; justify-content:center;
+    padding:20px;
+}
+.dashboard-panel{
+    width:min(900px,100%); max-height:90vh; overflow:auto;
+    background:#fff; border-radius:20px; padding:24px;
+    box-shadow:0 20px 60px rgba(0,0,0,.22);
+}
+.dashboard-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.dashboard-head h2{margin:0;color:#176b3a}
+.close-dashboard{
+    border:0;background:#f1f3f4;border-radius:50%;width:36px;height:36px;
+    font-size:20px;cursor:pointer;
+}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.stat-card{background:#f7fbf8;border:1px solid #dceee3;border-radius:14px;padding:15px}
+.stat-card .label{font-size:12px;color:#667085;margin-bottom:6px}
+.stat-card .value{font-size:25px;font-weight:800;color:#176b3a}
+.progress-wrap{margin:18px 0;padding:16px;background:#f8faf9;border-radius:14px}
+.progress-track{height:10px;background:#e6ece8;border-radius:99px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:#43a866;border-radius:99px;transition:width .3s}
+.dashboard-section{margin-top:22px}
+.dashboard-section h3{font-size:16px;margin:0 0 10px;color:#263238}
+.weak-list{display:flex;flex-direction:column;gap:8px}
+.weak-item{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;padding:10px 12px;background:#fafafa;border-radius:10px}
+.weak-rank{font-weight:800;color:#999}
+.weak-word{font-weight:700}
+.weak-meta{font-size:12px;color:#777}
+.dashboard-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.danger-button{border:1px solid #efb4b4;background:#fff5f5;color:#b42318;border-radius:10px;padding:9px 13px;font-weight:700;cursor:pointer}
+.review-all-button{border:0;background:#238b4e;color:white;border-radius:10px;padding:10px 15px;font-weight:700;cursor:pointer}
+@media(max-width:700px){
+ .stats-grid{grid-template-columns:repeat(2,1fr)}
+ .dashboard-panel{padding:17px}
+}
+
 </style>
 
 </head>
@@ -1083,6 +1134,7 @@ header {
                             onclick="startMistakeReview()">
                         Mistakes <span id="mistakeCount">0</span>
                     </button>
+<button type="button" class="dashboard-button" onclick="openDashboard()">Dashboard</button>
 
                     <div
                         class="level-text"
@@ -1228,6 +1280,112 @@ header {
 ===================================================== -->
 
 <script>
+
+/* ===== APLUS ACHIEVER V2 Dashboard + Progress Tracking ===== */
+const PROGRESS_STORAGE_KEY = "aplusAchieverPSLEVocabularyProgressV1";
+
+function loadProgress() {
+    try {
+        return JSON.parse(localStorage.getItem(PROGRESS_STORAGE_KEY) || '{"answered":0,"correct":0,"wrong":0}');
+    } catch(e) {
+        return {answered:0, correct:0, wrong:0};
+    }
+}
+function saveProgress(p) {
+    localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(p));
+}
+function recordProgress(isCorrect) {
+    const p = loadProgress();
+    p.answered++;
+    if (isCorrect) p.correct++;
+    else p.wrong++;
+    saveProgress(p);
+}
+
+function getMasteredMistakes() {
+    return Object.values(loadMistakes()).filter(x => x.mastered);
+}
+
+function openDashboard() {
+    updateDashboard();
+    const el = document.getElementById("dashboardOverlay");
+    if (el) el.style.display = "flex";
+}
+function closeDashboard(event) {
+    if (event && event.target && event.target.id !== "dashboardOverlay") return;
+    const el = document.getElementById("dashboardOverlay");
+    if (el) el.style.display = "none";
+}
+
+function updateDashboard() {
+    const mistakes = loadMistakes();
+    const all = Object.values(mistakes);
+    const active = all.filter(x => !x.mastered);
+    const mastered = all.filter(x => x.mastered);
+    const p = loadProgress();
+    const accuracy = p.answered ? Math.round((p.correct / p.answered) * 100) : 0;
+    const mastery = all.length ? Math.round((mastered.length / all.length) * 100) : 0;
+
+    const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+    };
+    setText("dashMistakes", active.length);
+    setText("dashMastered", mastered.length);
+    setText("dashTotal", all.length);
+    setText("dashAccuracy", accuracy + "%");
+    setText("dashMasteryText", mastery + "%");
+
+    const bar = document.getElementById("dashMasteryBar");
+    if (bar) bar.style.width = mastery + "%";
+
+    const list = document.getElementById("weakWordList");
+    if (!list) return;
+
+    const weak = active.sort((a,b) => {
+        const aw = Number(a.wrongCount || 0), bw = Number(b.wrongCount || 0);
+        if (bw !== aw) return bw - aw;
+        return Number(a.lastWrong || 0) - Number(b.lastWrong || 0);
+    }).slice(0,10);
+
+    if (!weak.length) {
+        list.innerHTML = '<div style="padding:16px;text-align:center;color:#777">🎉 No active mistakes. Excellent!</div>';
+        return;
+    }
+    list.innerHTML = weak.map((m,i) => `
+      <div class="weak-item">
+        <div class="weak-rank">#${i+1}</div>
+        <div>
+          <div class="weak-word">${escapeHtmlDashboard(m.word || "")}</div>
+          <div class="weak-meta">Wrong ${m.wrongCount || 0} time(s) · Review correct ${m.correctCount || 0}/3</div>
+        </div>
+        <div class="weak-meta">Level ${escapeHtmlDashboard(String(m.level || "—"))}</div>
+      </div>
+    `).join("");
+}
+
+function escapeHtmlDashboard(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+    }[c]));
+}
+
+function clearMasteredMistakes() {
+    const mistakes = loadMistakes();
+    let changed = false;
+    Object.keys(mistakes).forEach(k => {
+        if (mistakes[k].mastered) {
+            delete mistakes[k];
+            changed = true;
+        }
+    });
+    if (changed) saveMistakes(mistakes);
+    updateMistakeUI();
+    updateDashboard();
+}
+
+
+
 
 "use strict";
 
@@ -1563,7 +1721,8 @@ function updateMistakeUI() {
         resultButton.disabled =
             count === 0;
     }
-}
+
+    if (typeof updateDashboard === 'function') updateDashboard();}
 
 
 /* =====================================================
@@ -2894,8 +3053,51 @@ function escapeHTML(value) {
 
 }
 
+
+// Vocabulary Dashboard keyboard shortcuts
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closeDashboard();
+    if ((e.key === "d" || e.key === "D") && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)) {
+        openDashboard();
+    }
+});
+
 </script>
 
+
+
+<div id="dashboardOverlay" class="dashboard-overlay" onclick="closeDashboard(event)">
+  <div class="dashboard-panel" onclick="event.stopPropagation()">
+    <div class="dashboard-head">
+      <h2>📊 Vocabulary Dashboard</h2>
+      <button class="close-dashboard" type="button" onclick="closeDashboard()">×</button>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="label">Active Mistakes</div><div class="value" id="dashMistakes">0</div></div>
+      <div class="stat-card"><div class="label">Mastered</div><div class="value" id="dashMastered">0</div></div>
+      <div class="stat-card"><div class="label">Total Mistake Records</div><div class="value" id="dashTotal">0</div></div>
+      <div class="stat-card"><div class="label">Accuracy</div><div class="value" id="dashAccuracy">0%</div></div>
+    </div>
+
+    <div class="progress-wrap">
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-weight:700">
+        <span>Mastery Progress</span><span id="dashMasteryText">0%</span>
+      </div>
+      <div class="progress-track"><div id="dashMasteryBar" class="progress-fill"></div></div>
+    </div>
+
+    <div class="dashboard-section">
+      <h3>🔥 Top 10 Weak Words</h3>
+      <div id="weakWordList" class="weak-list"></div>
+    </div>
+
+    <div class="dashboard-actions">
+      <button type="button" class="review-all-button" onclick="closeDashboard();startMistakeReview()">Review Active Mistakes</button>
+      <button type="button" class="danger-button" onclick="clearMasteredMistakes()">Clear Mastered Records</button>
+    </div>
+  </div>
+</div>
 
 </body>
 
