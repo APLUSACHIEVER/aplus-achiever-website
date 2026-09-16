@@ -47,6 +47,14 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 
 /* V17 — AI Coach: clearer guidance, retry and session momentum */
 .coach-strip{margin-top:14px;padding:12px 14px;border-radius:13px;background:linear-gradient(135deg,#eef9f3,#f8fcfa);border:1px solid #d9ece3;display:flex;align-items:center;gap:10px;color:var(--deep);font-size:13px;line-height:1.45}.coach-strip b{color:var(--green)}.coach-icon{width:30px;height:30px;border-radius:50%;background:#d9f1e5;display:grid;place-items:center;flex:0 0 auto}.retry-btn{margin-top:10px;border:1px solid #b9dccb;background:#fff;color:var(--green);border-radius:10px;padding:9px 12px;font-weight:850;cursor:pointer}.retry-btn:hover{background:#f1faf6}.session-goal{margin-top:12px;padding:11px 13px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:12px;color:var(--muted)}.session-goal b{color:var(--green)}
+
+/* Fluency Test: jump to the complete question + choices, not the timer */
+#fluencyQuestionPanel{scroll-margin-top:90px}
+@media (min-width:769px){
+  .fluency-question-panel{padding:18px}
+  .fluency-options{gap:10px;margin-top:12px}
+  .fluency-options button{min-height:60px;padding:14px 18px}
+}
 </style></head>
 <body>
 <header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 6.0 · V17</div></div></header>
@@ -114,7 +122,7 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
     </div>
   </div>
 
-  <div class="fluency-question-panel">
+  <div class="fluency-question-panel" id="fluencyQuestionPanel">
     <div class="fluency-word" id="fluencyWord"></div>
     <div class="fluency-question-text" id="fluencyQuestionText"></div>
     <div class="fluency-context hidden" id="fluencyContext"></div>
@@ -678,7 +686,18 @@ window.updateUI=function(){
     fluencyAdvanceTimer=null;
   }
 
-  window.startFluencyTest=function(){
+  
+function focusFluencyQuestion(){
+  const panel=document.getElementById('fluencyQuestionPanel');
+  if(!panel)return;
+  requestAnimationFrame(()=>{
+    panel.scrollIntoView({behavior:'smooth',block:'start'});
+    // Keep the question panel clear of the sticky page header.
+    setTimeout(()=>window.scrollBy({top:-78,left:0,behavior:'smooth'}),220);
+  });
+}
+
+window.startFluencyTest=function(){
     try{
       if(!Array.isArray(VOCAB) || VOCAB.length<FLUENCY_TOTAL){
         if(typeof toast==='function') toast('Vocabulary data is not available for the fluency test.');
@@ -721,13 +740,15 @@ window.updateUI=function(){
       // Use a tiny delay so the hidden/visible state has been painted before scrolling.
       requestAnimationFrame(()=>{
         requestAnimationFrame(()=>{
-          const target=document.getElementById('fluency');
+          const target=document.getElementById('fluencyQuestionPanel');
           if(target){
             target.scrollIntoView({behavior:'smooth',block:'start'});
+            // Leave enough room for the full question and all four answer choices.
+            setTimeout(()=>window.scrollBy({top:-78,left:0,behavior:'smooth'}),220);
             setTimeout(()=>{
-              const firstOption=target.querySelector('.fluency-option, button');
+              const firstOption=target.querySelector('.fluency-options button');
               if(firstOption && typeof firstOption.focus==='function') firstOption.focus({preventScroll:true});
-            },450);
+            },500);
           }
         });
       });
