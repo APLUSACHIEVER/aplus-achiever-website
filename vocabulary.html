@@ -48,7 +48,7 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 /* V17 — AI Coach: clearer guidance, retry and session momentum */
 .coach-strip{margin-top:14px;padding:12px 14px;border-radius:13px;background:linear-gradient(135deg,#eef9f3,#f8fcfa);border:1px solid #d9ece3;display:flex;align-items:center;gap:10px;color:var(--deep);font-size:13px;line-height:1.45}.coach-strip b{color:var(--green)}.coach-icon{width:30px;height:30px;border-radius:50%;background:#d9f1e5;display:grid;place-items:center;flex:0 0 auto}.retry-btn{margin-top:10px;border:1px solid #b9dccb;background:#fff;color:var(--green);border-radius:10px;padding:9px 12px;font-weight:850;cursor:pointer}.retry-btn:hover{background:#f1faf6}.session-goal{margin-top:12px;padding:11px 13px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:12px;color:var(--muted)}.session-goal b{color:var(--green)}
 
-/* V17 — 5-Minute Vocabulary Fluency Test */
+/* V17 — 9-Minute Vocabulary Fluency Test */
 .fluency-launch{margin:0 0 22px;background:linear-gradient(135deg,#eaf8f1,#f8fcfa);border:1px solid #cfe7db;border-radius:22px;padding:20px 22px;box-shadow:var(--shadow)}
 .fluency-launch-head{display:flex;justify-content:space-between;align-items:center;gap:18px}
 .fluency-launch h2{margin:0 0 5px;color:var(--deep);font-size:21px}
@@ -80,6 +80,27 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 .fluency-stat span{font-size:11px;color:var(--muted)}
 .fluency-diagnosis{max-width:760px;margin:14px auto;text-align:left;background:#f7fbf9;border:1px solid #e3efe9;border-radius:15px;padding:16px;line-height:1.55}
 @media(max-width:650px){.fluency-launch-head,.fluency-head,.fluency-actions{align-items:flex-start;flex-direction:column}.fluency-timer{font-size:24px}.fluency-word{font-size:29px}.fluency-result-grid{grid-template-columns:1fr 1fr}}
+
+/* V17 Fluency UX: compact question rows + always-visible countdown */
+.fluency-options{gap:6px !important;margin-top:10px !important}
+.fluency-options button{padding:9px 12px !important;min-height:40px !important;line-height:1.2 !important}
+.fluency-card{padding:16px !important}
+.fluency-word{margin:10px 0 8px !important}
+.fluency-progress{margin:8px 0 !important}
+.fluency-qtimer{position:sticky;top:8px;z-index:5;font-size:22px !important;font-weight:800}
+.fluency-timer{font-size:18px !important;font-weight:800}
+
+
+/* Prominent fluency countdown */
+.fluency-timer-wrap{display:flex;align-items:center;gap:16px;margin:8px 0 14px;padding:12px 14px;border:1px solid #dfe8e2;border-radius:16px;background:#fbfefc}
+.fluency-clock{--progress:100%;width:76px;height:76px;min-width:76px;border-radius:50%;display:grid;place-items:center;position:relative;background:conic-gradient(#16834b var(--progress),#e7eee9 0)}
+.fluency-clock:before{content:"";position:absolute;inset:6px;border-radius:50%;background:#fff}
+.fluency-clock-number{position:relative;z-index:1;font-size:25px;font-weight:800;line-height:1;color:#12663d;font-variant-numeric:tabular-nums}
+.fluency-clock-label{display:flex;flex-direction:column;gap:4px;flex:1}.fluency-clock-label strong{font-size:14px}.fluency-clock-label span{font-size:12px;color:#6b756f}
+.fluency-bar{height:8px;border-radius:999px;background:#e7eee9;overflow:hidden;margin-top:6px}.fluency-bar-fill{height:100%;width:100%;border-radius:999px;background:#16834b;transition:width .1s linear,background .2s ease}
+.fluency-clock.is-warning{background:conic-gradient(#d99a2b var(--progress),#f1eadc 0)}.fluency-clock.is-warning .fluency-clock-number{color:#a86a00}.fluency-bar-fill.is-warning{background:#d99a2b}
+.fluency-clock.is-danger{background:conic-gradient(#d64545 var(--progress),#f4e2e2 0)}.fluency-clock.is-danger .fluency-clock-number{color:#b42318}.fluency-bar-fill.is-danger{background:#d64545}
+@media(max-width:600px){.fluency-clock{width:66px;height:66px;min-width:66px}.fluency-clock-number{font-size:22px}}
 </style></head>
 <body>
 <header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 6.0 · V17</div></div></header>
@@ -105,12 +126,12 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
   <div class="fluency-launch-head">
     <div>
       <div class="section-title">NEW · FLUENCY MEASUREMENT</div>
-      <h2>⚡ 5-Minute Vocabulary Fluency Test</h2>
+      <h2>⚡ 9-Minute Vocabulary Fluency Test</h2>
       <p>Measure how quickly and accurately you can recall PSLE vocabulary — not just whether you know the answer.</p>
       <div class="fluency-badges">
-        <span class="fluency-badge">5 MINUTES</span>
+        <span class="fluency-badge">9 MINUTES</span>
         <span class="fluency-badge">30 QUESTIONS</span>
-        <span class="fluency-badge">10 SECONDS / QUESTION</span>
+        <span class="fluency-badge">15 SECONDS / QUESTION</span>
         <span class="fluency-badge">AUTO-NEXT</span>
       </div>
     </div>
@@ -123,7 +144,7 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
       <div class="section-title">5-MINUTE FLUENCY TEST</div>
       <h2>Vocabulary Recall Speed</h2>
     </div>
-    <div id="fluencyTotalTimer" class="fluency-timer">5:00</div>
+    <div id="fluencyTotalTimer" class="fluency-timer" aria-label="Total test countdown">9:00</div>
   </div>
   <div class="fluency-meta"><span id="fluencyCounter">1 / 30</span><span id="fluencyQTimer">10.0s</span></div>
   <div class="fluency-progress"><i id="fluencyBar"></i></div>
@@ -471,8 +492,8 @@ function toast(t){let x=document.getElementById('toast');x.textContent=t;x.style
 function esc(x){return String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&answered)nextQuestion()});
 
-/* V17 — 5-Minute Vocabulary Fluency Test */
-const FLUENCY_TOTAL=30, FLUENCY_SECONDS=10, FLUENCY_TEST_SECONDS=300;
+/* V17 — 9-Minute Vocabulary Fluency Test */
+const FLUENCY_TOTAL=30, FLUENCY_SECONDS=15, FLUENCY_TEST_SECONDS=540;
 let fluencyQuestions=[], fluencyIndex=0, fluencyScore=0, fluencyTimeouts=0;
 let fluencyTimes=[], fluencyResults=[], fluencyQuestionStartedAt=0;
 let fluencyTimerId=null, fluencyTotalTimerId=null, fluencyTestStartedAt=0, fluencyAnswered=false;
