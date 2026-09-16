@@ -717,6 +717,21 @@ window.updateUI=function(){
       setCircle(FLUENCY_SECONDS);
       renderFluencyQuestion();
 
+      // Jump the student directly to the test area after clicking Start.
+      // Use a tiny delay so the hidden/visible state has been painted before scrolling.
+      requestAnimationFrame(()=>{
+        requestAnimationFrame(()=>{
+          const target=document.getElementById('fluency');
+          if(target){
+            target.scrollIntoView({behavior:'smooth',block:'start'});
+            setTimeout(()=>{
+              const firstOption=target.querySelector('.fluency-option, button');
+              if(firstOption && typeof firstOption.focus==='function') firstOption.focus({preventScroll:true});
+            },450);
+          }
+        });
+      });
+
       fluencyTotalTimerId=setInterval(()=>{
         if(fluencyFinished)return;
         fluencyTotalLeft--;
@@ -869,4 +884,5 @@ window.updateUI=function(){
   window.addEventListener('beforeunload',stopTimers);
 })();
 </script>
-</body></html>
+</body></html.fluency-card{scroll-margin-top:90px;}
+>
