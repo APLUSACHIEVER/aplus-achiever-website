@@ -115,7 +115,15 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 .hero-fluency-btn{width:100%;justify-content:center}
 @media(max-width:700px){.fluency-hero-card h3{font-size:21px}}
 
-</style></head>
+</style>
+<style>
+/* LIVE COUNTDOWN FIX */
+#fluencyClock{width:82px;height:82px;min-width:82px;border-radius:50%;display:grid;place-items:center;position:relative;background:conic-gradient(#16834b var(--progress),#e7eee9 0);transition:background .15s linear;}
+#fluencyClock::before{content:"";position:absolute;inset:7px;border-radius:50%;background:#fff;}
+#fluencyQTimer{position:relative;z-index:1;font-size:28px;font-weight:900;color:#12663d;font-variant-numeric:tabular-nums;}
+#fluencyTimerBar{transition:width .08s linear,background .15s ease;}
+</style>
+</head>
 <body>
 <header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 6.0 · V17</div></div></header>
 <main class="container">
@@ -511,7 +519,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Enter'&&answered)nextQuestio
 const FLUENCY_TOTAL=30, FLUENCY_SECONDS=15, FLUENCY_TEST_SECONDS=540;
 let fluencyQuestions=[], fluencyIndex=0, fluencyScore=0, fluencyTimeouts=0;
 let fluencyTimes=[], fluencyResults=[], fluencyQuestionStartedAt=0;
-let fluencyTimerId=null, fluencyTotalTimerId=null, fluencyTestStartedAt=0, fluencyAnswered=false, fluencyFinished=false;
+let fluencyTimerId=null, fluencyTotalTimerId=null, fluencyTestStartedAt=0, fluencyAnswered=false, fluencyFinished=false, fluencyQuestionLeft=FLUENCY_SECONDS;
 
 function startFluencyTest(){
   if(!VOCAB.length){toast('Vocabulary data could not load.');return}
@@ -536,7 +544,7 @@ function renderFluencyQuestion(){
   if(fluencyIndex>=FLUENCY_TOTAL){finishFluencyTest(false);return}
   const w=fluencyQuestions[fluencyIndex];
   const opts=meaningOptions(w);
-  fluencyAnswered=false; fluencyQuestionStartedAt=Date.now();
+  fluencyAnswered=false; fluencyQuestionStartedAt=Date.now(); fluencyQuestionLeft=FLUENCY_SECONDS;
   document.getElementById('fluencyCounter').textContent=(fluencyIndex+1)+' / '+FLUENCY_TOTAL;
   document.getElementById('fluencyBar').style.width=(fluencyIndex/FLUENCY_TOTAL*100)+'%';
   document.getElementById('fluencyWord').textContent=w.word;
@@ -552,13 +560,18 @@ function renderFluencyQuestion(){
   updateFluencyQuestionTimer(); fluencyTimerId=setInterval(updateFluencyQuestionTimer,50);
 }
 function updateFluencyQuestionTimer(){
+  if(fluencyAnswered || fluencyFinished) return;
+  const elapsed=(Date.now()-fluencyQuestionStartedAt)/1000;
+  fluencyQuestionLeft=Math.max(0, FLUENCY_SECONDS-elapsed);
+  const display=Math.ceil(fluencyQuestionLeft);
   const n=document.getElementById('fluencyQTimer');
   const clock=document.getElementById('fluencyClock');
   const bar=document.getElementById('fluencyTimerBar');
-  if(n)n.textContent=Math.max(0,Math.ceil(fluencyQuestionLeft));
+  if(n)n.textContent=display;
   const pct=Math.max(0,Math.min(100,(fluencyQuestionLeft/FLUENCY_SECONDS)*100));
-  if(clock){clock.style.setProperty('--progress',pct+'%');clock.classList.remove('is-warning','is-danger');if(fluencyQuestionLeft<=5)clock.classList.add('is-danger');else if(fluencyQuestionLeft<=8)clock.classList.add('is-warning');}
-  if(bar){bar.style.width=pct+'%';bar.classList.remove('is-warning','is-danger');if(fluencyQuestionLeft<=5)bar.classList.add('is-danger');else if(fluencyQuestionLeft<=8)bar.classList.add('is-warning');}
+  if(clock){clock.style.setProperty('--progress',pct+'%');clock.classList.remove('is-warning','is-danger');if(display<=5)clock.classList.add('is-danger');else if(display<=8)clock.classList.add('is-warning');}
+  if(bar){bar.style.width=pct+'%';bar.classList.remove('is-warning','is-danger');if(display<=5)bar.classList.add('is-danger');else if(display<=8)bar.classList.add('is-warning');}
+  if(fluencyQuestionLeft<=0){clearInterval(fluencyTimerId);fluencyTimerId=null;timeoutFluencyQuestion();}
 }
 function answerFluency(answer){
   if(fluencyAnswered)return;
@@ -579,9 +592,9 @@ function timeoutFluencyQuestion(){
   fluencyTimeouts++; fluencyTimes.push(FLUENCY_SECONDS);
   fluencyResults.push({word:w.word,correct:false,time:FLUENCY_SECONDS,status:'Timeout'});
   document.querySelectorAll('.fluency-option').forEach(b=>b.disabled=true);
-  document.getElementById('fluencyStatus').textContent='⏱ Time! This word was not recalled within 10 seconds.';
+  document.getElementById('fluencyStatus').textContent='⏱ Time! This word was not recalled within 15 seconds.';
   document.getElementById('fluencyNext').classList.remove('hidden');
-  setTimeout(()=>{if(fluencyAnswered)nextFluencyQuestion()},350);
+  nextFluencyQuestion();
 }
 function nextFluencyQuestion(){
   if(!fluencyAnswered)return;
