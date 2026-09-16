@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>APLUS ACHIEVER — PSLE Vocabulary Tutor</title>
+<title>APLUS ACHIEVER — PSLE AI Personal Tutor</title>
 <style>
 :root{--green:#146b4f;--green2:#27a66d;--deep:#103e31;--text:#183f35;--muted:#6d817a;--line:#dcebe5;--bg:#f4f8f6;--soft:#eaf7f1;--white:#fff;--shadow:0 10px 30px rgba(20,74,56,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}.hidden{display:none!important}
@@ -47,13 +47,46 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 
 /* V17 — AI Coach: clearer guidance, retry and session momentum */
 .coach-strip{margin-top:14px;padding:12px 14px;border-radius:13px;background:linear-gradient(135deg,#eef9f3,#f8fcfa);border:1px solid #d9ece3;display:flex;align-items:center;gap:10px;color:var(--deep);font-size:13px;line-height:1.45}.coach-strip b{color:var(--green)}.coach-icon{width:30px;height:30px;border-radius:50%;background:#d9f1e5;display:grid;place-items:center;flex:0 0 auto}.retry-btn{margin-top:10px;border:1px solid #b9dccb;background:#fff;color:var(--green);border-radius:10px;padding:9px 12px;font-weight:850;cursor:pointer}.retry-btn:hover{background:#f1faf6}.session-goal{margin-top:12px;padding:11px 13px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:12px;color:var(--muted)}.session-goal b{color:var(--green)}
+
+/* V17 — 5-Minute Vocabulary Fluency Test */
+.fluency-launch{margin:0 0 22px;background:linear-gradient(135deg,#eaf8f1,#f8fcfa);border:1px solid #cfe7db;border-radius:22px;padding:20px 22px;box-shadow:var(--shadow)}
+.fluency-launch-head{display:flex;justify-content:space-between;align-items:center;gap:18px}
+.fluency-launch h2{margin:0 0 5px;color:var(--deep);font-size:21px}
+.fluency-launch p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+.fluency-badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+.fluency-badge{padding:6px 9px;border-radius:999px;background:#fff;border:1px solid #d9ece3;color:var(--green);font-size:11px;font-weight:900}
+.fluency-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow);margin-top:16px}
+.fluency-head{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.fluency-head h2{margin:0;color:var(--deep)}
+.fluency-timer{font-size:27px;font-weight:950;color:var(--green);font-variant-numeric:tabular-nums}
+.fluency-timer.danger{color:#c24b4b}
+.fluency-qtimer{font-size:14px;font-weight:950;color:var(--green2)}
+.fluency-progress{height:10px;background:#e5efe9;border-radius:99px;overflow:hidden;margin:14px 0 20px}
+.fluency-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--green2));transition:.15s}
+.fluency-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:850}
+.fluency-word{font-size:34px;font-weight:950;color:var(--deep);margin:20px 0 7px}
+.fluency-prompt{color:var(--muted);font-size:14px;margin-bottom:16px}
+.fluency-options{display:grid;gap:8px}
+.fluency-option{padding:13px 16px;border:2px solid #e0ebe6;border-radius:13px;background:#fff;text-align:left;font-size:16px}
+.fluency-option:hover{border-color:#74c49d}
+.fluency-option.selected{border-color:var(--green2);background:#eef9f3}
+.fluency-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px}
+.fluency-status{font-size:12px;color:var(--muted)}
+.fluency-result{text-align:center}
+.fluency-score{font-size:58px;font-weight:950;color:var(--green)}
+.fluency-result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.fluency-stat{background:#f7fbf9;border:1px solid #e3efe9;border-radius:14px;padding:14px}
+.fluency-stat b{display:block;font-size:21px;color:var(--green)}
+.fluency-stat span{font-size:11px;color:var(--muted)}
+.fluency-diagnosis{max-width:760px;margin:14px auto;text-align:left;background:#f7fbf9;border:1px solid #e3efe9;border-radius:15px;padding:16px;line-height:1.55}
+@media(max-width:650px){.fluency-launch-head,.fluency-head,.fluency-actions{align-items:flex-start;flex-direction:column}.fluency-timer{font-size:24px}.fluency-word{font-size:29px}.fluency-result-grid{grid-template-columns:1fr 1fr}}
 </style></head>
 <body>
-<header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">APLUS ACHIEVER — AI-Powered Vocabulary Tutor</div></div></header>
+<header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 6.0 · V17</div></div></header>
 <main class="container">
-<section class="hero"><div class="hero-main"><div class="hero-kicker">PSLE ENGLISH · The Ultimate PSLE 1000-Word English Vocabulary</div><h1>Build your vocabulary<br>for <span>PSLE success.</span></h1><p>The tutor learns from your answers and chooses what you should practise next.</p><div class="hero-cta"><button class="btn primary" onclick="startMode('path')">▶ Start My Learning Path</button><button class="btn" onclick="showTutor()">View My Progress</button></div></div><div class="hero-side"><h3>Today's Progress</h3><div class="readiness"><div class="ring"><b id="heroAcc">0%</b></div><div class="side-stat"><strong id="heroDaily">0 / 10</strong> questions<br><strong id="heroMaster">0</strong> mastered</div></div><div style="margin-top:18px" class="progress"><i id="heroBar"></i></div><p class="small" style="margin:9px 0 0">Keep your streak going.</p></div></section>
+<section class="hero"><div class="hero-main"><div class="hero-kicker">PSLE ENGLISH · 1000-WORD ADAPTIVE SYSTEM</div><h1>Build your vocabulary<br>for <span>PSLE success.</span></h1><p>The tutor learns from your answers and chooses what you should practise next.</p><div class="hero-cta"><button class="btn primary" onclick="startMode('path')">▶ Start My Learning Path</button><button class="btn" onclick="showTutor()">View My Progress</button></div></div><div class="hero-side"><h3>Today's Progress</h3><div class="readiness"><div class="ring"><b id="heroAcc">0%</b></div><div class="side-stat"><strong id="heroDaily">0 / 10</strong> questions<br><strong id="heroMaster">0</strong> mastered</div></div><div style="margin-top:18px" class="progress"><i id="heroBar"></i></div><p class="small" style="margin:9px 0 0">Keep your streak going.</p></div></section>
 <section class="path-card">
-  <div class="path-head"><h2>🧠 Today's Learning Path</h2><span class="path-badge">PERSONALISED FOR YOU</span></div>
+  <div class="path-head"><h2>🧠 Today's AI Learning Path</h2><span class="path-badge">PERSONALISED FOR YOU</span></div>
   <div class="path-grid">
     <div class="path-focus"><b id="pathFocusTitle">Your tutor is ready</b><p id="pathFocusText">Your next 10 questions will be selected from your learning history.</p></div>
     <div class="path-step"><span class="num">01 · REVIEW</span><strong id="pathStep1">Due &amp; weak words</strong><small>Strengthen words that need attention.</small></div>
@@ -67,6 +100,56 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 <div class="secondary-actions"><button class="btn" onclick="V11_masteryCheck()">✓ Mastery Check</button><button class="btn" onclick="V11_parentReport()">▣ Parent Report</button><button class="btn" onclick="showTutor()">◉ My Dashboard</button><button class="btn" onclick="V11_resetDemo()">↺ Reset Data</button><button class="btn" onclick="showHome()">⌂ Home</button></div>
 <div class="stats"><div class="stat"><strong id="sAcc">0%</strong><small>Accuracy</small></div><div class="stat"><strong id="sQ">0</strong><small>Questions</small></div><div class="stat"><strong id="sMaster">0</strong><small>Mastered</small></div><div class="stat"><strong id="sDue">0</strong><small>Due today</small></div><div class="stat"><strong id="sLevel">1</strong><small>Target level</small></div><div class="stat"><strong id="sStreak">0</strong><small>Day streak</small></div></div>
 <section id="home" class="card"><div class="grid2"><div><div class="section-title">YOUR NEXT STEP</div><h2 id="homeTitle">Today's personalised plan</h2><p id="homeAdvice" class="small">Start with Daily 10. The tutor will learn from every answer.</p><div class="progress"><i id="dailyBar"></i></div><p id="dailyText" class="small">0 / 10 completed today</p><button class="btn primary" onclick="startMode('daily')">Continue Today's 10 →</button></div><div class="plan"><h3 style="margin-bottom:10px">How your tutor works</h3><p>1. <b>Learn</b> from your answers</p><p>2. <b>Spot</b> weak or forgotten words</p><p>3. <b>Review</b> them at the right time</p><p>4. <b>Stretch</b> when you're ready</p></div></div></section>
+
+<section class="fluency-launch">
+  <div class="fluency-launch-head">
+    <div>
+      <div class="section-title">NEW · FLUENCY MEASUREMENT</div>
+      <h2>⚡ 5-Minute Vocabulary Fluency Test</h2>
+      <p>Measure how quickly and accurately you can recall PSLE vocabulary — not just whether you know the answer.</p>
+      <div class="fluency-badges">
+        <span class="fluency-badge">5 MINUTES</span>
+        <span class="fluency-badge">30 QUESTIONS</span>
+        <span class="fluency-badge">10 SECONDS / QUESTION</span>
+        <span class="fluency-badge">AUTO-NEXT</span>
+      </div>
+    </div>
+    <button class="btn primary" onclick="startFluencyTest()">⚡ Start Test →</button>
+  </div>
+</section>
+<section id="fluency" class="fluency-card hidden">
+  <div class="fluency-head">
+    <div>
+      <div class="section-title">5-MINUTE FLUENCY TEST</div>
+      <h2>Vocabulary Recall Speed</h2>
+    </div>
+    <div id="fluencyTotalTimer" class="fluency-timer">5:00</div>
+  </div>
+  <div class="fluency-meta"><span id="fluencyCounter">1 / 30</span><span id="fluencyQTimer">10.0s</span></div>
+  <div class="fluency-progress"><i id="fluencyBar"></i></div>
+  <div id="fluencyWord" class="fluency-word"></div>
+  <div id="fluencyPrompt" class="fluency-prompt">Choose the best meaning.</div>
+  <div id="fluencyOptions" class="fluency-options"></div>
+  <div class="fluency-actions">
+    <span id="fluencyStatus" class="fluency-status">Answer within 10 seconds. No answer = Timeout.</span>
+    <button id="fluencyNext" class="btn primary hidden" onclick="nextFluencyQuestion()">Next →</button>
+  </div>
+</section>
+<section id="fluencyResult" class="fluency-card hidden fluency-result">
+  <div class="section-title">FLUENCY TEST COMPLETE</div>
+  <div id="fluencyScore" class="fluency-score">0 / 30</div>
+  <h2 id="fluencyLevel"></h2>
+  <p id="fluencySummary" class="small"></p>
+  <div class="fluency-result-grid">
+    <div class="fluency-stat"><b id="fluencyAccuracy">0%</b><span>Accuracy</span></div>
+    <div class="fluency-stat"><b id="fluencyAvg">0.0s</b><span>Average Recall Time</span></div>
+    <div class="fluency-stat"><b id="fluencyFast">0</b><span>Fast Correct ≤ 5s</span></div>
+    <div class="fluency-stat"><b id="fluencyTimeout">0</b><span>Timeout</span></div>
+  </div>
+  <div id="fluencyDiagnosis" class="fluency-diagnosis"></div>
+  <button class="btn primary" onclick="startFluencyTest()">⚡ Test Again</button>
+  <button class="btn" onclick="showTutor()">Open AI Coach Dashboard</button>
+</section>
 <section id="diagnosticCard" class="card hidden"><div class="section-title">AI Diagnostic</div><h2>Find your current PSLE vocabulary level</h2><p class="small">20 questions across Levels 1–10. The tutor uses the result to set your first target range.</p><button class="btn primary" onclick="startMode('diagnostic')">Start Diagnostic →</button></section>
 <section id="quiz" class="card hidden"><div class="quiz-top"><span id="modeLabel">AI DAILY 10</span><span id="counter">1 / 10</span></div><div class="progress" style="margin:13px 0 22px"><i id="qbar"></i></div><div id="coachStrip" class="coach-strip"><span class="coach-icon">🧠</span><span><b>AI Coach:</b> Take your time. Choose the answer you think fits best.</span></div><div class="section-title" id="typeLabel">MEANING</div><div class="question" id="question"></div><div id="options" class="options"></div><div id="inputWrap" class="hidden"><input id="answerInput" class="input" autocomplete="off" placeholder="Type the word..."><p class="small">Spelling is checked flexibly.</p></div><div id="hintPanel" class="hint-panel hidden"></div><div class="controls"><button class="btn" onclick="speakCurrent()">🔊 Hear Word</button><button id="checkBtn" class="btn primary" onclick="submitAnswer()">Check Answer</button><button id="nextBtn" class="btn primary hidden" onclick="nextQuestion()">Next Question →</button></div><div id="feedback" class="feedback hidden"></div><div id="wordCard" class="word-card hidden"></div></section>
 <section id="result" class="card hidden result"><div class="section-title">SESSION COMPLETE</div><div id="score" class="score">0/10</div><h2 id="resultTitle"></h2><p id="resultText" class="small"></p><div id="diagnosis" class="diagnosis"></div><button class="btn primary" onclick="startMode('daily')">Another AI 10 →</button><button class="btn" onclick="showTutor()">Open Tutor Dashboard</button></section>
@@ -381,12 +464,129 @@ function adaptiveSlow(){let f=0,t=0;VOCAB.forEach(w=>{let s=wordState(w);f+=s.sl
 function readiness(){let a=overall(),m=mastered()/Math.max(1,VOCAB.length)*100,sample=Math.min(100,db.total/50*100),d=db.diagnostic?db.diagnostic.score:0;return Math.min(100,Math.round(a*.5+m*.2+sample*.15+d*.15))}
 function recommendation(){if(!db.total)return 'Take the AI Diagnostic first.';if(due().length)return 'Review due words first.';if(weak().length)return 'Strengthen your weak words before increasing difficulty.';return 'You are ready for a controlled stretch into higher-level vocabulary.'}
 function updateUI(){updateLearningPath();document.getElementById('sAcc').textContent=overall()+'%';document.getElementById('sQ').textContent=db.total;document.getElementById('sMaster').textContent=mastered();document.getElementById('sDue').textContent=due().length;document.getElementById('sLevel').textContent=targetLevel();document.getElementById('sStreak').textContent=streak();let d=dailyDone();document.getElementById('dailyBar').style.width=(d/10*100)+'%';document.getElementById('heroAcc').textContent=overall()+'%';document.getElementById('heroDaily').textContent=d+' / 10';document.getElementById('heroMaster').textContent=mastered();document.getElementById('heroBar').style.width=(d/10*100)+'%';document.getElementById('dailyText').textContent=d+' / 10 today';document.getElementById('homeAdvice').textContent=!db.total?'Start with AI Diagnostic or Daily 10. The tutor learns from every answer.':recommendation()+' Target Level '+targetLevel()+'.'}
-function show(id){['home','diagnosticCard','quiz','result','tutor'].forEach(x=>document.getElementById(x).classList.toggle('hidden',x!==id))}
+function show(id){['home','diagnosticCard','quiz','result','tutor','fluency','fluencyResult'].forEach(x=>{const el=document.getElementById(x);if(el)el.classList.toggle('hidden',x!==id)})}
 function showHome(){show('home');updateUI()}
 function speakCurrent(){if(!current)return;if('speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(current.word);u.lang='en-SG';u.rate=.8;speechSynthesis.speak(u)}else toast('Speech is not supported.')}
 function toast(t){let x=document.getElementById('toast');x.textContent=t;x.style.display='block';clearTimeout(window.__t);window.__t=setTimeout(()=>x.style.display='none',2200)}
 function esc(x){return String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&answered)nextQuestion()});
+
+/* V17 — 5-Minute Vocabulary Fluency Test */
+const FLUENCY_TOTAL=30, FLUENCY_SECONDS=10, FLUENCY_TEST_SECONDS=300;
+let fluencyQuestions=[], fluencyIndex=0, fluencyScore=0, fluencyTimeouts=0;
+let fluencyTimes=[], fluencyResults=[], fluencyQuestionStartedAt=0;
+let fluencyTimerId=null, fluencyTotalTimerId=null, fluencyTestStartedAt=0, fluencyAnswered=false;
+
+function startFluencyTest(){
+  if(!VOCAB.length){toast('Vocabulary data could not load.');return}
+  clearInterval(fluencyTimerId); clearInterval(fluencyTotalTimerId);
+  fluencyQuestions=pick(VOCAB,Math.min(FLUENCY_TOTAL,VOCAB.length));
+  if(fluencyQuestions.length<FLUENCY_TOTAL){toast('At least 30 vocabulary words are required.');return}
+  fluencyIndex=0; fluencyScore=0; fluencyTimeouts=0; fluencyTimes=[]; fluencyResults=[];
+  fluencyAnswered=false; fluencyTestStartedAt=Date.now();
+  show('fluency');
+  requestAnimationFrame(()=>document.getElementById('fluency').scrollIntoView({behavior:'smooth',block:'start'}));
+  updateFluencyTotalTimer(); fluencyTotalTimerId=setInterval(updateFluencyTotalTimer,100);
+  renderFluencyQuestion();
+}
+function updateFluencyTotalTimer(){
+  const left=Math.max(0,FLUENCY_TEST_SECONDS-(Date.now()-fluencyTestStartedAt)/1000);
+  const el=document.getElementById('fluencyTotalTimer');
+  if(el){const sec=Math.ceil(left);el.textContent=Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');el.className='fluency-timer'+(left<=30?' danger':'')}
+  if(left<=0){clearInterval(fluencyTotalTimerId); if(!fluencyAnswered) timeoutFluencyQuestion(); finishFluencyTest(true);}
+}
+function renderFluencyQuestion(){
+  clearInterval(fluencyTimerId);
+  if(fluencyIndex>=FLUENCY_TOTAL){finishFluencyTest(false);return}
+  const w=fluencyQuestions[fluencyIndex];
+  const opts=meaningOptions(w);
+  fluencyAnswered=false; fluencyQuestionStartedAt=Date.now();
+  document.getElementById('fluencyCounter').textContent=(fluencyIndex+1)+' / '+FLUENCY_TOTAL;
+  document.getElementById('fluencyBar').style.width=(fluencyIndex/FLUENCY_TOTAL*100)+'%';
+  document.getElementById('fluencyWord').textContent=w.word;
+  document.getElementById('fluencyPrompt').textContent='Choose the best meaning for this word.';
+  document.getElementById('fluencyStatus').textContent='Answer within 10 seconds. No answer = Timeout.';
+  const box=document.getElementById('fluencyOptions'); box.innerHTML='';
+  pick(opts,4).forEach(o=>{
+    const b=document.createElement('button'); b.type='button'; b.className='fluency-option'; b.textContent=o;
+    b.onclick=()=>answerFluency(o);
+    box.appendChild(b);
+  });
+  document.getElementById('fluencyNext').classList.add('hidden');
+  updateFluencyQuestionTimer(); fluencyTimerId=setInterval(updateFluencyQuestionTimer,50);
+}
+function updateFluencyQuestionTimer(){
+  const left=Math.max(0,FLUENCY_SECONDS-(Date.now()-fluencyQuestionStartedAt)/1000);
+  const el=document.getElementById('fluencyQTimer');
+  if(el){el.textContent=left.toFixed(1)+'s';el.style.color=left<=3?'#c24b4b':'var(--green2)'}
+  if(left<=0){clearInterval(fluencyTimerId);timeoutFluencyQuestion();}
+}
+function answerFluency(answer){
+  if(fluencyAnswered)return;
+  fluencyAnswered=true; clearInterval(fluencyTimerId);
+  const w=fluencyQuestions[fluencyIndex], elapsed=Math.min(FLUENCY_SECONDS,(Date.now()-fluencyQuestionStartedAt)/1000);
+  const correct=String(answer)===String(w.meaning);
+  if(correct)fluencyScore++; fluencyTimes.push(elapsed);
+  fluencyResults.push({word:w.word,correct,time:elapsed,status:correct?'Correct':'Wrong'});
+  document.querySelectorAll('.fluency-option').forEach(b=>{b.disabled=true;if(b.textContent===w.meaning)b.classList.add('selected');});
+  document.getElementById('fluencyStatus').textContent=correct?'✓ Correct — '+elapsed.toFixed(1)+'s':'✗ Incorrect — '+elapsed.toFixed(1)+'s';
+  document.getElementById('fluencyNext').classList.remove('hidden');
+  setTimeout(()=>{if(fluencyAnswered)nextFluencyQuestion()},500);
+}
+function timeoutFluencyQuestion(){
+  if(fluencyAnswered)return;
+  fluencyAnswered=true; clearInterval(fluencyTimerId);
+  const w=fluencyQuestions[fluencyIndex];
+  fluencyTimeouts++; fluencyTimes.push(FLUENCY_SECONDS);
+  fluencyResults.push({word:w.word,correct:false,time:FLUENCY_SECONDS,status:'Timeout'});
+  document.querySelectorAll('.fluency-option').forEach(b=>b.disabled=true);
+  document.getElementById('fluencyStatus').textContent='⏱ Time! This word was not recalled within 10 seconds.';
+  document.getElementById('fluencyNext').classList.remove('hidden');
+  setTimeout(()=>{if(fluencyAnswered)nextFluencyQuestion()},350);
+}
+function nextFluencyQuestion(){
+  if(!fluencyAnswered)return;
+  clearInterval(fluencyTimerId);
+  fluencyIndex++;
+  if(fluencyIndex>=FLUENCY_TOTAL){finishFluencyTest(false);return}
+  renderFluencyQuestion();
+}
+function finishFluencyTest(totalTimeout){
+  clearInterval(fluencyTimerId); clearInterval(fluencyTotalTimerId);
+  // If the 5-minute clock ends mid-question, mark all unanswered remaining questions as Timeout.
+  if(totalTimeout){
+    while(fluencyIndex<FLUENCY_TOTAL){
+      if(fluencyResults.length<=fluencyIndex){
+        const w=fluencyQuestions[fluencyIndex];
+        fluencyResults.push({word:w.word,correct:false,time:FLUENCY_SECONDS,status:'Timeout'});
+        fluencyTimes.push(FLUENCY_SECONDS); fluencyTimeouts++;
+      }
+      fluencyIndex++;
+    }
+  }
+  const answeredCount=fluencyResults.length;
+  const accuracy=Math.round(fluencyScore/FLUENCY_TOTAL*100);
+  const avg=fluencyTimes.length?fluencyTimes.reduce((a,b)=>a+b,0)/fluencyTimes.length:10;
+  const fast=fluencyResults.filter(r=>r.correct&&r.time<=5).length;
+  const slowCorrect=fluencyResults.filter(r=>r.correct&&r.time>5).length;
+  let level='Getting Started';
+  if(accuracy>=90&&avg<=4)level='Automatic Recall';
+  else if(accuracy>=85&&avg<=5.5)level='Fluent Recall';
+  else if(accuracy>=75&&avg<=7)level='Familiar but Still Slow';
+  else if(accuracy>=60)level='Developing Recall';
+  const weak=fluencyResults.filter(r=>!r.correct).slice(0,8).map(r=>r.word);
+  document.getElementById('fluencyScore').textContent=fluencyScore+' / '+FLUENCY_TOTAL;
+  document.getElementById('fluencyLevel').textContent='AI Coach: '+level;
+  document.getElementById('fluencyAccuracy').textContent=accuracy+'%';
+  document.getElementById('fluencyAvg').textContent=avg.toFixed(1)+'s';
+  document.getElementById('fluencyFast').textContent=fast;
+  document.getElementById('fluencyTimeout').textContent=fluencyTimeouts;
+  document.getElementById('fluencySummary').textContent='You answered '+answeredCount+' question(s). '+(slowCorrect?' '+slowCorrect+' correct word(s) were recalled, but more slowly.':'')+' The test measures recall speed as well as accuracy.';
+  document.getElementById('fluencyDiagnosis').innerHTML='<b>AI Coach Learning Signal</b><p>Fast + correct = Automatic Recall. Correct but over 5 seconds = Slow Recall. Wrong or Timeout = Not Yet Automatic.</p>'+(weak.length?'<p><b>Bring these words back into the next learning path:</b> '+weak.map(esc).join(', ')+'</p>':'<p>Excellent — no wrong or timed-out words were recorded.</p>');
+  localStorage.setItem('aplus_fluency_latest',JSON.stringify({date:new Date().toISOString(),score:fluencyScore,accuracy,averageResponse:avg,timeout:fluencyTimeouts,fastCorrect:fast,level,results:fluencyResults}));
+  show('fluencyResult');
+}
+
 load();
 if(!VOCAB.length)console.error('APLUS ACHIEVER: data/vocabulary.js did not load.');
 </script>
