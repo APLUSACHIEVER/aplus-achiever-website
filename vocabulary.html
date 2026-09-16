@@ -60,7 +60,7 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
     <span><b>30</b><small>QUESTIONS</small></span>
     <span><b>20s</b><small>PER QUESTION</small></span>
   </div>
-  <button class="btn primary fluency-start-btn" onclick="startFluencyTest()">Start Fluency Test →</button>
+  <button type="button" class="btn primary fluency-start-btn" onclick="window.startFluencyTest()">Start Fluency Test →</button>
 </div></section>
 <section class="path-card">
   <div class="path-head"><h2>🧠 Today's AI Learning Path</h2><span class="path-badge">PERSONALISED FOR YOU</span></div>
@@ -136,7 +136,7 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
   </div>
   <div class="fluency-coach" id="fluencyCoach"></div>
   <div class="fluency-review" id="fluencyReview"></div>
-  <button class="btn primary" onclick="startFluencyTest()">Take Test Again →</button>
+  <button type="button" class="btn primary" onclick="window.startFluencyTest()">Take Test Again →</button>
   <button class="btn" onclick="showTutor()">Open AI Tutor Dashboard</button>
   <button class="btn" onclick="showHome()">Home</button>
 </section>
@@ -679,32 +679,55 @@ window.updateUI=function(){
   }
 
   window.startFluencyTest=function(){
-    if(!Array.isArray(VOCAB)||VOCAB.length<FLUENCY_TOTAL){
-      toast('Vocabulary data is not available for the fluency test.');
-      return;
-    }
-    stopTimers();
-    fluencyQuestions=makePool().map((w,i)=>qmake(w,i)).filter(q=>q&&q.word);
-    if(fluencyQuestions.length<FLUENCY_TOTAL){
-      toast('Not enough valid vocabulary questions.');
-      return;
-    }
-    fluencyIndex=0;
-    fluencyScore=0;
-    fluencyResults=[];
-    fluencyTotalLeft=FLUENCY_TEST_SECONDS;
-    fluencyFinished=false;
-    show('fluency');
-    renderFluencyQuestion();
-    fluencyTotalTimerId=setInterval(()=>{
-      if(fluencyFinished)return;
-      fluencyTotalLeft--;
-      setTotal();
-      if(fluencyTotalLeft<=0){
-        finishFluencyTest();
+    try{
+      if(!Array.isArray(VOCAB) || VOCAB.length<FLUENCY_TOTAL){
+        if(typeof toast==='function') toast('Vocabulary data is not available for the fluency test.');
+        else alert('Vocabulary data is not available for the fluency test.');
+        return;
       }
-    },1000);
-    setTotal();
+
+      stopTimers();
+
+      const pool=makePool();
+      fluencyQuestions=pool.map((w,i)=>{
+        try{return qmake(w,i)}catch(e){console.error('Fluency question error:',e);return null;}
+      }).filter(q=>q&&q.word);
+
+      if(fluencyQuestions.length<FLUENCY_TOTAL){
+        if(typeof toast==='function') toast('Not enough valid vocabulary questions.');
+        else alert('Not enough valid vocabulary questions.');
+        return;
+      }
+
+      fluencyIndex=0;
+      fluencyScore=0;
+      fluencyResults=[];
+      fluencyTotalLeft=FLUENCY_TEST_SECONDS;
+      fluencyFinished=false;
+      fluencyAnswered=false;
+
+      const page=document.getElementById('fluency');
+      if(page) page.classList.remove('hidden');
+      ['home','diagnosticCard','quiz','result','tutor','fluencyResult'].forEach(id=>{
+        const el=document.getElementById(id);
+        if(el) el.classList.add('hidden');
+      });
+
+      setTotal();
+      setCircle(FLUENCY_SECONDS);
+      renderFluencyQuestion();
+
+      fluencyTotalTimerId=setInterval(()=>{
+        if(fluencyFinished)return;
+        fluencyTotalLeft--;
+        setTotal();
+        if(fluencyTotalLeft<=0) finishFluencyTest();
+      },1000);
+    }catch(err){
+      console.error('Fluency Test start error:',err);
+      if(typeof toast==='function') toast('Fluency Test could not start. Please refresh the page.');
+      else alert('Fluency Test could not start. Please refresh the page.');
+    }
   };
 
   function renderFluencyQuestion(){
