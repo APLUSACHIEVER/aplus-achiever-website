@@ -55,6 +55,19 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
   .fluency-options{gap:10px;margin-top:12px}
   .fluency-options button{min-height:60px;padding:14px 18px}
 }
+
+/* FLUENCY TEST: question-first focus mode */
+.fluency-focus-mode .fluency-top{display:none!important}
+.fluency-focus-mode .fluency-dashboard{margin:0 0 10px;display:flex;justify-content:center;gap:18px}
+.fluency-focus-mode .fluency-total-box,.fluency-focus-mode .fluency-question-box{padding:8px 16px}
+.fluency-focus-mode .fluency-question-box .fluency-circle{width:68px;height:68px}
+.fluency-focus-mode .fluency-progress-wrap{margin:8px 0 12px}
+.fluency-focus-mode .fluency-question-panel{scroll-margin-top:20px;margin-top:0}
+@media(max-width:700px){
+ .fluency-focus-mode .fluency-dashboard{gap:8px}
+ .fluency-focus-mode .fluency-total-box,.fluency-focus-mode .fluency-question-box{padding:6px 10px}
+ .fluency-focus-mode .fluency-question-box .fluency-circle{width:60px;height:60px}
+}
 </style></head>
 <body>
 <header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 6.0 · V17</div></div></header>
@@ -464,7 +477,9 @@ function readiness(){let a=overall(),m=mastered()/Math.max(1,VOCAB.length)*100,s
 function recommendation(){if(!db.total)return 'Take the AI Diagnostic first.';if(due().length)return 'Review due words first.';if(weak().length)return 'Strengthen your weak words before increasing difficulty.';return 'You are ready for a controlled stretch into higher-level vocabulary.'}
 function updateUI(){updateLearningPath();document.getElementById('sAcc').textContent=overall()+'%';document.getElementById('sQ').textContent=db.total;document.getElementById('sMaster').textContent=mastered();document.getElementById('sDue').textContent=due().length;document.getElementById('sLevel').textContent=targetLevel();document.getElementById('sStreak').textContent=streak();let d=dailyDone();document.getElementById('dailyBar').style.width=(d/10*100)+'%';document.getElementById('heroAcc').textContent=overall()+'%';document.getElementById('heroDaily').textContent=d+' / 10';document.getElementById('heroMaster').textContent=mastered();document.getElementById('heroBar').style.width=(d/10*100)+'%';document.getElementById('dailyText').textContent=d+' / 10 today';document.getElementById('homeAdvice').textContent=!db.total?'Start with AI Diagnostic or Daily 10. The tutor learns from every answer.':recommendation()+' Target Level '+targetLevel()+'.'}
 function show(id){['home','diagnosticCard','quiz','result','tutor','fluency','fluencyResult'].forEach(x=>{const el=document.getElementById(x);if(el)el.classList.toggle('hidden',x!==id)})}
-function showHome(){show('home');updateUI()}
+function showHome(){
+    const f=document.getElementById('fluency'); if(f) f.classList.remove('fluency-focus-mode');
+    show('home');updateUI()}
 function speakCurrent(){if(!current)return;if('speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(current.word);u.lang='en-SG';u.rate=.8;speechSynthesis.speak(u)}else toast('Speech is not supported.')}
 function toast(t){let x=document.getElementById('toast');x.textContent=t;x.style.display='block';clearTimeout(window.__t);window.__t=setTimeout(()=>x.style.display='none',2200)}
 function esc(x){return String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
@@ -726,7 +741,7 @@ window.startFluencyTest=function(){
       fluencyAnswered=false;
 
       const page=document.getElementById('fluency');
-      if(page) page.classList.remove('hidden');
+      if(page){ page.classList.remove('hidden'); page.classList.add('fluency-focus-mode'); }
       ['home','diagnosticCard','quiz','result','tutor','fluencyResult'].forEach(id=>{
         const el=document.getElementById(id);
         if(el) el.classList.add('hidden');
@@ -736,21 +751,17 @@ window.startFluencyTest=function(){
       setCircle(FLUENCY_SECONDS);
       renderFluencyQuestion();
 
-      // Jump the student directly to the test area after clicking Start.
-      // Use a tiny delay so the hidden/visible state has been painted before scrolling.
+      // Jump directly to the complete question + all answer choices.
+      // Center the question panel in the viewport so students do not have to scroll.
       requestAnimationFrame(()=>{
-        requestAnimationFrame(()=>{
-          const target=document.getElementById('fluencyQuestionPanel');
-          if(target){
-            target.scrollIntoView({behavior:'smooth',block:'start'});
-            // Leave enough room for the full question and all four answer choices.
-            setTimeout(()=>window.scrollBy({top:-78,left:0,behavior:'smooth'}),220);
-            setTimeout(()=>{
-              const firstOption=target.querySelector('.fluency-options button');
-              if(firstOption && typeof firstOption.focus==='function') firstOption.focus({preventScroll:true});
-            },500);
-          }
-        });
+        const target=document.getElementById('fluencyQuestionPanel');
+        if(target){
+          target.scrollIntoView({behavior:'smooth',block:'center',inline:'nearest'});
+          setTimeout(()=>{
+            const firstOption=target.querySelector('.fluency-options button');
+            if(firstOption && typeof firstOption.focus==='function') firstOption.focus({preventScroll:true});
+          },450);
+        }
       });
 
       fluencyTotalTimerId=setInterval(()=>{
@@ -899,6 +910,7 @@ window.startFluencyTest=function(){
       ? '<b>Words to bring back into your learning path</b><p>'+weak.map(esc).join(' · ')+'</p>'
       : '<b>Words to review</b><p>No missed words in this test.</p>';
 
+    const f=document.getElementById('fluency'); if(f) f.classList.remove('fluency-focus-mode');
     show('fluencyResult');
   };
 
