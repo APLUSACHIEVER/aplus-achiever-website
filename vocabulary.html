@@ -48,90 +48,41 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 /* V17 — AI Coach: clearer guidance, retry and session momentum */
 .coach-strip{margin-top:14px;padding:12px 14px;border-radius:13px;background:linear-gradient(135deg,#eef9f3,#f8fcfa);border:1px solid #d9ece3;display:flex;align-items:center;gap:10px;color:var(--deep);font-size:13px;line-height:1.45}.coach-strip b{color:var(--green)}.coach-icon{width:30px;height:30px;border-radius:50%;background:#d9f1e5;display:grid;place-items:center;flex:0 0 auto}.retry-btn{margin-top:10px;border:1px solid #b9dccb;background:#fff;color:var(--green);border-radius:10px;padding:9px 12px;font-weight:850;cursor:pointer}.retry-btn:hover{background:#f1faf6}.session-goal{margin-top:12px;padding:11px 13px;background:#fff;border:1px solid var(--line);border-radius:12px;font-size:12px;color:var(--muted)}.session-goal b{color:var(--green)}
 
-/* V17 — 9-Minute Vocabulary Fluency Test */
-.fluency-launch{margin:0 0 22px;background:linear-gradient(135deg,#eaf8f1,#f8fcfa);border:1px solid #cfe7db;border-radius:22px;padding:20px 22px;box-shadow:var(--shadow)}
-.fluency-launch-head{display:flex;justify-content:space-between;align-items:center;gap:18px}
-.fluency-launch h2{margin:0 0 5px;color:var(--deep);font-size:21px}
-.fluency-launch p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
-.fluency-badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
-.fluency-badge{padding:6px 9px;border-radius:999px;background:#fff;border:1px solid #d9ece3;color:var(--green);font-size:11px;font-weight:900}
-.fluency-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow);margin-top:16px}
-.fluency-head{display:flex;justify-content:space-between;align-items:center;gap:14px}
-.fluency-head h2{margin:0;color:var(--deep)}
-.fluency-timer{font-size:27px;font-weight:950;color:var(--green);font-variant-numeric:tabular-nums}
-.fluency-timer.danger{color:#c24b4b}
-.fluency-qtimer{font-size:14px;font-weight:950;color:var(--green2)}
-.fluency-progress{height:10px;background:#e5efe9;border-radius:99px;overflow:hidden;margin:14px 0 20px}
-.fluency-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--green2));transition:.15s}
-.fluency-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:850}
-.fluency-word{font-size:34px;font-weight:950;color:var(--deep);margin:20px 0 7px}
-.fluency-prompt{color:var(--muted);font-size:14px;margin-bottom:16px}
-.fluency-options{display:grid;gap:8px}
-.fluency-option{padding:13px 16px;border:2px solid #e0ebe6;border-radius:13px;background:#fff;text-align:left;font-size:16px}
-.fluency-option:hover{border-color:#74c49d}
-.fluency-option.selected{border-color:var(--green2);background:#eef9f3}
-.fluency-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px}
-.fluency-status{font-size:12px;color:var(--muted)}
-.fluency-result{text-align:center}
-.fluency-score{font-size:58px;font-weight:950;color:var(--green)}
-.fluency-result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
-.fluency-stat{background:#f7fbf9;border:1px solid #e3efe9;border-radius:14px;padding:14px}
-.fluency-stat b{display:block;font-size:21px;color:var(--green)}
-.fluency-stat span{font-size:11px;color:var(--muted)}
-.fluency-diagnosis{max-width:760px;margin:14px auto;text-align:left;background:#f7fbf9;border:1px solid #e3efe9;border-radius:15px;padding:16px;line-height:1.55}
-@media(max-width:650px){.fluency-launch-head,.fluency-head,.fluency-actions{align-items:flex-start;flex-direction:column}.fluency-timer{font-size:24px}.fluency-word{font-size:29px}.fluency-result-grid{grid-template-columns:1fr 1fr}}
+/* Fluency Test: jump to the complete question + choices, not the timer */
+#fluencyQuestionPanel{scroll-margin-top:90px}
+@media (min-width:769px){
+  .fluency-question-panel{padding:18px}
+  .fluency-options{gap:10px;margin-top:12px}
+  .fluency-options button{min-height:60px;padding:14px 18px}
+}
 
-/* V17 Fluency UX: compact question rows + always-visible countdown */
-.fluency-options{gap:6px !important;margin-top:10px !important}
-.fluency-options button{padding:9px 12px !important;min-height:40px !important;line-height:1.2 !important}
-.fluency-card{padding:16px !important}
-.fluency-word{margin:10px 0 8px !important}
-.fluency-progress{margin:8px 0 !important}
-.fluency-qtimer{position:sticky;top:8px;z-index:5;font-size:22px !important;font-weight:800}
-.fluency-timer{font-size:18px !important;font-weight:800}
-
-
-/* Prominent fluency countdown */
-.fluency-timer-wrap{display:flex;align-items:center;gap:16px;margin:8px 0 14px;padding:12px 14px;border:1px solid #dfe8e2;border-radius:16px;background:#fbfefc}
-.fluency-clock{--progress:100%;width:76px;height:76px;min-width:76px;border-radius:50%;display:grid;place-items:center;position:relative;background:conic-gradient(#16834b var(--progress),#e7eee9 0)}
-.fluency-clock:before{content:"";position:absolute;inset:6px;border-radius:50%;background:#fff}
-.fluency-clock-number{position:relative;z-index:1;font-size:25px;font-weight:800;line-height:1;color:#12663d;font-variant-numeric:tabular-nums}
-.fluency-clock-label{display:flex;flex-direction:column;gap:4px;flex:1}.fluency-clock-label strong{font-size:14px}.fluency-clock-label span{font-size:12px;color:#6b756f}
-.fluency-bar{height:8px;border-radius:999px;background:#e7eee9;overflow:hidden;margin-top:6px}.fluency-bar-fill{height:100%;width:100%;border-radius:999px;background:#16834b;transition:width .1s linear,background .2s ease}
-.fluency-clock.is-warning{background:conic-gradient(#d99a2b var(--progress),#f1eadc 0)}.fluency-clock.is-warning .fluency-clock-number{color:#a86a00}.fluency-bar-fill.is-warning{background:#d99a2b}
-.fluency-clock.is-danger{background:conic-gradient(#d64545 var(--progress),#f4e2e2 0)}.fluency-clock.is-danger .fluency-clock-number{color:#b42318}.fluency-bar-fill.is-danger{background:#d64545}
-@media(max-width:600px){.fluency-clock{width:66px;height:66px;min-width:66px}.fluency-clock-number{font-size:22px}}
-
-/* Fluency test launch in the hero-right position */
-.fluency-hero-card{justify-content:flex-start!important;min-height:100%;box-sizing:border-box}
-.hero-fluency-kicker{font-size:10px;font-weight:950;letter-spacing:.09em;color:var(--green);margin-bottom:7px}
-.fluency-hero-card h3{font-size:24px;line-height:1.15;margin:0 0 9px;color:var(--deep)}
-.hero-fluency-sub{font-size:13px;line-height:1.45;color:var(--muted);margin:0 0 18px}
-.hero-fluency-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:16px}
-.hero-fluency-stats div{padding:10px 5px;border:1px solid #d9ebe2;background:#f7fbf9;border-radius:12px;text-align:center}
-.hero-fluency-stats b{display:block;font-size:19px;color:var(--green);line-height:1.1}
-.hero-fluency-stats span{display:block;font-size:10px;color:var(--muted);margin-top:3px}
-.hero-fluency-rule{padding:11px 12px;border-radius:12px;background:#f3faf6;border:1px solid #dcece4;color:#52635b;font-size:11px;line-height:1.45;margin-bottom:18px}
-.hero-fluency-btn{width:100%;justify-content:center}
-@media(max-width:700px){.fluency-hero-card h3{font-size:21px}}
-
+/* FLUENCY TEST: question-first focus mode */
+.fluency-focus-mode .fluency-top{display:none!important}
+.fluency-focus-mode .fluency-dashboard{margin:0 0 10px;display:flex;justify-content:center;gap:18px}
+.fluency-focus-mode .fluency-total-box,.fluency-focus-mode .fluency-question-box{padding:8px 16px}
+.fluency-focus-mode .fluency-question-box .fluency-circle{width:68px;height:68px}
+.fluency-focus-mode .fluency-progress-wrap{margin:8px 0 12px}
+.fluency-focus-mode .fluency-question-panel{scroll-margin-top:20px;margin-top:0}
+@media(max-width:700px){
+ .fluency-focus-mode .fluency-dashboard{gap:8px}
+ .fluency-focus-mode .fluency-total-box,.fluency-focus-mode .fluency-question-box{padding:6px 10px}
+ .fluency-focus-mode .fluency-question-box .fluency-circle{width:60px;height:60px}
+}
 </style></head>
 <body>
 <header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 6.0 · V17</div></div></header>
 <main class="container">
-<section class="hero"><div class="hero-main"><div class="hero-kicker">PSLE ENGLISH · 1000-WORD ADAPTIVE SYSTEM</div><h1>Build your vocabulary<br>for <span>PSLE success.</span></h1><p>The tutor learns from your answers and chooses what you should practise next.</p><div class="hero-cta"><button class="btn primary" onclick="startMode('path')">▶ Start My Learning Path</button><a class="btn" href="progress.html">View My Progress</a></div></div><div class="hero-side fluency-hero-card">
-  <div class="hero-fluency-kicker">NEW · FLUENCY TEST</div>
-  <h3>⚡ 9-Minute Vocabulary Fluency Test</h3>
-  <p class="hero-fluency-sub">Measure how quickly and accurately you recall PSLE vocabulary.</p>
-  <div class="hero-fluency-stats">
-    <div><b>9</b><span>minutes</span></div>
-    <div><b>30</b><span>questions</span></div>
-    <div><b>15s</b><span>per question</span></div>
+<section class="hero"><div class="hero-main"><div class="hero-kicker">PSLE ENGLISH · 1000-WORD ADAPTIVE SYSTEM</div><h1>Build your vocabulary<br>for <span>PSLE success.</span></h1><p>The tutor learns from your answers and chooses what you should practise next.</p><div class="hero-cta"><button class="btn primary" onclick="startMode('path')">▶ Start My Learning Path</button><button class="btn" onclick="showTutor()">View My Progress</button></div></div><div class="hero-side fluency-home-card">
+  <div class="section-title">AI-POWERED FLUENCY</div>
+  <h3>⚡ 10-Minute Vocabulary Fluency Test</h3>
+  <p class="small">Measure how quickly and accurately you can recall PSLE vocabulary.</p>
+  <div class="fluency-home-stats">
+    <span><b>10</b><small>MINUTES</small></span>
+    <span><b>30</b><small>QUESTIONS</small></span>
+    <span><b>20s</b><small>PER QUESTION</small></span>
   </div>
-  <div class="hero-fluency-rule">⏱️ Time runs continuously. When 15 seconds ends, the next question starts automatically.</div>
-  <button class="btn primary hero-fluency-btn" onclick="startFluencyTest()">⚡ Start Fluency Test →</button>
-</div>
-</section>
+  <button type="button" class="btn primary fluency-start-btn" onclick="window.startFluencyTest()">Start Fluency Test →</button>
+</div></section>
 <section class="path-card">
   <div class="path-head"><h2>🧠 Today's AI Learning Path</h2><span class="path-badge">PERSONALISED FOR YOU</span></div>
   <div class="path-grid">
@@ -147,45 +98,70 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 <div class="secondary-actions"><button class="btn" onclick="V11_masteryCheck()">✓ Mastery Check</button><button class="btn" onclick="V11_parentReport()">▣ Parent Report</button><button class="btn" onclick="showTutor()">◉ My Dashboard</button><button class="btn" onclick="V11_resetDemo()">↺ Reset Data</button><button class="btn" onclick="showHome()">⌂ Home</button></div>
 <div class="stats"><div class="stat"><strong id="sAcc">0%</strong><small>Accuracy</small></div><div class="stat"><strong id="sQ">0</strong><small>Questions</small></div><div class="stat"><strong id="sMaster">0</strong><small>Mastered</small></div><div class="stat"><strong id="sDue">0</strong><small>Due today</small></div><div class="stat"><strong id="sLevel">1</strong><small>Target level</small></div><div class="stat"><strong id="sStreak">0</strong><small>Day streak</small></div></div>
 <section id="home" class="card"><div class="grid2"><div><div class="section-title">YOUR NEXT STEP</div><h2 id="homeTitle">Today's personalised plan</h2><p id="homeAdvice" class="small">Start with Daily 10. The tutor will learn from every answer.</p><div class="progress"><i id="dailyBar"></i></div><p id="dailyText" class="small">0 / 10 completed today</p><button class="btn primary" onclick="startMode('daily')">Continue Today's 10 →</button></div><div class="plan"><h3 style="margin-bottom:10px">How your tutor works</h3><p>1. <b>Learn</b> from your answers</p><p>2. <b>Spot</b> weak or forgotten words</p><p>3. <b>Review</b> them at the right time</p><p>4. <b>Stretch</b> when you're ready</p></div></div></section>
-
-
-<section id="fluency" class="fluency-card hidden">
-  <div class="fluency-head">
+<!-- ============================================================
+     10-MINUTE VOCABULARY FLUENCY TEST
+============================================================ -->
+<section id="fluency" class="card hidden fluency-card">
+  <div class="fluency-top">
     <div>
-      <div class="section-title">9-MINUTE FLUENCY TEST</div>
-      <h2>Vocabulary Recall Speed</h2>
+      <div class="section-title">APLUS AI-POWERED TUTOR · FLUENCY MEASUREMENT</div>
+      <h2>⚡ 10-Minute Vocabulary Fluency Test</h2>
+      <p class="small">30 questions · 20 seconds each · automatic next question</p>
     </div>
-    <div id="fluencyTotalTimer" class="fluency-timer" aria-label="Total test countdown">9:00</div>
+    <button class="btn" onclick="showHome()">Exit Test</button>
   </div>
-  <div class="fluency-meta"><span id="fluencyCounter">1 / 30</span><span class="fluency-qtime-label">TIME LEFT</span></div>
-  <div class="fluency-timer-wrap">
-    <div class="fluency-clock" id="fluencyClock" style="--progress:100%"><div class="fluency-clock-number" id="fluencyQTimer">15</div></div>
-    <div class="fluency-clock-label"><strong>Seconds left</strong><span>Next question starts automatically at 0.</span><div class="fluency-bar"><div class="fluency-bar-fill" id="fluencyTimerBar"></div></div></div>
+
+  <div class="fluency-dashboard">
+    <div class="fluency-total-box">
+      <span>TOTAL TIME</span>
+      <strong id="fluencyTotalTimer">10:00</strong>
+    </div>
+    <div class="fluency-question-box">
+      <span>QUESTION TIME</span>
+      <div class="fluency-circle" id="fluencyCircle">
+        <b id="fluencyQuestionTimer">20</b>
+        <small>SEC</small>
+      </div>
+    </div>
   </div>
-  <div class="fluency-progress"><i id="fluencyBar"></i></div>
-  <div id="fluencyWord" class="fluency-word"></div>
-  <div id="fluencyPrompt" class="fluency-prompt">Choose the best meaning.</div>
-  <div id="fluencyOptions" class="fluency-options"></div>
-  <div class="fluency-actions">
-    <span id="fluencyStatus" class="fluency-status">Answer within 15 seconds. No answer = Timeout.</span>
-    <button id="fluencyNext" class="btn primary hidden" onclick="nextFluencyQuestion()">Next →</button>
+
+  <div class="fluency-progress-wrap">
+    <div class="fluency-progress-label">
+      <span id="fluencyCounter">Question 1 / 30</span>
+      <span id="fluencyTimeLabel">20 seconds</span>
+    </div>
+    <div class="fluency-progress-track">
+      <i id="fluencyQuestionProgress"></i>
+    </div>
+  </div>
+
+  <div class="fluency-question-panel" id="fluencyQuestionPanel">
+    <div class="fluency-word" id="fluencyWord"></div>
+    <div class="fluency-question-text" id="fluencyQuestionText"></div>
+    <div class="fluency-context hidden" id="fluencyContext"></div>
+    <div class="fluency-options" id="fluencyOptions"></div>
+    <div class="fluency-status" id="fluencyStatus"></div>
   </div>
 </section>
-<section id="fluencyResult" class="fluency-card hidden fluency-result">
+
+<section id="fluencyResult" class="card hidden fluency-result-card">
   <div class="section-title">FLUENCY TEST COMPLETE</div>
-  <div id="fluencyScore" class="fluency-score">0 / 30</div>
-  <h2 id="fluencyLevel"></h2>
-  <p id="fluencySummary" class="small"></p>
+  <h2>Your Vocabulary Fluency Profile</h2>
+  <div class="fluency-result-score" id="fluencyResultScore">0%</div>
+  <p class="small" id="fluencyResultLevel"></p>
   <div class="fluency-result-grid">
-    <div class="fluency-stat"><b id="fluencyAccuracy">0%</b><span>Accuracy</span></div>
-    <div class="fluency-stat"><b id="fluencyAvg">0.0s</b><span>Average Recall Time</span></div>
-    <div class="fluency-stat"><b id="fluencyFast">0</b><span>Fast Correct ≤ 5s</span></div>
-    <div class="fluency-stat"><b id="fluencyTimeout">0</b><span>Timeout</span></div>
+    <div><b id="fluencyAccuracy">0%</b><span>Accuracy</span></div>
+    <div><b id="fluencyAvgTime">0.0s</b><span>Average Recall</span></div>
+    <div><b id="fluencyFast">0</b><span>Fast Recall ≤ 5s</span></div>
+    <div><b id="fluencyTimeout">0</b><span>Timeout</span></div>
   </div>
-  <div id="fluencyDiagnosis" class="fluency-diagnosis"></div>
-  <button class="btn primary" onclick="startFluencyTest()">⚡ Test Again</button>
-  <button class="btn" onclick="showTutor()">Open AI Coach Dashboard</button>
+  <div class="fluency-coach" id="fluencyCoach"></div>
+  <div class="fluency-review" id="fluencyReview"></div>
+  <button type="button" class="btn primary" onclick="window.startFluencyTest()">Take Test Again →</button>
+  <button class="btn" onclick="showTutor()">Open AI Tutor Dashboard</button>
+  <button class="btn" onclick="showHome()">Home</button>
 </section>
+
 <section id="diagnosticCard" class="card hidden"><div class="section-title">AI Diagnostic</div><h2>Find your current PSLE vocabulary level</h2><p class="small">20 questions across Levels 1–10. The tutor uses the result to set your first target range.</p><button class="btn primary" onclick="startMode('diagnostic')">Start Diagnostic →</button></section>
 <section id="quiz" class="card hidden"><div class="quiz-top"><span id="modeLabel">AI DAILY 10</span><span id="counter">1 / 10</span></div><div class="progress" style="margin:13px 0 22px"><i id="qbar"></i></div><div id="coachStrip" class="coach-strip"><span class="coach-icon">🧠</span><span><b>AI Coach:</b> Take your time. Choose the answer you think fits best.</span></div><div class="section-title" id="typeLabel">MEANING</div><div class="question" id="question"></div><div id="options" class="options"></div><div id="inputWrap" class="hidden"><input id="answerInput" class="input" autocomplete="off" placeholder="Type the word..."><p class="small">Spelling is checked flexibly.</p></div><div id="hintPanel" class="hint-panel hidden"></div><div class="controls"><button class="btn" onclick="speakCurrent()">🔊 Hear Word</button><button id="checkBtn" class="btn primary" onclick="submitAnswer()">Check Answer</button><button id="nextBtn" class="btn primary hidden" onclick="nextQuestion()">Next Question →</button></div><div id="feedback" class="feedback hidden"></div><div id="wordCard" class="word-card hidden"></div></section>
 <section id="result" class="card hidden result"><div class="section-title">SESSION COMPLETE</div><div id="score" class="score">0/10</div><h2 id="resultTitle"></h2><p id="resultText" class="small"></p><div id="diagnosis" class="diagnosis"></div><button class="btn primary" onclick="startMode('daily')">Another AI 10 →</button><button class="btn" onclick="showTutor()">Open Tutor Dashboard</button></section>
@@ -501,131 +477,13 @@ function readiness(){let a=overall(),m=mastered()/Math.max(1,VOCAB.length)*100,s
 function recommendation(){if(!db.total)return 'Take the AI Diagnostic first.';if(due().length)return 'Review due words first.';if(weak().length)return 'Strengthen your weak words before increasing difficulty.';return 'You are ready for a controlled stretch into higher-level vocabulary.'}
 function updateUI(){updateLearningPath();document.getElementById('sAcc').textContent=overall()+'%';document.getElementById('sQ').textContent=db.total;document.getElementById('sMaster').textContent=mastered();document.getElementById('sDue').textContent=due().length;document.getElementById('sLevel').textContent=targetLevel();document.getElementById('sStreak').textContent=streak();let d=dailyDone();document.getElementById('dailyBar').style.width=(d/10*100)+'%';document.getElementById('heroAcc').textContent=overall()+'%';document.getElementById('heroDaily').textContent=d+' / 10';document.getElementById('heroMaster').textContent=mastered();document.getElementById('heroBar').style.width=(d/10*100)+'%';document.getElementById('dailyText').textContent=d+' / 10 today';document.getElementById('homeAdvice').textContent=!db.total?'Start with AI Diagnostic or Daily 10. The tutor learns from every answer.':recommendation()+' Target Level '+targetLevel()+'.'}
 function show(id){['home','diagnosticCard','quiz','result','tutor','fluency','fluencyResult'].forEach(x=>{const el=document.getElementById(x);if(el)el.classList.toggle('hidden',x!==id)})}
-function showHome(){show('home');updateUI()}
+function showHome(){
+    const f=document.getElementById('fluency'); if(f) f.classList.remove('fluency-focus-mode');
+    show('home');updateUI()}
 function speakCurrent(){if(!current)return;if('speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(current.word);u.lang='en-SG';u.rate=.8;speechSynthesis.speak(u)}else toast('Speech is not supported.')}
 function toast(t){let x=document.getElementById('toast');x.textContent=t;x.style.display='block';clearTimeout(window.__t);window.__t=setTimeout(()=>x.style.display='none',2200)}
 function esc(x){return String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&answered)nextQuestion()});
-
-/* V17 — 9-Minute Vocabulary Fluency Test */
-const FLUENCY_TOTAL=30, FLUENCY_SECONDS=15, FLUENCY_TEST_SECONDS=540;
-let fluencyQuestions=[], fluencyIndex=0, fluencyScore=0, fluencyTimeouts=0;
-let fluencyTimes=[], fluencyResults=[], fluencyQuestionStartedAt=0;
-let fluencyTimerId=null, fluencyTotalTimerId=null, fluencyTestStartedAt=0, fluencyAnswered=false, fluencyFinished=false;
-
-function startFluencyTest(){
-  if(!VOCAB.length){toast('Vocabulary data could not load.');return}
-  clearInterval(fluencyTimerId); clearInterval(fluencyTotalTimerId);
-  fluencyQuestions=pick(VOCAB,Math.min(FLUENCY_TOTAL,VOCAB.length));
-  if(fluencyQuestions.length<FLUENCY_TOTAL){toast('At least 30 vocabulary words are required.');return}
-  fluencyIndex=0; fluencyScore=0; fluencyTimeouts=0; fluencyTimes=[]; fluencyResults=[];
-  fluencyAnswered=false; fluencyFinished=false; fluencyTestStartedAt=Date.now();
-  show('fluency');
-  requestAnimationFrame(()=>document.getElementById('fluency').scrollIntoView({behavior:'smooth',block:'start'}));
-  updateFluencyTotalTimer(); fluencyTotalTimerId=setInterval(updateFluencyTotalTimer,100);
-  renderFluencyQuestion();
-}
-function updateFluencyTotalTimer(){
-  const left=Math.max(0,FLUENCY_TEST_SECONDS-(Date.now()-fluencyTestStartedAt)/1000);
-  const el=document.getElementById('fluencyTotalTimer');
-  if(el){const sec=Math.ceil(left);el.textContent=Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');el.className='fluency-timer'+(left<=30?' danger':'')}
-  if(left<=0){clearInterval(fluencyTotalTimerId); if(!fluencyFinished){ if(!fluencyAnswered) timeoutFluencyQuestion(); finishFluencyTest(true); }}
-}
-function renderFluencyQuestion(){
-  clearInterval(fluencyTimerId);
-  if(fluencyIndex>=FLUENCY_TOTAL){finishFluencyTest(false);return}
-  const w=fluencyQuestions[fluencyIndex];
-  const opts=meaningOptions(w);
-  fluencyAnswered=false; fluencyQuestionStartedAt=Date.now();
-  document.getElementById('fluencyCounter').textContent=(fluencyIndex+1)+' / '+FLUENCY_TOTAL;
-  document.getElementById('fluencyBar').style.width=(fluencyIndex/FLUENCY_TOTAL*100)+'%';
-  document.getElementById('fluencyWord').textContent=w.word;
-  document.getElementById('fluencyPrompt').textContent='Choose the best meaning for this word.';
-  document.getElementById('fluencyStatus').textContent='Answer within 15 seconds. No answer = Timeout.';
-  const box=document.getElementById('fluencyOptions'); box.innerHTML='';
-  pick(opts,4).forEach(o=>{
-    const b=document.createElement('button'); b.type='button'; b.className='fluency-option'; b.textContent=o;
-    b.onclick=()=>answerFluency(o);
-    box.appendChild(b);
-  });
-  document.getElementById('fluencyNext').classList.add('hidden');
-  updateFluencyQuestionTimer(); fluencyTimerId=setInterval(updateFluencyQuestionTimer,50);
-}
-function updateFluencyQuestionTimer(){
-  const n=document.getElementById('fluencyQTimer');
-  const clock=document.getElementById('fluencyClock');
-  const bar=document.getElementById('fluencyTimerBar');
-  if(n)n.textContent=Math.max(0,Math.ceil(fluencyQuestionLeft));
-  const pct=Math.max(0,Math.min(100,(fluencyQuestionLeft/FLUENCY_SECONDS)*100));
-  if(clock){clock.style.setProperty('--progress',pct+'%');clock.classList.remove('is-warning','is-danger');if(fluencyQuestionLeft<=5)clock.classList.add('is-danger');else if(fluencyQuestionLeft<=8)clock.classList.add('is-warning');}
-  if(bar){bar.style.width=pct+'%';bar.classList.remove('is-warning','is-danger');if(fluencyQuestionLeft<=5)bar.classList.add('is-danger');else if(fluencyQuestionLeft<=8)bar.classList.add('is-warning');}
-}
-function answerFluency(answer){
-  if(fluencyAnswered)return;
-  fluencyAnswered=true; clearInterval(fluencyTimerId);
-  const w=fluencyQuestions[fluencyIndex], elapsed=Math.min(FLUENCY_SECONDS,(Date.now()-fluencyQuestionStartedAt)/1000);
-  const correct=String(answer)===String(w.meaning);
-  if(correct)fluencyScore++; fluencyTimes.push(elapsed);
-  fluencyResults.push({word:w.word,correct,time:elapsed,status:correct?'Correct':'Wrong'});
-  document.querySelectorAll('.fluency-option').forEach(b=>{b.disabled=true;if(b.textContent===w.meaning)b.classList.add('selected');});
-  document.getElementById('fluencyStatus').textContent=correct?'✓ Correct — '+elapsed.toFixed(1)+'s':'✗ Incorrect — '+elapsed.toFixed(1)+'s';
-  document.getElementById('fluencyNext').classList.remove('hidden');
-  setTimeout(()=>{if(fluencyAnswered)nextFluencyQuestion()},500);
-}
-function timeoutFluencyQuestion(){
-  if(fluencyAnswered)return;
-  fluencyAnswered=true; clearInterval(fluencyTimerId);
-  const w=fluencyQuestions[fluencyIndex];
-  fluencyTimeouts++; fluencyTimes.push(FLUENCY_SECONDS);
-  fluencyResults.push({word:w.word,correct:false,time:FLUENCY_SECONDS,status:'Timeout'});
-  document.querySelectorAll('.fluency-option').forEach(b=>b.disabled=true);
-  document.getElementById('fluencyStatus').textContent='⏱ Time! This word was not recalled within 10 seconds.';
-  document.getElementById('fluencyNext').classList.remove('hidden');
-  setTimeout(()=>{if(fluencyAnswered)nextFluencyQuestion()},350);
-}
-function nextFluencyQuestion(){
-  if(!fluencyAnswered)return;
-  clearInterval(fluencyTimerId);
-  fluencyIndex++;
-  if(fluencyIndex>=FLUENCY_TOTAL){finishFluencyTest(false);return}
-  renderFluencyQuestion();
-}
-function finishFluencyTest(totalTimeout){
-  clearInterval(fluencyTimerId); clearInterval(fluencyTotalTimerId);
-  // If the 5-minute clock ends mid-question, mark all unanswered remaining questions as Timeout.
-  if(totalTimeout){
-    while(fluencyIndex<FLUENCY_TOTAL){
-      if(fluencyResults.length<=fluencyIndex){
-        const w=fluencyQuestions[fluencyIndex];
-        fluencyResults.push({word:w.word,correct:false,time:FLUENCY_SECONDS,status:'Timeout'});
-        fluencyTimes.push(FLUENCY_SECONDS); fluencyTimeouts++;
-      }
-      fluencyIndex++;
-    }
-  }
-  const answeredCount=fluencyResults.length;
-  const accuracy=Math.round(fluencyScore/FLUENCY_TOTAL*100);
-  const avg=fluencyTimes.length?fluencyTimes.reduce((a,b)=>a+b,0)/fluencyTimes.length:10;
-  const fast=fluencyResults.filter(r=>r.correct&&r.time<=5).length;
-  const slowCorrect=fluencyResults.filter(r=>r.correct&&r.time>5).length;
-  let level='Getting Started';
-  if(accuracy>=90&&avg<=4)level='Automatic Recall';
-  else if(accuracy>=85&&avg<=5.5)level='Fluent Recall';
-  else if(accuracy>=75&&avg<=7)level='Familiar but Still Slow';
-  else if(accuracy>=60)level='Developing Recall';
-  const weak=fluencyResults.filter(r=>!r.correct).slice(0,8).map(r=>r.word);
-  document.getElementById('fluencyScore').textContent=fluencyScore+' / '+FLUENCY_TOTAL;
-  document.getElementById('fluencyLevel').textContent='AI Coach: '+level;
-  document.getElementById('fluencyAccuracy').textContent=accuracy+'%';
-  document.getElementById('fluencyAvg').textContent=avg.toFixed(1)+'s';
-  document.getElementById('fluencyFast').textContent=fast;
-  document.getElementById('fluencyTimeout').textContent=fluencyTimeouts;
-  document.getElementById('fluencySummary').textContent='You answered '+answeredCount+' question(s). '+(slowCorrect?' '+slowCorrect+' correct word(s) were recalled, but more slowly.':'')+' The test measures recall speed as well as accuracy.';
-  document.getElementById('fluencyDiagnosis').innerHTML='<b>AI Coach Learning Signal</b><p>Fast + correct = Automatic Recall. Correct but over 5 seconds = Slow Recall. Wrong or Timeout = Not Yet Automatic.</p>'+(weak.length?'<p><b>Bring these words back into the next learning path:</b> '+weak.map(esc).join(', ')+'</p>':'<p>Excellent — no wrong or timed-out words were recorded.</p>');
-  localStorage.setItem('aplus_fluency_latest',JSON.stringify({date:new Date().toISOString(),score:fluencyScore,accuracy,averageResponse:avg,timeout:fluencyTimeouts,fastCorrect:fast,level,results:fluencyResults}));
-  show('fluencyResult');
-}
-
 load();
 if(!VOCAB.length)console.error('APLUS ACHIEVER: data/vocabulary.js did not load.');
 </script>
@@ -698,4 +556,366 @@ window.updateUI=function(){
   };
 })();
 </script>
-</body></html>
+
+<style>
+/* ============================================================
+   APLUS AI-POWERED TUTOR · 10-MINUTE FLUENCY TEST
+============================================================ */
+.fluency-home-card{min-height:100%;display:flex;flex-direction:column;justify-content:center}
+.fluency-home-card h3{font-size:20px;margin:5px 0 7px}
+.fluency-home-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:14px 0}
+.fluency-home-stats span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 5px;text-align:center}
+.fluency-home-stats b{display:block;font-size:17px;color:var(--green)}
+.fluency-home-stats small{font-size:9px;color:var(--muted);font-weight:800}
+.fluency-start-btn{width:100%;margin-top:4px}
+.fluency-card,.fluency-result-card{max-width:980px;margin-left:auto;margin-right:auto}
+.fluency-top{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.fluency-top h2{margin:3px 0 4px}
+.fluency-dashboard{display:grid;grid-template-columns:1fr 190px;gap:14px;margin-top:18px;align-items:center}
+.fluency-total-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.fluency-total-box span,.fluency-question-box>span{display:block;font-size:10px;font-weight:900;letter-spacing:.12em;color:var(--muted)}
+.fluency-total-box strong{display:block;font-size:34px;line-height:1.1;margin-top:5px;color:var(--deep);font-variant-numeric:tabular-nums}
+.fluency-question-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}
+.fluency-circle{width:108px;height:108px;border-radius:50%;border:7px solid var(--green2);margin:8px auto 0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;transition:border-color .2s,transform .2s}
+.fluency-circle b{font-size:38px;line-height:1;font-variant-numeric:tabular-nums;color:var(--deep)}
+.fluency-circle small{font-size:9px;font-weight:900;color:var(--muted);margin-top:3px}
+.fluency-circle.warning{border-color:#e2a523}
+.fluency-circle.danger{border-color:#d84a4a;animation:fluencyPulse .7s infinite}
+@keyframes fluencyPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.fluency-progress-wrap{margin-top:16px}
+.fluency-progress-label{display:flex;justify-content:space-between;font-size:11px;font-weight:800;color:var(--muted);margin-bottom:6px}
+.fluency-progress-track{height:9px;background:#e6efeb;border-radius:99px;overflow:hidden}
+.fluency-progress-track i{display:block;width:100%;height:100%;background:var(--green2);border-radius:99px;transition:width .8s linear,background .2s}
+.fluency-question-panel{margin-top:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.fluency-word{font-size:34px;font-weight:950;color:var(--deep);text-align:center;margin-bottom:8px}
+.fluency-question-text{text-align:center;font-size:16px;font-weight:800;margin-bottom:9px}
+.fluency-context{background:var(--soft);border-radius:10px;padding:11px 13px;margin:8px 0 12px;font-size:13px;line-height:1.45}
+.fluency-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.fluency-options button{width:100%;padding:16px 18px;border:2px solid var(--line);background:#fff;border-radius:14px;text-align:left;cursor:pointer;font-size:19px;font-weight:750;line-height:1.4;color:var(--text);transition:.15s;min-height:62px}
+.fluency-options button:hover{border-color:#9bcdb8;background:#f7fcf9}
+.fluency-options button:disabled{cursor:default}
+.fluency-options button.correct{border-color:#4aa97c;background:#edf9f2}
+.fluency-options button.wrong{border-color:#df7474;background:#fff0f0}
+.fluency-status{min-height:18px;text-align:center;margin-top:9px;font-size:11px;font-weight:800;color:var(--muted)}
+.fluency-result-score{font-size:54px;font-weight:950;color:var(--green);margin:8px 0}
+.fluency-result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.fluency-result-grid>div{background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px;text-align:center}
+.fluency-result-grid b{display:block;font-size:22px;color:var(--deep)}
+.fluency-result-grid span{font-size:10px;color:var(--muted);font-weight:800}
+.fluency-coach,.fluency-review{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;margin:10px 0;font-size:12px;line-height:1.5}
+@media(max-width:720px){
+  .fluency-dashboard{grid-template-columns:1fr}
+  .fluency-question-box{display:flex;align-items:center;justify-content:space-between;text-align:left}
+  .fluency-question-box>span{margin-left:4px}
+  .fluency-circle{margin:0}
+  .fluency-options{grid-template-columns:1fr}.fluency-options button{font-size:18px;min-height:58px;padding:15px 16px}
+  .fluency-result-grid{grid-template-columns:1fr 1fr}
+  .fluency-top{flex-direction:column}
+}
+</style>
+
+<script>
+/* ============================================================
+   APLUS AI-POWERED TUTOR · 10-MINUTE / 30-QUESTION FLUENCY TEST
+   20 seconds per question · live circular countdown · auto-next
+============================================================ */
+(function(){
+  const FLUENCY_TOTAL = 30;
+  const FLUENCY_SECONDS = 20;
+  const FLUENCY_TEST_SECONDS = 600;
+  const FLUENCY_KEY = 'aplus_fluency_latest_v2';
+
+  let fluencyQuestions = [];
+  let fluencyIndex = 0;
+  let fluencyScore = 0;
+  let fluencyResults = [];
+  let fluencyQuestionLeft = FLUENCY_SECONDS;
+  let fluencyTotalLeft = FLUENCY_TEST_SECONDS;
+  let fluencyQuestionTimerId = null;
+  let fluencyTotalTimerId = null;
+  let fluencyQuestionStartedAt = 0;
+  let fluencyAnswered = false;
+  let fluencyFinished = false;
+  let fluencyAdvanceTimer = null;
+
+  function qmake(w, i){
+    const meaning = String(w.meaning || '').trim();
+    const example = String(w.example || '').trim();
+    const syns = Array.isArray(w.synonyms) ? w.synonyms.filter(Boolean).map(String) : [];
+    let type = 'meaning';
+    if(example && /\S/.test(example) && i % 4 === 2) type='context';
+    else if(syns.length && i % 4 === 1) type='synonym';
+
+    if(type==='context'){
+      const opts = typeof meaningOptions==='function' ? meaningOptions(w) : [];
+      return {type, word:w.word, text:'In the sentence below, what does this word mean?', context:example, answer:meaning, opts:opts.length?opts:[]};
+    }
+    if(type==='synonym'){
+      const answer=syns[0];
+      const opts = typeof synonymOptions==='function' ? synonymOptions(w,answer) : [];
+      return {type, word:w.word, text:'Which word is closest in meaning?', context:'', answer, opts:opts.length?opts:[]};
+    }
+    const opts = typeof meaningOptions==='function' ? meaningOptions(w) : [];
+    return {type:'meaning', word:w.word, text:'What is the best meaning of this word?', context:'', answer:meaning, opts:opts.length?opts:[]};
+  }
+
+  function makePool(){
+    const source = Array.isArray(VOCAB) ? VOCAB.filter(w=>w&&w.word) : [];
+    if(source.length < FLUENCY_TOTAL) return source.slice();
+    const shuffled = [...source].sort(()=>Math.random()-0.5);
+    return shuffled.slice(0,FLUENCY_TOTAL);
+  }
+
+  function setCircle(left){
+    const timer=document.getElementById('fluencyQuestionTimer');
+    const circle=document.getElementById('fluencyCircle');
+    const bar=document.getElementById('fluencyQuestionProgress');
+    const label=document.getElementById('fluencyTimeLabel');
+    if(timer) timer.textContent=Math.max(0,left);
+    if(label) label.textContent=Math.max(0,left)+' seconds';
+    if(circle){
+      circle.classList.toggle('warning',left<=10 && left>5);
+      circle.classList.toggle('danger',left<=5);
+    }
+    if(bar){
+      const pct=Math.max(0,Math.min(100,(left/FLUENCY_SECONDS)*100));
+      bar.style.width=pct+'%';
+      bar.style.background=left<=5?'#d84a4a':left<=10?'#e2a523':'var(--green2)';
+    }
+  }
+
+  function setTotal(){
+    const el=document.getElementById('fluencyTotalTimer');
+    if(!el)return;
+    const m=Math.floor(fluencyTotalLeft/60);
+    const s=fluencyTotalLeft%60;
+    el.textContent=m+':'+String(s).padStart(2,'0');
+  }
+
+  function stopTimers(){
+    clearInterval(fluencyQuestionTimerId);
+    clearInterval(fluencyTotalTimerId);
+    clearTimeout(fluencyAdvanceTimer);
+    fluencyQuestionTimerId=null;
+    fluencyTotalTimerId=null;
+    fluencyAdvanceTimer=null;
+  }
+
+  
+function focusFluencyQuestion(){
+  const panel=document.getElementById('fluencyQuestionPanel');
+  if(!panel)return;
+  requestAnimationFrame(()=>{
+    panel.scrollIntoView({behavior:'smooth',block:'start'});
+    // Keep the question panel clear of the sticky page header.
+    setTimeout(()=>window.scrollBy({top:-78,left:0,behavior:'smooth'}),220);
+  });
+}
+
+window.startFluencyTest=function(){
+    try{
+      if(!Array.isArray(VOCAB) || VOCAB.length<FLUENCY_TOTAL){
+        if(typeof toast==='function') toast('Vocabulary data is not available for the fluency test.');
+        else alert('Vocabulary data is not available for the fluency test.');
+        return;
+      }
+
+      stopTimers();
+
+      const pool=makePool();
+      fluencyQuestions=pool.map((w,i)=>{
+        try{return qmake(w,i)}catch(e){console.error('Fluency question error:',e);return null;}
+      }).filter(q=>q&&q.word);
+
+      if(fluencyQuestions.length<FLUENCY_TOTAL){
+        if(typeof toast==='function') toast('Not enough valid vocabulary questions.');
+        else alert('Not enough valid vocabulary questions.');
+        return;
+      }
+
+      fluencyIndex=0;
+      fluencyScore=0;
+      fluencyResults=[];
+      fluencyTotalLeft=FLUENCY_TEST_SECONDS;
+      fluencyFinished=false;
+      fluencyAnswered=false;
+
+      const page=document.getElementById('fluency');
+      if(page){ page.classList.remove('hidden'); page.classList.add('fluency-focus-mode'); }
+      ['home','diagnosticCard','quiz','result','tutor','fluencyResult'].forEach(id=>{
+        const el=document.getElementById(id);
+        if(el) el.classList.add('hidden');
+      });
+
+      setTotal();
+      setCircle(FLUENCY_SECONDS);
+      renderFluencyQuestion();
+
+      // Jump directly to the complete question + all answer choices.
+      // Center the question panel in the viewport so students do not have to scroll.
+      requestAnimationFrame(()=>{
+        const target=document.getElementById('fluencyQuestionPanel');
+        if(target){
+          target.scrollIntoView({behavior:'smooth',block:'center',inline:'nearest'});
+          setTimeout(()=>{
+            const firstOption=target.querySelector('.fluency-options button');
+            if(firstOption && typeof firstOption.focus==='function') firstOption.focus({preventScroll:true});
+          },450);
+        }
+      });
+
+      fluencyTotalTimerId=setInterval(()=>{
+        if(fluencyFinished)return;
+        fluencyTotalLeft--;
+        setTotal();
+        if(fluencyTotalLeft<=0) finishFluencyTest();
+      },1000);
+    }catch(err){
+      console.error('Fluency Test start error:',err);
+      if(typeof toast==='function') toast('Fluency Test could not start. Please refresh the page.');
+      else alert('Fluency Test could not start. Please refresh the page.');
+    }
+  };
+
+  function renderFluencyQuestion(){
+    if(fluencyFinished)return;
+    if(fluencyIndex>=fluencyQuestions.length){
+      finishFluencyTest();
+      return;
+    }
+    const q=fluencyQuestions[fluencyIndex];
+    fluencyAnswered=false;
+    fluencyQuestionLeft=FLUENCY_SECONDS;
+    fluencyQuestionStartedAt=Date.now();
+    document.getElementById('fluencyCounter').textContent='Question '+(fluencyIndex+1)+' / '+FLUENCY_TOTAL;
+    document.getElementById('fluencyWord').textContent=q.word;
+    document.getElementById('fluencyQuestionText').textContent=q.text;
+    const ctx=document.getElementById('fluencyContext');
+    if(q.context){ctx.textContent=q.context;ctx.classList.remove('hidden')}
+    else{ctx.textContent='';ctx.classList.add('hidden')}
+    const box=document.getElementById('fluencyOptions');
+    box.innerHTML='';
+    const opts=(Array.isArray(q.opts)?q.opts:[]).filter(Boolean);
+    const unique=[];
+    opts.forEach(o=>{if(!unique.some(x=>String(x).toLowerCase()===String(o).toLowerCase()))unique.push(o)});
+    if(!unique.some(o=>String(o).toLowerCase()===String(q.answer).toLowerCase()))unique.unshift(q.answer);
+    unique.slice(0,4).forEach(ans=>{
+      const b=document.createElement('button');
+      b.type='button';
+      b.textContent=ans;
+      b.onclick=()=>answerFluency(ans);
+      box.appendChild(b);
+    });
+    document.getElementById('fluencyStatus').textContent='Choose your answer before the clock reaches 0.';
+    setCircle(FLUENCY_SECONDS);
+    clearInterval(fluencyQuestionTimerId);
+    fluencyQuestionTimerId=setInterval(()=>{
+      if(fluencyFinished||fluencyAnswered)return;
+      fluencyQuestionLeft--;
+      setCircle(fluencyQuestionLeft);
+      if(fluencyQuestionLeft<=0) timeoutFluencyQuestion();
+    },1000);
+  }
+
+  function recordFluency(result,ms){
+    const q=fluencyQuestions[fluencyIndex];
+    fluencyResults.push({word:q.word,correct:result==='correct',timeout:result==='timeout',timeMs:ms});
+    if(result==='correct')fluencyScore++;
+  }
+
+  function answerFluency(ans){
+    if(fluencyAnswered||fluencyFinished)return;
+    fluencyAnswered=true;
+    clearInterval(fluencyQuestionTimerId);
+    const ms=Math.min(FLUENCY_SECONDS*1000,Date.now()-fluencyQuestionStartedAt);
+    const q=fluencyQuestions[fluencyIndex];
+    const correct=String(ans)===String(q.answer);
+    recordFluency(correct?'correct':'wrong',ms);
+    document.querySelectorAll('#fluencyOptions button').forEach(b=>{
+      b.disabled=true;
+      if(String(b.textContent)===String(q.answer))b.classList.add('correct');
+      else if(String(b.textContent)===String(ans)&&!correct)b.classList.add('wrong');
+    });
+    document.getElementById('fluencyStatus').textContent=correct?'✓ Correct':'✗ Incorrect';
+    scheduleNext(80);
+  }
+
+  function timeoutFluencyQuestion(){
+    if(fluencyAnswered||fluencyFinished)return;
+    fluencyAnswered=true;
+    clearInterval(fluencyQuestionTimerId);
+    recordFluency('timeout',FLUENCY_SECONDS*1000);
+    document.querySelectorAll('#fluencyOptions button').forEach(b=>b.disabled=true);
+    document.getElementById('fluencyStatus').textContent='Time — next question';
+    scheduleNext(80);
+  }
+
+  function scheduleNext(delay){
+    clearTimeout(fluencyAdvanceTimer);
+    fluencyAdvanceTimer=setTimeout(()=>{
+      if(fluencyFinished)return;
+      if(fluencyIndex<FLUENCY_TOTAL-1){
+        fluencyIndex++;
+        renderFluencyQuestion();
+      }else{
+        finishFluencyTest();
+      }
+    },delay);
+  }
+
+  function finishFluencyTest(){
+    if(fluencyFinished)return;
+    fluencyFinished=true;
+    stopTimers();
+    while(fluencyResults.length<FLUENCY_TOTAL && fluencyResults.length<fluencyQuestions.length){
+      const q=fluencyQuestions[fluencyResults.length];
+      fluencyResults.push({word:q.word,correct:false,timeout:true,timeMs:FLUENCY_SECONDS*1000});
+    }
+    const count=fluencyResults.length;
+    const correct=fluencyResults.filter(r=>r.correct).length;
+    const timeAnswered=fluencyResults.filter(r=>!r.timeout);
+    const avg=timeAnswered.length?timeAnswered.reduce((a,r)=>a+r.timeMs,0)/timeAnswered.length/1000:FLUENCY_SECONDS;
+    const accuracy=Math.round(correct/FLUENCY_TOTAL*100);
+    const fast=fluencyResults.filter(r=>r.correct&&r.timeMs<=5000).length;
+    const timeout=fluencyResults.filter(r=>r.timeout).length;
+
+    let level='Getting Started';
+    if(accuracy>=90&&avg<=5)level='Automatic Recall';
+    else if(accuracy>=85&&avg<=7)level='Fluent Recall';
+    else if(accuracy>=75&&avg<=10)level='Developing Fluency';
+    else if(accuracy>=60)level='Building Recall';
+
+    const weak=fluencyResults.filter(r=>!r.correct).slice(0,8).map(r=>r.word);
+    const payload={date:new Date().toISOString(),accuracy,avgRecallSeconds:Number(avg.toFixed(1)),fastCorrect:fast,timeout,level,results:fluencyResults};
+    try{localStorage.setItem(FLUENCY_KEY,JSON.stringify(payload))}catch(e){}
+
+    document.getElementById('fluencyResultScore').textContent=accuracy+'%';
+    document.getElementById('fluencyResultLevel').textContent='AI Coach Level: '+level;
+    document.getElementById('fluencyAccuracy').textContent=accuracy+'%';
+    document.getElementById('fluencyAvgTime').textContent=avg.toFixed(1)+'s';
+    document.getElementById('fluencyFast').textContent=fast;
+    document.getElementById('fluencyTimeout').textContent=timeout;
+
+    const coach=document.getElementById('fluencyCoach');
+    let message='';
+    if(level==='Automatic Recall')message='Excellent automatic recall. The tutor can gradually introduce more challenging vocabulary.';
+    else if(level==='Fluent Recall')message='Strong recall fluency. Focus next on making slower words more automatic.';
+    else if(level==='Developing Fluency')message='You know a good portion of the vocabulary, but some answers still need faster recall.';
+    else if(level==='Building Recall')message='The tutor will prioritise repeated exposure, retrieval practice and short review cycles.';
+    else message='Start with the learning path and build recall accuracy before increasing difficulty.';
+    coach.innerHTML='<b>AI Coach Learning Signal</b><p>'+message+'</p>';
+
+    const review=document.getElementById('fluencyReview');
+    review.innerHTML=weak.length
+      ? '<b>Words to bring back into your learning path</b><p>'+weak.map(esc).join(' · ')+'</p>'
+      : '<b>Words to review</b><p>No missed words in this test.</p>';
+
+    const f=document.getElementById('fluency'); if(f) f.classList.remove('fluency-focus-mode');
+    show('fluencyResult');
+  };
+
+  window.addEventListener('beforeunload',stopTimers);
+})();
+</script>
+</body></html.fluency-card{scroll-margin-top:90px;}
+>
