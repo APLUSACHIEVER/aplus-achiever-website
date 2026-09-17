@@ -1,0 +1,6 @@
+/* APLUS AI English Database V1 — Vocabulary Schema / Adapter
+   NEW FILE ONLY. Does not modify existing files.
+   All future vocabulary datasets should conform to this schema.
+*/
+const APLUS_AI_DB_V1_VOCABULARY_SCHEMA={version:'1.0',required:['id','level','subject','domain','word','definition','synonym','antonym','collocations','examples','difficulty','skills','commonMistakes'],difficulty:{1:'foundation',2:'developing',3:'secure',4:'advanced',5:'challenging'},rules:{definition:'student-friendly meaning in context',synonym:'closest practical synonym; avoid misleading near-synonyms',antonym:'clear contextual opposite where one exists',collocations:'natural word combinations useful for Singapore primary English',examples:'original age-appropriate examples',difficulty:'1-5, recalibrated later using student performance',skills:'specific assessable skills',commonMistakes:'likely learner errors used by Tutor Brain for diagnosis'},futureFields:['partOfSpeech','wordFamily','phonics','syllableCount','pronunciation','register','contextClues','confusableWords','questionTemplates','reviewIntervals','masteryThreshold','sourceLicense','sourceAttribution']};
+if(typeof window!=='undefined') window.APLUS_AI_DB_V1_VOCABULARY_SCHEMA=APLUS_AI_DB_V1_VOCABULARY_SCHEMA;
