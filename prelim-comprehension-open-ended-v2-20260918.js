@@ -6,13 +6,13 @@
    - no isolated one-sentence passages
    - no MCQ options in the comprehension section
    - questions are derived from the connected passage-set database
+   - preserves the internal question order of each passage
    - supports literal, sequence, vocabulary-in-context, cause/effect,
      inference, reference, comparison, author purpose, summary and lesson skills
 */
 (function(){'use strict';
-const VERSION='PSLE_COMPREHENSION_OE_V2.1';
+const VERSION='PSLE_COMPREHENSION_OE_V2.2';
 const GNAME='APLUS_P6_PSLE_PAPER2_GENERATION_V1';
-const clean=s=>String(s??'').toLowerCase().replace(/[“”‘’".,!?;:()[\]{}]/g,' ').replace(/\s+/g,' ').trim();
 const rnd=seed=>{let x=(seed>>>0)||1;return()=>{x^=x<<13;x^=x>>>17;return(x>>>0)/4294967296}};
 const sh=(a,r)=>{a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const get=n=>Array.isArray(window[n])?window[n]:[];
@@ -59,7 +59,7 @@ function buildFromPassageSets(R,n,r){
   const selected=sh(candidates,r).slice(0,2),out=[];
   selected.forEach((p,pi)=>{
     const passage=String(p.passage||p.text||'').trim();
-    const qs=sh(p.questions,r).slice(0,5);
+    const qs=p.questions.slice(0,5);
     qs.forEach((q,i)=>{const x=normalizeQuestion(q,passage,p.passageId||p.id||('PASSAGE-'+pi),pi*5+i);if(x)out.push(x);});
   });
   return out.slice(0,n);
@@ -68,7 +68,7 @@ function buildFallback(R,n,r){
   const groups={};
   R.comp.forEach(q=>{const p=String(q.passage||'').trim();if(!p)return;(groups[p]||(groups[p]=[])).push(q);});
   const sets=Object.keys(groups).filter(p=>p.length>=250&&groups[p].length>=5),out=[];
-  sh(sets,r).slice(0,2).forEach((p,pi)=>sh(groups[p],r).slice(0,5).forEach((q,i)=>{const x=normalizeQuestion(q,p,'COMP-FALLBACK-'+pi,pi*5+i);if(x)out.push(x);}));
+  sh(sets,r).slice(0,2).forEach((p,pi)=>groups[p].slice(0,5).forEach((q,i)=>{const x=normalizeQuestion(q,p,'COMP-FALLBACK-'+pi,pi*5+i);if(x)out.push(x);}));
   return out.slice(0,n);
 }
 function install(){
