@@ -1,0 +1,47 @@
+const APLUS_AI_DB_V1_SKILLS=[
+{id:'VOC-MEAN',domain:'Vocabulary',name:'Meaning Recognition',signals:['definition','context meaning'],levels:['P3','P4','P5']},
+{id:'VOC-CONTEXT',domain:'Vocabulary',name:'Vocabulary in Context',signals:['context clues','sentence fit'],levels:['P3','P4','P5']},
+{id:'VOC-SYN',domain:'Vocabulary',name:'Synonym Recognition',signals:['closest meaning'],levels:['P3','P4','P5']},
+{id:'VOC-ANT',domain:'Vocabulary',name:'Antonym Recognition',signals:['opposite meaning'],levels:['P3','P4','P5']},
+{id:'VOC-COLL',domain:'Vocabulary',name:'Collocation',signals:['natural word combinations'],levels:['P3','P4','P5']},
+{id:'VOC-WF',domain:'Vocabulary',name:'Word Form',signals:['noun verb adjective adverb'],levels:['P4','P5']},
+{id:'VOC-PREC',domain:'Vocabulary',name:'Precision',signals:['near-synonym distinction'],levels:['P4','P5']},
+{id:'VOC-REG',domain:'Vocabulary',name:'Register',signals:['audience','formal informal'],levels:['P5']},
+{id:'G-AGR',domain:'Grammar',name:'Subject Verb Agreement',signals:['subject','verb'],levels:['P3','P4','P5']},
+{id:'G-TENSE',domain:'Grammar',name:'Tense Selection',signals:['time clue','event sequence'],levels:['P3','P4','P5']},
+{id:'G-DET',domain:'Grammar',name:'Determiners and Articles',signals:['a an the','some any'],levels:['P3','P4']},
+{id:'G-PRO',domain:'Grammar',name:'Pronouns',signals:['reference','agreement'],levels:['P3','P4','P5']},
+{id:'G-PREP',domain:'Grammar',name:'Prepositions',signals:['time','place','collocation'],levels:['P3','P4','P5']},
+{id:'G-CONN',domain:'Grammar',name:'Connectors and Cohesion',signals:['cause','result','contrast','sequence'],levels:['P3','P4','P5']},
+{id:'G-MODAL',domain:'Grammar',name:'Modality',signals:['ability','advice','obligation','possibility'],levels:['P4','P5']},
+{id:'G-REL',domain:'Grammar',name:'Relative Clauses',signals:['who','which','that'],levels:['P4','P5']},
+{id:'G-VOICE',domain:'Grammar',name:'Active and Passive Voice',signals:['be','past participle'],levels:['P5']},
+{id:'G-REPORT',domain:'Grammar',name:'Reported Speech',signals:['reporting','backshift'],levels:['P4','P5']},
+{id:'G-COND',domain:'Grammar',name:'Conditionals',signals:['if','possible','hypothetical'],levels:['P4','P5']},
+{id:'G-EDIT',domain:'Grammar',name:'Editing Accuracy',signals:['mixed errors'],levels:['P3','P4','P5']},
+{id:'G-STRUCT',domain:'Grammar',name:'Sentence Structure',signals:['clauses','phrases','parallelism'],levels:['P4','P5']}
+];
+const APLUS_AI_DB_V1_MISTAKE_TYPES=[
+{id:'M001',domain:'Vocabulary',label:'Meaning Confusion',description:'Selected a word with an incorrect meaning.'},
+{id:'M002',domain:'Vocabulary',label:'Context Misread',description:'Ignored or misread clues around the target word.'},
+{id:'M003',domain:'Vocabulary',label:'Synonym Too Broad',description:'Selected a related word that is not the closest meaning.'},
+{id:'M004',domain:'Vocabulary',label:'Antonym Confusion',description:'Selected a related word rather than the true opposite.'},
+{id:'M005',domain:'Vocabulary',label:'Collocation Error',description:'Word may be possible but does not naturally fit the phrase.'},
+{id:'M006',domain:'Vocabulary',label:'Word Form Error',description:'Correct root word but wrong grammatical form.'},
+{id:'M007',domain:'Vocabulary',label:'Precision Error',description:'Chose a generally possible word instead of the most precise one.'},
+{id:'M008',domain:'Grammar',label:'Agreement Error',description:'Verb does not agree with the true subject.'},
+{id:'M009',domain:'Grammar',label:'Tense Error',description:'Verb tense does not match time or sequence.'},
+{id:'M010',domain:'Grammar',label:'Determiner Error',description:'Incorrect article, quantifier or determiner.'},
+{id:'M011',domain:'Grammar',label:'Pronoun Reference Error',description:'Pronoun does not clearly or correctly refer to its noun.'},
+{id:'M012',domain:'Grammar',label:'Preposition Error',description:'Incorrect preposition for time, place or lexical pattern.'},
+{id:'M013',domain:'Grammar',label:'Connector Error',description:'Connector does not express the intended relationship.'},
+{id:'M014',domain:'Grammar',label:'Modal Meaning Error',description:'Modal strength or meaning does not fit context.'},
+{id:'M015',domain:'Grammar',label:'Relative Clause Error',description:'Incorrect relative pronoun or clause structure.'},
+{id:'M016',domain:'Grammar',label:'Voice Error',description:'Incorrect active/passive construction or tense.'},
+{id:'M017',domain:'Grammar',label:'Reported Speech Error',description:'Reported structure or tense does not preserve meaning.'},
+{id:'M018',domain:'Grammar',label:'Conditional Error',description:'Conditional form does not match the intended situation.'},
+{id:'M019',domain:'Grammar',label:'Punctuation Error',description:'Incorrect punctuation changes or weakens sentence accuracy.'},
+{id:'M020',domain:'Grammar',label:'Editing Attention Error',description:'Student knows the rule but misses it during integrated editing.'}
+];
+const APLUS_AI_DB_V1_REVIEW_RULES={baseIntervals:[1,2,4,7,14,30],minimumEvidence:2,wrongAnswerResetTo:1,correctAnswerMultiplier:1.6,masteryUpdate:{correct:'+0.04_to_+0.10',wrong:'-0.06_to_-0.15'},priorityFactors:{recentWrong:3,lowMastery:3,repeatedMistake:2,highDifficulty:1,staleReview:2}};
+if(typeof window!=='undefined'){window.APLUS_AI_DB_V1_SKILLS=APLUS_AI_DB_V1_SKILLS;window.APLUS_AI_DB_V1_MISTAKE_TYPES=APLUS_AI_DB_V1_MISTAKE_TYPES;window.APLUS_AI_DB_V1_REVIEW_RULES=APLUS_AI_DB_V1_REVIEW_RULES;}
