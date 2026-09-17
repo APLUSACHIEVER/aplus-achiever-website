@@ -10,16 +10,16 @@
      inference, reference, comparison, author purpose, summary and lesson skills
 */
 (function(){'use strict';
-const VERSION='PSLE_COMPREHENSION_OE_V2.0';
+const VERSION='PSLE_COMPREHENSION_OE_V2.1';
 const GNAME='APLUS_P6_PSLE_PAPER2_GENERATION_V1';
 const clean=s=>String(s??'').toLowerCase().replace(/[“”‘’".,!?;:()[\]{}]/g,' ').replace(/\s+/g,' ').trim();
 const rnd=seed=>{let x=(seed>>>0)||1;return()=>{x^=x<<13;x^=x>>>17;return(x>>>0)/4294967296}};
 const sh=(a,r)=>{a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const get=n=>Array.isArray(window[n])?window[n]:[];
-const uniq=a=>{const m=new Map();a.forEach(x=>x&&x.id&&m.set(String(x.id),x));return[...m.values()]};
+const dedupe=(a,keyFn)=>{const m=new Map();a.forEach(x=>{if(!x)return;const k=keyFn(x);if(k&&!m.has(k))m.set(k,x)});return[...m.values()]};
 function registry(){return{
-  passages:uniq([].concat(get('APLUS_AI_DB_V1_P6_COMPREHENSION_PASSAGE_SETS_BATCH01'),get('APLUS_AI_DB_V1_P6_COMPREHENSION_PASSAGE_SETS_BATCH02'))),
-  comp:uniq([].concat(get('APLUS_AI_DB_V1_P6_COMPREHENSION_QUESTION_BANK'),get('APLUS_AI_DB_V1_P6_COMPREHENSION_EXPANSION_BATCH02')))
+  passages:dedupe([].concat(get('APLUS_AI_DB_V1_P6_COMPREHENSION_PASSAGE_SETS_BATCH01'),get('APLUS_AI_DB_V1_P6_COMPREHENSION_PASSAGE_SETS_BATCH02')),x=>String(x.passageId||x.id||x.title||'')),
+  comp:dedupe([].concat(get('APLUS_AI_DB_V1_P6_COMPREHENSION_QUESTION_BANK'),get('APLUS_AI_DB_V1_P6_COMPREHENSION_EXPANSION_BATCH02')),x=>String(x.id||x.question||''))
 }};
 function answerOf(q){
   if(q==null)return '';
@@ -45,43 +45,29 @@ function normalizeQuestion(q,passage,pid,index){
     if(!/answer in a complete sentence/i.test(prompt))prompt+=' Answer in a complete sentence.';
   }
   return {
-    type:'oe',
-    responseType:'open-ended',
-    marks:2,
-    passage:String(passage||''),
-    passageSetId:String(pid||''),
-    question:prompt,
-    answer,
-    acceptedPatterns:accepted(q,answer),
-    explanation:q.explanation||'',
-    section:'comprehension',
+    type:'oe',responseType:'open-ended',marks:2,
+    passage:String(passage||''),passageSetId:String(pid||''),question:prompt,answer,
+    acceptedPatterns:accepted(q,answer),explanation:q.explanation||'',section:'comprehension',
     sourceDatabase:'P6 Comprehension Passage Sets — Open-Ended V2',
-    sourceRecordId:String(pid||'')+'-'+String(q.id||index),
-    skill,
-    difficulty:Number(q.difficulty)||3,
+    sourceRecordId:String(pid||'')+'-'+String(q.id||index),skill,difficulty:Number(q.difficulty)||3,
     generationLayer:VERSION
   };
 }
 function buildFromPassageSets(R,n,r){
-  const candidates=R.passages.filter(p=>{
-    const passage=String(p.passage||p.text||'').trim();
-    return passage.length>=250&&Array.isArray(p.questions)&&p.questions.length>=5;
-  });
+  const candidates=R.passages.filter(p=>{const passage=String(p.passage||p.text||'').trim();return passage.length>=250&&Array.isArray(p.questions)&&p.questions.length>=5;});
   if(candidates.length<2)return[];
-  const selected=sh(candidates,r).slice(0,2);
-  const out=[];
+  const selected=sh(candidates,r).slice(0,2),out=[];
   selected.forEach((p,pi)=>{
     const passage=String(p.passage||p.text||'').trim();
     const qs=sh(p.questions,r).slice(0,5);
-    qs.forEach((q,i)=>{const x=normalizeQuestion(q,passage,p.passageId||p.id,pi*5+i);if(x)out.push(x);});
+    qs.forEach((q,i)=>{const x=normalizeQuestion(q,passage,p.passageId||p.id||('PASSAGE-'+pi),pi*5+i);if(x)out.push(x);});
   });
   return out.slice(0,n);
 }
 function buildFallback(R,n,r){
   const groups={};
   R.comp.forEach(q=>{const p=String(q.passage||'').trim();if(!p)return;(groups[p]||(groups[p]=[])).push(q);});
-  const sets=Object.keys(groups).filter(p=>p.length>=250&&groups[p].length>=5);
-  const out=[];
+  const sets=Object.keys(groups).filter(p=>p.length>=250&&groups[p].length>=5),out=[];
   sh(sets,r).slice(0,2).forEach((p,pi)=>sh(groups[p],r).slice(0,5).forEach((q,i)=>{const x=normalizeQuestion(q,p,'COMP-FALLBACK-'+pi,pi*5+i);if(x)out.push(x);}));
   return out.slice(0,n);
 }
@@ -114,7 +100,5 @@ function install(){
   G.comprehensionVersion=VERSION;
   return true;
 }
-let tries=0;
-const timer=setInterval(()=>{tries++;if(install()||tries>120)clearInterval(timer)},100);
-install();
+let tries=0;const timer=setInterval(()=>{tries++;if(install()||tries>120)clearInterval(timer)},100);install();
 })();
