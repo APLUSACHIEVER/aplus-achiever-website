@@ -3,882 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>APLUS Achiever | Personalised Online Tuition</title>
-
+<meta name="description" content="APLUS ACHIEVER provides personalised online tuition, academic planning and AI-powered learning tools for Singapore students.">
+<title>APLUS ACHIEVER | Learn Better. Plan Smarter. Achieve More.</title>
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #18352d;
-    background: #ffffff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* NAVIGATION */
-
-header {
-    height: 76px;
-    padding: 0 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e8eeeb;
-    background: rgba(255,255,255,0.96);
-}
-
-.logo {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #245c4d;
-}
-
-nav {
-    display: flex;
-    gap: 32px;
-}
-
-nav a {
-    color: #40534d;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #245c4d;
-}
-
-/* HERO */
-
-.hero {
-    min-height: 680px;
-    padding: 80px 7%;
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 70px;
-    align-items: center;
-    background:
-        radial-gradient(circle at 85% 25%, #e4f3ed 0, transparent 32%),
-        linear-gradient(135deg, #f5faf7 0%, #ffffff 70%);
-}
-
-.hero-content {
-    max-width: 650px;
-}
-
-.eyebrow {
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 30px;
-    background: #e2f2eb;
-    color: #286451;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    margin-bottom: 24px;
-}
-
-h1 {
-    font-size: clamp(48px, 6vw, 76px);
-    line-height: 1.02;
-    letter-spacing: -3px;
-    color: #17372e;
-    margin-bottom: 28px;
-}
-
-h1 span {
-    color: #3b806c;
-}
-
-.hero-description {
-    max-width: 580px;
-    font-size: 18px;
-    color: #60716b;
-    margin-bottom: 34px;
-}
-
-.buttons {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 14px 23px;
-    border-radius: 7px;
-    font-weight: 700;
-    font-size: 14px;
-    transition: .2s;
-}
-
-.btn-primary {
-    background: #245c4d;
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #19483c;
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    border: 1px solid #245c4d;
-    color: #245c4d;
-    background: white;
-}
-
-.btn-secondary:hover {
-    background: #eef7f3;
-}
-
-/* HERO VISUAL */
-
-.hero-visual {
-    position: relative;
-    min-height: 470px;
-}
-
-.visual-main {
-    position: absolute;
-    right: 0;
-    top: 10px;
-    width: 88%;
-    height: 420px;
-    border-radius: 28px;
-    background: linear-gradient(145deg, #dcefe7, #f6fbf8);
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.visual-main::before {
-    content: "";
-    position: absolute;
-    width: 330px;
-    height: 330px;
-    border-radius: 50%;
-    background: #c6e3d8;
-    top: 35px;
-    right: 45px;
-}
-
-.visual-card {
-    position: absolute;
-    left: 0;
-    bottom: 25px;
-    width: 240px;
-    padding: 24px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 18px 45px rgba(36,92,77,.14);
-    z-index: 2;
-}
-
-.visual-card small {
-    color: #6b7b75;
-    font-size: 12px;
-}
-
-.visual-card strong {
-    display: block;
-    margin-top: 8px;
-    font-size: 23px;
-    color: #245c4d;
-}
-
-.visual-stat {
-    position: absolute;
-    right: 18px;
-    bottom: 35px;
-    padding: 18px 22px;
-    background: #245c4d;
-    color: white;
-    border-radius: 15px;
-    z-index: 3;
-    box-shadow: 0 15px 30px rgba(36,92,77,.2);
-}
-
-.visual-stat strong {
-    display: block;
-    font-size: 24px;
-}
-
-.visual-stat span {
-    font-size: 11px;
-    opacity: .85;
-}
-
-/* TRUST BAR */
-
-.trust {
-    padding: 24px 7%;
-    border-bottom: 1px solid #edf1ef;
-    border-top: 1px solid #edf1ef;
-    display: flex;
-    justify-content: center;
-    gap: 55px;
-    flex-wrap: wrap;
-    color: #64736e;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-/* GENERAL SECTIONS */
-
-section {
-    padding: 100px 7%;
-}
-
-.section-heading {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 55px;
-}
-
-.section-heading .label {
-    color: #3d806c;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.section-heading h2 {
-    margin-top: 10px;
-    font-size: 42px;
-    line-height: 1.15;
-    letter-spacing: -1px;
-    color: #193b32;
-}
-
-.section-heading p {
-    margin-top: 15px;
-    color: #71807b;
-}
-
-/* WHY US */
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.feature {
-    padding: 32px 28px;
-    border: 1px solid #e4ebe7;
-    border-radius: 18px;
-    background: white;
-    transition: .25s;
-}
-
-.feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(30,70,60,.08);
-}
-
-.icon {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    background: #e5f3ed;
-    color: #286451;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.feature h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.feature p {
-    color: #71807b;
-    font-size: 14px;
-}
-
-/* COURSES */
-
-.courses {
-    background: #f4faf7;
-}
-
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.course {
-    background: white;
-    border-radius: 20px;
-    padding: 38px;
-    border: 1px solid #e3ebe7;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-}
-
-.course-number {
-    font-size: 12px;
-    color: #55917e;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.course h3 {
-    font-size: 28px;
-    margin: 15px 0;
-}
-
-.course p {
-    color: #71807b;
-    font-size: 14px;
-    flex: 1;
-}
-
-.course-link {
-    color: #245c4d;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-/* MESSAGE */
-
-.message {
-    text-align: center;
-}
-
-.message-box {
-    max-width: 900px;
-    margin: auto;
-    padding: 65px 40px;
-    border-radius: 25px;
-    background: #edf7f2;
-}
-
-.message-box h2 {
-    font-size: 38px;
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-.message-box p {
-    color: #65766f;
-    max-width: 600px;
-    margin: auto auto 28px;
-}
-
-/* CTA */
-
-.cta {
-    padding: 95px 7%;
-    text-align: center;
-    background: #245c4d;
-    color: white;
-}
-
-.cta h2 {
-    font-size: 43px;
-    line-height: 1.2;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    opacity: .85;
-    margin-bottom: 30px;
-}
-
-.cta .btn {
-    background: white;
-    color: #245c4d;
-}
-
-/* FOOTER */
-
-footer {
-    padding: 30px 7%;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    color: #77847f;
-    font-size: 13px;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-
-    nav {
-        gap: 14px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        padding-top: 60px;
-    }
-
-    .hero-visual {
-        min-height: 400px;
-    }
-
-    .features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .course-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-
-    header {
-        padding: 0 5%;
-    }
-
-    .logo {
-        font-size: 16px;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
-    .hero {
-        padding: 55px 5%;
-    }
-
-    h1 {
-        font-size: 47px;
-        letter-spacing: -2px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .hero-visual {
-        min-height: 340px;
-    }
-
-    .visual-main {
-        width: 100%;
-        height: 320px;
-    }
-
-    .visual-card {
-        width: 190px;
-        padding: 18px;
-    }
-
-    .visual-stat {
-        right: 5px;
-        bottom: 20px;
-    }
-
-    section {
-        padding: 70px 5%;
-    }
-
-    .section-heading h2 {
-        font-size: 34px;
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-    }
-
-    .message-box {
-        padding: 45px 25px;
-    }
-
-    .cta h2 {
-        font-size: 34px;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+:root{--green:#245c4d;--green-dark:#173f34;--green-mid:#3d806c;--pale:#eef7f3;--line:#e3ebe7;--text:#193b32;--muted:#6d7c76;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{height:78px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(255,255,255,.96);position:sticky;top:0;z-index:50;backdrop-filter:blur(10px)}
+.logo{display:flex;align-items:center}.logo img{width:172px;height:auto;display:block}.logo-fallback{font-size:19px;font-weight:800;letter-spacing:1px;color:var(--green)}
+nav{display:flex;align-items:center;gap:27px;font-size:13px;font-weight:700;color:#53645e}nav a:hover{color:var(--green)}
+.nav-cta{padding:10px 17px;border-radius:999px;background:var(--green);color:#fff!important}
+.hero{padding:88px 6% 82px;display:grid;grid-template-columns:1.04fr .96fr;gap:65px;align-items:center;background:radial-gradient(circle at 82% 20%,#dff1e9 0,transparent 30%),linear-gradient(135deg,#f5faf7,#fff 68%)}
+.hero-copy{max-width:690px}.eyebrow{display:inline-flex;padding:8px 14px;border-radius:999px;background:#e3f2eb;color:#286451;font-size:11px;font-weight:800;letter-spacing:1px;margin-bottom:23px}
+h1{font-size:clamp(46px,6vw,76px);line-height:1.02;letter-spacing:-3px;color:#17372e;margin-bottom:24px}h1 span{color:#3b806c}
+.hero-copy>p{max-width:620px;color:#66766f;font-size:18px;margin-bottom:30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:8px;font-size:13px;font-weight:800}.primary{background:var(--green);color:#fff}.primary:hover{background:var(--green-dark)}.secondary{border:1px solid var(--green);color:var(--green);background:#fff}.secondary:hover{background:var(--pale)}
+.hero-note{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;color:#687771;font-size:12px;font-weight:700}.hero-note span:before{content:'✓';color:var(--green);margin-right:7px}
+.hero-panel{position:relative;min-height:455px}.panel-main{position:absolute;inset:18px 0 0 8%;border-radius:30px;background:linear-gradient(145deg,#dcefe7,#f7fbf9);overflow:hidden}.panel-main:before{content:'';position:absolute;width:350px;height:350px;border-radius:50%;background:#c6e3d8;right:-35px;top:-55px}.panel-main:after{content:'APLUS';position:absolute;right:38px;top:48px;font-size:72px;font-weight:900;letter-spacing:-5px;color:rgba(36,92,77,.12)}
+.dashboard{position:absolute;left:0;top:55px;width:78%;padding:25px;background:#fff;border:1px solid #e1ebe6;border-radius:20px;box-shadow:0 20px 50px rgba(30,70,60,.13);z-index:2}.dashboard-label{font-size:10px;font-weight:800;letter-spacing:1px;color:#779088}.dashboard h3{font-size:25px;margin:8px 0 20px}.track{height:9px;background:#e8f1ed;border-radius:99px;overflow:hidden}.track i{display:block;width:76%;height:100%;background:var(--green);border-radius:99px}.dashboard-row{display:flex;justify-content:space-between;margin-top:9px;font-size:11px;color:#74827d}.mini-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.mini{padding:13px;border-radius:12px;background:#f5faf7}.mini strong{display:block;font-size:18px;color:var(--green)}.mini small{font-size:10px;color:#7b8984}
+.floating{position:absolute;right:0;bottom:40px;background:var(--green);color:#fff;padding:17px 20px;border-radius:16px;z-index:3;box-shadow:0 16px 35px rgba(36,92,77,.22)}.floating strong{display:block;font-size:23px}.floating span{font-size:10px;opacity:.88}
+.trust{padding:22px 6%;display:flex;justify-content:center;gap:44px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:#66766f;font-size:12px;font-weight:800}.trust span:before{content:'•';color:var(--green);margin-right:8px}
+section{padding:95px 6%}.heading{text-align:center;max-width:720px;margin:0 auto 52px}.label{color:var(--green-mid);font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}.heading h2{font-size:42px;line-height:1.12;letter-spacing:-1.3px;margin-top:10px}.heading p{color:var(--muted);margin-top:14px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1180px;margin:auto}.pillar{padding:34px;border:1px solid var(--line);border-radius:22px;background:#fff;min-height:310px;display:flex;flex-direction:column;transition:.22s}.pillar:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(30,70,60,.08)}.number{font-size:11px;color:#5d927f;font-weight:900;letter-spacing:1px}.pillar h3{font-size:26px;margin:17px 0 10px}.pillar p{font-size:14px;color:var(--muted);flex:1}.pillar-link{font-size:12px;font-weight:900;color:var(--green);margin-top:22px}.pillar-link:after{content:'  →'}
+.approach{background:#f4faf7}.approach-grid{max-width:1160px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.approach-copy h2{font-size:42px;line-height:1.12;letter-spacing:-1.3px;margin:10px 0 18px}.approach-copy p{color:var(--muted);max-width:540px}.steps{display:grid;gap:13px}.step{display:flex;gap:16px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:16px}.step-num{flex:0 0 38px;height:38px;border-radius:11px;background:#e4f2ec;color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px}.step h3{font-size:16px;margin-bottom:3px}.step p{font-size:12px;color:var(--muted)}
+.ai{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;max-width:1160px;margin:auto}.ai-card{padding:38px;border-radius:26px;background:var(--green);color:#fff;min-height:330px;position:relative;overflow:hidden}.ai-card:after{content:'AI';position:absolute;right:-10px;bottom:-45px;font-size:170px;font-weight:900;color:rgba(255,255,255,.07)}.ai-card .label{color:#bfe0d3}.ai-card h2{font-size:38px;line-height:1.12;margin:12px 0}.ai-card p{font-size:14px;opacity:.87;max-width:410px}.ai-list{display:grid;gap:16px}.ai-item{padding:21px 0;border-bottom:1px solid var(--line)}.ai-item:last-child{border-bottom:0}.ai-item h3{font-size:18px;margin-bottom:4px}.ai-item p{font-size:13px;color:var(--muted)}
+.story{text-align:center}.story-box{max-width:930px;margin:auto;padding:62px 35px;border-radius:27px;background:#edf7f2}.story-box h2{font-size:38px;line-height:1.15;margin-bottom:14px}.story-box p{max-width:680px;margin:0 auto 27px;color:var(--muted)}
+.cta{padding:85px 6%;background:var(--green-dark);color:#fff;text-align:center}.cta h2{font-size:44px;line-height:1.12;margin-bottom:13px}.cta p{opacity:.82;margin-bottom:27px}.cta .btn{background:#fff;color:var(--green)}
+footer{padding:28px 6%;display:flex;justify-content:space-between;gap:20px;color:#7a8883;font-size:12px;border-top:1px solid var(--line)}.footer-links{display:flex;gap:20px}.footer-links a:hover{color:var(--green)}
+@media(max-width:900px){nav{gap:14px}.hero{grid-template-columns:1fr;padding-top:62px}.hero-panel{min-height:390px}.pillars{grid-template-columns:1fr}.approach-grid,.ai{grid-template-columns:1fr}.approach-copy h2{font-size:36px}}
+@media(max-width:600px){header{height:70px;padding:0 5%}.logo img{width:145px}nav a:not(.nav-cta){display:none}.nav-cta{padding:9px 13px;font-size:11px}.hero{padding:52px 5%}.hero-copy>p{font-size:16px}h1{font-size:46px}.hero-panel{min-height:330px}.panel-main{inset:10px 0 0 4%}.dashboard{width:84%;top:35px;padding:19px}.dashboard h3{font-size:21px}.floating{right:0;bottom:18px;padding:13px 16px}.trust{gap:15px 24px;padding:18px 5%;font-size:10px}section{padding:70px 5%}.heading h2,.approach-copy h2{font-size:33px}.pillar{padding:28px}.ai-card{padding:30px}.ai-card h2{font-size:32px}.story-box{padding:43px 22px}.story-box h2,.cta h2{font-size:32px}footer{flex-direction:column;text-align:center}.footer-links{justify-content:center;flex-wrap:wrap}}
 </style>
 </head>
-
 <body>
-
 <header>
-
-    <div class="logo">
-        APLUS ACHIEVER
-    </div>
-
-    <nav>
-        <a href="#why">Why Us</a>
-        <a href="https://aplusachiever.github.io/aplus-achiever-website/courses.html">Courses</a>
-        <a href="https://aplusachiever.github.io/aplus-achiever-website/vocabulary.html">PSLE VOCABULARY</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
+  <a class="logo" href="https://www.aplusachiever.com/" aria-label="APLUS ACHIEVER Home">
+    <img src="assets/logo.png" alt="APLUS ACHIEVER" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="logo-fallback" style="display:none">APLUS ACHIEVER</span>
+  </a>
+  <nav>
+    <a href="#programmes">What We Do</a>
+    <a href="about.html">About Us</a>
+    <a href="vocabulary.html">AI Tutor</a>
+    <a href="academic-planning.html">Academic Planning</a>
+    <a class="nav-cta" href="https://wa.me/6598816223?text=Hi%20APLUS%20ACHIEVER,%20I%20would%20like%20to%20find%20out%20more%20about%20your%20programmes.">Talk to APLUS</a>
+  </nav>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero">
-
-    <div class="hero-content">
-
-        <div class="eyebrow">
-            PERSONALISED ONLINE TUITION
-        </div>
-
-        <h1>
-            Helping Students
-            <span> <br>Learn Better.<br>Achieve More.</span>
-        </h1>
-
-        <p class="hero-description">
-            Personalised online tuition for Primary, Secondary
-            and Junior College students — with experienced
-            teachers, small classes and innovative teaching
-            techniques.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#courses" class="btn btn-primary">
-                Explore Courses
-            </a>
-
-            <a href="#contact" class="btn btn-secondary">
-                Book a Trial Class
-            </a>
-
-        </div>
-
+  <div class="hero-copy">
+    <div class="eyebrow">EDUCATION • TECHNOLOGY • DIRECTION</div>
+    <h1>Learn Better.<br><span>Plan Smarter.<br>Achieve More.</span></h1>
+    <p>APLUS ACHIEVER brings together personalised online tuition, academic planning and AI-powered learning tools — helping students build stronger foundations today and make clearer choices for tomorrow.</p>
+    <div class="actions">
+      <a class="btn primary" href="#programmes">Explore APLUS</a>
+      <a class="btn secondary" href="https://wa.me/6598816223?text=Hi%20APLUS%20ACHIEVER,%20I%20would%20like%20to%20book%20a%20trial%20class.">Book a Trial Class</a>
     </div>
-
-
-    <div class="hero-visual">
-
-        <div class="visual-main">
-
-            <div class="visual-card">
-
-                <small>
-                    A better learning experience
-                </small>
-
-                <strong>
-                    Learn with confidence.
-                </strong>
-
-            </div>
-
-            <div class="visual-stat">
-
-                <strong>
-                    A+
-                </strong>
-
-                <span>
-                    Aim higher. Learn smarter.
-                </span>
-
-            </div>
-
-        </div>
-
+    <div class="hero-note"><span>Online lessons</span><span>Singapore-focused</span><span>Student-centred</span></div>
+  </div>
+  <div class="hero-panel">
+    <div class="panel-main"></div>
+    <div class="dashboard">
+      <div class="dashboard-label">APLUS LEARNING JOURNEY</div>
+      <h3>From where you are<br>to where you want to go.</h3>
+      <div class="track"><i></i></div>
+      <div class="dashboard-row"><span>Learning progress</span><strong>Personalised</strong></div>
+      <div class="mini-cards"><div class="mini"><strong>01</strong><small>Learn</small></div><div class="mini"><strong>02</strong><small>Plan</small></div></div>
     </div>
-
+    <div class="floating"><strong>A+</strong><span>Learn smarter. Grow with confidence.</span></div>
+  </div>
 </section>
 
+<div class="trust"><span>Experienced Teachers</span><span>Small Online Classes</span><span>Personalised Learning</span><span>Academic Guidance</span><span>AI-Powered Learning</span></div>
 
-<!-- TRUST -->
-
-<div class="trust">
-
-    <span>Experienced Teachers</span>
-
-    <span>Small Online Classes</span>
-
-    <span>Personalised Learning</span>
-
-    <span>Examination-Focused</span>
-
-</div>
-
-
-<!-- WHY APLUS -->
-
-<section id="why">
-
-    <div class="section-heading">
-
-        <div class="label">
-            WHY APLUS ACHIEVER
-        </div>
-
-        <h2>
-            More than tuition.<br>
-            A better way to learn.
-        </h2>
-
-        <p>
-            We focus on understanding, confidence and
-            structured preparation — not simply completing
-            more worksheets.
-        </p>
-
-    </div>
-
-
-    <div class="features">
-
-        <div class="feature">
-
-            <div class="icon">01</div>
-
-            <h3>
-                Experienced Teachers
-            </h3>
-
-            <p>
-                Learn from educators who understand
-                Singapore's education system and
-                examination requirements.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="icon">02</div>
-
-            <h3>
-                Small Online Classes
-            </h3>
-
-            <p>
-                Smaller groups allow teachers to
-                observe students closely and provide
-                meaningful feedback.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="icon">03</div>
-
-            <h3>
-                Personalised Learning
-            </h3>
-
-            <p>
-                Lessons are structured around each
-                student's strengths, weaknesses and
-                learning needs.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="icon">04</div>
-
-            <h3>
-                Exam-Focused Preparation
-            </h3>
-
-            <p>
-                Build the knowledge, techniques and
-                confidence needed for important
-                school examinations.
-            </p>
-
-        </div>
-
-    </div>
-
+<section id="programmes">
+  <div class="heading"><div class="label">WHAT APLUS ACHIEVER DOES</div><h2>Three ways we support<br>a student's journey.</h2><p>Tuition helps students learn. Planning helps them see direction. AI helps them practise more intelligently.</p></div>
+  <div class="pillars">
+    <article class="pillar"><div class="number">01 / ONLINE LESSONS</div><h3>Personalised Online Tuition</h3><p>Small online classes for Primary, Secondary and Junior College students, with experienced teachers, structured lessons and examination-focused preparation.</p><a class="pillar-link" href="about.html">Learn about APLUS</a></article>
+    <article class="pillar"><div class="number">02 / ACADEMIC PLANNING</div><h3>Know the Next Step</h3><p>Academic planning that helps students and parents understand subject choices, pathways, goals and the decisions that matter along the way.</p><a class="pillar-link" href="academic-planning.html">Explore Academic Planning</a></article>
+    <article class="pillar"><div class="number">03 / AI TUTOR</div><h3>Practice with Intelligence</h3><p>AI-powered learning tools for vocabulary and future learning modules — tracking mistakes, progress and practice needs to make learning more targeted.</p><a class="pillar-link" href="vocabulary.html">Try the AI Vocabulary Tutor</a></article>
+  </div>
 </section>
 
-
-<!-- COURSES -->
-
-<section id="courses" class="courses">
-
-    <div class="section-heading">
-
-        <div class="label">
-            OUR PROGRAMMES
-        </div>
-
-        <h2>
-            Find the right programme
-        </h2>
-
-        <p>
-            Structured tuition for every stage of
-            the Singapore education journey.
-        </p>
-
+<section class="approach">
+  <div class="approach-grid">
+    <div class="approach-copy"><div class="label">THE APLUS APPROACH</div><h2>Not more work.<br>Better learning.</h2><p>Students do not all learn in the same way. APLUS focuses on understanding what a student needs, building the right foundation, and giving them a clearer path forward.</p></div>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><div><h3>Understand the Student</h3><p>Identify strengths, gaps, learning needs and goals.</p></div></div>
+      <div class="step"><div class="step-num">02</div><div><h3>Build the Foundation</h3><p>Strengthen concepts, skills and examination readiness.</p></div></div>
+      <div class="step"><div class="step-num">03</div><div><h3>Track & Adjust</h3><p>Use feedback, progress and practice data to guide the next step.</p></div></div>
+      <div class="step"><div class="step-num">04</div><div><h3>Plan Ahead</h3><p>Connect today's learning with tomorrow's academic direction.</p></div></div>
     </div>
-
-
-    <div class="course-grid">
-
-        <div class="course">
-
-            <div class="course-number">
-                PRIMARY
-            </div>
-
-            <h3>
-                Primary School
-            </h3>
-
-            <p>
-                English, Mathematics, Science,
-                Chinese and PSLE preparation.
-            </p>
-
-            <a href="#contact" class="course-link">
-                Explore Primary →
-            </a>
-
-        </div>
-
-
-        <div class="course">
-
-            <div class="course-number">
-                SECONDARY
-            </div>
-
-            <h3>
-                Secondary School
-            </h3>
-
-            <p>
-                English, Mathematics, Science and
-                examination-focused preparation.
-            </p>
-
-            <a href="#contact" class="course-link">
-                Explore Secondary →
-            </a>
-
-        </div>
-
-
-        <div class="course">
-
-            <div class="course-number">
-                JUNIOR COLLEGE
-            </div>
-
-            <h3>
-                Junior College
-            </h3>
-
-            <p>
-                GP and JC subjects with structured
-                preparation for major examinations.
-            </p>
-
-            <a href="#contact" class="course-link">
-                Explore JC →
-            </a>
-
-        </div>
-
-    </div>
-
+  </div>
 </section>
 
-
-<!-- BRAND MESSAGE -->
-
-<section class="message">
-
-    <div class="message-box">
-
-        <h2>
-            Every student can improve.
-        </h2>
-
-        <p>
-            The right guidance, the right strategy
-            and consistent practice can make a
-            meaningful difference.
-        </p>
-
-        <a href="#contact" class="btn btn-primary">
-            Talk to Us
-        </a>
-
+<section>
+  <div class="ai">
+    <div class="ai-card"><div class="label">APLUS AI-POWERED TUTOR</div><h2>Learning that remembers where the student needs help.</h2><p>Our AI learning system is designed to turn practice into useful learning data — from wrong answers and vocabulary recall to progress and personalised review.</p></div>
+    <div class="ai-list">
+      <div class="ai-item"><h3>Personalised Question Selection</h3><p>Practice can be adjusted around ability, performance and learning history.</p></div>
+      <div class="ai-item"><h3>Wrong Answer Tracking</h3><p>Common mistakes are recorded so students can revisit what they actually struggle with.</p></div>
+      <div class="ai-item"><h3>Spaced Review</h3><p>Important vocabulary and learning points can return at the right time instead of being forgotten after one session.</p></div>
+      <div class="ai-item"><h3>Progress for Students & Parents</h3><p>Learning becomes more visible — not just a score at the end of a test.</p></div>
     </div>
-
+  </div>
 </section>
 
-
-<!-- CTA -->
-
-<section id="contact" class="cta">
-
-    <h2>
-        Ready to help your child<br>
-        achieve more?
-    </h2>
-
-    <p>
-        Speak with us about our programmes
-        and trial classes.
-    </p>
-
-    <a
-        href="https://wa.me/6598816223"
-        class="btn"
-    >
-        WhatsApp Us
-    </a>
-
+<section class="story">
+  <div class="story-box"><div class="label">A DIFFERENT KIND OF SUPPORT</div><h2>Because every student has<br>a different starting point.</h2><p>Some need stronger foundations. Some need exam strategy. Some need to discover a clearer direction. APLUS ACHIEVER is built to support the journey, not just the next test.</p><a class="btn primary" href="about.html">Discover APLUS ACHIEVER</a></div>
 </section>
 
+<section class="cta" id="contact">
+  <h2>Let's talk about your child's<br>next step.</h2>
+  <p>Tell us where your child is now, and what you hope to achieve.</p>
+  <a class="btn" href="https://wa.me/6598816223?text=Hi%20APLUS%20ACHIEVER,%20I%20would%20like%20to%20discuss%20my%20child's%20learning%20needs.">Chat with APLUS on WhatsApp</a>
+</section>
 
 <footer>
-
-    <div>
-        © 2026 APLUS ACHIEVER
-    </div>
-
-    <div>
-        Personalised Online Tuition
-    </div>
-
+  <div>© 2026 APLUS ACHIEVER Pte. Ltd. • Education • Technology • Direction</div>
+  <div class="footer-links"><a href="about.html">About Us</a><a href="academic-planning.html">Academic Planning</a><a href="vocabulary.html">AI Tutor</a></div>
 </footer>
-
 </body>
 </html>
