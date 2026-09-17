@@ -1,0 +1,13 @@
+/* APLUS AI DATABASE V1 — P6 PSLE PAPER 2 — EDITING DNA BATCH 02 */
+window.APLUS_AI_DB_V1_P6_PSLE_PAPER2_CORE_EDITING_DNA_BATCH02 = [
+{id:"P6-ED-021",errorType:"subject_verb_agreement",original:"The list of items are on the desk.",correct:"The list of items is on the desk.",rule:"The head noun list controls the singular verb.",misconception:"nearby_noun_agreement",difficulty:3},
+{id:"P6-ED-022",errorType:"past_tense",original:"Yesterday, she go to the library.",correct:"Yesterday, she went to the library.",rule:"A completed past event requires the appropriate past-tense verb.",misconception:"base_form_after_time_marker",difficulty:2},
+{id:"P6-ED-023",errorType:"article",original:"He bought a umbrella.",correct:"He bought an umbrella.",rule:"Use an before a word beginning with a vowel sound.",misconception:"article_sound_confusion",difficulty:2},
+{id:"P6-ED-024",errorType:"uncountable_noun",original:"The laboratory bought several new equipments.",correct:"The laboratory bought several new pieces of equipment.",rule:"Equipment is normally uncountable in standard usage.",misconception:"plural_uncountable_noun",difficulty:4},
+{id:"P6-ED-025",errorType:"preposition",original:"She is interested on science.",correct:"She is interested in science.",rule:"The adjective interested is followed by in.",misconception:"preposition_by_translation",difficulty:3},
+{id:"P6-ED-026",errorType:"comparative",original:"This route is more shorter than the old one.",correct:"This route is shorter than the old one.",rule:"Do not use more with a regular comparative adjective formed with -er.",misconception:"double_comparative",difficulty:3},
+{id:"P6-ED-027",errorType:"gerund_infinitive",original:"She is good at to draw.",correct:"She is good at drawing.",rule:"A preposition is followed by a gerund.",misconception:"infinitive_after_preposition",difficulty:3},
+{id:"P6-ED-028",errorType:"modal",original:"You must to wear your badge.",correct:"You must wear your badge.",rule:"A modal is followed directly by the base verb.",misconception:"modal_wrong_form",difficulty:2},
+{id:"P6-ED-029",errorType:"relative_pronoun",original:"The boy which won the race smiled.",correct:"The boy who won the race smiled.",rule:"Use who for a person in this relative clause.",misconception:"relative_pronoun_choice",difficulty:2},
+{id:"P6-ED-030",errorType:"conditional",original:"If it rains, we would stay indoors.",correct:"If it rains, we will stay indoors.",rule:"A likely first conditional uses present simple in the if-clause and will in the main clause.",misconception:"conditional_tense_mix",difficulty:3}
+];
