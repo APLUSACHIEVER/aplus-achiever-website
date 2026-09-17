@@ -1,0 +1,13 @@
+/* APLUS AI DATABASE V1 — P6 PSLE PAPER 2 — VOCABULARY CLOZE DNA BATCH 02 */
+window.APLUS_AI_DB_V1_P6_PSLE_PAPER2_CORE_VOCABULARY_CLOZE_DNA_BATCH02 = [
+{id:"P6-VCD-021",skill:"context_clue",blankPosition:"middle",clueType:"definition",rule:"The surrounding sentence directly describes the target meaning.",distractorRule:"Distractors may be related but must fail the stated meaning.",difficulty:2},
+{id:"P6-VCD-022",skill:"context_clue",blankPosition:"middle",clueType:"contrast",rule:"A contrast marker such as although or but signals the intended meaning.",distractorRule:"Reject words that agree with the first idea but contradict the contrast.",difficulty:3},
+{id:"P6-VCD-023",skill:"collocation",blankPosition:"verb_object",clueType:"collocation",rule:"The target must form a natural word partnership with the surrounding words.",distractorRule:"Semantically related words that do not collocate are invalid.",difficulty:3},
+{id:"P6-VCD-024",skill:"word_form",blankPosition:"after_article",clueType:"grammar_constraint",rule:"The article and sentence position require a singular countable noun.",distractorRule:"Related verbs, adjectives and plural forms are invalid.",difficulty:2},
+{id:"P6-VCD-025",skill:"cause_effect",blankPosition:"after_cause",clueType:"result",rule:"The target word must express the result established by the passage.",distractorRule:"Cause and result cannot be reversed.",difficulty:3},
+{id:"P6-VCD-026",skill:"emotion_inference",blankPosition:"after_action",clueType:"behaviour",rule:"Actions and reactions provide evidence for the target emotional word.",distractorRule:"Emotion distractors must contradict the character's behaviour.",difficulty:4},
+{id:"P6-VCD-027",skill:"quantity",blankPosition:"before_noun",clueType:"amount",rule:"The target must match whether the following noun is countable or uncountable.",distractorRule:"Quantity words with incompatible noun types are invalid.",difficulty:2},
+{id:"P6-VCD-028",skill:"context_clue",blankPosition:"end",clueType:"example",rule:"Examples in the passage narrow the possible meaning of the missing word.",distractorRule:"Broad synonyms are rejected when they do not fit the example.",difficulty:3},
+{id:"P6-VCD-029",skill:"meaning_in_context",blankPosition:"middle",clueType:"local_plus_global",rule:"The answer must fit both the sentence and the overall passage.",distractorRule:"A locally plausible but globally inconsistent word is invalid.",difficulty:4},
+{id:"P6-VCD-030",skill:"precision",blankPosition:"middle",clueType:"semantic_boundary",rule:"Choose the word whose meaning most precisely matches the intended situation.",distractorRule:"Near-synonyms that are too broad, too strong or wrong in register are invalid.",difficulty:4}
+];
