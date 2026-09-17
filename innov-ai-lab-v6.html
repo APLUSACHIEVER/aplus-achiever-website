@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>APLUS AI Tutor V6</title>
+<style>
+:root{--green:#1f8f68;--green2:#eaf8f1;--ink:#17352b;--muted:#6b7d76;--line:#dfeae5;--bg:#f7faf8;--white:#fff;--shadow:0 18px 50px rgba(24,65,52,.08)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#fff 0,#f7faf8 100%);color:var(--ink)}
+.wrap{max-width:1180px;margin:auto;padding:28px 20px 50px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.brand{font-weight:800;letter-spacing:.3px}.brand span{color:var(--green)}.pill{background:var(--green2);color:var(--green);padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800}
+h1{font-size:clamp(30px,5vw,52px);line-height:1.02;margin:15px 0 10px}.lead{color:var(--muted);max-width:760px;line-height:1.7;margin-bottom:28px}.grid{display:grid;grid-template-columns:1.45fr .75fr;gap:18px}.card{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:20px}.chat{min-height:590px;display:flex;flex-direction:column}.messages{flex:1;display:flex;flex-direction:column;gap:12px;overflow:auto;max-height:430px;padding-right:3px}.msg{padding:13px 15px;border-radius:16px;line-height:1.6;white-space:pre-wrap}.ai{background:var(--green2);border-top-left-radius:5px}.user{background:#f2f4f3;align-self:flex-end;border-top-right-radius:5px;max-width:85%}.quick{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}.quick button,.actions button{border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 11px;cursor:pointer;color:var(--ink);font-weight:700}.quick button:hover,.actions button:hover{border-color:#a7d8c5;background:#f7fffb}.input{display:flex;gap:9px;border-top:1px solid var(--line);padding-top:15px}.input input{flex:1;border:1px solid var(--line);border-radius:13px;padding:13px 14px;font-size:14px;outline:none}.input button,.primary{background:var(--green);color:#fff!important;border:0!important;border-radius:13px;padding:12px 16px;font-weight:800;cursor:pointer}.section{margin-bottom:18px}.section h3{margin:0 0 10px;font-size:14px}.stat{display:grid;grid-template-columns:1fr 1fr;gap:9px}.stat div{background:#f8fbf9;border:1px solid var(--line);border-radius:14px;padding:12px}.num{font-size:22px;font-weight:850}.small{font-size:12px;color:var(--muted);margin-top:4px}.skill{margin:12px 0}.skillhead{display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px}.bar{height:8px;background:#edf2ef;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:var(--green);border-radius:99px}.source{display:flex;gap:7px;flex-wrap:wrap}.tag{font-size:11px;padding:7px 9px;border-radius:999px;background:#f3f7f5;border:1px solid var(--line)}.decision{background:#fbfefd;border-left:4px solid var(--green);padding:12px;border-radius:10px;font-size:13px;line-height:1.55}.question{margin-top:16px;border:1px solid #cfe7dc;background:#fbfffd;border-radius:18px;padding:17px}.qmeta{font-size:11px;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.6px}.qtext{font-size:18px;font-weight:750;margin:9px 0 14px}.opts{display:grid;grid-template-columns:1fr 1fr;gap:9px}.opt{padding:11px;border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;text-align:left}.opt:hover{border-color:#8bcbb0}.history{font-size:12px;color:var(--muted);line-height:1.6;max-height:160px;overflow:auto}.footer{margin-top:18px;color:var(--muted);font-size:11px;line-height:1.6}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.chat{min-height:0}.messages{max-height:none}.opts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><div class="brand">APLUS <span>AI TUTOR</span></div><div class="pill">V6 · PERSONAL TUTOR ORCHESTRATOR</div></div>
+<h1>Your tutor should<br><span style="color:var(--green)">remember how you learn.</span></h1>
+<div class="lead">V6 connects the learning signals built in V3 and V5 into a student-facing tutor. It explains mistakes, identifies weak areas, recommends the next step and selects targeted practice.</div>
+<div class="grid">
+<section class="card chat">
+<div id="messages" class="messages"></div>
+<div class="quick">
+<button data-q="What am I weakest at?">What am I weakest at?</button>
+<button data-q="Why did I get this wrong?">Why did I get this wrong?</button>
+<button data-q="What should I learn next?">What should I learn next?</button>
+<button data-q="Give me a question">Give me a question</button>
+<button data-q="Have I mastered this?">Have I mastered this?</button>
+<button data-q="Why did AI choose this?">Why did AI choose this?</button>
+</div>
+<div class="input"><input id="ask" placeholder="Ask your AI Tutor…"><button class="primary" id="send">Ask</button></div>
+<div id="question"></div>
+</section>
+<aside>
+<div class="card section"><h3>STUDENT MEMORY</h3><div class="stat"><div><div class="num" id="attempts">0</div><div class="small">Attempts</div></div><div><div class="num" id="accuracy">0%</div><div class="small">Overall accuracy</div></div></div></div>
+<div class="card section"><h3>ABILITY PROFILE</h3><div id="skills"></div></div>
+<div class="card section"><h3>AI FOCUS</h3><div id="focus" class="decision">Building your profile…</div></div>
+<div class="card section"><h3>DATA SOURCES</h3><div class="source"><span class="tag">V3 Misconception Engine</span><span class="tag">V5 Learning Memory</span><span class="tag">V6 Tutor Orchestrator</span></div></div>
+<div class="card section"><h3>TUTOR HISTORY</h3><div id="history" class="history">No interactions yet.</div><div class="actions" style="margin-top:10px"><button id="reset">Reset Tutor Session</button></div></div>
+</aside>
+</div>
+<div class="footer">This V6 lab is a standalone browser prototype. It uses the existing local learning signals and does not modify the main APLUS website. GitHub Pages serves the static HTML/JavaScript files directly from the repository. citeturn0search0</div>
+</div>
+<script src="innov-ai-engine-v3.js"></script>
+<script src="innov-ai-engine-v5.js"></script>
+<script src="innov-ai-engine-v6.js"></script>
+<script>
+(function(){
+const $=id=>document.getElementById(id), T=window.APLUSAITutorV6;
+function esc(s){return String(s||'').replace(/[&<>\"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[m]));}
+function add(who,text){const d=document.createElement('div');d.className='msg '+who;d.textContent=text;$('messages').appendChild(d);$('messages').scrollTop=$('messages').scrollHeight;}
+function refresh(){const c=T.context(),m=c.memory||{};$('attempts').textContent=m.totalAttempts||0;$('accuracy').textContent=Math.round((m.overallAccuracy||0)*100)+'%';
+const skills=m.skills||[];$('skills').innerHTML=skills.length?skills.slice(0,8).map(x=>`<div class="skill"><div class="skillhead"><span>${esc(x.key)}</span><b>${Math.round((x.retention||0)*100)}%</b></div><div class="bar"><i style="width:${Math.round((x.retention||0)*100)}%"></i></div><div class="small">${esc(x.mastery||'developing')} · accuracy ${Math.round((x.accuracy||0)*100)}%</div></div>`).join(''):'<div class="small">Complete a few questions to build your profile.</div>';
+const f=c.focus;$('focus').textContent=f?(f.skill?`${f.type==='repair'?'Repair':'Strengthen'}: ${f.skill}. ${f.reason||''}`:'Controlled challenge: core signals are stable.'):'No focus yet.';
+const h=T.history();$('history').innerHTML=h.length?h.slice(0,8).map(x=>`${new Date(x.at).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} · ${esc(x.intent||x.type||'event')} · ${esc(x.text||'')}`).join('<br>'):'No interactions yet.';
+}
+function showQuestion(result){const q=result&&result.question&&result.question.question;if(!q){$('question').innerHTML='';return;} $('question').innerHTML=`<div class="question"><div class="qmeta">AI-selected practice · ${esc(q.area)} · ${esc(q.skill||'skill')}</div><div class="qtext">${esc(q.prompt)}</div><div class="opts">${q.options.map((o,i)=>`<button class="opt" data-i="${i}">${esc(o)}</button>`).join('')}</div><div id="qfeedback" class="small" style="margin-top:10px"></div></div>`;
+$('question').querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(q,Number(b.dataset.i)));
+}
+function answer(q,i){const v=window.APLUSAIEngineV3;if(!v)return;const s=v.load();const r=v.answer(s,q,i,{});let text=r.correct?'Correct. Good retrieval.':'Not quite. Let’s understand the reason before trying again.';if(!r.correct&&r.diagnosis)text+=' '+r.diagnosis.message;add('ai',text);if(r.remediation&&r.remediation.question){setTimeout(()=>showQuestion({question:r.remediation.question}),180);}else{setTimeout(()=>showQuestion({question:r.next.question}),180);}refresh();}
+function ask(text){if(!text.trim())return;add('user',text);const r=T.ask(text);add('ai',r.reply);showQuestion(r);refresh();}
+$('send').onclick=()=>{const i=$('ask');ask(i.value);i.value='';i.focus();};$('ask').addEventListener('keydown',e=>{if(e.key==='Enter'){$('send').click();}});document.querySelectorAll('.quick button').forEach(b=>b.onclick=()=>ask(b.dataset.q));$('reset').onclick=()=>{T.reset();refresh();add('ai','Tutor session reset. Your stored V3/V5 learning memory remains unchanged.');};
+add('ai','Hi — I’m your APLUS AI Tutor. I can read your learning signals and help you decide what to work on next.');refresh();
+})();
+</script>
+</body>
+</html>
