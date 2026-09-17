@@ -1,0 +1,13 @@
+/* APLUS AI DATABASE V1 — P6 PSLE PAPER 2 — EDITING DNA BATCH 03 */
+window.APLUS_AI_DB_V1_P6_PSLE_PAPER2_MASTER_EDITING_DNA_B03 = [
+{id:"P6-ED-001",errorType:"subject_verb_agreement",original:"The list of items are on the desk.",corrected:"The list of items is on the desk.",rule:"The head subject list is singular.",misconception:"nearby_noun_agreement",difficulty:3},
+{id:"P6-ED-002",errorType:"past_tense",original:"She walk home after the rain stopped.",corrected:"She walked home after the rain stopped.",rule:"A completed past action requires the past-tense verb.",misconception:"tense_marker_ignored",difficulty:2},
+{id:"P6-ED-003",errorType:"article",original:"He found a unusual shell.",corrected:"He found an unusual shell.",rule:"Use an before a word beginning with a vowel sound.",misconception:"article_sound_confusion",difficulty:2},
+{id:"P6-ED-004",errorType:"preposition",original:"We arrived at the airport in noon.",corrected:"We arrived at the airport at noon.",rule:"Use at with noon as a precise time expression.",misconception:"time_preposition_swap",difficulty:3},
+{id:"P6-ED-005",errorType:"uncountable_noun",original:"The laboratory bought several new equipments.",corrected:"The laboratory bought several new pieces of equipment.",rule:"Equipment is normally uncountable.",misconception:"plural_uncountable_noun",difficulty:4},
+{id:"P6-ED-006",errorType:"pronoun",original:"Sarah prepared the presentation by herself and checked it.",corrected:"Sarah prepared the presentation by herself and checked it.",rule:"No correction is required when the reflexive pronoun correctly refers to the subject.",misconception:"false_error_detection",difficulty:4},
+{id:"P6-ED-007",errorType:"connector",original:"Although he was tired, but he continued working.",corrected:"Although he was tired, he continued working.",rule:"Avoid using although and but together in the same clause structure.",misconception:"double_connector",difficulty:3},
+{id:"P6-ED-008",errorType:"comparative",original:"This route is more shorter than the old one.",corrected:"This route is shorter than the old one.",rule:"Do not use more with a regular comparative adjective already formed with -er.",misconception:"double_comparative",difficulty:3},
+{id:"P6-ED-009",errorType:"infinitive",original:"I want visiting the museum tomorrow.",corrected:"I want to visit the museum tomorrow.",rule:"Want is followed by a to-infinitive.",misconception:"verb_pattern_confusion",difficulty:3},
+{id:"P6-ED-010",errorType:"spelling",original:"The teacher gave us useful advise.",corrected:"The teacher gave us useful advice.",rule:"Advice is the noun; advise is the verb.",misconception:"confusable_word_pair",difficulty:3}
+];
