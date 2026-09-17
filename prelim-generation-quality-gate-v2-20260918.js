@@ -21,13 +21,6 @@ G.qualityGateVersion='2.3';G.synthesisVersion='PSLE_ST_V2.3';G.synthesisBank=PSL
 install();
 let tries=0;const poll=setInterval(()=>{if(install()||++tries>80)clearInterval(poll)},100);
 })();
-(function(){'use strict';
-  const src='prelim-psle-dna-grammar-cloze-v1-20260918.js';
-  const load=()=>{if(document.querySelector('script[data-aplus-psle-dna="grammar-cloze"]'))return;const s=document.createElement('script');s.src=src+'?v=20260918a';s.async=false;s.dataset.aplusPsleDna='grammar-cloze';document.head.appendChild(s)};
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load,{once:true});else load();
-})();
-(function(){'use strict';
-  const src='prelim-psle-dna-editing-v1-20260918.js';
-  const load=()=>{if(document.querySelector('script[data-aplus-psle-dna="editing"]'))return;const s=document.createElement('script');s.src=src+'?v=20260918a';s.async=false;s.dataset.aplusPsleDna='editing';document.head.appendChild(s)};
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load,{once:true});else load();
-})();
+(function(){'use strict';const src='prelim-psle-dna-grammar-cloze-v1-20260918.js';const load=()=>{if(document.querySelector('script[data-aplus-psle-dna="grammar-cloze"]'))return;const s=document.createElement('script');s.src=src+'?v=20260918a';s.async=false;s.dataset.aplusPsleDna='grammar-cloze';document.head.appendChild(s)};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load,{once:true});else load();})();
+(function(){'use strict';const src='prelim-psle-dna-editing-v1-20260918.js';const load=()=>{if(document.querySelector('script[data-aplus-psle-dna="editing"]'))return;const s=document.createElement('script');s.src=src+'?v=20260918a';s.async=false;s.dataset.aplusPsleDna='editing';document.head.appendChild(s)};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load,{once:true});else load();})();
+(function(){'use strict';const src='prelim-psle-dna-comprehension-cloze-v1-20260918.js';const load=()=>{if(document.querySelector('script[data-aplus-psle-dna="comprehension-cloze"]'))return;const s=document.createElement('script');s.src=src+'?v=20260918b';s.async=false;s.dataset.aplusPsleDna='comprehension-cloze';document.head.appendChild(s)};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load,{once:true});else load();})();
