@@ -1,0 +1,31 @@
+/* APLUS COMPREHENSIVE AI TUTOR V11
+   Unified tutor layer. Reads existing V5/V8/V9 data without modifying those files.
+*/
+(function(){'use strict';
+const KEY='APLUS_AI_COMPREHENSIVE_TUTOR_V11';
+const BANK=[
+{id:'v11-vocab-reluctant',area:'Vocabulary',skill:'vocabulary::meaning',term:'reluctant',q:'Mia was ___ to speak in front of the class because she felt nervous.',options:['reluctant','delighted','certain','generous'],answer:0,why:'The context says Mia felt nervous, so reluctant (unwilling or hesitant) fits.'},
+{id:'v11-vocab-adapt',area:'Vocabulary',skill:'vocabulary::context',term:'adapt',q:'Animals must ___ to changes in their environment in order to survive.',options:['adapt','scatter','ignore','borrow'],answer:0,why:'Adapt means adjust to new conditions.'},
+{id:'v11-vocab-precise',area:'Vocabulary',skill:'vocabulary::recall',term:'precise',q:'The teacher gave ___ instructions so everyone knew exactly what to do.',options:['precise','ancient','fragile','distant'],answer:0,why:'Precise means exact and accurate.'},
+{id:'v11-grammar-sva',area:'Grammar',skill:'grammar::subject-verb agreement',term:'Subject–Verb Agreement',q:'Neither the teacher nor the students ___ ready for the announcement.',options:['is','are','was','be'],answer:1,why:'With neither...nor, the verb agrees with the nearer subject: students are.'},
+{id:'v11-grammar-perfect',area:'Grammar',skill:'grammar::past perfect',term:'Past Perfect',q:'By the time we arrived, the movie ___ already started.',options:['has','had','was','will'],answer:1,why:'Had started shows the earlier of two past events.'},
+{id:'v11-grammar-prep',area:'Grammar',skill:'grammar::preposition',term:'Prepositions',q:'The students have been waiting ___ the bus for ten minutes.',options:['for','at','on','by'],answer:0,why:'We use wait for when referring to the person or thing expected.'}
+];
+function fresh(){return{version:11,sessionId:'s-'+Date.now(),messages:[],currentId:null,lastResult:null,startedAt:null,attempts:0,correct:0,streak:0,asked:0}}
+function load(){try{const s=JSON.parse(localStorage.getItem(KEY));return s&&s.version===11?s:fresh()}catch(e){return fresh()}}
+function save(s){localStorage.setItem(KEY,JSON.stringify(s));return s}
+function mem(){try{return window.APLUSAILearningMemoryV5?window.APLUSAILearningMemoryV5.load():null}catch(e){return null}}
+function snap(){try{const m=mem();return window.APLUSAILearningMemoryV5?window.APLUSAILearningMemoryV5.snapshot(m):null}catch(e){return null}}
+function weak(){const m=snap();return m&&m.weakSkills&&m.weakSkills.length?m.weakSkills[0]:null}
+function choose(){const m=snap();const skills=m&&m.skills?m.skills:[];let ranked=BANK.map(q=>{const x=skills.find(s=>s.key===q.skill);let score=50;if(x)score+=(1-(x.retention||.5))*50+(1-(x.accuracy||.5))*25;return{q,score}}).sort((a,b)=>b.score-a.score);return ranked[0].q}
+function profile(){const m=snap();const s=load();return{student:m&&m.student?m.student:{name:'Student'},attempts:m?m.totalAttempts:0,accuracy:m?m.overallAccuracy:0,weakSkill:weak(),misconceptions:m?m.misconceptions:{},sessionAccuracy:s.attempts?s.correct/s.attempts:0,streak:s.streak}}
+function classify(text){const t=String(text||'').toLowerCase();if(/^(hi|hello|hey|你好|嗨)/.test(t))return'greet';if(/why.*wrong|why.*mistake|为什么.*错/.test(t))return'why_wrong';if(/weak|weakest|弱项|最弱/.test(t))return'weak';if(/next|what.*learn|下一步|学什么/.test(t))return'next';if(/question|practice|练习|出题|给我.*题/.test(t))return'question';if(/explain|teach|解释|教我|怎么做/.test(t))return'explain';if(/master|掌握|熟练/.test(t))return'mastery';if(/plan|today|今天.*学|计划/.test(t))return'plan';return'chat'}
+function respond(text){const intent=classify(text),p=profile(),w=p.weakSkill;let reply='';if(intent==='greet')reply='你好，我是 APLUS AI Tutor。你可以让我教词汇、教语法、解释错题、出适合你的题，或者帮你安排下一步。';else if(intent==='weak')reply=w?`目前学习记录显示，你最需要加强的是「${w.key}」，保留度约 ${Math.round(w.retention*100)}%。我会优先用短练习强化它。`:'目前数据还不够，我会通过你的练习逐步建立能力画像。';else if(intent==='why_wrong')reply='我会结合你的错误记录和题目线索判断原因，而不是只告诉你正确答案。完成一道错题后，我可以进一步拆解你的具体误区。';else if(intent==='next')reply=w?`下一步先练「${w.key}」，然后换一道新题检查是否真正掌握。`:'先完成几道题，我会根据表现安排下一步。';else if(intent==='question')reply='可以。我会优先选择目前需要加强的技能，并在你作答后给出解释、记录结果，再决定下一题。';else if(intent==='explain')reply='当然。把题目或知识点发给我，我会用「概念 → 简单例子 → 检查理解 → 再练一题」的方式教你。';else if(intent==='mastery')reply=w?`我不会因为一次答对就判断掌握。我会综合正确率、保留度、连续表现和错误记录。当前「${w.key}」仍值得继续练习。`:'完成更多不同题型后，我会逐步判断你的掌握程度。';else if(intent==='plan')reply='今天建议：先处理最弱技能，再复习错误，最后做一轮混合练习。学习过程中我会根据表现动态调整。';else reply='我可以陪你学习。试试问我：「我最弱的是什么？」、「为什么这题错？」、「给我一道适合我的题」或直接把题目发给我。';const s=load();s.messages.unshift({at:new Date().toISOString(),role:'student',text:String(text||'')},{at:new Date().toISOString(),role:'tutor',text:reply});s.messages=s.messages.slice(0,100);return{intent,reply,profile:p,save:save(s)}}
+function current(){const s=load();if(!s.currentId){const q=choose();s.currentId=q.id;save(s);return q}return BANK.find(q=>q.id===s.currentId)||choose()}
+function askQuestion(){const s=load(),q=choose();s.currentId=q.id;s.asked++;save(s);return q}
+function answer(choice,seconds){const s=load(),q=current();const correct=Number(choice)===q.answer;s.attempts++;s.correct+=correct?1:0;s.streak=correct?s.streak+1:0;s.lastResult={questionId:q.id,correct,seconds:seconds==null?null:seconds,explanation:q.why};if(window.APLUSAILearningMemoryV5){try{window.APLUSAILearningMemoryV5.record(window.APLUSAILearningMemoryV5.load(),q,{correct,diagnosis:correct?null:{type:'tutor-misconception'}},{seconds:seconds==null?null:seconds})}catch(e){}}s.currentId=null;save(s);return{correct,explanation:q.why,profile:profile(),next:choose()}}
+function start(){const s=load();if(!s.startedAt)s.startedAt=Date.now();return save(s)}
+function state(){const s=load();return Object.assign({},s,{profile:profile(),current:s.currentId?BANK.find(q=>q.id===s.currentId):null})}
+function reset(){return save(fresh())}
+window.APLUSAIComprehensiveTutorV11={version:11,load,save,profile,classify,respond,current,askQuestion,answer,start,state,reset,bank:()=>BANK.slice()};
+})();
