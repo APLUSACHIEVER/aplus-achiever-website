@@ -55,22 +55,12 @@ function patch(){
      const state=api.getState();
      if(!state||!Array.isArray(state.questions))return;
      const replacement=makeQuestions(state.seed);
-     let cursor=state.questions.findIndex(q=>q.section==='vocabulary');
-     if(cursor<0)return;
      const old=state.questions.filter(q=>q.section==='vocabulary');
      if(old.length!==5)return;
      const numbers=old.map(q=>q.number);
      replacement.forEach((q,i)=>q.number=numbers[i]);
      let n=0;
      state.questions=state.questions.map(q=>q.section==='vocabulary'?replacement[n++]:q);
-     if(typeof api.render==='function')api.render();
-     else {
-       const next=document.getElementById('nextBtn');
-       if(next){
-         const ev=new Event('click',{bubbles:true});
-         next.dispatchEvent(ev);
-       }
-     }
      try{localStorage.setItem('APLUS_P6_PRELIM_SESSION_V2',JSON.stringify(state))}catch(e){}
    },0);
  },false);
