@@ -1,6 +1,6 @@
-/* APLUS P6 English Prelim — Engine V10.2
-   Robust browser bootstrap: exposes legacy const databases, then executes the Paper 2 generation layer.
-   Existing database files are not modified.
+/* APLUS P6 English Prelim — Engine V10.3
+   Same exam engine and functionality. Only MCQ option markup/layout is adjusted
+   to present A/B/C/D in a clean PSLE-style aligned format.
 */
 (function(){'use strict';
 const BLUEPRINT=[
@@ -18,8 +18,8 @@ const TOTAL=6600,KEY='APLUS_P6_PRELIM_SESSION_V10',DONE='APLUS_P6_PRELIM_COMPLET
 let state={version:'10.2',started:false,submitted:false,index:0,remaining:TOTAL,questions:[],answers:{},candidate:'',className:'',profile:'standard',paperId:'',seed:0,startedAt:0,submittedAt:0};
 let timer=null;
 const $=id=>document.getElementById(id);
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const norm=s=>String(s??'').toLowerCase().replace(/[“”‘’".,!?;:()[\]{}]/g,' ').replace(/\s+/g,' ').trim();
+const esc=s=>String(s??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>String(s??'').toLowerCase().replace(/[“”‘’\".,!?;:()[\]{}]/g,' ').replace(/\s+/g,' ').trim();
 function status(msg,good){const x=$('generatorStatus');if(x){x.textContent=msg;x.style.color=good===false?'#a33':good===true?'#2f6b50':'#53635b';x.style.background=good===false?'#fff3f3':good===true?'#eef6f1':'#f7faf8'}}
 function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id)?.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
@@ -42,17 +42,58 @@ const readyPromise=bootstrap().catch(e=>{status('Generator setup failed: '+e.mes
 function generatePaper(profile,seed){const G=window.APLUS_P6_PSLE_PAPER2_GENERATION_V1;if(!G||typeof G.generate!=='function')throw new Error('Paper 2 generator is not ready.');let last=null;for(let i=0;i<12;i++){const s=(seed+i*7919)>>>0;try{status('Building Paper 2 · attempt '+(i+1)+' of 12…');const r=G.generate({profile,seed:s});last=r;if(r&&r.ok&&validPaper(r.paper))return{paper:r.paper,seed:r.seed||s,diagnostics:r.diagnostics||{}}}catch(e){last={error:e.message||String(e)}}}throw new Error(last&&last.error?last.error:(last&&last.diagnostics&&last.diagnostics.reason)||'The connected question-generation layer did not return a valid 75-question / 90-mark paper.')}
 function buildNav(){const nav=$('sectionNav');if(!nav)return;nav.innerHTML=BLUEPRINT.map(b=>{const qs=state.questions.filter(q=>q.section===b.id);return '<div class="nav-section"><b>'+esc(b.name)+'</b><div class="nav-questions">'+qs.map(q=>'<button class="nav-q '+(q.number===state.index+1?'current ':'')+(state.answers[q.id]!=null&&String(state.answers[q.id]).trim()!==''?'answered':'')+'" data-q="'+q.number+'">'+q.number+'</button>').join('')+'</div></div>'}).join('');nav.querySelectorAll('[data-q]').forEach(btn=>btn.onclick=()=>{state.index=Number(btn.dataset.q)-1;save();renderQuestion()})}
 function current(){return state.questions[state.index]}
-function renderQuestion(){const q=current();if(!q)return;const b=BLUEPRINT.find(x=>x.id===q.section),card=$('questionCard');if(!b||!card)return;$('bookletLabel').textContent='BOOKLET '+b.b;$('sectionLabel').textContent=b.name.replace('BOOKLET '+b.b+' · ','').toUpperCase();$('progressText').textContent='Question '+q.number+' of 75';$('markText').textContent=q.marks+' '+(q.marks===1?'mark':'marks');$('progressBar').style.width=(q.number/75*100)+'%';let html='';if(q.visual)html+='<div class="visual-box"><h3>'+esc(q.visual.title||'VISUAL TEXT')+'</h3><pre>'+esc(q.visual.text||'')+'</pre></div>';if(q.passage)html+='<div class="passage-box">'+esc(q.passage).replace(/\n/g,'<br>')+'</div>';html+='<div class="question-number">Question '+q.number+'</div><h2 class="question-stem">'+esc(q.question||'')+'</h2>';if(q.type==='mcq')html+='<div class="options">'+q.options.map((o,i)=>'<label class="option"><input type="radio" name="answer" value="'+esc(o)+'" '+(norm(state.answers[q.id])===norm(o)?'checked':'')+'><span>'+String.fromCharCode(65+i)+'. '+esc(o)+'</span></label>').join('')+'</div>';else html+='<textarea id="oeAnswer" class="oe-answer" rows="4" placeholder="Type your answer here">'+esc(state.answers[q.id]||'')+'</textarea>';card.innerHTML=html;if(q.type==='mcq')card.querySelectorAll('input').forEach(x=>x.onchange=()=>{state.answers[q.id]=x.value;save();buildNav()});else if($('oeAnswer'))$('oeAnswer').oninput=e=>{state.answers[q.id]=e.target.value;save();buildNav()};buildNav();$('prevBtn').disabled=state.index===0;$('nextBtn').textContent=state.index===74?'REVIEW & SUBMIT':'Next'}
+function renderQuestion(){
+  const q=current();if(!q)return;
+  const b=BLUEPRINT.find(x=>x.id===q.section),card=$('questionCard');if(!b||!card)return;
+  $('bookletLabel').textContent='BOOKLET '+b.b;
+  $('sectionLabel').textContent=b.name.replace('BOOKLET '+b.b+' · ','').toUpperCase();
+  $('progressText').textContent='Question '+q.number+' of 75';
+  $('markText').textContent=q.marks+' '+(q.marks===1?'mark':'marks');
+  $('progressBar').style.width=(q.number/75*100)+'%';
+  let html='';
+  if(q.visual)html+='<div class="visual-box"><h3>'+esc(q.visual.title||'VISUAL TEXT')+'</h3><pre>'+esc(q.visual.text||'')+'</pre></div>';
+  if(q.passage)html+='<div class="passage-box">'+esc(q.passage).replace(/\n/g,'<br>')+'</div>';
+  html+='<div class="question-number">Question '+q.number+'</div><h2 class="question-stem">'+esc(q.question||'')+'</h2>';
+  if(q.type==='mcq'){
+    html+='<div class="options psle-options">'+q.options.map((o,i)=>{
+      const letter=String.fromCharCode(65+i);
+      return '<label class="option psle-option"><input type="radio" name="answer" value="'+esc(o)+'" '+(norm(state.answers[q.id])===norm(o)?'checked':'')+'><span class="option-letter">'+letter+'.</span><span class="option-answer">'+esc(o)+'</span></label>';
+    }).join('')+'</div>';
+  }else{
+    html+='<textarea id="oeAnswer" class="oe-answer" rows="4" placeholder="Type your answer here">'+esc(state.answers[q.id]||'')+'</textarea>';
+  }
+  card.innerHTML=html;
+  if(q.type==='mcq')card.querySelectorAll('input').forEach(x=>x.onchange=()=>{state.answers[q.id]=x.value;save();buildNav()});
+  else if($('oeAnswer'))$('oeAnswer').oninput=e=>{state.answers[q.id]=e.target.value;save();buildNav()};
+  buildNav();
+  $('prevBtn').disabled=state.index===0;
+  $('nextBtn').textContent=state.index===74?'REVIEW & SUBMIT':'Next';
+}
 function scoreAnswer(q,a){if(a==null||String(a).trim()==='')return 0;const accepted=q.acceptedPatterns||[q.answer],n=norm(a);if(accepted.some(x=>norm(x)===n))return Number(q.marks)||0;const toks=n.split(' ').filter(Boolean);if((q.section==='comprehension'||q.section==='synthesis')&&toks.length>=2){const key=norm(q.answer).split(' ').filter(x=>x.length>2),hit=key.filter(x=>toks.includes(x)).length,ratio=q.section==='synthesis'?.75:.6;if(hit>=Math.max(1,Math.ceil(key.length*ratio)))return Number(q.marks)||0}return 0}
 function summary(){const n=state.questions.filter(q=>state.answers[q.id]!=null&&String(state.answers[q.id]).trim()!=='').length;return '<strong>'+n+' / 75</strong> questions answered<br><span>'+(75-n)+' unanswered</span>'}
 function result(){let total=0;const sec={},skills={};state.questions.forEach(q=>{const s=scoreAnswer(q,state.answers[q.id]);total+=s;sec[q.section]=(sec[q.section]||0)+s;const k=q.skill||q.section;skills[k]??={score:0,max:0};skills[k].score+=s;skills[k].max+=Number(q.marks)||0});$('score').textContent=total+' / 90';$('percentage').textContent=Math.round(total/90*100)+'%';$('paperId').textContent='Paper ID: '+esc(state.paperId);$('resultMessage').textContent=total>=81?'Excellent accuracy':total>=63?'Strong progress':total>=45?'More practice needed':'Let’s rebuild the basics';$('sectionResults').innerHTML=BLUEPRINT.map(b=>'<div class="result-row"><span>'+esc(b.name)+'</span><strong>'+(sec[b.id]||0)+' / '+b.marks+'</strong></div>').join('');const arr=Object.entries(skills).sort((a,b)=>(b[1].score/b[1].max)-(a[1].score/a[1].max)).slice(0,12);$('skillResults').innerHTML='<h3>Skill Profile</h3>'+arr.map(([k,v])=>'<div class="result-row"><span>'+esc(k)+'</span><strong>'+v.score+' / '+v.max+'</strong></div>').join('');show('result')}
 function submit(auto){if(state.submitted)return;if(!auto&&!window.confirm('Submit this paper? Your answers will be locked for this attempt.'))return;state.submitted=true;state.submittedAt=Date.now();clearInterval(timer);try{localStorage.setItem(DONE,JSON.stringify(state));localStorage.removeItem(KEY)}catch(e){}result()}
-async function generate(){const btn=$('startBtn');if(btn)btn.disabled=true;try{status('Checking generator…');await readyPromise;const profile=$('paperProfile')?.value||'standard',candidate=$('candidateName')?.value.trim()||'',className=$('candidateClass')?.value.trim()||'',seed=(Math.random()*4294967295)>>>0;const out=generatePaper(profile,seed);state={version:'10.2',started:true,submitted:false,index:0,remaining:TOTAL,questions:out.paper.map((q,i)=>Object.assign({},q,{number:i+1,id:q.id||('P2-'+out.seed+'-'+(i+1)),sectionName:(BLUEPRINT.find(b=>b.id===q.section)||{}).name||q.section})),answers:{},candidate,className,profile,paperId:'APLUS-P6-ENG-P2-'+new Date().getFullYear()+'-'+String(out.seed%1000000).padStart(6,'0'),seed:out.seed,startedAt:Date.now(),submittedAt:0};save();status('Paper generated successfully · 75 questions · 90 marks',true);show('exam');startClock();renderQuestion()}catch(e){console.error('[APLUS Prelim V10.2]',e);status('Generation failed: '+(e.message||String(e)),false);window.setTimeout(()=>window.alert('APLUS Prelim Generator\n\nGeneration failed:\n'+(e.message||String(e))+'\n\nNo incomplete paper was opened.'),20)}finally{if(btn)btn.disabled=false}}
+async function generate(){const btn=$('startBtn');if(btn)btn.disabled=true;try{status('Checking generator…');await readyPromise;const profile=$('paperProfile')?.value||'standard',candidate=$('candidateName')?.value.trim()||'',className=$('candidateClass')?.value.trim()||'',seed=(Math.random()*4294967295)>>>0;const out=generatePaper(profile,seed);state={version:'10.2',started:true,submitted:false,index:0,remaining:TOTAL,questions:out.paper.map((q,i)=>Object.assign({},q,{number:i+1,id:q.id||('P2-'+out.seed+'-'+(i+1)),sectionName:(BLUEPRINT.find(b=>b.id===q.section)||{}).name||q.section})),answers:{},candidate,className,profile,paperId:'APLUS-P6-ENG-P2-'+new Date().getFullYear()+'-'+String(out.seed%1000000).padStart(6,'0'),seed:out.seed,startedAt:Date.now(),submittedAt:0};save();status('Paper generated successfully · 75 questions · 90 marks',true);show('exam');startClock();renderQuestion()}catch(e){console.error('[APLUS Prelim V10.3]',e);status('Generation failed: '+(e.message||String(e)),false);window.setTimeout(()=>window.alert('APLUS Prelim Generator\n\nGeneration failed:\n'+(e.message||String(e))+'\n\nNo incomplete paper was opened.'),20)}finally{if(btn)btn.disabled=false}}
 function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||'null');if(x&&x.version==='10.2'&&Array.isArray(x.questions)&&x.questions.length===75){state=Object.assign(state,x);$('resumeBtn')?.classList.remove('hidden');return true}}catch(e){}return false}
 function resume(){if(!load())return;show('exam');startClock();renderQuestion()}
 function review(){show('exam');renderQuestion()}
 function printPaper(){const w=window.open('','_blank');if(!w)return;const rows=state.questions.map(q=>'<section style="page-break-inside:avoid;margin:0 0 24px"><h3>Question '+q.number+' · '+esc(q.sectionName||q.section)+'</h3>'+(q.visual?'<pre>'+esc(q.visual.text)+'</pre>':'')+(q.passage?'<div>'+esc(q.passage).replace(/\n/g,'<br>')+'</div>':'')+'<p><b>'+esc(q.question)+'</b></p>'+(q.options?'<ol type="A">'+q.options.map(o=>'<li>'+esc(o)+'</li>').join('')+'</ol>':'')+'<p><b>Student answer:</b> '+esc(state.answers[q.id]||'')+'</p></section>').join('');w.document.write('<!doctype html><html><head><title>APLUS P6 English Prelim</title><style>body{font-family:Arial;max-width:850px;margin:30px auto;line-height:1.5}pre{white-space:pre-wrap;border:1px solid #ccc;padding:12px}</style></head><body><h1>APLUS P6 English Prelim</h1><p>PSLE-Style English Language Examination · Paper 2</p><p>Candidate: '+esc(state.candidate)+' · Class: '+esc(state.className)+'</p><p>Paper ID: '+esc(state.paperId)+'</p>'+rows+'</body></html>');w.document.close();w.focus();w.print()}
-function wire(){const start=$('startBtn');if(start){start.onclick=generate;start.type='button'}if($('resumeBtn'))$('resumeBtn').onclick=resume;if($('prevBtn'))$('prevBtn').onclick=()=>{if(state.index>0){state.index--;save();renderQuestion()}};if($('nextBtn'))$('nextBtn').onclick=()=>{if(state.index<74){state.index++;save();renderQuestion()}else{show('submitScreen');$('submitSummary').innerHTML=summary()}};if($('confirmSubmitBtn'))$('confirmSubmitBtn').onclick=()=>submit(false);if($('backToExamBtn'))$('backToExamBtn').onclick=()=>{show('exam');renderQuestion()};if($('reviewBtn'))$('reviewBtn').onclick=review;if($('printBtn'))$('printBtn').onclick=printPaper;if($('newExamBtn'))$('newExamBtn').onclick=()=>{try{localStorage.removeItem(DONE);localStorage.removeItem(KEY)}catch(e){}show('landing');status('Ready for a new Paper 2',true)};load();}
+function injectPsleMcqStyle(){
+  if(document.getElementById('aplus-psle-mcq-layout'))return;
+  const s=document.createElement('style');s.id='aplus-psle-mcq-layout';
+  s.textContent=`
+    .psle-options{display:flex;flex-direction:column;gap:0;margin-top:22px}
+    .psle-option{display:grid!important;grid-template-columns:30px 34px minmax(0,1fr);align-items:center;column-gap:0!important;min-height:52px!important;padding:10px 12px!important;margin:0!important;border:0!important;border-bottom:1px solid #e6ece8!important;border-radius:0!important;background:transparent!important;box-sizing:border-box}
+    .psle-option:first-child{border-top:1px solid #e6ece8!important}
+    .psle-option:hover{background:#f7faf8!important}
+    .psle-option input{width:18px!important;height:18px!important;margin:0!important;accent-color:#2f6b50}
+    .psle-option .option-letter{font-weight:700!important;color:#17362a!important;font-size:16px!important;line-height:1.4!important;white-space:nowrap!important}
+    .psle-option .option-answer{font-size:16px!important;line-height:1.45!important;color:#20362d!important;min-width:0!important;overflow-wrap:normal!important;word-break:normal!important}
+    @media(max-width:760px){.psle-option{grid-template-columns:28px 30px minmax(0,1fr);min-height:48px!important;padding:9px 8px!important}.psle-option .option-letter,.psle-option .option-answer{font-size:15px!important}}
+  `;
+  document.head.appendChild(s);
+}
+function wire(){injectPsleMcqStyle();const start=$('startBtn');if(start){start.onclick=generate;start.type='button'}if($('resumeBtn'))$('resumeBtn').onclick=resume;if($('prevBtn'))$('prevBtn').onclick=()=>{if(state.index>0){state.index--;save();renderQuestion()}};if($('nextBtn'))$('nextBtn').onclick=()=>{if(state.index<74){state.index++;save();renderQuestion()}else{show('submitScreen');$('submitSummary').innerHTML=summary()}};if($('confirmSubmitBtn'))$('confirmSubmitBtn').onclick=()=>submit(false);if($('backToExamBtn'))$('backToExamBtn').onclick=()=>{show('exam');renderQuestion()};if($('reviewBtn'))$('reviewBtn').onclick=review;if($('printBtn'))$('printBtn').onclick=printPaper;if($('newExamBtn'))$('newExamBtn').onclick=()=>{try{localStorage.removeItem(DONE);localStorage.removeItem(KEY)}catch(e){}show('landing');status('Ready for a new Paper 2',true)};load()}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wire);else wire();
 window.APLUS_P6_PRELIM_V10={generate,blueprint:BLUEPRINT};
 })();
