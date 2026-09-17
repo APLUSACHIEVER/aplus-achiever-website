@@ -16,7 +16,6 @@
 <main class="wrap">
   <div class="top">
     <div class="brand">
-       
       <div><div class="eyebrow">APLUS ACHIEVER</div><div class="title">My Progress</div><p class="sub">See how your vocabulary learning is building over time.</p></div>
     </div>
     <a class="back" href="vocabulary.html">← Back to Learning</a>
@@ -49,6 +48,18 @@
     <div class="source" id="source"></div>
   </section>
 
+  <section class="card" id="tokenCard">
+    <h3>🏆 APLUS AI TOKEN</h3>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <div><div style="font-size:42px;font-weight:900;color:var(--green)" id="tokenBalance">0</div><div style="color:var(--muted);font-size:13px">Learn. Improve. Earn.</div></div>
+      <div style="text-align:right;color:var(--muted);font-size:13px" id="tokenToday">+0 today</div>
+    </div>
+    <div style="margin-top:16px;padding:14px 16px;background:#f7fbf9;border-radius:14px">
+      <div style="font-weight:800;color:var(--deep);margin-bottom:6px">How you earn Tokens</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.7">✓ Correct answer +2 &nbsp; • &nbsp; Daily 10 completed +20 &nbsp; • &nbsp; Master a word +5 &nbsp; • &nbsp; Fluency Test +30</div>
+    </div>
+  </section>
+
   <section class="card">
     <h3>Keep learning</h3>
     <div class="actions"><a class="btn" href="vocabulary.html">Start Learning</a><a class="btn secondary" href="vocabulary.html#quiz">Continue Practice</a></div>
@@ -57,126 +68,58 @@
 </main>
 <script>
 (function(){
-  // Read the vocabulary system's actual browser data instead of relying on one guessed key.
-  // We inspect localStorage and sessionStorage, then recursively analyse the saved objects.
   const stores=[];
-  function readStore(storage,name){
-    try{
-      for(let i=0;i<storage.length;i++){
-        const key=storage.key(i); if(!key) continue;
-        const raw=storage.getItem(key); if(!raw) continue;
-        let value=raw;
-        try{ value=JSON.parse(raw); }catch(e){}
-        stores.push({name,key,value,raw});
-      }
-    }catch(e){}
-  }
-  readStore(localStorage,'localStorage');
-  readStore(sessionStorage,'sessionStorage');
-
-  const records=[];
-  const seen=new WeakSet();
-  function walk(value,path){
-    if(value==null)return;
-    if(typeof value==='number' && isFinite(value)){
-      records.push({key:path.toLowerCase(),value});
-      return;
-    }
-    if(typeof value==='string'){
-      const n=Number(value);
-      if(value.trim()!=='' && isFinite(n)) records.push({key:path.toLowerCase(),value:n});
-      return;
-    }
-    if(typeof value!=='object')return;
-    if(seen.has(value))return;
-    seen.add(value);
-    if(Array.isArray(value)){value.forEach((v,i)=>walk(v,path+'['+i+']'));return;}
-    Object.keys(value).forEach(k=>walk(value[k],path+'.'+k));
-  }
+  function readStore(storage,name){try{for(let i=0;i<storage.length;i++){const key=storage.key(i);if(!key)continue;const raw=storage.getItem(key);if(!raw)continue;let value=raw;try{value=JSON.parse(raw)}catch(e){}stores.push({name,key,value,raw})}}catch(e){}}
+  readStore(localStorage,'localStorage');readStore(sessionStorage,'sessionStorage');
+  const records=[];const seen=new WeakSet();
+  function walk(value,path){if(value==null)return;if(typeof value==='number'&&isFinite(value)){records.push({key:path.toLowerCase(),value});return}if(typeof value==='string'){const n=Number(value);if(value.trim()!==''&&isFinite(n))records.push({key:path.toLowerCase(),value:n});return}if(typeof value!=='object')return;if(seen.has(value))return;seen.add(value);if(Array.isArray(value)){value.forEach((v,i)=>walk(v,path+'['+i+']'));return}Object.keys(value).forEach(k=>walk(value[k],path+'.'+k))}
   stores.forEach(s=>walk(s.value,s.key));
-
-  function scoreRecord(patterns){
-    let best=null;
-    for(const r of records){
-      if(patterns.some(p=>r.key.includes(p))){
-        // Prefer exact-ish metric names over nested index/date fields.
-        let score=0;
-        patterns.forEach(p=>{if(r.key.endsWith(p))score+=8;else if(r.key.includes(p))score+=2;});
-        if(!best || score>best.score) best={value:r.value,score,key:r.key};
-      }
-    }
-    return best;
-  }
-  function sumMatching(patterns){
-    let total=0;
-    records.forEach(r=>{if(patterns.some(p=>r.key.includes(p)))total+=r.value;});
-    return total;
-  }
-
+  function scoreRecord(patterns){let best=null;for(const r of records){if(patterns.some(p=>r.key.includes(p))){let score=0;patterns.forEach(p=>{if(r.key.endsWith(p))score+=8;else if(r.key.includes(p))score+=2});if(!best||score>best.score)best={value:r.value,score,key:r.key}}}return best}
+  function sumMatching(patterns){let total=0;records.forEach(r=>{if(patterns.some(p=>r.key.includes(p)))total+=r.value});return total}
   let answered=(scoreRecord(['questionsanswered','answered','totalquestions','attempts','attempted'])||{}).value||0;
   let correct=(scoreRecord(['correctanswers','correct'])||{}).value||0;
   let wrong=(scoreRecord(['wronganswers','incorrect','wrong'])||{}).value||0;
   let daily=(scoreRecord(['daily10completed','daily10','dailycompleted'])||{}).value||0;
   let fluency=(scoreRecord(['fluencytestscompleted','fluencytests','testcompleted','testscompleted'])||{}).value||0;
-
-  // If the system stores individual answer records, count them as a fallback.
-  if(!answered){
-    answered=sumMatching(['questionattempts','attemptcount','answercount']);
-  }
-  if(!correct){
-    correct=sumMatching(['correctcount','correctanswerscount']);
-  }
-  if(!wrong){
-    wrong=sumMatching(['wrongcount','incorrectcount']);
-  }
-  if(!answered && (correct||wrong)) answered=correct+wrong;
-
-  // Count unique vocabulary entries when a mastery/progress object is stored.
+  if(!answered)answered=sumMatching(['questionattempts','attemptcount','answercount']);
+  if(!correct)correct=sumMatching(['correctcount','correctanswerscount']);
+  if(!wrong)wrong=sumMatching(['wrongcount','incorrectcount']);
+  if(!answered&&(correct||wrong))answered=correct+wrong;
   let words=0;
-  for(const s of stores){
-    const key=s.key.toLowerCase();
-    if(!/(mastery|wordprogress|vocab|vocabulary|word)/.test(key))continue;
-    if(s.value && typeof s.value==='object' && !Array.isArray(s.value)){
-      const n=Object.keys(s.value).filter(k=>!/^(_|meta|total|count|score|accuracy)/i.test(k)).length;
-      if(n>words)words=n;
-    }
+  for(const s of stores){const key=s.key.toLowerCase();if(!/(mastery|wordprogress|vocab|vocabulary|word)/.test(key))continue;if(s.value&&typeof s.value==='object'&&!Array.isArray(s.value)){const n=Object.keys(s.value).filter(k=>!/^(_|meta|total|count|score|accuracy)/i.test(k)).length;if(n>words)words=n}}
+  if(!words){const wordLike=records.filter(r=>/(mastery|wordprogress|wordhistory|vocab)/.test(r.key));words=new Set(wordLike.map(r=>r.key.replace(/\.[^.]+$/,''))).size}
+  answered=Math.max(0,Math.round(answered));correct=Math.max(0,Math.round(correct));wrong=Math.max(0,Math.round(wrong));daily=Math.max(0,Math.round(daily));fluency=Math.max(0,Math.round(fluency));words=Math.max(0,Math.round(words));if(!wrong&&answered>correct)wrong=answered-correct;if(!answered&&correct)answered=correct+wrong;const acc=answered?Math.max(0,Math.min(100,Math.round(correct/answered*100))):0;
+  document.getElementById('answered').textContent=answered.toLocaleString();document.getElementById('correct').textContent=correct.toLocaleString();document.getElementById('accuracy').textContent=acc+'%';document.getElementById('accuracyLabel').textContent=acc+'%';document.getElementById('accuracyBar').style.width=acc+'%';document.getElementById('words').textContent=words.toLocaleString();document.getElementById('daily10').textContent=daily.toLocaleString();document.getElementById('fluency').textContent=fluency.toLocaleString();document.getElementById('wrong').textContent=wrong.toLocaleString();
+  const hasData=stores.length>0&&(answered||correct||wrong||daily||fluency||words);if(hasData){document.getElementById('emptyMessage').style.display='none';document.getElementById('greeting').textContent='Your learning progress';const sourceKeys=[...new Set(stores.map(s=>s.key))];document.getElementById('source').textContent='Learning data found in this browser ('+sourceKeys.length+' saved item'+(sourceKeys.length===1?'':'s')+').'}else if(stores.length){document.getElementById('emptyMessage').textContent='Learning data is saved in this browser, but the current vocabulary data format has not been mapped yet.';document.getElementById('source').textContent='Saved browser items detected: '+stores.map(s=>s.key).join(', ')}
+})();
+</script>
+<script>
+(function(){
+  'use strict';
+  const DB_KEY='aplusAchieverPSLEV10TutorV1';
+  const TOKEN_KEY='aplusAchieverAITokenV1';
+  const FLUENCY_KEY='aplusAchieverFluencyV1';
+  const today=()=>new Date().toISOString().slice(0,10);
+  function read(key, fallback){try{const x=JSON.parse(localStorage.getItem(key));return x==null?fallback:x}catch(e){return fallback}}
+  function write(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch(e){}}
+  function getDB(){const d=read(DB_KEY,null);return d&&typeof d==='object'?d:null}
+  function getToken(){return Object.assign({balance:0,rewardedCorrect:0,dailyDates:[],masteredWords:[],fluencyDates:[],streakRewards:[],history:[]},read(TOKEN_KEY,{}))}
+  function addToken(t,amount,reason){if(!amount)return; t.balance+=amount;t.history.push({date:today(),amount,reason});if(t.history.length>100)t.history=t.history.slice(-100)}
+  function sync(){
+    const db=getDB();if(!db)return getToken();
+    const t=getToken();
+    const correct=Number(db.correct||0);if(correct>t.rewardedCorrect){addToken(t,(correct-t.rewardedCorrect)*2,'Correct answers');t.rewardedCorrect=correct}
+    const days=db.days&&typeof db.days==='object'?db.days:{};t.dailyDates=Array.isArray(t.dailyDates)?t.dailyDates:[];
+    Object.keys(days).forEach(d=>{const q=Number((days[d]||{}).q||0);if(q>=10&&!t.dailyDates.includes(d)){addToken(t,20,'Daily 10 completed');t.dailyDates.push(d)}});
+    t.masteredWords=Array.isArray(t.masteredWords)?t.masteredWords:[];const words=db.words&&typeof db.words==='object'?db.words:{};
+    Object.keys(words).forEach(w=>{if(Number((words[w]||{}).mastery||0)>=90&&!t.masteredWords.includes(w)){addToken(t,5,'Word mastered');t.masteredWords.push(w)}});
+    t.fluencyDates=Array.isArray(t.fluencyDates)?t.fluencyDates:[];const f=read(FLUENCY_KEY,null);if(f&&f.date){const fd=String(f.date).slice(0,10);if(!t.fluencyDates.includes(fd)){addToken(t,30,'Fluency Test completed');t.fluencyDates.push(fd)}}
+    t.streakRewards=Array.isArray(t.streakRewards)?t.streakRewards:[];const ds=Object.keys(days).sort().reverse();let streak=0;for(let i=0;i<ds.length;i++){const expected=new Date();expected.setDate(new Date().getDate()-i);if(ds[i]===expected.toISOString().slice(0,10))streak++;else break}
+    [[3,30],[7,80]].forEach(([n,reward])=>{const key=String(n);if(streak>=n&&!t.streakRewards.includes(key)){addToken(t,reward,n+'-day learning streak');t.streakRewards.push(key)}});
+    write(TOKEN_KEY,t);return t;
   }
-  if(!words){
-    const wordLike=records.filter(r=>/(mastery|wordprogress|wordhistory|vocab)/.test(r.key));
-    words=new Set(wordLike.map(r=>r.key.replace(/\.[^.]+$/,''))).size;
-  }
-
-  // Avoid treating a percentage/score as a question count.
-  answered=Math.max(0,Math.round(answered));
-  correct=Math.max(0,Math.round(correct));
-  wrong=Math.max(0,Math.round(wrong));
-  daily=Math.max(0,Math.round(daily));
-  fluency=Math.max(0,Math.round(fluency));
-  words=Math.max(0,Math.round(words));
-  if(!wrong && answered>correct)wrong=answered-correct;
-  if(!answered && correct)answered=correct+wrong;
-  const acc=answered?Math.max(0,Math.min(100,Math.round(correct/answered*100))):0;
-
-  document.getElementById('answered').textContent=answered.toLocaleString();
-  document.getElementById('correct').textContent=correct.toLocaleString();
-  document.getElementById('accuracy').textContent=acc+'%';
-  document.getElementById('accuracyLabel').textContent=acc+'%';
-  document.getElementById('accuracyBar').style.width=acc+'%';
-  document.getElementById('words').textContent=words.toLocaleString();
-  document.getElementById('daily10').textContent=daily.toLocaleString();
-  document.getElementById('fluency').textContent=fluency.toLocaleString();
-  document.getElementById('wrong').textContent=wrong.toLocaleString();
-
-  const hasData=stores.length>0 && (answered||correct||wrong||daily||fluency||words);
-  if(hasData){
-    document.getElementById('emptyMessage').style.display='none';
-    document.getElementById('greeting').textContent='Your learning progress';
-    const sourceKeys=[...new Set(stores.map(s=>s.key))];
-    document.getElementById('source').textContent='Learning data found in this browser ('+sourceKeys.length+' saved item'+(sourceKeys.length===1?'':'s')+').';
-  }else if(stores.length){
-    document.getElementById('emptyMessage').textContent='Learning data is saved in this browser, but the current vocabulary data format has not been mapped yet.';
-    document.getElementById('source').textContent='Saved browser items detected: '+stores.map(s=>s.key).join(', ');
-  }
+  function render(){const t=sync();const bal=document.getElementById('tokenBalance');const td=document.getElementById('tokenToday');if(!bal||!td)return;bal.textContent=Number(t.balance||0).toLocaleString();const d=t.history.filter(x=>x.date===today()).reduce((s,x)=>s+Number(x.amount||0),0);td.textContent='+'+d+' today'}
+  render();window.addEventListener('pageshow',render);
 })();
 </script>
 </body>
