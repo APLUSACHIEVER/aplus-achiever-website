@@ -1,1490 +1,892 @@
-// ============================================================
-// APLUS ACHIEVER — PSLE ENGLISH VOCABULARY 1000
-// ============================================================
-// 1,000-word PSLE-oriented vocabulary database
-// Level 1–10: exactly 100 words per level
-//
-// Data fields:
-// id, word, partOfSpeech, level, meaning, chinese,
-// synonyms, antonyms, example, topics, questionTypes
-//
-// Note: This is an APLUS ACHIEVER learning database.
-// It is NOT an official SEAB vocabulary list.
-// ============================================================
-
-const vocabulary = [
+// APLUS ACHIEVER PSLE ENGLISH VOCABULARY 1000
+// PSLE-focused curated edition. Not an official SEAB word list.
+window.vocabulary = [
   {
     "id": 1,
     "word": "able",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is able",
-    "chinese": "“able”的常用中文释义",
+    "meaning": "having the skill or opportunity to do something",
+    "chinese": "有能力的；能够的",
     "synonyms": [
       "capable"
     ],
     "antonyms": [
       "unable"
     ],
-    "example": "The school situation was described as able by the teacher.",
+    "example": "Mia was able to finish the puzzle by herself.",
     "topics": [
-      "foundation"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 2,
-    "word": "about",
-    "partOfSpeech": "noun",
+    "word": "absent",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with about",
-    "chinese": "“about”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about about in a school context.",
+    "meaning": "not present in a place where you are expected to be",
+    "chinese": "缺席的；不在的",
+    "synonyms": [
+      "away"
+    ],
+    "antonyms": [
+      "present"
+    ],
+    "example": "Tom was absent from school because he was ill.",
     "topics": [
-      "foundation"
+      "School",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 3,
-    "word": "above",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with above",
-    "chinese": "“above”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about above in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 4,
-    "word": "across",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with across",
-    "chinese": "“across”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about across in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 5,
-    "word": "act",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with act",
-    "chinese": "“act”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about act in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 6,
-    "word": "active",
-    "partOfSpeech": "adjective",
-    "level": 1,
-    "meaning": "describing someone or something that is active",
-    "chinese": "“active”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The school situation was described as active by the teacher.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 7,
-    "word": "add",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with add",
-    "chinese": "“add”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about add in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 8,
     "word": "afraid",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is afraid",
-    "chinese": "“afraid”的常用中文释义",
+    "meaning": "feeling fear or worry",
+    "chinese": "害怕的；担心的",
     "synonyms": [
-      "frightened",
-      "scared"
+      "scared",
+      "frightened"
     ],
     "antonyms": [
       "brave"
     ],
-    "example": "The school situation was described as afraid by the teacher.",
+    "example": "The little boy was afraid of the dark.",
     "topics": [
-      "foundation"
+      "Emotions",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 4,
+    "word": "alive",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "living and not dead",
+    "chinese": "活着的",
+    "synonyms": [
+      "living"
+    ],
+    "antonyms": [
+      "dead"
+    ],
+    "example": "The fish was still alive when we returned it to the pond.",
+    "topics": [
+      "Nature",
+      "Science"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 5,
+    "word": "alone",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "without other people",
+    "chinese": "独自的；单独的",
+    "synonyms": [
+      "by oneself"
+    ],
+    "antonyms": [
+      "together"
+    ],
+    "example": "She stayed alone in the library to finish her project.",
+    "topics": [
+      "School",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 6,
+    "word": "angry",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "feeling strong displeasure",
+    "chinese": "生气的；愤怒的",
+    "synonyms": [
+      "furious",
+      "cross"
+    ],
+    "antonyms": [
+      "upset"
+    ],
+    "example": "Dad was angry when he discovered the broken window.",
+    "topics": [
+      "Emotions",
+      "Family"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 7,
+    "word": "arrive",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to reach a place after travelling",
+    "chinese": "到达",
+    "synonyms": [
+      "reach"
+    ],
+    "antonyms": [
+      "depart",
+      "leave"
+    ],
+    "example": "We arrived at the museum before the tour began.",
+    "topics": [
+      "Travel",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 8,
+    "word": "awake",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "not sleeping",
+    "chinese": "醒着的",
+    "synonyms": [
+      "alert"
+    ],
+    "antonyms": [
+      "asleep"
+    ],
+    "example": "I was still awake when the rain started.",
+    "topics": [
+      "Daily Life",
+      "Health"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 9,
-    "word": "after",
-    "partOfSpeech": "noun",
+    "word": "basic",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with after",
-    "chinese": "“after”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about after in a school context.",
+    "meaning": "simple and necessary",
+    "chinese": "基本的；基础的",
+    "synonyms": [
+      "fundamental",
+      "simple"
+    ],
+    "antonyms": [
+      "advanced"
+    ],
+    "example": "Students first learn basic multiplication skills.",
     "topics": [
-      "foundation"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 10,
-    "word": "again",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with again",
-    "chinese": "“again”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about again in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 11,
-    "word": "against",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with against",
-    "chinese": "“against”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about against in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 12,
-    "word": "agree",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with agree",
-    "chinese": "“agree”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about agree in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 13,
-    "word": "air",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with air",
-    "chinese": "“air”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about air in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 14,
-    "word": "alive",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with alive",
-    "chinese": "“alive”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about alive in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 15,
-    "word": "allow",
-    "partOfSpeech": "verb",
-    "level": 1,
-    "meaning": "to allow or to carry out the action described by the word",
-    "chinese": "“allow”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to allow carefully during the school activity.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 16,
-    "word": "almost",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with almost",
-    "chinese": "“almost”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about almost in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 17,
-    "word": "alone",
-    "partOfSpeech": "adjective",
-    "level": 1,
-    "meaning": "describing someone or something that is alone",
-    "chinese": "“alone”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The school situation was described as alone by the teacher.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 18,
-    "word": "along",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with along",
-    "chinese": "“along”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about along in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 19,
-    "word": "already",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with already",
-    "chinese": "“already”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about already in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 20,
-    "word": "always",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with always",
-    "chinese": "“always”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about always in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 21,
-    "word": "animal",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with animal",
-    "chinese": "“animal”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about animal in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 22,
-    "word": "answer",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with answer",
-    "chinese": "“answer”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about answer in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 23,
-    "word": "appear",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with appear",
-    "chinese": "“appear”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about appear in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 24,
-    "word": "apple",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with apple",
-    "chinese": "“apple”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about apple in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 25,
-    "word": "area",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with area",
-    "chinese": "“area”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about area in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 26,
-    "word": "around",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with around",
-    "chinese": "“around”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about around in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 27,
-    "word": "arrive",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with arrive",
-    "chinese": "“arrive”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about arrive in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 28,
-    "word": "ask",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with ask",
-    "chinese": "“ask”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about ask in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 29,
-    "word": "away",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with away",
-    "chinese": "“away”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about away in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 30,
-    "word": "baby",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with baby",
-    "chinese": "“baby”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about baby in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 31,
-    "word": "back",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with back",
-    "chinese": "“back”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about back in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 32,
-    "word": "bad",
-    "partOfSpeech": "adjective",
-    "level": 1,
-    "meaning": "describing someone or something that is bad",
-    "chinese": "“bad”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The school situation was described as bad by the teacher.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 33,
-    "word": "bag",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with bag",
-    "chinese": "“bag”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about bag in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 34,
-    "word": "ball",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with ball",
-    "chinese": "“ball”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about ball in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 35,
     "word": "beautiful",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is beautiful",
-    "chinese": "“beautiful”的常用中文释义",
+    "meaning": "very attractive or pleasing to look at",
+    "chinese": "美丽的",
     "synonyms": [
       "lovely",
-      "attractive"
+      "pretty"
     ],
     "antonyms": [
       "ugly"
     ],
-    "example": "The school situation was described as beautiful by the teacher.",
+    "example": "The garden looked beautiful after the flowers bloomed.",
     "topics": [
-      "foundation"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 11,
+    "word": "begin",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to start doing something",
+    "chinese": "开始",
+    "synonyms": [
+      "start",
+      "commence"
+    ],
+    "antonyms": [
+      "end",
+      "finish"
+    ],
+    "example": "The lesson will begin at eight o'clock.",
+    "topics": [
+      "School",
+      "Time"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 12,
+    "word": "belong",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to be owned by someone or be part of a group",
+    "chinese": "属于",
+    "synonyms": [
+      "be owned by"
+    ],
+    "antonyms": [],
+    "example": "This blue notebook belongs to Sarah.",
+    "topics": [
+      "School",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 13,
+    "word": "brave",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "willing to face danger or difficulty",
+    "chinese": "勇敢的",
+    "synonyms": [
+      "courageous",
+      "fearless"
+    ],
+    "antonyms": [
+      "cowardly",
+      "afraid"
+    ],
+    "example": "The brave firefighter entered the building to help the family.",
+    "topics": [
+      "Safety",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 14,
+    "word": "bright",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "giving out or reflecting a lot of light",
+    "chinese": "明亮的",
+    "synonyms": [
+      "shiny",
+      "brilliant"
+    ],
+    "antonyms": [
+      "dim",
+      "dark"
+    ],
+    "example": "The bright sunlight filled the room.",
+    "topics": [
+      "Nature",
+      "Description"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 15,
+    "word": "broken",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "damaged so that something no longer works properly",
+    "chinese": "破损的；坏掉的",
+    "synonyms": [
+      "damaged"
+    ],
+    "antonyms": [
+      "whole",
+      "unbroken"
+    ],
+    "example": "The broken chair was removed from the classroom.",
+    "topics": [
+      "Daily Life",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 16,
+    "word": "busy",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having a lot to do",
+    "chinese": "忙碌的",
+    "synonyms": [
+      "occupied"
+    ],
+    "antonyms": [
+      "idle",
+      "free"
+    ],
+    "example": "Mum was busy preparing dinner for the family.",
+    "topics": [
+      "Family",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 17,
+    "word": "calm",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "peaceful and not worried or excited",
+    "chinese": "平静的；镇定的",
+    "synonyms": [
+      "peaceful",
+      "composed"
+    ],
+    "antonyms": [
+      "agitated",
+      "excited"
+    ],
+    "example": "She stayed calm during the difficult examination.",
+    "topics": [
+      "Emotions",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 18,
+    "word": "careful",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "giving attention to avoid mistakes or danger",
+    "chinese": "小心的；谨慎的",
+    "synonyms": [
+      "cautious"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "Be careful when you cross the busy road.",
+    "topics": [
+      "Safety",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 19,
+    "word": "certain",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "sure that something is True or will happen",
+    "chinese": "确定的",
+    "synonyms": [
+      "sure",
+      "confident"
+    ],
+    "antonyms": [
+      "uncertain"
+    ],
+    "example": "I am certain that I left my keys on the table.",
+    "topics": [
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 20,
+    "word": "change",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to make or become different",
+    "chinese": "改变",
+    "synonyms": [
+      "alter",
+      "modify"
+    ],
+    "antonyms": [
+      "keep"
+    ],
+    "example": "The teacher asked us to change the ending of the story.",
+    "topics": [
+      "School",
+      "Writing"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 21,
+    "word": "clean",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "free from dirt or unwanted marks",
+    "chinese": "干净的",
+    "synonyms": [
+      "tidy",
+      "spotless"
+    ],
+    "antonyms": [
+      "dirty"
+    ],
+    "example": "Please keep your desk clean.",
+    "topics": [
+      "School",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 22,
+    "word": "clever",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "quick to learn, understand or solve problems",
+    "chinese": "聪明的；机灵的",
+    "synonyms": [
+      "smart",
+      "bright"
+    ],
+    "antonyms": [
+      "foolish"
+    ],
+    "example": "The clever girl found a simple way to solve the problem.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 23,
+    "word": "close",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to move something so that it is no longer open",
+    "chinese": "关闭",
+    "synonyms": [
+      "shut"
+    ],
+    "antonyms": [
+      "open"
+    ],
+    "example": "Please close the door quietly.",
+    "topics": [
+      "Daily Life",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 24,
+    "word": "cloudy",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "covered with many clouds",
+    "chinese": "多云的",
+    "synonyms": [
+      "overcast"
+    ],
+    "antonyms": [
+      "clear",
+      "sunny"
+    ],
+    "example": "It was cloudy when we left for school.",
+    "topics": [
+      "Weather",
+      "Nature"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 25,
+    "word": "cold",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having a low temperature",
+    "chinese": "寒冷的",
+    "synonyms": [
+      "chilly"
+    ],
+    "antonyms": [
+      "hot",
+      "warm"
+    ],
+    "example": "The water was too cold for a swim.",
+    "topics": [
+      "Weather",
+      "Nature"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 26,
+    "word": "collect",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to gather things together",
+    "chinese": "收集；搜集",
+    "synonyms": [
+      "gather"
+    ],
+    "antonyms": [
+      "scatter"
+    ],
+    "example": "The pupils collected litter from the playground.",
+    "topics": [
+      "School",
+      "Environment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 27,
+    "word": "comfortable",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "pleasant and causing no physical discomfort",
+    "chinese": "舒适的",
+    "synonyms": [
+      "cosy",
+      "pleasant"
+    ],
+    "antonyms": [
+      "uncomfortable"
+    ],
+    "example": "The new chair is comfortable enough for long study sessions.",
+    "topics": [
+      "Daily Life",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 28,
+    "word": "common",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "happening often or found in many places",
+    "chinese": "常见的",
+    "synonyms": [
+      "usual",
+      "ordinary"
+    ],
+    "antonyms": [
+      "rare"
+    ],
+    "example": "Colds are common among children during rainy seasons.",
+    "topics": [
+      "Health",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 29,
+    "word": "complete",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having all the necessary parts",
+    "chinese": "完整的；完成的",
+    "synonyms": [
+      "finished",
+      "whole"
+    ],
+    "antonyms": [
+      "incomplete"
+    ],
+    "example": "Make sure your homework is complete before handing it in.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 30,
+    "word": "correct",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "right and without mistakes",
+    "chinese": "正确的",
+    "synonyms": [
+      "right",
+      "accurate"
+    ],
+    "antonyms": [
+      "wrong",
+      "incorrect"
+    ],
+    "example": "Circle the correct answer.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 31,
+    "word": "cry",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to produce tears because of sadness, pain or strong emotion",
+    "chinese": "哭泣",
+    "synonyms": [
+      "weep"
+    ],
+    "antonyms": [
+      "laugh"
+    ],
+    "example": "The baby began to cry when she woke up.",
+    "topics": [
+      "Emotions",
+      "Family"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 32,
+    "word": "dangerous",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "likely to cause harm or injury",
+    "chinese": "危险的",
+    "synonyms": [
+      "unsafe",
+      "risky"
+    ],
+    "antonyms": [
+      "safe"
+    ],
+    "example": "It is dangerous to play near a busy road.",
+    "topics": [
+      "Safety",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 33,
+    "word": "dark",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having little or no light",
+    "chinese": "黑暗的",
+    "synonyms": [
+      "dim"
+    ],
+    "antonyms": [
+      "bright",
+      "light"
+    ],
+    "example": "The room became dark when the lights went out.",
+    "topics": [
+      "Daily Life",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 34,
+    "word": "decide",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to choose after thinking about different possibilities",
+    "chinese": "决定",
+    "synonyms": [
+      "choose",
+      "determine"
+    ],
+    "antonyms": [
+      "hesitate"
+    ],
+    "example": "We decided to take the bus home.",
+    "topics": [
+      "Daily Life",
+      "Decision Making"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 35,
+    "word": "deep",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "extending far down from the surface",
+    "chinese": "深的",
+    "synonyms": [
+      "profound"
+    ],
+    "antonyms": [
+      "shallow"
+    ],
+    "example": "The pond is too deep for young children.",
+    "topics": [
+      "Nature",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 36,
-    "word": "because",
-    "partOfSpeech": "noun",
+    "word": "delicious",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with because",
-    "chinese": "“because”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about because in a school context.",
+    "meaning": "having a very pleasant taste",
+    "chinese": "美味的",
+    "synonyms": [
+      "tasty",
+      "flavourful"
+    ],
+    "antonyms": [
+      "tasteless"
+    ],
+    "example": "The soup was so delicious that I asked for another bowl.",
     "topics": [
-      "foundation"
+      "Food",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 37,
-    "word": "become",
-    "partOfSpeech": "verb",
+    "word": "different",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "to become or to carry out the action described by the word",
-    "chinese": "“become”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to become carefully during the school activity.",
+    "meaning": "not the same as another person or thing",
+    "chinese": "不同的",
+    "synonyms": [
+      "unlike"
+    ],
+    "antonyms": [
+      "same",
+      "similar"
+    ],
+    "example": "The two answers are different.",
     "topics": [
-      "foundation"
+      "School",
+      "Comparison"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 38,
-    "word": "before",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with before",
-    "chinese": "“before”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about before in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 39,
-    "word": "begin",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with begin",
-    "chinese": "“begin”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about begin in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 40,
-    "word": "believe",
-    "partOfSpeech": "verb",
-    "level": 1,
-    "meaning": "to believe or to carry out the action described by the word",
-    "chinese": "“believe”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to believe carefully during the school activity.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 41,
-    "word": "below",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with below",
-    "chinese": "“below”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about below in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 42,
-    "word": "best",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with best",
-    "chinese": "“best”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about best in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 43,
-    "word": "better",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with better",
-    "chinese": "“better”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about better in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 44,
-    "word": "between",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with between",
-    "chinese": "“between”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about between in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 45,
-    "word": "big",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with big",
-    "chinese": "“big”的常用中文释义",
-    "synonyms": [
-      "large",
-      "huge"
-    ],
-    "antonyms": [
-      "small"
-    ],
-    "example": "The passage included information about big in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 46,
-    "word": "bird",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with bird",
-    "chinese": "“bird”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about bird in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 47,
-    "word": "black",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with black",
-    "chinese": "“black”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about black in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 48,
-    "word": "body",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with body",
-    "chinese": "“body”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about body in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 49,
-    "word": "book",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with book",
-    "chinese": "“book”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about book in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 50,
-    "word": "both",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with both",
-    "chinese": "“both”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about both in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 51,
-    "word": "bring",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with bring",
-    "chinese": "“bring”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about bring in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 52,
-    "word": "build",
-    "partOfSpeech": "verb",
-    "level": 1,
-    "meaning": "to build or to carry out the action described by the word",
-    "chinese": "“build”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to build carefully during the school activity.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 53,
-    "word": "busy",
-    "partOfSpeech": "adjective",
-    "level": 1,
-    "meaning": "describing someone or something that is busy",
-    "chinese": "“busy”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The school situation was described as busy by the teacher.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 54,
-    "word": "buy",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with buy",
-    "chinese": "“buy”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about buy in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 55,
-    "word": "call",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with call",
-    "chinese": "“call”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about call in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 56,
-    "word": "carry",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with carry",
-    "chinese": "“carry”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about carry in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 57,
-    "word": "catch",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with catch",
-    "chinese": "“catch”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about catch in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 58,
-    "word": "change",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with change",
-    "chinese": "“change”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about change in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 59,
-    "word": "child",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with child",
-    "chinese": "“child”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about child in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 60,
-    "word": "choose",
-    "partOfSpeech": "verb",
-    "level": 1,
-    "meaning": "to choose or to carry out the action described by the word",
-    "chinese": "“choose”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to choose carefully during the school activity.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 61,
-    "word": "clean",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with clean",
-    "chinese": "“clean”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about clean in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 62,
-    "word": "close",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with close",
-    "chinese": "“close”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about close in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 63,
-    "word": "cold",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with cold",
-    "chinese": "“cold”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cold in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 64,
-    "word": "come",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with come",
-    "chinese": "“come”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about come in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 65,
-    "word": "common",
-    "partOfSpeech": "adjective",
-    "level": 1,
-    "meaning": "describing someone or something that is common",
-    "chinese": "“common”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The school situation was described as common by the teacher.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 66,
-    "word": "complete",
-    "partOfSpeech": "adjective",
-    "level": 1,
-    "meaning": "describing someone or something that is complete",
-    "chinese": "“complete”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The school situation was described as complete by the teacher.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 67,
-    "word": "correct",
-    "partOfSpeech": "adjective",
-    "level": 1,
-    "meaning": "describing someone or something that is correct",
-    "chinese": "“correct”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The school situation was described as correct by the teacher.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 68,
-    "word": "country",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with country",
-    "chinese": "“country”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about country in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 69,
-    "word": "cover",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with cover",
-    "chinese": "“cover”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cover in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 70,
-    "word": "cry",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with cry",
-    "chinese": "“cry”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cry in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 71,
-    "word": "cut",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with cut",
-    "chinese": "“cut”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cut in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 72,
-    "word": "dance",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with dance",
-    "chinese": "“dance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about dance in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 73,
-    "word": "dark",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with dark",
-    "chinese": "“dark”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about dark in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 74,
-    "word": "day",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with day",
-    "chinese": "“day”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about day in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 75,
-    "word": "decide",
-    "partOfSpeech": "noun",
-    "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with decide",
-    "chinese": "“decide”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about decide in a school context.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 76,
-    "word": "different",
-    "partOfSpeech": "adjective",
-    "level": 1,
-    "meaning": "describing someone or something that is different",
-    "chinese": "“different”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "same"
-    ],
-    "example": "The school situation was described as different by the teacher.",
-    "topics": [
-      "foundation"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 77,
     "word": "difficult",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is difficult",
-    "chinese": "“difficult”的常用中文释义",
+    "meaning": "not easy to do or understand",
+    "chinese": "困难的",
     "synonyms": [
       "hard",
       "challenging"
@@ -1492,4656 +894,4260 @@ const vocabulary = [
     "antonyms": [
       "easy"
     ],
-    "example": "The school situation was described as difficult by the teacher.",
+    "example": "The final question was difficult but I kept trying.",
     "topics": [
-      "foundation"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 39,
+    "word": "dirty",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "covered with dirt or not clean",
+    "chinese": "肮脏的",
+    "synonyms": [
+      "filthy",
+      "unclean"
+    ],
+    "antonyms": [
+      "clean"
+    ],
+    "example": "His shoes became dirty after he walked through the mud.",
+    "topics": [
+      "Daily Life",
+      "Environment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 40,
+    "word": "dry",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having little or no water or moisture",
+    "chinese": "干的",
+    "synonyms": [
+      "arid"
+    ],
+    "antonyms": [
+      "wet",
+      "damp"
+    ],
+    "example": "Hang the wet clothes outside so that they can become dry.",
+    "topics": [
+      "Daily Life",
+      "Weather"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 41,
+    "word": "early",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "happening before the expected time",
+    "chinese": "早的；提早的",
+    "synonyms": [
+      "ahead of time"
+    ],
+    "antonyms": [
+      "late"
+    ],
+    "example": "We arrived early for the school concert.",
+    "topics": [
+      "Time",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 42,
+    "word": "easy",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "not difficult to do or understand",
+    "chinese": "容易的",
+    "synonyms": [
+      "simple"
+    ],
+    "antonyms": [
+      "difficult",
+      "hard"
+    ],
+    "example": "The first exercise was easy for the class.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 43,
+    "word": "empty",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "containing nothing",
+    "chinese": "空的",
+    "synonyms": [
+      "vacant",
+      "bare"
+    ],
+    "antonyms": [
+      "full"
+    ],
+    "example": "The bottle was empty after everyone had finished drinking.",
+    "topics": [
+      "Daily Life",
+      "Food"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 44,
+    "word": "enjoy",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to like something and take pleasure in it",
+    "chinese": "享受；喜欢",
+    "synonyms": [
+      "like",
+      "appreciate"
+    ],
+    "antonyms": [
+      "dislike"
+    ],
+    "example": "I enjoy reading adventure stories.",
+    "topics": [
+      "Hobbies",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 45,
+    "word": "enough",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "as much as is needed",
+    "chinese": "足够的",
+    "synonyms": [
+      "sufficient",
+      "adequate"
+    ],
+    "antonyms": [
+      "insufficient"
+    ],
+    "example": "There was enough food for everyone.",
+    "topics": [
+      "Food",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 46,
+    "word": "excited",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "very happy and enthusiastic about something",
+    "chinese": "兴奋的；激动的",
+    "synonyms": [
+      "thrilled",
+      "enthusiastic"
+    ],
+    "antonyms": [
+      "bored"
+    ],
+    "example": "The children were excited about the school trip.",
+    "topics": [
+      "Emotions",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 47,
+    "word": "fair",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "treating people equally and reasonably",
+    "chinese": "公平的",
+    "synonyms": [
+      "just",
+      "reasonable"
+    ],
+    "antonyms": [
+      "unfair"
+    ],
+    "example": "The referee made a fair decision.",
+    "topics": [
+      "Sports",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 48,
+    "word": "famous",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "known by many people",
+    "chinese": "著名的",
+    "synonyms": [
+      "well-known",
+      "renowned"
+    ],
+    "antonyms": [
+      "unknown"
+    ],
+    "example": "The city is famous for its beautiful gardens.",
+    "topics": [
+      "Places",
+      "Culture"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 49,
+    "word": "fast",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "moving or able to move quickly",
+    "chinese": "快的",
+    "synonyms": [
+      "quick",
+      "rapid"
+    ],
+    "antonyms": [
+      "slow"
+    ],
+    "example": "The rabbit ran fast across the field.",
+    "topics": [
+      "Animals",
+      "Nature"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 50,
+    "word": "fresh",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "recently made, obtained or picked",
+    "chinese": "新鲜的",
+    "synonyms": [
+      "new",
+      "recent"
+    ],
+    "antonyms": [
+      "stale"
+    ],
+    "example": "We bought fresh vegetables from the market.",
+    "topics": [
+      "Food",
+      "Health"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 51,
+    "word": "friendly",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "kind and pleasant towards others",
+    "chinese": "友好的",
+    "synonyms": [
+      "kind",
+      "welcoming"
+    ],
+    "antonyms": [
+      "unfriendly"
+    ],
+    "example": "Our new neighbour is very friendly.",
+    "topics": [
+      "People",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 52,
+    "word": "full",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "containing as much as possible",
+    "chinese": "满的；饱的",
+    "synonyms": [
+      "filled"
+    ],
+    "antonyms": [
+      "empty"
+    ],
+    "example": "The bus was full, so we had to wait for the next one.",
+    "topics": [
+      "Travel",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 53,
+    "word": "funny",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "making people laugh",
+    "chinese": "有趣的；滑稽的",
+    "synonyms": [
+      "humorous",
+      "amusing"
+    ],
+    "antonyms": [
+      "serious"
+    ],
+    "example": "The comedian told a funny story.",
+    "topics": [
+      "Entertainment",
+      "Emotions"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 54,
+    "word": "gentle",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "kind and careful not to hurt anyone or anything",
+    "chinese": "温柔的；轻柔的",
+    "synonyms": [
+      "tender",
+      "mild"
+    ],
+    "antonyms": [
+      "rough",
+      "harsh"
+    ],
+    "example": "Be gentle when you hold the small kitten.",
+    "topics": [
+      "Animals",
+      "Emotions"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 55,
+    "word": "glad",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "happy about something",
+    "chinese": "高兴的",
+    "synonyms": [
+      "happy",
+      "pleased"
+    ],
+    "antonyms": [
+      "sad"
+    ],
+    "example": "I was glad to hear that my friend had recovered.",
+    "topics": [
+      "Emotions",
+      "Health"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 56,
+    "word": "great",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "very good or impressive",
+    "chinese": "伟大的；很好的",
+    "synonyms": [
+      "excellent",
+      "wonderful"
+    ],
+    "antonyms": [
+      "poor",
+      "terrible"
+    ],
+    "example": "She made great progress in mathematics.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 57,
+    "word": "healthy",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "in good physical condition",
+    "chinese": "健康的",
+    "synonyms": [
+      "fit",
+      "well"
+    ],
+    "antonyms": [
+      "ill",
+      "unhealthy"
+    ],
+    "example": "Eating vegetables helps us stay healthy.",
+    "topics": [
+      "Health",
+      "Food"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 58,
+    "word": "helpful",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "willing to help or useful in solving a problem",
+    "chinese": "有帮助的；乐于助人的",
+    "synonyms": [
+      "useful",
+      "supportive"
+    ],
+    "antonyms": [
+      "unhelpful"
+    ],
+    "example": "The librarian was helpful when I could not find the book.",
+    "topics": [
+      "School",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 59,
+    "word": "honest",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "always telling the truth and not cheating",
+    "chinese": "诚实的",
+    "synonyms": [
+      "truthful",
+      "sincere"
+    ],
+    "antonyms": [
+      "dishonest"
+    ],
+    "example": "It is important to be honest even when you make a mistake.",
+    "topics": [
+      "Values",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 60,
+    "word": "hungry",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "needing or wanting food",
+    "chinese": "饥饿的",
+    "synonyms": [
+      "starving"
+    ],
+    "antonyms": [
+      "full"
+    ],
+    "example": "After the long hike, everyone was hungry.",
+    "topics": [
+      "Food",
+      "Health"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 61,
+    "word": "important",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having great value or significance",
+    "chinese": "重要的",
+    "synonyms": [
+      "significant",
+      "essential"
+    ],
+    "antonyms": [
+      "unimportant"
+    ],
+    "example": "Sleep is important for growing children.",
+    "topics": [
+      "Health",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 62,
+    "word": "kind",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "caring about other people's feelings",
+    "chinese": "善良的；体贴的",
+    "synonyms": [
+      "caring",
+      "compassionate"
+    ],
+    "antonyms": [
+      "unkind",
+      "cruel"
+    ],
+    "example": "It was kind of Mei to share her umbrella.",
+    "topics": [
+      "Values",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 63,
+    "word": "laugh",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to make sounds that show amusement",
+    "chinese": "笑",
+    "synonyms": [
+      "giggle",
+      "chuckle"
+    ],
+    "antonyms": [
+      "cry"
+    ],
+    "example": "Everyone began to laugh at the funny joke.",
+    "topics": [
+      "Emotions",
+      "Entertainment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 64,
+    "word": "lazy",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "not willing to work or make an effort",
+    "chinese": "懒惰的",
+    "synonyms": [
+      "idle"
+    ],
+    "antonyms": [
+      "hardworking",
+      "diligent"
+    ],
+    "example": "Being lazy can prevent you from reaching your goals.",
+    "topics": [
+      "Values",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 65,
+    "word": "little",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "small in size or amount",
+    "chinese": "小的；少量的",
+    "synonyms": [
+      "small",
+      "tiny"
+    ],
+    "antonyms": [
+      "large",
+      "much"
+    ],
+    "example": "A little bird landed on the window.",
+    "topics": [
+      "Animals",
+      "Nature"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 66,
+    "word": "lucky",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having good things happen by chance",
+    "chinese": "幸运的",
+    "synonyms": [
+      "fortunate"
+    ],
+    "antonyms": [
+      "unlucky"
+    ],
+    "example": "We were lucky to find a taxi during the heavy rain.",
+    "topics": [
+      "Daily Life",
+      "Travel"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 67,
+    "word": "mistake",
+    "partOfSpeech": "noun",
+    "level": 1,
+    "meaning": "something that is not correct",
+    "chinese": "错误",
+    "synonyms": [
+      "error"
+    ],
+    "antonyms": [
+      "correctness"
+    ],
+    "example": "I made a spelling mistake in my composition.",
+    "topics": [
+      "School",
+      "Writing"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 68,
+    "word": "neat",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "tidy and carefully arranged",
+    "chinese": "整洁的",
+    "synonyms": [
+      "tidy",
+      "orderly"
+    ],
+    "antonyms": [
+      "messy"
+    ],
+    "example": "Her handwriting is neat and easy to read.",
+    "topics": [
+      "School",
+      "Writing"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 69,
+    "word": "noisy",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "making a lot of sound",
+    "chinese": "吵闹的",
+    "synonyms": [
+      "loud"
+    ],
+    "antonyms": [
+      "quiet",
+      "silent"
+    ],
+    "example": "The classroom became noisy during recess.",
+    "topics": [
+      "School",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 70,
+    "word": "notice",
+    "partOfSpeech": "verb",
+    "level": 1,
+    "meaning": "to see or become aware of something",
+    "chinese": "注意到",
+    "synonyms": [
+      "observe",
+      "spot"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Did you notice the rainbow in the sky?",
+    "topics": [
+      "Nature",
+      "Observation"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 71,
+    "word": "ordinary",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "normal and not special",
+    "chinese": "普通的",
+    "synonyms": [
+      "usual",
+      "common"
+    ],
+    "antonyms": [
+      "unusual",
+      "extraordinary"
+    ],
+    "example": "It looked like an ordinary day until the storm arrived.",
+    "topics": [
+      "Daily Life",
+      "Weather"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 72,
+    "word": "patient",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "able to wait calmly without becoming annoyed",
+    "chinese": "耐心的",
+    "synonyms": [
+      "calm",
+      "tolerant"
+    ],
+    "antonyms": [
+      "impatient"
+    ],
+    "example": "The teacher was patient while we learned the new skill.",
+    "topics": [
+      "School",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 73,
+    "word": "polite",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having good manners and showing respect",
+    "chinese": "有礼貌的",
+    "synonyms": [
+      "courteous",
+      "respectful"
+    ],
+    "antonyms": [
+      "rude"
+    ],
+    "example": "It is polite to thank people who help you.",
+    "topics": [
+      "Values",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 74,
+    "word": "poor",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "having little money or few resources",
+    "chinese": "贫穷的；贫困的",
+    "synonyms": [
+      "needy",
+      "impoverished"
+    ],
+    "antonyms": [
+      "wealthy",
+      "rich"
+    ],
+    "example": "The charity provides meals for poor families.",
+    "topics": [
+      "Society",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 75,
+    "word": "popular",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "liked or enjoyed by many people",
+    "chinese": "受欢迎的",
+    "synonyms": [
+      "well-liked",
+      "favoured"
+    ],
+    "antonyms": [
+      "unpopular"
+    ],
+    "example": "Basketball is a popular sport among the pupils.",
+    "topics": [
+      "Sports",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 76,
+    "word": "pretty",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "attractive in a delicate way",
+    "chinese": "漂亮的",
+    "synonyms": [
+      "lovely",
+      "beautiful"
+    ],
+    "antonyms": [
+      "ugly"
+    ],
+    "example": "She wore a pretty dress to the celebration.",
+    "topics": [
+      "Description",
+      "Family"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 77,
+    "word": "quiet",
+    "partOfSpeech": "adjective",
+    "level": 1,
+    "meaning": "making very little noise",
+    "chinese": "安静的",
+    "synonyms": [
+      "silent",
+      "peaceful"
+    ],
+    "antonyms": [
+      "noisy",
+      "loud"
+    ],
+    "example": "Please remain quiet during the examination.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 78,
-    "word": "doctor",
-    "partOfSpeech": "noun",
+    "word": "ready",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with doctor",
-    "chinese": "“doctor”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about doctor in a school context.",
+    "meaning": "prepared for something",
+    "chinese": "准备好的",
+    "synonyms": [
+      "prepared"
+    ],
+    "antonyms": [
+      "unprepared"
+    ],
+    "example": "The students were ready for the test.",
     "topics": [
-      "foundation"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 79,
-    "word": "dog",
-    "partOfSpeech": "noun",
+    "word": "remember",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with dog",
-    "chinese": "“dog”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about dog in a school context.",
+    "meaning": "to keep something in your mind or bring it back to mind",
+    "chinese": "记得；记住",
+    "synonyms": [
+      "recall"
+    ],
+    "antonyms": [
+      "forget"
+    ],
+    "example": "Remember to bring your water bottle tomorrow.",
     "topics": [
-      "foundation"
+      "Memory",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 80,
-    "word": "door",
-    "partOfSpeech": "noun",
+    "word": "safe",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with door",
-    "chinese": "“door”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about door in a school context.",
+    "meaning": "not likely to cause harm or danger",
+    "chinese": "安全的",
+    "synonyms": [
+      "secure"
+    ],
+    "antonyms": [
+      "dangerous",
+      "unsafe"
+    ],
+    "example": "Always wear a helmet to stay safe while cycling.",
     "topics": [
-      "foundation"
+      "Safety",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 81,
-    "word": "draw",
-    "partOfSpeech": "noun",
+    "word": "same",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with draw",
-    "chinese": "“draw”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about draw in a school context.",
+    "meaning": "not different",
+    "chinese": "相同的",
+    "synonyms": [
+      "identical",
+      "equal"
+    ],
+    "antonyms": [
+      "different"
+    ],
+    "example": "We wore the same school uniform.",
     "topics": [
-      "foundation"
+      "Comparison",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 82,
-    "word": "dream",
-    "partOfSpeech": "noun",
+    "word": "scared",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with dream",
-    "chinese": "“dream”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about dream in a school context.",
+    "meaning": "frightened or worried",
+    "chinese": "害怕的",
+    "synonyms": [
+      "afraid",
+      "frightened"
+    ],
+    "antonyms": [
+      "brave",
+      "fearless"
+    ],
+    "example": "The child was scared when the thunder became louder.",
     "topics": [
-      "foundation"
+      "Emotions",
+      "Weather"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 83,
-    "word": "drink",
-    "partOfSpeech": "noun",
+    "word": "simple",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with drink",
-    "chinese": "“drink”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about drink in a school context.",
+    "meaning": "easy to understand or do",
+    "chinese": "简单的",
+    "synonyms": [
+      "easy",
+      "straightforward"
+    ],
+    "antonyms": [
+      "complicated"
+    ],
+    "example": "The teacher gave us a simple way to remember the rule.",
     "topics": [
-      "foundation"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 84,
-    "word": "early",
+    "word": "slow",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is early",
-    "chinese": "“early”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "late"
+    "meaning": "moving or happening without speed",
+    "chinese": "慢的",
+    "synonyms": [
+      "unhurried"
     ],
-    "example": "The school situation was described as early by the teacher.",
+    "antonyms": [
+      "fast",
+      "quick"
+    ],
+    "example": "The turtle moved slowly across the path.",
     "topics": [
-      "foundation"
+      "Animals",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 85,
-    "word": "easy",
+    "word": "small",
     "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "describing someone or something that is easy",
-    "chinese": "“easy”的常用中文释义",
+    "meaning": "little in size or amount",
+    "chinese": "小的",
     "synonyms": [
-      "simple"
+      "little",
+      "tiny"
     ],
-    "antonyms": [],
-    "example": "The school situation was described as easy by the teacher.",
+    "antonyms": [
+      "large",
+      "big"
+    ],
+    "example": "A small puppy followed us home.",
     "topics": [
-      "foundation"
+      "Animals",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 86,
-    "word": "eat",
-    "partOfSpeech": "noun",
+    "word": "special",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with eat",
-    "chinese": "“eat”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about eat in a school context.",
+    "meaning": "different from what is usual and important to you",
+    "chinese": "特别的",
+    "synonyms": [
+      "unique",
+      "important"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "Today is special because it is my grandmother's birthday.",
     "topics": [
-      "foundation"
+      "Family",
+      "Celebrations"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 87,
-    "word": "end",
-    "partOfSpeech": "noun",
+    "word": "strong",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with end",
-    "chinese": "“end”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about end in a school context.",
+    "meaning": "having great physical power",
+    "chinese": "强壮的；强的",
+    "synonyms": [
+      "powerful"
+    ],
+    "antonyms": [
+      "weak"
+    ],
+    "example": "The strong wind knocked several branches down.",
     "topics": [
-      "foundation"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 88,
-    "word": "enough",
-    "partOfSpeech": "noun",
+    "word": "surprised",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with enough",
-    "chinese": "“enough”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about enough in a school context.",
+    "meaning": "feeling unexpected wonder",
+    "chinese": "惊讶的",
+    "synonyms": [
+      "astonished",
+      "amazed"
+    ],
+    "antonyms": [
+      "unsurprised"
+    ],
+    "example": "We were surprised when our teacher brought a cake.",
     "topics": [
-      "foundation"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 89,
-    "word": "every",
-    "partOfSpeech": "noun",
+    "word": "tall",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with every",
-    "chinese": "“every”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about every in a school context.",
+    "meaning": "having greater than average height",
+    "chinese": "高的",
+    "synonyms": [
+      "high"
+    ],
+    "antonyms": [
+      "short"
+    ],
+    "example": "The tall tree provided shade for the children.",
     "topics": [
-      "foundation"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 90,
-    "word": "example",
-    "partOfSpeech": "noun",
+    "word": "tired",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with example",
-    "chinese": "“example”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about example in a school context.",
+    "meaning": "needing rest because of physical or mental effort",
+    "chinese": "疲倦的",
+    "synonyms": [
+      "weary",
+      "exhausted"
+    ],
+    "antonyms": [
+      "energetic",
+      "rested"
+    ],
+    "example": "I felt tired after swimming for an hour.",
     "topics": [
-      "foundation"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 91,
-    "word": "face",
-    "partOfSpeech": "noun",
+    "word": "together",
+    "partOfSpeech": "adverb",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with face",
-    "chinese": "“face”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about face in a school context.",
+    "meaning": "with each other or in one group",
+    "chinese": "一起",
+    "synonyms": [
+      "jointly",
+      "collectively"
+    ],
+    "antonyms": [
+      "apart"
+    ],
+    "example": "The pupils worked together on the science project.",
     "topics": [
-      "foundation"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 92,
-    "word": "family",
-    "partOfSpeech": "adverb",
+    "word": "True",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "in a way that is family",
-    "chinese": "“family”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The pupils completed the school task family.",
+    "meaning": "correct or based on fact",
+    "chinese": "真实的；正确的",
+    "synonyms": [
+      "correct",
+      "factual"
+    ],
+    "antonyms": [
+      "False",
+      "unTrue"
+    ],
+    "example": "The statement is True according to the report.",
     "topics": [
-      "foundation"
+      "School",
+      "Facts"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 93,
-    "word": "far",
-    "partOfSpeech": "noun",
+    "word": "useful",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with far",
-    "chinese": "“far”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about far in a school context.",
+    "meaning": "helpful for a particular purpose",
+    "chinese": "有用的",
+    "synonyms": [
+      "helpful",
+      "practical"
+    ],
+    "antonyms": [
+      "useless"
+    ],
+    "example": "This chart is useful when revising for the test.",
     "topics": [
-      "foundation"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 94,
-    "word": "fast",
-    "partOfSpeech": "noun",
+    "word": "usual",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with fast",
-    "chinese": "“fast”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about fast in a school context.",
+    "meaning": "normal or common for a person or situation",
+    "chinese": "通常的；平常的",
+    "synonyms": [
+      "normal",
+      "customary"
+    ],
+    "antonyms": [
+      "unusual"
+    ],
+    "example": "She took her usual route to school.",
     "topics": [
-      "foundation"
+      "Daily Life",
+      "Travel"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 95,
-    "word": "father",
-    "partOfSpeech": "noun",
+    "word": "visit",
+    "partOfSpeech": "verb",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with father",
-    "chinese": "“father”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about father in a school context.",
+    "meaning": "to go to a person or place for a short time",
+    "chinese": "参观；拜访",
+    "synonyms": [
+      "see",
+      "call on"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "We visited the science centre during the holidays.",
     "topics": [
-      "foundation"
+      "Travel",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 96,
-    "word": "feel",
-    "partOfSpeech": "noun",
+    "word": "warm",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with feel",
-    "chinese": "“feel”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about feel in a school context.",
+    "meaning": "having a pleasantly high temperature",
+    "chinese": "温暖的",
+    "synonyms": [
+      "mild"
+    ],
+    "antonyms": [
+      "cold",
+      "cool"
+    ],
+    "example": "The warm sunlight made the garden pleasant.",
     "topics": [
-      "foundation"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 97,
-    "word": "few",
-    "partOfSpeech": "noun",
+    "word": "weak",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with few",
-    "chinese": "“few”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about few in a school context.",
+    "meaning": "not physically strong",
+    "chinese": "虚弱的；弱的",
+    "synonyms": [
+      "feeble"
+    ],
+    "antonyms": [
+      "strong",
+      "powerful"
+    ],
+    "example": "The plant was weak because it had not received enough sunlight.",
     "topics": [
-      "foundation"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 98,
-    "word": "find",
-    "partOfSpeech": "noun",
+    "word": "wild",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with find",
-    "chinese": "“find”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about find in a school context.",
+    "meaning": "living or growing without being controlled by people",
+    "chinese": "野生的",
+    "synonyms": [
+      "untamed"
+    ],
+    "antonyms": [
+      "tame",
+      "domesticated"
+    ],
+    "example": "We saw several wild monkeys near the forest.",
     "topics": [
-      "foundation"
+      "Animals",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 99,
-    "word": "first",
-    "partOfSpeech": "noun",
+    "word": "worried",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with first",
-    "chinese": "“first”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about first in a school context.",
+    "meaning": "thinking about problems or unpleasant things that might happen",
+    "chinese": "担心的",
+    "synonyms": [
+      "anxious",
+      "concerned"
+    ],
+    "antonyms": [
+      "calm",
+      "relaxed"
+    ],
+    "example": "Mum was worried when her son did not return home on time.",
     "topics": [
-      "foundation"
+      "Emotions",
+      "Family"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 100,
-    "word": "food",
-    "partOfSpeech": "noun",
+    "word": "young",
+    "partOfSpeech": "adjective",
     "level": 1,
-    "meaning": "a person, thing, idea, or situation connected with food",
-    "chinese": "“food”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about food in a school context.",
+    "meaning": "having lived for only a short time",
+    "chinese": "年轻的；年幼的",
+    "synonyms": [
+      "youthful"
+    ],
+    "antonyms": [
+      "old"
+    ],
+    "example": "The young puppy needed plenty of rest.",
     "topics": [
-      "foundation"
+      "Animals",
+      "Family"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 101,
-    "word": "ability",
-    "partOfSpeech": "noun",
-    "level": 2,
-    "meaning": "the skill or power to do something",
-    "chinese": "能力",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about ability in a family context.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 102,
-    "word": "absent",
-    "partOfSpeech": "noun",
-    "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with absent",
-    "chinese": "“absent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about absent in a family context.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 103,
-    "word": "accept",
-    "partOfSpeech": "verb",
-    "level": 2,
-    "meaning": "to accept or to carry out the action described by the word",
-    "chinese": "“accept”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to accept carefully during the family activity.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 104,
-    "word": "accident",
-    "partOfSpeech": "noun",
-    "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with accident",
-    "chinese": "“accident”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about accident in a family context.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 105,
-    "word": "achieve",
-    "partOfSpeech": "verb",
-    "level": 2,
-    "meaning": "to succeed in doing or getting something",
-    "chinese": "实现；取得",
-    "synonyms": [
-      "accomplish",
-      "attain"
-    ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to achieve carefully during the family activity.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 106,
     "word": "admire",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to admire or to carry out the action described by the word",
-    "chinese": "“admire”的常用中文释义",
+    "meaning": "to respect or like someone because of their qualities or achievements",
+    "chinese": "钦佩；欣赏",
     "synonyms": [
       "respect",
       "appreciate"
     ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to admire carefully during the family activity.",
+    "antonyms": [
+      "despise"
+    ],
+    "example": "Many pupils admire their teacher for her patience.",
     "topics": [
-      "daily life"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 102,
+    "word": "admit",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to agree that something is True",
+    "chinese": "承认",
+    "synonyms": [
+      "confess",
+      "acknowledge"
+    ],
+    "antonyms": [
+      "deny"
+    ],
+    "example": "He admitted that he had forgotten his homework.",
+    "topics": [
+      "Values",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 103,
+    "word": "advise",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to tell someone what you think they should do",
+    "chinese": "建议；劝告",
+    "synonyms": [
+      "recommend",
+      "counsel"
+    ],
+    "antonyms": [
+      "discourage"
+    ],
+    "example": "The doctor advised me to get more rest.",
+    "topics": [
+      "Health",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 104,
+    "word": "afford",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to have enough money or time to do something",
+    "chinese": "负担得起；抽得出时间",
+    "synonyms": [
+      "manage"
+    ],
+    "antonyms": [],
+    "example": "We cannot afford to waste electricity.",
+    "topics": [
+      "Money",
+      "Environment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 105,
+    "word": "agree",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to have the same opinion as someone",
+    "chinese": "同意",
+    "synonyms": [
+      "accept",
+      "consent"
+    ],
+    "antonyms": [
+      "disagree"
+    ],
+    "example": "I agree with your suggestion.",
+    "topics": [
+      "Communication",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 106,
+    "word": "allow",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to give permission for something",
+    "chinese": "允许",
+    "synonyms": [
+      "permit",
+      "let"
+    ],
+    "antonyms": [
+      "forbid"
+    ],
+    "example": "The teacher allowed us to work in pairs.",
+    "topics": [
+      "School",
+      "Rules"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 107,
-    "word": "advice",
-    "partOfSpeech": "noun",
+    "word": "announce",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "an opinion about what someone should do",
-    "chinese": "建议",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about advice in a family context.",
+    "meaning": "to tell people something officially or publicly",
+    "chinese": "宣布",
+    "synonyms": [
+      "declare"
+    ],
+    "antonyms": [
+      "conceal"
+    ],
+    "example": "The principal announced the winners at assembly.",
     "topics": [
-      "daily life"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 108,
-    "word": "afford",
-    "partOfSpeech": "verb",
-    "level": 2,
-    "meaning": "to afford or to carry out the action described by the word",
-    "chinese": "“afford”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to afford carefully during the family activity.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 109,
-    "word": "afterwards",
-    "partOfSpeech": "noun",
-    "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with afterwards",
-    "chinese": "“afterwards”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about afterwards in a family context.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 110,
-    "word": "alarm",
-    "partOfSpeech": "noun",
-    "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with alarm",
-    "chinese": "“alarm”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about alarm in a family context.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 111,
-    "word": "alike",
-    "partOfSpeech": "noun",
-    "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with alike",
-    "chinese": "“alike”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about alike in a family context.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 112,
-    "word": "ancient",
-    "partOfSpeech": "adjective",
-    "level": 2,
-    "meaning": "belonging to a very long time ago",
-    "chinese": "古代的",
-    "synonyms": [],
-    "antonyms": [
-      "modern"
-    ],
-    "example": "The family situation was described as ancient by the teacher.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 113,
-    "word": "announce",
-    "partOfSpeech": "verb",
-    "level": 2,
-    "meaning": "to announce or to carry out the action described by the word",
-    "chinese": "“announce”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to announce carefully during the family activity.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 114,
-    "word": "annual",
-    "partOfSpeech": "adjective",
-    "level": 2,
-    "meaning": "describing someone or something that is annual",
-    "chinese": "“annual”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as annual by the teacher.",
-    "topics": [
-      "daily life"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 115,
     "word": "anxious",
     "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "worried or nervous about something",
+    "meaning": "worried or nervous about something that may happen",
     "chinese": "焦虑的；担心的",
     "synonyms": [
       "worried",
       "nervous"
     ],
     "antonyms": [
-      "calm"
+      "calm",
+      "relaxed"
     ],
-    "example": "The family situation was described as anxious by the teacher.",
+    "example": "She felt anxious before the examination.",
     "topics": [
-      "daily life"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 109,
+    "word": "appear",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to become visible or seem to be something",
+    "chinese": "出现；似乎",
+    "synonyms": [
+      "emerge",
+      "seem"
+    ],
+    "antonyms": [
+      "disappear"
+    ],
+    "example": "A rainbow appeared after the rain.",
+    "topics": [
+      "Nature",
+      "Weather"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 110,
+    "word": "apply",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to make a formal request or use something for a purpose",
+    "chinese": "申请；应用",
+    "synonyms": [
+      "request",
+      "use"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "She applied for a place in the school programme.",
+    "topics": [
+      "School",
+      "Applications"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 111,
+    "word": "argue",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to speak angrily because you disagree",
+    "chinese": "争论；争吵",
+    "synonyms": [
+      "quarrel",
+      "debate"
+    ],
+    "antonyms": [
+      "agree"
+    ],
+    "example": "The brothers began to argue over the game.",
+    "topics": [
+      "Family",
+      "Communication"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 112,
+    "word": "astonished",
+    "partOfSpeech": "adjective",
+    "level": 2,
+    "meaning": "very surprised",
+    "chinese": "惊讶的",
+    "synonyms": [
+      "amazed",
+      "stunned"
+    ],
+    "antonyms": [
+      "unimpressed"
+    ],
+    "example": "We were astonished by the magician's final trick.",
+    "topics": [
+      "Emotions",
+      "Entertainment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 113,
+    "word": "attempt",
+    "partOfSpeech": "noun",
+    "level": 2,
+    "meaning": "an effort to do something",
+    "chinese": "尝试",
+    "synonyms": [
+      "effort",
+      "try"
+    ],
+    "antonyms": [
+      "failure"
+    ],
+    "example": "Her first attempt at baking a cake was successful.",
+    "topics": [
+      "Learning",
+      "Food"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 114,
+    "word": "average",
+    "partOfSpeech": "adjective",
+    "level": 2,
+    "meaning": "usual or typical rather than special",
+    "chinese": "平均的；普通的",
+    "synonyms": [
+      "typical",
+      "ordinary"
+    ],
+    "antonyms": [
+      "exceptional"
+    ],
+    "example": "The average class size is about thirty pupils.",
+    "topics": [
+      "School",
+      "Numbers"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 115,
+    "word": "avoid",
+    "partOfSpeech": "verb",
+    "level": 2,
+    "meaning": "to keep away from something or prevent something",
+    "chinese": "避免；躲开",
+    "synonyms": [
+      "escape",
+      "prevent"
+    ],
+    "antonyms": [
+      "approach",
+      "face"
+    ],
+    "example": "We should avoid wasting food.",
+    "topics": [
+      "Environment",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 116,
-    "word": "apologise",
-    "partOfSpeech": "verb",
+    "word": "balance",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to apologise or to carry out the action described by the word",
-    "chinese": "“apologise”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to apologise carefully during the family activity.",
+    "meaning": "a state in which different things are equal or stable",
+    "chinese": "平衡",
+    "synonyms": [
+      "stability",
+      "equilibrium"
+    ],
+    "antonyms": [
+      "imbalance"
+    ],
+    "example": "Good balance is important when riding a bicycle.",
     "topics": [
-      "daily life"
+      "Sports",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 117,
-    "word": "approach",
+    "word": "behave",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to approach or to carry out the action described by the word",
-    "chinese": "“approach”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to approach carefully during the family activity.",
+    "meaning": "to act in a particular way",
+    "chinese": "表现；行为举止",
+    "synonyms": [
+      "act"
+    ],
+    "antonyms": [
+      "misbehave"
+    ],
+    "example": "Students should behave respectfully in class.",
     "topics": [
-      "daily life"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 118,
-    "word": "argue",
+    "word": "believe",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to argue or to carry out the action described by the word",
-    "chinese": "“argue”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to argue carefully during the family activity.",
+    "meaning": "to think that something is True",
+    "chinese": "相信",
+    "synonyms": [
+      "trust",
+      "accept"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "I believe that practice leads to improvement.",
     "topics": [
-      "daily life"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 119,
-    "word": "arrange",
+    "word": "borrow",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to arrange or to carry out the action described by the word",
-    "chinese": "“arrange”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to arrange carefully during the family activity.",
+    "meaning": "to take something and return it later",
+    "chinese": "借用",
+    "synonyms": [
+      "take temporarily"
+    ],
+    "antonyms": [
+      "lend"
+    ],
+    "example": "May I borrow your ruler for a moment?",
     "topics": [
-      "daily life"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 120,
-    "word": "arrival",
-    "partOfSpeech": "noun",
+    "word": "breathe",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with arrival",
-    "chinese": "“arrival”的常用中文释义",
-    "synonyms": [],
+    "meaning": "to take air into and send it out of the lungs",
+    "chinese": "呼吸",
+    "synonyms": [
+      "respire"
+    ],
     "antonyms": [],
-    "example": "The passage included information about arrival in a family context.",
+    "example": "Remember to breathe slowly when you feel nervous.",
     "topics": [
-      "daily life"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 121,
-    "word": "article",
-    "partOfSpeech": "noun",
+    "word": "carelessly",
+    "partOfSpeech": "adverb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with article",
-    "chinese": "“article”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about article in a family context.",
+    "meaning": "without giving enough attention to what you are doing",
+    "chinese": "粗心地；马虎地",
+    "synonyms": [
+      "negligently"
+    ],
+    "antonyms": [
+      "carefully"
+    ],
+    "example": "He carelessly left his water bottle on the bus.",
     "topics": [
-      "daily life"
+      "Daily Life",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 122,
-    "word": "attempt",
+    "word": "celebrate",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to attempt or to carry out the action described by the word",
-    "chinese": "“attempt”的常用中文释义",
+    "meaning": "to do something special for an important event",
+    "chinese": "庆祝",
     "synonyms": [
-      "try"
+      "commemorate",
+      "observe"
     ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to attempt carefully during the family activity.",
+    "antonyms": [
+      "mourn"
+    ],
+    "example": "We will celebrate Grandma's birthday this weekend.",
     "topics": [
-      "daily life"
+      "Family",
+      "Celebrations"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 123,
-    "word": "attention",
+    "word": "challenge",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with attention",
-    "chinese": "“attention”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about attention in a family context.",
+    "meaning": "a difficult task that tests ability or determination",
+    "chinese": "挑战",
+    "synonyms": [
+      "difficulty",
+      "test"
+    ],
+    "antonyms": [
+      "ease"
+    ],
+    "example": "Learning a new language can be a challenge.",
     "topics": [
-      "daily life"
+      "Learning",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 124,
-    "word": "attract",
-    "partOfSpeech": "verb",
+    "word": "choice",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to attract or to carry out the action described by the word",
-    "chinese": "“attract”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to attract carefully during the family activity.",
+    "meaning": "an act of choosing between possibilities",
+    "chinese": "选择",
+    "synonyms": [
+      "option",
+      "selection"
+    ],
+    "antonyms": [
+      "necessity"
+    ],
+    "example": "You have a choice between the two books.",
     "topics": [
-      "daily life"
+      "Decision Making",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 125,
-    "word": "attractive",
-    "partOfSpeech": "adjective",
+    "word": "compare",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is attractive",
-    "chinese": "“attractive”的常用中文释义",
-    "synonyms": [],
+    "meaning": "to examine two or more things to see how they are similar or different",
+    "chinese": "比较",
+    "synonyms": [
+      "contrast"
+    ],
     "antonyms": [],
-    "example": "The family situation was described as attractive by the teacher.",
+    "example": "Compare the two pictures before answering.",
     "topics": [
-      "daily life"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 126,
-    "word": "average",
-    "partOfSpeech": "adjective",
+    "word": "complain",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is average",
-    "chinese": "“average”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as average by the teacher.",
+    "meaning": "to say that you are unhappy about something",
+    "chinese": "抱怨；投诉",
+    "synonyms": [
+      "grumble",
+      "protest"
+    ],
+    "antonyms": [
+      "praise"
+    ],
+    "example": "Several passengers complained about the delay.",
     "topics": [
-      "daily life"
+      "Travel",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 127,
-    "word": "avoid",
+    "word": "concentrate",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to avoid or to carry out the action described by the word",
-    "chinese": "“avoid”的常用中文释义",
+    "meaning": "to give all your attention to something",
+    "chinese": "集中注意力",
     "synonyms": [
-      "escape"
+      "focus"
     ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to avoid carefully during the family activity.",
+    "antonyms": [
+      "distract"
+    ],
+    "example": "It is easier to concentrate in a quiet room.",
     "topics": [
-      "daily life"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 128,
-    "word": "aware",
-    "partOfSpeech": "noun",
+    "word": "confuse",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with aware",
-    "chinese": "“aware”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about aware in a family context.",
+    "meaning": "to make someone unable to understand something clearly",
+    "chinese": "使困惑",
+    "synonyms": [
+      "puzzle",
+      "bewilder"
+    ],
+    "antonyms": [
+      "clarify"
+    ],
+    "example": "The similar names confused the new student.",
     "topics": [
-      "daily life"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 129,
-    "word": "balance",
-    "partOfSpeech": "noun",
+    "word": "continue",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with balance",
-    "chinese": "“balance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about balance in a family context.",
+    "meaning": "to keep doing something without stopping",
+    "chinese": "继续",
+    "synonyms": [
+      "persist",
+      "proceed"
+    ],
+    "antonyms": [
+      "stop",
+      "end"
+    ],
+    "example": "Please continue reading while I check the answers.",
     "topics": [
-      "daily life"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 130,
-    "word": "basic",
-    "partOfSpeech": "adjective",
+    "word": "courage",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "describing someone or something that is basic",
-    "chinese": "“basic”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as basic by the teacher.",
+    "meaning": "the ability to face fear or difficulty",
+    "chinese": "勇气",
+    "synonyms": [
+      "bravery",
+      "boldness"
+    ],
+    "antonyms": [
+      "cowardice"
+    ],
+    "example": "It took courage to speak in front of the whole school.",
     "topics": [
-      "daily life"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 131,
-    "word": "behave",
-    "partOfSpeech": "noun",
+    "word": "curious",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with behave",
-    "chinese": "“behave”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about behave in a family context.",
+    "meaning": "wanting to know or learn more about something",
+    "chinese": "好奇的",
+    "synonyms": [
+      "inquisitive",
+      "interested"
+    ],
+    "antonyms": [
+      "indifferent"
+    ],
+    "example": "The curious child asked many questions about the experiment.",
     "topics": [
-      "daily life"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 132,
-    "word": "benefit",
+    "word": "damage",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with benefit",
-    "chinese": "“benefit”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about benefit in a family context.",
+    "meaning": "harm that makes something less useful or attractive",
+    "chinese": "损害；损坏",
+    "synonyms": [
+      "harm",
+      "destruction"
+    ],
+    "antonyms": [
+      "repair"
+    ],
+    "example": "The storm caused damage to several houses.",
     "topics": [
-      "daily life"
+      "Weather",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 133,
-    "word": "bicycle",
-    "partOfSpeech": "noun",
+    "word": "depend",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with bicycle",
-    "chinese": "“bicycle”的常用中文释义",
-    "synonyms": [],
+    "meaning": "to need someone or something for support or success",
+    "chinese": "依靠；取决于",
+    "synonyms": [
+      "rely"
+    ],
     "antonyms": [],
-    "example": "The passage included information about bicycle in a family context.",
+    "example": "Success depends on regular practice.",
     "topics": [
-      "daily life"
+      "Learning",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 134,
-    "word": "blame",
+    "word": "describe",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to blame or to carry out the action described by the word",
-    "chinese": "“blame”的常用中文释义",
-    "synonyms": [],
+    "meaning": "to say or write what someone or something is like",
+    "chinese": "描述",
+    "synonyms": [
+      "portray",
+      "explain"
+    ],
     "antonyms": [],
-    "example": "The teacher asked the pupils to blame carefully during the family activity.",
+    "example": "Describe what you saw at the park.",
     "topics": [
-      "daily life"
+      "School",
+      "Writing"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 135,
-    "word": "bother",
-    "partOfSpeech": "noun",
+    "word": "disappointed",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with bother",
-    "chinese": "“bother”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about bother in a family context.",
+    "meaning": "sad because something did not happen as expected",
+    "chinese": "失望的",
+    "synonyms": [
+      "let down",
+      "dismayed"
+    ],
+    "antonyms": [
+      "pleased"
+    ],
+    "example": "He was disappointed when the match was cancelled.",
     "topics": [
-      "daily life"
+      "Emotions",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 136,
-    "word": "brave",
-    "partOfSpeech": "adjective",
+    "word": "discover",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is brave",
-    "chinese": "“brave”的常用中文释义",
+    "meaning": "to find something or learn something for the first time",
+    "chinese": "发现",
     "synonyms": [
-      "courageous",
-      "bold"
+      "find",
+      "uncover"
     ],
     "antonyms": [
-      "cowardly"
+      "overlook"
     ],
-    "example": "The family situation was described as brave by the teacher.",
+    "example": "Scientists discovered a new species in the forest.",
     "topics": [
-      "daily life"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 137,
-    "word": "bright",
-    "partOfSpeech": "adjective",
+    "word": "discuss",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is bright",
-    "chinese": "“bright”的常用中文释义",
-    "synonyms": [],
+    "meaning": "to talk about something with another person or group",
+    "chinese": "讨论",
+    "synonyms": [
+      "talk about",
+      "consider"
+    ],
     "antonyms": [],
-    "example": "The family situation was described as bright by the teacher.",
+    "example": "The class discussed ways to reduce plastic waste.",
     "topics": [
-      "daily life"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 138,
-    "word": "broadcast",
-    "partOfSpeech": "noun",
+    "word": "divide",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with broadcast",
-    "chinese": "“broadcast”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about broadcast in a family context.",
+    "meaning": "to separate something into parts or groups",
+    "chinese": "分开；划分",
+    "synonyms": [
+      "separate",
+      "split"
+    ],
+    "antonyms": [
+      "combine",
+      "join"
+    ],
+    "example": "Divide the class into four groups.",
     "topics": [
-      "daily life"
+      "School",
+      "Mathematics"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 139,
-    "word": "calm",
+    "word": "eager",
     "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "describing someone or something that is calm",
-    "chinese": "“calm”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as calm by the teacher.",
+    "meaning": "very interested and excited to do something",
+    "chinese": "渴望的；热切的",
+    "synonyms": [
+      "keen",
+      "enthusiastic"
+    ],
+    "antonyms": [
+      "reluctant"
+    ],
+    "example": "The pupils were eager to begin the science experiment.",
     "topics": [
-      "daily life"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 140,
-    "word": "careful",
-    "partOfSpeech": "adjective",
+    "word": "effort",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "describing someone or something that is careful",
-    "chinese": "“careful”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as careful by the teacher.",
+    "meaning": "the physical or mental energy used to do something",
+    "chinese": "努力",
+    "synonyms": [
+      "attempt",
+      "endeavour"
+    ],
+    "antonyms": [
+      "idleness"
+    ],
+    "example": "Your effort in completing the project was impressive.",
     "topics": [
-      "daily life"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 141,
-    "word": "careless",
-    "partOfSpeech": "adjective",
+    "word": "encourage",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is careless",
-    "chinese": "“careless”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as careless by the teacher.",
+    "meaning": "to give someone support or confidence to do something",
+    "chinese": "鼓励",
+    "synonyms": [
+      "support",
+      "motivate"
+    ],
+    "antonyms": [
+      "discourage"
+    ],
+    "example": "Her parents encouraged her to keep practising.",
     "topics": [
-      "daily life"
+      "Family",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 142,
-    "word": "cause",
-    "partOfSpeech": "noun",
+    "word": "enormous",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with cause",
-    "chinese": "“cause”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cause in a family context.",
+    "meaning": "extremely large",
+    "chinese": "巨大的",
+    "synonyms": [
+      "huge",
+      "gigantic"
+    ],
+    "antonyms": [
+      "tiny",
+      "small"
+    ],
+    "example": "An enormous tree stood in the middle of the park.",
     "topics": [
-      "daily life"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 143,
-    "word": "celebrate",
+    "word": "escape",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to celebrate or to carry out the action described by the word",
-    "chinese": "“celebrate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to celebrate carefully during the family activity.",
+    "meaning": "to get away from a place or situation",
+    "chinese": "逃脱；逃离",
+    "synonyms": [
+      "flee",
+      "get away"
+    ],
+    "antonyms": [
+      "remain",
+      "stay"
+    ],
+    "example": "The bird escaped from the open cage.",
     "topics": [
-      "daily life"
+      "Animals",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 144,
-    "word": "century",
+    "word": "event",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with century",
-    "chinese": "“century”的常用中文释义",
-    "synonyms": [],
+    "meaning": "something that happens, especially something planned",
+    "chinese": "事件；活动",
+    "synonyms": [
+      "occasion",
+      "happening"
+    ],
     "antonyms": [],
-    "example": "The passage included information about century in a family context.",
+    "example": "The school held a sports event on Friday.",
     "topics": [
-      "daily life"
+      "School",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 145,
-    "word": "challenge",
-    "partOfSpeech": "verb",
+    "word": "exhausted",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "something difficult that tests a person's ability",
-    "chinese": "挑战",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to challenge carefully during the family activity.",
+    "meaning": "extremely tired",
+    "chinese": "筋疲力尽的",
+    "synonyms": [
+      "extremely tired",
+      "weary"
+    ],
+    "antonyms": [
+      "energetic",
+      "rested"
+    ],
+    "example": "After the long hike, we were completely exhausted.",
     "topics": [
-      "daily life"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 146,
-    "word": "character",
+    "word": "experience",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with character",
-    "chinese": "“character”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about character in a family context.",
+    "meaning": "knowledge gained from doing or seeing something",
+    "chinese": "经验；经历",
+    "synonyms": [
+      "knowledge",
+      "practice"
+    ],
+    "antonyms": [
+      "inexperience"
+    ],
+    "example": "The trip gave us valuable experience.",
     "topics": [
-      "daily life"
+      "Travel",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 147,
-    "word": "charity",
-    "partOfSpeech": "noun",
+    "word": "explain",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with charity",
-    "chinese": "“charity”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about charity in a family context.",
+    "meaning": "to make something clear by giving details or reasons",
+    "chinese": "解释",
+    "synonyms": [
+      "clarify",
+      "describe"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "Can you explain how you solved the problem?",
     "topics": [
-      "daily life"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 148,
-    "word": "cheerful",
+    "word": "familiar",
     "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "describing someone or something that is cheerful",
-    "chinese": "“cheerful”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as cheerful by the teacher.",
+    "meaning": "well known to you",
+    "chinese": "熟悉的",
+    "synonyms": [
+      "recognisable",
+      "known"
+    ],
+    "antonyms": [
+      "unfamiliar"
+    ],
+    "example": "The song sounded familiar to me.",
     "topics": [
-      "daily life"
+      "Music",
+      "Memory"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 149,
-    "word": "choice",
-    "partOfSpeech": "noun",
+    "word": "fortunate",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with choice",
-    "chinese": "“choice”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about choice in a family context.",
+    "meaning": "having good luck",
+    "chinese": "幸运的",
+    "synonyms": [
+      "lucky",
+      "favoured"
+    ],
+    "antonyms": [
+      "unfortunate"
+    ],
+    "example": "We were fortunate to have sunny weather for the picnic.",
     "topics": [
-      "daily life"
+      "Weather",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 150,
-    "word": "circumstance",
-    "partOfSpeech": "noun",
+    "word": "generous",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with circumstance",
-    "chinese": "“circumstance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about circumstance in a family context.",
+    "meaning": "willing to give or share more than expected",
+    "chinese": "慷慨的",
+    "synonyms": [
+      "giving",
+      "charitable"
+    ],
+    "antonyms": [
+      "selfish",
+      "stingy"
+    ],
+    "example": "The generous donor gave books to the library.",
     "topics": [
-      "daily life"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 151,
-    "word": "citizen",
-    "partOfSpeech": "noun",
+    "word": "grateful",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with citizen",
-    "chinese": "“citizen”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about citizen in a family context.",
+    "meaning": "feeling thankful for something",
+    "chinese": "感激的",
+    "synonyms": [
+      "thankful",
+      "appreciative"
+    ],
+    "antonyms": [
+      "ungrateful"
+    ],
+    "example": "I am grateful for your help.",
     "topics": [
-      "daily life"
+      "Values",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 152,
-    "word": "clever",
-    "partOfSpeech": "adjective",
+    "word": "hesitate",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is clever",
-    "chinese": "“clever”的常用中文释义",
+    "meaning": "to pause because you are uncertain what to do",
+    "chinese": "犹豫",
     "synonyms": [
-      "smart",
-      "intelligent"
+      "waver",
+      "pause"
     ],
     "antonyms": [
-      "foolish"
+      "decide"
     ],
-    "example": "The family situation was described as clever by the teacher.",
+    "example": "Do not hesitate to ask for help.",
     "topics": [
-      "daily life"
+      "Communication",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 153,
-    "word": "climate",
-    "partOfSpeech": "noun",
+    "word": "imagine",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with climate",
-    "chinese": "“climate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about climate in a family context.",
+    "meaning": "to form a picture or idea in your mind",
+    "chinese": "想象",
+    "synonyms": [
+      "visualise",
+      "picture"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Imagine living on a planet with no trees.",
     "topics": [
-      "daily life"
+      "Writing",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 154,
-    "word": "climb",
-    "partOfSpeech": "noun",
+    "word": "improve",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with climb",
-    "chinese": "“climb”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about climb in a family context.",
+    "meaning": "to become better or make something better",
+    "chinese": "改善；提高",
+    "synonyms": [
+      "develop",
+      "enhance"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "She practised daily to improve her spelling.",
     "topics": [
-      "daily life"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 155,
-    "word": "closely",
-    "partOfSpeech": "adverb",
+    "word": "include",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "in a way that is closely",
-    "chinese": "“closely”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The pupils completed the family task closely.",
+    "meaning": "to contain something as part of a whole",
+    "chinese": "包括",
+    "synonyms": [
+      "contain",
+      "involve"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The price includes breakfast.",
     "topics": [
-      "daily life"
+      "Travel",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 156,
-    "word": "collect",
+    "word": "increase",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to collect or to carry out the action described by the word",
-    "chinese": "“collect”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to collect carefully during the family activity.",
+    "meaning": "to become greater in number, size or amount",
+    "chinese": "增加；提高",
+    "synonyms": [
+      "rise",
+      "grow"
+    ],
+    "antonyms": [
+      "decrease"
+    ],
+    "example": "The number of visitors increased during the holidays.",
     "topics": [
-      "daily life"
+      "Numbers",
+      "Travel"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 157,
-    "word": "comfortable",
+    "word": "intelligent",
     "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "describing someone or something that is comfortable",
-    "chinese": "“comfortable”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as comfortable by the teacher.",
+    "meaning": "good at learning, understanding and solving problems",
+    "chinese": "聪明的；有才智的",
+    "synonyms": [
+      "clever",
+      "bright"
+    ],
+    "antonyms": [
+      "unintelligent"
+    ],
+    "example": "The intelligent student explained the answer clearly.",
     "topics": [
-      "daily life"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 158,
-    "word": "command",
-    "partOfSpeech": "noun",
+    "word": "invite",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with command",
-    "chinese": "“command”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about command in a family context.",
+    "meaning": "to ask someone to come to an event or place",
+    "chinese": "邀请",
+    "synonyms": [
+      "ask",
+      "welcome"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "We invited our neighbours to the celebration.",
     "topics": [
-      "daily life"
+      "Community",
+      "Family"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 159,
-    "word": "communicate",
+    "word": "journey",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with communicate",
-    "chinese": "“communicate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about communicate in a family context.",
+    "meaning": "an act of travelling from one place to another",
+    "chinese": "旅程",
+    "synonyms": [
+      "trip",
+      "voyage"
+    ],
+    "antonyms": [
+      "stay"
+    ],
+    "example": "The journey to the countryside took two hours.",
     "topics": [
-      "daily life"
+      "Travel",
+      "Geography"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 160,
-    "word": "compare",
+    "word": "manage",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to compare or to carry out the action described by the word",
-    "chinese": "“compare”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to compare carefully during the family activity.",
+    "meaning": "to succeed in doing something difficult",
+    "chinese": "设法做到；管理",
+    "synonyms": [
+      "handle",
+      "cope"
+    ],
+    "antonyms": [
+      "fail"
+    ],
+    "example": "She managed to finish the project on time.",
     "topics": [
-      "daily life"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 161,
-    "word": "compete",
+    "word": "mention",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to compete or to carry out the action described by the word",
-    "chinese": "“compete”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to compete carefully during the family activity.",
+    "meaning": "to speak or write about something briefly",
+    "chinese": "提及",
+    "synonyms": [
+      "refer to",
+      "note"
+    ],
+    "antonyms": [
+      "omit"
+    ],
+    "example": "He mentioned that the library would close early.",
     "topics": [
-      "daily life"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 162,
-    "word": "complain",
-    "partOfSpeech": "verb",
+    "word": "miserable",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to complain or to carry out the action described by the word",
-    "chinese": "“complain”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to complain carefully during the family activity.",
+    "meaning": "very unhappy or uncomfortable",
+    "chinese": "痛苦的；难过的",
+    "synonyms": [
+      "unhappy",
+      "wretched"
+    ],
+    "antonyms": [
+      "cheerful",
+      "happy"
+    ],
+    "example": "The child felt miserable after losing his favourite toy.",
     "topics": [
-      "daily life"
+      "Emotions",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 163,
-    "word": "concentrate",
+    "word": "observe",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to concentrate or to carry out the action described by the word",
-    "chinese": "“concentrate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to concentrate carefully during the family activity.",
+    "meaning": "to watch carefully or notice something",
+    "chinese": "观察；注意",
+    "synonyms": [
+      "watch",
+      "notice"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "We observed the ants carrying food to their nest.",
     "topics": [
-      "daily life"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 164,
-    "word": "concern",
+    "word": "offer",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to concern or to carry out the action described by the word",
-    "chinese": "“concern”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to concern carefully during the family activity.",
+    "meaning": "to say that you are willing to give or provide something",
+    "chinese": "提供；主动提出",
+    "synonyms": [
+      "provide",
+      "propose"
+    ],
+    "antonyms": [
+      "refuse"
+    ],
+    "example": "Dad offered to drive us home.",
     "topics": [
-      "daily life"
+      "Family",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 165,
-    "word": "confident",
-    "partOfSpeech": "adjective",
+    "word": "organise",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "describing someone or something that is confident",
-    "chinese": "“confident”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "uncertain"
+    "meaning": "to plan or arrange an event or activity",
+    "chinese": "组织；安排",
+    "synonyms": [
+      "arrange",
+      "plan"
     ],
-    "example": "The family situation was described as confident by the teacher.",
+    "antonyms": [
+      "disorganise"
+    ],
+    "example": "The pupils organised a charity sale.",
     "topics": [
-      "daily life"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 166,
-    "word": "confuse",
-    "partOfSpeech": "verb",
+    "word": "patiently",
+    "partOfSpeech": "adverb",
     "level": 2,
-    "meaning": "to confuse or to carry out the action described by the word",
-    "chinese": "“confuse”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to confuse carefully during the family activity.",
+    "meaning": "in a calm way while waiting or dealing with difficulty",
+    "chinese": "耐心地",
+    "synonyms": [
+      "calmly"
+    ],
+    "antonyms": [
+      "impatiently"
+    ],
+    "example": "The teacher patiently explained the difficult question again.",
     "topics": [
-      "daily life"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 167,
-    "word": "connect",
+    "word": "prepare",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to connect or to carry out the action described by the word",
-    "chinese": "“connect”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to connect carefully during the family activity.",
+    "meaning": "to make something ready for use or an event",
+    "chinese": "准备",
+    "synonyms": [
+      "arrange",
+      "ready"
+    ],
+    "antonyms": [
+      "neglect"
+    ],
+    "example": "We prepared our bags the night before the trip.",
     "topics": [
-      "daily life"
+      "Travel",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 168,
-    "word": "contain",
+    "word": "promise",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to contain or to carry out the action described by the word",
-    "chinese": "“contain”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to contain carefully during the family activity.",
+    "meaning": "to say that you will certainly do something",
+    "chinese": "承诺",
+    "synonyms": [
+      "pledge",
+      "vow"
+    ],
+    "antonyms": [
+      "break"
+    ],
+    "example": "I promised to return the book tomorrow.",
     "topics": [
-      "daily life"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 169,
-    "word": "continue",
+    "word": "protect",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to continue or to carry out the action described by the word",
-    "chinese": "“continue”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to continue carefully during the family activity.",
+    "meaning": "to keep someone or something safe from harm",
+    "chinese": "保护",
+    "synonyms": [
+      "guard",
+      "defend"
+    ],
+    "antonyms": [
+      "endanger"
+    ],
+    "example": "Trees help protect the soil from erosion.",
     "topics": [
-      "daily life"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 170,
-    "word": "control",
+    "word": "realise",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to control or to carry out the action described by the word",
-    "chinese": "“control”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to control carefully during the family activity.",
+    "meaning": "to understand something clearly, often suddenly",
+    "chinese": "意识到",
+    "synonyms": [
+      "understand",
+      "recognise"
+    ],
+    "antonyms": [
+      "overlook"
+    ],
+    "example": "I realised that I had left my keys at home.",
     "topics": [
-      "daily life"
+      "Learning",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 171,
-    "word": "convenient",
-    "partOfSpeech": "noun",
+    "word": "receive",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with convenient",
-    "chinese": "“convenient”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about convenient in a family context.",
+    "meaning": "to get or be given something",
+    "chinese": "收到；接收",
+    "synonyms": [
+      "get",
+      "accept"
+    ],
+    "antonyms": [
+      "give",
+      "send"
+    ],
+    "example": "She received a letter from her cousin.",
     "topics": [
-      "daily life"
+      "Communication",
+      "Family"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 172,
-    "word": "convince",
+    "word": "reduce",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to convince or to carry out the action described by the word",
-    "chinese": "“convince”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to convince carefully during the family activity.",
+    "meaning": "to make something smaller or less",
+    "chinese": "减少；降低",
+    "synonyms": [
+      "decrease",
+      "lower"
+    ],
+    "antonyms": [
+      "increase"
+    ],
+    "example": "We should reduce the amount of plastic we use.",
     "topics": [
-      "daily life"
+      "Environment",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 173,
-    "word": "cooperate",
+    "word": "refuse",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to cooperate or to carry out the action described by the word",
-    "chinese": "“cooperate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to cooperate carefully during the family activity.",
+    "meaning": "to say no to something or decline to do it",
+    "chinese": "拒绝",
+    "synonyms": [
+      "reject",
+      "decline"
+    ],
+    "antonyms": [
+      "accept",
+      "agree"
+    ],
+    "example": "He refused to copy his friend's answers.",
     "topics": [
-      "daily life"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 174,
-    "word": "courage",
-    "partOfSpeech": "noun",
+    "word": "relax",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with courage",
-    "chinese": "“courage”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about courage in a family context.",
+    "meaning": "to rest and become less worried or tense",
+    "chinese": "放松",
+    "synonyms": [
+      "rest",
+      "unwind"
+    ],
+    "antonyms": [
+      "worry",
+      "tense"
+    ],
+    "example": "I like to relax by reading before bed.",
     "topics": [
-      "daily life"
+      "Health",
+      "Hobbies"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 175,
-    "word": "curious",
+    "word": "reliable",
     "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "describing someone or something that is curious",
-    "chinese": "“curious”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as curious by the teacher.",
+    "meaning": "able to be trusted to do what is expected",
+    "chinese": "可靠的",
+    "synonyms": [
+      "dependable",
+      "trustworthy"
+    ],
+    "antonyms": [
+      "unreliable"
+    ],
+    "example": "We need a reliable person to look after the plants.",
     "topics": [
-      "daily life"
+      "Values",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 176,
-    "word": "custom",
-    "partOfSpeech": "noun",
+    "word": "remind",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with custom",
-    "chinese": "“custom”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about custom in a family context.",
+    "meaning": "to help someone remember something",
+    "chinese": "提醒",
+    "synonyms": [
+      "prompt"
+    ],
+    "antonyms": [
+      "forget"
+    ],
+    "example": "Please remind me to bring my project tomorrow.",
     "topics": [
-      "daily life"
+      "School",
+      "Memory"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 177,
-    "word": "damage",
+    "word": "repair",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to damage or to carry out the action described by the word",
-    "chinese": "“damage”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to damage carefully during the family activity.",
+    "meaning": "to fix something that is damaged",
+    "chinese": "修理",
+    "synonyms": [
+      "fix",
+      "restore"
+    ],
+    "antonyms": [
+      "damage",
+      "break"
+    ],
+    "example": "The mechanic repaired the broken bicycle.",
     "topics": [
-      "daily life"
+      "Daily Life",
+      "Transport"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 178,
-    "word": "danger",
-    "partOfSpeech": "noun",
+    "word": "replace",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with danger",
-    "chinese": "“danger”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about danger in a family context.",
+    "meaning": "to put something new in the place of something else",
+    "chinese": "替换；取代",
+    "synonyms": [
+      "substitute",
+      "exchange"
+    ],
+    "antonyms": [
+      "retain"
+    ],
+    "example": "We replaced the old batteries with new ones.",
     "topics": [
-      "daily life"
+      "Science",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 179,
-    "word": "dangerous",
-    "partOfSpeech": "adjective",
+    "word": "request",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "describing someone or something that is dangerous",
-    "chinese": "“dangerous”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The family situation was described as dangerous by the teacher.",
+    "meaning": "a polite or formal ask for something",
+    "chinese": "请求",
+    "synonyms": [
+      "appeal",
+      "plea"
+    ],
+    "antonyms": [
+      "refusal"
+    ],
+    "example": "The teacher considered the pupil's request carefully.",
     "topics": [
-      "daily life"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 180,
-    "word": "decade",
-    "partOfSpeech": "noun",
+    "word": "respect",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with decade",
-    "chinese": "“decade”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about decade in a family context.",
+    "meaning": "to have a high opinion of someone or treat them properly",
+    "chinese": "尊重",
+    "synonyms": [
+      "admire",
+      "honour"
+    ],
+    "antonyms": [
+      "disrespect"
+    ],
+    "example": "We should respect people with different opinions.",
     "topics": [
-      "daily life"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 181,
-    "word": "decrease",
-    "partOfSpeech": "verb",
+    "word": "responsible",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to decrease or to carry out the action described by the word",
-    "chinese": "“decrease”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to decrease carefully during the family activity.",
+    "meaning": "having a duty to deal with something properly",
+    "chinese": "负责的",
+    "synonyms": [
+      "reliable",
+      "accountable"
+    ],
+    "antonyms": [
+      "irresponsible"
+    ],
+    "example": "A responsible student completes homework on time.",
     "topics": [
-      "daily life"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 182,
-    "word": "defeat",
-    "partOfSpeech": "verb",
+    "word": "result",
+    "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "to defeat or to carry out the action described by the word",
-    "chinese": "“defeat”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to defeat carefully during the family activity.",
+    "meaning": "something that happens because of an action or situation",
+    "chinese": "结果",
+    "synonyms": [
+      "outcome",
+      "consequence"
+    ],
+    "antonyms": [
+      "cause"
+    ],
+    "example": "Hard work often leads to good results.",
     "topics": [
-      "daily life"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 183,
-    "word": "defend",
+    "word": "return",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to defend or to carry out the action described by the word",
-    "chinese": "“defend”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to defend carefully during the family activity.",
+    "meaning": "to go or come back to a place",
+    "chinese": "返回；归还",
+    "synonyms": [
+      "go back",
+      "give back"
+    ],
+    "antonyms": [
+      "leave"
+    ],
+    "example": "Please return the library book by Friday.",
     "topics": [
-      "daily life"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 184,
-    "word": "delicate",
+    "word": "reward",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with delicate",
-    "chinese": "“delicate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about delicate in a family context.",
+    "meaning": "something given for good behaviour or achievement",
+    "chinese": "奖励",
+    "synonyms": [
+      "prize",
+      "benefit"
+    ],
+    "antonyms": [
+      "penalty"
+    ],
+    "example": "The winner received a reward for her effort.",
     "topics": [
-      "daily life"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 185,
-    "word": "delight",
-    "partOfSpeech": "noun",
+    "word": "search",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with delight",
-    "chinese": "“delight”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about delight in a family context.",
+    "meaning": "to look carefully for something",
+    "chinese": "寻找；搜查",
+    "synonyms": [
+      "seek",
+      "look for"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "We searched the room for the missing key.",
     "topics": [
-      "daily life"
+      "Daily Life",
+      "Problem Solving"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 186,
-    "word": "demand",
-    "partOfSpeech": "noun",
+    "word": "sensible",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with demand",
-    "chinese": "“demand”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about demand in a family context.",
+    "meaning": "showing good judgement",
+    "chinese": "明智的；理智的",
+    "synonyms": [
+      "wise",
+      "practical"
+    ],
+    "antonyms": [
+      "foolish"
+    ],
+    "example": "It is sensible to bring an umbrella on a rainy day.",
     "topics": [
-      "daily life"
+      "Values",
+      "Weather"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 187,
-    "word": "depend",
-    "partOfSpeech": "noun",
+    "word": "separate",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with depend",
-    "chinese": "“depend”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about depend in a family context.",
+    "meaning": "to divide or move things apart",
+    "chinese": "分开；分离",
+    "synonyms": [
+      "divide",
+      "split"
+    ],
+    "antonyms": [
+      "join",
+      "combine"
+    ],
+    "example": "Please separate the recyclable items from the rubbish.",
     "topics": [
-      "daily life"
+      "Environment",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 188,
-    "word": "describe",
+    "word": "share",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to describe or to carry out the action described by the word",
-    "chinese": "“describe”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to describe carefully during the family activity.",
+    "meaning": "to give part of something to another person",
+    "chinese": "分享；分担",
+    "synonyms": [
+      "divide",
+      "distribute"
+    ],
+    "antonyms": [
+      "keep"
+    ],
+    "example": "The children shared the snacks equally.",
     "topics": [
-      "daily life"
+      "Values",
+      "Food"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 189,
-    "word": "deserve",
+    "word": "shiver",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to deserve or to carry out the action described by the word",
-    "chinese": "“deserve”的常用中文释义",
-    "synonyms": [],
+    "meaning": "to shake slightly because of cold or fear",
+    "chinese": "发抖",
+    "synonyms": [
+      "tremble"
+    ],
     "antonyms": [],
-    "example": "The teacher asked the pupils to deserve carefully during the family activity.",
+    "example": "We began to shiver when the wind became colder.",
     "topics": [
-      "daily life"
+      "Weather",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 190,
-    "word": "design",
+    "word": "solve",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to design or to carry out the action described by the word",
-    "chinese": "“design”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to design carefully during the family activity.",
+    "meaning": "to find an answer to a problem",
+    "chinese": "解决",
+    "synonyms": [
+      "work out",
+      "resolve"
+    ],
+    "antonyms": [
+      "complicate"
+    ],
+    "example": "Can you solve this mathematics problem?",
     "topics": [
-      "daily life"
+      "School",
+      "Problem Solving"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 191,
-    "word": "destroy",
+    "word": "suggest",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to destroy or to carry out the action described by the word",
-    "chinese": "“destroy”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to destroy carefully during the family activity.",
+    "meaning": "to put forward an idea for someone to consider",
+    "chinese": "建议；提议",
+    "synonyms": [
+      "recommend",
+      "propose"
+    ],
+    "antonyms": [
+      "oppose"
+    ],
+    "example": "May I suggest a different way to organise the project?",
     "topics": [
-      "daily life"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 192,
-    "word": "detail",
-    "partOfSpeech": "noun",
+    "word": "support",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with detail",
-    "chinese": "“detail”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about detail in a family context.",
+    "meaning": "to help someone emotionally or practically",
+    "chinese": "支持；帮助",
+    "synonyms": [
+      "assist",
+      "encourage"
+    ],
+    "antonyms": [
+      "oppose"
+    ],
+    "example": "Friends should support each other during difficult times.",
     "topics": [
-      "daily life"
+      "Values",
+      "Friendship"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 193,
-    "word": "develop",
+    "word": "suppose",
     "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "to develop or to carry out the action described by the word",
-    "chinese": "“develop”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to develop carefully during the family activity.",
+    "meaning": "to think or assume that something is True",
+    "chinese": "认为；假设",
+    "synonyms": [
+      "assume",
+      "presume"
+    ],
+    "antonyms": [
+      "know"
+    ],
+    "example": "I suppose we should leave before the traffic becomes heavy.",
     "topics": [
-      "daily life"
+      "Thinking",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 194,
-    "word": "difference",
-    "partOfSpeech": "noun",
+    "word": "survive",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with difference",
-    "chinese": "“difference”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about difference in a family context.",
+    "meaning": "to continue living despite danger or difficulty",
+    "chinese": "生存；幸存",
+    "synonyms": [
+      "endure",
+      "live"
+    ],
+    "antonyms": [
+      "die",
+      "perish"
+    ],
+    "example": "Some plants can survive with very little water.",
     "topics": [
-      "daily life"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 195,
-    "word": "disappear",
-    "partOfSpeech": "noun",
+    "word": "terrible",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with disappear",
-    "chinese": "“disappear”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about disappear in a family context.",
+    "meaning": "very bad or unpleasant",
+    "chinese": "糟糕的；可怕的",
+    "synonyms": [
+      "awful",
+      "horrible"
+    ],
+    "antonyms": [
+      "excellent",
+      "wonderful"
+    ],
+    "example": "The storm caused terrible damage to the roads.",
     "topics": [
-      "daily life"
+      "Weather",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 196,
-    "word": "discover",
-    "partOfSpeech": "verb",
+    "word": "thankful",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to discover or to carry out the action described by the word",
-    "chinese": "“discover”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to discover carefully during the family activity.",
+    "meaning": "feeling pleased and grateful",
+    "chinese": "感激的",
+    "synonyms": [
+      "grateful",
+      "appreciative"
+    ],
+    "antonyms": [
+      "ungrateful"
+    ],
+    "example": "We were thankful for the volunteers' help.",
     "topics": [
-      "daily life"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 197,
-    "word": "discuss",
-    "partOfSpeech": "verb",
+    "word": "thoughtful",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "to discuss or to carry out the action described by the word",
-    "chinese": "“discuss”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to discuss carefully during the family activity.",
+    "meaning": "kind and considerate of other people's feelings",
+    "chinese": "体贴的；周到的",
+    "synonyms": [
+      "considerate",
+      "caring"
+    ],
+    "antonyms": [
+      "thoughtless"
+    ],
+    "example": "It was thoughtful of him to bring an umbrella for his sister.",
     "topics": [
-      "daily life"
+      "Values",
+      "Family"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 198,
-    "word": "disease",
+    "word": "trouble",
     "partOfSpeech": "noun",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with disease",
-    "chinese": "“disease”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about disease in a family context.",
+    "meaning": "problems or difficulties",
+    "chinese": "麻烦；困难",
+    "synonyms": [
+      "difficulty",
+      "problem"
+    ],
+    "antonyms": [
+      "ease"
+    ],
+    "example": "The computer gave us trouble during the presentation.",
     "topics": [
-      "daily life"
+      "Technology",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 199,
-    "word": "distance",
-    "partOfSpeech": "noun",
+    "word": "valuable",
+    "partOfSpeech": "adjective",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with distance",
-    "chinese": "“distance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about distance in a family context.",
+    "meaning": "worth a lot of money or very useful or important",
+    "chinese": "有价值的；宝贵的",
+    "synonyms": [
+      "precious",
+      "worthwhile"
+    ],
+    "antonyms": [
+      "worthless"
+    ],
+    "example": "Time is valuable, so use it wisely.",
     "topics": [
-      "daily life"
+      "Values",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 200,
-    "word": "distract",
-    "partOfSpeech": "noun",
+    "word": "wonder",
+    "partOfSpeech": "verb",
     "level": 2,
-    "meaning": "a person, thing, idea, or situation connected with distract",
-    "chinese": "“distract”的常用中文释义",
-    "synonyms": [],
+    "meaning": "to think about something because you are curious",
+    "chinese": "想知道；纳闷",
+    "synonyms": [
+      "curious",
+      "ask oneself"
+    ],
     "antonyms": [],
-    "example": "The passage included information about distract in a family context.",
+    "example": "I wonder why the birds suddenly flew away.",
     "topics": [
-      "daily life"
+      "Nature",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 201,
-    "word": "academic",
-    "partOfSpeech": "noun",
+    "word": "abandon",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with academic",
-    "chinese": "“academic”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about academic in a community context.",
+    "meaning": "to leave someone or something completely",
+    "chinese": "放弃；遗弃",
+    "synonyms": [
+      "desert",
+      "leave"
+    ],
+    "antonyms": [
+      "keep"
+    ],
+    "example": "The family had to abandon their picnic when the storm began.",
     "topics": [
-      "school"
+      "Weather",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 202,
-    "word": "absence",
-    "partOfSpeech": "noun",
+    "word": "absorb",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with absence",
-    "chinese": "“absence”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about absence in a community context.",
+    "meaning": "to take in liquid, energy or information",
+    "chinese": "吸收；理解",
+    "synonyms": [
+      "soak up",
+      "take in"
+    ],
+    "antonyms": [
+      "release"
+    ],
+    "example": "Plants absorb water through their roots.",
     "topics": [
-      "school"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 203,
-    "word": "account",
-    "partOfSpeech": "noun",
+    "word": "abundant",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with account",
-    "chinese": "“account”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about account in a community context.",
+    "meaning": "existing in large quantities",
+    "chinese": "丰富的；大量的",
+    "synonyms": [
+      "plentiful",
+      "ample"
+    ],
+    "antonyms": [
+      "scarce"
+    ],
+    "example": "The region has abundant sunshine throughout the year.",
     "topics": [
-      "school"
+      "Nature",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 204,
-    "word": "achievement",
-    "partOfSpeech": "noun",
+    "word": "accurate",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with achievement",
-    "chinese": "“achievement”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about achievement in a community context.",
+    "meaning": "correct and without mistakes",
+    "chinese": "准确的",
+    "synonyms": [
+      "correct",
+      "precise"
+    ],
+    "antonyms": [
+      "inaccurate"
+    ],
+    "example": "Make sure your measurements are accurate.",
     "topics": [
-      "school"
+      "Science",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 205,
-    "word": "activity",
-    "partOfSpeech": "noun",
+    "word": "adapt",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with activity",
-    "chinese": "“activity”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about activity in a community context.",
+    "meaning": "to change to suit new conditions",
+    "chinese": "适应；改编",
+    "synonyms": [
+      "adjust",
+      "modify"
+    ],
+    "antonyms": [
+      "resist"
+    ],
+    "example": "Animals adapt to changes in their environment.",
     "topics": [
-      "school"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 206,
-    "word": "actual",
+    "word": "affection",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with actual",
-    "chinese": "“actual”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about actual in a community context.",
+    "meaning": "a feeling of love or fondness",
+    "chinese": "喜爱；感情",
+    "synonyms": [
+      "fondness",
+      "warmth"
+    ],
+    "antonyms": [
+      "hatred"
+    ],
+    "example": "The puppy showed affection by wagging its tail.",
     "topics": [
-      "school"
+      "Animals",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 207,
-    "word": "affect",
-    "partOfSpeech": "noun",
+    "word": "aggressive",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with affect",
-    "chinese": "“affect”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about affect in a community context.",
+    "meaning": "behaving in a forceful or hostile way",
+    "chinese": "好斗的；有攻击性的",
+    "synonyms": [
+      "hostile",
+      "forceful"
+    ],
+    "antonyms": [
+      "gentle",
+      "peaceful"
+    ],
+    "example": "The aggressive dog had to be kept behind a gate.",
     "topics": [
-      "school"
+      "Animals",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 208,
-    "word": "agency",
-    "partOfSpeech": "noun",
+    "word": "ambitious",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with agency",
-    "chinese": "“agency”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about agency in a community context.",
+    "meaning": "having a strong desire to achieve something",
+    "chinese": "有抱负的",
+    "synonyms": [
+      "driven",
+      "aspiring"
+    ],
+    "antonyms": [
+      "unambitious"
+    ],
+    "example": "She is ambitious and hopes to become a scientist.",
     "topics": [
-      "school"
+      "School",
+      "Goals"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 209,
-    "word": "airport",
-    "partOfSpeech": "noun",
+    "word": "apparent",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with airport",
-    "chinese": "“airport”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about airport in a community context.",
+    "meaning": "easy to see or understand",
+    "chinese": "明显的",
+    "synonyms": [
+      "obvious",
+      "clear"
+    ],
+    "antonyms": [
+      "hidden",
+      "unclear"
+    ],
+    "example": "It was apparent that the plant needed more water.",
     "topics": [
-      "school"
+      "Science",
+      "Observation"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 210,
-    "word": "album",
-    "partOfSpeech": "noun",
+    "word": "approach",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with album",
-    "chinese": "“album”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about album in a community context.",
+    "meaning": "to move closer to someone or something",
+    "chinese": "接近",
+    "synonyms": [
+      "near",
+      "advance"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "Dark clouds approached as we walked home.",
     "topics": [
-      "school"
+      "Weather",
+      "Travel"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 211,
-    "word": "alert",
-    "partOfSpeech": "noun",
+    "word": "arrogant",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with alert",
-    "chinese": "“alert”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about alert in a community context.",
+    "meaning": "believing you are better than other people",
+    "chinese": "傲慢的",
+    "synonyms": [
+      "conceited",
+      "proud"
+    ],
+    "antonyms": [
+      "humble"
+    ],
+    "example": "His arrogant attitude made it difficult to work with him.",
     "topics": [
-      "school"
+      "Values",
+      "People"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 212,
-    "word": "amusement",
-    "partOfSpeech": "noun",
+    "word": "astonishing",
+    "partOfSpeech": "adjective",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with amusement",
-    "chinese": "“amusement”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about amusement in a community context.",
+    "meaning": "extremely surprising",
+    "chinese": "令人惊讶的",
+    "synonyms": [
+      "amazing",
+      "remarkable"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The athlete made an astonishing recovery.",
     "topics": [
-      "school"
+      "Sports",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 213,
-    "word": "angle",
+    "word": "attitude",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with angle",
-    "chinese": "“angle”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about angle in a community context.",
+    "meaning": "the way someone thinks or feels about something",
+    "chinese": "态度",
+    "synonyms": [
+      "outlook",
+      "view"
+    ],
+    "antonyms": [
+      "indifference"
+    ],
+    "example": "A positive attitude can help you overcome difficulties.",
     "topics": [
-      "school"
+      "Values",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 214,
-    "word": "angry",
-    "partOfSpeech": "noun",
+    "word": "attract",
+    "partOfSpeech": "verb",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with angry",
-    "chinese": "“angry”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about angry in a community context.",
+    "meaning": "to make someone or something interested in or drawn towards you",
+    "chinese": "吸引",
+    "synonyms": [
+      "draw",
+      "appeal to"
+    ],
+    "antonyms": [
+      "repel"
+    ],
+    "example": "Bright flowers attract bees and butterflies.",
     "topics": [
-      "school"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 215,
-    "word": "apology",
+    "word": "authority",
     "partOfSpeech": "noun",
     "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with apology",
-    "chinese": "“apology”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about apology in a community context.",
+    "meaning": "the power or right to make decisions or give orders",
+    "chinese": "权威；权力",
+    "synonyms": [
+      "power",
+      "control"
+    ],
+    "antonyms": [
+      "powerlessness"
+    ],
+    "example": "The school authority introduced new safety rules.",
     "topics": [
-      "school"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 216,
-    "word": "application",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with application",
-    "chinese": "“application”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about application in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 217,
-    "word": "appointment",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with appointment",
-    "chinese": "“appointment”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about appointment in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 218,
-    "word": "argument",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with argument",
-    "chinese": "“argument”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about argument in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 219,
-    "word": "athlete",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with athlete",
-    "chinese": "“athlete”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about athlete in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 220,
-    "word": "audience",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with audience",
-    "chinese": "“audience”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about audience in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 221,
-    "word": "autumn",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with autumn",
-    "chinese": "“autumn”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about autumn in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 222,
-    "word": "bakery",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with bakery",
-    "chinese": "“bakery”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about bakery in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 223,
-    "word": "battery",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with battery",
-    "chinese": "“battery”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about battery in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 224,
-    "word": "beach",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with beach",
-    "chinese": "“beach”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about beach in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 225,
-    "word": "behalf",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with behalf",
-    "chinese": "“behalf”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about behalf in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 226,
-    "word": "behaviour",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with behaviour",
-    "chinese": "“behaviour”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about behaviour in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 227,
-    "word": "blanket",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with blanket",
-    "chinese": "“blanket”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about blanket in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 228,
-    "word": "border",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with border",
-    "chinese": "“border”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about border in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 229,
-    "word": "branch",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with branch",
-    "chinese": "“branch”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about branch in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 230,
-    "word": "breeze",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with breeze",
-    "chinese": "“breeze”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about breeze in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 231,
-    "word": "bridge",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with bridge",
-    "chinese": "“bridge”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about bridge in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 232,
-    "word": "brilliant",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with brilliant",
-    "chinese": "“brilliant”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about brilliant in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 233,
-    "word": "bucket",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with bucket",
-    "chinese": "“bucket”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about bucket in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 234,
-    "word": "building",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with building",
-    "chinese": "“building”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about building in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 235,
-    "word": "calendar",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with calendar",
-    "chinese": "“calendar”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about calendar in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 236,
-    "word": "camera",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with camera",
-    "chinese": "“camera”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about camera in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 237,
-    "word": "captain",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with captain",
-    "chinese": "“captain”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about captain in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 238,
-    "word": "classroom",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with classroom",
-    "chinese": "“classroom”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about classroom in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 239,
-    "word": "cliff",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with cliff",
-    "chinese": "“cliff”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cliff in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 240,
-    "word": "cloudy",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with cloudy",
-    "chinese": "“cloudy”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cloudy in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 241,
-    "word": "coach",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with coach",
-    "chinese": "“coach”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about coach in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 242,
-    "word": "coast",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with coast",
-    "chinese": "“coast”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about coast in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 243,
-    "word": "colourful",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with colourful",
-    "chinese": "“colourful”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about colourful in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 244,
-    "word": "competition",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with competition",
-    "chinese": "“competition”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about competition in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 245,
-    "word": "computer",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with computer",
-    "chinese": "“computer”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about computer in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 246,
-    "word": "condition",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with condition",
-    "chinese": "“condition”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about condition in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 247,
-    "word": "conduct",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with conduct",
-    "chinese": "“conduct”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about conduct in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 248,
-    "word": "conflict",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with conflict",
-    "chinese": "“conflict”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about conflict in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 249,
-    "word": "confused",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with confused",
-    "chinese": "“confused”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about confused in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 250,
-    "word": "container",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with container",
-    "chinese": "“container”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about container in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 251,
-    "word": "content",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with content",
-    "chinese": "“content”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about content in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 252,
-    "word": "costume",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with costume",
-    "chinese": "“costume”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about costume in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 253,
-    "word": "council",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with council",
-    "chinese": "“council”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about council in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 254,
-    "word": "creature",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with creature",
-    "chinese": "“creature”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about creature in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 255,
-    "word": "culture",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with culture",
-    "chinese": "“culture”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about culture in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 256,
-    "word": "customer",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with customer",
-    "chinese": "“customer”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about customer in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 257,
-    "word": "cycle",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with cycle",
-    "chinese": "“cycle”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cycle in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 258,
-    "word": "daughter",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with daughter",
-    "chinese": "“daughter”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about daughter in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 259,
-    "word": "deadline",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with deadline",
-    "chinese": "“deadline”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about deadline in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 260,
-    "word": "decision",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with decision",
-    "chinese": "“decision”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about decision in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 261,
-    "word": "decorate",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with decorate",
-    "chinese": "“decorate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about decorate in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 262,
-    "word": "deep",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with deep",
-    "chinese": "“deep”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about deep in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 263,
-    "word": "delay",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with delay",
-    "chinese": "“delay”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about delay in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 264,
-    "word": "deliver",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with deliver",
-    "chinese": "“deliver”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about deliver in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 265,
-    "word": "dentist",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with dentist",
-    "chinese": "“dentist”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about dentist in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 266,
-    "word": "department",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with department",
-    "chinese": "“department”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about department in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 267,
-    "word": "desert",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with desert",
-    "chinese": "“desert”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about desert in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 268,
-    "word": "destination",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with destination",
-    "chinese": "“destination”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about destination in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 269,
-    "word": "diary",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with diary",
-    "chinese": "“diary”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about diary in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 270,
-    "word": "dictionary",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with dictionary",
-    "chinese": "“dictionary”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about dictionary in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 271,
-    "word": "direction",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with direction",
-    "chinese": "“direction”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about direction in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 272,
-    "word": "disaster",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with disaster",
-    "chinese": "“disaster”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about disaster in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 273,
-    "word": "document",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with document",
-    "chinese": "“document”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about document in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 274,
-    "word": "drawer",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with drawer",
-    "chinese": "“drawer”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about drawer in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 275,
-    "word": "duty",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with duty",
-    "chinese": "“duty”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about duty in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 276,
-    "word": "eager",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with eager",
-    "chinese": "“eager”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about eager in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 277,
-    "word": "earthquake",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with earthquake",
-    "chinese": "“earthquake”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about earthquake in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 278,
-    "word": "editor",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with editor",
-    "chinese": "“editor”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about editor in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 279,
-    "word": "electricity",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with electricity",
-    "chinese": "“electricity”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about electricity in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 280,
-    "word": "elevator",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with elevator",
-    "chinese": "“elevator”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about elevator in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 281,
-    "word": "entrance",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with entrance",
-    "chinese": "“entrance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about entrance in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 282,
-    "word": "equipment",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with equipment",
-    "chinese": "“equipment”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about equipment in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 283,
-    "word": "error",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with error",
-    "chinese": "“error”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about error in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 284,
-    "word": "exam",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with exam",
-    "chinese": "“exam”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about exam in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 285,
-    "word": "exchange",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with exchange",
-    "chinese": "“exchange”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about exchange in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 286,
-    "word": "exciting",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with exciting",
-    "chinese": "“exciting”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about exciting in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 287,
-    "word": "factory",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with factory",
-    "chinese": "“factory”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about factory in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 288,
-    "word": "fairly",
-    "partOfSpeech": "adverb",
-    "level": 3,
-    "meaning": "in a way that is fairly",
-    "chinese": "“fairly”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The pupils completed the community task fairly.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 289,
-    "word": "favourite",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with favourite",
-    "chinese": "“favourite”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about favourite in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 290,
-    "word": "feather",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with feather",
-    "chinese": "“feather”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about feather in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 291,
-    "word": "festival",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with festival",
-    "chinese": "“festival”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about festival in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 292,
-    "word": "field",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with field",
-    "chinese": "“field”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about field in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 293,
-    "word": "firefighter",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with firefighter",
-    "chinese": "“firefighter”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about firefighter in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 294,
-    "word": "flight",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with flight",
-    "chinese": "“flight”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about flight in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 295,
-    "word": "flightpath",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with flightpath",
-    "chinese": "“flightpath”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about flightpath in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 296,
-    "word": "flower",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with flower",
-    "chinese": "“flower”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about flower in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 297,
-    "word": "forest",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with forest",
-    "chinese": "“forest”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about forest in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 298,
-    "word": "freedom",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with freedom",
-    "chinese": "“freedom”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about freedom in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 299,
-    "word": "fresh",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with fresh",
-    "chinese": "“fresh”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about fresh in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 300,
-    "word": "friendship",
-    "partOfSpeech": "noun",
-    "level": 3,
-    "meaning": "a person, thing, idea, or situation connected with friendship",
-    "chinese": "“friendship”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about friendship in a community context.",
-    "topics": [
-      "school"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze"
-    ]
-  },
-  {
-    "id": 301,
-    "word": "abandon",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with abandon",
-    "chinese": "“abandon”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about abandon in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 302,
-    "word": "absorb",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with absorb",
-    "chinese": "“absorb”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about absorb in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 303,
-    "word": "abundant",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with abundant",
-    "chinese": "“abundant”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about abundant in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 304,
-    "word": "accelerate",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with accelerate",
-    "chinese": "“accelerate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about accelerate in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 305,
-    "word": "accompany",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with accompany",
-    "chinese": "“accompany”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about accompany in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 306,
-    "word": "accumulate",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with accumulate",
-    "chinese": "“accumulate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about accumulate in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 307,
-    "word": "accurate",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with accurate",
-    "chinese": "“accurate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about accurate in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 308,
-    "word": "additional",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with additional",
-    "chinese": "“additional”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about additional in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 309,
-    "word": "affection",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with affection",
-    "chinese": "“affection”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about affection in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 310,
-    "word": "ambitious",
-    "partOfSpeech": "adjective",
-    "level": 4,
-    "meaning": "describing someone or something that is ambitious",
-    "chinese": "“ambitious”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The nature situation was described as ambitious by the teacher.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 311,
-    "word": "ancestor",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with ancestor",
-    "chinese": "“ancestor”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about ancestor in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 312,
-    "word": "apparent",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with apparent",
-    "chinese": "“apparent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about apparent in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 313,
-    "word": "appeal",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with appeal",
-    "chinese": "“appeal”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about appeal in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 314,
-    "word": "appetite",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with appetite",
-    "chinese": "“appetite”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about appetite in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 315,
-    "word": "appropriate",
-    "partOfSpeech": "adjective",
-    "level": 4,
-    "meaning": "suitable or right for a particular situation",
-    "chinese": "合适的",
-    "synonyms": [
-      "suitable",
-      "proper"
-    ],
-    "antonyms": [
-      "inappropriate"
-    ],
-    "example": "The nature situation was described as appropriate by the teacher.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 316,
-    "word": "authority",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with authority",
-    "chinese": "“authority”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about authority in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 317,
-    "word": "background",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with background",
-    "chinese": "“background”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about background in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 318,
-    "word": "barrier",
-    "partOfSpeech": "noun",
-    "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with barrier",
-    "chinese": "“barrier”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about barrier in a nature context.",
-    "topics": [
-      "people"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 319,
     "word": "beneficial",
     "partOfSpeech": "adjective",
-    "level": 4,
+    "level": 3,
     "meaning": "helpful or producing a good result",
     "chinese": "有益的",
     "synonyms": [
@@ -6151,1201 +5157,3917 @@ const vocabulary = [
     "antonyms": [
       "harmful"
     ],
-    "example": "The nature situation was described as beneficial by the teacher.",
+    "example": "Regular exercise is beneficial to your health.",
     "topics": [
-      "people"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 217,
+    "word": "cautious",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "careful to avoid danger or mistakes",
+    "chinese": "谨慎的",
+    "synonyms": [
+      "careful",
+      "wary"
+    ],
+    "antonyms": [
+      "careless",
+      "reckless"
+    ],
+    "example": "Be cautious when walking on the wet floor.",
+    "topics": [
+      "Safety",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 218,
+    "word": "collapse",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to fall down suddenly",
+    "chinese": "倒塌；崩溃",
+    "synonyms": [
+      "fall",
+      "crumble"
+    ],
+    "antonyms": [
+      "stand"
+    ],
+    "example": "The old shed collapsed during the storm.",
+    "topics": [
+      "Weather",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 219,
+    "word": "combine",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to join two or more things together",
+    "chinese": "结合；合并",
+    "synonyms": [
+      "join",
+      "merge"
+    ],
+    "antonyms": [
+      "separate"
+    ],
+    "example": "Combine the ingredients in a large bowl.",
+    "topics": [
+      "Food",
+      "Science"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 220,
+    "word": "commit",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to do something, especially something wrong or serious",
+    "chinese": "犯下；承诺",
+    "synonyms": [
+      "carry out"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "He admitted that he had committed a serious mistake.",
+    "topics": [
+      "Values",
+      "Law"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 221,
+    "word": "communicate",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to share information, ideas or feelings",
+    "chinese": "沟通；交流",
+    "synonyms": [
+      "express",
+      "convey"
+    ],
+    "antonyms": [
+      "miscommunicate"
+    ],
+    "example": "Good leaders communicate clearly with their teams.",
+    "topics": [
+      "Communication",
+      "Leadership"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 222,
+    "word": "compete",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to try to win against others",
+    "chinese": "竞争",
+    "synonyms": [
+      "contest",
+      "challenge"
+    ],
+    "antonyms": [
+      "cooperate"
+    ],
+    "example": "The teams will compete in the final race.",
+    "topics": [
+      "Sports",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 223,
+    "word": "complex",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "having many connected parts and therefore difficult to understand",
+    "chinese": "复杂的",
+    "synonyms": [
+      "complicated",
+      "intricate"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "The machine has a complex system of gears.",
+    "topics": [
+      "Science",
+      "Technology"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 224,
+    "word": "conclude",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to decide or believe something after considering evidence",
+    "chinese": "得出结论",
+    "synonyms": [
+      "deduce",
+      "decide"
+    ],
+    "antonyms": [
+      "begin"
+    ],
+    "example": "The scientists concluded that the water was safe.",
+    "topics": [
+      "Science",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 225,
+    "word": "confident",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "feeling sure about your abilities or decisions",
+    "chinese": "自信的",
+    "synonyms": [
+      "assured",
+      "certain"
+    ],
+    "antonyms": [
+      "uncertain",
+      "insecure"
+    ],
+    "example": "She felt confident before giving her speech.",
+    "topics": [
+      "School",
+      "Emotions"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 226,
+    "word": "conflict",
+    "partOfSpeech": "noun",
+    "level": 3,
+    "meaning": "a serious disagreement or struggle",
+    "chinese": "冲突；争执",
+    "synonyms": [
+      "dispute",
+      "clash"
+    ],
+    "antonyms": [
+      "agreement",
+      "harmony"
+    ],
+    "example": "The two teams had a conflict over the rules.",
+    "topics": [
+      "Sports",
+      "Communication"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 227,
+    "word": "consequence",
+    "partOfSpeech": "noun",
+    "level": 3,
+    "meaning": "a result of an action or situation",
+    "chinese": "后果；结果",
+    "synonyms": [
+      "result",
+      "outcome"
+    ],
+    "antonyms": [
+      "cause"
+    ],
+    "example": "Every choice has a consequence.",
+    "topics": [
+      "Values",
+      "Decision Making"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 228,
+    "word": "constant",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "happening continuously or repeatedly",
+    "chinese": "持续的；不断的",
+    "synonyms": [
+      "continuous",
+      "steady"
+    ],
+    "antonyms": [
+      "occasional"
+    ],
+    "example": "The constant noise made it difficult to study.",
+    "topics": [
+      "School",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 229,
+    "word": "consume",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to use, eat or drink something",
+    "chinese": "消耗；吃喝",
+    "synonyms": [
+      "use",
+      "eat"
+    ],
+    "antonyms": [
+      "save"
+    ],
+    "example": "Cars consume fuel when they travel.",
+    "topics": [
+      "Environment",
+      "Transport"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 230,
+    "word": "contribute",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to give something to help achieve a result",
+    "chinese": "贡献；促成",
+    "synonyms": [
+      "donate",
+      "add"
+    ],
+    "antonyms": [
+      "withhold"
+    ],
+    "example": "Everyone can contribute ideas to the project.",
+    "topics": [
+      "School",
+      "Teamwork"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 231,
+    "word": "convenient",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "easy or suitable for a particular purpose",
+    "chinese": "方便的",
+    "synonyms": [
+      "handy",
+      "suitable"
+    ],
+    "antonyms": [
+      "inconvenient"
+    ],
+    "example": "Online learning is convenient for many families.",
+    "topics": [
+      "Technology",
+      "Education"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 232,
+    "word": "convince",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to persuade someone that something is True",
+    "chinese": "说服",
+    "synonyms": [
+      "persuade"
+    ],
+    "antonyms": [
+      "deter"
+    ],
+    "example": "The evidence convinced us that the story was True.",
+    "topics": [
+      "Communication",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 233,
+    "word": "cooperate",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to work together to achieve something",
+    "chinese": "合作",
+    "synonyms": [
+      "collaborate",
+      "work together"
+    ],
+    "antonyms": [
+      "compete",
+      "oppose"
+    ],
+    "example": "The pupils cooperated to clean the classroom.",
+    "topics": [
+      "School",
+      "Teamwork"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 234,
+    "word": "decline",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to become smaller, weaker or less",
+    "chinese": "下降；减少",
+    "synonyms": [
+      "decrease",
+      "fall"
+    ],
+    "antonyms": [
+      "increase",
+      "rise"
+    ],
+    "example": "The number of visitors declined after the museum closed.",
+    "topics": [
+      "Numbers",
+      "Travel"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 235,
+    "word": "defeat",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to win against someone in a competition",
+    "chinese": "击败",
+    "synonyms": [
+      "beat",
+      "overcome"
+    ],
+    "antonyms": [
+      "lose",
+      "surrender"
+    ],
+    "example": "Our team defeated the defending champions.",
+    "topics": [
+      "Sports",
+      "Competition"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 236,
+    "word": "defend",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to protect someone or something from harm or attack",
+    "chinese": "保护；防卫",
+    "synonyms": [
+      "protect",
+      "guard"
+    ],
+    "antonyms": [
+      "attack"
+    ],
+    "example": "The goalkeeper defended the goal brilliantly.",
+    "topics": [
+      "Sports",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 237,
+    "word": "deliberate",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "done intentionally rather than by accident",
+    "chinese": "故意的",
+    "synonyms": [
+      "intentional",
+      "planned"
+    ],
+    "antonyms": [
+      "accidental"
+    ],
+    "example": "The damage was deliberate, not accidental.",
+    "topics": [
+      "Values",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 238,
+    "word": "demand",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to ask for something firmly",
+    "chinese": "要求",
+    "synonyms": [
+      "require",
+      "insist on"
+    ],
+    "antonyms": [
+      "offer"
+    ],
+    "example": "The workers demanded safer conditions.",
+    "topics": [
+      "Community",
+      "Work"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 239,
+    "word": "demonstrate",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to show clearly how something works or is done",
+    "chinese": "演示；证明",
+    "synonyms": [
+      "show",
+      "illustrate"
+    ],
+    "antonyms": [
+      "hide"
+    ],
+    "example": "The teacher demonstrated the experiment before we tried it.",
+    "topics": [
+      "Science",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 240,
+    "word": "deny",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to say that something is not True",
+    "chinese": "否认",
+    "synonyms": [
+      "reject",
+      "refute"
+    ],
+    "antonyms": [
+      "admit",
+      "confirm"
+    ],
+    "example": "He denied taking the missing book.",
+    "topics": [
+      "Communication",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 241,
+    "word": "desperate",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "feeling that you will try almost anything because you need something badly",
+    "chinese": "绝望的；极需要的",
+    "synonyms": [
+      "hopeless",
+      "urgent"
+    ],
+    "antonyms": [
+      "hopeful"
+    ],
+    "example": "The hikers were desperate for water.",
+    "topics": [
+      "Safety",
+      "Travel"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 242,
+    "word": "determine",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to discover or decide something after considering the facts",
+    "chinese": "确定；决定",
+    "synonyms": [
+      "decide",
+      "establish"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "The test will determine which material is stronger.",
+    "topics": [
+      "Science",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 243,
+    "word": "dignity",
+    "partOfSpeech": "noun",
+    "level": 3,
+    "meaning": "a sense of self-respect and worth",
+    "chinese": "尊严",
+    "synonyms": [
+      "self-respect",
+      "pride"
+    ],
+    "antonyms": [
+      "humiliation"
+    ],
+    "example": "Everyone deserves to be treated with dignity.",
+    "topics": [
+      "Values",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 244,
+    "word": "disaster",
+    "partOfSpeech": "noun",
+    "level": 3,
+    "meaning": "a sudden event causing great damage or suffering",
+    "chinese": "灾难",
+    "synonyms": [
+      "catastrophe",
+      "calamity"
+    ],
+    "antonyms": [
+      "success"
+    ],
+    "example": "The earthquake was a major disaster for the region.",
+    "topics": [
+      "Natural Disasters",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 245,
+    "word": "efficient",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "working well without wasting time, energy or resources",
+    "chinese": "高效的",
+    "synonyms": [
+      "effective",
+      "productive"
+    ],
+    "antonyms": [
+      "inefficient"
+    ],
+    "example": "The new system is more efficient than the old one.",
+    "topics": [
+      "Technology",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 246,
+    "word": "emerge",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to appear or become known",
+    "chinese": "出现；显现",
+    "synonyms": [
+      "appear",
+      "arise"
+    ],
+    "antonyms": [
+      "disappear"
+    ],
+    "example": "The moon emerged from behind the clouds.",
+    "topics": [
+      "Nature",
+      "Weather"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 247,
+    "word": "emphasise",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to give special importance to something",
+    "chinese": "强调",
+    "synonyms": [
+      "stress",
+      "highlight"
+    ],
+    "antonyms": [
+      "understate"
+    ],
+    "example": "The teacher emphasised the importance of checking answers.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 248,
+    "word": "essential",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "completely necessary",
+    "chinese": "必需的；重要的",
+    "synonyms": [
+      "necessary",
+      "vital"
+    ],
+    "antonyms": [
+      "unnecessary"
+    ],
+    "example": "Water is essential for all living things.",
+    "topics": [
+      "Science",
+      "Health"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 249,
+    "word": "estimate",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to make a rough calculation or judgement",
+    "chinese": "估计",
+    "synonyms": [
+      "approximate",
+      "assess"
+    ],
+    "antonyms": [
+      "calculate exactly"
+    ],
+    "example": "Can you estimate how many books are on the shelf?",
+    "topics": [
+      "Mathematics",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 250,
+    "word": "eventually",
+    "partOfSpeech": "adverb",
+    "level": 3,
+    "meaning": "in the end, especially after a long time",
+    "chinese": "最终；最后",
+    "synonyms": [
+      "finally",
+      "ultimately"
+    ],
+    "antonyms": [
+      "initially"
+    ],
+    "example": "After several attempts, she eventually solved the puzzle.",
+    "topics": [
+      "Learning",
+      "Problem Solving"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 251,
+    "word": "examine",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to look at something carefully to learn about it",
+    "chinese": "检查；检验",
+    "synonyms": [
+      "inspect",
+      "study"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "The doctor examined the injured ankle.",
+    "topics": [
+      "Health",
+      "Science"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 252,
+    "word": "exception",
+    "partOfSpeech": "noun",
+    "level": 3,
+    "meaning": "a person or thing that is not included in a general rule",
+    "chinese": "例外",
+    "synonyms": [
+      "special case"
+    ],
+    "antonyms": [
+      "rule"
+    ],
+    "example": "Everyone must attend, with no exception.",
+    "topics": [
+      "School",
+      "Rules"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 253,
+    "word": "expand",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to become larger or make something larger",
+    "chinese": "扩大；扩展",
+    "synonyms": [
+      "increase",
+      "enlarge"
+    ],
+    "antonyms": [
+      "shrink",
+      "reduce"
+    ],
+    "example": "The company plans to expand its recycling programme.",
+    "topics": [
+      "Environment",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 254,
+    "word": "expert",
+    "partOfSpeech": "noun",
+    "level": 3,
+    "meaning": "a person with special knowledge or skill",
+    "chinese": "专家",
+    "synonyms": [
+      "specialist",
+      "professional"
+    ],
+    "antonyms": [
+      "amateur",
+      "novice"
+    ],
+    "example": "An expert explained how the telescope works.",
+    "topics": [
+      "Science",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 255,
+    "word": "expose",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to reveal or make something visible",
+    "chinese": "揭露；使暴露",
+    "synonyms": [
+      "reveal",
+      "uncover"
+    ],
+    "antonyms": [
+      "conceal",
+      "hide"
+    ],
+    "example": "The report exposed the dangers of the chemical.",
+    "topics": [
+      "Science",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 256,
+    "word": "extraordinary",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "very unusual or remarkable",
+    "chinese": "非凡的；异常的",
+    "synonyms": [
+      "remarkable",
+      "exceptional"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The young pianist showed extraordinary talent.",
+    "topics": [
+      "Arts",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 257,
+    "word": "flexible",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "able to change or adapt easily",
+    "chinese": "灵活的",
+    "synonyms": [
+      "adaptable",
+      "adjustable"
+    ],
+    "antonyms": [
+      "rigid",
+      "inflexible"
+    ],
+    "example": "Our schedule is flexible, so we can change the meeting time.",
+    "topics": [
+      "Planning",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 258,
+    "word": "frequent",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "happening often",
+    "chinese": "频繁的",
+    "synonyms": [
+      "regular",
+      "common"
+    ],
+    "antonyms": [
+      "rare",
+      "infrequent"
+    ],
+    "example": "Frequent exercise can improve your health.",
+    "topics": [
+      "Health",
+      "Sports"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 259,
+    "word": "frustrate",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to make someone feel annoyed because something is difficult or impossible",
+    "chinese": "使沮丧；使受挫",
+    "synonyms": [
+      "annoy",
+      "discourage"
+    ],
+    "antonyms": [
+      "satisfy"
+    ],
+    "example": "The difficult puzzle frustrated the children.",
+    "topics": [
+      "Emotions",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 260,
+    "word": "genuine",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "real and not False or copied",
+    "chinese": "真正的；真诚的",
+    "synonyms": [
+      "real",
+      "authentic"
+    ],
+    "antonyms": [
+      "fake",
+      "False"
+    ],
+    "example": "The shop guarantees that the necklace is made of genuine silver.",
+    "topics": [
+      "Shopping",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 261,
+    "word": "gradual",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "happening slowly over a period of time",
+    "chinese": "逐渐的",
+    "synonyms": [
+      "slow",
+      "steady"
+    ],
+    "antonyms": [
+      "sudden"
+    ],
+    "example": "There was a gradual improvement in her reading.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 262,
+    "word": "identify",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to recognise and name someone or something",
+    "chinese": "识别；确认",
+    "synonyms": [
+      "recognise",
+      "detect"
+    ],
+    "antonyms": [
+      "misidentify"
+    ],
+    "example": "Can you identify the bird in this photograph?",
+    "topics": [
+      "Science",
+      "Nature"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 263,
+    "word": "ignore",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to deliberately pay no attention to something",
+    "chinese": "忽视",
+    "synonyms": [
+      "disregard",
+      "overlook"
+    ],
+    "antonyms": [
+      "notice",
+      "attend"
+    ],
+    "example": "Do not ignore the warning signs.",
+    "topics": [
+      "Safety",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 264,
+    "word": "impact",
+    "partOfSpeech": "noun",
+    "level": 3,
+    "meaning": "a strong effect or influence",
+    "chinese": "影响",
+    "synonyms": [
+      "effect",
+      "influence"
+    ],
+    "antonyms": [
+      "insignificance"
+    ],
+    "example": "Plastic waste has a serious impact on marine life.",
+    "topics": [
+      "Environment",
+      "Science"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 265,
+    "word": "independent",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "able to do things without needing help",
+    "chinese": "独立的",
+    "synonyms": [
+      "self-reliant",
+      "autonomous"
+    ],
+    "antonyms": [
+      "dependent"
+    ],
+    "example": "The project encouraged students to become more independent learners.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 266,
+    "word": "influence",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to affect the way someone thinks or behaves",
+    "chinese": "影响",
+    "synonyms": [
+      "affect",
+      "shape"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Friends can influence the choices we make.",
+    "topics": [
+      "People",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 267,
+    "word": "inform",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to give someone information about something",
+    "chinese": "通知；告知",
+    "synonyms": [
+      "tell",
+      "notify"
+    ],
+    "antonyms": [
+      "mislead"
+    ],
+    "example": "Please inform the office if you will be absent.",
+    "topics": [
+      "School",
+      "Communication"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 268,
+    "word": "initial",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "happening at the beginning",
+    "chinese": "最初的",
+    "synonyms": [
+      "first",
+      "opening"
+    ],
+    "antonyms": [
+      "final",
+      "later"
+    ],
+    "example": "The initial plan was changed after the meeting.",
+    "topics": [
+      "Planning",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 269,
+    "word": "inspect",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to examine something carefully",
+    "chinese": "检查",
+    "synonyms": [
+      "examine",
+      "check"
+    ],
+    "antonyms": [
+      "neglect"
+    ],
+    "example": "Workers inspected the bridge for damage.",
+    "topics": [
+      "Safety",
+      "Engineering"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 270,
+    "word": "intend",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to plan or mean to do something",
+    "chinese": "打算；意图",
+    "synonyms": [
+      "plan",
+      "mean"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "I intend to finish the book this weekend.",
+    "topics": [
+      "Planning",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 271,
+    "word": "interrupt",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to stop someone while they are speaking or doing something",
+    "chinese": "打断",
+    "synonyms": [
+      "disturb",
+      "break in"
+    ],
+    "antonyms": [
+      "continue"
+    ],
+    "example": "Please do not interrupt while others are speaking.",
+    "topics": [
+      "Communication",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 272,
+    "word": "involve",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to include someone or something in an activity",
+    "chinese": "涉及；包括",
+    "synonyms": [
+      "include",
+      "entail"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The project involves all the pupils in the class.",
+    "topics": [
+      "School",
+      "Teamwork"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 273,
+    "word": "maintain",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to keep something in good condition or at the same level",
+    "chinese": "维持；保养",
+    "synonyms": [
+      "preserve",
+      "sustain"
+    ],
+    "antonyms": [
+      "neglect"
+    ],
+    "example": "Regular exercise helps maintain good health.",
+    "topics": [
+      "Health",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 274,
+    "word": "major",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "very important or large",
+    "chinese": "主要的；重大的",
+    "synonyms": [
+      "important",
+      "significant"
+    ],
+    "antonyms": [
+      "minor"
+    ],
+    "example": "Pollution is a major environmental problem.",
+    "topics": [
+      "Environment",
+      "Society"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 275,
+    "word": "minor",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "less important, serious or large",
+    "chinese": "较小的；次要的",
+    "synonyms": [
+      "lesser",
+      "small"
+    ],
+    "antonyms": [
+      "major"
+    ],
+    "example": "The car suffered only minor damage.",
+    "topics": [
+      "Transport",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 276,
+    "word": "motivate",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to make someone want to do something well",
+    "chinese": "激励；促使",
+    "synonyms": [
+      "encourage",
+      "inspire"
+    ],
+    "antonyms": [
+      "discourage"
+    ],
+    "example": "Praise can motivate children to work harder.",
+    "topics": [
+      "School",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 277,
+    "word": "negative",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "expressing disagreement or showing a lack of hope",
+    "chinese": "负面的；消极的",
+    "synonyms": [
+      "pessimistic",
+      "unfavourable"
+    ],
+    "antonyms": [
+      "positive",
+      "optimistic"
+    ],
+    "example": "Try to replace negative thoughts with positive ones.",
+    "topics": [
+      "Emotions",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 278,
+    "word": "obtain",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to get something, especially through effort",
+    "chinese": "获得",
+    "synonyms": [
+      "acquire",
+      "gain"
+    ],
+    "antonyms": [
+      "lose"
+    ],
+    "example": "Students can obtain information from reliable sources.",
+    "topics": [
+      "School",
+      "Research"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 279,
+    "word": "obvious",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "easy to see, understand or recognise",
+    "chinese": "明显的",
+    "synonyms": [
+      "clear",
+      "apparent"
+    ],
+    "antonyms": [
+      "unclear",
+      "hidden"
+    ],
+    "example": "It was obvious that the plant needed water.",
+    "topics": [
+      "Science",
+      "Observation"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 280,
+    "word": "participate",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to take part in an activity",
+    "chinese": "参加",
+    "synonyms": [
+      "join",
+      "take part"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "Everyone was encouraged to participate in the discussion.",
+    "topics": [
+      "School",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 281,
+    "word": "persuade",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to make someone agree to do or believe something",
+    "chinese": "说服",
+    "synonyms": [
+      "convince",
+      "influence"
+    ],
+    "antonyms": [
+      "dissuade"
+    ],
+    "example": "She persuaded her brother to recycle the bottles.",
+    "topics": [
+      "Communication",
+      "Environment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 282,
+    "word": "precious",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "very valuable or important",
+    "chinese": "珍贵的",
+    "synonyms": [
+      "valuable",
+      "cherished"
+    ],
+    "antonyms": [
+      "worthless"
+    ],
+    "example": "The necklace was a precious family gift.",
+    "topics": [
+      "Family",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 283,
+    "word": "predict",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to say what you think will happen in the future",
+    "chinese": "预测",
+    "synonyms": [
+      "forecast",
+      "foretell"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "Can you predict what will happen next in the experiment?",
+    "topics": [
+      "Science",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 284,
+    "word": "prefer",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to like one thing more than another",
+    "chinese": "更喜欢",
+    "synonyms": [
+      "favour"
+    ],
+    "antonyms": [
+      "dislike"
+    ],
+    "example": "I prefer reading to watching television.",
+    "topics": [
+      "Hobbies",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 285,
+    "word": "previous",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "happening or existing before the present time",
+    "chinese": "之前的；先前的",
+    "synonyms": [
+      "earlier",
+      "former"
+    ],
+    "antonyms": [
+      "next",
+      "following"
+    ],
+    "example": "Use the previous page to find the missing information.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 286,
+    "word": "propose",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to suggest a plan or idea for people to consider",
+    "chinese": "提议",
+    "synonyms": [
+      "suggest",
+      "recommend"
+    ],
+    "antonyms": [
+      "oppose"
+    ],
+    "example": "The pupils proposed a plan to reduce food waste.",
+    "topics": [
+      "School",
+      "Environment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 287,
+    "word": "recognise",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to know someone or something because you have seen it before",
+    "chinese": "认出；认识",
+    "synonyms": [
+      "identify",
+      "know"
+    ],
+    "antonyms": [
+      "misidentify"
+    ],
+    "example": "I recognised the song as soon as it began.",
+    "topics": [
+      "Music",
+      "Memory"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 288,
+    "word": "recommend",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to suggest that someone should do or choose something",
+    "chinese": "推荐；建议",
+    "synonyms": [
+      "suggest",
+      "advise"
+    ],
+    "antonyms": [
+      "discourage"
+    ],
+    "example": "The teacher recommended this book for advanced readers.",
+    "topics": [
+      "School",
+      "Reading"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 289,
+    "word": "recover",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to return to a normal condition after illness or difficulty",
+    "chinese": "恢复",
+    "synonyms": [
+      "heal",
+      "regain"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "It took her several days to recover from the flu.",
+    "topics": [
+      "Health",
+      "Recovery"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 290,
+    "word": "remarkable",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "unusual or impressive",
+    "chinese": "非凡的；显著的",
+    "synonyms": [
+      "extraordinary",
+      "notable"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The athlete made a remarkable improvement.",
+    "topics": [
+      "Sports",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 291,
+    "word": "require",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to need something",
+    "chinese": "需要；要求",
+    "synonyms": [
+      "need",
+      "demand"
+    ],
+    "antonyms": [
+      "waive"
+    ],
+    "example": "The experiment requires three different materials.",
+    "topics": [
+      "Science",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 292,
+    "word": "respond",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to answer or react to something",
+    "chinese": "回应；反应",
+    "synonyms": [
+      "reply",
+      "react"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Please respond to the teacher's question clearly.",
+    "topics": [
+      "School",
+      "Communication"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 293,
+    "word": "restrict",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to limit something",
+    "chinese": "限制",
+    "synonyms": [
+      "limit",
+      "control"
+    ],
+    "antonyms": [
+      "allow",
+      "expand"
+    ],
+    "example": "The school restricts the use of mobile phones during lessons.",
+    "topics": [
+      "School",
+      "Rules"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 294,
+    "word": "reveal",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to make something previously hidden known or visible",
+    "chinese": "揭示；透露",
+    "synonyms": [
+      "disclose",
+      "uncover"
+    ],
+    "antonyms": [
+      "conceal",
+      "hide"
+    ],
+    "example": "The test revealed a surprising result.",
+    "topics": [
+      "Science",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 295,
+    "word": "significant",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "important enough to be noticed or considered",
+    "chinese": "重要的；显著的",
+    "synonyms": [
+      "important",
+      "notable"
+    ],
+    "antonyms": [
+      "insignificant"
+    ],
+    "example": "There was a significant improvement in his results.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 296,
+    "word": "similar",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "almost the same as another thing",
+    "chinese": "相似的",
+    "synonyms": [
+      "alike",
+      "comparable"
+    ],
+    "antonyms": [
+      "different"
+    ],
+    "example": "The two experiments produced similar results.",
+    "topics": [
+      "Science",
+      "Comparison"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 297,
+    "word": "sufficient",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "enough for a particular purpose",
+    "chinese": "足够的",
+    "synonyms": [
+      "enough",
+      "adequate"
+    ],
+    "antonyms": [
+      "insufficient"
+    ],
+    "example": "We have sufficient water for the journey.",
+    "topics": [
+      "Travel",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 298,
+    "word": "tolerate",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to accept something unpleasant without reacting strongly",
+    "chinese": "容忍；忍受",
+    "synonyms": [
+      "endure",
+      "accept"
+    ],
+    "antonyms": [
+      "reject"
+    ],
+    "example": "I cannot tolerate loud noise while studying.",
+    "topics": [
+      "School",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 299,
+    "word": "transform",
+    "partOfSpeech": "verb",
+    "level": 3,
+    "meaning": "to change something completely",
+    "chinese": "彻底改变；转变",
+    "synonyms": [
+      "convert",
+      "change"
+    ],
+    "antonyms": [
+      "preserve"
+    ],
+    "example": "The renovation transformed the old room into a library.",
+    "topics": [
+      "Buildings",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 300,
+    "word": "unusual",
+    "partOfSpeech": "adjective",
+    "level": 3,
+    "meaning": "not common or ordinary",
+    "chinese": "不寻常的",
+    "synonyms": [
+      "uncommon",
+      "rare"
+    ],
+    "antonyms": [
+      "usual",
+      "ordinary"
+    ],
+    "example": "We saw an unusual cloud formation in the sky.",
+    "topics": [
+      "Weather",
+      "Nature"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 301,
+    "word": "accommodation",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "a place where someone lives or stays",
+    "chinese": "住宿",
+    "synonyms": [
+      "lodging",
+      "housing"
+    ],
+    "antonyms": [
+      "homelessness"
+    ],
+    "example": "We booked our accommodation before travelling.",
+    "topics": [
+      "Travel",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 302,
+    "word": "accompany",
+    "partOfSpeech": "verb",
+    "level": 4,
+    "meaning": "to go somewhere with someone",
+    "chinese": "陪同；伴随",
+    "synonyms": [
+      "escort",
+      "go with"
+    ],
+    "antonyms": [
+      "leave"
+    ],
+    "example": "My mother accompanied me to the doctor's appointment.",
+    "topics": [
+      "Family",
+      "Health"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 303,
+    "word": "accomplish",
+    "partOfSpeech": "verb",
+    "level": 4,
+    "meaning": "to succeed in doing or completing something",
+    "chinese": "完成；实现",
+    "synonyms": [
+      "achieve",
+      "attain"
+    ],
+    "antonyms": [
+      "fail"
+    ],
+    "example": "She worked hard to accomplish her goal before the holidays.",
+    "topics": [
+      "Goals",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 304,
+    "word": "accumulate",
+    "partOfSpeech": "verb",
+    "level": 4,
+    "meaning": "to collect or increase over time",
+    "chinese": "积累；聚集",
+    "synonyms": [
+      "gather",
+      "build up"
+    ],
+    "antonyms": [
+      "disperse"
+    ],
+    "example": "Dust can accumulate if the room is not cleaned regularly.",
+    "topics": [
+      "Daily Life",
+      "Environment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 305,
+    "word": "achievement",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "something successfully completed through effort",
+    "chinese": "成就",
+    "synonyms": [
+      "accomplishment",
+      "success"
+    ],
+    "antonyms": [
+      "failure"
+    ],
+    "example": "Winning the competition was a great achievement.",
+    "topics": [
+      "School",
+      "Sports"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 306,
+    "word": "acknowledge",
+    "partOfSpeech": "verb",
+    "level": 4,
+    "meaning": "to accept or admit that something is True",
+    "chinese": "承认；确认",
+    "synonyms": [
+      "admit",
+      "recognise"
+    ],
+    "antonyms": [
+      "deny"
+    ],
+    "example": "He acknowledged that he had made a mistake.",
+    "topics": [
+      "Communication",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 307,
+    "word": "adequate",
+    "partOfSpeech": "adjective",
+    "level": 4,
+    "meaning": "enough for a particular need or purpose",
+    "chinese": "足够的；适当的",
+    "synonyms": [
+      "sufficient",
+      "enough"
+    ],
+    "antonyms": [
+      "inadequate"
+    ],
+    "example": "The classroom has adequate space for thirty pupils.",
+    "topics": [
+      "School",
+      "Daily Life"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 308,
+    "word": "advantage",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "a condition that makes success more likely",
+    "chinese": "优势；有利条件",
+    "synonyms": [
+      "benefit",
+      "strength"
+    ],
+    "antonyms": [
+      "disadvantage"
+    ],
+    "example": "Speaking another language can be an advantage when travelling.",
+    "topics": [
+      "Education",
+      "Travel"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 309,
+    "word": "adventure",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "an exciting or unusual experience",
+    "chinese": "冒险；奇遇",
+    "synonyms": [
+      "exploration",
+      "journey"
+    ],
+    "antonyms": [
+      "routine"
+    ],
+    "example": "The family went on an adventure in the rainforest.",
+    "topics": [
+      "Travel",
+      "Nature"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 310,
+    "word": "alert",
+    "partOfSpeech": "adjective",
+    "level": 4,
+    "meaning": "quick to notice danger or problems",
+    "chinese": "警觉的",
+    "synonyms": [
+      "watchful",
+      "vigilant"
+    ],
+    "antonyms": [
+      "unaware"
+    ],
+    "example": "Stay alert when crossing a busy road.",
+    "topics": [
+      "Safety",
+      "Travel"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 311,
+    "word": "alternative",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "another possibility or choice",
+    "chinese": "替代方案；选择",
+    "synonyms": [
+      "option",
+      "substitute"
+    ],
+    "antonyms": [
+      "necessity"
+    ],
+    "example": "Cycling is a good alternative to taking the car.",
+    "topics": [
+      "Transport",
+      "Environment"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 312,
+    "word": "anticipate",
+    "partOfSpeech": "verb",
+    "level": 4,
+    "meaning": "to expect something and prepare for it",
+    "chinese": "预期；预料",
+    "synonyms": [
+      "expect",
+      "foresee"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "We anticipated heavy traffic and left early.",
+    "topics": [
+      "Travel",
+      "Planning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 313,
+    "word": "apology",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "something said or written to show that you are sorry",
+    "chinese": "道歉",
+    "synonyms": [
+      "regret",
+      "expression of regret"
+    ],
+    "antonyms": [
+      "insult"
+    ],
+    "example": "He offered an apology for breaking the vase.",
+    "topics": [
+      "Values",
+      "Communication"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 314,
+    "word": "appointment",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "an arranged time to meet someone",
+    "chinese": "预约；约会",
+    "synonyms": [
+      "arrangement",
+      "meeting"
+    ],
+    "antonyms": [
+      "cancellation"
+    ],
+    "example": "I have a doctor's appointment tomorrow afternoon.",
+    "topics": [
+      "Health",
+      "Time"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 315,
+    "word": "approve",
+    "partOfSpeech": "verb",
+    "level": 4,
+    "meaning": "to officially accept or agree to something",
+    "chinese": "批准；同意",
+    "synonyms": [
+      "accept",
+      "endorse"
+    ],
+    "antonyms": [
+      "reject"
+    ],
+    "example": "The principal approved the new school project.",
+    "topics": [
+      "School",
+      "Management"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 316,
+    "word": "argument",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "a disagreement in which people express different views",
+    "chinese": "争论；论点",
+    "synonyms": [
+      "dispute",
+      "debate"
+    ],
+    "antonyms": [
+      "agreement"
+    ],
+    "example": "The pupils had an argument about which idea was better.",
+    "topics": [
+      "Communication",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 317,
+    "word": "arrangement",
+    "partOfSpeech": "noun",
+    "level": 4,
+    "meaning": "a plan or organisation for something",
+    "chinese": "安排",
+    "synonyms": [
+      "plan",
+      "organisation"
+    ],
+    "antonyms": [
+      "disorder"
+    ],
+    "example": "The travel arrangements were completed before Friday.",
+    "topics": [
+      "Travel",
+      "Planning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 318,
+    "word": "assemble",
+    "partOfSpeech": "verb",
+    "level": 4,
+    "meaning": "to gather people or parts together",
+    "chinese": "集合；组装",
+    "synonyms": [
+      "gather",
+      "put together"
+    ],
+    "antonyms": [
+      "disassemble"
+    ],
+    "example": "The pupils assembled in the hall before the ceremony.",
+    "topics": [
+      "School",
+      "Community"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 319,
+    "word": "assess",
+    "partOfSpeech": "verb",
+    "level": 4,
+    "meaning": "to judge the quality, importance or value of something",
+    "chinese": "评估",
+    "synonyms": [
+      "evaluate",
+      "judge"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "The teacher assessed each pupil's reading skills.",
+    "topics": [
+      "School",
+      "Learning"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 320,
-    "word": "capacity",
+    "word": "assumption",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with capacity",
-    "chinese": "“capacity”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about capacity in a nature context.",
+    "meaning": "something accepted as True without proof",
+    "chinese": "假设；臆测",
+    "synonyms": [
+      "belief",
+      "presumption"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "His assumption that the shop was open proved wrong.",
     "topics": [
-      "people"
+      "Thinking",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 321,
-    "word": "category",
+    "word": "audience",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with category",
-    "chinese": "“category”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about category in a nature context.",
+    "meaning": "the people watching or listening to a performance",
+    "chinese": "观众；听众",
+    "synonyms": [
+      "spectators",
+      "viewers"
+    ],
+    "antonyms": [
+      "performers"
+    ],
+    "example": "The audience applauded after the school play.",
     "topics": [
-      "people"
+      "Arts",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 322,
-    "word": "clarify",
-    "partOfSpeech": "verb",
+    "word": "background",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to make something easier to understand",
-    "chinese": "澄清；使清楚",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to clarify carefully during the nature activity.",
+    "meaning": "the circumstances or information behind an event or person",
+    "chinese": "背景；经历",
+    "synonyms": [
+      "context",
+      "history"
+    ],
+    "antonyms": [
+      "foreground"
+    ],
+    "example": "The teacher explained the background of the story.",
     "topics": [
-      "people"
+      "School",
+      "Reading"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 323,
-    "word": "combine",
+    "word": "barrier",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with combine",
-    "chinese": "“combine”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about combine in a nature context.",
+    "meaning": "something that prevents movement or progress",
+    "chinese": "障碍；屏障",
+    "synonyms": [
+      "obstacle",
+      "block"
+    ],
+    "antonyms": [
+      "opening"
+    ],
+    "example": "Language can sometimes be a barrier to communication.",
     "topics": [
-      "people"
+      "Communication",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 324,
-    "word": "commitment",
+    "word": "benefit",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with commitment",
-    "chinese": "“commitment”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about commitment in a nature context.",
+    "meaning": "an advantage or helpful result",
+    "chinese": "益处；好处",
+    "synonyms": [
+      "advantage",
+      "gain"
+    ],
+    "antonyms": [
+      "disadvantage",
+      "harm"
+    ],
+    "example": "Regular exercise has many health benefits.",
     "topics": [
-      "people"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 325,
-    "word": "comparison",
+    "word": "capacity",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with comparison",
-    "chinese": "“comparison”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about comparison in a nature context.",
+    "meaning": "the maximum amount that something can contain or hold",
+    "chinese": "容量；能力",
+    "synonyms": [
+      "ability",
+      "volume"
+    ],
+    "antonyms": [
+      "limitation"
+    ],
+    "example": "The hall has a capacity of five hundred people.",
     "topics": [
-      "people"
+      "Buildings",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 326,
-    "word": "consequence",
-    "partOfSpeech": "noun",
+    "word": "capture",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a result of an action or decision",
-    "chinese": "后果",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about consequence in a nature context.",
+    "meaning": "to catch or record someone or something",
+    "chinese": "捕捉；记录",
+    "synonyms": [
+      "catch",
+      "record"
+    ],
+    "antonyms": [
+      "release"
+    ],
+    "example": "The camera captured a beautiful sunset.",
     "topics": [
-      "people"
+      "Technology",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 327,
-    "word": "considerable",
+    "word": "circumstance",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with considerable",
-    "chinese": "“considerable”的常用中文释义",
-    "synonyms": [],
+    "meaning": "a condition or fact that affects a situation",
+    "chinese": "情况；环境",
+    "synonyms": [
+      "condition",
+      "situation"
+    ],
     "antonyms": [],
-    "example": "The passage included information about considerable in a nature context.",
+    "example": "Under these circumstances, we decided to postpone the trip.",
     "topics": [
-      "people"
+      "Daily Life",
+      "Decision Making"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 328,
-    "word": "consistent",
-    "partOfSpeech": "noun",
+    "word": "clarify",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with consistent",
-    "chinese": "“consistent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about consistent in a nature context.",
+    "meaning": "to make something easier to understand",
+    "chinese": "澄清；阐明",
+    "synonyms": [
+      "explain",
+      "simplify"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "Could you clarify what the instructions mean?",
     "topics": [
-      "people"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 329,
-    "word": "construction",
+    "word": "coincidence",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with construction",
-    "chinese": "“construction”的常用中文释义",
-    "synonyms": [],
+    "meaning": "a situation in which events happen at the same time by chance",
+    "chinese": "巧合",
+    "synonyms": [
+      "chance",
+      "chance occurrence"
+    ],
     "antonyms": [],
-    "example": "The passage included information about construction in a nature context.",
+    "example": "It was a coincidence that we wore the same colour.",
     "topics": [
-      "people"
+      "Daily Life",
+      "Events"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 330,
-    "word": "contact",
-    "partOfSpeech": "noun",
+    "word": "collaborate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with contact",
-    "chinese": "“contact”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about contact in a nature context.",
+    "meaning": "to work with others to achieve something",
+    "chinese": "合作",
+    "synonyms": [
+      "cooperate",
+      "work together"
+    ],
+    "antonyms": [
+      "compete"
+    ],
+    "example": "The pupils collaborated on a science project.",
     "topics": [
-      "people"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 331,
-    "word": "context",
+    "word": "compassion",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with context",
-    "chinese": "“context”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about context in a nature context.",
+    "meaning": "a strong feeling of sympathy for someone who is suffering",
+    "chinese": "同情；怜悯",
+    "synonyms": [
+      "sympathy",
+      "kindness"
+    ],
+    "antonyms": [
+      "cruelty"
+    ],
+    "example": "She showed compassion towards the injured animal.",
     "topics": [
-      "people"
+      "Values",
+      "Animals"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 332,
-    "word": "contrast",
-    "partOfSpeech": "noun",
+    "word": "competent",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with contrast",
-    "chinese": "“contrast”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about contrast in a nature context.",
+    "meaning": "having enough skill or ability to do something well",
+    "chinese": "有能力的；胜任的",
+    "synonyms": [
+      "capable",
+      "skilled"
+    ],
+    "antonyms": [
+      "incompetent"
+    ],
+    "example": "He is a competent swimmer who follows safety rules.",
     "topics": [
-      "people"
+      "Sports",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 333,
-    "word": "conventional",
-    "partOfSpeech": "adjective",
+    "word": "confront",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is conventional",
-    "chinese": "“conventional”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The nature situation was described as conventional by the teacher.",
+    "meaning": "to face a difficult situation or person",
+    "chinese": "面对；对抗",
+    "synonyms": [
+      "face",
+      "challenge"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "We must confront the problem before it becomes worse.",
     "topics": [
-      "people"
+      "Problem Solving",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 334,
-    "word": "creative",
-    "partOfSpeech": "noun",
+    "word": "consistent",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with creative",
-    "chinese": "“creative”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about creative in a nature context.",
+    "meaning": "always behaving or happening in a similar way",
+    "chinese": "一致的；稳定的",
+    "synonyms": [
+      "steady",
+      "constant"
+    ],
+    "antonyms": [
+      "inconsistent"
+    ],
+    "example": "Consistent practice helped her improve her piano skills.",
     "topics": [
-      "people"
+      "Learning",
+      "Music"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 335,
-    "word": "critical",
-    "partOfSpeech": "noun",
+    "word": "construct",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with critical",
-    "chinese": "“critical”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about critical in a nature context.",
+    "meaning": "to build something",
+    "chinese": "建造",
+    "synonyms": [
+      "build",
+      "create"
+    ],
+    "antonyms": [
+      "demolish"
+    ],
+    "example": "Workers constructed a new bridge across the river.",
     "topics": [
-      "people"
+      "Engineering",
+      "Transport"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 336,
-    "word": "dedication",
-    "partOfSpeech": "noun",
+    "word": "consult",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with dedication",
-    "chinese": "“dedication”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about dedication in a nature context.",
+    "meaning": "to ask someone for advice or information",
+    "chinese": "咨询；请教",
+    "synonyms": [
+      "ask",
+      "seek advice"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "We consulted the teacher before changing our plan.",
     "topics": [
-      "people"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 337,
-    "word": "demonstrate",
-    "partOfSpeech": "verb",
+    "word": "contrast",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "to demonstrate or to carry out the action described by the word",
-    "chinese": "“demonstrate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to demonstrate carefully during the nature activity.",
+    "meaning": "a clear difference between two things",
+    "chinese": "对比；反差",
+    "synonyms": [
+      "difference",
+      "distinction"
+    ],
+    "antonyms": [
+      "similarity"
+    ],
+    "example": "The contrast between the two paintings was striking.",
     "topics": [
-      "people"
+      "Arts",
+      "Comparison"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 338,
-    "word": "determination",
-    "partOfSpeech": "noun",
+    "word": "controversial",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with determination",
-    "chinese": "“determination”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about determination in a nature context.",
+    "meaning": "causing disagreement among people",
+    "chinese": "有争议的",
+    "synonyms": [
+      "disputed",
+      "debatable"
+    ],
+    "antonyms": [
+      "uncontroversial"
+    ],
+    "example": "The proposed rule was controversial among parents.",
     "topics": [
-      "people"
+      "Community",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 339,
-    "word": "device",
-    "partOfSpeech": "noun",
+    "word": "convincing",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with device",
-    "chinese": "“device”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about device in a nature context.",
+    "meaning": "able to make someone believe that something is True",
+    "chinese": "有说服力的",
+    "synonyms": [
+      "persuasive",
+      "credible"
+    ],
+    "antonyms": [
+      "unconvincing"
+    ],
+    "example": "She gave a convincing explanation for her absence.",
     "topics": [
-      "people"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 340,
-    "word": "digital",
-    "partOfSpeech": "noun",
+    "word": "crucial",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with digital",
-    "chinese": "“digital”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about digital in a nature context.",
+    "meaning": "extremely important to a result or situation",
+    "chinese": "至关重要的",
+    "synonyms": [
+      "essential",
+      "vital"
+    ],
+    "antonyms": [
+      "unimportant"
+    ],
+    "example": "Good communication is crucial during an emergency.",
     "topics": [
-      "people"
+      "Safety",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 341,
-    "word": "efficient",
-    "partOfSpeech": "adjective",
+    "word": "cultivate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is efficient",
-    "chinese": "“efficient”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "inefficient"
+    "meaning": "to develop a skill, quality or relationship",
+    "chinese": "培养；栽培",
+    "synonyms": [
+      "develop",
+      "grow"
     ],
-    "example": "The nature situation was described as efficient by the teacher.",
+    "antonyms": [
+      "neglect"
+    ],
+    "example": "Reading helps cultivate a love of learning.",
     "topics": [
-      "people"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 342,
-    "word": "emotional",
-    "partOfSpeech": "noun",
+    "word": "decrease",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with emotional",
-    "chinese": "“emotional”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about emotional in a nature context.",
+    "meaning": "to become or make something smaller or less",
+    "chinese": "减少；下降",
+    "synonyms": [
+      "reduce",
+      "decline"
+    ],
+    "antonyms": [
+      "increase"
+    ],
+    "example": "The number of plastic bags used has decreased.",
     "topics": [
-      "people"
+      "Environment",
+      "Numbers"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 343,
-    "word": "emphasise",
-    "partOfSpeech": "noun",
+    "word": "deduce",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with emphasise",
-    "chinese": "“emphasise”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about emphasise in a nature context.",
+    "meaning": "to reach an answer by using available information",
+    "chinese": "推断；推论",
+    "synonyms": [
+      "infer",
+      "conclude"
+    ],
+    "antonyms": [
+      "misjudge"
+    ],
+    "example": "From the footprints, we deduced that someone had entered the room.",
     "topics": [
-      "people"
+      "Problem Solving",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 344,
-    "word": "estimate",
-    "partOfSpeech": "verb",
+    "word": "deficient",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to estimate or to carry out the action described by the word",
-    "chinese": "“estimate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to estimate carefully during the nature activity.",
+    "meaning": "lacking something necessary",
+    "chinese": "缺乏的；不足的",
+    "synonyms": [
+      "lacking",
+      "insufficient"
+    ],
+    "antonyms": [
+      "adequate"
+    ],
+    "example": "The soil was deficient in nutrients.",
     "topics": [
-      "people"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 345,
-    "word": "ethical",
-    "partOfSpeech": "adjective",
+    "word": "derive",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is ethical",
-    "chinese": "“ethical”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The nature situation was described as ethical by the teacher.",
+    "meaning": "to get something from a source",
+    "chinese": "源自；获得",
+    "synonyms": [
+      "obtain",
+      "originate"
+    ],
+    "antonyms": [
+      "lose"
+    ],
+    "example": "Many medicines are derived from natural substances.",
     "topics": [
-      "people"
+      "Science",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 346,
-    "word": "factor",
-    "partOfSpeech": "noun",
+    "word": "distinguish",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with factor",
-    "chinese": "“factor”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about factor in a nature context.",
+    "meaning": "to recognise a difference between things",
+    "chinese": "区分；辨别",
+    "synonyms": [
+      "differentiate",
+      "tell apart"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "Can you distinguish between the two bird calls?",
     "topics": [
-      "people"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 347,
-    "word": "failure",
-    "partOfSpeech": "noun",
+    "word": "diverse",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with failure",
-    "chinese": "“failure”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about failure in a nature context.",
+    "meaning": "including many different types of people or things",
+    "chinese": "多样的",
+    "synonyms": [
+      "varied",
+      "wide-ranging"
+    ],
+    "antonyms": [
+      "uniform",
+      "limited"
+    ],
+    "example": "Singapore is home to a diverse population.",
     "topics": [
-      "people"
+      "Society",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 348,
-    "word": "fascinating",
-    "partOfSpeech": "noun",
+    "word": "dominate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with fascinating",
-    "chinese": "“fascinating”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about fascinating in a nature context.",
+    "meaning": "to control or be the most important part of something",
+    "chinese": "支配；占优势",
+    "synonyms": [
+      "control",
+      "lead"
+    ],
+    "antonyms": [
+      "submit"
+    ],
+    "example": "One team dominated the match from the beginning.",
     "topics": [
-      "people"
+      "Sports",
+      "Competition"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 349,
-    "word": "finance",
-    "partOfSpeech": "noun",
+    "word": "eliminate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with finance",
-    "chinese": "“finance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about finance in a nature context.",
+    "meaning": "to remove or get rid of something",
+    "chinese": "消除；排除",
+    "synonyms": [
+      "remove",
+      "eradicate"
+    ],
+    "antonyms": [
+      "retain"
+    ],
+    "example": "We should eliminate unnecessary plastic packaging.",
     "topics": [
-      "people"
+      "Environment",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 350,
-    "word": "function",
-    "partOfSpeech": "noun",
+    "word": "encounter",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with function",
-    "chinese": "“function”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about function in a nature context.",
+    "meaning": "to meet or experience something unexpectedly",
+    "chinese": "遇到；遭遇",
+    "synonyms": [
+      "meet",
+      "face"
+    ],
+    "antonyms": [
+      "avoid"
+    ],
+    "example": "We encountered heavy rain during the hike.",
     "topics": [
-      "people"
+      "Travel",
+      "Weather"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 351,
-    "word": "generation",
-    "partOfSpeech": "noun",
+    "word": "enhance",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with generation",
-    "chinese": "“generation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about generation in a nature context.",
+    "meaning": "to improve the quality or value of something",
+    "chinese": "增强；提高",
+    "synonyms": [
+      "improve",
+      "boost"
+    ],
+    "antonyms": [
+      "weaken"
+    ],
+    "example": "Plants can enhance the beauty of a garden.",
     "topics": [
-      "people"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 352,
-    "word": "habit",
-    "partOfSpeech": "noun",
+    "word": "ensure",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with habit",
-    "chinese": "“habit”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about habit in a nature context.",
+    "meaning": "to make certain that something happens",
+    "chinese": "确保",
+    "synonyms": [
+      "make sure",
+      "guarantee"
+    ],
+    "antonyms": [
+      "prevent"
+    ],
+    "example": "Please ensure that the door is locked before leaving.",
     "topics": [
-      "people"
+      "Safety",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 353,
-    "word": "impact",
-    "partOfSpeech": "noun",
+    "word": "evaluate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with impact",
-    "chinese": "“impact”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about impact in a nature context.",
+    "meaning": "to judge something carefully after considering its quality",
+    "chinese": "评估；评价",
+    "synonyms": [
+      "assess",
+      "judge"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "Scientists evaluate the results before drawing a conclusion.",
     "topics": [
-      "people"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 354,
-    "word": "individual",
-    "partOfSpeech": "noun",
+    "word": "evident",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with individual",
-    "chinese": "“individual”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about individual in a nature context.",
+    "meaning": "clear and easy to notice",
+    "chinese": "明显的",
+    "synonyms": [
+      "obvious",
+      "apparent"
+    ],
+    "antonyms": [
+      "hidden"
+    ],
+    "example": "It was evident that the road was unsafe.",
     "topics": [
-      "people"
+      "Safety",
+      "Observation"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 355,
-    "word": "industry",
-    "partOfSpeech": "noun",
+    "word": "exaggerate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with industry",
-    "chinese": "“industry”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about industry in a nature context.",
+    "meaning": "to make something seem larger or more important than it really is",
+    "chinese": "夸大",
+    "synonyms": [
+      "overstate",
+      "magnify"
+    ],
+    "antonyms": [
+      "understate"
+    ],
+    "example": "Do not exaggerate the size of the fish you caught.",
     "topics": [
-      "people"
+      "Communication",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 356,
-    "word": "information",
-    "partOfSpeech": "noun",
+    "word": "exceed",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with information",
-    "chinese": "“information”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about information in a nature context.",
+    "meaning": "to be greater than a particular amount or limit",
+    "chinese": "超过",
+    "synonyms": [
+      "surpass",
+      "go beyond"
+    ],
+    "antonyms": [
+      "fall short"
+    ],
+    "example": "The number of visitors exceeded our expectations.",
     "topics": [
-      "people"
+      "Numbers",
+      "Travel"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 357,
-    "word": "innovation",
-    "partOfSpeech": "noun",
+    "word": "exclude",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with innovation",
-    "chinese": "“innovation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about innovation in a nature context.",
+    "meaning": "to deliberately leave someone or something out",
+    "chinese": "排除；不包括",
+    "synonyms": [
+      "omit",
+      "leave out"
+    ],
+    "antonyms": [
+      "include"
+    ],
+    "example": "Please do not exclude anyone from the group activity.",
     "topics": [
-      "people"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 358,
-    "word": "initiative",
-    "partOfSpeech": "noun",
+    "word": "explicit",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with initiative",
-    "chinese": "“initiative”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about initiative in a nature context.",
+    "meaning": "clear and direct, leaving no doubt about meaning",
+    "chinese": "明确的；清楚的",
+    "synonyms": [
+      "clear",
+      "specific"
+    ],
+    "antonyms": [
+      "vague"
+    ],
+    "example": "The teacher gave explicit instructions for the experiment.",
     "topics": [
-      "people"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 359,
-    "word": "instruction",
-    "partOfSpeech": "noun",
+    "word": "facilitate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with instruction",
-    "chinese": "“instruction”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about instruction in a nature context.",
+    "meaning": "to make an action or process easier",
+    "chinese": "促进；使便利",
+    "synonyms": [
+      "assist",
+      "ease"
+    ],
+    "antonyms": [
+      "hinder"
+    ],
+    "example": "The new timetable facilitates better use of the library.",
     "topics": [
-      "people"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 360,
-    "word": "interaction",
-    "partOfSpeech": "noun",
+    "word": "formulate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with interaction",
-    "chinese": "“interaction”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about interaction in a nature context.",
+    "meaning": "to develop a plan, idea or method carefully",
+    "chinese": "制定；构想",
+    "synonyms": [
+      "develop",
+      "devise"
+    ],
+    "antonyms": [
+      "abandon"
+    ],
+    "example": "The team formulated a plan to reduce water use.",
     "topics": [
-      "people"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 361,
-    "word": "intention",
-    "partOfSpeech": "noun",
+    "word": "fundamental",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with intention",
-    "chinese": "“intention”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about intention in a nature context.",
+    "meaning": "basic and very important",
+    "chinese": "基本的；根本的",
+    "synonyms": [
+      "basic",
+      "essential"
+    ],
+    "antonyms": [
+      "secondary"
+    ],
+    "example": "Trust is fundamental to a strong friendship.",
     "topics": [
-      "people"
+      "Values",
+      "Friendship"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 362,
-    "word": "maintain",
+    "word": "generate",
     "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "to maintain or to carry out the action described by the word",
-    "chinese": "“maintain”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to maintain carefully during the nature activity.",
+    "meaning": "to produce or create something",
+    "chinese": "产生；创造",
+    "synonyms": [
+      "produce",
+      "create"
+    ],
+    "antonyms": [
+      "consume"
+    ],
+    "example": "Solar panels generate electricity from sunlight.",
     "topics": [
-      "people"
+      "Science",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 363,
-    "word": "major",
-    "partOfSpeech": "adjective",
+    "word": "illustrate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is major",
-    "chinese": "“major”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "minor"
+    "meaning": "to explain something by using examples or pictures",
+    "chinese": "说明；阐明",
+    "synonyms": [
+      "explain",
+      "demonstrate"
     ],
-    "example": "The nature situation was described as major by the teacher.",
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "The diagram illustrates how water moves through the plant.",
     "topics": [
-      "people"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 364,
-    "word": "minor",
-    "partOfSpeech": "adjective",
+    "word": "imply",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is minor",
-    "chinese": "“minor”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The nature situation was described as minor by the teacher.",
+    "meaning": "to suggest something without saying it directly",
+    "chinese": "暗示",
+    "synonyms": [
+      "suggest",
+      "indicate"
+    ],
+    "antonyms": [
+      "state directly"
+    ],
+    "example": "Her silence seemed to imply that she disagreed.",
     "topics": [
-      "people"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 365,
-    "word": "motivate",
-    "partOfSpeech": "verb",
+    "word": "incredible",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to motivate or to carry out the action described by the word",
-    "chinese": "“motivate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to motivate carefully during the nature activity.",
+    "meaning": "difficult to believe because it is so surprising or impressive",
+    "chinese": "难以置信的；惊人的",
+    "synonyms": [
+      "amazing",
+      "extraordinary"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The athlete showed incredible determination.",
     "topics": [
-      "people"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 366,
-    "word": "negative",
-    "partOfSpeech": "adjective",
+    "word": "indicate",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is negative",
-    "chinese": "“negative”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "positive"
+    "meaning": "to show that something exists or is True",
+    "chinese": "表明；指出",
+    "synonyms": [
+      "show",
+      "signal"
     ],
-    "example": "The nature situation was described as negative by the teacher.",
+    "antonyms": [
+      "conceal"
+    ],
+    "example": "Dark clouds indicate that rain may be coming.",
     "topics": [
-      "people"
+      "Weather",
+      "Observation"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 367,
-    "word": "objective",
+    "word": "inevitable",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "describing someone or something that is objective",
-    "chinese": "“objective”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The nature situation was described as objective by the teacher.",
+    "meaning": "certain to happen and impossible to avoid",
+    "chinese": "不可避免的",
+    "synonyms": [
+      "unavoidable",
+      "certain"
+    ],
+    "antonyms": [
+      "avoidable"
+    ],
+    "example": "Some traffic delays are inevitable during peak hours.",
     "topics": [
-      "people"
+      "Travel",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 368,
-    "word": "observe",
-    "partOfSpeech": "verb",
+    "word": "innovative",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to observe or to carry out the action described by the word",
-    "chinese": "“observe”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to observe carefully during the nature activity.",
+    "meaning": "using new ideas or methods",
+    "chinese": "创新的",
+    "synonyms": [
+      "original",
+      "inventive"
+    ],
+    "antonyms": [
+      "traditional"
+    ],
+    "example": "The school introduced an innovative way to teach science.",
     "topics": [
-      "people"
+      "Education",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 369,
-    "word": "opportunity",
-    "partOfSpeech": "noun",
+    "word": "justify",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a good chance to do something",
-    "chinese": "机会",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about opportunity in a nature context.",
+    "meaning": "to give a good reason for something",
+    "chinese": "证明……合理；辩护",
+    "synonyms": [
+      "defend",
+      "explain"
+    ],
+    "antonyms": [
+      "condemn"
+    ],
+    "example": "Can you justify your choice with evidence?",
     "topics": [
-      "people"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 370,
-    "word": "option",
-    "partOfSpeech": "noun",
+    "word": "logical",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with option",
-    "chinese": "“option”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about option in a nature context.",
+    "meaning": "based on clear reasoning",
+    "chinese": "合乎逻辑的",
+    "synonyms": [
+      "reasonable",
+      "rational"
+    ],
+    "antonyms": [
+      "illogical"
+    ],
+    "example": "Her explanation was clear and logical.",
     "topics": [
-      "people"
+      "School",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 371,
-    "word": "participation",
-    "partOfSpeech": "noun",
+    "word": "modify",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with participation",
-    "chinese": "“participation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about participation in a nature context.",
+    "meaning": "to change something slightly to improve it",
+    "chinese": "修改；调整",
+    "synonyms": [
+      "alter",
+      "adjust"
+    ],
+    "antonyms": [
+      "preserve"
+    ],
+    "example": "We modified the design to make it safer.",
     "topics": [
-      "people"
+      "Design",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 372,
-    "word": "particular",
+    "word": "notion",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with particular",
-    "chinese": "“particular”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about particular in a nature context.",
+    "meaning": "an idea or belief about something",
+    "chinese": "观念；想法",
+    "synonyms": [
+      "idea",
+      "belief"
+    ],
+    "antonyms": [
+      "fact"
+    ],
+    "example": "He rejected the notion that only adults can solve the problem.",
     "topics": [
-      "people"
+      "Thinking",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 373,
-    "word": "perspective",
+    "word": "objective",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a particular way of viewing something",
-    "chinese": "观点；角度",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about perspective in a nature context.",
+    "meaning": "something you are trying to achieve",
+    "chinese": "目标",
+    "synonyms": [
+      "goal",
+      "aim"
+    ],
+    "antonyms": [
+      "failure"
+    ],
+    "example": "Our main objective is to reduce food waste.",
     "topics": [
-      "people"
+      "Goals",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 374,
-    "word": "positive",
-    "partOfSpeech": "adjective",
+    "word": "occupy",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "describing someone or something that is positive",
-    "chinese": "“positive”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The nature situation was described as positive by the teacher.",
+    "meaning": "to fill a space or period of time",
+    "chinese": "占据；占用",
+    "synonyms": [
+      "fill",
+      "take up"
+    ],
+    "antonyms": [
+      "vacate"
+    ],
+    "example": "The large sofa occupies most of the living room.",
     "topics": [
-      "people"
+      "Daily Life",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 375,
-    "word": "potential",
-    "partOfSpeech": "noun",
+    "word": "overall",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with potential",
-    "chinese": "“potential”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about potential in a nature context.",
+    "meaning": "including everything or considering the whole situation",
+    "chinese": "总体的；全面的",
+    "synonyms": [
+      "general",
+      "total"
+    ],
+    "antonyms": [
+      "partial"
+    ],
+    "example": "The overall result was better than we expected.",
     "topics": [
-      "people"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 376,
-    "word": "predict",
-    "partOfSpeech": "verb",
+    "word": "persistent",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "to predict or to carry out the action described by the word",
-    "chinese": "“predict”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to predict carefully during the nature activity.",
+    "meaning": "continuing firmly despite difficulty",
+    "chinese": "坚持不懈的",
+    "synonyms": [
+      "determined",
+      "tenacious"
+    ],
+    "antonyms": [
+      "giving up"
+    ],
+    "example": "Her persistent effort finally improved her reading.",
     "topics": [
-      "people"
+      "Values",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 377,
-    "word": "pressure",
+    "word": "perspective",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with pressure",
-    "chinese": "“pressure”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about pressure in a nature context.",
+    "meaning": "a particular way of thinking about or viewing something",
+    "chinese": "观点；看法",
+    "synonyms": [
+      "viewpoint",
+      "outlook"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "Try to understand the problem from another person's perspective.",
     "topics": [
-      "people"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 378,
-    "word": "principle",
-    "partOfSpeech": "noun",
+    "word": "precise",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with principle",
-    "chinese": "“principle”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about principle in a nature context.",
+    "meaning": "exact and accurate",
+    "chinese": "精确的",
+    "synonyms": [
+      "exact",
+      "accurate"
+    ],
+    "antonyms": [
+      "vague"
+    ],
+    "example": "Please give precise measurements for the experiment.",
     "topics": [
-      "people"
+      "Science",
+      "Mathematics"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
@@ -7353,12590 +9075,13959 @@ const vocabulary = [
     "word": "priority",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with priority",
-    "chinese": "“priority”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about priority in a nature context.",
+    "meaning": "something that is more important than other things",
+    "chinese": "优先事项",
+    "synonyms": [
+      "importance",
+      "precedence"
+    ],
+    "antonyms": [
+      "triviality"
+    ],
+    "example": "Safety should be our first priority.",
     "topics": [
-      "people"
+      "Safety",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 380,
-    "word": "professional",
-    "partOfSpeech": "adjective",
+    "word": "proportion",
+    "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "describing someone or something that is professional",
-    "chinese": "“professional”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The nature situation was described as professional by the teacher.",
+    "meaning": "a part or share of a whole",
+    "chinese": "比例；部分",
+    "synonyms": [
+      "ratio",
+      "share"
+    ],
+    "antonyms": [
+      "whole"
+    ],
+    "example": "A large proportion of the class joined the activity.",
     "topics": [
-      "people"
+      "Mathematics",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 381,
-    "word": "progress",
-    "partOfSpeech": "noun",
+    "word": "pursue",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with progress",
-    "chinese": "“progress”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about progress in a nature context.",
+    "meaning": "to continue trying to achieve something",
+    "chinese": "追求；继续进行",
+    "synonyms": [
+      "seek",
+      "follow"
+    ],
+    "antonyms": [
+      "abandon"
+    ],
+    "example": "She decided to pursue her dream of becoming a doctor.",
     "topics": [
-      "people"
+      "Goals",
+      "Careers"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 382,
-    "word": "promote",
-    "partOfSpeech": "noun",
+    "word": "reluctant",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with promote",
-    "chinese": "“promote”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about promote in a nature context.",
+    "meaning": "not willing or eager to do something",
+    "chinese": "不情愿的",
+    "synonyms": [
+      "unwilling",
+      "hesitant"
+    ],
+    "antonyms": [
+      "willing",
+      "eager"
+    ],
+    "example": "He was reluctant to speak in front of the class.",
     "topics": [
-      "people"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 383,
-    "word": "reaction",
-    "partOfSpeech": "noun",
+    "word": "resolve",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with reaction",
-    "chinese": "“reaction”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about reaction in a nature context.",
+    "meaning": "to solve a problem or disagreement",
+    "chinese": "解决",
+    "synonyms": [
+      "solve",
+      "settle"
+    ],
+    "antonyms": [
+      "create"
+    ],
+    "example": "The two friends resolved their disagreement calmly.",
     "topics": [
-      "people"
+      "Communication",
+      "Friendship"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 384,
-    "word": "relationship",
-    "partOfSpeech": "noun",
+    "word": "retain",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with relationship",
-    "chinese": "“relationship”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about relationship in a nature context.",
+    "meaning": "to keep something rather than lose or remove it",
+    "chinese": "保留；保持",
+    "synonyms": [
+      "keep",
+      "preserve"
+    ],
+    "antonyms": [
+      "discard",
+      "lose"
+    ],
+    "example": "The bottle can retain heat for several hours.",
     "topics": [
-      "people"
+      "Science",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 385,
-    "word": "reliable",
+    "word": "scarce",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "able to be trusted to do what is expected",
-    "chinese": "可靠的",
+    "meaning": "not available in large amounts",
+    "chinese": "稀缺的",
     "synonyms": [
-      "dependable",
-      "trustworthy"
+      "limited",
+      "rare"
     ],
-    "antonyms": [],
-    "example": "The nature situation was described as reliable by the teacher.",
+    "antonyms": [
+      "abundant"
+    ],
+    "example": "Clean drinking water is scarce in some regions.",
     "topics": [
-      "people"
+      "Environment",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 386,
-    "word": "remarkable",
-    "partOfSpeech": "noun",
+    "word": "sincere",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with remarkable",
-    "chinese": "“remarkable”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about remarkable in a nature context.",
+    "meaning": "honest and genuine in what you say or feel",
+    "chinese": "真诚的",
+    "synonyms": [
+      "genuine",
+      "honest"
+    ],
+    "antonyms": [
+      "insincere"
+    ],
+    "example": "She gave a sincere apology for her mistake.",
     "topics": [
-      "people"
+      "Values",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 387,
-    "word": "responsibility",
-    "partOfSpeech": "noun",
+    "word": "stable",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with responsibility",
-    "chinese": "“responsibility”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about responsibility in a nature context.",
+    "meaning": "steady and unlikely to change suddenly",
+    "chinese": "稳定的",
+    "synonyms": [
+      "steady",
+      "secure"
+    ],
+    "antonyms": [
+      "unstable"
+    ],
+    "example": "The patient is now in a stable condition.",
     "topics": [
-      "people"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 388,
-    "word": "response",
-    "partOfSpeech": "noun",
+    "word": "substantial",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with response",
-    "chinese": "“response”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about response in a nature context.",
+    "meaning": "large in amount or importance",
+    "chinese": "大量的；重大的",
+    "synonyms": [
+      "considerable",
+      "significant"
+    ],
+    "antonyms": [
+      "small",
+      "insignificant"
+    ],
+    "example": "The project requires a substantial amount of time.",
     "topics": [
-      "people"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 389,
-    "word": "routine",
-    "partOfSpeech": "noun",
+    "word": "temporary",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with routine",
-    "chinese": "“routine”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about routine in a nature context.",
+    "meaning": "lasting only for a limited time",
+    "chinese": "暂时的",
+    "synonyms": [
+      "short-term",
+      "brief"
+    ],
+    "antonyms": [
+      "permanent"
+    ],
+    "example": "The library is in a temporary location while the building is repaired.",
     "topics": [
-      "people"
+      "School",
+      "Buildings"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 390,
-    "word": "schedule",
-    "partOfSpeech": "noun",
+    "word": "therefore",
+    "partOfSpeech": "adverb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with schedule",
-    "chinese": "“schedule”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about schedule in a nature context.",
+    "meaning": "for that reason; as a result",
+    "chinese": "因此",
+    "synonyms": [
+      "thus",
+      "consequently"
+    ],
+    "antonyms": [
+      "nevertheless"
+    ],
+    "example": "The road was flooded; therefore, we took another route.",
     "topics": [
-      "people"
+      "Writing",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 391,
-    "word": "significant",
+    "word": "thorough",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "important or noticeable",
-    "chinese": "重要的；显著的",
+    "meaning": "complete and careful, with attention to every detail",
+    "chinese": "彻底的；仔细的",
     "synonyms": [
-      "important"
+      "complete",
+      "detailed"
     ],
-    "antonyms": [],
-    "example": "The nature situation was described as significant by the teacher.",
+    "antonyms": [
+      "superficial"
+    ],
+    "example": "The doctor carried out a thorough examination.",
     "topics": [
-      "people"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 392,
-    "word": "specific",
-    "partOfSpeech": "noun",
+    "word": "ultimate",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with specific",
-    "chinese": "“specific”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about specific in a nature context.",
+    "meaning": "final or greatest",
+    "chinese": "最终的；最大的",
+    "synonyms": [
+      "final",
+      "greatest"
+    ],
+    "antonyms": [
+      "initial"
+    ],
+    "example": "The ultimate goal is to make the playground safer.",
     "topics": [
-      "people"
+      "Goals",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 393,
-    "word": "structure",
-    "partOfSpeech": "noun",
+    "word": "unique",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with structure",
-    "chinese": "“structure”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about structure in a nature context.",
+    "meaning": "being the only one of its kind",
+    "chinese": "独特的",
+    "synonyms": [
+      "one-of-a-kind",
+      "distinctive"
+    ],
+    "antonyms": [
+      "common"
+    ],
+    "example": "Each snowflake has a unique pattern.",
     "topics": [
-      "people"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 394,
-    "word": "sufficient",
+    "word": "valid",
     "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "enough for a particular purpose",
-    "chinese": "足够的",
+    "meaning": "based on good reasoning or accepted facts",
+    "chinese": "有效的；合理的",
     "synonyms": [
-      "enough",
-      "adequate"
+      "sound",
+      "reasonable"
     ],
-    "antonyms": [],
-    "example": "The nature situation was described as sufficient by the teacher.",
+    "antonyms": [
+      "invalid"
+    ],
+    "example": "Her argument was valid and supported by evidence.",
     "topics": [
-      "people"
+      "School",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 395,
-    "word": "technology",
+    "word": "variation",
     "partOfSpeech": "noun",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with technology",
-    "chinese": "“technology”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about technology in a nature context.",
+    "meaning": "a difference or change in form or condition",
+    "chinese": "变化；差异",
+    "synonyms": [
+      "difference",
+      "change"
+    ],
+    "antonyms": [
+      "uniformity"
+    ],
+    "example": "There is some variation in the colour of these flowers.",
     "topics": [
-      "people"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 396,
-    "word": "theory",
-    "partOfSpeech": "noun",
+    "word": "verify",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with theory",
-    "chinese": "“theory”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about theory in a nature context.",
+    "meaning": "to check that something is True or accurate",
+    "chinese": "核实；验证",
+    "synonyms": [
+      "check",
+      "confirm"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "Please verify the information before sharing it.",
     "topics": [
-      "people"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 397,
-    "word": "threat",
-    "partOfSpeech": "noun",
+    "word": "versatile",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with threat",
-    "chinese": "“threat”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about threat in a nature context.",
+    "meaning": "able to be used for many different purposes",
+    "chinese": "多用途的；多才多艺的",
+    "synonyms": [
+      "adaptable",
+      "flexible"
+    ],
+    "antonyms": [
+      "limited"
+    ],
+    "example": "A smartphone is a versatile tool for learning.",
     "topics": [
-      "people"
+      "Technology",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 398,
-    "word": "topic",
-    "partOfSpeech": "noun",
+    "word": "visible",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with topic",
-    "chinese": "“topic”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about topic in a nature context.",
+    "meaning": "able to be seen",
+    "chinese": "看得见的；明显的",
+    "synonyms": [
+      "noticeable",
+      "seen"
+    ],
+    "antonyms": [
+      "invisible"
+    ],
+    "example": "The moon was clearly visible in the night sky.",
     "topics": [
-      "people"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 399,
-    "word": "trend",
-    "partOfSpeech": "noun",
+    "word": "widespread",
+    "partOfSpeech": "adjective",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with trend",
-    "chinese": "“trend”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about trend in a nature context.",
+    "meaning": "existing or happening in many places or among many people",
+    "chinese": "广泛的",
+    "synonyms": [
+      "extensive",
+      "common"
+    ],
+    "antonyms": [
+      "limited",
+      "local"
+    ],
+    "example": "The campaign received widespread support.",
     "topics": [
-      "people"
+      "Community",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 400,
-    "word": "unique",
-    "partOfSpeech": "noun",
+    "word": "withdraw",
+    "partOfSpeech": "verb",
     "level": 4,
-    "meaning": "a person, thing, idea, or situation connected with unique",
-    "chinese": "“unique”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about unique in a nature context.",
+    "meaning": "to remove or take something away",
+    "chinese": "撤回；退出",
+    "synonyms": [
+      "remove",
+      "retreat"
+    ],
+    "antonyms": [
+      "advance",
+      "deposit"
+    ],
+    "example": "The player withdrew from the competition because of an injury.",
     "topics": [
-      "people"
+      "Sports",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 401,
-    "word": "accomplish",
-    "partOfSpeech": "noun",
+    "word": "abrupt",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with accomplish",
-    "chinese": "“accomplish”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about accomplish in a science context.",
+    "meaning": "sudden and unexpected",
+    "chinese": "突然的",
+    "synonyms": [
+      "sudden",
+      "unexpected"
+    ],
+    "antonyms": [
+      "gradual"
+    ],
+    "example": "The car came to an abrupt stop.",
     "topics": [
-      "nature"
+      "Transport",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 402,
-    "word": "adaptation",
-    "partOfSpeech": "noun",
+    "word": "accountable",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with adaptation",
-    "chinese": "“adaptation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about adaptation in a science context.",
+    "meaning": "responsible for your actions and expected to explain them",
+    "chinese": "负有责任的",
+    "synonyms": [
+      "responsible"
+    ],
+    "antonyms": [
+      "unaccountable"
+    ],
+    "example": "Team leaders are accountable for the safety of their members.",
     "topics": [
-      "nature"
+      "Leadership",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 403,
-    "word": "adequate",
-    "partOfSpeech": "noun",
+    "word": "adaptable",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with adequate",
-    "chinese": "“adequate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about adequate in a science context.",
+    "meaning": "able to change easily to suit new conditions",
+    "chinese": "适应力强的",
+    "synonyms": [
+      "flexible",
+      "versatile"
+    ],
+    "antonyms": [
+      "inflexible"
+    ],
+    "example": "An adaptable learner can cope with different teaching methods.",
     "topics": [
-      "nature"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 404,
-    "word": "advocate",
-    "partOfSpeech": "noun",
+    "word": "adjacent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with advocate",
-    "chinese": "“advocate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about advocate in a science context.",
+    "meaning": "next to or very near something",
+    "chinese": "毗邻的",
+    "synonyms": [
+      "nearby",
+      "neighbouring"
+    ],
+    "antonyms": [
+      "distant"
+    ],
+    "example": "The library is adjacent to the school hall.",
     "topics": [
-      "nature"
+      "School",
+      "Places"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 405,
-    "word": "allocate",
-    "partOfSpeech": "noun",
+    "word": "adverse",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with allocate",
-    "chinese": "“allocate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about allocate in a science context.",
+    "meaning": "unfavourable or harmful",
+    "chinese": "不利的；有害的",
+    "synonyms": [
+      "unfavourable",
+      "harmful"
+    ],
+    "antonyms": [
+      "beneficial"
+    ],
+    "example": "The medicine may have adverse effects on some patients.",
     "topics": [
-      "nature"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 406,
-    "word": "alternative",
-    "partOfSpeech": "noun",
+    "word": "advocate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with alternative",
-    "chinese": "“alternative”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about alternative in a science context.",
+    "meaning": "to publicly support an idea or action",
+    "chinese": "提倡；支持",
+    "synonyms": [
+      "support",
+      "promote"
+    ],
+    "antonyms": [
+      "oppose"
+    ],
+    "example": "Many students advocate reducing single-use plastics.",
     "topics": [
-      "nature"
+      "Environment",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 407,
-    "word": "analyse",
+    "word": "allocate",
     "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "to examine something carefully",
-    "chinese": "分析",
+    "meaning": "to give a particular amount of something for a purpose",
+    "chinese": "分配",
     "synonyms": [
-      "examine"
+      "assign",
+      "distribute"
     ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to analyse carefully during the science activity.",
+    "antonyms": [
+      "withhold"
+    ],
+    "example": "The teacher allocated ten minutes for the activity.",
     "topics": [
-      "nature"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 408,
-    "word": "anticipate",
-    "partOfSpeech": "verb",
+    "word": "ambiguous",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "to expect something and prepare for it",
-    "chinese": "预期；预料",
+    "meaning": "having more than one possible meaning",
+    "chinese": "含糊的；有歧义的",
     "synonyms": [
-      "expect"
+      "unclear",
+      "vague"
     ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to anticipate carefully during the science activity.",
+    "antonyms": [
+      "clear",
+      "explicit"
+    ],
+    "example": "The instructions were ambiguous, so several pupils were confused.",
     "topics": [
-      "nature"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 409,
-    "word": "assess",
-    "partOfSpeech": "verb",
+    "word": "analogy",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "to assess or to carry out the action described by the word",
-    "chinese": "“assess”的常用中文释义",
-    "synonyms": [],
+    "meaning": "a comparison between two things to explain an idea",
+    "chinese": "类比；比喻",
+    "synonyms": [
+      "comparison",
+      "parallel"
+    ],
     "antonyms": [],
-    "example": "The teacher asked the pupils to assess carefully during the science activity.",
+    "example": "The teacher used an analogy to explain how the heart works.",
     "topics": [
-      "nature"
+      "School",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 410,
-    "word": "assumption",
-    "partOfSpeech": "noun",
+    "word": "appreciate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with assumption",
-    "chinese": "“assumption”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about assumption in a science context.",
+    "meaning": "to recognise the value or importance of something",
+    "chinese": "欣赏；重视",
+    "synonyms": [
+      "value",
+      "recognise"
+    ],
+    "antonyms": [
+      "undervalue"
+    ],
+    "example": "I appreciate the effort you put into the project.",
     "topics": [
-      "nature"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 411,
-    "word": "atmosphere",
-    "partOfSpeech": "noun",
+    "word": "arbitrary",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with atmosphere",
-    "chinese": "“atmosphere”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about atmosphere in a science context.",
+    "meaning": "based on personal choice rather than a clear reason",
+    "chinese": "任意的；武断的",
+    "synonyms": [
+      "random",
+      "unreasoned"
+    ],
+    "antonyms": [
+      "reasoned"
+    ],
+    "example": "The rule seemed arbitrary because no reason was given.",
     "topics": [
-      "nature"
+      "Rules",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 412,
-    "word": "authentic",
-    "partOfSpeech": "noun",
+    "word": "articulate",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with authentic",
-    "chinese": "“authentic”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about authentic in a science context.",
+    "meaning": "able to express ideas clearly in words",
+    "chinese": "善于表达的；口齿清楚的",
+    "synonyms": [
+      "eloquent",
+      "expressive"
+    ],
+    "antonyms": [
+      "inarticulate"
+    ],
+    "example": "She is articulate and explained her ideas clearly.",
     "topics": [
-      "nature"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 413,
-    "word": "cautious",
-    "partOfSpeech": "adjective",
+    "word": "aspire",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is cautious",
-    "chinese": "“cautious”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as cautious by the teacher.",
+    "meaning": "to have a strong desire to achieve something",
+    "chinese": "渴望；立志",
+    "synonyms": [
+      "aim",
+      "hope"
+    ],
+    "antonyms": [
+      "give up"
+    ],
+    "example": "Many young athletes aspire to compete internationally.",
     "topics": [
-      "nature"
+      "Sports",
+      "Goals"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 414,
-    "word": "compassionate",
+    "word": "assurance",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with compassionate",
-    "chinese": "“compassionate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about compassionate in a science context.",
+    "meaning": "a statement that gives confidence that something is True or will happen",
+    "chinese": "保证；承诺",
+    "synonyms": [
+      "guarantee",
+      "promise"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "The coach gave us assurance that everyone would get a chance to play.",
     "topics": [
-      "nature"
+      "Sports",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 415,
-    "word": "competent",
+    "word": "authentic",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is competent",
-    "chinese": "“competent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as competent by the teacher.",
+    "meaning": "real and genuine, not copied or False",
+    "chinese": "真实的；正宗的",
+    "synonyms": [
+      "genuine",
+      "real"
+    ],
+    "antonyms": [
+      "fake",
+      "artificial"
+    ],
+    "example": "The museum displayed an authentic historical document.",
     "topics": [
-      "nature"
+      "History",
+      "Culture"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 416,
-    "word": "complex",
-    "partOfSpeech": "adjective",
+    "word": "bias",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "describing someone or something that is complex",
-    "chinese": "“complex”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as complex by the teacher.",
+    "meaning": "an unfair preference for one person or group",
+    "chinese": "偏见",
+    "synonyms": [
+      "prejudice",
+      "partiality"
+    ],
+    "antonyms": [
+      "fairness",
+      "impartiality"
+    ],
+    "example": "A good journalist should avoid personal bias.",
     "topics": [
-      "nature"
+      "Media",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 417,
+    "word": "cease",
+    "partOfSpeech": "verb",
+    "level": 5,
+    "meaning": "to stop happening or continuing",
+    "chinese": "停止",
+    "synonyms": [
+      "stop",
+      "end"
+    ],
+    "antonyms": [
+      "continue"
+    ],
+    "example": "The rain finally ceased after midnight.",
+    "topics": [
+      "Weather",
+      "Time"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 418,
+    "word": "coherent",
+    "partOfSpeech": "adjective",
+    "level": 5,
+    "meaning": "clear, logical and well organised",
+    "chinese": "连贯的；有条理的",
+    "synonyms": [
+      "logical",
+      "consistent"
+    ],
+    "antonyms": [
+      "confused",
+      "disjointed"
+    ],
+    "example": "Her composition was coherent and easy to follow.",
+    "topics": [
+      "School",
+      "Writing"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 419,
+    "word": "coincide",
+    "partOfSpeech": "verb",
+    "level": 5,
+    "meaning": "to happen at the same time or agree exactly",
+    "chinese": "同时发生；相符",
+    "synonyms": [
+      "correspond",
+      "match"
+    ],
+    "antonyms": [
+      "differ"
+    ],
+    "example": "The school holiday coincided with the festival.",
+    "topics": [
+      "School",
+      "Events"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 420,
+    "word": "compelling",
+    "partOfSpeech": "adjective",
+    "level": 5,
+    "meaning": "very convincing or interesting",
+    "chinese": "有说服力的；引人入胜的",
+    "synonyms": [
+      "convincing",
+      "persuasive"
+    ],
+    "antonyms": [
+      "unconvincing"
+    ],
+    "example": "The documentary presented a compelling reason to protect the forest.",
+    "topics": [
+      "Environment",
+      "Media"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 421,
+    "word": "compensate",
+    "partOfSpeech": "verb",
+    "level": 5,
+    "meaning": "to provide something good to balance a loss or disadvantage",
+    "chinese": "补偿",
+    "synonyms": [
+      "make up for",
+      "repay"
+    ],
+    "antonyms": [
+      "deprive"
+    ],
+    "example": "The company compensated customers for the cancelled service.",
+    "topics": [
+      "Business",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 422,
     "word": "comprehensive",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "including all or nearly all important details",
+    "meaning": "including all or nearly all important parts",
     "chinese": "全面的",
     "synonyms": [
       "complete",
       "thorough"
     ],
-    "antonyms": [],
-    "example": "The science situation was described as comprehensive by the teacher.",
+    "antonyms": [
+      "incomplete"
+    ],
+    "example": "The guide provides comprehensive information about the park.",
     "topics": [
-      "nature"
+      "Travel",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 418,
-    "word": "conservation",
-    "partOfSpeech": "noun",
-    "level": 5,
-    "meaning": "the protection of nature and natural resources",
-    "chinese": "保护；保育",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about conservation in a science context.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 419,
-    "word": "contemporary",
-    "partOfSpeech": "noun",
-    "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with contemporary",
-    "chinese": "“contemporary”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about contemporary in a science context.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 420,
-    "word": "contribute",
-    "partOfSpeech": "verb",
-    "level": 5,
-    "meaning": "to give something such as time, money, or ideas",
-    "chinese": "贡献",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to contribute carefully during the science activity.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 421,
-    "word": "controversial",
-    "partOfSpeech": "adjective",
-    "level": 5,
-    "meaning": "causing disagreement among people",
-    "chinese": "有争议的",
-    "synonyms": [
-      "disputed",
-      "debatable"
-    ],
-    "antonyms": [],
-    "example": "The science situation was described as controversial by the teacher.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 422,
-    "word": "credible",
-    "partOfSpeech": "adjective",
-    "level": 5,
-    "meaning": "able to be trusted or believed",
-    "chinese": "可信的",
-    "synonyms": [
-      "believable",
-      "trustworthy"
-    ],
-    "antonyms": [],
-    "example": "The science situation was described as credible by the teacher.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 423,
-    "word": "criterion",
-    "partOfSpeech": "noun",
+    "word": "comprise",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with criterion",
-    "chinese": "“criterion”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about criterion in a science context.",
+    "meaning": "to consist of or include",
+    "chinese": "包含；由……组成",
+    "synonyms": [
+      "consist of",
+      "include"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The committee comprises teachers, pupils and parents.",
     "topics": [
-      "nature"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 424,
-    "word": "decline",
-    "partOfSpeech": "noun",
+    "word": "conceive",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with decline",
-    "chinese": "“decline”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about decline in a science context.",
+    "meaning": "to form an idea or plan in the mind",
+    "chinese": "构想；设想",
+    "synonyms": [
+      "imagine",
+      "devise"
+    ],
+    "antonyms": [
+      "dismiss"
+    ],
+    "example": "The pupils conceived a creative plan for the charity event.",
     "topics": [
-      "nature"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 425,
-    "word": "deduction",
-    "partOfSpeech": "noun",
+    "word": "concurrent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with deduction",
-    "chinese": "“deduction”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about deduction in a science context.",
+    "meaning": "happening at the same time",
+    "chinese": "同时发生的",
+    "synonyms": [
+      "simultaneous"
+    ],
+    "antonyms": [
+      "separate",
+      "successive"
+    ],
+    "example": "Two concurrent events were held in different halls.",
     "topics": [
-      "nature"
+      "School",
+      "Events"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 426,
-    "word": "diverse",
-    "partOfSpeech": "adjective",
+    "word": "consent",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "including many different types of people or things",
-    "chinese": "多样的",
+    "meaning": "permission or agreement to do something",
+    "chinese": "同意；许可",
     "synonyms": [
-      "varied"
+      "permission",
+      "approval"
     ],
-    "antonyms": [],
-    "example": "The science situation was described as diverse by the teacher.",
+    "antonyms": [
+      "refusal"
+    ],
+    "example": "Parents must give consent before the child joins the trip.",
     "topics": [
-      "nature"
+      "School",
+      "Family"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 427,
-    "word": "domestic",
+    "word": "constraint",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with domestic",
-    "chinese": "“domestic”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about domestic in a science context.",
+    "meaning": "a limit that controls what you can do",
+    "chinese": "限制；约束",
+    "synonyms": [
+      "restriction",
+      "limitation"
+    ],
+    "antonyms": [
+      "freedom"
+    ],
+    "example": "Lack of time was the main constraint on the project.",
     "topics": [
-      "nature"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 428,
-    "word": "emerge",
-    "partOfSpeech": "noun",
+    "word": "contemplate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "to appear or become known",
-    "chinese": "出现",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about emerge in a science context.",
+    "meaning": "to think carefully about something",
+    "chinese": "仔细考虑",
+    "synonyms": [
+      "consider",
+      "reflect on"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "She contemplated several options before making a choice.",
     "topics": [
-      "nature"
+      "Thinking",
+      "Decision Making"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 429,
-    "word": "empower",
-    "partOfSpeech": "noun",
+    "word": "contrary",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with empower",
-    "chinese": "“empower”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about empower in a science context.",
+    "meaning": "opposite in nature or direction",
+    "chinese": "相反的",
+    "synonyms": [
+      "opposite",
+      "reverse"
+    ],
+    "antonyms": [
+      "similar",
+      "same"
+    ],
+    "example": "Contrary to our expectations, the weather stayed dry.",
     "topics": [
-      "nature"
+      "Weather",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 430,
-    "word": "encounter",
-    "partOfSpeech": "noun",
+    "word": "convey",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with encounter",
-    "chinese": "“encounter”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about encounter in a science context.",
+    "meaning": "to communicate an idea or feeling",
+    "chinese": "传达；表达",
+    "synonyms": [
+      "communicate",
+      "express"
+    ],
+    "antonyms": [
+      "conceal"
+    ],
+    "example": "Her facial expression conveyed disappointment.",
     "topics": [
-      "nature"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 431,
-    "word": "enhance",
-    "partOfSpeech": "verb",
+    "word": "credible",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "to improve something or make it better",
-    "chinese": "增强；改善",
+    "meaning": "able to be believed or trusted",
+    "chinese": "可信的",
     "synonyms": [
-      "improve",
-      "strengthen"
+      "believable",
+      "reliable"
     ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to enhance carefully during the science activity.",
+    "antonyms": [
+      "unbelievable"
+    ],
+    "example": "The witness gave a credible account of what happened.",
     "topics": [
-      "nature"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 432,
-    "word": "ensure",
-    "partOfSpeech": "verb",
+    "word": "criterion",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "to ensure or to carry out the action described by the word",
-    "chinese": "“ensure”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to ensure carefully during the science activity.",
+    "meaning": "a standard used to judge or decide something",
+    "chinese": "标准",
+    "synonyms": [
+      "standard",
+      "measure"
+    ],
+    "antonyms": [
+      "exception"
+    ],
+    "example": "Safety is an important criterion when choosing equipment.",
     "topics": [
-      "nature"
+      "School",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 433,
-    "word": "equilibrium",
-    "partOfSpeech": "noun",
+    "word": "deviate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with equilibrium",
-    "chinese": "“equilibrium”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about equilibrium in a science context.",
+    "meaning": "to move away from a usual or planned course",
+    "chinese": "偏离",
+    "synonyms": [
+      "diverge",
+      "depart"
+    ],
+    "antonyms": [
+      "follow"
+    ],
+    "example": "Do not deviate from the marked path.",
     "topics": [
-      "nature"
+      "Travel",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 434,
-    "word": "exaggerate",
+    "word": "dilemma",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with exaggerate",
-    "chinese": "“exaggerate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about exaggerate in a science context.",
+    "meaning": "a difficult choice between two or more options",
+    "chinese": "两难；困境",
+    "synonyms": [
+      "difficulty",
+      "predicament"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "She faced a dilemma when both friends asked for help.",
     "topics": [
-      "nature"
+      "Decision Making",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 435,
-    "word": "exclude",
+    "word": "diminish",
     "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "to exclude or to carry out the action described by the word",
-    "chinese": "“exclude”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to exclude carefully during the science activity.",
+    "meaning": "to become or make something smaller or less important",
+    "chinese": "减少；减弱",
+    "synonyms": [
+      "decrease",
+      "lessen"
+    ],
+    "antonyms": [
+      "increase",
+      "strengthen"
+    ],
+    "example": "The noise diminished as the crowd moved away.",
     "topics": [
-      "nature"
+      "Environment",
+      "Sound"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 436,
-    "word": "explicit",
-    "partOfSpeech": "noun",
+    "word": "disclose",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with explicit",
-    "chinese": "“explicit”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about explicit in a science context.",
+    "meaning": "to give information that was previously secret",
+    "chinese": "透露；披露",
+    "synonyms": [
+      "reveal",
+      "divulge"
+    ],
+    "antonyms": [
+      "conceal"
+    ],
+    "example": "The report disclosed important safety concerns.",
     "topics": [
-      "nature"
+      "Safety",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 437,
-    "word": "facilitate",
-    "partOfSpeech": "verb",
+    "word": "discrete",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "to facilitate or to carry out the action described by the word",
-    "chinese": "“facilitate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to facilitate carefully during the science activity.",
+    "meaning": "separate and distinct",
+    "chinese": "分开的；独立的",
+    "synonyms": [
+      "separate",
+      "distinct"
+    ],
+    "antonyms": [
+      "connected"
+    ],
+    "example": "The experiment was divided into three discrete stages.",
     "topics": [
-      "nature"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 438,
+    "word": "distinctive",
+    "partOfSpeech": "adjective",
+    "level": 5,
+    "meaning": "having a quality that makes something clearly different",
+    "chinese": "独特的；有特色的",
+    "synonyms": [
+      "unique",
+      "recognisable"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "The bird has a distinctive call.",
+    "topics": [
+      "Nature",
+      "Science"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 439,
+    "word": "divert",
+    "partOfSpeech": "verb",
+    "level": 5,
+    "meaning": "to cause someone or something to change direction",
+    "chinese": "使转向；转移",
+    "synonyms": [
+      "redirect",
+      "reroute"
+    ],
+    "antonyms": [
+      "continue"
+    ],
+    "example": "The police diverted traffic away from the flooded road.",
+    "topics": [
+      "Travel",
+      "Safety"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 440,
+    "word": "empirical",
+    "partOfSpeech": "adjective",
+    "level": 5,
+    "meaning": "based on observation or experiment rather than theory",
+    "chinese": "以实证为基础的",
+    "synonyms": [
+      "observational",
+      "experimental"
+    ],
+    "antonyms": [
+      "theoretical"
+    ],
+    "example": "The researchers collected empirical evidence from the experiment.",
+    "topics": [
+      "Science",
+      "Research"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 441,
+    "word": "equivalent",
+    "partOfSpeech": "adjective",
+    "level": 5,
+    "meaning": "equal in value, meaning or importance",
+    "chinese": "相等的；等价的",
+    "synonyms": [
+      "equal",
+      "matching"
+    ],
+    "antonyms": [
+      "different"
+    ],
+    "example": "One hour is not equivalent to one lesson in every school.",
+    "topics": [
+      "Mathematics",
+      "School"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 442,
+    "word": "exhaustive",
+    "partOfSpeech": "adjective",
+    "level": 5,
+    "meaning": "including everything possible or necessary",
+    "chinese": "详尽的；全面的",
+    "synonyms": [
+      "comprehensive",
+      "thorough"
+    ],
+    "antonyms": [
+      "limited"
+    ],
+    "example": "The researchers carried out an exhaustive search for evidence.",
+    "topics": [
+      "Research",
+      "Science"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 443,
+    "word": "exhibit",
+    "partOfSpeech": "verb",
+    "level": 5,
+    "meaning": "to show something publicly",
+    "chinese": "展示；展出",
+    "synonyms": [
+      "display",
+      "present"
+    ],
+    "antonyms": [
+      "hide"
+    ],
+    "example": "The museum will exhibit paintings by local artists.",
+    "topics": [
+      "Arts",
+      "Culture"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 444,
+    "word": "exploit",
+    "partOfSpeech": "verb",
+    "level": 5,
+    "meaning": "to use something unfairly for personal advantage",
+    "chinese": "剥削；利用",
+    "synonyms": [
+      "take advantage of",
+      "use"
+    ],
+    "antonyms": [
+      "protect"
+    ],
+    "example": "Some companies exploit workers by paying unfair wages.",
+    "topics": [
+      "Society",
+      "Values"
+    ],
+    "questionTypes": [
+      "MCQ",
+      "Fill in the Blank"
+    ]
+  },
+  {
+    "id": 445,
     "word": "feasible",
     "partOfSpeech": "adjective",
     "level": 5,
     "meaning": "possible and practical to do",
     "chinese": "可行的",
     "synonyms": [
-      "practical",
-      "possible"
+      "possible",
+      "practical"
     ],
-    "antonyms": [],
-    "example": "The science situation was described as feasible by the teacher.",
+    "antonyms": [
+      "impossible"
+    ],
+    "example": "We need to find a feasible way to reduce food waste.",
     "topics": [
-      "nature"
+      "Environment",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 439,
-    "word": "flourish",
-    "partOfSpeech": "noun",
-    "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with flourish",
-    "chinese": "“flourish”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about flourish in a science context.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 440,
-    "word": "fundamental",
-    "partOfSpeech": "adjective",
-    "level": 5,
-    "meaning": "basic and very important",
-    "chinese": "基本的；根本的",
-    "synonyms": [
-      "basic",
-      "essential"
-    ],
-    "antonyms": [],
-    "example": "The science situation was described as fundamental by the teacher.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 441,
-    "word": "global",
-    "partOfSpeech": "noun",
-    "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with global",
-    "chinese": "“global”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about global in a science context.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 442,
-    "word": "gradually",
-    "partOfSpeech": "adverb",
-    "level": 5,
-    "meaning": "in a way that is gradually",
-    "chinese": "“gradually”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The pupils completed the science task gradually.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 443,
-    "word": "hesitate",
-    "partOfSpeech": "noun",
-    "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with hesitate",
-    "chinese": "“hesitate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about hesitate in a science context.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 444,
-    "word": "inevitable",
-    "partOfSpeech": "adjective",
-    "level": 5,
-    "meaning": "certain to happen",
-    "chinese": "不可避免的",
-    "synonyms": [
-      "unavoidable",
-      "certain"
-    ],
-    "antonyms": [],
-    "example": "The science situation was described as inevitable by the teacher.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
-    ]
-  },
-  {
-    "id": 445,
-    "word": "integrate",
-    "partOfSpeech": "noun",
-    "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with integrate",
-    "chinese": "“integrate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about integrate in a science context.",
-    "topics": [
-      "nature"
-    ],
-    "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 446,
-    "word": "interpret",
-    "partOfSpeech": "noun",
+    "word": "fluctuate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with interpret",
-    "chinese": "“interpret”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about interpret in a science context.",
+    "meaning": "to change repeatedly between higher and lower levels",
+    "chinese": "波动",
+    "synonyms": [
+      "vary",
+      "change"
+    ],
+    "antonyms": [
+      "stabilise"
+    ],
+    "example": "Temperatures may fluctuate throughout the day.",
     "topics": [
-      "nature"
+      "Weather",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 447,
-    "word": "investigate",
-    "partOfSpeech": "verb",
+    "word": "hypothesis",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "to investigate or to carry out the action described by the word",
-    "chinese": "“investigate”的常用中文释义",
-    "synonyms": [],
+    "meaning": "an idea or explanation that can be tested",
+    "chinese": "假设",
+    "synonyms": [
+      "theory",
+      "proposition"
+    ],
     "antonyms": [],
-    "example": "The teacher asked the pupils to investigate carefully during the science activity.",
+    "example": "The scientists tested their hypothesis with an experiment.",
     "topics": [
-      "nature"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 448,
-    "word": "justify",
-    "partOfSpeech": "verb",
+    "word": "implicit",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "to give a good reason for something",
-    "chinese": "证明……有正当理由",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to justify carefully during the science activity.",
+    "meaning": "suggested without being directly stated",
+    "chinese": "含蓄的；暗示的",
+    "synonyms": [
+      "implied",
+      "unstated"
+    ],
+    "antonyms": [
+      "explicit"
+    ],
+    "example": "There was an implicit warning in the message.",
     "topics": [
-      "nature"
+      "Communication",
+      "Writing"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 449,
-    "word": "logical",
-    "partOfSpeech": "adjective",
+    "word": "incentive",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "reasonable and based on clear thinking",
-    "chinese": "合乎逻辑的",
+    "meaning": "something that encourages someone to do something",
+    "chinese": "激励；诱因",
     "synonyms": [
-      "reasonable",
-      "rational"
+      "motivation",
+      "encouragement"
     ],
-    "antonyms": [],
-    "example": "The science situation was described as logical by the teacher.",
+    "antonyms": [
+      "discouragement"
+    ],
+    "example": "The school offered an incentive for classes that reduced waste.",
     "topics": [
-      "nature"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 450,
-    "word": "massive",
-    "partOfSpeech": "adjective",
+    "word": "incorporate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is massive",
-    "chinese": "“massive”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as massive by the teacher.",
+    "meaning": "to include something as part of a larger whole",
+    "chinese": "纳入；包含",
+    "synonyms": [
+      "include",
+      "integrate"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The new design incorporates several safety features.",
     "topics": [
-      "nature"
+      "Design",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 451,
-    "word": "moderate",
-    "partOfSpeech": "adjective",
+    "word": "infer",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is moderate",
-    "chinese": "“moderate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as moderate by the teacher.",
+    "meaning": "to reach a conclusion from evidence rather than direct information",
+    "chinese": "推断",
+    "synonyms": [
+      "deduce",
+      "conclude"
+    ],
+    "antonyms": [
+      "misinterpret"
+    ],
+    "example": "From the dark clouds, we inferred that rain was coming.",
     "topics": [
-      "nature"
+      "Weather",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 452,
-    "word": "negotiate",
-    "partOfSpeech": "verb",
+    "word": "inherent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "to negotiate or to carry out the action described by the word",
-    "chinese": "“negotiate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to negotiate carefully during the science activity.",
+    "meaning": "existing naturally as a basic part of something",
+    "chinese": "固有的；内在的",
+    "synonyms": [
+      "intrinsic",
+      "built-in"
+    ],
+    "antonyms": [
+      "acquired"
+    ],
+    "example": "Every material has inherent strengths and weaknesses.",
     "topics": [
-      "nature"
+      "Science",
+      "Materials"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 453,
-    "word": "obtain",
+    "word": "inhibit",
     "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "to obtain or to carry out the action described by the word",
-    "chinese": "“obtain”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to obtain carefully during the science activity.",
+    "meaning": "to prevent or slow down an action or process",
+    "chinese": "抑制；阻碍",
+    "synonyms": [
+      "restrain",
+      "hinder"
+    ],
+    "antonyms": [
+      "encourage",
+      "promote"
+    ],
+    "example": "Fear can inhibit a child from asking questions.",
     "topics": [
-      "nature"
+      "Emotions",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 454,
-    "word": "precise",
-    "partOfSpeech": "noun",
+    "word": "innovate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with precise",
-    "chinese": "“precise”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about precise in a science context.",
+    "meaning": "to introduce new ideas or methods",
+    "chinese": "创新",
+    "synonyms": [
+      "create",
+      "modernise"
+    ],
+    "antonyms": [
+      "copy"
+    ],
+    "example": "The company continues to innovate in the field of technology.",
     "topics": [
-      "nature"
+      "Technology",
+      "Business"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 455,
-    "word": "predictable",
+    "word": "integrity",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with predictable",
-    "chinese": "“predictable”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about predictable in a science context.",
+    "meaning": "the quality of being honest and having strong moral principles",
+    "chinese": "正直；诚信",
+    "synonyms": [
+      "honesty",
+      "uprightness"
+    ],
+    "antonyms": [
+      "dishonesty"
+    ],
+    "example": "A leader should act with integrity.",
     "topics": [
-      "nature"
+      "Values",
+      "Leadership"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 456,
-    "word": "proportion",
-    "partOfSpeech": "noun",
+    "word": "intense",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with proportion",
-    "chinese": "“proportion”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about proportion in a science context.",
+    "meaning": "very strong or extreme",
+    "chinese": "强烈的",
+    "synonyms": [
+      "extreme",
+      "powerful"
+    ],
+    "antonyms": [
+      "mild",
+      "weak"
+    ],
+    "example": "The athletes experienced intense competition.",
     "topics": [
-      "nature"
+      "Sports",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 457,
-    "word": "reasonable",
-    "partOfSpeech": "adjective",
+    "word": "intervene",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is reasonable",
-    "chinese": "“reasonable”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as reasonable by the teacher.",
+    "meaning": "to become involved in a situation to change its outcome",
+    "chinese": "干预；介入",
+    "synonyms": [
+      "interfere",
+      "step in"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "A teacher intervened before the argument became serious.",
     "topics": [
-      "nature"
+      "School",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 458,
-    "word": "reflect",
-    "partOfSpeech": "noun",
+    "word": "intricate",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with reflect",
-    "chinese": "“reflect”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about reflect in a science context.",
+    "meaning": "having many small parts or details",
+    "chinese": "复杂精细的",
+    "synonyms": [
+      "complex",
+      "detailed"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "The artist created an intricate pattern.",
     "topics": [
-      "nature"
+      "Arts",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 459,
-    "word": "reluctant",
+    "word": "intrinsic",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is reluctant",
-    "chinese": "“reluctant”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as reluctant by the teacher.",
+    "meaning": "belonging naturally to the essential nature of something",
+    "chinese": "内在的；固有的",
+    "synonyms": [
+      "inherent",
+      "essential"
+    ],
+    "antonyms": [
+      "extrinsic"
+    ],
+    "example": "Curiosity has intrinsic value in learning.",
     "topics": [
-      "nature"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 460,
-    "word": "reputation",
-    "partOfSpeech": "noun",
+    "word": "manipulate",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with reputation",
-    "chinese": "“reputation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about reputation in a science context.",
+    "meaning": "to control or influence something, often cleverly or unfairly",
+    "chinese": "操纵；巧妙处理",
+    "synonyms": [
+      "control",
+      "influence"
+    ],
+    "antonyms": [
+      "release"
+    ],
+    "example": "The scientist carefully manipulated the variables in the experiment.",
     "topics": [
-      "nature"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 461,
-    "word": "resource",
-    "partOfSpeech": "noun",
+    "word": "moderate",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with resource",
-    "chinese": "“resource”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about resource in a science context.",
+    "meaning": "neither very large nor very small or extreme",
+    "chinese": "适度的；中等的",
+    "synonyms": [
+      "reasonable",
+      "mild"
+    ],
+    "antonyms": [
+      "extreme"
+    ],
+    "example": "The doctor recommended moderate exercise.",
     "topics": [
-      "nature"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 462,
-    "word": "restore",
-    "partOfSpeech": "verb",
+    "word": "notable",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "to restore or to carry out the action described by the word",
-    "chinese": "“restore”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to restore carefully during the science activity.",
+    "meaning": "worthy of attention because it is important or unusual",
+    "chinese": "值得注意的",
+    "synonyms": [
+      "remarkable",
+      "significant"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "There was a notable improvement in her writing.",
     "topics": [
-      "nature"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 463,
-    "word": "substantial",
-    "partOfSpeech": "adjective",
+    "word": "overlap",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is substantial",
-    "chinese": "“substantial”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as substantial by the teacher.",
+    "meaning": "to partly cover or share the same area or period",
+    "chinese": "重叠",
+    "synonyms": [
+      "coincide",
+      "intersect"
+    ],
+    "antonyms": [
+      "separate"
+    ],
+    "example": "The two lessons overlap for fifteen minutes.",
     "topics": [
-      "nature"
+      "School",
+      "Time"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 464,
-    "word": "sustainable",
-    "partOfSpeech": "adjective",
+    "word": "paradox",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "able to continue without causing serious harm",
-    "chinese": "可持续的",
-    "synonyms": [],
-    "antonyms": [
-      "unsustainable"
+    "meaning": "a situation or statement that seems contradictory but may be True",
+    "chinese": "悖论；看似矛盾的情况",
+    "synonyms": [
+      "contradiction"
     ],
-    "example": "The science situation was described as sustainable by the teacher.",
+    "antonyms": [],
+    "example": "It is a paradox that too much choice can sometimes make decisions harder.",
     "topics": [
-      "nature"
+      "Thinking",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 465,
-    "word": "temporary",
-    "partOfSpeech": "adjective",
+    "word": "persevere",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is temporary",
-    "chinese": "“temporary”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "permanent"
+    "meaning": "to continue trying despite difficulty",
+    "chinese": "坚持不懈",
+    "synonyms": [
+      "persist",
+      "persist"
     ],
-    "example": "The science situation was described as temporary by the teacher.",
+    "antonyms": [
+      "quit"
+    ],
+    "example": "If you persevere, you are more likely to overcome the difficult task.",
     "topics": [
-      "nature"
+      "Learning",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 466,
-    "word": "transform",
-    "partOfSpeech": "verb",
+    "word": "phenomenon",
+    "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "to transform or to carry out the action described by the word",
-    "chinese": "“transform”的常用中文释义",
-    "synonyms": [],
+    "meaning": "a fact or event that can be observed and studied",
+    "chinese": "现象",
+    "synonyms": [
+      "occurrence",
+      "event"
+    ],
     "antonyms": [],
-    "example": "The teacher asked the pupils to transform carefully during the science activity.",
+    "example": "A rainbow is a natural phenomenon.",
     "topics": [
-      "nature"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 467,
-    "word": "transparent",
+    "word": "plausible",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is transparent",
-    "chinese": "“transparent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "secretive"
+    "meaning": "seeming reasonable or likely to be True",
+    "chinese": "似乎合理的；可信的",
+    "synonyms": [
+      "credible",
+      "believable"
     ],
-    "example": "The science situation was described as transparent by the teacher.",
+    "antonyms": [
+      "implausible"
+    ],
+    "example": "Her explanation sounded plausible after we saw the evidence.",
     "topics": [
-      "nature"
+      "Thinking",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 468,
-    "word": "unpredictable",
-    "partOfSpeech": "adjective",
+    "word": "precede",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is unpredictable",
-    "chinese": "“unpredictable”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as unpredictable by the teacher.",
+    "meaning": "to happen or exist before something else",
+    "chinese": "先于；在……之前",
+    "synonyms": [
+      "come before"
+    ],
+    "antonyms": [
+      "follow"
+    ],
+    "example": "A short introduction will precede the main presentation.",
     "topics": [
-      "nature"
+      "School",
+      "Time"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 469,
-    "word": "valuable",
+    "word": "predominant",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "worth a lot or very useful",
-    "chinese": "有价值的",
+    "meaning": "more common or important than anything else",
+    "chinese": "占主导的；主要的",
     "synonyms": [
-      "useful",
-      "precious"
+      "main",
+      "dominant"
     ],
     "antonyms": [
-      "worthless"
+      "minor"
     ],
-    "example": "The science situation was described as valuable by the teacher.",
+    "example": "Rice is a predominant food in many Asian countries.",
     "topics": [
-      "nature"
+      "Food",
+      "Culture"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 470,
-    "word": "vital",
-    "partOfSpeech": "noun",
+    "word": "presume",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with vital",
-    "chinese": "“vital”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about vital in a science context.",
+    "meaning": "to believe something is True without proof",
+    "chinese": "推测；假定",
+    "synonyms": [
+      "assume",
+      "suppose"
+    ],
+    "antonyms": [
+      "doubt"
+    ],
+    "example": "Do not presume that everyone understands the instructions.",
     "topics": [
-      "nature"
+      "Communication",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 471,
-    "word": "widespread",
+    "word": "proactive",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "existing or happening over a large area",
-    "chinese": "广泛的",
-    "synonyms": [],
-    "antonyms": [
-      "limited"
+    "meaning": "taking action before a problem happens",
+    "chinese": "积极主动的",
+    "synonyms": [
+      "initiative-taking"
     ],
-    "example": "The science situation was described as widespread by the teacher.",
+    "antonyms": [
+      "passive"
+    ],
+    "example": "The class took a proactive approach to reducing litter.",
     "topics": [
-      "nature"
+      "Environment",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 472,
-    "word": "friend",
-    "partOfSpeech": "noun",
+    "word": "profound",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with friend",
-    "chinese": "“friend”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about friend in a science context.",
+    "meaning": "very great or having a deep effect",
+    "chinese": "深刻的；深远的",
+    "synonyms": [
+      "deep",
+      "significant"
+    ],
+    "antonyms": [
+      "superficial"
+    ],
+    "example": "The book had a profound effect on her thinking.",
     "topics": [
-      "nature"
+      "Reading",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 473,
-    "word": "full",
-    "partOfSpeech": "noun",
+    "word": "prominent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with full",
-    "chinese": "“full”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "empty"
+    "meaning": "important, well known or easy to notice",
+    "chinese": "著名的；显著的",
+    "synonyms": [
+      "notable",
+      "important"
     ],
-    "example": "The passage included information about full in a science context.",
+    "antonyms": [
+      "unknown"
+    ],
+    "example": "A prominent scientist gave a talk at the school.",
     "topics": [
-      "nature"
+      "Science",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 474,
-    "word": "fun",
-    "partOfSpeech": "noun",
+    "word": "provoke",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with fun",
-    "chinese": "“fun”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about fun in a science context.",
+    "meaning": "to cause a reaction, especially anger or discussion",
+    "chinese": "激起；引发",
+    "synonyms": [
+      "trigger",
+      "cause"
+    ],
+    "antonyms": [
+      "calm"
+    ],
+    "example": "The article provoked a lively discussion.",
     "topics": [
-      "nature"
+      "Media",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 475,
-    "word": "game",
-    "partOfSpeech": "noun",
+    "word": "rational",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with game",
-    "chinese": "“game”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about game in a science context.",
+    "meaning": "based on reason rather than emotion",
+    "chinese": "理性的；合理的",
+    "synonyms": [
+      "logical",
+      "reasonable"
+    ],
+    "antonyms": [
+      "irrational"
+    ],
+    "example": "We need a rational explanation for the results.",
     "topics": [
-      "nature"
+      "Thinking",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 476,
-    "word": "get",
-    "partOfSpeech": "noun",
+    "word": "refine",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with get",
-    "chinese": "“get”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about get in a science context.",
+    "meaning": "to improve something by making small changes",
+    "chinese": "改进；提炼",
+    "synonyms": [
+      "improve",
+      "polish"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "The team refined the design after testing it.",
     "topics": [
-      "nature"
+      "Design",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 477,
-    "word": "give",
-    "partOfSpeech": "noun",
+    "word": "reinforce",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with give",
-    "chinese": "“give”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about give in a science context.",
+    "meaning": "to strengthen an idea, structure or behaviour",
+    "chinese": "加强；巩固",
+    "synonyms": [
+      "strengthen",
+      "support"
+    ],
+    "antonyms": [
+      "weaken"
+    ],
+    "example": "The teacher used examples to reinforce the lesson.",
     "topics": [
-      "nature"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 478,
-    "word": "go",
-    "partOfSpeech": "noun",
+    "word": "relevant",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with go",
-    "chinese": "“go”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about go in a science context.",
+    "meaning": "closely connected with the subject being discussed",
+    "chinese": "相关的",
+    "synonyms": [
+      "related",
+      "pertinent"
+    ],
+    "antonyms": [
+      "irrelevant"
+    ],
+    "example": "Include only information that is relevant to the question.",
     "topics": [
-      "nature"
+      "School",
+      "Writing"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 479,
-    "word": "good",
+    "word": "reluctance",
     "partOfSpeech": "noun",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with good",
-    "chinese": "“good”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about good in a science context.",
+    "meaning": "a feeling of being unwilling to do something",
+    "chinese": "不情愿",
+    "synonyms": [
+      "hesitation",
+      "unwillingness"
+    ],
+    "antonyms": [
+      "eagerness"
+    ],
+    "example": "His reluctance to speak made the interview difficult.",
     "topics": [
-      "nature"
+      "Emotions",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 480,
-    "word": "great",
-    "partOfSpeech": "noun",
+    "word": "resilient",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with great",
-    "chinese": "“great”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about great in a science context.",
+    "meaning": "able to recover quickly from difficulties",
+    "chinese": "有韧性的；能复原的",
+    "synonyms": [
+      "strong",
+      "tough"
+    ],
+    "antonyms": [
+      "fragile"
+    ],
+    "example": "Children can be remarkably resilient after setbacks.",
     "topics": [
-      "nature"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 481,
-    "word": "green",
-    "partOfSpeech": "noun",
+    "word": "rigid",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with green",
-    "chinese": "“green”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about green in a science context.",
+    "meaning": "not able or willing to change",
+    "chinese": "僵硬的；死板的",
+    "synonyms": [
+      "inflexible",
+      "strict"
+    ],
+    "antonyms": [
+      "flexible"
+    ],
+    "example": "The rigid schedule left no time for changes.",
     "topics": [
-      "nature"
+      "Planning",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 482,
-    "word": "grow",
-    "partOfSpeech": "noun",
+    "word": "safeguard",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with grow",
-    "chinese": "“grow”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about grow in a science context.",
+    "meaning": "to protect something from harm or loss",
+    "chinese": "保护；保障",
+    "synonyms": [
+      "protect",
+      "secure"
+    ],
+    "antonyms": [
+      "endanger"
+    ],
+    "example": "Rules are needed to safeguard children online.",
     "topics": [
-      "nature"
+      "Safety",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 483,
-    "word": "happy",
-    "partOfSpeech": "noun",
+    "word": "scrupulous",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with happy",
-    "chinese": "“happy”的常用中文释义",
+    "meaning": "very careful to be honest and accurate",
+    "chinese": "一丝不苟的；严谨的",
     "synonyms": [
-      "glad",
-      "pleased"
+      "thorough",
+      "conscientious"
     ],
     "antonyms": [
-      "sad"
+      "careless"
     ],
-    "example": "The passage included information about happy in a science context.",
+    "example": "The researcher was scrupulous about checking every result.",
     "topics": [
-      "nature"
+      "Science",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 484,
-    "word": "hard",
-    "partOfSpeech": "noun",
+    "word": "scrutinise",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with hard",
-    "chinese": "“hard”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about hard in a science context.",
+    "meaning": "to examine something very carefully",
+    "chinese": "仔细检查；审视",
+    "synonyms": [
+      "inspect",
+      "examine"
+    ],
+    "antonyms": [
+      "overlook"
+    ],
+    "example": "The scientist scrutinised the results for errors.",
     "topics": [
-      "nature"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 485,
-    "word": "have",
-    "partOfSpeech": "noun",
+    "word": "skeptical",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with have",
-    "chinese": "“have”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about have in a science context.",
+    "meaning": "not easily convinced that something is True",
+    "chinese": "怀疑的",
+    "synonyms": [
+      "doubtful",
+      "unconvinced"
+    ],
+    "antonyms": [
+      "convinced"
+    ],
+    "example": "The scientist was skeptical of the surprising claim.",
     "topics": [
-      "nature"
+      "Science",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 486,
-    "word": "help",
-    "partOfSpeech": "noun",
+    "word": "subsequent",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with help",
-    "chinese": "“help”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about help in a science context.",
+    "meaning": "happening after something else",
+    "chinese": "随后的",
+    "synonyms": [
+      "following",
+      "later"
+    ],
+    "antonyms": [
+      "previous"
+    ],
+    "example": "Subsequent tests confirmed the original result.",
     "topics": [
-      "nature"
+      "Science",
+      "Time"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 487,
-    "word": "here",
-    "partOfSpeech": "noun",
+    "word": "subtle",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with here",
-    "chinese": "“here”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about here in a science context.",
+    "meaning": "not obvious but noticeable after careful attention",
+    "chinese": "微妙的；细微的",
+    "synonyms": [
+      "slight",
+      "delicate"
+    ],
+    "antonyms": [
+      "obvious"
+    ],
+    "example": "There was a subtle change in the colour of the sky.",
     "topics": [
-      "nature"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 488,
-    "word": "high",
-    "partOfSpeech": "noun",
+    "word": "sustain",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with high",
-    "chinese": "“high”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about high in a science context.",
+    "meaning": "to keep something going or maintain it over time",
+    "chinese": "维持；支撑",
+    "synonyms": [
+      "maintain",
+      "support"
+    ],
+    "antonyms": [
+      "stop",
+      "undermine"
+    ],
+    "example": "We need to sustain our efforts to protect the environment.",
     "topics": [
-      "nature"
+      "Environment",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 489,
-    "word": "home",
-    "partOfSpeech": "noun",
+    "word": "tangible",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with home",
-    "chinese": "“home”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about home in a science context.",
+    "meaning": "real and able to be seen or touched",
+    "chinese": "有形的；实际的",
+    "synonyms": [
+      "physical",
+      "concrete"
+    ],
+    "antonyms": [
+      "intangible"
+    ],
+    "example": "The project produced tangible benefits for the community.",
     "topics": [
-      "nature"
+      "Community",
+      "Education"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 490,
-    "word": "hope",
-    "partOfSpeech": "noun",
+    "word": "tentative",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with hope",
-    "chinese": "“hope”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about hope in a science context.",
+    "meaning": "not certain or definite because you may change it later",
+    "chinese": "暂定的；试探性的",
+    "synonyms": [
+      "provisional",
+      "uncertain"
+    ],
+    "antonyms": [
+      "definite"
+    ],
+    "example": "We made a tentative plan for the holiday.",
     "topics": [
-      "nature"
+      "Planning",
+      "Travel"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 491,
-    "word": "hot",
-    "partOfSpeech": "noun",
+    "word": "transformative",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with hot",
-    "chinese": "“hot”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about hot in a science context.",
+    "meaning": "causing a major or lasting change",
+    "chinese": "有变革作用的",
+    "synonyms": [
+      "revolutionary",
+      "life-changing"
+    ],
+    "antonyms": [
+      "unchanging"
+    ],
+    "example": "The reading programme had a transformative effect on the pupils.",
     "topics": [
-      "nature"
+      "Education",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 492,
-    "word": "house",
-    "partOfSpeech": "noun",
+    "word": "trigger",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with house",
-    "chinese": "“house”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about house in a science context.",
+    "meaning": "to cause something to happen",
+    "chinese": "触发；引发",
+    "synonyms": [
+      "cause",
+      "activate"
+    ],
+    "antonyms": [
+      "prevent"
+    ],
+    "example": "The loud noise triggered the alarm.",
     "topics": [
-      "nature"
+      "Safety",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 493,
-    "word": "important",
-    "partOfSpeech": "adjective",
+    "word": "undergo",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is important",
-    "chinese": "“important”的常用中文释义",
+    "meaning": "to experience something, especially a process or change",
+    "chinese": "经历；接受",
     "synonyms": [
-      "significant"
+      "experience",
+      "endure"
     ],
     "antonyms": [
-      "unimportant"
+      "avoid"
     ],
-    "example": "The science situation was described as important by the teacher.",
+    "example": "The bridge will undergo repairs next month.",
     "topics": [
-      "nature"
+      "Engineering",
+      "Transport"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 494,
-    "word": "inside",
-    "partOfSpeech": "noun",
+    "word": "unify",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with inside",
-    "chinese": "“inside”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about inside in a science context.",
+    "meaning": "to bring people or things together as one",
+    "chinese": "统一；团结",
+    "synonyms": [
+      "unite",
+      "combine"
+    ],
+    "antonyms": [
+      "divide"
+    ],
+    "example": "The event helped unify the school community.",
     "topics": [
-      "nature"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 495,
-    "word": "jump",
-    "partOfSpeech": "noun",
+    "word": "unprecedented",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with jump",
-    "chinese": "“jump”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about jump in a science context.",
+    "meaning": "never having happened or existed before",
+    "chinese": "前所未有的",
+    "synonyms": [
+      "unparalleled",
+      "new"
+    ],
+    "antonyms": [
+      "precedented"
+    ],
+    "example": "The city experienced unprecedented rainfall.",
     "topics": [
-      "nature"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 496,
-    "word": "keep",
-    "partOfSpeech": "noun",
+    "word": "unwavering",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with keep",
-    "chinese": "“keep”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about keep in a science context.",
+    "meaning": "remaining firm and determined",
+    "chinese": "坚定不移的",
+    "synonyms": [
+      "steadfast",
+      "resolute"
+    ],
+    "antonyms": [
+      "wavering"
+    ],
+    "example": "Her unwavering determination helped her finish the race.",
     "topics": [
-      "nature"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 497,
-    "word": "kind",
-    "partOfSpeech": "adjective",
+    "word": "utilise",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "describing someone or something that is kind",
-    "chinese": "“kind”的常用中文释义",
+    "meaning": "to use something effectively",
+    "chinese": "利用",
     "synonyms": [
-      "caring",
-      "thoughtful"
+      "use",
+      "employ"
     ],
     "antonyms": [
-      "cruel"
+      "waste"
     ],
-    "example": "The science situation was described as kind by the teacher.",
+    "example": "The school will utilise solar energy to reduce costs.",
     "topics": [
-      "nature"
+      "Environment",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 498,
-    "word": "know",
-    "partOfSpeech": "noun",
+    "word": "vague",
+    "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with know",
-    "chinese": "“know”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about know in a science context.",
+    "meaning": "not clear or specific",
+    "chinese": "模糊的；含糊的",
+    "synonyms": [
+      "unclear",
+      "ambiguous"
+    ],
+    "antonyms": [
+      "precise",
+      "specific"
+    ],
+    "example": "His answer was too vague to receive full marks.",
     "topics": [
-      "nature"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 499,
-    "word": "large",
+    "word": "vital",
     "partOfSpeech": "adjective",
     "level": 5,
-    "meaning": "describing someone or something that is large",
-    "chinese": "“large”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The science situation was described as large by the teacher.",
+    "meaning": "extremely important or necessary",
+    "chinese": "至关重要的",
+    "synonyms": [
+      "essential",
+      "crucial"
+    ],
+    "antonyms": [
+      "unimportant"
+    ],
+    "example": "Clean water is vital for human health.",
     "topics": [
-      "nature"
+      "Health",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 500,
-    "word": "last",
-    "partOfSpeech": "noun",
+    "word": "withstand",
+    "partOfSpeech": "verb",
     "level": 5,
-    "meaning": "a person, thing, idea, or situation connected with last",
-    "chinese": "“last”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about last in a science context.",
+    "meaning": "to remain strong and not be harmed by something",
+    "chinese": "抵御；承受",
+    "synonyms": [
+      "endure",
+      "resist"
+    ],
+    "antonyms": [
+      "yield"
+    ],
+    "example": "The shelter was built to withstand strong winds.",
     "topics": [
-      "nature"
+      "Engineering",
+      "Weather"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 501,
-    "word": "abuse",
-    "partOfSpeech": "noun",
+    "word": "abolish",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with abuse",
-    "chinese": "“abuse”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about abuse in a technology context.",
+    "meaning": "to officially end a system, rule or practice",
+    "chinese": "废除",
+    "synonyms": [
+      "eliminate",
+      "end"
+    ],
+    "antonyms": [
+      "establish"
+    ],
+    "example": "The school decided to abolish the outdated rule.",
     "topics": [
-      "community"
+      "School",
+      "Rules"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 502,
-    "word": "accessible",
-    "partOfSpeech": "noun",
+    "word": "accelerate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with accessible",
-    "chinese": "“accessible”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about accessible in a technology context.",
+    "meaning": "to become faster or make something faster",
+    "chinese": "加速",
+    "synonyms": [
+      "speed up",
+      "hasten"
+    ],
+    "antonyms": [
+      "slow",
+      "decelerate"
+    ],
+    "example": "The car began to accelerate after the traffic cleared.",
     "topics": [
-      "community"
+      "Transport",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 503,
-    "word": "acknowledge",
-    "partOfSpeech": "noun",
+    "word": "accommodate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with acknowledge",
-    "chinese": "“acknowledge”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about acknowledge in a technology context.",
+    "meaning": "to provide enough space for someone or something",
+    "chinese": "容纳；为……提供方便",
+    "synonyms": [
+      "house",
+      "fit"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The hall can accommodate more than five hundred guests.",
     "topics": [
-      "community"
+      "Community",
+      "Buildings"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 504,
-    "word": "acquire",
+    "word": "accountability",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with acquire",
-    "chinese": "“acquire”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about acquire in a technology context.",
+    "meaning": "the state of being responsible for actions and decisions",
+    "chinese": "问责；责任",
+    "synonyms": [
+      "responsibility"
+    ],
+    "antonyms": [
+      "irresponsibility"
+    ],
+    "example": "Accountability is important when managing public money.",
     "topics": [
-      "community"
+      "Society",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 505,
-    "word": "adolescent",
+    "word": "aggregate",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with adolescent",
-    "chinese": "“adolescent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about adolescent in a technology context.",
+    "meaning": "a total formed by combining several amounts",
+    "chinese": "总数；合计",
+    "synonyms": [
+      "total",
+      "sum"
+    ],
+    "antonyms": [
+      "part"
+    ],
+    "example": "The aggregate score was higher than last year's.",
     "topics": [
-      "community"
+      "Mathematics",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 506,
-    "word": "agricultural",
-    "partOfSpeech": "noun",
+    "word": "alleviate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with agricultural",
-    "chinese": "“agricultural”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about agricultural in a technology context.",
+    "meaning": "to make pain or a problem less severe",
+    "chinese": "减轻；缓解",
+    "synonyms": [
+      "relieve",
+      "ease"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "The medicine helped alleviate the pain.",
     "topics": [
-      "community"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 507,
-    "word": "alliance",
+    "word": "amelioration",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with alliance",
-    "chinese": "“alliance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about alliance in a technology context.",
+    "meaning": "an improvement or change that makes a bad situation better",
+    "chinese": "改善；改良",
+    "synonyms": [
+      "improvement",
+      "betterment"
+    ],
+    "antonyms": [
+      "deterioration"
+    ],
+    "example": "The amelioration of traffic conditions made the journey safer.",
     "topics": [
-      "community"
+      "Transport",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 508,
-    "word": "approval",
-    "partOfSpeech": "noun",
+    "word": "amend",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with approval",
-    "chinese": "“approval”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about approval in a technology context.",
+    "meaning": "to change a document, rule or plan in order to improve it",
+    "chinese": "修订；修改",
+    "synonyms": [
+      "modify",
+      "revise"
+    ],
+    "antonyms": [
+      "retain"
+    ],
+    "example": "The committee amended the school policy after discussion.",
     "topics": [
-      "community"
+      "School",
+      "Rules"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 509,
-    "word": "artificial",
+    "word": "anonymous",
     "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "describing someone or something that is artificial",
-    "chinese": "“artificial”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The technology situation was described as artificial by the teacher.",
+    "meaning": "not named or identified",
+    "chinese": "匿名的",
+    "synonyms": [
+      "unnamed",
+      "unknown"
+    ],
+    "antonyms": [
+      "identified"
+    ],
+    "example": "The survey allowed students to remain anonymous.",
     "topics": [
-      "community"
+      "School",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 510,
-    "word": "assistance",
-    "partOfSpeech": "noun",
+    "word": "assert",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with assistance",
-    "chinese": "“assistance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about assistance in a technology context.",
+    "meaning": "to state something confidently and firmly",
+    "chinese": "断言；坚持说",
+    "synonyms": [
+      "declare",
+      "claim"
+    ],
+    "antonyms": [
+      "deny"
+    ],
+    "example": "The witness asserted that he had seen the accident.",
     "topics": [
-      "community"
+      "Communication",
+      "Law"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 511,
-    "word": "boundary",
-    "partOfSpeech": "noun",
+    "word": "assimilate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with boundary",
-    "chinese": "“boundary”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about boundary in a technology context.",
+    "meaning": "to understand and absorb new information or ideas",
+    "chinese": "吸收；融入",
+    "synonyms": [
+      "absorb",
+      "integrate"
+    ],
+    "antonyms": [
+      "reject"
+    ],
+    "example": "It took time for the new student to assimilate the unfamiliar customs.",
     "topics": [
-      "community"
+      "School",
+      "Culture"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 512,
-    "word": "campaign",
-    "partOfSpeech": "noun",
+    "word": "attribute",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with campaign",
-    "chinese": "“campaign”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about campaign in a technology context.",
+    "meaning": "to say that something is caused by a particular person or thing",
+    "chinese": "归因于",
+    "synonyms": [
+      "ascribe",
+      "credit"
+    ],
+    "antonyms": [
+      "blame incorrectly"
+    ],
+    "example": "Scientists attribute the change to rising temperatures.",
     "topics": [
-      "community"
+      "Science",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 513,
-    "word": "candidate",
-    "partOfSpeech": "noun",
+    "word": "autonomous",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with candidate",
-    "chinese": "“candidate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about candidate in a technology context.",
+    "meaning": "able to act independently",
+    "chinese": "自主的；自治的",
+    "synonyms": [
+      "independent",
+      "self-governing"
+    ],
+    "antonyms": [
+      "dependent"
+    ],
+    "example": "The robot can perform some tasks autonomously.",
     "topics": [
-      "community"
+      "Technology",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 514,
-    "word": "collaboration",
-    "partOfSpeech": "noun",
+    "word": "comply",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with collaboration",
-    "chinese": "“collaboration”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about collaboration in a technology context.",
+    "meaning": "to obey a rule or request",
+    "chinese": "遵守；服从",
+    "synonyms": [
+      "obey",
+      "follow"
+    ],
+    "antonyms": [
+      "disobey"
+    ],
+    "example": "All passengers must comply with the safety instructions.",
     "topics": [
-      "community"
+      "Travel",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 515,
-    "word": "community",
-    "partOfSpeech": "noun",
+    "word": "consecutive",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with community",
-    "chinese": "“community”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about community in a technology context.",
+    "meaning": "following one after another without interruption",
+    "chinese": "连续的",
+    "synonyms": [
+      "successive",
+      "continuous"
+    ],
+    "antonyms": [
+      "interrupted"
+    ],
+    "example": "She won three consecutive races.",
     "topics": [
-      "community"
+      "Sports",
+      "Time"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 516,
-    "word": "consumer",
+    "word": "conservation",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with consumer",
-    "chinese": "“consumer”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about consumer in a technology context.",
+    "meaning": "the protection of nature, resources or historic places",
+    "chinese": "保护；保育",
+    "synonyms": [
+      "preservation",
+      "protection"
+    ],
+    "antonyms": [
+      "destruction"
+    ],
+    "example": "Water conservation is important during dry periods.",
     "topics": [
-      "community"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 517,
-    "word": "cooperation",
-    "partOfSpeech": "noun",
+    "word": "constrain",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with cooperation",
-    "chinese": "“cooperation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cooperation in a technology context.",
+    "meaning": "to limit or restrict something",
+    "chinese": "限制；约束",
+    "synonyms": [
+      "restrict",
+      "limit"
+    ],
+    "antonyms": [
+      "allow",
+      "free"
+    ],
+    "example": "A small budget constrained our choices.",
     "topics": [
-      "community"
+      "Money",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 518,
-    "word": "corporation",
+    "word": "coordination",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with corporation",
-    "chinese": "“corporation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about corporation in a technology context.",
+    "meaning": "the organisation of people or activities so they work well together",
+    "chinese": "协调",
+    "synonyms": [
+      "cooperation",
+      "organisation"
+    ],
+    "antonyms": [
+      "disorder"
+    ],
+    "example": "Good coordination was needed to complete the group task.",
     "topics": [
-      "community"
+      "School",
+      "Teamwork"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 519,
-    "word": "crisis",
-    "partOfSpeech": "noun",
+    "word": "correlate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with crisis",
-    "chinese": "“crisis”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about crisis in a technology context.",
+    "meaning": "to have a connection or relationship with something",
+    "chinese": "相关；相互关联",
+    "synonyms": [
+      "relate",
+      "correspond"
+    ],
+    "antonyms": [
+      "differ"
+    ],
+    "example": "Exercise levels often correlate with better health.",
     "topics": [
-      "community"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 520,
-    "word": "cultural",
-    "partOfSpeech": "noun",
+    "word": "deplete",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with cultural",
-    "chinese": "“cultural”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about cultural in a technology context.",
+    "meaning": "to use up a supply of something",
+    "chinese": "耗尽",
+    "synonyms": [
+      "exhaust",
+      "drain"
+    ],
+    "antonyms": [
+      "replenish"
+    ],
+    "example": "Overfishing can deplete fish populations.",
     "topics": [
-      "community"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 521,
-    "word": "debate",
+    "word": "depletion",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with debate",
-    "chinese": "“debate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about debate in a technology context.",
+    "meaning": "the reduction of something because it has been used up",
+    "chinese": "耗竭；减少",
+    "synonyms": [
+      "exhaustion",
+      "decrease"
+    ],
+    "antonyms": [
+      "replenishment"
+    ],
+    "example": "The depletion of fish stocks threatens local communities.",
     "topics": [
-      "community"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 522,
-    "word": "democracy",
-    "partOfSpeech": "noun",
+    "word": "designate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with democracy",
-    "chinese": "“democracy”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about democracy in a technology context.",
+    "meaning": "to officially choose or name something for a purpose",
+    "chinese": "指定；命名",
+    "synonyms": [
+      "appoint",
+      "assign"
+    ],
+    "antonyms": [
+      "remove"
+    ],
+    "example": "The area was designated as a protected wildlife zone.",
     "topics": [
-      "community"
+      "Environment",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 523,
-    "word": "dependent",
-    "partOfSpeech": "noun",
+    "word": "deteriorate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with dependent",
-    "chinese": "“dependent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about dependent in a technology context.",
+    "meaning": "to become worse in quality or condition",
+    "chinese": "恶化",
+    "synonyms": [
+      "worsen",
+      "decline"
+    ],
+    "antonyms": [
+      "improve"
+    ],
+    "example": "The road began to deteriorate after years of heavy traffic.",
     "topics": [
-      "community"
+      "Transport",
+      "Infrastructure"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 524,
-    "word": "diversity",
-    "partOfSpeech": "noun",
+    "word": "devise",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with diversity",
-    "chinese": "“diversity”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about diversity in a technology context.",
+    "meaning": "to invent or plan something carefully",
+    "chinese": "设计；想出",
+    "synonyms": [
+      "create",
+      "formulate"
+    ],
+    "antonyms": [
+      "discard"
+    ],
+    "example": "The pupils devised a clever solution to the problem.",
     "topics": [
-      "community"
+      "School",
+      "Problem Solving"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 525,
-    "word": "economy",
-    "partOfSpeech": "noun",
+    "word": "differentiate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with economy",
-    "chinese": "“economy”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about economy in a technology context.",
+    "meaning": "to recognise or show the difference between things",
+    "chinese": "区分；区别",
+    "synonyms": [
+      "distinguish",
+      "separate"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "The test helps differentiate strong materials from weak ones.",
     "topics": [
-      "community"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 526,
-    "word": "educational",
+    "word": "discretion",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with educational",
-    "chinese": "“educational”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about educational in a technology context.",
+    "meaning": "careful judgement about what should be done or said",
+    "chinese": "谨慎；判断力",
+    "synonyms": [
+      "judgement",
+      "care"
+    ],
+    "antonyms": [
+      "recklessness"
+    ],
+    "example": "The teacher used discretion when dealing with the sensitive issue.",
     "topics": [
-      "community"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 527,
-    "word": "employment",
+    "word": "displacement",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with employment",
-    "chinese": "“employment”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about employment in a technology context.",
+    "meaning": "the act of forcing people to leave their homes or moving something from its usual place",
+    "chinese": "迁移；移位",
+    "synonyms": [
+      "movement",
+      "relocation"
+    ],
+    "antonyms": [
+      "stability"
+    ],
+    "example": "Flooding caused the displacement of many families.",
     "topics": [
-      "community"
+      "Weather",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 528,
-    "word": "equality",
-    "partOfSpeech": "noun",
+    "word": "disrupt",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with equality",
-    "chinese": "“equality”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about equality in a technology context.",
+    "meaning": "to interrupt something and prevent it from continuing normally",
+    "chinese": "扰乱；中断",
+    "synonyms": [
+      "interrupt",
+      "disturb"
+    ],
+    "antonyms": [
+      "maintain"
+    ],
+    "example": "The storm disrupted train services.",
     "topics": [
-      "community"
+      "Weather",
+      "Transport"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 529,
-    "word": "evaluate",
+    "word": "dissipate",
     "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "to judge the quality or value of something",
-    "chinese": "评估",
+    "meaning": "to gradually disappear or cause something to disappear",
+    "chinese": "消散；驱散",
     "synonyms": [
-      "assess",
-      "judge"
+      "disperse",
+      "fade"
     ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to evaluate carefully during the technology activity.",
+    "antonyms": [
+      "gather"
+    ],
+    "example": "The morning mist slowly dissipated.",
     "topics": [
-      "community"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 530,
-    "word": "exceptional",
-    "partOfSpeech": "noun",
+    "word": "distort",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with exceptional",
-    "chinese": "“exceptional”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about exceptional in a technology context.",
+    "meaning": "to change something so that it is no longer accurate or natural",
+    "chinese": "扭曲；歪曲",
+    "synonyms": [
+      "twist",
+      "misrepresent"
+    ],
+    "antonyms": [
+      "clarify"
+    ],
+    "example": "The photograph was distorted by the damaged lens.",
     "topics": [
-      "community"
+      "Technology",
+      "Media"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 531,
-    "word": "exposure",
-    "partOfSpeech": "noun",
+    "word": "elaborate",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with exposure",
-    "chinese": "“exposure”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about exposure in a technology context.",
+    "meaning": "containing many careful details",
+    "chinese": "精心制作的；复杂的",
+    "synonyms": [
+      "detailed",
+      "complex"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "The artist created an elaborate costume for the performance.",
     "topics": [
-      "community"
+      "Arts",
+      "Culture"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 532,
-    "word": "immigration",
-    "partOfSpeech": "noun",
+    "word": "embark",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with immigration",
-    "chinese": "“immigration”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about immigration in a technology context.",
+    "meaning": "to begin a new activity or journey",
+    "chinese": "开始；踏上",
+    "synonyms": [
+      "begin",
+      "undertake"
+    ],
+    "antonyms": [
+      "finish"
+    ],
+    "example": "The team embarked on a project to restore the garden.",
     "topics": [
-      "community"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 533,
-    "word": "independence",
-    "partOfSpeech": "noun",
+    "word": "empower",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with independence",
-    "chinese": "“independence”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about independence in a technology context.",
+    "meaning": "to give someone the confidence or authority to do something",
+    "chinese": "赋予权力；使有能力",
+    "synonyms": [
+      "enable",
+      "authorise"
+    ],
+    "antonyms": [
+      "weaken"
+    ],
+    "example": "Good teachers empower students to make responsible choices.",
     "topics": [
-      "community"
+      "Education",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 534,
-    "word": "inequality",
-    "partOfSpeech": "noun",
+    "word": "enforce",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with inequality",
-    "chinese": "“inequality”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about inequality in a technology context.",
+    "meaning": "to make sure that a law or rule is obeyed",
+    "chinese": "执行；实施",
+    "synonyms": [
+      "implement",
+      "apply"
+    ],
+    "antonyms": [
+      "ignore"
+    ],
+    "example": "The authorities enforce strict road-safety rules.",
     "topics": [
-      "community"
+      "Safety",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 535,
-    "word": "infrastructure",
-    "partOfSpeech": "noun",
+    "word": "enrich",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with infrastructure",
-    "chinese": "“infrastructure”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about infrastructure in a technology context.",
+    "meaning": "to improve the quality or value of something",
+    "chinese": "丰富；充实",
+    "synonyms": [
+      "enhance",
+      "improve"
+    ],
+    "antonyms": [
+      "impoverish"
+    ],
+    "example": "Reading widely can enrich a student's vocabulary.",
     "topics": [
-      "community"
+      "Reading",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 536,
-    "word": "justice",
-    "partOfSpeech": "noun",
+    "word": "eradicate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with justice",
-    "chinese": "“justice”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about justice in a technology context.",
+    "meaning": "to destroy or remove something completely",
+    "chinese": "根除；消灭",
+    "synonyms": [
+      "eliminate",
+      "remove"
+    ],
+    "antonyms": [
+      "create"
+    ],
+    "example": "The campaign aims to eradicate mosquito breeding sites.",
     "topics": [
-      "community"
+      "Health",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 537,
-    "word": "legislation",
-    "partOfSpeech": "noun",
+    "word": "exceedingly",
+    "partOfSpeech": "adverb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with legislation",
-    "chinese": "“legislation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about legislation in a technology context.",
+    "meaning": "to a very great degree",
+    "chinese": "极其；非常",
+    "synonyms": [
+      "extremely",
+      "very"
+    ],
+    "antonyms": [
+      "slightly"
+    ],
+    "example": "The test was exceedingly difficult.",
     "topics": [
-      "community"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 538,
-    "word": "media",
+    "word": "exclusion",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with media",
-    "chinese": "“media”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about media in a technology context.",
+    "meaning": "the act of keeping someone or something out",
+    "chinese": "排除；排斥",
+    "synonyms": [
+      "omission",
+      "rejection"
+    ],
+    "antonyms": [
+      "inclusion"
+    ],
+    "example": "The club aims to prevent the exclusion of younger pupils.",
     "topics": [
-      "community"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 539,
-    "word": "migration",
-    "partOfSpeech": "noun",
+    "word": "extract",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with migration",
-    "chinese": "“migration”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about migration in a technology context.",
+    "meaning": "to remove something from somewhere",
+    "chinese": "提取；取出",
+    "synonyms": [
+      "remove",
+      "draw out"
+    ],
+    "antonyms": [
+      "insert"
+    ],
+    "example": "The dentist extracted the damaged tooth.",
     "topics": [
-      "community"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 540,
-    "word": "modernisation",
+    "word": "feasibility",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with modernisation",
-    "chinese": "“modernisation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about modernisation in a technology context.",
+    "meaning": "the quality of being possible and practical",
+    "chinese": "可行性",
+    "synonyms": [
+      "practicality",
+      "possibility"
+    ],
+    "antonyms": [
+      "impossibility"
+    ],
+    "example": "The team studied the feasibility of building a new playground.",
     "topics": [
-      "community"
+      "Planning",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 541,
-    "word": "motivation",
-    "partOfSpeech": "noun",
+    "word": "formidable",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with motivation",
-    "chinese": "“motivation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about motivation in a technology context.",
+    "meaning": "very difficult to deal with or overcome",
+    "chinese": "强大的；难以对付的",
+    "synonyms": [
+      "daunting",
+      "powerful"
+    ],
+    "antonyms": [
+      "weak",
+      "easy"
+    ],
+    "example": "The team faced a formidable opponent in the final.",
     "topics": [
-      "community"
+      "Sports",
+      "Competition"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 542,
-    "word": "national",
+    "word": "fragment",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with national",
-    "chinese": "“national”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about national in a technology context.",
+    "meaning": "a small part broken off from something larger",
+    "chinese": "碎片；片段",
+    "synonyms": [
+      "piece",
+      "section"
+    ],
+    "antonyms": [
+      "whole"
+    ],
+    "example": "A fragment of glass was found near the broken window.",
     "topics": [
-      "community"
+      "Science",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 543,
-    "word": "poverty",
+    "word": "hierarchy",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with poverty",
-    "chinese": "“poverty”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about poverty in a technology context.",
+    "meaning": "a system in which people or things are ranked",
+    "chinese": "等级制度；层级",
+    "synonyms": [
+      "ranking",
+      "order"
+    ],
+    "antonyms": [
+      "equality"
+    ],
+    "example": "The company has a clear management hierarchy.",
     "topics": [
-      "community"
+      "Business",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 544,
-    "word": "public",
-    "partOfSpeech": "noun",
+    "word": "immerse",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with public",
-    "chinese": "“public”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about public in a technology context.",
+    "meaning": "to become deeply involved in an activity",
+    "chinese": "沉浸于",
+    "synonyms": [
+      "engage deeply",
+      "absorb"
+    ],
+    "antonyms": [
+      "withdraw"
+    ],
+    "example": "She immersed herself in the book for the entire afternoon.",
     "topics": [
-      "community"
+      "Reading",
+      "Hobbies"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 545,
-    "word": "regional",
-    "partOfSpeech": "noun",
+    "word": "impair",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with regional",
-    "chinese": "“regional”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about regional in a technology context.",
+    "meaning": "to damage or weaken a person's ability or a thing's function",
+    "chinese": "损害；削弱",
+    "synonyms": [
+      "damage",
+      "weaken"
+    ],
+    "antonyms": [
+      "improve"
+    ],
+    "example": "Lack of sleep can impair concentration.",
     "topics": [
-      "community"
+      "Health",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 546,
-    "word": "regulation",
-    "partOfSpeech": "noun",
+    "word": "implement",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with regulation",
-    "chinese": "“regulation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about regulation in a technology context.",
+    "meaning": "to put a plan or decision into action",
+    "chinese": "实施；执行",
+    "synonyms": [
+      "carry out",
+      "apply"
+    ],
+    "antonyms": [
+      "abandon"
+    ],
+    "example": "The school implemented a new recycling programme.",
     "topics": [
-      "community"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 547,
-    "word": "renewable",
+    "word": "inclusion",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with renewable",
-    "chinese": "“renewable”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about renewable in a technology context.",
+    "meaning": "the act of including someone or something",
+    "chinese": "包容；纳入",
+    "synonyms": [
+      "involvement",
+      "acceptance"
+    ],
+    "antonyms": [
+      "exclusion"
+    ],
+    "example": "The programme promotes inclusion of pupils with different abilities.",
     "topics": [
-      "community"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 548,
-    "word": "research",
-    "partOfSpeech": "noun",
+    "word": "induce",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with research",
-    "chinese": "“research”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about research in a technology context.",
+    "meaning": "to cause something to happen",
+    "chinese": "引起；导致",
+    "synonyms": [
+      "cause",
+      "produce"
+    ],
+    "antonyms": [
+      "prevent"
+    ],
+    "example": "The medicine may induce sleep.",
     "topics": [
-      "community"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 549,
-    "word": "resistance",
-    "partOfSpeech": "noun",
+    "word": "inefficient",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with resistance",
-    "chinese": "“resistance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about resistance in a technology context.",
+    "meaning": "not working well or wasting time, energy or resources",
+    "chinese": "效率低的",
+    "synonyms": [
+      "wasteful",
+      "ineffective"
+    ],
+    "antonyms": [
+      "efficient"
+    ],
+    "example": "The old machine was inefficient and expensive to operate.",
     "topics": [
-      "community"
+      "Technology",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 550,
-    "word": "security",
+    "word": "infrastructure",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with security",
-    "chinese": "“security”的常用中文释义",
-    "synonyms": [],
+    "meaning": "the basic systems and structures needed for a community to function",
+    "chinese": "基础设施",
+    "synonyms": [
+      "facilities",
+      "framework"
+    ],
     "antonyms": [],
-    "example": "The passage included information about security in a technology context.",
+    "example": "Good transport infrastructure helps a city grow.",
     "topics": [
-      "community"
+      "Transport",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 551,
-    "word": "stability",
-    "partOfSpeech": "noun",
+    "word": "integrate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with stability",
-    "chinese": "“stability”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about stability in a technology context.",
+    "meaning": "to combine or bring parts together into a whole",
+    "chinese": "整合；融合",
+    "synonyms": [
+      "combine",
+      "incorporate"
+    ],
+    "antonyms": [
+      "separate"
+    ],
+    "example": "The school integrated technology into everyday lessons.",
     "topics": [
-      "community"
+      "Education",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 552,
-    "word": "transition",
-    "partOfSpeech": "noun",
+    "word": "interdependent",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with transition",
-    "chinese": "“transition”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about transition in a technology context.",
+    "meaning": "depending on each other",
+    "chinese": "相互依赖的",
+    "synonyms": [
+      "mutually dependent"
+    ],
+    "antonyms": [
+      "independent"
+    ],
+    "example": "Plants and animals are interdependent in an ecosystem.",
     "topics": [
-      "community"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 553,
-    "word": "urban",
-    "partOfSpeech": "noun",
+    "word": "interfere",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with urban",
-    "chinese": "“urban”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about urban in a technology context.",
+    "meaning": "to get involved in a situation in a way that causes problems",
+    "chinese": "干涉；妨碍",
+    "synonyms": [
+      "meddle",
+      "obstruct"
+    ],
+    "antonyms": [
+      "assist"
+    ],
+    "example": "Loud music can interfere with concentration.",
     "topics": [
-      "community"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 554,
-    "word": "welfare",
-    "partOfSpeech": "noun",
+    "word": "intermediate",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with welfare",
-    "chinese": "“welfare”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about welfare in a technology context.",
+    "meaning": "between two levels, stages or conditions",
+    "chinese": "中级的；中间的",
+    "synonyms": [
+      "middle",
+      "mid-level"
+    ],
+    "antonyms": [
+      "beginner",
+      "advanced"
+    ],
+    "example": "This book is suitable for intermediate learners.",
     "topics": [
-      "community"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 555,
-    "word": "late",
-    "partOfSpeech": "adjective",
+    "word": "intrigue",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "describing someone or something that is late",
-    "chinese": "“late”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The technology situation was described as late by the teacher.",
+    "meaning": "to make someone very interested or curious",
+    "chinese": "引起兴趣；吸引",
+    "synonyms": [
+      "fascinate",
+      "interest"
+    ],
+    "antonyms": [
+      "bore"
+    ],
+    "example": "The mysterious map intrigued the pupils.",
     "topics": [
-      "community"
+      "Reading",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 556,
-    "word": "laugh",
-    "partOfSpeech": "noun",
+    "word": "isolate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with laugh",
-    "chinese": "“laugh”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about laugh in a technology context.",
+    "meaning": "to separate someone or something from others",
+    "chinese": "隔离；孤立",
+    "synonyms": [
+      "separate",
+      "quarantine"
+    ],
+    "antonyms": [
+      "connect",
+      "join"
+    ],
+    "example": "The sick animal was isolated to prevent the spread of disease.",
     "topics": [
-      "community"
+      "Health",
+      "Animals"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 557,
-    "word": "learn",
-    "partOfSpeech": "noun",
+    "word": "legitimate",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with learn",
-    "chinese": "“learn”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about learn in a technology context.",
+    "meaning": "allowed by law or accepted as reasonable",
+    "chinese": "合法的；合理的",
+    "synonyms": [
+      "lawful",
+      "valid"
+    ],
+    "antonyms": [
+      "illegal",
+      "invalid"
+    ],
+    "example": "The customer had a legitimate reason for requesting a refund.",
     "topics": [
-      "community"
+      "Law",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 558,
-    "word": "leave",
-    "partOfSpeech": "noun",
+    "word": "mandatory",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with leave",
-    "chinese": "“leave”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about leave in a technology context.",
+    "meaning": "required by rules or law",
+    "chinese": "强制性的",
+    "synonyms": [
+      "compulsory",
+      "required"
+    ],
+    "antonyms": [
+      "optional"
+    ],
+    "example": "Wearing a helmet is mandatory on this cycling course.",
     "topics": [
-      "community"
+      "Safety",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 559,
-    "word": "left",
-    "partOfSpeech": "noun",
+    "word": "mature",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with left",
-    "chinese": "“left”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about left in a technology context.",
+    "meaning": "fully developed physically or mentally",
+    "chinese": "成熟的",
+    "synonyms": [
+      "grown-up",
+      "developed"
+    ],
+    "antonyms": [
+      "immature"
+    ],
+    "example": "His mature response impressed the teacher.",
     "topics": [
-      "community"
+      "Values",
+      "People"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 560,
-    "word": "light",
-    "partOfSpeech": "noun",
+    "word": "misleading",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with light",
-    "chinese": "“light”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about light in a technology context.",
+    "meaning": "giving a wrong idea or impression",
+    "chinese": "误导性的",
+    "synonyms": [
+      "deceptive",
+      "misrepresentative"
+    ],
+    "antonyms": [
+      "accurate",
+      "truthful"
+    ],
+    "example": "The advertisement contained misleading information.",
     "topics": [
-      "community"
+      "Media",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 561,
-    "word": "little",
-    "partOfSpeech": "adjective",
+    "word": "mitigate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "describing someone or something that is little",
-    "chinese": "“little”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The technology situation was described as little by the teacher.",
+    "meaning": "to make something harmful or unpleasant less severe",
+    "chinese": "减轻；缓和",
+    "synonyms": [
+      "reduce",
+      "ease"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "Trees can help mitigate the effects of extreme heat.",
     "topics": [
-      "community"
+      "Environment",
+      "Weather"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 562,
-    "word": "live",
+    "word": "mitigation",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with live",
-    "chinese": "“live”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about live in a technology context.",
+    "meaning": "the act of reducing the harmful effects of something",
+    "chinese": "缓解；减轻",
+    "synonyms": [
+      "reduction",
+      "relief"
+    ],
+    "antonyms": [
+      "aggravation"
+    ],
+    "example": "Tree planting is one form of climate-change mitigation.",
     "topics": [
-      "community"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 563,
-    "word": "long",
+    "word": "negligible",
     "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "describing someone or something that is long",
-    "chinese": "“long”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The technology situation was described as long by the teacher.",
+    "meaning": "so small or unimportant that it can be ignored",
+    "chinese": "微不足道的",
+    "synonyms": [
+      "tiny",
+      "insignificant"
+    ],
+    "antonyms": [
+      "significant"
+    ],
+    "example": "The difference in cost was negligible.",
     "topics": [
-      "community"
+      "Money",
+      "Mathematics"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 564,
-    "word": "look",
-    "partOfSpeech": "noun",
+    "word": "notwithstanding",
+    "partOfSpeech": "preposition",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with look",
-    "chinese": "“look”的常用中文释义",
-    "synonyms": [],
+    "meaning": "despite something",
+    "chinese": "尽管",
+    "synonyms": [
+      "despite"
+    ],
     "antonyms": [],
-    "example": "The passage included information about look in a technology context.",
+    "example": "Notwithstanding the rain, the match continued.",
     "topics": [
-      "community"
+      "Sports",
+      "Weather"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 565,
-    "word": "love",
-    "partOfSpeech": "noun",
+    "word": "obsolete",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with love",
-    "chinese": "“love”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about love in a technology context.",
+    "meaning": "no longer used because something newer exists",
+    "chinese": "过时的",
+    "synonyms": [
+      "outdated",
+      "old-fashioned"
+    ],
+    "antonyms": [
+      "modern",
+      "current"
+    ],
+    "example": "The old computer is now obsolete.",
     "topics": [
-      "community"
+      "Technology",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 566,
-    "word": "make",
-    "partOfSpeech": "noun",
+    "word": "optimise",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with make",
-    "chinese": "“make”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about make in a technology context.",
+    "meaning": "to make something as effective as possible",
+    "chinese": "优化",
+    "synonyms": [
+      "improve",
+      "maximise"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "The engineer changed the design to optimise performance.",
     "topics": [
-      "community"
+      "Technology",
+      "Engineering"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 567,
-    "word": "many",
-    "partOfSpeech": "noun",
+    "word": "overwhelm",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with many",
-    "chinese": "“many”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about many in a technology context.",
+    "meaning": "to make someone feel unable to cope because there is too much to deal with",
+    "chinese": "使不知所措；压倒",
+    "synonyms": [
+      "overpower",
+      "overload"
+    ],
+    "antonyms": [
+      "calm"
+    ],
+    "example": "The amount of homework began to overwhelm him.",
     "topics": [
-      "community"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 568,
-    "word": "meet",
+    "word": "precaution",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with meet",
-    "chinese": "“meet”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about meet in a technology context.",
+    "meaning": "an action taken in advance to prevent harm or danger",
+    "chinese": "预防措施",
+    "synonyms": [
+      "safeguard",
+      "preventive measure"
+    ],
+    "antonyms": [
+      "risk"
+    ],
+    "example": "Wearing gloves is a sensible precaution in the laboratory.",
     "topics": [
-      "community"
+      "Science",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 569,
-    "word": "money",
-    "partOfSpeech": "noun",
+    "word": "preliminary",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with money",
-    "chinese": "“money”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about money in a technology context.",
+    "meaning": "happening before the main event or final stage",
+    "chinese": "初步的",
+    "synonyms": [
+      "initial",
+      "introductory"
+    ],
+    "antonyms": [
+      "final"
+    ],
+    "example": "The team made a preliminary plan before starting the project.",
     "topics": [
-      "community"
+      "Planning",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 570,
-    "word": "more",
-    "partOfSpeech": "noun",
+    "word": "prolong",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with more",
-    "chinese": "“more”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about more in a technology context.",
+    "meaning": "to make something last longer",
+    "chinese": "延长",
+    "synonyms": [
+      "extend",
+      "lengthen"
+    ],
+    "antonyms": [
+      "shorten"
+    ],
+    "example": "The heavy traffic prolonged our journey.",
     "topics": [
-      "community"
+      "Travel",
+      "Time"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 571,
-    "word": "morning",
-    "partOfSpeech": "noun",
+    "word": "proportional",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with morning",
-    "chinese": "“morning”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about morning in a technology context.",
+    "meaning": "having a suitable relationship in size or amount to something else",
+    "chinese": "成比例的；相称的",
+    "synonyms": [
+      "commensurate",
+      "corresponding"
+    ],
+    "antonyms": [
+      "disproportionate"
+    ],
+    "example": "The response should be proportional to the seriousness of the problem.",
     "topics": [
-      "community"
+      "Values",
+      "Decision Making"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 572,
-    "word": "mother",
-    "partOfSpeech": "noun",
+    "word": "proportionate",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with mother",
-    "chinese": "“mother”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about mother in a technology context.",
+    "meaning": "appropriate in size or degree compared with something else",
+    "chinese": "成比例的；相称的",
+    "synonyms": [
+      "balanced",
+      "corresponding"
+    ],
+    "antonyms": [
+      "disproportionate"
+    ],
+    "example": "The punishment should be proportionate to the offence.",
     "topics": [
-      "community"
+      "Rules",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 573,
-    "word": "move",
+    "word": "provision",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with move",
-    "chinese": "“move”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about move in a technology context.",
+    "meaning": "the act of supplying something that is needed",
+    "chinese": "提供；供应",
+    "synonyms": [
+      "supply",
+      "arrangement"
+    ],
+    "antonyms": [
+      "withholding"
+    ],
+    "example": "The school made provision for pupils who needed extra support.",
     "topics": [
-      "community"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 574,
-    "word": "much",
-    "partOfSpeech": "noun",
+    "word": "reciprocal",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with much",
-    "chinese": "“much”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about much in a technology context.",
+    "meaning": "given or felt equally by both sides",
+    "chinese": "相互的；互惠的",
+    "synonyms": [
+      "mutual",
+      "shared"
+    ],
+    "antonyms": [
+      "one-sided"
+    ],
+    "example": "Respect should be reciprocal in every friendship.",
     "topics": [
-      "community"
+      "Values",
+      "Friendship"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 575,
-    "word": "must",
-    "partOfSpeech": "noun",
+    "word": "reconcile",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with must",
-    "chinese": "“must”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about must in a technology context.",
+    "meaning": "to find a way for two opposing ideas or people to exist together",
+    "chinese": "调和；使和解",
+    "synonyms": [
+      "settle",
+      "harmonise"
+    ],
+    "antonyms": [
+      "conflict"
+    ],
+    "example": "The mediator helped reconcile the two groups.",
     "topics": [
-      "community"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 576,
-    "word": "name",
-    "partOfSpeech": "noun",
+    "word": "reconsider",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with name",
-    "chinese": "“name”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about name in a technology context.",
+    "meaning": "to think again about a decision or opinion",
+    "chinese": "重新考虑",
+    "synonyms": [
+      "review",
+      "rethink"
+    ],
+    "antonyms": [
+      "confirm"
+    ],
+    "example": "We should reconsider the plan after hearing the new evidence.",
     "topics": [
-      "community"
+      "Decision Making",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 577,
-    "word": "near",
-    "partOfSpeech": "noun",
+    "word": "regulate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with near",
-    "chinese": "“near”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about near in a technology context.",
+    "meaning": "to control an activity by using rules",
+    "chinese": "管理；调节",
+    "synonyms": [
+      "control",
+      "govern"
+    ],
+    "antonyms": [
+      "disregard"
+    ],
+    "example": "The government regulates food safety standards.",
     "topics": [
-      "community"
+      "Government",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 578,
-    "word": "need",
-    "partOfSpeech": "noun",
+    "word": "replenish",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with need",
-    "chinese": "“need”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about need in a technology context.",
+    "meaning": "to fill something again after it has been used",
+    "chinese": "补充；重新装满",
+    "synonyms": [
+      "refill",
+      "restore"
+    ],
+    "antonyms": [
+      "deplete"
+    ],
+    "example": "The staff replenished the water supplies.",
     "topics": [
-      "community"
+      "Daily Life",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 579,
-    "word": "never",
-    "partOfSpeech": "noun",
+    "word": "reside",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with never",
-    "chinese": "“never”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about never in a technology context.",
+    "meaning": "to live in a particular place",
+    "chinese": "居住",
+    "synonyms": [
+      "live",
+      "dwell"
+    ],
+    "antonyms": [
+      "leave"
+    ],
+    "example": "Many families reside in the northern part of the city.",
     "topics": [
-      "community"
+      "Community",
+      "Places"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 580,
-    "word": "new",
+    "word": "respective",
     "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "describing someone or something that is new",
-    "chinese": "“new”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [
-      "old"
+    "meaning": "belonging separately to each of the people or things mentioned",
+    "chinese": "各自的",
+    "synonyms": [
+      "individual",
+      "separate"
     ],
-    "example": "The technology situation was described as new by the teacher.",
+    "antonyms": [
+      "shared"
+    ],
+    "example": "The pupils returned to their respective classrooms.",
     "topics": [
-      "community"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 581,
-    "word": "night",
-    "partOfSpeech": "noun",
+    "word": "restore",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with night",
-    "chinese": "“night”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about night in a technology context.",
+    "meaning": "to return something to its former condition",
+    "chinese": "恢复；修复",
+    "synonyms": [
+      "repair",
+      "renew"
+    ],
+    "antonyms": [
+      "damage"
+    ],
+    "example": "Workers restored the old building carefully.",
     "topics": [
-      "community"
+      "Buildings",
+      "History"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 582,
-    "word": "often",
-    "partOfSpeech": "noun",
+    "word": "rigorous",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with often",
-    "chinese": "“often”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about often in a technology context.",
+    "meaning": "extremely thorough and careful",
+    "chinese": "严格的；严谨的",
+    "synonyms": [
+      "thorough",
+      "strict"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "The experiment followed a rigorous testing process.",
     "topics": [
-      "community"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 583,
-    "word": "old",
-    "partOfSpeech": "adjective",
+    "word": "scarcity",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "describing someone or something that is old",
-    "chinese": "“old”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The technology situation was described as old by the teacher.",
+    "meaning": "a shortage of something that is needed",
+    "chinese": "缺乏；稀缺",
+    "synonyms": [
+      "shortage",
+      "lack"
+    ],
+    "antonyms": [
+      "abundance"
+    ],
+    "example": "Water scarcity is a serious problem in some countries.",
     "topics": [
-      "community"
+      "Environment",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 584,
-    "word": "once",
-    "partOfSpeech": "noun",
+    "word": "simulate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with once",
-    "chinese": "“once”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about once in a technology context.",
+    "meaning": "to imitate a real situation for study or training",
+    "chinese": "模拟",
+    "synonyms": [
+      "imitate",
+      "model"
+    ],
+    "antonyms": [
+      "real"
+    ],
+    "example": "The programme simulates a real emergency.",
     "topics": [
-      "community"
+      "Technology",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 585,
-    "word": "open",
-    "partOfSpeech": "noun",
+    "word": "specify",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with open",
-    "chinese": "“open”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about open in a technology context.",
+    "meaning": "to state something clearly and exactly",
+    "chinese": "明确说明",
+    "synonyms": [
+      "state",
+      "define"
+    ],
+    "antonyms": [
+      "omit"
+    ],
+    "example": "Please specify the number of participants.",
     "topics": [
-      "community"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 586,
-    "word": "outside",
-    "partOfSpeech": "noun",
+    "word": "spontaneous",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with outside",
-    "chinese": "“outside”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about outside in a technology context.",
+    "meaning": "happening naturally without planning",
+    "chinese": "自发的",
+    "synonyms": [
+      "unplanned",
+      "natural"
+    ],
+    "antonyms": [
+      "planned"
+    ],
+    "example": "The pupils gave a spontaneous round of applause.",
     "topics": [
-      "community"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 587,
-    "word": "parent",
-    "partOfSpeech": "noun",
+    "word": "strategic",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with parent",
-    "chinese": "“parent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about parent in a technology context.",
+    "meaning": "carefully planned to achieve a particular goal",
+    "chinese": "战略性的；有计划的",
+    "synonyms": [
+      "planned",
+      "tactical"
+    ],
+    "antonyms": [
+      "random"
+    ],
+    "example": "The team made a strategic decision to conserve energy.",
     "topics": [
-      "community"
+      "Sports",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 588,
-    "word": "part",
+    "word": "substitute",
     "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with part",
-    "chinese": "“part”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about part in a technology context.",
+    "meaning": "a person or thing used instead of another",
+    "chinese": "替代者；替代品",
+    "synonyms": [
+      "replacement",
+      "alternative"
+    ],
+    "antonyms": [
+      "original"
+    ],
+    "example": "The coach sent a substitute onto the field.",
     "topics": [
-      "community"
+      "Sports",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 589,
-    "word": "people",
-    "partOfSpeech": "noun",
+    "word": "suppress",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with people",
-    "chinese": "“people”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about people in a technology context.",
+    "meaning": "to stop something from being expressed, shown or spreading",
+    "chinese": "压制；抑制",
+    "synonyms": [
+      "restrain",
+      "control"
+    ],
+    "antonyms": [
+      "release",
+      "encourage"
+    ],
+    "example": "The government acted quickly to suppress the spread of False information.",
     "topics": [
-      "community"
+      "Society",
+      "Media"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 590,
-    "word": "place",
-    "partOfSpeech": "noun",
+    "word": "sustainable",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with place",
-    "chinese": "“place”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about place in a technology context.",
+    "meaning": "able to continue without causing serious harm or using resources up completely",
+    "chinese": "可持续的",
+    "synonyms": [
+      "renewable",
+      "long-lasting"
+    ],
+    "antonyms": [
+      "unsustainable"
+    ],
+    "example": "The school is looking for sustainable ways to reduce waste.",
     "topics": [
-      "community"
+      "Environment",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 591,
-    "word": "play",
-    "partOfSpeech": "noun",
+    "word": "terminate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with play",
-    "chinese": "“play”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about play in a technology context.",
+    "meaning": "to end something",
+    "chinese": "终止",
+    "synonyms": [
+      "end",
+      "stop"
+    ],
+    "antonyms": [
+      "begin",
+      "continue"
+    ],
+    "example": "The company decided to terminate the contract.",
     "topics": [
-      "community"
+      "Business",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 592,
-    "word": "please",
-    "partOfSpeech": "noun",
+    "word": "transmit",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with please",
-    "chinese": "“please”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about please in a technology context.",
+    "meaning": "to send information, signals or disease from one place to another",
+    "chinese": "传送；传播",
+    "synonyms": [
+      "send",
+      "communicate"
+    ],
+    "antonyms": [
+      "receive"
+    ],
+    "example": "Satellites transmit signals around the world.",
     "topics": [
-      "community"
+      "Technology",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 593,
-    "word": "point",
-    "partOfSpeech": "noun",
+    "word": "transparent",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with point",
-    "chinese": "“point”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about point in a technology context.",
+    "meaning": "easy to see through or easy to understand",
+    "chinese": "透明的；公开的",
+    "synonyms": [
+      "clear",
+      "open"
+    ],
+    "antonyms": [
+      "opaque",
+      "secretive"
+    ],
+    "example": "The organisation promised a transparent decision-making process.",
     "topics": [
-      "community"
+      "Society",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 594,
-    "word": "put",
-    "partOfSpeech": "noun",
+    "word": "underlying",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with put",
-    "chinese": "“put”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about put in a technology context.",
+    "meaning": "existing beneath the surface or forming the basic cause",
+    "chinese": "潜在的；根本的",
+    "synonyms": [
+      "basic",
+      "fundamental"
+    ],
+    "antonyms": [
+      "surface"
+    ],
+    "example": "The doctor looked for the underlying cause of the problem.",
     "topics": [
-      "community"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 595,
-    "word": "read",
-    "partOfSpeech": "noun",
+    "word": "unfold",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with read",
-    "chinese": "“read”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about read in a technology context.",
+    "meaning": "to develop or happen gradually",
+    "chinese": "展开；逐渐发生",
+    "synonyms": [
+      "develop",
+      "unravel"
+    ],
+    "antonyms": [
+      "stop"
+    ],
+    "example": "We waited to see how the story would unfold.",
     "topics": [
-      "community"
+      "Reading",
+      "Events"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 596,
-    "word": "ready",
-    "partOfSpeech": "adjective",
+    "word": "validate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "describing someone or something that is ready",
-    "chinese": "“ready”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The technology situation was described as ready by the teacher.",
+    "meaning": "to prove that something is correct or reasonable",
+    "chinese": "证实；确认",
+    "synonyms": [
+      "confirm",
+      "verify"
+    ],
+    "antonyms": [
+      "invalidate"
+    ],
+    "example": "The second experiment helped validate the original findings.",
     "topics": [
-      "community"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 597,
-    "word": "real",
-    "partOfSpeech": "adjective",
+    "word": "versatility",
+    "partOfSpeech": "noun",
     "level": 6,
-    "meaning": "describing someone or something that is real",
-    "chinese": "“real”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The technology situation was described as real by the teacher.",
+    "meaning": "the ability to be used or adapted for many purposes",
+    "chinese": "多用途；多才多艺",
+    "synonyms": [
+      "flexibility",
+      "adaptability"
+    ],
+    "antonyms": [
+      "limitation"
+    ],
+    "example": "The versatility of the device makes it useful at home and school.",
     "topics": [
-      "community"
+      "Technology",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 598,
-    "word": "remember",
-    "partOfSpeech": "noun",
+    "word": "violate",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with remember",
-    "chinese": "“remember”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about remember in a technology context.",
+    "meaning": "to break a law, rule or agreement",
+    "chinese": "违反",
+    "synonyms": [
+      "break",
+      "breach"
+    ],
+    "antonyms": [
+      "obey"
+    ],
+    "example": "Drivers who violate the rules may be fined.",
     "topics": [
-      "community"
+      "Rules",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 599,
-    "word": "right",
-    "partOfSpeech": "noun",
+    "word": "vulnerable",
+    "partOfSpeech": "adjective",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with right",
-    "chinese": "“right”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about right in a technology context.",
+    "meaning": "easily hurt, harmed or affected",
+    "chinese": "脆弱的；易受伤害的",
+    "synonyms": [
+      "exposed",
+      "at risk"
+    ],
+    "antonyms": [
+      "protected",
+      "secure"
+    ],
+    "example": "Young children are especially vulnerable near busy roads.",
     "topics": [
-      "community"
+      "Safety",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 600,
-    "word": "run",
-    "partOfSpeech": "noun",
+    "word": "withhold",
+    "partOfSpeech": "verb",
     "level": 6,
-    "meaning": "a person, thing, idea, or situation connected with run",
-    "chinese": "“run”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about run in a technology context.",
+    "meaning": "to refuse to give something that is expected",
+    "chinese": "扣留；拒绝提供",
+    "synonyms": [
+      "hold back",
+      "retain"
+    ],
+    "antonyms": [
+      "provide",
+      "release"
+    ],
+    "example": "The company withheld important information from the public.",
     "topics": [
-      "community"
+      "Communication",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 601,
-    "word": "administration",
-    "partOfSpeech": "noun",
+    "word": "adversarial",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with administration",
-    "chinese": "“administration”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about administration in a health context.",
+    "meaning": "involving strong disagreement or opposition",
+    "chinese": "对抗性的",
+    "synonyms": [
+      "hostile",
+      "confrontational"
+    ],
+    "antonyms": [
+      "cooperative"
+    ],
+    "example": "The discussion became adversarial instead of productive.",
     "topics": [
-      "technology"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 602,
-    "word": "ambiguity",
+    "word": "adversity",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with ambiguity",
-    "chinese": "“ambiguity”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about ambiguity in a health context.",
+    "meaning": "a difficult or unpleasant situation",
+    "chinese": "逆境；困难",
+    "synonyms": [
+      "hardship",
+      "difficulty"
+    ],
+    "antonyms": [
+      "prosperity"
+    ],
+    "example": "She showed great courage in the face of adversity.",
     "topics": [
-      "technology"
+      "Values",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 603,
-    "word": "anonymous",
-    "partOfSpeech": "noun",
+    "word": "aesthetic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with anonymous",
-    "chinese": "“anonymous”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about anonymous in a health context.",
+    "meaning": "concerned with beauty or the appreciation of beauty",
+    "chinese": "审美的；美学的",
+    "synonyms": [
+      "artistic",
+      "beautiful"
+    ],
+    "antonyms": [
+      "ugly"
+    ],
+    "example": "The architect paid close attention to the building's aesthetic design.",
     "topics": [
-      "technology"
+      "Arts",
+      "Buildings"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 604,
-    "word": "appreciation",
-    "partOfSpeech": "noun",
+    "word": "affluent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with appreciation",
-    "chinese": "“appreciation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about appreciation in a health context.",
+    "meaning": "having a lot of money and a high standard of living",
+    "chinese": "富裕的",
+    "synonyms": [
+      "wealthy",
+      "prosperous"
+    ],
+    "antonyms": [
+      "poor"
+    ],
+    "example": "The area has become more affluent in recent years.",
     "topics": [
-      "technology"
+      "Society",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 605,
-    "word": "assessment",
-    "partOfSpeech": "noun",
+    "word": "aggravate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with assessment",
-    "chinese": "“assessment”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about assessment in a health context.",
+    "meaning": "to make a problem or illness worse",
+    "chinese": "加重；恶化",
+    "synonyms": [
+      "worsen",
+      "intensify"
+    ],
+    "antonyms": [
+      "relieve"
+    ],
+    "example": "Running may aggravate the injury.",
     "topics": [
-      "technology"
+      "Health",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 606,
-    "word": "bias",
-    "partOfSpeech": "noun",
+    "word": "altruistic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with bias",
-    "chinese": "“bias”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about bias in a health context.",
+    "meaning": "caring about other people's needs rather than your own",
+    "chinese": "无私的；利他的",
+    "synonyms": [
+      "selfless",
+      "generous"
+    ],
+    "antonyms": [
+      "selfish"
+    ],
+    "example": "Her altruistic actions helped many families.",
     "topics": [
-      "technology"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 607,
-    "word": "biological",
+    "word": "ambivalence",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with biological",
-    "chinese": "“biological”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about biological in a health context.",
+    "meaning": "mixed feelings about something",
+    "chinese": "矛盾心理；又爱又恨",
+    "synonyms": [
+      "mixed feelings"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "She felt ambivalence about moving to a new school.",
     "topics": [
-      "technology"
+      "Emotions",
+      "Decision Making"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 608,
-    "word": "coherence",
-    "partOfSpeech": "noun",
+    "word": "analytical",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with coherence",
-    "chinese": "“coherence”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about coherence in a health context.",
+    "meaning": "using careful examination and logical thinking",
+    "chinese": "分析性的",
+    "synonyms": [
+      "logical",
+      "systematic"
+    ],
+    "antonyms": [
+      "uncritical"
+    ],
+    "example": "An analytical approach helped the pupils solve the puzzle.",
     "topics": [
-      "technology"
+      "School",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 609,
-    "word": "coherent",
+    "word": "anomaly",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with coherent",
-    "chinese": "“coherent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about coherent in a health context.",
+    "meaning": "something unusual that does not fit a pattern",
+    "chinese": "异常；反常现象",
+    "synonyms": [
+      "irregularity",
+      "exception"
+    ],
+    "antonyms": [
+      "pattern"
+    ],
+    "example": "The scientist noticed an anomaly in the data.",
     "topics": [
-      "technology"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 610,
-    "word": "compensation",
-    "partOfSpeech": "noun",
+    "word": "apprehensive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with compensation",
-    "chinese": "“compensation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about compensation in a health context.",
+    "meaning": "worried or nervous about something that may happen",
+    "chinese": "忧虑的；不安的",
+    "synonyms": [
+      "anxious",
+      "uneasy"
+    ],
+    "antonyms": [
+      "confident",
+      "calm"
+    ],
+    "example": "She felt apprehensive before the first performance.",
     "topics": [
-      "technology"
+      "Emotions",
+      "Arts"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 611,
-    "word": "competence",
-    "partOfSpeech": "noun",
+    "word": "assertive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with competence",
-    "chinese": "“competence”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about competence in a health context.",
+    "meaning": "confidently expressing opinions or needs without being aggressive",
+    "chinese": "坚定自信的",
+    "synonyms": [
+      "confident",
+      "forceful"
+    ],
+    "antonyms": [
+      "passive"
+    ],
+    "example": "An assertive student can express disagreement politely.",
     "topics": [
-      "technology"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 612,
-    "word": "complexity",
-    "partOfSpeech": "noun",
+    "word": "astute",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with complexity",
-    "chinese": "“complexity”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about complexity in a health context.",
+    "meaning": "quick to understand a situation and make good decisions",
+    "chinese": "精明的；敏锐的",
+    "synonyms": [
+      "shrewd",
+      "perceptive"
+    ],
+    "antonyms": [
+      "naive"
+    ],
+    "example": "The astute pupil noticed a mistake in the calculation.",
     "topics": [
-      "technology"
+      "School",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 613,
-    "word": "concentration",
+    "word": "authenticity",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with concentration",
-    "chinese": "“concentration”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about concentration in a health context.",
+    "meaning": "the quality of being genuine or real",
+    "chinese": "真实性；真诚",
+    "synonyms": [
+      "genuineness",
+      "truth"
+    ],
+    "antonyms": [
+      "fakeness"
+    ],
+    "example": "The museum takes care to verify the authenticity of old paintings.",
     "topics": [
-      "technology"
+      "Arts",
+      "History"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 614,
-    "word": "conclusion",
+    "word": "beneficiary",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with conclusion",
-    "chinese": "“conclusion”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about conclusion in a health context.",
+    "meaning": "a person who receives a benefit from something",
+    "chinese": "受益人",
+    "synonyms": [
+      "recipient"
+    ],
+    "antonyms": [
+      "donor"
+    ],
+    "example": "The children were beneficiaries of the charity programme.",
     "topics": [
-      "technology"
+      "Community",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 615,
-    "word": "consultation",
-    "partOfSpeech": "noun",
+    "word": "benevolent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with consultation",
-    "chinese": "“consultation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about consultation in a health context.",
+    "meaning": "kind and generous, especially towards people who need help",
+    "chinese": "仁慈的；慈善的",
+    "synonyms": [
+      "kind",
+      "charitable"
+    ],
+    "antonyms": [
+      "cruel"
+    ],
+    "example": "The benevolent donor funded the school library.",
     "topics": [
-      "technology"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 616,
-    "word": "contradiction",
-    "partOfSpeech": "noun",
+    "word": "bureaucratic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with contradiction",
-    "chinese": "“contradiction”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about contradiction in a health context.",
+    "meaning": "involving complicated official rules and processes",
+    "chinese": "官僚的；繁琐的",
+    "synonyms": [
+      "official",
+      "administrative"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "The bureaucratic process took longer than expected.",
     "topics": [
-      "technology"
+      "Government",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 617,
-    "word": "criticism",
+    "word": "catalyst",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with criticism",
-    "chinese": "“criticism”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about criticism in a health context.",
+    "meaning": "a person or event that causes change to happen",
+    "chinese": "催化剂；促成因素",
+    "synonyms": [
+      "trigger",
+      "stimulus"
+    ],
+    "antonyms": [
+      "hindrance"
+    ],
+    "example": "The new invention became a catalyst for change.",
     "topics": [
-      "technology"
+      "Science",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 618,
-    "word": "curriculum",
-    "partOfSpeech": "noun",
+    "word": "circumspect",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with curriculum",
-    "chinese": "“curriculum”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about curriculum in a health context.",
+    "meaning": "careful to consider all possible consequences",
+    "chinese": "谨慎的；慎重的",
+    "synonyms": [
+      "cautious",
+      "prudent"
+    ],
+    "antonyms": [
+      "reckless"
+    ],
+    "example": "The manager was circumspect when discussing the complaint.",
     "topics": [
-      "technology"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 619,
-    "word": "deliberate",
-    "partOfSpeech": "noun",
+    "word": "communal",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with deliberate",
-    "chinese": "“deliberate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about deliberate in a health context.",
+    "meaning": "shared by a group of people",
+    "chinese": "公共的；共同的",
+    "synonyms": [
+      "shared",
+      "collective"
+    ],
+    "antonyms": [
+      "private"
+    ],
+    "example": "The residents use a communal garden.",
     "topics": [
-      "technology"
+      "Community",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 620,
-    "word": "discrimination",
-    "partOfSpeech": "noun",
+    "word": "compassionate",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with discrimination",
-    "chinese": "“discrimination”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about discrimination in a health context.",
+    "meaning": "showing sympathy and concern for others",
+    "chinese": "富有同情心的",
+    "synonyms": [
+      "caring",
+      "kind"
+    ],
+    "antonyms": [
+      "cruel",
+      "heartless"
+    ],
+    "example": "The compassionate nurse comforted the frightened child.",
     "topics": [
-      "technology"
+      "Health",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 621,
-    "word": "distribution",
-    "partOfSpeech": "noun",
+    "word": "complement",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with distribution",
-    "chinese": "“distribution”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about distribution in a health context.",
+    "meaning": "to add something that improves or completes another thing",
+    "chinese": "补充；相得益彰",
+    "synonyms": [
+      "enhance",
+      "complete"
+    ],
+    "antonyms": [
+      "clash"
+    ],
+    "example": "The sauce complements the flavour of the dish.",
     "topics": [
-      "technology"
+      "Food",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 622,
-    "word": "ecological",
+    "word": "concession",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with ecological",
-    "chinese": "“ecological”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about ecological in a health context.",
+    "meaning": "something given up or agreed to in order to settle a disagreement",
+    "chinese": "让步",
+    "synonyms": [
+      "compromise",
+      "allowance"
+    ],
+    "antonyms": [
+      "refusal"
+    ],
+    "example": "Both sides made a concession to reach an agreement.",
     "topics": [
-      "technology"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 623,
-    "word": "eliminate",
-    "partOfSpeech": "noun",
+    "word": "conciliatory",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with eliminate",
-    "chinese": "“eliminate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about eliminate in a health context.",
+    "meaning": "intended to make people less angry and more willing to agree",
+    "chinese": "调解的；安抚的",
+    "synonyms": [
+      "peace-making",
+      "appeasing"
+    ],
+    "antonyms": [
+      "hostile"
+    ],
+    "example": "She adopted a conciliatory tone during the discussion.",
     "topics": [
-      "technology"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 624,
-    "word": "emphasis",
-    "partOfSpeech": "noun",
+    "word": "conscientious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with emphasis",
-    "chinese": "“emphasis”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about emphasis in a health context.",
+    "meaning": "careful to do work well and correctly",
+    "chinese": "认真负责的",
+    "synonyms": [
+      "diligent",
+      "careful"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "She is a conscientious student who checks her work twice.",
     "topics": [
-      "technology"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 625,
-    "word": "endurance",
-    "partOfSpeech": "noun",
+    "word": "conspicuous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with endurance",
-    "chinese": "“endurance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about endurance in a health context.",
+    "meaning": "very easy to see or notice",
+    "chinese": "显眼的",
+    "synonyms": [
+      "noticeable",
+      "prominent"
+    ],
+    "antonyms": [
+      "inconspicuous"
+    ],
+    "example": "The bright yellow sign was highly conspicuous.",
     "topics": [
-      "technology"
+      "Safety",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 626,
-    "word": "environmental",
-    "partOfSpeech": "noun",
+    "word": "constitute",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with environmental",
-    "chinese": "“environmental”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about environmental in a health context.",
+    "meaning": "to form or make up something",
+    "chinese": "构成；组成",
+    "synonyms": [
+      "form",
+      "comprise"
+    ],
+    "antonyms": [
+      "destroy"
+    ],
+    "example": "These three parts constitute the main structure of the machine.",
     "topics": [
-      "technology"
+      "Science",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 627,
-    "word": "equivalent",
-    "partOfSpeech": "noun",
+    "word": "contentious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with equivalent",
-    "chinese": "“equivalent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about equivalent in a health context.",
+    "meaning": "likely to cause disagreement",
+    "chinese": "有争议的",
+    "synonyms": [
+      "controversial",
+      "disputed"
+    ],
+    "antonyms": [
+      "uncontroversial"
+    ],
+    "example": "The issue remained contentious among the residents.",
     "topics": [
-      "technology"
+      "Community",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 628,
-    "word": "evaluation",
-    "partOfSpeech": "noun",
+    "word": "conventional",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with evaluation",
-    "chinese": "“evaluation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about evaluation in a health context.",
+    "meaning": "following traditional or commonly accepted ways",
+    "chinese": "传统的；惯常的",
+    "synonyms": [
+      "traditional",
+      "usual"
+    ],
+    "antonyms": [
+      "unconventional"
+    ],
+    "example": "The school chose a conventional method of teaching the topic.",
     "topics": [
-      "technology"
+      "Education",
+      "Culture"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 629,
-    "word": "expansion",
-    "partOfSpeech": "noun",
+    "word": "corroborate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with expansion",
-    "chinese": "“expansion”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about expansion in a health context.",
+    "meaning": "to provide evidence that supports a statement or idea",
+    "chinese": "证实；佐证",
+    "synonyms": [
+      "confirm",
+      "support"
+    ],
+    "antonyms": [
+      "contradict"
+    ],
+    "example": "The second witness corroborated her account of the event.",
     "topics": [
-      "technology"
+      "Communication",
+      "Law"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 630,
-    "word": "experiment",
-    "partOfSpeech": "noun",
+    "word": "cumulative",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with experiment",
-    "chinese": "“experiment”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about experiment in a health context.",
+    "meaning": "increasing by adding more over time",
+    "chinese": "累积的",
+    "synonyms": [
+      "accumulated",
+      "combined"
+    ],
+    "antonyms": [
+      "decreasing"
+    ],
+    "example": "The cumulative effect of small changes can be significant.",
     "topics": [
-      "technology"
+      "Science",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 631,
-    "word": "explanation",
-    "partOfSpeech": "noun",
+    "word": "deceptive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with explanation",
-    "chinese": "“explanation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about explanation in a health context.",
+    "meaning": "giving a False impression",
+    "chinese": "欺骗性的；误导的",
+    "synonyms": [
+      "misleading",
+      "dishonest"
+    ],
+    "antonyms": [
+      "honest",
+      "truthful"
+    ],
+    "example": "The simple appearance of the task was deceptive.",
     "topics": [
-      "technology"
+      "Communication",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 632,
-    "word": "framework",
-    "partOfSpeech": "noun",
+    "word": "definitive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with framework",
-    "chinese": "“framework”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about framework in a health context.",
+    "meaning": "final and not likely to be changed",
+    "chinese": "决定性的；最终的",
+    "synonyms": [
+      "conclusive",
+      "final"
+    ],
+    "antonyms": [
+      "uncertain"
+    ],
+    "example": "The test did not provide a definitive answer.",
     "topics": [
-      "technology"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 633,
-    "word": "frequency",
-    "partOfSpeech": "noun",
+    "word": "detrimental",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with frequency",
-    "chinese": "“frequency”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about frequency in a health context.",
+    "meaning": "causing harm or damage",
+    "chinese": "有害的",
+    "synonyms": [
+      "harmful",
+      "damaging"
+    ],
+    "antonyms": [
+      "beneficial"
+    ],
+    "example": "Too much screen time can be detrimental to sleep.",
     "topics": [
-      "technology"
+      "Health",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 634,
-    "word": "hypothesis",
-    "partOfSpeech": "noun",
+    "word": "diligent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with hypothesis",
-    "chinese": "“hypothesis”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about hypothesis in a health context.",
+    "meaning": "showing steady and careful effort",
+    "chinese": "勤奋的",
+    "synonyms": [
+      "hardworking",
+      "industrious"
+    ],
+    "antonyms": [
+      "lazy"
+    ],
+    "example": "His diligent revision helped him improve his results.",
     "topics": [
-      "technology"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 635,
-    "word": "illustration",
-    "partOfSpeech": "noun",
+    "word": "discerning",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with illustration",
-    "chinese": "“illustration”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about illustration in a health context.",
+    "meaning": "good at noticing and judging small differences",
+    "chinese": "有辨别力的",
+    "synonyms": [
+      "perceptive",
+      "discriminating"
+    ],
+    "antonyms": [
+      "undiscerning"
+    ],
+    "example": "A discerning reader can recognise weak evidence.",
     "topics": [
-      "technology"
+      "Reading",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 636,
-    "word": "implication",
-    "partOfSpeech": "noun",
+    "word": "discreet",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with implication",
-    "chinese": "“implication”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about implication in a health context.",
+    "meaning": "careful not to attract attention or reveal private information",
+    "chinese": "谨慎的；慎重的",
+    "synonyms": [
+      "tactful",
+      "careful"
+    ],
+    "antonyms": [
+      "indiscreet"
+    ],
+    "example": "The teacher was discreet when discussing the student's problem.",
     "topics": [
-      "technology"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 637,
-    "word": "interpretation",
+    "word": "discrepancy",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with interpretation",
-    "chinese": "“interpretation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about interpretation in a health context.",
+    "meaning": "a difference between two things that should be the same",
+    "chinese": "差异；不一致",
+    "synonyms": [
+      "difference",
+      "inconsistency"
+    ],
+    "antonyms": [
+      "agreement"
+    ],
+    "example": "There was a discrepancy between the two sets of results.",
     "topics": [
-      "technology"
+      "Science",
+      "Mathematics"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 638,
-    "word": "intervention",
-    "partOfSpeech": "noun",
+    "word": "disseminate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with intervention",
-    "chinese": "“intervention”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about intervention in a health context.",
+    "meaning": "to spread information widely",
+    "chinese": "传播；散布",
+    "synonyms": [
+      "spread",
+      "circulate"
+    ],
+    "antonyms": [
+      "withhold"
+    ],
+    "example": "The organisation disseminates information about recycling.",
     "topics": [
-      "technology"
+      "Media",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 639,
-    "word": "investigation",
-    "partOfSpeech": "noun",
+    "word": "eccentric",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with investigation",
-    "chinese": "“investigation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about investigation in a health context.",
+    "meaning": "slightly strange or unusual in behaviour",
+    "chinese": "古怪的；反常的",
+    "synonyms": [
+      "unusual",
+      "odd"
+    ],
+    "antonyms": [
+      "conventional"
+    ],
+    "example": "The eccentric inventor had many unusual ideas.",
     "topics": [
-      "technology"
+      "People",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 640,
-    "word": "mechanism",
-    "partOfSpeech": "noun",
+    "word": "elusive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with mechanism",
-    "chinese": "“mechanism”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about mechanism in a health context.",
+    "meaning": "difficult to find, achieve or understand",
+    "chinese": "难以捉摸的；难以获得的",
+    "synonyms": [
+      "hard to find",
+      "slippery"
+    ],
+    "antonyms": [
+      "obvious",
+      "accessible"
+    ],
+    "example": "The answer remained elusive despite several attempts.",
     "topics": [
-      "technology"
+      "Learning",
+      "Problem Solving"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 641,
-    "word": "methodology",
-    "partOfSpeech": "noun",
+    "word": "empathetic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with methodology",
-    "chinese": "“methodology”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about methodology in a health context.",
+    "meaning": "able to understand another person's feelings",
+    "chinese": "有同理心的",
+    "synonyms": [
+      "understanding",
+      "compassionate"
+    ],
+    "antonyms": [
+      "insensitive"
+    ],
+    "example": "An empathetic friend listens without judging.",
     "topics": [
-      "technology"
+      "Values",
+      "Friendship"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 642,
-    "word": "observation",
-    "partOfSpeech": "noun",
+    "word": "enduring",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with observation",
-    "chinese": "“observation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about observation in a health context.",
+    "meaning": "lasting for a long time",
+    "chinese": "持久的",
+    "synonyms": [
+      "lasting",
+      "permanent"
+    ],
+    "antonyms": [
+      "temporary"
+    ],
+    "example": "They formed an enduring friendship at school.",
     "topics": [
-      "technology"
+      "Friendship",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 643,
-    "word": "persistent",
+    "word": "equilibrium",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with persistent",
-    "chinese": "“persistent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about persistent in a health context.",
+    "meaning": "a state of balance between different forces or influences",
+    "chinese": "平衡；均衡",
+    "synonyms": [
+      "balance",
+      "stability"
+    ],
+    "antonyms": [
+      "imbalance"
+    ],
+    "example": "The ecosystem must maintain a delicate equilibrium.",
     "topics": [
-      "technology"
+      "Science",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 644,
-    "word": "phenomenon",
-    "partOfSpeech": "noun",
+    "word": "equitable",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with phenomenon",
-    "chinese": "“phenomenon”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about phenomenon in a health context.",
+    "meaning": "fair and reasonable to everyone concerned",
+    "chinese": "公平合理的",
+    "synonyms": [
+      "fair",
+      "just"
+    ],
+    "antonyms": [
+      "unfair"
+    ],
+    "example": "The teacher tried to find an equitable solution.",
     "topics": [
-      "technology"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 645,
-    "word": "policy",
-    "partOfSpeech": "noun",
+    "word": "exacerbate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with policy",
-    "chinese": "“policy”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about policy in a health context.",
+    "meaning": "to make a problem or bad situation worse",
+    "chinese": "加剧；恶化",
+    "synonyms": [
+      "aggravate",
+      "worsen"
+    ],
+    "antonyms": [
+      "alleviate"
+    ],
+    "example": "Lack of sleep can exacerbate stress.",
     "topics": [
-      "technology"
+      "Health",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 646,
-    "word": "precaution",
-    "partOfSpeech": "noun",
+    "word": "exceptional",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with precaution",
-    "chinese": "“precaution”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about precaution in a health context.",
+    "meaning": "unusually good or impressive",
+    "chinese": "杰出的；非凡的",
+    "synonyms": [
+      "outstanding",
+      "extraordinary"
+    ],
+    "antonyms": [
+      "ordinary"
+    ],
+    "example": "She showed exceptional talent in music.",
     "topics": [
-      "technology"
+      "Arts",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 647,
-    "word": "prediction",
-    "partOfSpeech": "noun",
+    "word": "exemplary",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with prediction",
-    "chinese": "“prediction”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about prediction in a health context.",
+    "meaning": "serving as a very good example",
+    "chinese": "模范的；典范的",
+    "synonyms": [
+      "model",
+      "outstanding"
+    ],
+    "antonyms": [
+      "poor"
+    ],
+    "example": "Her exemplary behaviour earned praise from the principal.",
     "topics": [
-      "technology"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 648,
-    "word": "same",
-    "partOfSpeech": "noun",
+    "word": "exemplify",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with same",
-    "chinese": "“same”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about same in a health context.",
+    "meaning": "to be a typical or very good example of something",
+    "chinese": "是……的典范；例证",
+    "synonyms": [
+      "illustrate",
+      "represent"
+    ],
+    "antonyms": [
+      "contradict"
+    ],
+    "example": "Her actions exemplify kindness and courage.",
     "topics": [
-      "technology"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 649,
-    "word": "say",
-    "partOfSpeech": "noun",
+    "word": "fervent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with say",
-    "chinese": "“say”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about say in a health context.",
+    "meaning": "showing strong and sincere feelings",
+    "chinese": "热烈的；热情的",
+    "synonyms": [
+      "passionate",
+      "ardent"
+    ],
+    "antonyms": [
+      "indifferent"
+    ],
+    "example": "He is a fervent supporter of animal welfare.",
     "topics": [
-      "technology"
+      "Animals",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 650,
-    "word": "school",
-    "partOfSpeech": "noun",
+    "word": "flourish",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with school",
-    "chinese": "“school”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about school in a health context.",
+    "meaning": "to grow or develop successfully",
+    "chinese": "茁壮成长；繁荣",
+    "synonyms": [
+      "thrive",
+      "prosper"
+    ],
+    "antonyms": [
+      "decline",
+      "wither"
+    ],
+    "example": "Plants flourish when they receive enough sunlight.",
     "topics": [
-      "technology"
+      "Nature",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 651,
-    "word": "see",
-    "partOfSpeech": "noun",
+    "word": "fortuitous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with see",
-    "chinese": "“see”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about see in a health context.",
+    "meaning": "happening by chance in a way that is lucky",
+    "chinese": "偶然幸运的",
+    "synonyms": [
+      "fortunate",
+      "lucky"
+    ],
+    "antonyms": [
+      "unfortunate"
+    ],
+    "example": "A fortuitous meeting led to a useful friendship.",
     "topics": [
-      "technology"
+      "Community",
+      "Events"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 652,
-    "word": "seem",
-    "partOfSpeech": "noun",
+    "word": "frivolous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with seem",
-    "chinese": "“seem”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about seem in a health context.",
+    "meaning": "not serious or useful",
+    "chinese": "轻浮的；无聊的",
+    "synonyms": [
+      "silly",
+      "trivial"
+    ],
+    "antonyms": [
+      "serious"
+    ],
+    "example": "The judge dismissed the frivolous complaint.",
     "topics": [
-      "technology"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 653,
-    "word": "small",
-    "partOfSpeech": "noun",
+    "word": "frugal",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with small",
-    "chinese": "“small”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about small in a health context.",
+    "meaning": "careful about spending money or using resources",
+    "chinese": "节俭的",
+    "synonyms": [
+      "economical",
+      "thrifty"
+    ],
+    "antonyms": [
+      "wasteful"
+    ],
+    "example": "A frugal family plans its spending carefully.",
     "topics": [
-      "technology"
+      "Money",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 654,
-    "word": "start",
-    "partOfSpeech": "noun",
+    "word": "gratify",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with start",
-    "chinese": "“start”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about start in a health context.",
+    "meaning": "to give pleasure or satisfaction",
+    "chinese": "使满足；使高兴",
+    "synonyms": [
+      "please",
+      "satisfy"
+    ],
+    "antonyms": [
+      "disappoint"
+    ],
+    "example": "It gratified her to see the children enjoying the activity.",
     "topics": [
-      "technology"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 655,
-    "word": "stay",
-    "partOfSpeech": "noun",
+    "word": "gregarious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with stay",
-    "chinese": "“stay”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about stay in a health context.",
+    "meaning": "friendly and enjoying the company of other people",
+    "chinese": "合群的；爱交际的",
+    "synonyms": [
+      "sociable",
+      "outgoing"
+    ],
+    "antonyms": [
+      "reserved"
+    ],
+    "example": "The gregarious child made friends easily.",
     "topics": [
-      "technology"
+      "People",
+      "Friendship"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 656,
-    "word": "still",
-    "partOfSpeech": "noun",
+    "word": "hostile",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with still",
-    "chinese": "“still”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about still in a health context.",
+    "meaning": "unfriendly or aggressive",
+    "chinese": "敌对的；不友善的",
+    "synonyms": [
+      "unfriendly",
+      "aggressive"
+    ],
+    "antonyms": [
+      "friendly",
+      "welcoming"
+    ],
+    "example": "The animal became hostile when it felt threatened.",
     "topics": [
-      "technology"
+      "Animals",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 657,
-    "word": "stop",
-    "partOfSpeech": "noun",
+    "word": "impartial",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with stop",
-    "chinese": "“stop”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about stop in a health context.",
+    "meaning": "not favouring one side more than another",
+    "chinese": "公正的；不偏不倚的",
+    "synonyms": [
+      "neutral",
+      "fair"
+    ],
+    "antonyms": [
+      "biased"
+    ],
+    "example": "A referee must remain impartial during a match.",
     "topics": [
-      "technology"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 658,
-    "word": "story",
+    "word": "impartiality",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with story",
-    "chinese": "“story”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about story in a health context.",
+    "meaning": "the quality of treating all sides fairly",
+    "chinese": "公正；不偏不倚",
+    "synonyms": [
+      "fairness",
+      "neutrality"
+    ],
+    "antonyms": [
+      "bias"
+    ],
+    "example": "The judge was praised for her impartiality.",
     "topics": [
-      "technology"
+      "Law",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 659,
-    "word": "strong",
+    "word": "impeccable",
     "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "describing someone or something that is strong",
-    "chinese": "“strong”的常用中文释义",
+    "meaning": "without any faults or mistakes",
+    "chinese": "无可挑剔的",
     "synonyms": [
-      "powerful"
+      "perfect",
+      "flawless"
     ],
     "antonyms": [
-      "weak"
+      "faulty"
     ],
-    "example": "The health situation was described as strong by the teacher.",
+    "example": "Her impeccable manners impressed the guests.",
     "topics": [
-      "technology"
+      "Values",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 660,
-    "word": "study",
-    "partOfSpeech": "noun",
+    "word": "impeccably",
+    "partOfSpeech": "adverb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with study",
-    "chinese": "“study”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about study in a health context.",
+    "meaning": "in a way that has no faults or mistakes",
+    "chinese": "无可挑剔地",
+    "synonyms": [
+      "perfectly",
+      "flawlessly"
+    ],
+    "antonyms": [
+      "poorly"
+    ],
+    "example": "She dressed impeccably for the ceremony.",
     "topics": [
-      "technology"
+      "Events",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 661,
-    "word": "take",
-    "partOfSpeech": "noun",
+    "word": "inadvertent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with take",
-    "chinese": "“take”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about take in a health context.",
+    "meaning": "not intentional; accidental",
+    "chinese": "无意的；不经意的",
+    "synonyms": [
+      "accidental",
+      "unintentional"
+    ],
+    "antonyms": [
+      "deliberate"
+    ],
+    "example": "The damage was inadvertent rather than deliberate.",
     "topics": [
-      "technology"
+      "Daily Life",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 662,
-    "word": "talk",
-    "partOfSpeech": "noun",
+    "word": "indispensable",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with talk",
-    "chinese": "“talk”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about talk in a health context.",
+    "meaning": "absolutely necessary",
+    "chinese": "不可或缺的",
+    "synonyms": [
+      "essential",
+      "vital"
+    ],
+    "antonyms": [
+      "dispensable"
+    ],
+    "example": "Clean water is indispensable for human life.",
     "topics": [
-      "technology"
+      "Health",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 663,
-    "word": "teach",
-    "partOfSpeech": "noun",
+    "word": "inept",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with teach",
-    "chinese": "“teach”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about teach in a health context.",
+    "meaning": "not skilled or effective at doing something",
+    "chinese": "无能的；不熟练的",
+    "synonyms": [
+      "incompetent",
+      "clumsy"
+    ],
+    "antonyms": [
+      "competent",
+      "skilled"
+    ],
+    "example": "His inept handling of the equipment caused a delay.",
     "topics": [
-      "technology"
+      "School",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 664,
-    "word": "tell",
-    "partOfSpeech": "noun",
+    "word": "influential",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with tell",
-    "chinese": "“tell”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about tell in a health context.",
+    "meaning": "having the power to affect people or events",
+    "chinese": "有影响力的",
+    "synonyms": [
+      "powerful",
+      "important"
+    ],
+    "antonyms": [
+      "insignificant"
+    ],
+    "example": "The scientist was influential in promoting environmental education.",
     "topics": [
-      "technology"
+      "Science",
+      "Education"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 665,
-    "word": "thank",
-    "partOfSpeech": "noun",
+    "word": "ingenious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with thank",
-    "chinese": "“thank”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about thank in a health context.",
+    "meaning": "clever, original and practical",
+    "chinese": "巧妙的；有创意的",
+    "synonyms": [
+      "inventive",
+      "clever"
+    ],
+    "antonyms": [
+      "unimaginative"
+    ],
+    "example": "The pupils devised an ingenious solution to save water.",
     "topics": [
-      "technology"
+      "School",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 666,
-    "word": "thing",
-    "partOfSpeech": "noun",
+    "word": "insidious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with thing",
-    "chinese": "“thing”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about thing in a health context.",
+    "meaning": "gradually causing harm in a way that is difficult to notice",
+    "chinese": "潜在有害的；隐伏的",
+    "synonyms": [
+      "subtle",
+      "harmful"
+    ],
+    "antonyms": [
+      "obvious"
+    ],
+    "example": "The insidious effects of pollution may take years to appear.",
     "topics": [
-      "technology"
+      "Environment",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 667,
-    "word": "think",
-    "partOfSpeech": "noun",
+    "word": "insightful",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with think",
-    "chinese": "“think”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about think in a health context.",
+    "meaning": "showing a deep understanding of something",
+    "chinese": "有洞察力的",
+    "synonyms": [
+      "perceptive",
+      "wise"
+    ],
+    "antonyms": [
+      "shallow"
+    ],
+    "example": "Her insightful comments improved the discussion.",
     "topics": [
-      "technology"
+      "Communication",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 668,
-    "word": "time",
-    "partOfSpeech": "noun",
+    "word": "intuitive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with time",
-    "chinese": "“time”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about time in a health context.",
+    "meaning": "based on an immediate understanding rather than conscious reasoning",
+    "chinese": "直觉的",
+    "synonyms": [
+      "instinctive",
+      "natural"
+    ],
+    "antonyms": [
+      "analytical"
+    ],
+    "example": "His intuitive understanding helped him solve the puzzle quickly.",
     "topics": [
-      "technology"
+      "Thinking",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 669,
-    "word": "today",
-    "partOfSpeech": "noun",
+    "word": "jeopardise",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with today",
-    "chinese": "“today”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about today in a health context.",
+    "meaning": "to put something such as safety or success at risk",
+    "chinese": "危及；损害",
+    "synonyms": [
+      "endanger",
+      "threaten"
+    ],
+    "antonyms": [
+      "protect"
+    ],
+    "example": "Ignoring the safety rules could jeopardise the whole project.",
     "topics": [
-      "technology"
+      "Safety",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 670,
-    "word": "together",
-    "partOfSpeech": "noun",
+    "word": "magnanimous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with together",
-    "chinese": "“together”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about together in a health context.",
+    "meaning": "kind and generous, especially towards a rival or someone less powerful",
+    "chinese": "宽宏大量的",
+    "synonyms": [
+      "generous",
+      "forgiving"
+    ],
+    "antonyms": [
+      "petty",
+      "vindictive"
+    ],
+    "example": "The winner was magnanimous towards the defeated team.",
     "topics": [
-      "technology"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 671,
-    "word": "try",
-    "partOfSpeech": "noun",
+    "word": "meticulous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with try",
-    "chinese": "“try”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about try in a health context.",
+    "meaning": "very careful and precise about details",
+    "chinese": "一丝不苟的",
+    "synonyms": [
+      "careful",
+      "thorough"
+    ],
+    "antonyms": [
+      "careless"
+    ],
+    "example": "She kept meticulous records of every experiment.",
     "topics": [
-      "technology"
+      "Science",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 672,
-    "word": "turn",
-    "partOfSpeech": "noun",
+    "word": "monotonous",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with turn",
-    "chinese": "“turn”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about turn in a health context.",
+    "meaning": "repetitive and lacking variety",
+    "chinese": "单调的",
+    "synonyms": [
+      "dull",
+      "repetitive"
+    ],
+    "antonyms": [
+      "varied",
+      "interesting"
+    ],
+    "example": "The monotonous task made the pupils lose concentration.",
     "topics": [
-      "technology"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 673,
-    "word": "under",
-    "partOfSpeech": "noun",
+    "word": "multifaceted",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with under",
-    "chinese": "“under”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about under in a health context.",
+    "meaning": "having many different aspects or features",
+    "chinese": "多方面的",
+    "synonyms": [
+      "complex",
+      "diverse"
+    ],
+    "antonyms": [
+      "simple"
+    ],
+    "example": "Climate change is a multifaceted problem.",
     "topics": [
-      "technology"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 674,
-    "word": "understand",
+    "word": "nuance",
     "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with understand",
-    "chinese": "“understand”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about understand in a health context.",
+    "meaning": "a small difference in meaning, feeling or appearance",
+    "chinese": "细微差别",
+    "synonyms": [
+      "subtlety",
+      "distinction"
+    ],
+    "antonyms": [
+      "simplicity"
+    ],
+    "example": "The writer captured the nuances of the character's emotions.",
     "topics": [
-      "technology"
+      "Writing",
+      "Arts"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 675,
-    "word": "use",
-    "partOfSpeech": "noun",
+    "word": "omnipresent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with use",
-    "chinese": "“use”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about use in a health context.",
+    "meaning": "present or seeming to be present everywhere",
+    "chinese": "无处不在的",
+    "synonyms": [
+      "ubiquitous",
+      "everywhere"
+    ],
+    "antonyms": [
+      "rare"
+    ],
+    "example": "Mobile devices are almost omnipresent in modern life.",
     "topics": [
-      "technology"
+      "Technology",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 676,
-    "word": "very",
-    "partOfSpeech": "noun",
+    "word": "optimistic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with very",
-    "chinese": "“very”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about very in a health context.",
+    "meaning": "expecting good things to happen",
+    "chinese": "乐观的",
+    "synonyms": [
+      "hopeful",
+      "positive"
+    ],
+    "antonyms": [
+      "pessimistic"
+    ],
+    "example": "She remained optimistic despite the setback.",
     "topics": [
-      "technology"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 677,
-    "word": "walk",
-    "partOfSpeech": "noun",
+    "word": "perpetual",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with walk",
-    "chinese": "“walk”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about walk in a health context.",
+    "meaning": "continuing for a very long time without stopping",
+    "chinese": "永久的；持续不断的",
+    "synonyms": [
+      "continuous",
+      "constant"
+    ],
+    "antonyms": [
+      "temporary"
+    ],
+    "example": "The machine seemed to make a perpetual humming sound.",
     "topics": [
-      "technology"
+      "Technology",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 678,
-    "word": "want",
-    "partOfSpeech": "noun",
+    "word": "perplexed",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with want",
-    "chinese": "“want”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about want in a health context.",
+    "meaning": "confused because something is difficult to understand",
+    "chinese": "困惑的",
+    "synonyms": [
+      "confused",
+      "puzzled"
+    ],
+    "antonyms": [
+      "clear"
+    ],
+    "example": "The pupils looked perplexed by the strange question.",
     "topics": [
-      "technology"
+      "School",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 679,
-    "word": "water",
-    "partOfSpeech": "noun",
+    "word": "pervasive",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with water",
-    "chinese": "“water”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about water in a health context.",
+    "meaning": "spreading widely throughout an area or group",
+    "chinese": "普遍存在的；渗透的",
+    "synonyms": [
+      "widespread",
+      "prevalent"
+    ],
+    "antonyms": [
+      "limited"
+    ],
+    "example": "The pervasive smell of smoke filled the building.",
     "topics": [
-      "technology"
+      "Safety",
+      "Environment"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 680,
-    "word": "way",
-    "partOfSpeech": "noun",
+    "word": "pragmatic",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with way",
-    "chinese": "“way”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about way in a health context.",
+    "meaning": "dealing with problems in a practical way",
+    "chinese": "务实的",
+    "synonyms": [
+      "practical",
+      "realistic"
+    ],
+    "antonyms": [
+      "idealistic"
+    ],
+    "example": "We need a pragmatic solution that can work immediately.",
     "topics": [
-      "technology"
+      "Problem Solving",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 681,
-    "word": "week",
-    "partOfSpeech": "noun",
+    "word": "precarious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with week",
-    "chinese": "“week”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about week in a health context.",
+    "meaning": "likely to fall, fail or become dangerous",
+    "chinese": "不稳定的；危险的",
+    "synonyms": [
+      "unstable",
+      "risky"
+    ],
+    "antonyms": [
+      "secure",
+      "stable"
+    ],
+    "example": "The climber stood on a precarious ledge.",
     "topics": [
-      "technology"
+      "Safety",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 682,
-    "word": "well",
-    "partOfSpeech": "noun",
+    "word": "proliferate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with well",
-    "chinese": "“well”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about well in a health context.",
+    "meaning": "to increase quickly in number",
+    "chinese": "迅速增加；激增",
+    "synonyms": [
+      "multiply",
+      "expand"
+    ],
+    "antonyms": [
+      "decrease"
+    ],
+    "example": "Plastic products have proliferated in modern society.",
     "topics": [
-      "technology"
+      "Environment",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 683,
-    "word": "work",
-    "partOfSpeech": "noun",
+    "word": "relinquish",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with work",
-    "chinese": "“work”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about work in a health context.",
+    "meaning": "to give up something you have or control",
+    "chinese": "放弃；交出",
+    "synonyms": [
+      "surrender",
+      "give up"
+    ],
+    "antonyms": [
+      "retain",
+      "keep"
+    ],
+    "example": "He was forced to relinquish his position as captain.",
     "topics": [
-      "technology"
+      "Sports",
+      "Leadership"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 684,
-    "word": "write",
-    "partOfSpeech": "noun",
+    "word": "repudiate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with write",
-    "chinese": "“write”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about write in a health context.",
+    "meaning": "to reject something strongly",
+    "chinese": "拒绝；否认",
+    "synonyms": [
+      "reject",
+      "deny"
+    ],
+    "antonyms": [
+      "accept",
+      "endorse"
+    ],
+    "example": "The scientist repudiated the False claim.",
     "topics": [
-      "technology"
+      "Science",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 685,
-    "word": "young",
-    "partOfSpeech": "adjective",
+    "word": "resilience",
+    "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "describing someone or something that is young",
-    "chinese": "“young”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The health situation was described as young by the teacher.",
+    "meaning": "the ability to recover from difficulty",
+    "chinese": "韧性；恢复力",
+    "synonyms": [
+      "strength",
+      "toughness"
+    ],
+    "antonyms": [
+      "fragility"
+    ],
+    "example": "Resilience helps students cope with setbacks.",
     "topics": [
-      "technology"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 686,
-    "word": "yesterday",
-    "partOfSpeech": "noun",
+    "word": "resourceful",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with yesterday",
-    "chinese": "“yesterday”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about yesterday in a health context.",
+    "meaning": "good at finding clever ways to solve problems",
+    "chinese": "足智多谋的",
+    "synonyms": [
+      "inventive",
+      "ingenious"
+    ],
+    "antonyms": [
+      "helpless"
+    ],
+    "example": "The resourceful pupils built a shelter from simple materials.",
     "topics": [
-      "technology"
+      "Problem Solving",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 687,
-    "word": "divide",
-    "partOfSpeech": "verb",
+    "word": "retrospect",
+    "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "to divide or to carry out the action described by the word",
-    "chinese": "“divide”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to divide carefully during the health activity.",
+    "meaning": "the consideration of a past event or period",
+    "chinese": "回顾；反思",
+    "synonyms": [
+      "reflection",
+      "review"
+    ],
+    "antonyms": [
+      "foresight"
+    ],
+    "example": "In retrospect, we should have checked the weather forecast.",
     "topics": [
-      "technology"
+      "Learning",
+      "Reflection"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 688,
-    "word": "doubt",
-    "partOfSpeech": "noun",
+    "word": "sagacious",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with doubt",
-    "chinese": "“doubt”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about doubt in a health context.",
+    "meaning": "having good judgement and understanding",
+    "chinese": "明智的；睿智的",
+    "synonyms": [
+      "wise",
+      "perceptive"
+    ],
+    "antonyms": [
+      "foolish"
+    ],
+    "example": "The sagacious coach changed the strategy at the right moment.",
     "topics": [
-      "technology"
+      "Sports",
+      "Leadership"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 689,
-    "word": "dramatic",
-    "partOfSpeech": "adjective",
+    "word": "scrupulousness",
+    "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "describing someone or something that is dramatic",
-    "chinese": "“dramatic”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The health situation was described as dramatic by the teacher.",
+    "meaning": "great care to be honest, accurate and correct",
+    "chinese": "严谨；一丝不苟",
+    "synonyms": [
+      "thoroughness",
+      "conscientiousness"
+    ],
+    "antonyms": [
+      "carelessness"
+    ],
+    "example": "The scientist's scrupulousness improved the reliability of the study.",
     "topics": [
-      "technology"
+      "Science",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 690,
-    "word": "earn",
-    "partOfSpeech": "noun",
+    "word": "stringent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with earn",
-    "chinese": "“earn”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about earn in a health context.",
+    "meaning": "very strict and carefully controlled",
+    "chinese": "严格的",
+    "synonyms": [
+      "strict",
+      "rigorous"
+    ],
+    "antonyms": [
+      "lenient"
+    ],
+    "example": "The laboratory follows stringent safety rules.",
     "topics": [
-      "technology"
+      "Science",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 691,
-    "word": "educate",
+    "word": "substantiate",
     "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "to educate or to carry out the action described by the word",
-    "chinese": "“educate”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to educate carefully during the health activity.",
+    "meaning": "to provide evidence that proves something is True",
+    "chinese": "证实；证明",
+    "synonyms": [
+      "confirm",
+      "verify"
+    ],
+    "antonyms": [
+      "disprove"
+    ],
+    "example": "The researcher could not substantiate the claim without evidence.",
     "topics": [
-      "technology"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 692,
-    "word": "effective",
+    "word": "tenacious",
     "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "describing someone or something that is effective",
-    "chinese": "“effective”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The health situation was described as effective by the teacher.",
+    "meaning": "not giving up easily",
+    "chinese": "顽强的；坚持不懈的",
+    "synonyms": [
+      "persistent",
+      "determined"
+    ],
+    "antonyms": [
+      "weak",
+      "yielding"
+    ],
+    "example": "Her tenacious effort finally paid off.",
     "topics": [
-      "technology"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 693,
-    "word": "effort",
-    "partOfSpeech": "noun",
+    "word": "turbulent",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with effort",
-    "chinese": "“effort”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about effort in a health context.",
+    "meaning": "involving a lot of sudden change, confusion or disturbance",
+    "chinese": "动荡的；混乱的",
+    "synonyms": [
+      "chaotic",
+      "stormy"
+    ],
+    "antonyms": [
+      "calm",
+      "stable"
+    ],
+    "example": "The plane experienced turbulent weather.",
     "topics": [
-      "technology"
+      "Weather",
+      "Travel"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 694,
-    "word": "elderly",
+    "word": "unanimous",
     "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "describing someone or something that is elderly",
-    "chinese": "“elderly”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The health situation was described as elderly by the teacher.",
+    "meaning": "fully agreed on by everyone involved",
+    "chinese": "一致同意的",
+    "synonyms": [
+      "agreed",
+      "united"
+    ],
+    "antonyms": [
+      "divided"
+    ],
+    "example": "The committee was unanimous in its decision.",
     "topics": [
-      "technology"
+      "Community",
+      "Decision Making"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 695,
-    "word": "emergency",
-    "partOfSpeech": "noun",
+    "word": "unforeseen",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with emergency",
-    "chinese": "“emergency”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about emergency in a health context.",
+    "meaning": "not expected or planned for",
+    "chinese": "未预料的",
+    "synonyms": [
+      "unexpected",
+      "unanticipated"
+    ],
+    "antonyms": [
+      "expected"
+    ],
+    "example": "The journey was delayed by unforeseen problems.",
     "topics": [
-      "technology"
+      "Travel",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 696,
-    "word": "encourage",
-    "partOfSpeech": "verb",
+    "word": "vigilance",
+    "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "to give someone support or confidence",
-    "chinese": "鼓励",
+    "meaning": "careful attention to possible danger or problems",
+    "chinese": "警惕；警戒",
     "synonyms": [
-      "support",
-      "motivate"
+      "alertness",
+      "watchfulness"
     ],
-    "antonyms": [],
-    "example": "The teacher asked the pupils to encourage carefully during the health activity.",
+    "antonyms": [
+      "carelessness"
+    ],
+    "example": "Constant vigilance is needed near the construction site.",
     "topics": [
-      "technology"
+      "Safety",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 697,
-    "word": "energy",
-    "partOfSpeech": "noun",
+    "word": "vigilant",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with energy",
-    "chinese": "“energy”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about energy in a health context.",
+    "meaning": "carefully watching for possible danger or problems",
+    "chinese": "警惕的",
+    "synonyms": [
+      "alert",
+      "watchful"
+    ],
+    "antonyms": [
+      "careless",
+      "unaware"
+    ],
+    "example": "Security guards must remain vigilant at all times.",
     "topics": [
-      "technology"
+      "Safety",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 698,
-    "word": "enormous",
-    "partOfSpeech": "adjective",
+    "word": "vindicate",
+    "partOfSpeech": "verb",
     "level": 7,
-    "meaning": "describing someone or something that is enormous",
-    "chinese": "“enormous”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The health situation was described as enormous by the teacher.",
+    "meaning": "to prove that someone was right or not guilty",
+    "chinese": "证明……正确；洗清",
+    "synonyms": [
+      "justify",
+      "clear"
+    ],
+    "antonyms": [
+      "condemn"
+    ],
+    "example": "The new evidence vindicated the accused driver.",
     "topics": [
-      "technology"
+      "Law",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 699,
-    "word": "entire",
-    "partOfSpeech": "adjective",
+    "word": "vindication",
+    "partOfSpeech": "noun",
     "level": 7,
-    "meaning": "describing someone or something that is entire",
-    "chinese": "“entire”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The health situation was described as entire by the teacher.",
+    "meaning": "proof that someone was right or not guilty",
+    "chinese": "证实；洗清",
+    "synonyms": [
+      "justification",
+      "confirmation"
+    ],
+    "antonyms": [
+      "condemnation"
+    ],
+    "example": "The new evidence was a vindication of her earlier decision.",
     "topics": [
-      "technology"
+      "Law",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 700,
-    "word": "equal",
-    "partOfSpeech": "noun",
+    "word": "wholesome",
+    "partOfSpeech": "adjective",
     "level": 7,
-    "meaning": "a person, thing, idea, or situation connected with equal",
-    "chinese": "“equal”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about equal in a health context.",
+    "meaning": "good for health or morally good",
+    "chinese": "有益健康的；有益的",
+    "synonyms": [
+      "healthy",
+      "beneficial"
+    ],
+    "antonyms": [
+      "harmful"
+    ],
+    "example": "The school promotes wholesome food choices.",
     "topics": [
-      "technology"
+      "Food",
+      "Health"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 701,
-    "word": "escape",
-    "partOfSpeech": "verb",
+    "word": "accomplished",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to escape or to carry out the action described by the word",
-    "chinese": "“escape”的常用中文释义",
+    "meaning": "having achieved something successfully",
+    "chinese": "有成就的；成功的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to escape carefully during the values activity.",
+    "example": "The accomplished pupil won the writing competition.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 702,
-    "word": "essential",
-    "partOfSpeech": "adjective",
+    "word": "alertness",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "necessary or very important",
-    "chinese": "必要的；重要的",
+    "meaning": "the state of being watchful and ready to act",
+    "chinese": "警觉；警惕",
     "synonyms": [],
-    "antonyms": [
-      "unnecessary"
-    ],
-    "example": "The values situation was described as essential by the teacher.",
+    "antonyms": [],
+    "example": "The hiker kept his alertness on the narrow trail.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 703,
-    "word": "event",
-    "partOfSpeech": "noun",
+    "word": "amiable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with event",
-    "chinese": "“event”的常用中文释义",
+    "meaning": "friendly and pleasant",
+    "chinese": "和蔼友善的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about event in a values context.",
+    "example": "The amiable shopkeeper welcomed the children.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 704,
-    "word": "eventually",
-    "partOfSpeech": "adverb",
+    "word": "animated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "in the end, after some time",
-    "chinese": "最终",
+    "meaning": "full of energy and excitement",
+    "chinese": "活泼的；生气勃勃的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The pupils completed the values task eventually.",
+    "example": "The animated storyteller kept everyone interested.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 705,
-    "word": "evidence",
+    "word": "appeal",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "facts or information showing that something is true",
-    "chinese": "证据",
+    "meaning": "a strong request for help, support, or action",
+    "chinese": "呼吁；吸引力",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about evidence in a values context.",
+    "example": "The charity made an appeal for food donations.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 706,
-    "word": "exact",
+    "word": "appetite",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with exact",
-    "chinese": "“exact”的常用中文释义",
+    "meaning": "a desire for food",
+    "chinese": "食欲",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about exact in a values context.",
+    "example": "After the long hike, Liam had a huge appetite.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 707,
-    "word": "excellent",
-    "partOfSpeech": "adjective",
+    "word": "applaud",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is excellent",
-    "chinese": "“excellent”的常用中文释义",
+    "meaning": "to show approval by clapping or praising",
+    "chinese": "鼓掌；赞赏",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as excellent by the teacher.",
+    "example": "The audience applauded the young singer.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 708,
-    "word": "excited",
-    "partOfSpeech": "adjective",
+    "word": "apprehension",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "describing someone or something that is excited",
-    "chinese": "“excited”的常用中文释义",
+    "meaning": "a feeling of worry about what may happen",
+    "chinese": "忧虑；担心",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as excited by the teacher.",
+    "example": "She felt apprehension before speaking on stage.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 709,
-    "word": "exercise",
-    "partOfSpeech": "noun",
+    "word": "approachable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with exercise",
-    "chinese": "“exercise”的常用中文释义",
+    "meaning": "friendly and easy to talk to",
+    "chinese": "平易近人的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about exercise in a values context.",
+    "example": "The approachable teacher welcomed questions.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 710,
-    "word": "expect",
-    "partOfSpeech": "verb",
+    "word": "apt",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to expect or to carry out the action described by the word",
-    "chinese": "“expect”的常用中文释义",
+    "meaning": "quick to learn or understand",
+    "chinese": "聪明的；易于学习的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to expect carefully during the values activity.",
+    "example": "The apt pupil understood the new idea quickly.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 711,
-    "word": "experience",
-    "partOfSpeech": "noun",
+    "word": "artful",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with experience",
-    "chinese": "“experience”的常用中文释义",
+    "meaning": "clever and skilful, especially in achieving a result",
+    "chinese": "巧妙的；机灵的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about experience in a values context.",
+    "example": "The artful fox found a way out of the trap.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 712,
-    "word": "explain",
-    "partOfSpeech": "noun",
+    "word": "attentive",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with explain",
-    "chinese": "“explain”的常用中文释义",
+    "meaning": "watching or listening carefully",
+    "chinese": "专心的；留意的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about explain in a values context.",
+    "example": "The attentive class listened to the instructions.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 713,
-    "word": "explore",
-    "partOfSpeech": "verb",
+    "word": "avenue",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "to explore or to carry out the action described by the word",
-    "chinese": "“explore”的常用中文释义",
+    "meaning": "a possible way of achieving something",
+    "chinese": "途径；方法",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to explore carefully during the values activity.",
+    "example": "Reading widely is an avenue to better writing.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 714,
-    "word": "express",
-    "partOfSpeech": "verb",
+    "word": "awkward",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to express or to carry out the action described by the word",
-    "chinese": "“express”的常用中文释义",
+    "meaning": "difficult to use, move, or deal with",
+    "chinese": "笨拙的；尴尬的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to express carefully during the values activity.",
+    "example": "The awkward box was difficult to carry.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 715,
-    "word": "extra",
-    "partOfSpeech": "noun",
+    "word": "baffled",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with extra",
-    "chinese": "“extra”的常用中文释义",
+    "meaning": "completely unable to understand something",
+    "chinese": "困惑的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about extra in a values context.",
+    "example": "The baffled boy could not solve the puzzle.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 716,
-    "word": "familiar",
-    "partOfSpeech": "adjective",
+    "word": "bewilder",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is familiar",
-    "chinese": "“familiar”的常用中文释义",
+    "meaning": "to confuse someone greatly",
+    "chinese": "使困惑",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as familiar by the teacher.",
+    "example": "The strange question bewildered the pupils.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 717,
-    "word": "famous",
-    "partOfSpeech": "adjective",
+    "word": "blunder",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "describing someone or something that is famous",
-    "chinese": "“famous”的常用中文释义",
+    "meaning": "a careless or foolish mistake",
+    "chinese": "大错；疏忽",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as famous by the teacher.",
+    "example": "His careless blunder caused the team to lose a point.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 718,
-    "word": "feature",
-    "partOfSpeech": "noun",
+    "word": "boast",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with feature",
-    "chinese": "“feature”的常用中文释义",
+    "meaning": "to speak too proudly about yourself or something you have done",
+    "chinese": "吹嘘",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about feature in a values context.",
+    "example": "It is unwise to boast about your achievements.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 719,
-    "word": "feeling",
-    "partOfSpeech": "noun",
+    "word": "boundless",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with feeling",
-    "chinese": "“feeling”的常用中文释义",
+    "meaning": "without limits",
+    "chinese": "无限的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about feeling in a values context.",
+    "example": "The child had boundless energy during the holiday.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 720,
-    "word": "fierce",
+    "word": "bulky",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is fierce",
-    "chinese": "“fierce”的常用中文释义",
+    "meaning": "large and difficult to carry",
+    "chinese": "笨重的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as fierce by the teacher.",
+    "example": "The bulky parcel would not fit in the cupboard.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 721,
-    "word": "flexible",
-    "partOfSpeech": "adjective",
+    "word": "bystander",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "describing someone or something that is flexible",
-    "chinese": "“flexible”的常用中文释义",
+    "meaning": "a person who is present but not involved in an event",
+    "chinese": "旁观者",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as flexible by the teacher.",
+    "example": "A bystander called for help after the accident.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 722,
-    "word": "focus",
-    "partOfSpeech": "verb",
+    "word": "capable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to focus or to carry out the action described by the word",
-    "chinese": "“focus”的常用中文释义",
+    "meaning": "having the ability to do something well",
+    "chinese": "有能力的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to focus carefully during the values activity.",
+    "example": "Maya is capable of completing the task alone.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 723,
-    "word": "fortunate",
+    "word": "casual",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is fortunate",
-    "chinese": "“fortunate”的常用中文释义",
+    "meaning": "relaxed and not formal",
+    "chinese": "随意的；非正式的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as fortunate by the teacher.",
+    "example": "He wore casual clothes to the picnic.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 724,
-    "word": "frequent",
-    "partOfSpeech": "adjective",
+    "word": "cherish",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is frequent",
-    "chinese": "“frequent”的常用中文释义",
+    "meaning": "to care for someone or something deeply",
+    "chinese": "珍爱；珍惜",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as frequent by the teacher.",
+    "example": "We should cherish the time we spend with our grandparents.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 725,
-    "word": "friendly",
+    "word": "clumsy",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is friendly",
-    "chinese": "“friendly”的常用中文释义",
+    "meaning": "moving or handling things awkwardly",
+    "chinese": "笨拙的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as friendly by the teacher.",
+    "example": "The clumsy puppy knocked over the vase.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 726,
-    "word": "frighten",
-    "partOfSpeech": "noun",
+    "word": "commend",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with frighten",
-    "chinese": "“frighten”的常用中文释义",
+    "meaning": "to praise someone or something",
+    "chinese": "表扬；称赞",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about frighten in a values context.",
+    "example": "The principal commended the pupil for her honesty.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 727,
-    "word": "generous",
-    "partOfSpeech": "adjective",
+    "word": "concede",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is generous",
-    "chinese": "“generous”的常用中文释义",
+    "meaning": "to admit that something is true after first disagreeing",
+    "chinese": "承认；让步",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as generous by the teacher.",
+    "example": "He finally conceded that his answer was wrong.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 728,
-    "word": "gentle",
+    "word": "conclusive",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is gentle",
-    "chinese": "“gentle”的常用中文释义",
+    "meaning": "proving something clearly and finally",
+    "chinese": "决定性的；确凿的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as gentle by the teacher.",
+    "example": "There was no conclusive evidence against him.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 729,
-    "word": "genuine",
-    "partOfSpeech": "adjective",
+    "word": "condemn",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is genuine",
-    "chinese": "“genuine”的常用中文释义",
+    "meaning": "to strongly say that something is wrong",
+    "chinese": "谴责",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as genuine by the teacher.",
+    "example": "The school condemned bullying in all forms.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 730,
-    "word": "grateful",
-    "partOfSpeech": "adjective",
+    "word": "confess",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is grateful",
-    "chinese": "“grateful”的常用中文释义",
+    "meaning": "to admit that you have done something wrong",
+    "chinese": "承认；坦白",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as grateful by the teacher.",
+    "example": "The boy confessed that he had broken the window.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 731,
-    "word": "harm",
-    "partOfSpeech": "noun",
+    "word": "confide",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with harm",
-    "chinese": "“harm”的常用中文释义",
+    "meaning": "to tell someone a secret or private matter",
+    "chinese": "吐露；倾诉",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about harm in a values context.",
+    "example": "She confided her worries to her best friend.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 732,
-    "word": "healthy",
+    "word": "considerate",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is healthy",
-    "chinese": "“healthy”的常用中文释义",
+    "meaning": "careful not to hurt or inconvenience others",
+    "chinese": "体贴的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as healthy by the teacher.",
+    "example": "It was considerate of him to lower his voice.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 733,
-    "word": "honest",
+    "word": "constructive",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is honest",
-    "chinese": "“honest”的常用中文释义",
+    "meaning": "helpful in improving something",
+    "chinese": "建设性的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as honest by the teacher.",
+    "example": "The teacher gave constructive feedback.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 734,
-    "word": "identify",
-    "partOfSpeech": "verb",
+    "word": "contagious",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to identify or to carry out the action described by the word",
-    "chinese": "“identify”的常用中文释义",
+    "meaning": "able to spread from one person to another",
+    "chinese": "传染性的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to identify carefully during the values activity.",
+    "example": "The doctor explained how the illness was contagious.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 735,
-    "word": "imagine",
+    "word": "contradict",
     "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "to imagine or to carry out the action described by the word",
-    "chinese": "“imagine”的常用中文释义",
+    "meaning": "to say that something is not true or correct",
+    "chinese": "反驳；与…矛盾",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to imagine carefully during the values activity.",
+    "example": "His actions contradict his words.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 736,
-    "word": "immediate",
-    "partOfSpeech": "noun",
+    "word": "cordial",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with immediate",
-    "chinese": "“immediate”的常用中文释义",
+    "meaning": "friendly and polite",
+    "chinese": "友好的；热诚的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about immediate in a values context.",
+    "example": "They exchanged cordial greetings.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 737,
-    "word": "improve",
-    "partOfSpeech": "verb",
+    "word": "curiosity",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "to improve or to carry out the action described by the word",
-    "chinese": "“improve”的常用中文释义",
-    "synonyms": [
-      "enhance",
-      "develop"
-    ],
+    "meaning": "a strong desire to know or learn something",
+    "chinese": "好奇心",
+    "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to improve carefully during the values activity.",
+    "example": "Her curiosity led her to explore the old building.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 738,
-    "word": "include",
-    "partOfSpeech": "verb",
+    "word": "daring",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to include or to carry out the action described by the word",
-    "chinese": "“include”的常用中文释义",
+    "meaning": "brave and willing to take risks",
+    "chinese": "大胆的；勇敢的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to include carefully during the values activity.",
+    "example": "The daring rescue saved the trapped climber.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 739,
-    "word": "increase",
+    "word": "deceive",
     "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "to increase or to carry out the action described by the word",
-    "chinese": "“increase”的常用中文释义",
+    "meaning": "to make someone believe something that is not true",
+    "chinese": "欺骗",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to increase carefully during the values activity.",
+    "example": "He tried to deceive the guard.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 740,
-    "word": "independent",
+    "word": "decisive",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "able to do things without needing help",
-    "chinese": "独立的",
+    "meaning": "able to make choices quickly and firmly",
+    "chinese": "果断的",
     "synonyms": [],
-    "antonyms": [
-      "dependent"
-    ],
-    "example": "The values situation was described as independent by the teacher.",
+    "antonyms": [],
+    "example": "The decisive captain led the team to victory.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 741,
-    "word": "influence",
-    "partOfSpeech": "verb",
+    "word": "dedicated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "the power to affect people or things",
-    "chinese": "影响",
+    "meaning": "giving a lot of time and effort to something",
+    "chinese": "专心致志的；奉献的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to influence carefully during the values activity.",
+    "example": "The dedicated volunteer helped every weekend.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 742,
-    "word": "inform",
+    "word": "defy",
     "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "to inform or to carry out the action described by the word",
-    "chinese": "“inform”的常用中文释义",
+    "meaning": "to refuse to obey or accept something",
+    "chinese": "违抗；不服从",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to inform carefully during the values activity.",
+    "example": "The brave child defied the unfair rule.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 743,
-    "word": "inspect",
-    "partOfSpeech": "verb",
+    "word": "demanding",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to inspect or to carry out the action described by the word",
-    "chinese": "“inspect”的常用中文释义",
+    "meaning": "requiring a lot of effort or skill",
+    "chinese": "要求高的；费力的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to inspect carefully during the values activity.",
+    "example": "The demanding task took several hours.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 744,
-    "word": "instead",
-    "partOfSpeech": "noun",
+    "word": "depict",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with instead",
-    "chinese": "“instead”的常用中文释义",
+    "meaning": "to show or describe someone or something",
+    "chinese": "描绘；描述",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about instead in a values context.",
+    "example": "The painting depicts life in a village.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 745,
-    "word": "intelligent",
+    "word": "determined",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is intelligent",
-    "chinese": "“intelligent”的常用中文释义",
+    "meaning": "having made a firm decision to do something",
+    "chinese": "坚定的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as intelligent by the teacher.",
+    "example": "She was determined to finish the race.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 746,
-    "word": "intend",
-    "partOfSpeech": "verb",
+    "word": "devastated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to intend or to carry out the action described by the word",
-    "chinese": "“intend”的常用中文释义",
+    "meaning": "extremely shocked and upset",
+    "chinese": "极度难过的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to intend carefully during the values activity.",
+    "example": "He was devastated when his pet died.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 747,
-    "word": "interest",
-    "partOfSpeech": "noun",
+    "word": "diplomatic",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with interest",
-    "chinese": "“interest”的常用中文释义",
+    "meaning": "careful to avoid upsetting people when dealing with problems",
+    "chinese": "圆滑的；讲策略的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about interest in a values context.",
+    "example": "She gave a diplomatic answer to the difficult question.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 748,
-    "word": "invent",
-    "partOfSpeech": "verb",
+    "word": "disgusted",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to invent or to carry out the action described by the word",
-    "chinese": "“invent”的常用中文释义",
+    "meaning": "feeling strong dislike because something is unpleasant",
+    "chinese": "厌恶的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to invent carefully during the values activity.",
+    "example": "The children were disgusted by the rotten food.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 749,
-    "word": "invite",
-    "partOfSpeech": "verb",
+    "word": "dispute",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "to invite or to carry out the action described by the word",
-    "chinese": "“invite”的常用中文释义",
+    "meaning": "an argument or disagreement",
+    "chinese": "争执；争议",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to invite carefully during the values activity.",
+    "example": "The neighbours had a dispute over the fence.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 750,
-    "word": "involve",
-    "partOfSpeech": "verb",
+    "word": "distinct",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to involve or to carry out the action described by the word",
-    "chinese": "“involve”的常用中文释义",
+    "meaning": "clearly different or easy to recognise",
+    "chinese": "明显不同的；清晰的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to involve carefully during the values activity.",
+    "example": "There was a distinct smell of smoke.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 751,
-    "word": "journey",
-    "partOfSpeech": "noun",
+    "word": "distract",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with journey",
-    "chinese": "“journey”的常用中文释义",
+    "meaning": "to take someone's attention away from something",
+    "chinese": "使分心",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about journey in a values context.",
+    "example": "The noise distracted me from my homework.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 752,
-    "word": "judge",
-    "partOfSpeech": "noun",
+    "word": "doubtful",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with judge",
-    "chinese": "“judge”的常用中文释义",
+    "meaning": "not certain or unlikely",
+    "chinese": "怀疑的；不确定的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about judge in a values context.",
+    "example": "I was doubtful that the plan would work.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 753,
-    "word": "knowledge",
-    "partOfSpeech": "noun",
+    "word": "durable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with knowledge",
-    "chinese": "“knowledge”的常用中文释义",
+    "meaning": "able to last a long time without damage",
+    "chinese": "耐用的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about knowledge in a values context.",
+    "example": "The durable bag lasted for many years.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 754,
-    "word": "lack",
-    "partOfSpeech": "noun",
+    "word": "embarrassed",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with lack",
-    "chinese": "“lack”的常用中文释义",
+    "meaning": "feeling ashamed or awkward",
+    "chinese": "尴尬的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about lack in a values context.",
+    "example": "He felt embarrassed after falling on stage.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 755,
-    "word": "language",
-    "partOfSpeech": "noun",
+    "word": "endure",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with language",
-    "chinese": "“language”的常用中文释义",
+    "meaning": "to suffer something difficult without giving up",
+    "chinese": "忍受",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about language in a values context.",
+    "example": "The runners endured the heat bravely.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 756,
-    "word": "latest",
-    "partOfSpeech": "noun",
+    "word": "entitled",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with latest",
-    "chinese": "“latest”的常用中文释义",
+    "meaning": "believing that you deserve special treatment",
+    "chinese": "自以为应得的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about latest in a values context.",
+    "example": "His entitled attitude annoyed his teammates.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 757,
-    "word": "lead",
-    "partOfSpeech": "noun",
+    "word": "entirely",
+    "partOfSpeech": "adverb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with lead",
-    "chinese": "“lead”的常用中文释义",
+    "meaning": "completely",
+    "chinese": "完全地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about lead in a values context.",
+    "example": "The answer was entirely correct.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 758,
-    "word": "leader",
-    "partOfSpeech": "noun",
+    "word": "enthusiastic",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with leader",
-    "chinese": "“leader”的常用中文释义",
+    "meaning": "very interested and excited about something",
+    "chinese": "热情的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about leader in a values context.",
+    "example": "The enthusiastic pupils joined the activity.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 759,
-    "word": "legal",
+    "word": "envious",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is legal",
-    "chinese": "“legal”的常用中文释义",
+    "meaning": "wanting something that another person has",
+    "chinese": "嫉妒的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as legal by the teacher.",
+    "example": "He felt envious of his friend's new bicycle.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 760,
-    "word": "likely",
+    "word": "ethical",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is likely",
-    "chinese": "“likely”的常用中文释义",
+    "meaning": "relating to what is right and fair",
+    "chinese": "合乎道德的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as likely by the teacher.",
+    "example": "The pupils discussed the ethical problem.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 761,
-    "word": "limit",
-    "partOfSpeech": "noun",
+    "word": "evacuate",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with limit",
-    "chinese": "“limit”的常用中文释义",
+    "meaning": "to leave a place because it is dangerous",
+    "chinese": "撤离",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about limit in a values context.",
+    "example": "Residents had to evacuate the building.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 762,
-    "word": "local",
-    "partOfSpeech": "adjective",
+    "word": "exhaust",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is local",
-    "chinese": "“local”的常用中文释义",
+    "meaning": "to make someone extremely tired",
+    "chinese": "使筋疲力尽",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as local by the teacher.",
+    "example": "The long walk exhausted everyone.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 763,
-    "word": "lonely",
+    "word": "extensive",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is lonely",
-    "chinese": "“lonely”的常用中文释义",
+    "meaning": "covering a large area or range",
+    "chinese": "广泛的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as lonely by the teacher.",
+    "example": "The library has an extensive collection of books.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 764,
-    "word": "manage",
+    "word": "fascinate",
     "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "to manage or to carry out the action described by the word",
-    "chinese": "“manage”的常用中文释义",
+    "meaning": "to interest someone greatly",
+    "chinese": "使着迷",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to manage carefully during the values activity.",
+    "example": "The stars fascinated the children.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 765,
-    "word": "manner",
-    "partOfSpeech": "noun",
+    "word": "favourable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with manner",
-    "chinese": "“manner”的常用中文释义",
+    "meaning": "positive or helpful",
+    "chinese": "有利的；赞成的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about manner in a values context.",
+    "example": "The weather was favourable for the outdoor event.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 766,
-    "word": "material",
-    "partOfSpeech": "noun",
+    "word": "fragile",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with material",
-    "chinese": "“material”的常用中文释义",
+    "meaning": "easily broken or damaged",
+    "chinese": "易碎的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about material in a values context.",
+    "example": "The fragile glass must be handled carefully.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 767,
-    "word": "measure",
-    "partOfSpeech": "verb",
+    "word": "frustrated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to measure or to carry out the action described by the word",
-    "chinese": "“measure”的常用中文释义",
+    "meaning": "annoyed because you cannot achieve what you want",
+    "chinese": "沮丧的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to measure carefully during the values activity.",
+    "example": "She felt frustrated when the computer stopped working.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 768,
-    "word": "mention",
-    "partOfSpeech": "verb",
+    "word": "glimpse",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "to mention or to carry out the action described by the word",
-    "chinese": "“mention”的常用中文释义",
+    "meaning": "a quick look at someone or something",
+    "chinese": "一瞥",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to mention carefully during the values activity.",
+    "example": "I caught a glimpse of the bird before it flew away.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 769,
-    "word": "method",
-    "partOfSpeech": "noun",
+    "word": "gloomy",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with method",
-    "chinese": "“method”的常用中文释义",
+    "meaning": "dark or making you feel sad",
+    "chinese": "阴暗的；忧郁的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about method in a values context.",
+    "example": "The gloomy sky suggested that rain was coming.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 770,
-    "word": "modern",
-    "partOfSpeech": "noun",
+    "word": "greedy",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with modern",
-    "chinese": "“modern”的常用中文释义",
+    "meaning": "wanting more than you need or deserve",
+    "chinese": "贪婪的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about modern in a values context.",
+    "example": "The greedy child took all the sweets.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 771,
-    "word": "natural",
+    "word": "harsh",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is natural",
-    "chinese": "“natural”的常用中文释义",
+    "meaning": "very severe, unpleasant, or unkind",
+    "chinese": "严厉的；恶劣的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as natural by the teacher.",
+    "example": "The harsh weather made travel difficult.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 772,
-    "word": "necessary",
+    "word": "hesitant",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is necessary",
-    "chinese": "“necessary”的常用中文释义",
+    "meaning": "uncertain about what to do",
+    "chinese": "犹豫的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as necessary by the teacher.",
+    "example": "She was hesitant to enter the dark room.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 773,
-    "word": "notice",
-    "partOfSpeech": "noun",
+    "word": "honourable",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with notice",
-    "chinese": "“notice”的常用中文释义",
+    "meaning": "deserving respect because of good behaviour",
+    "chinese": "值得尊敬的；正直的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about notice in a values context.",
+    "example": "He made an honourable decision.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 774,
-    "word": "obvious",
+    "word": "humble",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is obvious",
-    "chinese": "“obvious”的常用中文释义",
+    "meaning": "not thinking that you are better than others",
+    "chinese": "谦逊的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as obvious by the teacher.",
+    "example": "Despite winning, she remained humble.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 775,
-    "word": "offer",
-    "partOfSpeech": "verb",
+    "word": "ignorant",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to offer or to carry out the action described by the word",
-    "chinese": "“offer”的常用中文释义",
+    "meaning": "lacking knowledge or understanding",
+    "chinese": "无知的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to offer carefully during the values activity.",
+    "example": "It is unwise to remain ignorant of the rules.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 776,
-    "word": "ordinary",
+    "word": "impatient",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is ordinary",
-    "chinese": "“ordinary”的常用中文释义",
+    "meaning": "unable to wait calmly",
+    "chinese": "不耐烦的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as ordinary by the teacher.",
+    "example": "The impatient child kept asking when the bus would arrive.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 777,
-    "word": "organise",
-    "partOfSpeech": "verb",
+    "word": "impressive",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to organise or to carry out the action described by the word",
-    "chinese": "“organise”的常用中文释义",
+    "meaning": "causing admiration because of quality or skill",
+    "chinese": "令人印象深刻的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to organise carefully during the values activity.",
+    "example": "Her impressive performance won the prize.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 778,
-    "word": "original",
+    "word": "inadequate",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is original",
-    "chinese": "“original”的常用中文释义",
+    "meaning": "not good or enough for a particular purpose",
+    "chinese": "不足的；不充分的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as original by the teacher.",
+    "example": "The old bridge was inadequate for heavy traffic.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 779,
-    "word": "patient",
+    "word": "incapable",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is patient",
-    "chinese": "“patient”的常用中文释义",
+    "meaning": "unable to do something",
+    "chinese": "无能力的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as patient by the teacher.",
+    "example": "The broken machine was incapable of moving.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 780,
-    "word": "pattern",
+    "word": "incident",
     "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with pattern",
-    "chinese": "“pattern”的常用中文释义",
+    "meaning": "an event, especially one that is unusual or unpleasant",
+    "chinese": "事件",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about pattern in a values context.",
+    "example": "The teacher reported the incident to the principal.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 781,
-    "word": "perform",
-    "partOfSpeech": "noun",
+    "word": "inclined",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with perform",
-    "chinese": "“perform”的常用中文释义",
+    "meaning": "likely or willing to do something",
+    "chinese": "倾向于的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about perform in a values context.",
+    "example": "I am inclined to agree with your idea.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 782,
-    "word": "perhaps",
-    "partOfSpeech": "noun",
+    "word": "indifferent",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with perhaps",
-    "chinese": "“perhaps”的常用中文释义",
+    "meaning": "not interested or concerned",
+    "chinese": "漠不关心的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about perhaps in a values context.",
+    "example": "He seemed indifferent to the warning.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 783,
-    "word": "period",
-    "partOfSpeech": "noun",
+    "word": "industrious",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with period",
-    "chinese": "“period”的常用中文释义",
+    "meaning": "working hard and steadily",
+    "chinese": "勤劳的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about period in a values context.",
+    "example": "The industrious farmer worked from dawn to dusk.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 784,
-    "word": "personal",
-    "partOfSpeech": "adjective",
+    "word": "ingenuity",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "describing someone or something that is personal",
-    "chinese": "“personal”的常用中文释义",
+    "meaning": "cleverness in finding new solutions",
+    "chinese": "独创力；聪明才智",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as personal by the teacher.",
+    "example": "Her ingenuity helped the team solve the problem.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 785,
-    "word": "persuade",
-    "partOfSpeech": "verb",
+    "word": "innocent",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to persuade or to carry out the action described by the word",
-    "chinese": "“persuade”的常用中文释义",
+    "meaning": "not guilty of a crime or wrongdoing",
+    "chinese": "无辜的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to persuade carefully during the values activity.",
+    "example": "The innocent child knew nothing about the missing money.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 786,
-    "word": "physical",
-    "partOfSpeech": "adjective",
+    "word": "insist",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is physical",
-    "chinese": "“physical”的常用中文释义",
+    "meaning": "to demand something firmly",
+    "chinese": "坚持要求",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as physical by the teacher.",
+    "example": "She insisted on telling the truth.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 787,
-    "word": "popular",
-    "partOfSpeech": "adjective",
+    "word": "interpret",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is popular",
-    "chinese": "“popular”的常用中文释义",
+    "meaning": "to explain the meaning of something",
+    "chinese": "解释；诠释",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as popular by the teacher.",
+    "example": "Can you interpret the message for me?",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 788,
-    "word": "possible",
-    "partOfSpeech": "adjective",
+    "word": "intimidate",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is possible",
-    "chinese": "“possible”的常用中文释义",
+    "meaning": "to frighten someone so that they lose confidence",
+    "chinese": "恐吓",
     "synonyms": [],
-    "antonyms": [
-      "impossible"
-    ],
-    "example": "The values situation was described as possible by the teacher.",
+    "antonyms": [],
+    "example": "The older pupils tried to intimidate him.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 789,
-    "word": "practical",
+    "word": "keen",
     "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "describing someone or something that is practical",
-    "chinese": "“practical”的常用中文释义",
+    "meaning": "very interested or eager",
+    "chinese": "热衷的；渴望的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as practical by the teacher.",
+    "example": "She is keen to learn a new skill.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 790,
-    "word": "prefer",
-    "partOfSpeech": "noun",
+    "word": "loyal",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with prefer",
-    "chinese": "“prefer”的常用中文释义",
+    "meaning": "showing strong support for someone or something",
+    "chinese": "忠诚的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about prefer in a values context.",
+    "example": "The loyal dog waited for its owner.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 791,
-    "word": "prepare",
-    "partOfSpeech": "verb",
+    "word": "magnificent",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to prepare or to carry out the action described by the word",
-    "chinese": "“prepare”的常用中文释义",
+    "meaning": "extremely beautiful or impressive",
+    "chinese": "壮丽的；宏伟的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to prepare carefully during the values activity.",
+    "example": "We saw a magnificent sunset.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 792,
-    "word": "private",
-    "partOfSpeech": "adjective",
+    "word": "mercy",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "describing someone or something that is private",
-    "chinese": "“private”的常用中文释义",
+    "meaning": "kindness shown to someone who could be punished",
+    "chinese": "仁慈；宽恕",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as private by the teacher.",
+    "example": "The judge showed mercy to the young offender.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 793,
-    "word": "problem",
-    "partOfSpeech": "noun",
+    "word": "modest",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with problem",
-    "chinese": "“problem”的常用中文释义",
+    "meaning": "not talking proudly about your abilities or achievements",
+    "chinese": "谦虚的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about problem in a values context.",
+    "example": "Despite his success, he remained modest.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 794,
-    "word": "process",
-    "partOfSpeech": "noun",
+    "word": "motivated",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with process",
-    "chinese": "“process”的常用中文释义",
+    "meaning": "having a strong reason or desire to do something",
+    "chinese": "有动力的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about process in a values context.",
+    "example": "The motivated team practised every day.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 795,
-    "word": "produce",
-    "partOfSpeech": "verb",
+    "word": "mysterious",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "to produce or to carry out the action described by the word",
-    "chinese": "“produce”的常用中文释义",
+    "meaning": "difficult to explain or understand",
+    "chinese": "神秘的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to produce carefully during the values activity.",
+    "example": "A mysterious sound came from the attic.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 796,
-    "word": "protect",
+    "word": "neglect",
     "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "to keep someone or something safe",
-    "chinese": "保护",
-    "synonyms": [
-      "guard",
-      "defend"
-    ],
+    "meaning": "to fail to give proper care or attention",
+    "chinese": "忽视；疏于照顾",
+    "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to protect carefully during the values activity.",
+    "example": "Do not neglect your responsibilities.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 797,
-    "word": "provide",
-    "partOfSpeech": "verb",
+    "word": "obstacle",
+    "partOfSpeech": "noun",
     "level": 8,
-    "meaning": "to provide or to carry out the action described by the word",
-    "chinese": "“provide”的常用中文释义",
+    "meaning": "something that makes it difficult to achieve something",
+    "chinese": "障碍",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to provide carefully during the values activity.",
+    "example": "Lack of time was the biggest obstacle.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 798,
-    "word": "purpose",
-    "partOfSpeech": "noun",
+    "word": "originate",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with purpose",
-    "chinese": "“purpose”的常用中文释义",
+    "meaning": "to begin or come from a particular place or source",
+    "chinese": "起源于",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about purpose in a values context.",
+    "example": "The tradition originated in the village.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 799,
-    "word": "quality",
-    "partOfSpeech": "noun",
+    "word": "outstanding",
+    "partOfSpeech": "adjective",
     "level": 8,
-    "meaning": "a person, thing, idea, or situation connected with quality",
-    "chinese": "“quality”的常用中文释义",
+    "meaning": "extremely good",
+    "chinese": "杰出的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about quality in a values context.",
+    "example": "She gave an outstanding performance.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 800,
-    "word": "quiet",
-    "partOfSpeech": "adjective",
+    "word": "overcome",
+    "partOfSpeech": "verb",
     "level": 8,
-    "meaning": "describing someone or something that is quiet",
-    "chinese": "“quiet”的常用中文释义",
+    "meaning": "to succeed in dealing with a difficulty",
+    "chinese": "克服",
     "synonyms": [],
     "antonyms": [],
-    "example": "The values situation was described as quiet by the teacher.",
+    "example": "He overcame his fear of speaking in public.",
     "topics": [
-      "environment"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 801,
-    "word": "reason",
-    "partOfSpeech": "noun",
+    "word": "partial",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with reason",
-    "chinese": "“reason”的常用中文释义",
+    "meaning": "not complete or fair",
+    "chinese": "部分的；偏袒的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about reason in a society context.",
+    "example": "The information was only partial.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 802,
-    "word": "receive",
+    "word": "perceive",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to receive or to carry out the action described by the word",
-    "chinese": "“receive”的常用中文释义",
+    "meaning": "to notice or understand something",
+    "chinese": "察觉；理解",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to receive carefully during the society activity.",
+    "example": "She perceived a change in his voice.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 803,
-    "word": "recent",
-    "partOfSpeech": "noun",
+    "word": "pessimistic",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with recent",
-    "chinese": "“recent”的常用中文释义",
+    "meaning": "expecting bad things to happen",
+    "chinese": "悲观的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about recent in a society context.",
+    "example": "The pessimistic forecast worried the farmers.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 804,
-    "word": "recognise",
-    "partOfSpeech": "verb",
+    "word": "predictable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to recognise or to carry out the action described by the word",
-    "chinese": "“recognise”的常用中文释义",
+    "meaning": "easy to expect because it follows a pattern",
+    "chinese": "可预料的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to recognise carefully during the society activity.",
+    "example": "The ending of the story was predictable.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 805,
-    "word": "reduce",
-    "partOfSpeech": "verb",
+    "word": "prejudice",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to reduce or to carry out the action described by the word",
-    "chinese": "“reduce”的常用中文释义",
+    "meaning": "an unfair opinion about a person or group",
+    "chinese": "偏见",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to reduce carefully during the society activity.",
+    "example": "We should not judge people because of prejudice.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 806,
-    "word": "refuse",
-    "partOfSpeech": "verb",
+    "word": "privilege",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to refuse or to carry out the action described by the word",
-    "chinese": "“refuse”的常用中文释义",
+    "meaning": "a special advantage or right given to someone",
+    "chinese": "特权",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to refuse carefully during the society activity.",
+    "example": "It is a privilege to represent the school.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 807,
-    "word": "region",
-    "partOfSpeech": "noun",
+    "word": "proficient",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with region",
-    "chinese": "“region”的常用中文释义",
+    "meaning": "skilled and competent",
+    "chinese": "熟练的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about region in a society context.",
+    "example": "She is proficient in English.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 808,
-    "word": "remain",
+    "word": "prohibit",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to remain or to carry out the action described by the word",
-    "chinese": "“remain”的常用中文释义",
+    "meaning": "to officially stop something from being done",
+    "chinese": "禁止",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to remain carefully during the society activity.",
+    "example": "The sign prohibits parking here.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 809,
-    "word": "remove",
+    "word": "prosper",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to remove or to carry out the action described by the word",
-    "chinese": "“remove”的常用中文释义",
+    "meaning": "to become successful or wealthy",
+    "chinese": "繁荣；成功",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to remove carefully during the society activity.",
+    "example": "The small business continued to prosper.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 810,
-    "word": "repair",
-    "partOfSpeech": "verb",
+    "word": "prosperous",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to repair or to carry out the action described by the word",
-    "chinese": "“repair”的常用中文释义",
+    "meaning": "successful and financially strong",
+    "chinese": "繁荣的；富裕的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to repair carefully during the society activity.",
+    "example": "The town became prosperous after the new port opened.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 811,
-    "word": "replace",
+    "word": "restrain",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to replace or to carry out the action described by the word",
-    "chinese": "“replace”的常用中文释义",
+    "meaning": "to prevent someone or something from acting freely",
+    "chinese": "抑制；约束",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to replace carefully during the society activity.",
+    "example": "He struggled to restrain his anger.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 812,
-    "word": "report",
-    "partOfSpeech": "verb",
+    "word": "ridiculous",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to report or to carry out the action described by the word",
-    "chinese": "“report”的常用中文释义",
+    "meaning": "very silly or unreasonable",
+    "chinese": "可笑的；荒谬的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to report carefully during the society activity.",
+    "example": "It would be ridiculous to ignore the warning.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 813,
-    "word": "request",
-    "partOfSpeech": "verb",
+    "word": "rival",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to request or to carry out the action described by the word",
-    "chinese": "“request”的常用中文释义",
+    "meaning": "a person or group competing with another",
+    "chinese": "竞争者；对手",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to request carefully during the society activity.",
+    "example": "The two teams have been rivals for years.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 814,
-    "word": "require",
-    "partOfSpeech": "verb",
+    "word": "sceptical",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to require or to carry out the action described by the word",
-    "chinese": "“require”的常用中文释义",
+    "meaning": "not easily convinced that something is true",
+    "chinese": "怀疑的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to require carefully during the society activity.",
+    "example": "The scientist was sceptical of the claim.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 815,
-    "word": "rescue",
-    "partOfSpeech": "verb",
+    "word": "severe",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to rescue or to carry out the action described by the word",
-    "chinese": "“rescue”的常用中文释义",
+    "meaning": "very serious or harsh",
+    "chinese": "严重的；严厉的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to rescue carefully during the society activity.",
+    "example": "The storm caused severe damage.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 816,
-    "word": "respect",
-    "partOfSpeech": "verb",
+    "word": "sophisticated",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to respect or to carry out the action described by the word",
-    "chinese": "“respect”的常用中文释义",
+    "meaning": "having a high level of skill or development",
+    "chinese": "复杂的；先进的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to respect carefully during the society activity.",
+    "example": "The city has a sophisticated transport system.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 817,
-    "word": "responsible",
-    "partOfSpeech": "adjective",
+    "word": "speculate",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "having a duty to take care of something",
-    "chinese": "负责任的",
-    "synonyms": [
-      "accountable"
-    ],
-    "antonyms": [
-      "irresponsible"
-    ],
-    "example": "The society situation was described as responsible by the teacher.",
+    "meaning": "to guess about something without enough evidence",
+    "chinese": "推测",
+    "synonyms": [],
+    "antonyms": [],
+    "example": "People began to speculate about the cause of the fire.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 818,
-    "word": "result",
-    "partOfSpeech": "noun",
+    "word": "stern",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with result",
-    "chinese": "“result”的常用中文释义",
+    "meaning": "strict and serious",
+    "chinese": "严厉的；严格的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about result in a society context.",
+    "example": "The coach gave the players a stern warning.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 819,
-    "word": "return",
-    "partOfSpeech": "verb",
+    "word": "sympathetic",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to return or to carry out the action described by the word",
-    "chinese": "“return”的常用中文释义",
+    "meaning": "showing care and understanding",
+    "chinese": "同情的；体谅的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to return carefully during the society activity.",
+    "example": "The teacher was sympathetic to his situation.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 820,
-    "word": "reward",
+    "word": "tempt",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to reward or to carry out the action described by the word",
-    "chinese": "“reward”的常用中文释义",
+    "meaning": "to attract someone to do something they should not do",
+    "chinese": "诱惑",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to reward carefully during the society activity.",
+    "example": "The delicious cake tempted me to have another slice.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 821,
-    "word": "risk",
-    "partOfSpeech": "noun",
+    "word": "tolerant",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with risk",
-    "chinese": "“risk”的常用中文释义",
+    "meaning": "willing to accept differences in others",
+    "chinese": "宽容的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about risk in a society context.",
+    "example": "A tolerant community respects different opinions.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 822,
-    "word": "safe",
-    "partOfSpeech": "adjective",
+    "word": "triumph",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "describing someone or something that is safe",
-    "chinese": "“safe”的常用中文释义",
+    "meaning": "a great victory or success",
+    "chinese": "胜利；成功",
     "synonyms": [],
-    "antonyms": [
-      "dangerous"
-    ],
-    "example": "The society situation was described as safe by the teacher.",
+    "antonyms": [],
+    "example": "Winning the final was a great triumph.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 823,
-    "word": "save",
-    "partOfSpeech": "verb",
+    "word": "trustworthy",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to save or to carry out the action described by the word",
-    "chinese": "“save”的常用中文释义",
+    "meaning": "deserving to be trusted",
+    "chinese": "值得信赖的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to save carefully during the society activity.",
+    "example": "She is a trustworthy friend.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 824,
-    "word": "search",
-    "partOfSpeech": "verb",
+    "word": "uncertain",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to search or to carry out the action described by the word",
-    "chinese": "“search”的常用中文释义",
+    "meaning": "not known or decided",
+    "chinese": "不确定的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to search carefully during the society activity.",
+    "example": "The outcome of the match was uncertain.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 825,
-    "word": "secure",
+    "word": "underestimate",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to secure or to carry out the action described by the word",
-    "chinese": "“secure”的常用中文释义",
+    "meaning": "to think that someone or something is less capable than they really are",
+    "chinese": "低估",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to secure carefully during the society activity.",
+    "example": "Never underestimate the value of practice.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 826,
-    "word": "separate",
-    "partOfSpeech": "verb",
+    "word": "unpredictable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "to separate or to carry out the action described by the word",
-    "chinese": "“separate”的常用中文释义",
+    "meaning": "not able to be known in advance",
+    "chinese": "不可预测的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to separate carefully during the society activity.",
+    "example": "The weather is unpredictable during the monsoon season.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 827,
-    "word": "serious",
+    "word": "unwilling",
     "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "describing someone or something that is serious",
-    "chinese": "“serious”的常用中文释义",
+    "meaning": "not wanting to do something",
+    "chinese": "不愿意的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as serious by the teacher.",
+    "example": "He was unwilling to admit his mistake.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 828,
-    "word": "service",
-    "partOfSpeech": "noun",
+    "word": "worthy",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with service",
-    "chinese": "“service”的常用中文释义",
+    "meaning": "deserving respect or attention",
+    "chinese": "值得的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about service in a society context.",
+    "example": "Her actions were worthy of praise.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 829,
-    "word": "similar",
+    "word": "accidental",
     "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "describing someone or something that is similar",
-    "chinese": "“similar”的常用中文释义",
+    "meaning": "happening by chance rather than on purpose",
+    "chinese": "意外的",
     "synonyms": [],
-    "antonyms": [
-      "different"
-    ],
-    "example": "The society situation was described as similar by the teacher.",
+    "antonyms": [],
+    "example": "The broken vase was accidental.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 830,
-    "word": "simple",
-    "partOfSpeech": "adjective",
+    "word": "accurately",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "describing someone or something that is simple",
-    "chinese": "“simple”的常用中文释义",
+    "meaning": "in a correct and exact way",
+    "chinese": "准确地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as simple by the teacher.",
+    "example": "Please measure the length accurately.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 831,
-    "word": "sincere",
+    "word": "admirable",
     "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "describing someone or something that is sincere",
-    "chinese": "“sincere”的常用中文释义",
+    "meaning": "deserving respect or approval",
+    "chinese": "令人钦佩的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as sincere by the teacher.",
+    "example": "Her admirable courage inspired everyone.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 832,
-    "word": "skill",
-    "partOfSpeech": "noun",
+    "word": "agitate",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with skill",
-    "chinese": "“skill”的常用中文释义",
+    "meaning": "to make someone worried or upset",
+    "chinese": "使焦虑；使不安",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about skill in a society context.",
+    "example": "The news agitated the crowd.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 833,
-    "word": "social",
-    "partOfSpeech": "adjective",
+    "word": "alliance",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "describing someone or something that is social",
-    "chinese": "“social”的常用中文释义",
+    "meaning": "an agreement between people or groups to work together",
+    "chinese": "联盟；合作",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as social by the teacher.",
+    "example": "The two clubs formed an alliance.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 834,
-    "word": "solution",
-    "partOfSpeech": "noun",
+    "word": "alter",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "an answer to a problem",
-    "chinese": "解决办法",
+    "meaning": "to change something",
+    "chinese": "改变",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about solution in a society context.",
+    "example": "We had to alter our plans because of the rain.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 835,
-    "word": "source",
+    "word": "amazement",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with source",
-    "chinese": "“source”的常用中文释义",
+    "meaning": "a feeling of great surprise",
+    "chinese": "惊讶",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about source in a society context.",
+    "example": "The magician's trick caused amazement.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 836,
-    "word": "special",
+    "word": "amusing",
     "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "describing someone or something that is special",
-    "chinese": "“special”的常用中文释义",
+    "meaning": "funny and entertaining",
+    "chinese": "有趣的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as special by the teacher.",
+    "example": "The amusing story made everyone laugh.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 837,
-    "word": "spread",
-    "partOfSpeech": "verb",
+    "word": "appreciation",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to spread or to carry out the action described by the word",
-    "chinese": "“spread”的常用中文释义",
+    "meaning": "a feeling of gratitude or understanding",
+    "chinese": "感激；欣赏",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to spread carefully during the society activity.",
+    "example": "She showed appreciation for the volunteers.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 838,
-    "word": "strange",
-    "partOfSpeech": "adjective",
+    "word": "aptitude",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "describing someone or something that is strange",
-    "chinese": "“strange”的常用中文释义",
+    "meaning": "a natural ability to learn or do something",
+    "chinese": "天资；才能",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as strange by the teacher.",
+    "example": "He has an aptitude for mathematics.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 839,
-    "word": "strategy",
-    "partOfSpeech": "noun",
+    "word": "assure",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with strategy",
-    "chinese": "“strategy”的常用中文释义",
+    "meaning": "to tell someone confidently that something is true",
+    "chinese": "向…保证",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about strategy in a society context.",
+    "example": "The teacher assured us that the test was fair.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 840,
-    "word": "success",
-    "partOfSpeech": "noun",
+    "word": "attain",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with success",
-    "chinese": "“success”的常用中文释义",
+    "meaning": "to achieve something after effort",
+    "chinese": "达到；获得",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about success in a society context.",
+    "example": "She attained her goal through hard work.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 841,
-    "word": "sudden",
-    "partOfSpeech": "adjective",
+    "word": "awareness",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "describing someone or something that is sudden",
-    "chinese": "“sudden”的常用中文释义",
+    "meaning": "knowledge or understanding of something",
+    "chinese": "意识；认识",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as sudden by the teacher.",
+    "example": "Public awareness of recycling is growing.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 842,
-    "word": "suggest",
+    "word": "betray",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to suggest or to carry out the action described by the word",
-    "chinese": "“suggest”的常用中文释义",
+    "meaning": "to hurt someone by breaking their trust",
+    "chinese": "背叛",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to suggest carefully during the society activity.",
+    "example": "He betrayed his friend's confidence.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 843,
-    "word": "support",
+    "word": "boost",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to support or to carry out the action described by the word",
-    "chinese": "“support”的常用中文释义",
+    "meaning": "to increase or improve something",
+    "chinese": "促进；提高",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to support carefully during the society activity.",
+    "example": "Exercise can boost your energy.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 844,
-    "word": "surprise",
-    "partOfSpeech": "verb",
+    "word": "boundary",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to surprise or to carry out the action described by the word",
-    "chinese": "“surprise”的常用中文释义",
+    "meaning": "a line that marks the limit of an area",
+    "chinese": "边界",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to surprise carefully during the society activity.",
+    "example": "The fence marks the boundary of the garden.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 845,
-    "word": "surround",
-    "partOfSpeech": "verb",
+    "word": "burden",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to surround or to carry out the action described by the word",
-    "chinese": "“surround”的常用中文释义",
+    "meaning": "a heavy responsibility or worry",
+    "chinese": "负担",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to surround carefully during the society activity.",
+    "example": "Caring for the injured animal became a burden.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 846,
-    "word": "survive",
-    "partOfSpeech": "verb",
+    "word": "calamity",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "to survive or to carry out the action described by the word",
-    "chinese": "“survive”的常用中文释义",
+    "meaning": "a serious disaster",
+    "chinese": "灾难",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to survive carefully during the society activity.",
+    "example": "The flood was a terrible calamity for the village.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 847,
-    "word": "temperature",
-    "partOfSpeech": "noun",
+    "word": "chaotic",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with temperature",
-    "chinese": "“temperature”的常用中文释义",
+    "meaning": "very confused and disorganised",
+    "chinese": "混乱的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about temperature in a society context.",
+    "example": "The scene became chaotic after the alarm rang.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 848,
-    "word": "terrible",
-    "partOfSpeech": "adjective",
+    "word": "compel",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "describing someone or something that is terrible",
-    "chinese": "“terrible”的常用中文释义",
+    "meaning": "to force someone to do something",
+    "chinese": "迫使",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as terrible by the teacher.",
+    "example": "The evidence compelled him to tell the truth.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 849,
-    "word": "tradition",
-    "partOfSpeech": "noun",
+    "word": "comprehend",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with tradition",
-    "chinese": "“tradition”的常用中文释义",
+    "meaning": "to understand something",
+    "chinese": "理解",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about tradition in a society context.",
+    "example": "The pupil struggled to comprehend the passage.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 850,
-    "word": "train",
-    "partOfSpeech": "noun",
+    "word": "conceal",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with train",
-    "chinese": "“train”的常用中文释义",
+    "meaning": "to hide something",
+    "chinese": "隐藏",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about train in a society context.",
+    "example": "He tried to conceal the gift behind his back.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 851,
-    "word": "transport",
-    "partOfSpeech": "noun",
+    "word": "concentrated",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with transport",
-    "chinese": "“transport”的常用中文释义",
+    "meaning": "giving full attention to something",
+    "chinese": "专注的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about transport in a society context.",
+    "example": "She remained concentrated during the examination.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 852,
-    "word": "treat",
-    "partOfSpeech": "verb",
+    "word": "confidently",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "to treat or to carry out the action described by the word",
-    "chinese": "“treat”的常用中文释义",
+    "meaning": "in a confident way",
+    "chinese": "自信地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to treat carefully during the society activity.",
+    "example": "He answered the question confidently.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 853,
-    "word": "trust",
+    "word": "conserve",
     "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "to trust or to carry out the action described by the word",
-    "chinese": "“trust”的常用中文释义",
+    "meaning": "to protect something from being wasted",
+    "chinese": "节约；保护",
     "synonyms": [],
     "antonyms": [],
-    "example": "The teacher asked the pupils to trust carefully during the society activity.",
+    "example": "We should conserve water.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 854,
-    "word": "unusual",
-    "partOfSpeech": "adjective",
+    "word": "considerably",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "describing someone or something that is unusual",
-    "chinese": "“unusual”的常用中文释义",
+    "meaning": "by a large amount",
+    "chinese": "相当地；大大地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as unusual by the teacher.",
+    "example": "The price has increased considerably.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 855,
-    "word": "useful",
-    "partOfSpeech": "adjective",
+    "word": "correspond",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "describing someone or something that is useful",
-    "chinese": "“useful”的常用中文释义",
+    "meaning": "to be similar or match",
+    "chinese": "相符；对应",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as useful by the teacher.",
+    "example": "The numbers correspond to the labels.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 856,
-    "word": "value",
-    "partOfSpeech": "noun",
+    "word": "culminate",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with value",
-    "chinese": "“value”的常用中文释义",
+    "meaning": "to end with an important final event",
+    "chinese": "达到高潮；以…结束",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about value in a society context.",
+    "example": "The festival culminated in a fireworks display.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 857,
-    "word": "various",
+    "word": "debate",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with various",
-    "chinese": "“various”的常用中文释义",
+    "meaning": "a formal discussion of different opinions",
+    "chinese": "辩论",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about various in a society context.",
+    "example": "The pupils held a debate about school uniforms.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 858,
-    "word": "victim",
+    "word": "deceit",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with victim",
-    "chinese": "“victim”的常用中文释义",
+    "meaning": "dishonest behaviour intended to trick someone",
+    "chinese": "欺骗",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about victim in a society context.",
+    "example": "The scam relied on deceit.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 859,
-    "word": "visible",
-    "partOfSpeech": "adjective",
+    "word": "dedication",
+    "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "describing someone or something that is visible",
-    "chinese": "“visible”的常用中文释义",
+    "meaning": "great effort and commitment to something",
+    "chinese": "奉献；专心",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as visible by the teacher.",
+    "example": "Her dedication to training paid off.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 860,
-    "word": "volunteer",
+    "word": "dependency",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with volunteer",
-    "chinese": "“volunteer”的常用中文释义",
+    "meaning": "a situation in which someone relies on another",
+    "chinese": "依赖",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about volunteer in a society context.",
+    "example": "The child showed a strong dependency on his parents.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 861,
-    "word": "waste",
-    "partOfSpeech": "noun",
+    "word": "desirable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with waste",
-    "chinese": "“waste”的常用中文释义",
+    "meaning": "wanted or considered good",
+    "chinese": "理想的；可取的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about waste in a society context.",
+    "example": "A quiet study area is desirable.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 862,
-    "word": "weather",
-    "partOfSpeech": "noun",
+    "word": "detect",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with weather",
-    "chinese": "“weather”的常用中文释义",
+    "meaning": "to discover or notice something",
+    "chinese": "发现；察觉",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about weather in a society context.",
+    "example": "The device can detect smoke.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 863,
-    "word": "whole",
+    "word": "distress",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with whole",
-    "chinese": "“whole”的常用中文释义",
+    "meaning": "great worry, sadness, or pain",
+    "chinese": "痛苦；忧虑",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about whole in a society context.",
+    "example": "The news caused great distress.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 864,
-    "word": "wise",
+    "word": "dominant",
     "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "describing someone or something that is wise",
-    "chinese": "“wise”的常用中文释义",
+    "meaning": "more powerful or noticeable than others",
+    "chinese": "占优势的；主要的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The society situation was described as wise by the teacher.",
+    "example": "The team was dominant throughout the game.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 865,
-    "word": "wonder",
-    "partOfSpeech": "noun",
+    "word": "dynamic",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with wonder",
-    "chinese": "“wonder”的常用中文释义",
+    "meaning": "full of energy and change",
+    "chinese": "充满活力的；动态的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about wonder in a society context.",
+    "example": "The dynamic leader inspired the group.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 866,
-    "word": "worth",
-    "partOfSpeech": "noun",
+    "word": "effective",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with worth",
-    "chinese": "“worth”的常用中文释义",
+    "meaning": "successful in producing the desired result",
+    "chinese": "有效的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about worth in a society context.",
+    "example": "The new method was highly effective.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 867,
-    "word": "youth",
-    "partOfSpeech": "noun",
+    "word": "efficiently",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with youth",
-    "chinese": "“youth”的常用中文释义",
+    "meaning": "in a way that avoids wasting time or resources",
+    "chinese": "高效地",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about youth in a society context.",
+    "example": "The workers completed the task efficiently.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 868,
-    "word": "zone",
-    "partOfSpeech": "noun",
+    "word": "encouraging",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with zone",
-    "chinese": "“zone”的常用中文释义",
+    "meaning": "giving hope or confidence",
+    "chinese": "令人鼓舞的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about zone in a society context.",
+    "example": "The early results were encouraging.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 869,
-    "word": "frozen",
+    "word": "endurance",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with frozen",
-    "chinese": "“frozen”的常用中文释义",
+    "meaning": "the ability to continue despite difficulty or tiredness",
+    "chinese": "耐力",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about frozen in a society context.",
+    "example": "Long-distance running requires endurance.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 870,
-    "word": "furniture",
-    "partOfSpeech": "noun",
+    "word": "engage",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with furniture",
-    "chinese": "“furniture”的常用中文释义",
+    "meaning": "to take part in something or attract attention",
+    "chinese": "参与；吸引",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about furniture in a society context.",
+    "example": "The teacher used games to engage the pupils.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 871,
-    "word": "future",
+    "word": "expertise",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with future",
-    "chinese": "“future”的常用中文释义",
+    "meaning": "special skill or knowledge in a particular area",
+    "chinese": "专业知识；技能",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about future in a society context.",
+    "example": "Her expertise in science was valuable.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 872,
-    "word": "garage",
+    "word": "flexibility",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with garage",
-    "chinese": "“garage”的常用中文释义",
+    "meaning": "the ability to change easily when needed",
+    "chinese": "灵活性",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about garage in a society context.",
+    "example": "The job requires flexibility.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 873,
-    "word": "garden",
-    "partOfSpeech": "noun",
+    "word": "fulfil",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with garden",
-    "chinese": "“garden”的常用中文释义",
+    "meaning": "to do or achieve what was promised or expected",
+    "chinese": "履行；实现",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about garden in a society context.",
+    "example": "She fulfilled her promise.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 874,
-    "word": "geography",
+    "word": "generosity",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with geography",
-    "chinese": "“geography”的常用中文释义",
+    "meaning": "the quality of being willing to give freely",
+    "chinese": "慷慨",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about geography in a society context.",
+    "example": "His generosity helped many families.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 875,
-    "word": "gift",
+    "word": "guidance",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with gift",
-    "chinese": "“gift”的常用中文释义",
+    "meaning": "help or advice about what to do",
+    "chinese": "指导",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about gift in a society context.",
+    "example": "The teacher gave us useful guidance.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 876,
-    "word": "government",
-    "partOfSpeech": "noun",
+    "word": "hinder",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with government",
-    "chinese": "“government”的常用中文释义",
+    "meaning": "to make it difficult for something to happen",
+    "chinese": "妨碍",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about government in a society context.",
+    "example": "Heavy rain hindered our journey.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 877,
-    "word": "graduation",
+    "word": "honesty",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with graduation",
-    "chinese": "“graduation”的常用中文释义",
+    "meaning": "the quality of being truthful",
+    "chinese": "诚实",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about graduation in a society context.",
+    "example": "Honesty is important in every friendship.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 878,
-    "word": "harbour",
+    "word": "initiative",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with harbour",
-    "chinese": "“harbour”的常用中文释义",
+    "meaning": "the ability to act without being told",
+    "chinese": "主动性",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about harbour in a society context.",
+    "example": "She showed initiative by organising the books.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 879,
-    "word": "helmet",
+    "word": "insight",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with helmet",
-    "chinese": "“helmet”的常用中文释义",
+    "meaning": "a clear understanding of something",
+    "chinese": "洞察力；深刻理解",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about helmet in a society context.",
+    "example": "The book gave me insight into animal behaviour.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 880,
-    "word": "history",
+    "word": "intention",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with history",
-    "chinese": "“history”的常用中文释义",
+    "meaning": "what someone plans or means to do",
+    "chinese": "意图；打算",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about history in a society context.",
+    "example": "His intention was to help.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 881,
-    "word": "holiday",
-    "partOfSpeech": "noun",
+    "word": "knowledgeable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with holiday",
-    "chinese": "“holiday”的常用中文释义",
+    "meaning": "knowing a lot about a subject",
+    "chinese": "知识丰富的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about holiday in a society context.",
+    "example": "The knowledgeable guide answered every question.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 882,
-    "word": "hospital",
-    "partOfSpeech": "noun",
+    "word": "liberate",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with hospital",
-    "chinese": "“hospital”的常用中文释义",
+    "meaning": "to free someone from control or danger",
+    "chinese": "解放；释放",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about hospital in a society context.",
+    "example": "The rescue operation helped liberate the trapped workers.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 883,
-    "word": "human",
+    "word": "likelihood",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with human",
-    "chinese": "“human”的常用中文释义",
+    "meaning": "the chance that something will happen",
+    "chinese": "可能性",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about human in a society context.",
+    "example": "There is a high likelihood of rain.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 884,
-    "word": "identity",
-    "partOfSpeech": "noun",
+    "word": "monitor",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with identity",
-    "chinese": "“identity”的常用中文释义",
+    "meaning": "to watch or check something over time",
+    "chinese": "监测；监督",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about identity in a society context.",
+    "example": "Teachers monitor pupils' progress.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 885,
-    "word": "imagination",
-    "partOfSpeech": "noun",
+    "word": "obviously",
+    "partOfSpeech": "adverb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with imagination",
-    "chinese": "“imagination”的常用中文释义",
+    "meaning": "in a way that is easy to see or understand",
+    "chinese": "显然",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about imagination in a society context.",
+    "example": "She was obviously tired.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 886,
-    "word": "impressive",
-    "partOfSpeech": "noun",
+    "word": "oppose",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with impressive",
-    "chinese": "“impressive”的常用中文释义",
+    "meaning": "to disagree with or fight against something",
+    "chinese": "反对",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about impressive in a society context.",
+    "example": "Many residents opposed the plan.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 887,
-    "word": "internet",
+    "word": "potential",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with internet",
-    "chinese": "“internet”的常用中文释义",
+    "meaning": "a quality or ability that may develop",
+    "chinese": "潜力",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about internet in a society context.",
+    "example": "The young athlete has great potential.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 888,
-    "word": "island",
-    "partOfSpeech": "noun",
+    "word": "progressive",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with island",
-    "chinese": "“island”的常用中文释义",
+    "meaning": "developing or improving gradually",
+    "chinese": "进步的；逐渐发展的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about island in a society context.",
+    "example": "The school uses progressive teaching methods.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 889,
-    "word": "laboratory",
-    "partOfSpeech": "noun",
+    "word": "promote",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with laboratory",
-    "chinese": "“laboratory”的常用中文释义",
+    "meaning": "to encourage or support something",
+    "chinese": "促进；推广",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about laboratory in a society context.",
+    "example": "The campaign promotes healthy eating.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 890,
-    "word": "ladder",
+    "word": "prospect",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with ladder",
-    "chinese": "“ladder”的常用中文释义",
+    "meaning": "the possibility or likelihood of something happening",
+    "chinese": "前景；可能性",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about ladder in a society context.",
+    "example": "The project has good prospects.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 891,
-    "word": "laughter",
-    "partOfSpeech": "noun",
+    "word": "react",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with laughter",
-    "chinese": "“laughter”的常用中文释义",
+    "meaning": "to respond to something",
+    "chinese": "反应",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about laughter in a society context.",
+    "example": "How did she react to the news?",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 892,
-    "word": "library",
-    "partOfSpeech": "noun",
+    "word": "reasonable",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with library",
-    "chinese": "“library”的常用中文释义",
+    "meaning": "fair and sensible",
+    "chinese": "合理的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about library in a society context.",
+    "example": "That is a reasonable request.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 893,
-    "word": "lifetime",
-    "partOfSpeech": "noun",
+    "word": "reflect",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with lifetime",
-    "chinese": "“lifetime”的常用中文释义",
+    "meaning": "to think carefully about something",
+    "chinese": "反思；思考",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about lifetime in a society context.",
+    "example": "Take time to reflect on your mistake.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 894,
-    "word": "lightning",
+    "word": "remark",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with lightning",
-    "chinese": "“lightning”的常用中文释义",
+    "meaning": "something said or written as a comment",
+    "chinese": "评论；话语",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about lightning in a society context.",
+    "example": "His remark made everyone laugh.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 895,
-    "word": "liquid",
-    "partOfSpeech": "noun",
+    "word": "represent",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with liquid",
-    "chinese": "“liquid”的常用中文释义",
+    "meaning": "to speak or act for someone or something",
+    "chinese": "代表",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about liquid in a society context.",
+    "example": "She represented the school in the competition.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 896,
-    "word": "machine",
-    "partOfSpeech": "noun",
+    "word": "resist",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with machine",
-    "chinese": "“machine”的常用中文释义",
+    "meaning": "to refuse to accept or be affected by something",
+    "chinese": "抵抗；拒绝",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about machine in a society context.",
+    "example": "He resisted the temptation to cheat.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 897,
-    "word": "magazine",
-    "partOfSpeech": "noun",
+    "word": "reverse",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with magazine",
-    "chinese": "“magazine”的常用中文释义",
+    "meaning": "to change something to the opposite",
+    "chinese": "逆转；颠倒",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about magazine in a society context.",
+    "example": "The driver reversed the car carefully.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 898,
-    "word": "market",
-    "partOfSpeech": "noun",
+    "word": "steadfast",
+    "partOfSpeech": "adjective",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with market",
-    "chinese": "“market”的常用中文释义",
+    "meaning": "firm and determined",
+    "chinese": "坚定的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about market in a society context.",
+    "example": "She remained steadfast in her decision.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 899,
-    "word": "medicine",
+    "word": "strategy",
     "partOfSpeech": "noun",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with medicine",
-    "chinese": "“medicine”的常用中文释义",
+    "meaning": "a plan for achieving a goal",
+    "chinese": "策略",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about medicine in a society context.",
+    "example": "The team developed a winning strategy.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 900,
-    "word": "memory",
-    "partOfSpeech": "noun",
+    "word": "strengthen",
+    "partOfSpeech": "verb",
     "level": 9,
-    "meaning": "a person, thing, idea, or situation connected with memory",
-    "chinese": "“memory”的常用中文释义",
+    "meaning": "to make something stronger",
+    "chinese": "加强",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about memory in a society context.",
+    "example": "Exercise can strengthen your muscles.",
     "topics": [
-      "critical thinking"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 901,
-    "word": "message",
-    "partOfSpeech": "noun",
+    "word": "surpass",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with message",
-    "chinese": "“message”的常用中文释义",
+    "meaning": "to do better than someone or something",
+    "chinese": "超过；胜过",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about message in a PSLE challenge context.",
+    "example": "Her results surpassed everyone's expectations.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 902,
-    "word": "midnight",
+    "word": "temptation",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with midnight",
-    "chinese": "“midnight”的常用中文释义",
+    "meaning": "a strong desire to do something",
+    "chinese": "诱惑",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about midnight in a PSLE challenge context.",
+    "example": "He resisted the temptation to eat another cake.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 903,
-    "word": "mountain",
+    "word": "virtue",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with mountain",
-    "chinese": "“mountain”的常用中文释义",
+    "meaning": "a good quality or moral strength",
+    "chinese": "美德；优点",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about mountain in a PSLE challenge context.",
+    "example": "Patience is an important virtue.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 904,
-    "word": "museum",
-    "partOfSpeech": "noun",
+    "word": "voluntary",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with museum",
-    "chinese": "“museum”的常用中文释义",
+    "meaning": "done willingly and not because you are forced",
+    "chinese": "自愿的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about museum in a PSLE challenge context.",
+    "example": "The clean-up was voluntary.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 905,
-    "word": "mystery",
-    "partOfSpeech": "noun",
+    "word": "wary",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with mystery",
-    "chinese": "“mystery”的常用中文释义",
+    "meaning": "careful because you think there may be danger",
+    "chinese": "谨慎的；警惕的",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about mystery in a PSLE challenge context.",
+    "example": "Be wary of strangers online.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 906,
-    "word": "narrow",
+    "word": "anticipation",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with narrow",
-    "chinese": "“narrow”的常用中文释义",
+    "meaning": "a feeling of excitement about something expected",
+    "chinese": "期待",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about narrow in a PSLE challenge context.",
+    "example": "The children waited in anticipation.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 907,
-    "word": "nature",
+    "word": "assessment",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with nature",
-    "chinese": "“nature”的常用中文释义",
+    "meaning": "a judgement about the quality or value of something",
+    "chinese": "评估；评价",
     "synonyms": [],
     "antonyms": [],
-    "example": "The passage included information about nature in a PSLE challenge context.",
+    "example": "The teacher completed an assessment of the project.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Daily Life"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 908,
-    "word": "neighbour",
+    "word": "contempt",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with neighbour",
-    "chinese": "“neighbour”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about neighbour in a PSLE challenge context.",
+    "meaning": "a feeling that someone or something is beneath respect",
+    "chinese": "蔑视",
+    "synonyms": [
+      "disdain",
+      "disrespect"
+    ],
+    "antonyms": [
+      "respect"
+    ],
+    "example": "He showed contempt for the rules by ignoring them.",
     "topics": [
-      "advanced PSLE"
+      "Values",
+      "Rules"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 909,
-    "word": "nervous",
+    "word": "magnanimity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with nervous",
-    "chinese": "“nervous”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about nervous in a PSLE challenge context.",
+    "meaning": "generosity and forgiveness, especially towards a rival",
+    "chinese": "宽宏大量",
+    "synonyms": [
+      "generosity",
+      "forgiveness"
+    ],
+    "antonyms": [
+      "pettiness"
+    ],
+    "example": "The champion showed magnanimity after the final.",
     "topics": [
-      "advanced PSLE"
+      "Sports",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 910,
-    "word": "newspaper",
-    "partOfSpeech": "noun",
+    "word": "zealous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with newspaper",
-    "chinese": "“newspaper”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about newspaper in a PSLE challenge context.",
+    "meaning": "very enthusiastic and devoted to a cause or activity",
+    "chinese": "热心的；狂热的",
+    "synonyms": [
+      "enthusiastic",
+      "passionate"
+    ],
+    "antonyms": [
+      "apathetic"
+    ],
+    "example": "The volunteers were zealous in their efforts to clean the beach.",
     "topics": [
-      "advanced PSLE"
+      "Environment",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 911,
-    "word": "ocean",
-    "partOfSpeech": "noun",
+    "word": "ascertain",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with ocean",
-    "chinese": "“ocean”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about ocean in a PSLE challenge context.",
+    "meaning": "to discover something for certain",
+    "chinese": "查明；确定",
+    "synonyms": [
+      "determine",
+      "find out"
+    ],
+    "antonyms": [
+      "guess"
+    ],
+    "example": "The doctor needed more tests to ascertain the cause.",
     "topics": [
-      "advanced PSLE"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 912,
-    "word": "office",
+    "word": "conjecture",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with office",
-    "chinese": "“office”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about office in a PSLE challenge context.",
+    "meaning": "an opinion or idea based on incomplete information",
+    "chinese": "推测；猜想",
+    "synonyms": [
+      "guess",
+      "speculation"
+    ],
+    "antonyms": [
+      "certainty"
+    ],
+    "example": "Without evidence, the explanation remains conjecture.",
     "topics": [
-      "advanced PSLE"
+      "Science",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 913,
-    "word": "opposite",
-    "partOfSpeech": "noun",
+    "word": "superfluous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with opposite",
-    "chinese": "“opposite”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about opposite in a PSLE challenge context.",
+    "meaning": "more than necessary or useful",
+    "chinese": "多余的",
+    "synonyms": [
+      "unnecessary",
+      "excess"
+    ],
+    "antonyms": [
+      "essential"
+    ],
+    "example": "Remove any superfluous words from your composition.",
     "topics": [
-      "advanced PSLE"
+      "Writing",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 914,
-    "word": "organisation",
-    "partOfSpeech": "noun",
+    "word": "erratic",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with organisation",
-    "chinese": "“organisation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about organisation in a PSLE challenge context.",
+    "meaning": "not regular or predictable",
+    "chinese": "不稳定的；反复无常的",
+    "synonyms": [
+      "unpredictable",
+      "irregular"
+    ],
+    "antonyms": [
+      "steady",
+      "consistent"
+    ],
+    "example": "The patient's temperature became erratic.",
     "topics": [
-      "advanced PSLE"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 915,
-    "word": "package",
+    "word": "deference",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with package",
-    "chinese": "“package”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about package in a PSLE challenge context.",
+    "meaning": "respect shown by accepting someone's opinion or wishes",
+    "chinese": "敬意；顺从",
+    "synonyms": [
+      "respect",
+      "regard"
+    ],
+    "antonyms": [
+      "disrespect"
+    ],
+    "example": "He listened to the elder's advice out of deference.",
     "topics": [
-      "advanced PSLE"
+      "Values",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 916,
-    "word": "paragraph",
-    "partOfSpeech": "noun",
+    "word": "efficacious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with paragraph",
-    "chinese": "“paragraph”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about paragraph in a PSLE challenge context.",
+    "meaning": "successful in producing the intended result",
+    "chinese": "有效的；奏效的",
+    "synonyms": [
+      "effective",
+      "successful"
+    ],
+    "antonyms": [
+      "ineffective"
+    ],
+    "example": "The treatment proved efficacious in reducing the symptoms.",
     "topics": [
-      "advanced PSLE"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 917,
-    "word": "passenger",
+    "word": "affinity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with passenger",
-    "chinese": "“passenger”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about passenger in a PSLE challenge context.",
+    "meaning": "a natural liking or connection with someone or something",
+    "chinese": "亲近感；相似性",
+    "synonyms": [
+      "connection",
+      "liking"
+    ],
+    "antonyms": [
+      "dislike"
+    ],
+    "example": "The child has an affinity for animals.",
     "topics": [
-      "advanced PSLE"
+      "Animals",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 918,
-    "word": "peaceful",
-    "partOfSpeech": "noun",
+    "word": "expedient",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with peaceful",
-    "chinese": "“peaceful”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about peaceful in a PSLE challenge context.",
+    "meaning": "useful for achieving a particular purpose, even if not ideal",
+    "chinese": "权宜的；便利的",
+    "synonyms": [
+      "practical",
+      "convenient"
+    ],
+    "antonyms": [
+      "impractical"
+    ],
+    "example": "Taking the shortcut was expedient but not especially safe.",
     "topics": [
-      "advanced PSLE"
+      "Travel",
+      "Decision Making"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 919,
-    "word": "performance",
-    "partOfSpeech": "noun",
+    "word": "transient",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with performance",
-    "chinese": "“performance”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about performance in a PSLE challenge context.",
+    "meaning": "lasting only for a short time",
+    "chinese": "短暂的；转瞬即逝的",
+    "synonyms": [
+      "temporary",
+      "brief"
+    ],
+    "antonyms": [
+      "permanent"
+    ],
+    "example": "The rain was transient and the sky soon cleared.",
     "topics": [
-      "advanced PSLE"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 920,
-    "word": "permission",
-    "partOfSpeech": "noun",
+    "word": "staid",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with permission",
-    "chinese": "“permission”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about permission in a PSLE challenge context.",
+    "meaning": "calm, serious and not exciting",
+    "chinese": "沉稳的；古板的",
+    "synonyms": [
+      "serious",
+      "conventional"
+    ],
+    "antonyms": [
+      "lively",
+      "exciting"
+    ],
+    "example": "The formal event had a rather staid atmosphere.",
     "topics": [
-      "advanced PSLE"
+      "Events",
+      "Culture"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 921,
-    "word": "photograph",
-    "partOfSpeech": "noun",
+    "word": "imminent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with photograph",
-    "chinese": "“photograph”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about photograph in a PSLE challenge context.",
+    "meaning": "likely to happen very soon",
+    "chinese": "即将发生的",
+    "synonyms": [
+      "approaching",
+      "impending"
+    ],
+    "antonyms": [
+      "distant"
+    ],
+    "example": "The dark clouds suggested that a storm was imminent.",
     "topics": [
-      "advanced PSLE"
+      "Weather",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 922,
-    "word": "planet",
-    "partOfSpeech": "noun",
+    "word": "taciturn",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with planet",
-    "chinese": "“planet”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about planet in a PSLE challenge context.",
+    "meaning": "speaking very little",
+    "chinese": "沉默寡言的",
+    "synonyms": [
+      "quiet",
+      "reserved"
+    ],
+    "antonyms": [
+      "talkative"
+    ],
+    "example": "The taciturn student preferred writing to speaking.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 923,
-    "word": "plastic",
-    "partOfSpeech": "noun",
+    "word": "venerable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with plastic",
-    "chinese": "“plastic”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about plastic in a PSLE challenge context.",
+    "meaning": "deserving respect because of age, wisdom or character",
+    "chinese": "德高望重的；受尊敬的",
+    "synonyms": [
+      "respected",
+      "honoured"
+    ],
+    "antonyms": [
+      "disrespected"
+    ],
+    "example": "The venerable teacher had served the school for decades.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 924,
-    "word": "police",
-    "partOfSpeech": "noun",
+    "word": "derivative",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with police",
-    "chinese": "“police”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about police in a PSLE challenge context.",
+    "meaning": "copied or developed from something else",
+    "chinese": "衍生的；模仿的",
+    "synonyms": [
+      "derived",
+      "copied"
+    ],
+    "antonyms": [
+      "original"
+    ],
+    "example": "The design was criticised as derivative rather than creative.",
     "topics": [
-      "advanced PSLE"
+      "Arts",
+      "Design"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 925,
-    "word": "pollution",
+    "word": "conflagration",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with pollution",
-    "chinese": "“pollution”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about pollution in a PSLE challenge context.",
+    "meaning": "a large and destructive fire",
+    "chinese": "大火；大火灾",
+    "synonyms": [
+      "fire",
+      "inferno"
+    ],
+    "antonyms": [
+      "extinction"
+    ],
+    "example": "Firefighters worked overnight to control the conflagration.",
     "topics": [
-      "advanced PSLE"
+      "Safety",
+      "Natural Disasters"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 926,
-    "word": "population",
-    "partOfSpeech": "noun",
+    "word": "adroit",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with population",
-    "chinese": "“population”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about population in a PSLE challenge context.",
+    "meaning": "clever or skilful in using hands or dealing with problems",
+    "chinese": "灵巧的；机敏的",
+    "synonyms": [
+      "skillful",
+      "dexterous"
+    ],
+    "antonyms": [
+      "clumsy"
+    ],
+    "example": "The adroit player avoided the defenders with ease.",
     "topics": [
-      "advanced PSLE"
+      "Sports",
+      "Skills"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 927,
-    "word": "position",
-    "partOfSpeech": "noun",
+    "word": "impetuous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with position",
-    "chinese": "“position”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about position in a PSLE challenge context.",
+    "meaning": "acting quickly without thinking carefully",
+    "chinese": "冲动的",
+    "synonyms": [
+      "impulsive",
+      "rash"
+    ],
+    "antonyms": [
+      "cautious",
+      "thoughtful"
+    ],
+    "example": "His impetuous decision created more problems.",
     "topics": [
-      "advanced PSLE"
+      "Decision Making",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 928,
-    "word": "practice",
+    "word": "contention",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with practice",
-    "chinese": "“practice”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about practice in a PSLE challenge context.",
+    "meaning": "a disagreement or argument",
+    "chinese": "争论；争议",
+    "synonyms": [
+      "dispute",
+      "argument"
+    ],
+    "antonyms": [
+      "agreement"
+    ],
+    "example": "The main contention was over how the money should be spent.",
     "topics": [
-      "advanced PSLE"
+      "Community",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 929,
-    "word": "present",
-    "partOfSpeech": "noun",
+    "word": "vindictive",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with present",
-    "chinese": "“present”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about present in a PSLE challenge context.",
+    "meaning": "wanting to hurt someone because you believe they have harmed you",
+    "chinese": "怀恨报复的",
+    "synonyms": [
+      "vengeful",
+      "spiteful"
+    ],
+    "antonyms": [
+      "forgiving"
+    ],
+    "example": "A vindictive response would only make the conflict worse.",
     "topics": [
-      "advanced PSLE"
+      "Emotions",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 930,
-    "word": "primary",
-    "partOfSpeech": "noun",
+    "word": "unilateral",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with primary",
-    "chinese": "“primary”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about primary in a PSLE challenge context.",
+    "meaning": "done or decided by one side without agreement from others",
+    "chinese": "单方面的",
+    "synonyms": [
+      "one-sided"
+    ],
+    "antonyms": [
+      "bilateral",
+      "mutual"
+    ],
+    "example": "The unilateral decision surprised the other members of the committee.",
     "topics": [
-      "advanced PSLE"
+      "Community",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 931,
-    "word": "principal",
-    "partOfSpeech": "noun",
+    "word": "irreproachable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with principal",
-    "chinese": "“principal”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about principal in a PSLE challenge context.",
+    "meaning": "so good that there is no reason for criticism",
+    "chinese": "无可指责的",
+    "synonyms": [
+      "blameless",
+      "faultless"
+    ],
+    "antonyms": [
+      "blameworthy"
+    ],
+    "example": "Her irreproachable conduct earned everyone's trust.",
     "topics": [
-      "advanced PSLE"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 932,
-    "word": "prison",
-    "partOfSpeech": "noun",
+    "word": "lament",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with prison",
-    "chinese": "“prison”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about prison in a PSLE challenge context.",
+    "meaning": "to express sadness or regret about something",
+    "chinese": "哀叹；惋惜",
+    "synonyms": [
+      "mourn",
+      "regret"
+    ],
+    "antonyms": [
+      "celebrate"
+    ],
+    "example": "Many residents lamented the loss of the old park.",
     "topics": [
-      "advanced PSLE"
+      "Community",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 933,
-    "word": "programme",
-    "partOfSpeech": "noun",
+    "word": "salient",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with programme",
-    "chinese": "“programme”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about programme in a PSLE challenge context.",
+    "meaning": "most noticeable or important",
+    "chinese": "显著的；突出的",
+    "synonyms": [
+      "prominent",
+      "important"
+    ],
+    "antonyms": [
+      "minor"
+    ],
+    "example": "The report highlighted the salient problems.",
     "topics": [
-      "advanced PSLE"
+      "Writing",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 934,
-    "word": "project",
-    "partOfSpeech": "noun",
+    "word": "surmise",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with project",
-    "chinese": "“project”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about project in a PSLE challenge context.",
+    "meaning": "to guess something from the available evidence",
+    "chinese": "推测；猜想",
+    "synonyms": [
+      "infer",
+      "guess"
+    ],
+    "antonyms": [
+      "know"
+    ],
+    "example": "We could only surmise what had caused the power failure.",
     "topics": [
-      "advanced PSLE"
+      "Science",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 935,
-    "word": "promise",
-    "partOfSpeech": "noun",
+    "word": "oblivious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with promise",
-    "chinese": "“promise”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about promise in a PSLE challenge context.",
+    "meaning": "not aware of what is happening around you",
+    "chinese": "未察觉的；毫无意识的",
+    "synonyms": [
+      "unaware",
+      "ignorant"
+    ],
+    "antonyms": [
+      "aware"
+    ],
+    "example": "He was oblivious to the noise because he was deeply focused.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 936,
-    "word": "proper",
-    "partOfSpeech": "noun",
+    "word": "prevalent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with proper",
-    "chinese": "“proper”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about proper in a PSLE challenge context.",
+    "meaning": "very common or widespread",
+    "chinese": "普遍的；流行的",
+    "synonyms": [
+      "common",
+      "widespread"
+    ],
+    "antonyms": [
+      "rare"
+    ],
+    "example": "Online learning is prevalent in many education systems.",
     "topics": [
-      "advanced PSLE"
+      "Education",
+      "Technology"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 937,
-    "word": "puzzle",
-    "partOfSpeech": "noun",
+    "word": "mercurial",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with puzzle",
-    "chinese": "“puzzle”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about puzzle in a PSLE challenge context.",
+    "meaning": "changing quickly and unpredictably",
+    "chinese": "善变的；反复无常的",
+    "synonyms": [
+      "changeable",
+      "volatile"
+    ],
+    "antonyms": [
+      "stable"
+    ],
+    "example": "The weather in the mountains can be mercurial.",
     "topics": [
-      "advanced PSLE"
+      "Weather",
+      "Nature"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 938,
-    "word": "railway",
-    "partOfSpeech": "noun",
+    "word": "inexorable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with railway",
-    "chinese": "“railway”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about railway in a PSLE challenge context.",
+    "meaning": "continuing and impossible to stop or prevent",
+    "chinese": "不可阻挡的；无情的",
+    "synonyms": [
+      "unstoppable",
+      "relentless"
+    ],
+    "antonyms": [
+      "stoppable"
+    ],
+    "example": "The inexorable rise in sea levels concerns scientists.",
     "topics": [
-      "advanced PSLE"
+      "Environment",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 939,
-    "word": "rainfall",
-    "partOfSpeech": "noun",
+    "word": "belligerent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with rainfall",
-    "chinese": "“rainfall”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about rainfall in a PSLE challenge context.",
+    "meaning": "hostile and aggressive",
+    "chinese": "好战的；敌对的",
+    "synonyms": [
+      "aggressive",
+      "hostile"
+    ],
+    "antonyms": [
+      "peaceful"
+    ],
+    "example": "The belligerent tone of the message worried the team.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 940,
-    "word": "reader",
-    "partOfSpeech": "noun",
+    "word": "acrimonious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with reader",
-    "chinese": "“reader”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about reader in a PSLE challenge context.",
+    "meaning": "filled with anger and bitterness",
+    "chinese": "尖刻的；激烈的",
+    "synonyms": [
+      "bitter",
+      "hostile"
+    ],
+    "antonyms": [
+      "friendly",
+      "cordial"
+    ],
+    "example": "The meeting ended in an acrimonious dispute.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 941,
-    "word": "recycle",
-    "partOfSpeech": "noun",
+    "word": "intractable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with recycle",
-    "chinese": "“recycle”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about recycle in a PSLE challenge context.",
+    "meaning": "very difficult to control, deal with or solve",
+    "chinese": "棘手的；难解决的",
+    "synonyms": [
+      "difficult",
+      "unmanageable"
+    ],
+    "antonyms": [
+      "manageable"
+    ],
+    "example": "The problem proved intractable despite several attempts.",
     "topics": [
-      "advanced PSLE"
+      "Problem Solving",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 942,
-    "word": "regular",
-    "partOfSpeech": "noun",
+    "word": "wanton",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with regular",
-    "chinese": "“regular”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about regular in a PSLE challenge context.",
+    "meaning": "deliberate and without concern for others",
+    "chinese": "肆意的；无节制的",
+    "synonyms": [
+      "reckless",
+      "deliberate"
+    ],
+    "antonyms": [
+      "restrained"
+    ],
+    "example": "The wanton destruction of public property shocked the community.",
     "topics": [
-      "advanced PSLE"
+      "Community",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 943,
-    "word": "relative",
-    "partOfSpeech": "noun",
+    "word": "expound",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with relative",
-    "chinese": "“relative”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about relative in a PSLE challenge context.",
+    "meaning": "to explain an idea or theory in detail",
+    "chinese": "详细解释；阐述",
+    "synonyms": [
+      "explain",
+      "elaborate"
+    ],
+    "antonyms": [
+      "confuse"
+    ],
+    "example": "The professor expounded the theory with several examples.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 944,
-    "word": "remote",
-    "partOfSpeech": "noun",
+    "word": "rectify",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with remote",
-    "chinese": "“remote”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about remote in a PSLE challenge context.",
+    "meaning": "to correct a mistake or problem",
+    "chinese": "纠正；改正",
+    "synonyms": [
+      "correct",
+      "remedy"
+    ],
+    "antonyms": [
+      "worsen"
+    ],
+    "example": "The school acted quickly to rectify the error in the timetable.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 945,
-    "word": "restaurant",
+    "word": "fidelity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with restaurant",
-    "chinese": "“restaurant”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about restaurant in a PSLE challenge context.",
+    "meaning": "the quality of being loyal or faithful",
+    "chinese": "忠诚；忠实",
+    "synonyms": [
+      "loyalty",
+      "faithfulness"
+    ],
+    "antonyms": [
+      "disloyalty"
+    ],
+    "example": "The dog's fidelity to its owner was touching.",
     "topics": [
-      "advanced PSLE"
+      "Animals",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 946,
-    "word": "river",
-    "partOfSpeech": "noun",
+    "word": "indignant",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with river",
-    "chinese": "“river”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about river in a PSLE challenge context.",
+    "meaning": "angry because something is unfair or wrong",
+    "chinese": "愤慨的",
+    "synonyms": [
+      "outraged",
+      "angry"
+    ],
+    "antonyms": [
+      "pleased"
+    ],
+    "example": "The residents were indignant about the unfair decision.",
     "topics": [
-      "advanced PSLE"
+      "Community",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 947,
-    "word": "safety",
-    "partOfSpeech": "noun",
+    "word": "querulous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with safety",
-    "chinese": "“safety”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about safety in a PSLE challenge context.",
+    "meaning": "complaining in an annoyed way",
+    "chinese": "爱抱怨的",
+    "synonyms": [
+      "complaining",
+      "whiny"
+    ],
+    "antonyms": [
+      "cheerful"
+    ],
+    "example": "The querulous customer complained about every small detail.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 948,
-    "word": "science",
-    "partOfSpeech": "noun",
+    "word": "desultory",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with science",
-    "chinese": "“science”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about science in a PSLE challenge context.",
+    "meaning": "lacking a clear plan or purpose",
+    "chinese": "无目的的；散漫的",
+    "synonyms": [
+      "aimless",
+      "unfocused"
+    ],
+    "antonyms": [
+      "purposeful"
+    ],
+    "example": "The discussion became desultory and failed to reach a decision.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 949,
-    "word": "screen",
-    "partOfSpeech": "noun",
+    "word": "pernicious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with screen",
-    "chinese": "“screen”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about screen in a PSLE challenge context.",
+    "meaning": "having a harmful effect, especially gradually",
+    "chinese": "有害的；有恶劣影响的",
+    "synonyms": [
+      "harmful",
+      "damaging"
+    ],
+    "antonyms": [
+      "beneficial"
+    ],
+    "example": "The pernicious effects of misinformation can spread quickly.",
     "topics": [
-      "advanced PSLE"
+      "Media",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 950,
-    "word": "season",
-    "partOfSpeech": "noun",
+    "word": "refractory",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with season",
-    "chinese": "“season”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about season in a PSLE challenge context.",
+    "meaning": "difficult to control or deal with",
+    "chinese": "难以控制的；顽固的",
+    "synonyms": [
+      "stubborn",
+      "unmanageable"
+    ],
+    "antonyms": [
+      "obedient"
+    ],
+    "example": "The refractory behaviour continued despite repeated warnings.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 951,
-    "word": "secret",
-    "partOfSpeech": "noun",
+    "word": "irrefutable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with secret",
-    "chinese": "“secret”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about secret in a PSLE challenge context.",
+    "meaning": "impossible to prove wrong",
+    "chinese": "无可辩驳的",
+    "synonyms": [
+      "undeniable",
+      "conclusive"
+    ],
+    "antonyms": [
+      "refutable"
+    ],
+    "example": "The researchers presented irrefutable evidence.",
     "topics": [
-      "advanced PSLE"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 952,
-    "word": "sentence",
-    "partOfSpeech": "noun",
+    "word": "impertinent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with sentence",
-    "chinese": "“sentence”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about sentence in a PSLE challenge context.",
+    "meaning": "rude and disrespectful",
+    "chinese": "无礼的；无关紧要的",
+    "synonyms": [
+      "rude",
+      "insolent"
+    ],
+    "antonyms": [
+      "polite",
+      "respectful"
+    ],
+    "example": "His impertinent remark upset the teacher.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 953,
-    "word": "shadow",
+    "word": "approbation",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with shadow",
-    "chinese": "“shadow”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about shadow in a PSLE challenge context.",
+    "meaning": "approval or praise",
+    "chinese": "赞许；认可",
+    "synonyms": [
+      "approval",
+      "praise"
+    ],
+    "antonyms": [
+      "disapproval"
+    ],
+    "example": "The project received the approbation of the school board.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 954,
-    "word": "shelter",
-    "partOfSpeech": "noun",
+    "word": "tacit",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with shelter",
-    "chinese": "“shelter”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about shelter in a PSLE challenge context.",
+    "meaning": "understood without being directly expressed",
+    "chinese": "心照不宣的；默契的",
+    "synonyms": [
+      "unspoken",
+      "implicit"
+    ],
+    "antonyms": [
+      "explicit"
+    ],
+    "example": "There was a tacit agreement that nobody would mention the mistake.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 955,
-    "word": "signal",
-    "partOfSpeech": "noun",
+    "word": "entail",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with signal",
-    "chinese": "“signal”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about signal in a PSLE challenge context.",
+    "meaning": "to involve something as a necessary part or result",
+    "chinese": "需要；意味着",
+    "synonyms": [
+      "involve",
+      "require"
+    ],
+    "antonyms": [
+      "exclude"
+    ],
+    "example": "The new role will entail more responsibility.",
     "topics": [
-      "advanced PSLE"
+      "Work",
+      "Planning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 956,
-    "word": "silence",
-    "partOfSpeech": "noun",
+    "word": "abstain",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with silence",
-    "chinese": "“silence”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about silence in a PSLE challenge context.",
+    "meaning": "to choose not to do or have something",
+    "chinese": "戒除；避免",
+    "synonyms": [
+      "refrain",
+      "avoid"
+    ],
+    "antonyms": [
+      "participate"
+    ],
+    "example": "He decided to abstain from sugary drinks for a month.",
     "topics": [
-      "advanced PSLE"
+      "Health",
+      "Lifestyle"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 957,
-    "word": "singer",
-    "partOfSpeech": "noun",
+    "word": "onerous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with singer",
-    "chinese": "“singer”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about singer in a PSLE challenge context.",
+    "meaning": "involving a lot of difficulty, effort or responsibility",
+    "chinese": "繁重的；艰巨的",
+    "synonyms": [
+      "burdensome",
+      "difficult"
+    ],
+    "antonyms": [
+      "easy"
+    ],
+    "example": "The onerous task took several days to complete.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Work"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 958,
-    "word": "situation",
-    "partOfSpeech": "noun",
+    "word": "flagrant",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with situation",
-    "chinese": "“situation”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about situation in a PSLE challenge context.",
+    "meaning": "very obvious and unacceptable",
+    "chinese": "公然的；严重的",
+    "synonyms": [
+      "blatant",
+      "glaring"
+    ],
+    "antonyms": [
+      "subtle"
+    ],
+    "example": "The referee penalised the player for a flagrant foul.",
     "topics": [
-      "advanced PSLE"
+      "Sports",
+      "Rules"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 959,
-    "word": "slippery",
-    "partOfSpeech": "noun",
+    "word": "incisive",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with slippery",
-    "chinese": "“slippery”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about slippery in a PSLE challenge context.",
+    "meaning": "showing clear understanding and sharp judgement",
+    "chinese": "敏锐的；深刻的",
+    "synonyms": [
+      "sharp",
+      "perceptive"
+    ],
+    "antonyms": [
+      "vague"
+    ],
+    "example": "She asked an incisive question during the interview.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 960,
-    "word": "space",
-    "partOfSpeech": "noun",
+    "word": "reticent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with space",
-    "chinese": "“space”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about space in a PSLE challenge context.",
+    "meaning": "unwilling to speak about thoughts or feelings",
+    "chinese": "沉默寡言的；不愿多言的",
+    "synonyms": [
+      "reserved",
+      "quiet"
+    ],
+    "antonyms": [
+      "talkative"
+    ],
+    "example": "He was reticent about discussing the incident.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 961,
-    "word": "speech",
-    "partOfSpeech": "noun",
+    "word": "inimical",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with speech",
-    "chinese": "“speech”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about speech in a PSLE challenge context.",
+    "meaning": "harmful or unfriendly to someone or something",
+    "chinese": "有害的；敌对的",
+    "synonyms": [
+      "hostile",
+      "harmful"
+    ],
+    "antonyms": [
+      "friendly",
+      "beneficial"
+    ],
+    "example": "Excessive heat is inimical to some crops.",
     "topics": [
-      "advanced PSLE"
+      "Environment",
+      "Agriculture"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 962,
-    "word": "spirit",
+    "word": "animosity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with spirit",
-    "chinese": "“spirit”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about spirit in a PSLE challenge context.",
+    "meaning": "strong dislike or hostility",
+    "chinese": "敌意；憎恨",
+    "synonyms": [
+      "hostility",
+      "hatred"
+    ],
+    "antonyms": [
+      "friendship"
+    ],
+    "example": "Years of rivalry had created animosity between the teams.",
     "topics": [
-      "advanced PSLE"
+      "Sports",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 963,
-    "word": "stadium",
+    "word": "disparity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with stadium",
-    "chinese": "“stadium”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about stadium in a PSLE challenge context.",
+    "meaning": "a great difference between two things",
+    "chinese": "差距；不平等",
+    "synonyms": [
+      "difference",
+      "inequality"
+    ],
+    "antonyms": [
+      "equality"
+    ],
+    "example": "There is a disparity between the two groups' results.",
     "topics": [
-      "advanced PSLE"
+      "Society",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 964,
-    "word": "standard",
-    "partOfSpeech": "noun",
+    "word": "immutable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with standard",
-    "chinese": "“standard”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about standard in a PSLE challenge context.",
+    "meaning": "not able to be changed",
+    "chinese": "不可改变的",
+    "synonyms": [
+      "unchangeable",
+      "fixed"
+    ],
+    "antonyms": [
+      "changeable"
+    ],
+    "example": "The laws of nature are not considered immutable in every theory.",
     "topics": [
-      "advanced PSLE"
+      "Science",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 965,
-    "word": "station",
-    "partOfSpeech": "noun",
+    "word": "judicious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with station",
-    "chinese": "“station”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about station in a PSLE challenge context.",
+    "meaning": "showing good judgement and careful thought",
+    "chinese": "明智的；审慎的",
+    "synonyms": [
+      "wise",
+      "sensible"
+    ],
+    "antonyms": [
+      "foolish"
+    ],
+    "example": "A judicious choice of materials made the structure safer.",
     "topics": [
-      "advanced PSLE"
+      "Engineering",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 966,
-    "word": "stomach",
-    "partOfSpeech": "noun",
+    "word": "veritable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with stomach",
-    "chinese": "“stomach”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about stomach in a PSLE challenge context.",
+    "meaning": "used to emphasise that something is a real or impressive example",
+    "chinese": "真正的；名副其实的",
+    "synonyms": [
+      "genuine",
+      "True"
+    ],
+    "antonyms": [
+      "False"
+    ],
+    "example": "The garden became a veritable paradise after the renovation.",
     "topics": [
-      "advanced PSLE"
+      "Nature",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 967,
-    "word": "stranger",
-    "partOfSpeech": "noun",
+    "word": "convoluted",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with stranger",
-    "chinese": "“stranger”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about stranger in a PSLE challenge context.",
+    "meaning": "very complicated and difficult to follow",
+    "chinese": "复杂难懂的",
+    "synonyms": [
+      "complicated",
+      "intricate"
+    ],
+    "antonyms": [
+      "simple",
+      "clear"
+    ],
+    "example": "The instructions were so convoluted that nobody understood them.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 968,
-    "word": "strength",
-    "partOfSpeech": "noun",
+    "word": "infallible",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with strength",
-    "chinese": "“strength”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about strength in a PSLE challenge context.",
+    "meaning": "never wrong or making mistakes",
+    "chinese": "绝不会错的",
+    "synonyms": [
+      "perfect",
+      "unerring"
+    ],
+    "antonyms": [
+      "fallible"
+    ],
+    "example": "No human source of information is infallible.",
     "topics": [
-      "advanced PSLE"
+      "Thinking",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 969,
-    "word": "student",
-    "partOfSpeech": "noun",
+    "word": "profligate",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with student",
-    "chinese": "“student”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about student in a PSLE challenge context.",
+    "meaning": "wasteful, especially with money or resources",
+    "chinese": "挥霍的；浪费的",
+    "synonyms": [
+      "wasteful",
+      "extravagant"
+    ],
+    "antonyms": [
+      "frugal"
+    ],
+    "example": "Profligate use of water is harmful during a drought.",
     "topics": [
-      "advanced PSLE"
+      "Environment",
+      "Money"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 970,
-    "word": "suitcase",
-    "partOfSpeech": "noun",
+    "word": "subversive",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with suitcase",
-    "chinese": "“suitcase”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about suitcase in a PSLE challenge context.",
+    "meaning": "intended to weaken or challenge an established system",
+    "chinese": "颠覆性的",
+    "synonyms": [
+      "rebellious",
+      "disruptive"
+    ],
+    "antonyms": [
+      "supportive"
+    ],
+    "example": "The book was once considered subversive because it challenged accepted beliefs.",
     "topics": [
-      "advanced PSLE"
+      "History",
+      "Culture"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 971,
-    "word": "sunshine",
-    "partOfSpeech": "noun",
+    "word": "recalcitrant",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with sunshine",
-    "chinese": "“sunshine”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about sunshine in a PSLE challenge context.",
+    "meaning": "difficult to control or deal with",
+    "chinese": "顽抗的；难以管教的",
+    "synonyms": [
+      "uncooperative",
+      "stubborn"
+    ],
+    "antonyms": [
+      "obedient"
+    ],
+    "example": "The recalcitrant child refused to follow the safety instructions.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 972,
-    "word": "surface",
+    "word": "vicissitudes",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with surface",
-    "chinese": "“surface”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about surface in a PSLE challenge context.",
+    "meaning": "changes and difficulties that happen during life",
+    "chinese": "变迁；人生起伏",
+    "synonyms": [
+      "changes",
+      "ups and downs"
+    ],
+    "antonyms": [
+      "stability"
+    ],
+    "example": "She remained optimistic despite the vicissitudes of life.",
     "topics": [
-      "advanced PSLE"
+      "Values",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 973,
-    "word": "symbol",
-    "partOfSpeech": "noun",
+    "word": "reprehensible",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with symbol",
-    "chinese": "“symbol”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about symbol in a PSLE challenge context.",
+    "meaning": "deserving strong criticism because it is morally wrong",
+    "chinese": "应受谴责的",
+    "synonyms": [
+      "blameworthy",
+      "disgraceful"
+    ],
+    "antonyms": [
+      "commendable"
+    ],
+    "example": "The reckless treatment of the animals was reprehensible.",
     "topics": [
-      "advanced PSLE"
+      "Animals",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 974,
-    "word": "talent",
+    "word": "recrudescence",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with talent",
-    "chinese": "“talent”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about talent in a PSLE challenge context.",
+    "meaning": "the return of something after a period when it had disappeared",
+    "chinese": "再现；复发",
+    "synonyms": [
+      "revival",
+      "return"
+    ],
+    "antonyms": [
+      "disappearance"
+    ],
+    "example": "The recrudescence of the disease worried health officials.",
     "topics": [
-      "advanced PSLE"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 975,
-    "word": "teacher",
-    "partOfSpeech": "noun",
+    "word": "circumstantial",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with teacher",
-    "chinese": "“teacher”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about teacher in a PSLE challenge context.",
+    "meaning": "based on the conditions surrounding an event rather than direct proof",
+    "chinese": "间接的；基于情况的",
+    "synonyms": [
+      "indirect",
+      "conditional"
+    ],
+    "antonyms": [
+      "direct"
+    ],
+    "example": "The case relied mainly on circumstantial evidence.",
     "topics": [
-      "advanced PSLE"
+      "Law",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 976,
-    "word": "theatre",
-    "partOfSpeech": "noun",
+    "word": "deter",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with theatre",
-    "chinese": "“theatre”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about theatre in a PSLE challenge context.",
+    "meaning": "to discourage someone from doing something",
+    "chinese": "阻止；威慑",
+    "synonyms": [
+      "discourage",
+      "prevent"
+    ],
+    "antonyms": [
+      "encourage"
+    ],
+    "example": "Bright lights may deter burglars from entering.",
     "topics": [
-      "advanced PSLE"
+      "Safety",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 977,
-    "word": "thunder",
-    "partOfSpeech": "noun",
+    "word": "lucid",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with thunder",
-    "chinese": "“thunder”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about thunder in a PSLE challenge context.",
+    "meaning": "clear and easy to understand",
+    "chinese": "清晰易懂的",
+    "synonyms": [
+      "clear",
+      "coherent"
+    ],
+    "antonyms": [
+      "confusing"
+    ],
+    "example": "The teacher gave a lucid explanation of the difficult idea.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Learning"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 978,
-    "word": "ticket",
-    "partOfSpeech": "noun",
+    "word": "coerce",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with ticket",
-    "chinese": "“ticket”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about ticket in a PSLE challenge context.",
+    "meaning": "to force someone to do something",
+    "chinese": "强迫",
+    "synonyms": [
+      "force",
+      "pressure"
+    ],
+    "antonyms": [
+      "persuade"
+    ],
+    "example": "No one should coerce a child into making a decision.",
     "topics": [
-      "advanced PSLE"
+      "Values",
+      "Safety"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 979,
-    "word": "traffic",
+    "word": "avarice",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with traffic",
-    "chinese": "“traffic”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about traffic in a PSLE challenge context.",
+    "meaning": "an extreme desire for wealth or possessions",
+    "chinese": "贪婪；贪财",
+    "synonyms": [
+      "greed",
+      "covetousness"
+    ],
+    "antonyms": [
+      "generosity"
+    ],
+    "example": "Avarice can cause people to ignore the needs of others.",
     "topics": [
-      "advanced PSLE"
+      "Values",
+      "Society"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 980,
-    "word": "treasure",
-    "partOfSpeech": "noun",
+    "word": "laconic",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with treasure",
-    "chinese": "“treasure”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about treasure in a PSLE challenge context.",
+    "meaning": "using very few words",
+    "chinese": "简洁的；寡言的",
+    "synonyms": [
+      "brief",
+      "concise"
+    ],
+    "antonyms": [
+      "verbose"
+    ],
+    "example": "His laconic reply ended the conversation quickly.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Writing"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 981,
-    "word": "treatment",
-    "partOfSpeech": "noun",
+    "word": "admonish",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with treatment",
-    "chinese": "“treatment”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about treatment in a PSLE challenge context.",
+    "meaning": "to tell someone firmly that they have done something wrong",
+    "chinese": "告诫；责备",
+    "synonyms": [
+      "reprimand",
+      "warn"
+    ],
+    "antonyms": [
+      "praise"
+    ],
+    "example": "The teacher admonished the pupils for leaving the room untidy.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 982,
-    "word": "universe",
+    "word": "sagacity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with universe",
-    "chinese": "“universe”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about universe in a PSLE challenge context.",
+    "meaning": "the ability to make wise decisions and judgements",
+    "chinese": "睿智；明智",
+    "synonyms": [
+      "wisdom",
+      "good judgement"
+    ],
+    "antonyms": [
+      "foolishness"
+    ],
+    "example": "The leader's sagacity helped the community through the crisis.",
     "topics": [
-      "advanced PSLE"
+      "Leadership",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 983,
-    "word": "valley",
+    "word": "temerity",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with valley",
-    "chinese": "“valley”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about valley in a PSLE challenge context.",
+    "meaning": "too much confidence in doing something that may be unreasonable or dangerous",
+    "chinese": "鲁莽；冒失",
+    "synonyms": [
+      "audacity",
+      "boldness"
+    ],
+    "antonyms": [
+      "caution"
+    ],
+    "example": "He had the temerity to ignore the clear safety signs.",
     "topics": [
-      "advanced PSLE"
+      "Safety",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 984,
-    "word": "vehicle",
-    "partOfSpeech": "noun",
+    "word": "embellish",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with vehicle",
-    "chinese": "“vehicle”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about vehicle in a PSLE challenge context.",
+    "meaning": "to add details to make something more attractive or interesting",
+    "chinese": "修饰；润色",
+    "synonyms": [
+      "decorate",
+      "ornament"
+    ],
+    "antonyms": [
+      "simplify"
+    ],
+    "example": "He embellished the story with unnecessary details.",
     "topics": [
-      "advanced PSLE"
+      "Writing",
+      "Communication"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 985,
-    "word": "village",
-    "partOfSpeech": "noun",
+    "word": "acquiesce",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with village",
-    "chinese": "“village”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about village in a PSLE challenge context.",
+    "meaning": "to accept something reluctantly without protest",
+    "chinese": "默许；勉强同意",
+    "synonyms": [
+      "consent",
+      "submit"
+    ],
+    "antonyms": [
+      "resist"
+    ],
+    "example": "He eventually acquiesced to the committee's decision.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Community"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 986,
-    "word": "visitor",
+    "word": "adulation",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with visitor",
-    "chinese": "“visitor”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about visitor in a PSLE challenge context.",
+    "meaning": "great praise or admiration",
+    "chinese": "奉承；热烈赞美",
+    "synonyms": [
+      "praise",
+      "admiration"
+    ],
+    "antonyms": [
+      "criticism"
+    ],
+    "example": "The athlete received widespread adulation after the victory.",
     "topics": [
-      "advanced PSLE"
+      "Sports",
+      "Media"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 987,
-    "word": "voice",
-    "partOfSpeech": "noun",
+    "word": "assiduous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with voice",
-    "chinese": "“voice”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about voice in a PSLE challenge context.",
+    "meaning": "showing great care and effort",
+    "chinese": "勤勉的；刻苦的",
+    "synonyms": [
+      "diligent",
+      "industrious"
+    ],
+    "antonyms": [
+      "lazy"
+    ],
+    "example": "His assiduous revision led to excellent results.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 988,
-    "word": "waterfall",
-    "partOfSpeech": "noun",
+    "word": "antagonise",
+    "partOfSpeech": "verb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with waterfall",
-    "chinese": "“waterfall”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about waterfall in a PSLE challenge context.",
+    "meaning": "to make someone angry or hostile",
+    "chinese": "激怒；对立",
+    "synonyms": [
+      "provoke",
+      "anger"
+    ],
+    "antonyms": [
+      "please",
+      "appease"
+    ],
+    "example": "His rude comment antagonised the audience.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 989,
-    "word": "website",
-    "partOfSpeech": "noun",
+    "word": "despondent",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with website",
-    "chinese": "“website”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about website in a PSLE challenge context.",
+    "meaning": "very unhappy and without hope",
+    "chinese": "沮丧的；失望的",
+    "synonyms": [
+      "depressed",
+      "hopeless"
+    ],
+    "antonyms": [
+      "hopeful",
+      "cheerful"
+    ],
+    "example": "She felt despondent after missing the final selection.",
     "topics": [
-      "advanced PSLE"
+      "Emotions",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 990,
-    "word": "weekend",
-    "partOfSpeech": "noun",
+    "word": "abstemious",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with weekend",
-    "chinese": "“weekend”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about weekend in a PSLE challenge context.",
+    "meaning": "not eating or drinking too much",
+    "chinese": "节制的；有节制的",
+    "synonyms": [
+      "moderate",
+      "temperate"
+    ],
+    "antonyms": [
+      "excessive"
+    ],
+    "example": "An abstemious diet can help maintain good health.",
     "topics": [
-      "advanced PSLE"
+      "Health",
+      "Food"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 991,
-    "word": "wildlife",
-    "partOfSpeech": "noun",
+    "word": "tantamount",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with wildlife",
-    "chinese": "“wildlife”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about wildlife in a PSLE challenge context.",
+    "meaning": "having the same effect or meaning as something else",
+    "chinese": "等同于；相当于",
+    "synonyms": [
+      "equivalent",
+      "equal"
+    ],
+    "antonyms": [
+      "different"
+    ],
+    "example": "Ignoring the warning was tantamount to accepting the risk.",
     "topics": [
-      "advanced PSLE"
+      "Safety",
+      "Thinking"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 992,
-    "word": "window",
-    "partOfSpeech": "noun",
+    "word": "clandestine",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with window",
-    "chinese": "“window”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about window in a PSLE challenge context.",
+    "meaning": "secret and often intended to avoid attention",
+    "chinese": "秘密的；暗中的",
+    "synonyms": [
+      "secret",
+      "covert"
+    ],
+    "antonyms": [
+      "open",
+      "public"
+    ],
+    "example": "The group held a clandestine meeting after school.",
     "topics": [
-      "advanced PSLE"
+      "Communication",
+      "Events"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 993,
-    "word": "winner",
-    "partOfSpeech": "noun",
+    "word": "incongruous",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with winner",
-    "chinese": "“winner”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about winner in a PSLE challenge context.",
+    "meaning": "strange because something does not fit with its surroundings",
+    "chinese": "不协调的；不相称的",
+    "synonyms": [
+      "inconsistent",
+      "out of place"
+    ],
+    "antonyms": [
+      "appropriate"
+    ],
+    "example": "The modern sculpture looked incongruous in the ancient courtyard.",
     "topics": [
-      "advanced PSLE"
+      "Arts",
+      "Description"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 994,
-    "word": "wonderful",
+    "word": "deleterious",
     "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "describing someone or something that is wonderful",
-    "chinese": "“wonderful”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The PSLE challenge situation was described as wonderful by the teacher.",
+    "meaning": "causing harm or damage",
+    "chinese": "有害的",
+    "synonyms": [
+      "harmful",
+      "damaging"
+    ],
+    "antonyms": [
+      "beneficial"
+    ],
+    "example": "Smoking has deleterious effects on health.",
     "topics": [
-      "advanced PSLE"
+      "Health",
+      "Science"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 995,
-    "word": "worry",
-    "partOfSpeech": "noun",
+    "word": "inscrutable",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with worry",
-    "chinese": "“worry”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about worry in a PSLE challenge context.",
+    "meaning": "difficult to understand or interpret",
+    "chinese": "高深莫测的",
+    "synonyms": [
+      "mysterious",
+      "unreadable"
+    ],
+    "antonyms": [
+      "clear"
+    ],
+    "example": "His inscrutable expression gave nothing away.",
     "topics": [
-      "advanced PSLE"
+      "People",
+      "Emotions"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 996,
-    "word": "writer",
-    "partOfSpeech": "noun",
+    "word": "commensurate",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with writer",
-    "chinese": "“writer”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about writer in a PSLE challenge context.",
+    "meaning": "matching something in size or degree",
+    "chinese": "相称的；相应的",
+    "synonyms": [
+      "proportionate",
+      "corresponding"
+    ],
+    "antonyms": [
+      "disproportionate"
+    ],
+    "example": "The reward should be commensurate with the effort involved.",
     "topics": [
-      "advanced PSLE"
+      "Values",
+      "School"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 997,
-    "word": "zebra",
-    "partOfSpeech": "noun",
+    "word": "incorrigible",
+    "partOfSpeech": "adjective",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with zebra",
-    "chinese": "“zebra”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about zebra in a PSLE challenge context.",
+    "meaning": "having a bad habit that cannot easily be corrected",
+    "chinese": "屡教不改的",
+    "synonyms": [
+      "unmanageable",
+      "hopeless"
+    ],
+    "antonyms": [
+      "correctable"
+    ],
+    "example": "The incorrigible prankster continued to break the rules.",
     "topics": [
-      "advanced PSLE"
+      "School",
+      "Values"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 998,
-    "word": "variety",
+    "word": "corroboration",
     "partOfSpeech": "noun",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with variety",
-    "chinese": "“variety”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about variety in a PSLE challenge context.",
+    "meaning": "evidence that confirms a statement or belief",
+    "chinese": "证实；佐证",
+    "synonyms": [
+      "confirmation",
+      "support"
+    ],
+    "antonyms": [
+      "contradiction"
+    ],
+    "example": "The claim lacked independent corroboration.",
     "topics": [
-      "advanced PSLE"
+      "Science",
+      "Research"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 999,
-    "word": "willing",
-    "partOfSpeech": "noun",
+    "word": "circumspectly",
+    "partOfSpeech": "adverb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with willing",
-    "chinese": "“willing”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about willing in a PSLE challenge context.",
+    "meaning": "in a careful way that avoids unnecessary risk",
+    "chinese": "谨慎地",
+    "synonyms": [
+      "cautiously",
+      "carefully"
+    ],
+    "antonyms": [
+      "recklessly"
+    ],
+    "example": "The team proceeded circumspectly because the path was slippery.",
     "topics": [
-      "advanced PSLE"
+      "Safety",
+      "Travel"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   },
   {
     "id": 1000,
-    "word": "wisdom",
-    "partOfSpeech": "noun",
+    "word": "irreproachably",
+    "partOfSpeech": "adverb",
     "level": 10,
-    "meaning": "a person, thing, idea, or situation connected with wisdom",
-    "chinese": "“wisdom”的常用中文释义",
-    "synonyms": [],
-    "antonyms": [],
-    "example": "The passage included information about wisdom in a PSLE challenge context.",
+    "meaning": "in a way that gives no reason for criticism",
+    "chinese": "无可指责地",
+    "synonyms": [
+      "faultlessly",
+      "perfectly"
+    ],
+    "antonyms": [
+      "poorly"
+    ],
+    "example": "She behaved irreproachably throughout the competition.",
     "topics": [
-      "advanced PSLE"
+      "Values",
+      "Sports"
     ],
     "questionTypes": [
-      "meaning",
-      "context",
-      "cloze",
-      "synonym"
+      "MCQ",
+      "Fill in the Blank"
     ]
   }
 ];
 
-// ============================================================
-// VALIDATION
-// ============================================================
-
-if (!Array.isArray(vocabulary)) {
-  throw new Error("Vocabulary must be an array.");
-}
-
-if (vocabulary.length !== 1000) {
-  throw new Error("Vocabulary must contain exactly 1000 words.");
-}
-
-const vocabularyIds = new Set(vocabulary.map(item => item.id));
-const vocabularyWords = new Set(
-  vocabulary.map(item => item.word.toLowerCase())
-);
-
-if (vocabularyIds.size !== 1000) {
-  throw new Error("Duplicate vocabulary IDs detected.");
-}
-
-if (vocabularyWords.size !== 1000) {
-  throw new Error("Duplicate vocabulary words detected.");
-}
-
-for (let i = 1; i <= 1000; i++) {
-  if (!vocabularyIds.has(i)) {
-    throw new Error("Missing vocabulary ID: " + i);
+window.vocabularyInfo = {
+  name: "APLUS ACHIEVER PSLE English Vocabulary 1000",
+  version: "4.0",
+  currentWords: window.vocabulary.length,
+  targetWords: 1000,
+  levels: {
+    1: { name: "Foundation", target: 100 },
+    2: { name: "Core", target: 100 },
+    3: { name: "PSLE Core", target: 100 },
+    4: { name: "Upper Primary", target: 100 },
+    5: { name: "Strong Reader", target: 100 },
+    6: { name: "Advanced PSLE", target: 100 },
+    7: { name: "Challenge", target: 100 },
+    8: { name: "High Challenge", target: 100 },
+    9: { name: "Mastery", target: 100 },
+    10: { name: "Extension", target: 100 }
   }
-}
+};
 
-for (let level = 1; level <= 10; level++) {
-  const count = vocabulary.filter(
-    item => Number(item.level) === level
-  ).length;
-
-  if (count !== 100) {
-    throw new Error(
-      "Level " + level +
-      " must contain exactly 100 words. Found: " + count
-    );
-  }
-}
-
-// Make the database available to vocabulary.html
-window.vocabulary = vocabulary;
-
-// Optional CommonJS support
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = vocabulary;
-}
+window.getVocabularyByLevel = function(level) {
+  return window.vocabulary.filter(function(item) { return item.level === level; });
+};
+window.getVocabularyById = function(id) {
+  return window.vocabulary.find(function(item) { return item.id === id; });
+};
+window.getVocabularyByWord = function(word) {
+  var q = String(word || '').toLowerCase();
+  return window.vocabulary.find(function(item) { return item.word.toLowerCase() === q; });
+};
+window.validateVocabulary = function() {
+  var words = window.vocabulary.map(function(x){ return x.word.toLowerCase(); });
+  var levels = {}; for (var i=1;i<=10;i++) levels[i]=window.getVocabularyByLevel(i).length;
+  return { valid: window.vocabulary.length===1000 && new Set(words).size===1000 && Object.values(levels).every(function(n){return n===100;}), entries: window.vocabulary.length, uniqueWords:new Set(words).size, levelCounts:levels };
+};
