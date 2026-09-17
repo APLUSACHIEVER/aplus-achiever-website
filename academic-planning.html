@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>APLUS ACHIEVER — Academic Planning</title>
+<meta name="description" content="Every Great Future Starts with a Plan.">
+<style>
+:root{
+ --green:#079b68;--deep:#086650;--ink:#075d50;--blue:#176c92;--muted:#5f8790;
+ --line:#dfeee8;--mint:#effaf5;--lav:#f5f1ff;--yellow:#fff9e8;--sky:#eef8ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--blue);font-family:Arial,"Segoe UI",sans-serif}
+.container{width:min(908px,92%);margin:auto}
+header{height:58px;background:#fff;border-bottom:1px solid #edf2ef}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{height:43px;width:auto;display:block}
+.get{border:0;border-radius:22px;background:#086650;color:#fff;font-size:12px;font-weight:700;padding:11px 24px;cursor:pointer}
+.hero{background:linear-gradient(110deg,#f7fffb,#fff 53%,#edf9f3);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1.08fr;min-height:418px}
+.hero-copy{padding:38px 5px 25px 0}
+.badge{display:inline-flex;align-items:center;gap:6px;background:#dff6e9;color:#08704e;border-radius:18px;padding:7px 12px;font-size:11px;font-weight:700}
+h1{font-size:39px;line-height:1.03;letter-spacing:-1.4px;color:var(--ink);margin:15px 0 13px}
+h1 span{display:block}
+.hero-copy p{font-size:13px;line-height:1.55;max-width:460px;margin:0;color:#216b83}
+.actions{display:flex;gap:11px;margin:20px 0 19px}
+.btn{border-radius:24px;padding:12px 23px;font-size:11px;font-weight:700;cursor:pointer;display:inline-flex;justify-content:center;align-items:center}
+.primary{background:var(--green);color:#fff;border:0}
+.outline{background:#fff;color:#14835f;border:1px solid #63bd9d}
+.points{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:430px}
+.point{text-align:center;color:#086650;font-size:9px;font-weight:700;line-height:1.2}
+.ico{width:37px;height:37px;border-radius:50%;background:#e0f8ea;margin:0 auto 5px;display:grid;place-items:center;font-size:17px}
+.hero-art{position:relative;overflow:hidden;min-height:418px}
+.hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0 0 35px 35px}
+
+.journey{padding:27px 0 22px}
+.title{font-size:21px;color:var(--ink);margin:0 0 4px}
+.lead{font-size:10px;color:#39748a;margin:0 0 22px}
+.j-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:39px;position:relative}
+.j-grid:before{content:"";position:absolute;left:25px;right:25px;top:49px;height:2px;background:#55b991;z-index:0}
+.j-card{position:relative;z-index:1;border-radius:11px;padding:13px 12px;min-height:106px}
+.j-card:nth-child(1){background:var(--lav)}
+.j-card:nth-child(2){background:var(--yellow)}
+.j-card:nth-child(3){background:var(--sky)}
+.j-card:nth-child(4){background:#eefaf2}
+.j-icon{width:37px;height:37px;border-radius:50%;display:grid;place-items:center;background:#fff;margin-bottom:7px;font-size:17px}
+.j-card h3{font-size:11px;margin:0 0 5px;color:#1760a0}
+.j-card:nth-child(2) h3{color:#bd8500}.j-card:nth-child(1) h3{color:#5133ad}.j-card:nth-child(4) h3{color:#08704e}
+.j-card p{font-size:8.5px;line-height:1.35;margin:0;color:#35748a}
+.assess{margin:0 0 19px;border-radius:16px;overflow:hidden;background:#effaf5;display:grid;grid-template-columns:39% 61%;min-height:165px}
+.assess-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.assess-copy{padding:18px 20px;position:relative}
+.assess-copy h2{font-size:20px;color:var(--ink);margin:8px 0 5px}
+.assess-copy p{font-size:9px;line-height:1.5;color:#27718a;max-width:390px;margin:0 0 12px}
+.assess .badge{font-size:9px;padding:5px 9px}
+.assess .btn{padding:11px 21px;font-size:10px}
+.checks{position:absolute;right:17px;top:25px;display:grid;gap:8px;width:142px}
+.check{display:flex;align-items:center;gap:6px;color:#086650;font-size:8.5px;font-weight:700}
+.check i{width:27px;height:27px;flex:none;border-radius:50%;display:grid;place-items:center;background:#fff;box-shadow:0 2px 9px #d7ece2;font-style:normal;font-size:13px}
+.section{padding:0 0 20px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.feature{border:1px solid var(--line);border-radius:12px;padding:14px;min-height:112px;box-shadow:0 2px 9px rgba(7,85,69,.03)}
+.ficon{width:34px;height:34px;border-radius:50%;background:#e1f8eb;display:grid;place-items:center;font-size:15px}
+.feature h3{font-size:10px;color:#0a6253;margin:8px 0 4px}.feature p{font-size:8.5px;line-height:1.4;color:#4e8190;margin:0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.step{position:relative}.num{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#0c9868;color:#fff;font-size:10px;font-weight:700}.sicon{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#e4f8ed;color:#087d59;margin-left:5px;font-size:15px}
+.step h3{font-size:9.5px;color:#0a6253;margin:8px 0 3px}.step p{font-size:8.5px;line-height:1.35;color:#4e8190;margin:0}.step:after{content:"→";position:absolute;right:-19px;top:5px;color:#83ceb0;font-size:22px}.step:last-child:after{display:none}
+.quote{margin-top:17px;min-height:85px;border-radius:14px;background:#effaf5;position:relative;overflow:hidden;padding:17px 32% 12px 30px;font-size:9px;line-height:1.35;font-style:italic;color:#276675}
+.quote:before{content:"“";position:absolute;left:13px;top:3px;color:#64b98e;font-size:42px;font-family:Georgia}
+.quote small{font-size:8px;font-style:normal}
+.quote img{position:absolute;right:17%;bottom:0;height:82px;width:auto;object-fit:cover;object-position:center}
+.quote-note{position:absolute;right:4%;top:22px;color:#0b8b60;font-family:cursive;font-size:13px;line-height:.95;transform:rotate(-7deg)}
+footer{background:#075b48;color:#fff;margin-top:0;padding:18px 0 10px}
+.foot{display:flex;align-items:center;justify-content:space-between}.foot-logo{height:34px;width:auto}.social{display:flex;gap:9px;font-size:10px}.copy{text-align:right;font-size:7px;color:#c0ded4;margin-top:7px}
+.modal{display:none;position:fixed;inset:0;background:#003c32aa;z-index:100;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}
+.box{width:min(500px,100%);background:#fff;border-radius:20px;padding:25px}.head{display:flex;justify-content:space-between}.close{border:0;width:32px;height:32px;border-radius:50%;background:#eaf8f1;font-size:18px;cursor:pointer}.box h2{color:var(--ink);font-size:21px;margin:9px 0 15px}.form{display:grid;gap:10px}.form label{font-size:10px;font-weight:700;color:#42686b}.form input,.form select,.form textarea{width:100%;margin-top:4px;padding:10px;border:1px solid #dcebe5;border-radius:9px;font:inherit;font-size:12px}.form textarea{min-height:75px}.success{display:none;text-align:center}.success.show{display:block}
+@media(max-width:800px){.container{width:92%}.hero-grid{grid-template-columns:1fr}.hero-copy{padding-bottom:20px}.hero-art{min-height:360px}.j-grid,.features,.steps{grid-template-columns:repeat(2,1fr)}.j-grid:before{display:none}.assess{grid-template-columns:1fr}.assess-photo{height:210px}.checks{position:static;margin-top:14px;width:auto}.quote img,.quote-note{display:none}}
+@media(max-width:520px){h1{font-size:34px}.points{grid-template-columns:repeat(2,1fr);gap:10px}.j-grid,.features,.steps{grid-template-columns:1fr}.actions{flex-direction:column}.btn{width:100%}.hero-art{min-height:310px}.foot{flex-direction:column;gap:10px;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><div class="container nav"><img class="logo" src="assets/logo.png" alt="APLUS ACHIEVER"><button class="get" onclick="openModal()">Get Started</button></div></header>
+
+<section class="hero"><div class="container hero-grid">
+<div class="hero-copy">
+<span class="badge">🎓 &nbsp;Academic Planning</span>
+<h1>Every Great Future<br><span>Starts with a Plan</span></h1>
+<p>From Primary School to University, APLUS ACHIEVER helps you understand your child's strengths, explore the right pathways and build a clear, practical academic plan.</p>
+<div class="actions"><button class="btn primary" onclick="openModal()">Start My Academic Assessment&nbsp; →</button><a class="btn outline" href="#why">Learn More</a></div>
+<div class="points"><div class="point"><div class="ico">◉</div>Understand<br>Where They Are</div><div class="point"><div class="ico">↗</div>Explore<br>Suitable Pathways</div><div class="point"><div class="ico">☆</div>Identify Key<br>Decisions</div><div class="point"><div class="ico">▥</div>Build a Practical<br>Plan</div></div>
+</div>
+<div class="hero-art"><img src="assets/hero-visual.jpg" alt="Academic planning student"></div>
+</div></section>
+
+<section class="journey"><div class="container"><h2 class="title">Your Child's Academic Journey</h2><p class="lead">We support students at every stage, with tailored guidance for their unique goals and potential.</p>
+<div class="j-grid">
+<div class="j-card"><div class="j-icon">🏠</div><h3>Primary School</h3><p>Build strong foundations<br>and good study habits.</p></div>
+<div class="j-card"><div class="j-icon">🏫</div><h3>Secondary School</h3><p>Explore interests,<br>strengthen core subjects.</p></div>
+<div class="j-card"><div class="j-icon">🏛️</div><h3>JC / Polytechnic</h3><p>Choose the right stream<br>and prepare for the future.</p></div>
+<div class="j-card"><div class="j-icon">🎓</div><h3>University &amp; Career</h3><p>Turn dreams into<br>real opportunities.</p></div>
+</div></div></section>
+
+<section class="container"><div class="assess">
+<div class="assess-photo"><img src="assets/assessment-family.jpg" alt="Parent and student studying"></div>
+<div class="assess-copy"><span class="badge">🎓 &nbsp;Start with a Simple Assessment</span><h2>Not sure what comes next?</h2><p>Start with a simple assessment. We look at your child's current level, interests, strengths and possible pathways.</p><button class="btn primary" onclick="openModal()">Start My Academic Assessment&nbsp; →</button>
+<div class="checks"><div class="check"><i>◎</i>Personalised Recommendations</div><div class="check"><i>♧</i>Data-Driven Insights</div><div class="check"><i>✓</i>Safe &amp; Confidential</div><div class="check"><i>♥</i>Support Every Step</div></div></div>
+</div></section>
+
+<section class="section" id="why"><div class="container"><h2 class="title">Why Choose APLUS ACHIEVER</h2><p class="lead">We combine education expertise with smart technology to give your child the best possible guidance.</p>
+<div class="features"><div class="feature"><div class="ficon">♧</div><h3>Expert Guidance</h3><p>Based on Singapore education system and real-world experience.</p></div><div class="feature"><div class="ficon">◎</div><h3>Personalised Plans</h3><p>Tailored to your child's strengths, interests and goals.</p></div><div class="feature"><div class="ficon">▥</div><h3>Clear Roadmap</h3><p>Simple, practical steps for each stage of their journey.</p></div><div class="feature"><div class="ficon">♡</div><h3>Ongoing Support</h3><p>From planning to progress, we're with you all the way.</p></div></div></div></section>
+
+<section class="section"><div class="container"><h2 class="title">How It Works</h2><p class="lead">Getting started is easy. Just follow these 4 simple steps.</p>
+<div class="steps"><div class="step"><span class="num">1</span><span class="sicon">▣</span><h3>Complete Assessment</h3><p>Tell us about your child's current level and goals.</p></div><div class="step"><span class="num">2</span><span class="sicon">⌕</span><h3>Get Personalised Plan</h3><p>Receive tailored recommendations and next steps.</p></div><div class="step"><span class="num">3</span><span class="sicon">⌖</span><h3>Take Action</h3><p>Explore courses, resources and support.</p></div><div class="step"><span class="num">4</span><span class="sicon">▥</span><h3>Track Progress</h3><p>Monitor improvements and adjust as needed.</p></div></div>
+<div class="quote">APLUS ACHIEVER gave our family a clear direction. The academic plan helped my daughter choose the right path, and now she's more confident about her future.<br><small>— Parent of Secondary 3 Student</small><img src="assets/testimonial-student.jpg" alt=""><span class="quote-note">More<br>Confidence<br>More<br>Possibilities ♥</span></div>
+</div></section>
+
+<footer><div class="container"><div class="foot"><img class="foot-logo" src="assets/logo.png" alt="APLUS ACHIEVER"><div class="social">● &nbsp;◎ &nbsp;▶ &nbsp;in</div></div><div class="copy">© 2026 APLUS ACHIEVER. All rights reserved.</div></div></footer>
+
+<div class="modal" id="modal"><div class="box"><div id="formView"><div class="head"><div><span class="badge">🎓 &nbsp;Academic Assessment</span><h2>Let's plan the next step.</h2></div><button class="close" onclick="closeModal()">×</button></div>
+<form class="form" onsubmit="submitForm(event)"><label>Student Name<input required></label><label>Current Level<select required><option value="">Select level</option><option>Primary School</option><option>Secondary School</option><option>JC</option><option>Polytechnic</option><option>University</option></select></label><label>School<input></label><label>Parent Email<input type="email" required></label><label>What would you like help with?<textarea></textarea></label><button class="btn primary">Submit Assessment Request&nbsp; →</button></form></div><div class="success" id="success"><div style="font-size:42px;color:#079b68">✓</div><h2>Thank you.</h2><p>Your assessment request has been received.<br>APLUS ACHIEVER will be in touch.</p><button class="btn primary" onclick="closeModal()">Close</button></div></div></div>
+<script>
+const modal=document.getElementById("modal");
+function openModal(){modal.classList.add("open");document.body.style.overflow="hidden"}
+function closeModal(){modal.classList.remove("open");document.body.style.overflow=""}
+function submitForm(e){e.preventDefault();document.getElementById("formView").style.display="none";document.getElementById("success").classList.add("show")}
+modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+</script>
+</body></html>
