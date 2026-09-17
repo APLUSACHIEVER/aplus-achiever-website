@@ -1,8 +1,54 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>APLUS ACHIEVER — My Progress</title><style>
-:root{--g:#14745b;--g2:#28aa73;--ink:#0d4035;--muted:#6d8289;--bg:#f3f8f6;--line:#dce9e4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}header{height:110px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5%}.logo{font-size:34px;font-weight:900;line-height:.8;letter-spacing:-2px;color:#202329}.logo span{display:block;font-size:23px;color:var(--g2);letter-spacing:-1px;margin-top:8px}.badge{padding:12px 20px;border:1px solid #d2e8df;border-radius:30px;background:#f4faf7;font-weight:800;color:var(--g)}main{max-width:1450px;margin:34px auto;padding:0 24px}.hero{padding:38px 42px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(120deg,#e9f8f2,#f9fcfb);margin-bottom:20px}.eyebrow{font-size:13px;letter-spacing:2px;font-weight:900;color:#18a66c}h1{font-size:48px;margin:11px 0 8px;letter-spacing:-2px}.hero p{font-size:18px;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:0 8px 24px rgba(18,75,58,.05)}.label{font-size:11px;letter-spacing:1.1px;text-transform:uppercase;font-weight:900;color:#71858b}.value{font-size:36px;font-weight:900;margin-top:9px}.value small{font-size:14px;color:#7c9197}.row{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:18px}.title{font-size:23px;font-weight:900;margin-bottom:14px}.bar{height:12px;background:#e8efed;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--g),var(--g2));border-radius:99px}.status{display:flex;gap:14px;align-items:center;padding:16px;border-radius:14px;background:#eaf7f1;border:1px solid #d4eee3}.dot{width:10px;height:10px;border-radius:50%;background:#25aa72;box-shadow:0 0 0 5px #d8f3e7;flex:none}.st{font-weight:900}.desc{color:#627a80;line-height:1.5;margin-top:4px}.words{display:flex;gap:8px;flex-wrap:wrap}.word{padding:8px 12px;border-radius:99px;background:#f7fbf9;border:1px solid var(--line);font-weight:800}.note{font-size:13px;color:#7a9096;line-height:1.5;margin-top:9px}.next{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:21px;margin-top:18px}.btn{display:inline-block;text-decoration:none;background:var(--g);color:#fff;border-radius:11px;padding:12px 18px;font-weight:900}.back{background:#fff;color:var(--g);border:1px solid #cfe4dc}@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr}h1{font-size:39px}}@media(max-width:550px){header{height:90px;padding:0 17px}.logo{font-size:27px}.logo span{font-size:18px}.badge{font-size:10px;padding:8px 11px}main{padding:0 12px}.hero{padding:27px 21px}.grid{grid-template-columns:1fr 1fr}.value{font-size:27px}}</style></head><body>
-<header><div class="logo">APLUS<span>ACHIEVER</span></div><div class="badge">AI TUTOR 6.0</div></header><main><section class="hero"><div class="eyebrow">AI STUDENT LEARNING CENTRE</div><h1>My Vocabulary Progress</h1><p>Your AI tutor tracks your performance and helps you focus on the vocabulary that needs more practice.</p></section>
-<section class="grid"><div class="card"><div class="label">Vocabulary Mastery</div><div class="value" id="mastery">0%</div></div><div class="card"><div class="label">Words Mastered</div><div class="value" id="mastered">0 <small>/ 1000+</small></div></div><div class="card"><div class="label">Current Accuracy</div><div class="value" id="accuracy">0%</div></div><div class="card"><div class="label">Questions Completed</div><div class="value" id="questions">0</div></div></section>
-<section class="row"><div class="card"><div class="title">Vocabulary Mastery</div><div style="display:flex;justify-content:space-between;font-weight:800"><span>Overall progress</span><span id="m2">0%</span></div><div class="bar" style="margin-top:14px"><i id="bar"></i></div><div class="note">Your mastery grows as you build accurate, reliable recall.</div></div><div class="card"><div class="title">🧠 AI Learning Status</div><div class="status"><div class="dot"></div><div><div class="st" id="st">Ready to learn</div><div class="desc" id="sd">Complete more questions so your AI tutor can personalise your learning path.</div></div></div></div></section>
-<section class="row"><div class="card"><div class="title">🎯 Vocabulary to Practise</div><div class="note">Your weaker words will appear here when learning data is available.</div><div class="words" id="words" style="margin-top:14px"><span class="word">Complete a practice session</span></div></div><div class="card"><div class="title">⚡ Your Next Step</div><div class="desc" id="next">Start a vocabulary session and let your AI tutor identify what you should practise next.</div><div style="margin-top:17px"><a class="btn" href="vocabulary.html">Start Today's Practice →</a></div></div></section>
-<div class="next"><div><strong>Continue your personalised learning path</strong><div class="note">Return to APLUS ACHIEVER Vocabulary Learning.</div></div><a class="btn back" href="vocabulary.html">← Back to Vocabulary</a></div></main>
-<script>(function(){const names=["aplusVocabularyData","aplusVocabularyProgress","vocabularyProgress","vocabularyData","studentProgress","progressData","aplus_progress"];let d={};for(const k of names){try{const x=JSON.parse(localStorage.getItem(k));if(x&&typeof x==="object")d={...d,...x}}catch(e){}}const n=(...a)=>{for(const x of a)if(x!==undefined&&x!==null&&x!==""&&!isNaN(Number(x)))return Number(x);return 0};let q=n(d.questionsCompleted,d.completed,d.totalAnswered,d.questionsAttempted,d.totalQuestions),c=n(d.correctAnswers,d.correct,d.correctCount),acc=n(d.accuracy,d.accuracyPercent);if(!acc&&q)acc=Math.round(c/q*100);acc=Math.max(0,Math.min(100,acc));let mastered=n(d.wordsMastered,d.masteredWordsCount,d.masteredCount),mastery=n(d.mastery,d.masteryPercent);if(!mastery&&Array.isArray(d.words||d.vocabulary)){let a=d.words||d.vocabulary,m=a.filter(x=>x&&(x.mastered===true||n(x.mastery)>=80||n(x.accuracy)>=80));if(a.length)mastery=Math.round(m.length/a.length*100)}mastery=Math.max(0,Math.min(100,mastery));document.getElementById("mastery").textContent=mastery+"%";document.getElementById("m2").textContent=mastery+"%";document.getElementById("bar").style.width=mastery+"%";document.getElementById("mastered").innerHTML=mastered+' <small>/ 1000+</small>';document.getElementById("accuracy").textContent=acc+"%";document.getElementById("questions").textContent=q;if(q){document.getElementById("st").textContent=acc>=85?"Strong progress":acc>=70?"Making progress":"Keep practising";document.getElementById("sd").textContent=acc>=85?"Your recent accuracy is strong. Keep building recall speed and consistency.":acc>=70?"Your accuracy is developing. Focus on weaker vocabulary in your next session.":"Keep practising so your AI tutor can identify your strengths and weak vocabulary."}let weak=d.weakWords||d.weakVocabulary||d.needsPractice||d.reviewWords||[];if(!Array.isArray(weak))weak=[];if(weak.length){let box=document.getElementById("words");box.innerHTML="";weak.slice(0,12).forEach(x=>{let s=document.createElement("span");s.className="word";s.textContent=typeof x==="string"?x:(x.word||x.text||x.answer||"Review");box.appendChild(s)})}})();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>APLUS ACHIEVER — My Progress</title>
+<style>
+:root{--g:#146b4f;--g2:#27a66d;--deep:#103e31;--muted:#6d817a;--line:#dcebe5}
+body{margin:0;background:#f4f8f6;color:#183f35;font-family:Inter,Arial,sans-serif}
+.wrap{max-width:1100px;margin:auto;padding:25px 18px 60px}.top{display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:950;color:var(--g)}button{border:1px solid var(--line);background:#fff;color:var(--g);border-radius:11px;padding:10px 14px;font-weight:800;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0}.stat,.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px}.stat b{font-size:25px;color:var(--g);display:block}.muted{color:var(--muted);font-size:12px}.card{margin-top:14px}.bar{height:9px;background:#e5efe9;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g2)}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid #e8f0ed}
+@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.grid{grid-template-columns:1fr}}
+</style>
+<script src="config/supabase-config.js"></script><script src="js/auth.js"></script>
+</head>
+<body><div class="wrap">
+<div class="top"><div><div class="brand">APLUS ACHIEVER</div><h1>My Learning Progress</h1></div><div><button onclick="location.href='vocabulary.html'">← Learning</button> <button onclick="logout()">Sign Out</button></div></div>
+<div id="status" class="muted">Loading...</div>
+<div class="grid">
+<div class="stat"><b id="q">0</b><span class="muted">Questions</span></div>
+<div class="stat"><b id="acc">0%</b><span class="muted">Accuracy</span></div>
+<div class="stat"><b id="master">0</b><span class="muted">Mastered</span></div>
+<div class="stat"><b id="due">0</b><span class="muted">Review Due</span></div>
+<div class="stat"><b id="streak">0</b><span class="muted">Study Days</span></div>
+</div>
+<div class="card"><h2>Mastery Overview</h2><div id="mastery"></div></div>
+<div class="card"><h2>Words Needing Attention</h2><table><thead><tr><th>Word</th><th>Level</th><th>Mastery</th><th>Accuracy</th><th>Next Review</th></tr></thead><tbody id="weak"></tbody></table></div>
+</div>
+<script>
+async function wait(){for(let i=0;i<60;i++){if(window.APLUS_AUTH)return;await new Promise(r=>setTimeout(r,250))}}
+async function logout(){await wait();await APLUS_AUTH.signOut();location.href='student-login.html'}
+async function init(){
+ await wait();
+ const u=await APLUS_AUTH.user(); if(!u){location.href='student-login.html';return}
+ const p=await APLUS_AUTH.profile();
+ const s=window.aplusSupabase;
+ const {data:a}=await s.from('attempts').select('is_correct,created_at').eq('student_id',u.id);
+ const {data:v}=await s.from('vocabulary_progress').select('*').eq('student_id',u.id);
+ const total=a?.length||0, correct=(a||[]).filter(x=>x.is_correct).length;
+ q.textContent=total;acc.textContent=(total?Math.round(correct/total*100):0)+'%';
+ master.textContent=(v||[]).filter(x=>Number(x.mastery)>=90).length;
+ due.textContent=(v||[]).filter(x=>x.next_review&&new Date(x.next_review)<=new Date()).length;
+ const days=new Set((a||[]).map(x=>x.created_at.slice(0,10)));streak.textContent=days.size;
+ status.textContent='Signed in as '+(p?.full_name||u.email);
+ const buckets={};
+ (v||[]).forEach(x=>{const l=x.level||1;(buckets[l]??={n:0,c:0});buckets[l].n++;buckets[l].c+=Number(x.mastery||0)});
+ mastery.innerHTML=Array.from({length:10},(_,i)=>{let x=buckets[i+1]||{n:0,c:0};let pct=x.n?Math.round(x.c/x.n):0;return `<p><b>Level ${i+1}</b> · ${pct}%</p><div class="bar"><i style="width:${pct}%"></i></div>`}).join('');
+ const rows=(v||[]).filter(x=>Number(x.mastery)<90).sort((a,b)=>Number(a.mastery)-Number(b.mastery)).slice(0,20);
+ weak.innerHTML=rows.map(x=>`<tr><td><b>${escapeHtml(x.word)}</b></td><td>L${x.level||'—'}</td><td>${Math.round(x.mastery||0)}%</td><td>${x.seen?Math.round(x.correct/x.seen*100):0}%</td><td>${x.next_review?new Date(x.next_review).toLocaleDateString():'—'}</td></tr>`).join('');
+}
+function escapeHtml(x){return String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+init();
+</script></body></html>

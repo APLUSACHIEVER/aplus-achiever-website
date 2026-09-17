@@ -68,9 +68,11 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
  .fluency-focus-mode .fluency-total-box,.fluency-focus-mode .fluency-question-box{padding:6px 10px}
  .fluency-focus-mode .fluency-question-box .fluency-circle{width:60px;height:60px}
 }
+
+.auth-dot{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:850;color:var(--muted)}.auth-dot i{width:8px;height:8px;border-radius:50%;background:#b7c4bf}.auth-dot.online i{background:var(--green2)}@media(max-width:850px){#authStatus{display:none}.header-right .btn{padding:8px 10px;font-size:11px}}
 </style></head>
 <body>
-<header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 6.0 · V17</div></div></header>
+<header><div class="brand"><img class="brand-logo" src="logo.png" alt="APLUS ACHIEVER"></div><div class="header-right"><div class="pill">AI TUTOR 6.0 · V18</div><div id="authStatus"></div><button class="btn" type="button" onclick="location.href='student-login.html'">Student Login</button><button class="btn" type="button" onclick="location.href='progress.html'">My Progress</button></div></div></header>
 <main class="container">
 <section class="hero"><div class="hero-main"><div class="hero-kicker">PSLE ENGLISH · 1000-WORD ADAPTIVE SYSTEM</div><h1>Build your vocabulary<br>for <span>PSLE success.</span></h1><p>The tutor learns from your answers and chooses what you should practise next.</p><div class="hero-cta"><button class="btn primary" onclick="startMode('path')">▶ Start My Learning Path</button></div></div><div class="hero-side fluency-home-card">
   <div class="section-title">AI-POWERED FLUENCY</div>
@@ -166,7 +168,10 @@ header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:f
 <section id="quiz" class="card hidden"><div class="quiz-top"><span id="modeLabel">AI DAILY 10</span><span id="counter">1 / 10</span></div><div class="progress" style="margin:13px 0 22px"><i id="qbar"></i></div><div id="coachStrip" class="coach-strip"><span class="coach-icon">🧠</span><span><b>AI Coach:</b> Take your time. Choose the answer you think fits best.</span></div><div class="section-title" id="typeLabel">MEANING</div><div class="question" id="question"></div><div id="options" class="options"></div><div id="inputWrap" class="hidden"><input id="answerInput" class="input" autocomplete="off" placeholder="Type the word..."><p class="small">Spelling is checked flexibly.</p></div><div id="hintPanel" class="hint-panel hidden"></div><div class="controls"><button class="btn" onclick="speakCurrent()">🔊 Hear Word</button><button id="checkBtn" class="btn primary" onclick="submitAnswer()">Check Answer</button><button id="nextBtn" class="btn primary hidden" onclick="nextQuestion()">Next Question →</button></div><div id="feedback" class="feedback hidden"></div><div id="wordCard" class="word-card hidden"></div></section>
 <section id="result" class="card hidden result"><div class="section-title">SESSION COMPLETE</div><div id="score" class="score">0/10</div><h2 id="resultTitle"></h2><p id="resultText" class="small"></p><div id="diagnosis" class="diagnosis"></div><button class="btn primary" onclick="startMode('daily')">Another AI 10 →</button><button class="btn" onclick="showTutor()">Open Tutor Dashboard</button></section>
 <section id="tutor" class="card hidden"><div class="section-title">AI TUTOR DASHBOARD</div><h2>Your Learning Profile</h2><p class="small">V17 AI Coach + Mastery Engine: the tutor tracks what you have mastered, what you are still learning, what needs more practice and what is ready for review using your answers, speed and learning history. Choose-the-word questions always use four options with one fixed answer.</p><div id="tutorContent"></div><button class="btn primary" onclick="startMode('daily')">Continue Learning →</button><button class="btn" onclick="showHome()">Home</button></section>
-<div class="footer">APLUS ACHIEVER • PSLE AI Tutor 6.0 V17</div></main><div id="toast" class="toast"></div>
+<div class="footer">APLUS ACHIEVER • PSLE AI Tutor 6.0 V18.1 · Connected Learning Analytics</div></main><div id="toast" class="toast"></div>
+<script src="config/supabase-config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/learning-sync.js"></script>
 <script src="data/vocabulary.js"></script>
 <script>
 'use strict';
@@ -387,7 +392,14 @@ else{s.wrong++;s.streak=0;s.mastery=Math.max(0,s.mastery-10);s.next=Date.now()+2
 db.total++;if(correct)db.correct++;
 if(current){const rs=wordState(current);rs.lastResponseMs=responseMs;rs.fastCount=(rs.fastCount||0)+(responseMs<5000?1:0);rs.slowCount=(rs.slowCount||0)+(responseMs>15000?1:0);rs.lastResult=correct?'correct':'wrong';}let d=db.days[today()]||{q:0,c:0};d.q=(d.q||0)+1;d.c=(d.c||0)+(correct?1:0);db.days[today()]=d;
 if(!db.hints)db.hints={used:0,revealed:0};db.hints.used+=hintsUsed;if(revealed)db.hints.revealed++;
-if(mode==='diagnostic'&&index===questions.length-1)setDiagnostic();save();showFeedback(correct,ans,hintsUsed,revealed);updateUI()
+if(mode==='diagnostic'&&index===questions.length-1)setDiagnostic();save();
+  // V18 — central learning analytics sync. localStorage remains the offline cache.
+  if(window.APLUS_SYNC){
+    window.APLUS_SYNC.attempt({question_id:current.id||current.word,word:current.word,level:current.level,question_type:currentQ.type,answer:ans,correct_answer:currentQ.answer,is_correct:correct,response_ms:responseMs,hints_used:hintsUsed,answer_revealed:revealed,mode:mode});
+    window.APLUS_SYNC.vocabularyProgress(current.word,s,current.level);
+    window.APLUS_SYNC.daily({date:today(),questions:d.q,correct:d.c});
+  }
+  showFeedback(correct,ans,hintsUsed,revealed);updateUI()
 }
 function norm(x){return String(x).toLowerCase().replace(/[.,!?;:'"’\-]/g,'').replace(/\s+/g,' ').trim()}
 function showFeedback(correct,ans,hintsUsed,revealed){
@@ -485,6 +497,7 @@ function toast(t){let x=document.getElementById('toast');x.textContent=t;x.style
 function esc(x){return String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&answered)nextQuestion()});
 load();
+setTimeout(async()=>{try{if(window.APLUS_AUTH){const u=await APLUS_AUTH.user();const el=document.getElementById('authStatus');if(el)el.innerHTML=u?'<span class=\"auth-dot online\"><i></i> SYNC ON</span>':'<span class=\"auth-dot\"><i></i> LOCAL MODE</span>';}}catch(e){}},900);
 if(!VOCAB.length)console.error('APLUS ACHIEVER: data/vocabulary.js did not load.');
 </script>
 <style>
@@ -888,6 +901,7 @@ window.startFluencyTest=function(){
     const weak=fluencyResults.filter(r=>!r.correct).slice(0,8).map(r=>r.word);
     const payload={date:new Date().toISOString(),accuracy,avgRecallSeconds:Number(avg.toFixed(1)),fastCorrect:fast,timeout,level,results:fluencyResults};
     try{localStorage.setItem(FLUENCY_KEY,JSON.stringify(payload))}catch(e){}
+     if(window.APLUS_SYNC) window.APLUS_SYNC.fluency(payload);
 
     document.getElementById('fluencyResultScore').textContent=accuracy+'%';
     document.getElementById('fluencyResultLevel').textContent='AI Coach Level: '+level;
@@ -917,5 +931,4 @@ window.startFluencyTest=function(){
   window.addEventListener('beforeunload',stopTimers);
 })();
 </script>
-</body></html.fluency-card{scroll-margin-top:90px;}
->
+</body></html>

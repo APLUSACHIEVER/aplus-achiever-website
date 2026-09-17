@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>APLUS ACHIEVER — System Setup</title>
+<style>
+body{margin:0;background:#f4f8f6;color:#183f35;font-family:Inter,Arial,sans-serif}.wrap{max-width:850px;margin:40px auto;padding:20px}
+.card{background:#fff;border:1px solid #dcebe5;border-radius:20px;padding:22px;margin:14px 0}.brand{color:#146b4f;font-weight:950;letter-spacing:.7px}
+.ok{color:#146b4f}.bad{color:#a33}.row{display:flex;justify-content:space-between;border-bottom:1px solid #e8f0ed;padding:12px 0}
+button{padding:11px 15px;border:1px solid #cfe2d9;background:#fff;border-radius:11px;color:#146b4f;font-weight:800;cursor:pointer;margin:4px}
+code{background:#f1f6f3;padding:2px 5px;border-radius:5px}
+</style>
+<script src="config/supabase-config.js"></script><script src="js/auth.js"></script></head>
+<body><div class="wrap">
+<div class="brand">APLUS ACHIEVER · V18.1</div><h1>Connected Learning Setup</h1>
+<p>Use this page to verify the student learning system before publishing it to parents and students.</p>
+<div class="card"><h2>Connection Check</h2><div class="row"><span>Supabase configuration</span><b id="cfg">Checking…</b></div><div class="row"><span>Supabase client</span><b id="client">Checking…</b></div><div class="row"><span>Current account</span><b id="account">Checking…</b></div><div class="row"><span>Profile</span><b id="profile">Checking…</b></div><p id="msg"></p><button onclick="location.href='student-login.html'">Student Login</button><button onclick="location.href='vocabulary.html'">Vocabulary</button><button onclick="location.href='progress.html'">Progress</button><button onclick="location.href='admin.html'">Admin</button></div>
+<div class="card"><h2>One-time setup</h2><ol><li>Replace the URL and anon/publishable key in <code>config/supabase-config.js</code>.</li><li>Run <code>database/supabase.sql</code> in Supabase SQL Editor.</li><li>Create your owner account through Student Login.</li><li>In Supabase, change that account's <code>profiles.role</code> from <code>student</code> to <code>admin</code>.</li></ol><p class="bad">Never put a service_role/secret key in GitHub Pages.</p></div>
+</div>
+<script>
+const cfg=window.APLUS_SUPABASE_CONFIG||{};
+document.getElementById('cfg').textContent=(cfg.url&&cfg.anonKey&&!String(cfg.url).includes('YOUR-PROJECT')&&!String(cfg.anonKey).includes('YOUR_SUPABASE'))?'READY':'NOT CONFIGURED';
+document.getElementById('cfg').className=document.getElementById('cfg').textContent==='READY'?'ok':'bad';
+async function run(){
+ for(let i=0;i<80&&!window.APLUS_AUTH;i++) await new Promise(r=>setTimeout(r,250));
+ document.getElementById('client').textContent=window.aplusSupabase?'READY':'NOT READY';
+ document.getElementById('client').className=window.aplusSupabase?'ok':'bad';
+ if(!window.APLUS_AUTH){document.getElementById('account').textContent='Local mode';document.getElementById('profile').textContent='—';return}
+ try{
+   const u=await APLUS_AUTH.user();
+   document.getElementById('account').textContent=u?(u.email||u.id):'Not signed in';
+   if(u){const p=await APLUS_AUTH.profile();document.getElementById('profile').textContent=p?(p.full_name+' · '+p.role):'Missing';}
+   else document.getElementById('profile').textContent='—';
+ }catch(e){document.getElementById('msg').textContent=e.message;document.getElementById('profile').className='bad'}
+}
+run();
+</script></body></html>
