@@ -4,13 +4,14 @@
 (function(){
 'use strict';
 const BANK='APLUS_P6_PSLE_SYNTHESIS_TRANSFORMATION_DNA_V1';
+const BANK2='APLUS_P6_PSLE_SYNTHESIS_TRANSFORMATION_DNA_V2';
 function shuffle(a,seed){a=[...a];let x=(seed>>>0)||1;for(let i=a.length-1;i>0;i--){x^=x<<13;x^=x>>>17;x^=x<<5;const j=Math.floor(((x>>>0)/4294967296)*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function install(){
- const G=window.APLUS_P6_PSLE_PAPER2_GENERATION_V1, B=window[BANK];
- if(!G||typeof G.generate!=='function'||!Array.isArray(B)||G.synthesisDNAInstalled)return false;
+ const G=window.APLUS_P6_PSLE_PAPER2_GENERATION_V1, B=window[BANK], B2=window[BANK2];
+ if(!G||typeof G.generate!=='function'||!Array.isArray(B)||!Array.isArray(B2)||G.synthesisDNAInstalled)return false;
  const original=G.generate;
  function make(seed){
-   const base=shuffle(B,seed);
+   const base=shuffle(B.concat(B2),seed);
    const picked=[],seen=new Set();
    for(const x of base){
      if(picked.length>=5)break;
@@ -42,7 +43,7 @@ function install(){
        skill:x.skill,
        difficulty:x.difficulty,
        explanation:x.explanation,
-       sourceDatabase:'APLUS P6 PSLE Synthesis / Transformation DNA V1',
+       sourceDatabase:'APLUS P6 PSLE Synthesis / Transformation DNA V1 + V2',
        sourceRecordId:x.id,
        synthesisDNA:'PSLE_SYNTHESIS_TRANSFORMATION_DNA_V2.0'
      });
