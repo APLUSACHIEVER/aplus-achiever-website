@@ -3,7 +3,7 @@
    One shared Text 1 + Text 2, five linked MCQs, with PSLE-style question-form coverage.
 */
 (function(){'use strict';
-const GNAME='APLUS_P6_PSLE_PAPER2_GENERATION_V1',BANKNAME='APLUS_AI_DB_V1_P6_PSLE_VISUAL_TEXT_DNA_BATCH04',QDBNAME='APLUS_PSLE_VISUAL_QUESTION_DNA_BATCH03',VERSION='PSLE_VISUAL_TEXT_DNA_V8.0';
+const GNAME='APLUS_P6_PSLE_PAPER2_GENERATION_V1',BANKNAME='APLUS_AI_DB_V1_P6_PSLE_VISUAL_TEXT_DNA_BATCH04',QDBNAME='APLUS_PSLE_VISUAL_QUESTION_DNA_BATCH03',VERSION='PSLE_VISUAL_TEXT_DNA_V8.1';
 function rnd(seed){let x=(seed>>>0)||1;return()=>{x^=x<<13;x^=x>>>17;return(x>>>0)/4294967296}}
 function sh(a,r){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function install(){
@@ -25,8 +25,8 @@ function install(){
      const opts=sh(x.o||[],r);
      return {type:'mcq',marks:1,section:'visual',number:21+i,id:'Q'+(21+i),
        visual,question:x.q,options:opts,answer:x.a,skill:x.s,
-       difficulty:i===0?2:(i<3?3:4),
-       explanation:'The answer is supported by the information in Text 1 and/or Text 2.',
+       difficulty:i===0?2:(i===1?2:(i<4?3:4)),
+       explanation:(x.s==='feature_application'?'Use the pupil profile and match it with the relevant features in Text 1.':x.s==='both_texts'?'Compare information from both texts before choosing the answer.':x.s==='main_message'?'Focus on the central message of Text 2 rather than one detail.':x.s==='text_type'?'Consider the purpose and presentation of Text 1.':'Use the stated information and context in the texts.'),
        sourceDatabase:'APLUS PSLE Visual Question DNA Batch 03',
        sourceRecordId:t.id,visualDNA:VERSION,visualQuestionType:x.s};
    });
