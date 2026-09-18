@@ -1,0 +1,3 @@
+/* APLUS SCIENCE QUESTION SCHEMA V1 — empty licensed-paper question bank */
+window.APLUS_SCIENCE_QUESTIONS_V1=window.APLUS_SCIENCE_QUESTIONS_V1||[];
+window.APLUS_SCIENCE_QUESTION_SCHEMA_V1={version:"1.0",types:["mcq","short-response","structured","open-ended"],fields:["id","paperId","number","section","type","marks","question","options","answer","markingPoints","topic","subtopic","skill","difficulty","sourcePage"]};
