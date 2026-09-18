@@ -1,0 +1,1 @@
+(function(){'use strict';window.APLUS_SCIENCE={version:'1.0',paperRoot:'science/papers/',topicsRoot:'science/topics/'};})();
