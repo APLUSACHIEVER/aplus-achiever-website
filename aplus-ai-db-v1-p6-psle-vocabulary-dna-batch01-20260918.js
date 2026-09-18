@@ -1,5 +1,5 @@
 /* APLUS P6 PSLE Vocabulary Section DNA — Batch 01
-   One sentence per item. The target word(s) are underlined in context.
+   One sentence per item. The target word is replaced by a numbered blank in the generated paper. Q11–15 are contextual vocabulary selection items.
    Q11–15: choose the word closest in meaning to the underlined word(s).
 */
 window.APLUS_AI_DB_V1_P6_PSLE_VOCABULARY_DNA_BATCH01=[
