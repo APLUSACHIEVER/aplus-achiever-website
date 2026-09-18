@@ -1,6 +1,8 @@
-window.APLUS_SCIENCE_PAPERS=[
-/* Add authorised/user-provided papers here.
-Example:
-{id:"ACS-2026",school:"ACS Junior",year:2026,paper:"P6 Science Prelim",file:"papers/acs-junior-2026.pdf"}
-*/
-];
+/* APLUS SCIENCE PAPER REGISTRY — generated from inventory batches */
+(function(){
+  window.APLUS_SCIENCE_PAPERS=[].concat(
+    window.APLUS_SCIENCE_PAPER_INVENTORY_BATCH01||[],
+    window.APLUS_SCIENCE_PAPER_INVENTORY_BATCH02||[],
+    window.APLUS_SCIENCE_PAPER_INVENTORY_BATCH03||[]
+  );
+})();
