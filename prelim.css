@@ -13,3 +13,12 @@
 .psle-visual-panels ul{margin:0;padding-left:18px}.psle-visual-panels li{font-size:13px;line-height:1.45;margin:4px 0}
 .psle-visual-footer{margin-top:14px;padding-top:10px;border-top:1px solid #d7dfdc;font-size:12px;line-height:1.4}
 @media(max-width:800px){.psle-visual-panels{grid-template-columns:1fr}.psle-visual-meta{grid-template-columns:1fr}.psle-visual-card h3{font-size:23px}}
+
+/* PSLE Visual Text DNA V4 — linked Text 1 / Text 2 layout */
+.psle-visual-dual{padding:18px 20px}
+.psle-visual-text-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.psle-visual-text{border:1px solid #aebbb6;background:#fff;padding:14px 15px;box-sizing:border-box}
+.psle-visual-text-label{display:inline-block;border:1px solid #7d8c86;padding:3px 8px;font-size:11px;font-weight:700;letter-spacing:.8px;margin-bottom:8px}
+.psle-visual-text h4{font-size:17px;line-height:1.2;margin:0 0 10px;text-transform:uppercase}
+.psle-visual-text ul{margin:0;padding-left:18px}.psle-visual-text li{font-size:13px;line-height:1.5;margin:5px 0}
+@media(max-width:800px){.psle-visual-text-grid{grid-template-columns:1fr}.psle-visual-text li{font-size:14px}}
