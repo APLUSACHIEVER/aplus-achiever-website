@@ -1,1 +1,23 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>APLUS PSLE Science — School Papers</title><link rel="stylesheet" href="science.css"></head><body><main class="science-home"><a href="../science.html">← APLUS PSLE Science</a><h1>School Paper Archive</h1><p>Original-paper archive for authorised or user-supplied examination papers.</p><div id="paper-list"></div><script src="paper-index.js"></script><script>document.getElementById('paper-list').innerHTML=window.APLUS_SCIENCE_PAPERS.map(p=>'<a class="tile" style="display:block;margin:12px 0" href="'+p.file+'"><strong>'+p.school+' · '+p.year+'</strong><span>'+p.paper+'</span></a>').join('');</script></main></body></html>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>APLUS PSLE Science — School Papers</title><link rel="stylesheet" href="science.css"></head>
+<body><main class="science-home">
+<a href="../science.html">← APLUS PSLE Science</a>
+<div class="paper-top"><div><span class="eyebrow">PRIMARY 6 · SCIENCE</span><h1>School Paper Archive</h1><p>Browse the indexed school-paper inventory by year, school and paper type.</p></div><div class="paper-badge" id="count">0 PAPERS</div></div>
+<div class="filters"><input id="q" placeholder="Search school or paper..." /><select id="year"><option value="">All years</option></select><select id="school"><option value="">All schools</option></select><select id="type"><option value="">All paper types</option></select></div>
+<div id="paper-list"></div>
+</main>
+<script src="science-paper-inventory-batch01-20260918.js"></script><script src="science-paper-inventory-batch02-20260918.js"></script><script src="science-paper-inventory-batch03-20260918.js"></script><script src="paper-index.js"></script><script src="science-engine-v1-20260918.js"></script>
+<script>
+(function(){
+ const E=window.APLUS_SCIENCE_ENGINE_V1,list=document.getElementById('paper-list');
+ const q=document.getElementById('q'),y=document.getElementById('year'),s=document.getElementById('school'),t=document.getElementById('type'),c=document.getElementById('count');
+ E.years().forEach(v=>y.insertAdjacentHTML('beforeend','<option>'+v+'</option>'));
+ E.schools().forEach(v=>s.insertAdjacentHTML('beforeend','<option>'+v.replace(/&/g,'&amp;')+'</option>'));
+ E.types().forEach(v=>t.insertAdjacentHTML('beforeend','<option>'+v+'</option>'));
+ function render(){
+  const rows=E.filter({year:y.value,school:s.value,type:t.value,q:q.value}); c.textContent=rows.length+' PAPERS';
+  list.innerHTML=rows.map(p=>'<a class="tile paper-card" href="paper.html?id='+encodeURIComponent(p.id)+'"><div><strong>'+p.school+' · '+p.year+'</strong><span>'+p.type+(p.status?' · '+p.status:'')+'</span></div><span class="paper-open">Open →</span></a>').join('')||'<div class="notice">No papers match these filters.</div>';
+ }
+ [q,y,s,t].forEach(el=>el.addEventListener('input',render)); render();
+})();
+</script></body></html>
