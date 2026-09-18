@@ -118,12 +118,38 @@
       if(words.length===3) out.push({id:r.id+'-context',skill:'Context Clues',type:'Context Clue',prompt:clue,options:shuffle([target,...words]),answer:target,explain:clean(r.inference)||'Use the surrounding clues to infer the meaning.',source:r.id});
     }
 
+    // Confusable Words V2: complete sentence context only.
+    const replaceWord = (text, word) => {
+      const src=clean(text), low=src.toLowerCase(), w=clean(word).toLowerCase();
+      const i=low.indexOf(w);
+      return i<0 ? '' : src.slice(0,i)+'_____'+src.slice(i+w.length);
+    };
     for(const r of eligible(conf)){
       const pair=arr(r.pair).map(clean).filter(Boolean);
-      const cue=clean(r.cue||r.template);
-      if(pair.length>=2 && cue) out.push({id:r.id+'-confusable',skill:'Confusables',type:'Confusable Words',prompt:cue,options:shuffle(pair),answer:pair[0],explain:clean(r.rule)||'Check both meaning and spelling before choosing.',source:r.id,misconception:'confusable-pair'});
+      if(pair.length<2) continue;
+      const rule=clean(r.rule);
+      const cues=arr(r.cue).map(clean).filter(Boolean);
+      let prompt='', answer='';
+      for(const target of shuffle(pair.slice(0,2))){
+        const cue=cues.find(x=>x.toLowerCase().includes(target.toLowerCase()));
+        if(cue){ prompt=replaceWord(cue,target); answer=target; break; }
+      }
+      if(!prompt || !answer) continue;
+      const forms=[];
+      const addForm=w=>{w=clean(w);if(w&&!forms.some(x=>x.toLowerCase()===w.toLowerCase()))forms.push(w);};
+      pair.slice(0,2).forEach(addForm);
+      if(/ed$/i.test(answer)){addForm(answer.replace(/ed$/i,''));addForm(answer.replace(/ed$/i,'ing'));}
+      else if(/ing$/i.test(answer)){addForm(answer.replace(/ing$/i,''));addForm(answer.replace(/ing$/i,'ed'));}
+      else if(/s$/i.test(answer)&&!/ss$/i.test(answer)){addForm(answer.replace(/s$/i,''));}
+      else {addForm(answer+'s');addForm(answer+'ed');}
+      for(const x of shuffle(eligible(conf))){
+        for(const w of arr(x.pair).map(clean)){ if(forms.length>=4) break; addForm(w); }
+        if(forms.length>=4) break;
+      }
+      const options=shuffle(forms.slice(0,4));
+      if(options.length<4 || !options.some(x=>x.toLowerCase()===answer.toLowerCase())) continue;
+      out.push({id:r.id+'-confusable-context-v2',skill:'Confusables',type:'Confusable Words',prompt,options,answer,explain:rule||'Use the meaning and grammatical role of the word in the sentence.',source:r.id,misconception:clean(r.mistake)||'confusable-pair',level:r.level,questionStyle:'complete-sentence-context',commonMistake:clean(r.mistake)});
     }
-
     for(const r of eligible(coll)){
       const phrase=clean(r.collocation||r.phrase||r.pattern);
       if(!phrase) continue;
