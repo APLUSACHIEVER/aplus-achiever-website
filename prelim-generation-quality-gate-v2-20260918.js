@@ -23,7 +23,7 @@ install();let tries=0;const poll=setInterval(()=>{if(install()||++tries>80)clear
 (function(){'use strict';
 const loaders=[
  ['grammar-cloze','prelim-psle-dna-grammar-cloze-v1-20260918.js','20260918c'],
- ['editing','prelim-psle-dna-editing-v1-20260918.js','20260918c'],
+ ['editing','prelim-psle-dna-editing-v2-20260918.js','20260918a'],
  ['comprehension-cloze','prelim-psle-dna-comprehension-cloze-v1-20260918.js','20260918c'],
  ['comprehension-oe','prelim-psle-dna-comprehension-oe-v1-20260918.js','20260918b']
 ];
