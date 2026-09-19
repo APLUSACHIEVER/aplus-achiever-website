@@ -38,6 +38,44 @@ function renderQuestion(){const q=current();if(!q)return;const b=BLUEPRINT.find(
 function explainAnswer(q,student,earned){const correct=q.section==='synthesis'?(q.answerContinuation||q.answer):(q.answer||q.acceptedPatterns?.[0]||'');const section=q.section;const common={grammar:'Check the sentence for subject-verb agreement, tense, verb form, articles, pronouns, prepositions and the meaning of the whole sentence.',vocabulary:'Use the meaning of the whole sentence and the surrounding context. Choose the word that fits both meaning and grammar.',vocabularyCloze:'Read the whole passage first. Use nearby clues, the flow of ideas and the meaning of the sentence before choosing the word.',visual:'Go back to the visual text and locate the exact detail or clue that supports the answer. Do not rely on outside knowledge.',grammarCloze:'Use both grammar and the meaning of the passage. Check the words immediately before and after the blank.',editing:'Identify the exact grammatical or spelling error, then replace only the incorrect part while keeping the sentence meaning unchanged.',comprehensionCloze:'Use the surrounding sentences and the overall meaning of the passage. The answer must fit the context, not just the grammar.',synthesis:'Keep the original meaning unchanged. Follow the given starter exactly and write only the continuation required after the blank.',comprehension:'Answer from evidence in the passage. Make sure every important part of the question is addressed.'};let base=q.explanation||common[section]||'Review the language skill tested in this question.';if(student&&earned===Number(q.marks))return base+' Your answer matches the accepted answer.';if(!student)return base+' You left this question unanswered. Compare the correct answer with the sentence or passage and identify the clue that leads to it.';return base+' Your answer does not match the accepted answer. Compare your response with the correct answer and identify the word, form or meaning that needs to change.'}
 function summary(){const n=state.questions.filter(q=>state.answers[q.id]!=null&&String(state.answers[q.id]).trim()!=='').length;return '<strong>'+n+' / 75</strong> questions answered<br><span>'+(75-n)+' unanswered</span>'}
 function injectResultReviewStyle(){if(document.getElementById('aplus-result-review-style'))return;const s=document.createElement('style');s.id='aplus-result-review-style';s.textContent='.answer-review{margin-top:28px}.answer-review-title{font-size:22px;color:#17362a;margin:0 0 8px}.answer-review-subtitle{color:#64756d;margin:0 0 18px}.review-card{border:1px solid #dfe8e2;border-radius:14px;background:#fff;margin:12px 0;overflow:hidden}.review-card-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px 16px;background:#f7faf8;border-bottom:1px solid #e7eee9}.review-card-head strong{color:#17362a}.review-result{font-weight:700}.review-result.correct{color:#2f6b50}.review-result.wrong{color:#a33}.review-result.unanswered{color:#8a6a22}.review-card-body{padding:15px 16px}.review-question{font-weight:600;color:#20362d;line-height:1.55;margin-bottom:12px;white-space:pre-line}.review-line{margin:8px 0;line-height:1.5}.review-label{font-weight:700;color:#53635b}.review-correct-answer{display:inline-block;background:#eef6f1;border-radius:7px;padding:3px 8px;color:#17362a;font-weight:700}.review-student-answer{display:inline-block;background:#f5f6f5;border-radius:7px;padding:3px 8px}.review-explanation{background:#fbfcfb;border-left:3px solid #9ab9a8;padding:10px 12px;margin-top:12px;color:#40564b}.review-source{font-size:12px;color:#7a8982;margin-top:10px}@media(max-width:700px){.review-card-head{align-items:flex-start;flex-direction:column}}';document.head.appendChild(s)}
+function scoreAnswer(q,student){
+  const input=norm(student);
+  if(!input)return 0;
+  const max=Number(q&&q.marks)||0;
+  if(!q)return 0;
+
+  // MCQ: q.answer may be the correct text or a zero-based option index.
+  if(q.type==='mcq'){
+    let correct=q.answer;
+    if(typeof correct==='number' && Array.isArray(q.options)) correct=q.options[correct];
+    if(correct==null && Array.isArray(q.acceptedPatterns)) correct=q.acceptedPatterns[0];
+    return norm(correct)===input ? max : 0;
+  }
+
+  // Open-ended: accept the explicit accepted patterns first, then q.answer.
+  const accepted=[];
+  if(Array.isArray(q.acceptedPatterns)) accepted.push(...q.acceptedPatterns);
+  if(Array.isArray(q.accepted)) accepted.push(...q.accepted);
+  if(q.answer!=null){
+    if(typeof q.answer==='number' && Array.isArray(q.options)) accepted.push(q.options[q.answer]);
+    else accepted.push(q.answer);
+  }
+  const candidates=[...new Set(accepted.filter(x=>x!=null).map(norm).filter(Boolean))];
+  if(!candidates.length)return 0;
+
+  // Exact normalized match is the default marking rule. This removes punctuation,
+  // quotation marks and repeated whitespace differences without changing meaning.
+  if(candidates.includes(input))return max;
+
+  // For 1-mark cloze/editing items, also accept a word-for-word answer when the
+  // database answer contains a short phrase surrounded by punctuation.
+  if(max===1){
+    const compact=s=>norm(s).replace(/[^a-z0-9 ]/g,'').trim();
+    const ci=compact(input);
+    if(candidates.some(x=>compact(x)===ci))return max;
+  }
+  return 0;
+}
 function safeScore(q,student){try{return Number(scoreAnswer(q,student))||0}catch(e){console.warn('[APLUS Score]',q&&q.number,e);return 0}}
 function result(){
   let total=0;const sec={},skills={};
