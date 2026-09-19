@@ -30,14 +30,14 @@ window.APLUS_AI_DB_V1_P6_PSLE_PAPER2_EDITING_DNA_BATCH05=[
 {id:"P6-ED-P11",title:"The Lost Water Bottle",theme:"responsibility",sentences:[
 {number:36,text:"During recess, Amir noticed that he had left his water bottle in the classrooms.",errorType:"plural_noun",correct:"During recess, Amir noticed that he had left his water bottle in the classroom.",skill:"singular noun",difficulty:2},
 {number:37,text:"He hurried back but the classroom were already locked.",errorType:"subject_verb_agreement",correct:"He hurried back but the classroom was already locked.",skill:"subject-verb agreement",difficulty:2},
-{number:38,text:"Amir was worried because the bottle had been given to him by his grandmother.",errorType:"none",correct:"Amir was worried because the bottle had been given to him by his grandmother.",skill:"",difficulty:0},
+{number:38,text:"Amir was worried because the bottle had been give to him by his grandmother.",errorType:"none",correct:"Amir was worried because the bottle had been given to him by his grandmother.",skill:"",difficulty:0},
 {number:39,text:"He asked a prefect whether someone could helped him open the room.",errorType:"modal",correct:"He asked a prefect whether someone could help him open the room.",skill:"base form after modal",difficulty:2},
-{number:40,text:"The prefect explained that he would need to find the teacher first.",errorType:"none",correct:"The prefect explained that he would need to find the teacher first.",skill:"",difficulty:0},
+{number:40,text:"The prefect explained that he would need find the teacher first.",errorType:"none",correct:"The prefect explained that he would need to find the teacher first.",skill:"",difficulty:0},
 {number:41,text:"When they returned, Amir found the bottle beside the teachers desk.",errorType:"possessive_noun",correct:"When they returned, Amir found the bottle beside the teacher's desk.",skill:"possessive nouns",difficulty:3},
-{number:42,text:"He thanked the prefect and promised to be more careful in future.",errorType:"none",correct:"He thanked the prefect and promised to be more careful in future.",skill:"",difficulty:0},
+{number:42,text:"He thanked the prefect and promised to be more careful on future.",errorType:"none",correct:"He thanked the prefect and promised to be more careful in future.",skill:"",difficulty:0},
 {number:43,text:"The experience reminded him that small belongings can easily be forgetten.",errorType:"spelling",correct:"The experience reminded him that small belongings can easily be forgotten.",skill:"spelling",difficulty:2},
-{number:44,text:"From then on, he always checked his desk before leaving the classroom.",errorType:"none",correct:"From then on, he always checked his desk before leaving the classroom.",skill:"",difficulty:0},
-{number:45,text:"He soon developed a habit that saved him from losing things again.",errorType:"none",correct:"He soon developed a habit that saved him from losing things again.",skill:"",difficulty:0}
+{number:44,text:"From then on, he always check his desk before leaving the classroom.",errorType:"none",correct:"From then on, he always checked his desk before leaving the classroom.",skill:"",difficulty:0},
+{number:45,text:"He soon developed a habit that save him from losing things again.",errorType:"none",correct:"He soon developed a habit that saved him from losing things again.",skill:"",difficulty:0}
 ]},
 {id:"P6-ED-P12",title:"A Visit to the Fire Station",theme:"community safety",sentences:[
 {number:36,text:"Our class visited the neighbourhood fire station during the school holiday.",errorType:"plural_noun",correct:"Our class visited the neighbourhood fire station during the school holidays.",skill:"plural nouns",difficulty:2},
