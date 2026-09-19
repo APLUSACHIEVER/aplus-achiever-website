@@ -156,6 +156,12 @@
 
   function sentenceBlank(text, word){
 
+    const src=clean(text), w=clean(word);
+    if(!src || !w) return '';
+    const escaped=w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    return src.replace(new RegExp('\\b'+escaped+'\\b','i'),'_____');
+  }
+
   function vocabPos(r){
     const d=clean(r?.definition || r?.meaning).toLowerCase();
     const w=clean(r?.word).toLowerCase();
@@ -199,11 +205,6 @@
     if(pos==='verb' && /\b(remained|was|were|felt|seemed|looked|became|stayed)\s+_{3,}/.test(p)) return false;
     if(pos==='adjective' && /\bto\s+_{3,}/.test(p)) return false;
     return true;
-  }
-    const src=clean(text), w=clean(word);
-    if(!src || !w) return '';
-    const escaped=w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-    return src.replace(new RegExp('\\b'+escaped+'\\b','i'),'_____');
   }
 
   function makeVocabQuestions(){
