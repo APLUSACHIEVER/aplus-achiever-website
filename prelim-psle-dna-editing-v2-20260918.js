@@ -6,11 +6,11 @@
 const GNAME='APLUS_P6_PSLE_PAPER2_GENERATION_V1';
 const BANKNAME='APLUS_AI_DB_V1_P6_PSLE_PAPER2_EDITING_DNA_BATCH03';
 const VERSION='PSLE_EDITING_DNA_V2.1';
-const EXTRABANK='APLUS_AI_DB_V1_P6_PSLE_PAPER2_EDITING_DNA_BATCH04';
+const EXTRABANK='APLUS_AI_DB_V1_P6_PSLE_PAPER2_EDITING_DNA_BATCH04';\nconst EXTRABANK2='APLUS_AI_DB_V1_P6_PSLE_PAPER2_EDITING_DNA_BATCH05';
 function loadScript(src,key){if(document.querySelector('script[data-aplus-editing-dna="'+key+'"]'))return;const s=document.createElement('script');s.src=src+'?v=20260919a';s.async=false;s.dataset.aplusEditingDna=key;document.head.appendChild(s)}
 function rnd(seed){let x=(seed>>>0)||1;return()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return(x>>>0)/4294967296}}
 function install(){
- const G=window[GNAME], base=window[BANKNAME], extra=window[EXTRABANK], bank=[...(Array.isArray(base)?base:[]),...(Array.isArray(extra)?extra:[])];
+ const G=window[GNAME], base=window[BANKNAME], extra=window[EXTRABANK], extra2=window[EXTRABANK2], bank=[...(Array.isArray(base)?base:[]),...(Array.isArray(extra)?extra:[]),...(Array.isArray(extra2)?extra2:[])];
  if(!G||typeof G.generate!=='function'||!bank.length)return false;
  if(G.editingDNA===VERSION)return true;
  const original=G.generate;
@@ -39,7 +39,7 @@ function install(){
        passage:passage,
        original:x.text,answer:correctWord,acceptedPatterns:[correctWord],
        correctedSentence:x.correct,errorType:x.errorType,skill:x.skill,difficulty:x.difficulty,
-       sourceDatabase:'APLUS PSLE Editing DNA Batch 03 + Batch 04',
+       sourceDatabase:'APLUS PSLE Editing DNA Batch 03 + Batch 04 + Batch 05',
        sourceRecordId:set.id,passageId:set.id,
        generationLayer:'PSLE_PAPER2_DNA_V2'
      };
@@ -60,6 +60,6 @@ function install(){
  return true;
 }
 function setVersion(){return VERSION}
-loadScript('aplus-ai-db-v1-p6-psle-paper2-editing-dna-batch04-20260919.js','batch04');
+loadScript('aplus-ai-db-v1-p6-psle-paper2-editing-dna-batch04-20260919.js','batch04');\nloadScript('aplus-ai-db-v1-p6-psle-paper2-editing-dna-batch05-20260919.js','batch05');
 install();let tries=0;const timer=setInterval(()=>{if(install()||++tries>180)clearInterval(timer)},100);
 })();
