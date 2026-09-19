@@ -72,36 +72,57 @@
   <script src="aplus-ai-db-v1-vocabulary-question-dna-batch01-20260918.js"></script>
   <script src="aplus-ai-db-v1-grammar-large-p3p5-batch01-20260918.js"></script>
   <script>
-  /* P3–P5 Vocabulary: force every core vocabulary item into a complete-sentence context question. */
+  /* P3–P5 Vocabulary Context Engine v2
+     Every core vocabulary question uses a complete, child-friendly sentence.
+     The context is designed to test meaning from the sentence rather than a definition prompt.
+  */
   (() => {
-    const completeSentence = (word, definition, level) => {
-      const w = String(word || "").trim();
-      const d = String(definition || "").trim().replace(/[.]+$/, "");
-      if (!w) return "";
-      const templates = [
-        "During the lesson, the teacher explained that the word “" + w + "” describes something that is " + d + ".",
-        "The teacher said that something can be described as “" + w + "” when it is " + d + ".",
-        "Mia realised that the word “" + w + "” was suitable because the situation was " + d + "."
+    const clean = v => String(v ?? '').trim();
+    const sentenceFromMeaning = (word, definition, level) => {
+      const w = clean(word);
+      const d = clean(definition).replace(/[.]+$/, '');
+      if (!w) return '';
+      const l = String(level || '').toUpperCase();
+      const simple = [
+        'During recess, Mia was ' + w + ' because ' + d + '.',
+        'Ben was ' + w + ' when ' + d + '.',
+        'The teacher said that Tom was ' + w + ' because ' + d + '.'
       ];
-      return templates[(w.length + String(level || "").length) % templates.length];
+      const build = [
+        'When the class saw what happened, everyone agreed that the situation was ' + w + ' because ' + d + '.',
+        'After hearing the story, Sarah knew that the character was ' + w + ' because ' + d + '.',
+        'The children understood why the boy was ' + w + ' when they realised that ' + d + '.'
+      ];
+      const challenge = [
+        'Although the situation seemed ordinary at first, Daniel realised that it was ' + w + ' because ' + d + '.',
+        'After considering what had happened, Priya described the character as ' + w + ' because ' + d + '.',
+        'From the clues in the story, the pupils concluded that the behaviour was ' + w + ' because ' + d + '.'
+      ];
+      const pool = l.includes('P3') ? simple : l.includes('P5') ? challenge : build;
+      return pool[(w.length + d.length) % pool.length];
     };
-    const patchRecords = arr => {
+    const hasTarget = (text, word) => {
+      const escaped = clean(word).replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');
+      return new RegExp('\\\\b' + escaped + '\\\\b', 'i').test(clean(text));
+    };
+    const patchRecords = (arr, level) => {
       if (!Array.isArray(arr)) return;
       arr.forEach(r => {
         if (!r || !r.word) return;
-        const word = String(r.word).trim();
-        const definition = String(r.definition || r.meaning || "").trim();
-        const examples = Array.isArray(r.examples) ? r.examples : [];
-        const safeWord = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        const hasWordSentence = examples.some(x => new RegExp("\\b" + safeWord + "\\b", "i").test(String(x || "")));
-        if (!hasWordSentence) {
-          const sentence = completeSentence(word, definition || "used in this situation", r.level);
-          if (sentence) r.examples = [sentence, ...examples];
+        const word = clean(r.word);
+        const definition = clean(r.definition || r.meaning || '');
+        const examples = Array.isArray(r.examples) ? r.examples.map(clean).filter(Boolean) : [];
+        const natural = examples.find(x => hasTarget(x, word));
+        if (natural) {
+          r.examples = [natural, ...examples.filter(x => x !== natural)];
+          return;
         }
+        const generated = sentenceFromMeaning(word, definition, level);
+        if (generated) r.examples = [generated, ...examples];
       });
     };
-    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3);
-    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45);
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3, 'P3');
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45, 'P4/P5');
   })();
   </script>
   <script src="aitutor-student-v2-20260918.js?v=20260918b"></script>
