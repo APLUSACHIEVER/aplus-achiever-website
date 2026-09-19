@@ -15,7 +15,8 @@
     .micro-practice-btn span{grid-row:1 / span 2;font-size:19px;line-height:1;text-align:center}
     .micro-practice-btn b{font-size:14px;line-height:1.2}
     .micro-practice-btn small{font-size:11px;opacity:.65;margin-top:2px}
-    @media (max-width:700px){.micro-practice{max-width:100%}}\n    @media (max-width:650px){.hero-orb{display:block;width:100%;min-width:0;margin-top:22px}.micro-practice{margin:18px auto 0;max-width:100%}.micro-practice-btn{width:100%;min-height:52px}}
+    @media (max-width:700px){.micro-practice{max-width:100%}}
+    @media (max-width:650px){.hero-orb{display:block;width:100%;min-width:0;margin-top:22px}.micro-practice{margin:18px auto 0;max-width:100%}.micro-practice-btn{width:100%;min-height:52px}}
       .orb-avatar{width:156px;height:156px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid rgba(38,108,88,.12);box-shadow:0 14px 34px rgba(38,108,88,.12);margin:0 auto 12px;position:relative}
     .orb-avatar img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 22%}
     @media (max-width:650px){.orb-avatar{width:138px;height:138px}}
@@ -37,7 +38,7 @@
           <h1>What would you like to learn today?</h1>
           <p>Your school level sets the starting point. Your learning history helps the Tutor Brain choose the right difficulty, skill and review path.</p>
           <div class="level-picker" role="group" aria-label="Choose school level">
-            <button class="level-btn" data-level="P3" type="button"><strong>P3</strong><span>Foundation</span></button>
+            <button class="level-btn active" data-level="P3" type="button"><strong>P3</strong><span>Foundation</span></button>
             <button class="level-btn" data-level="P4" type="button"><strong>P4</strong><span>Build</span></button>
             <button class="level-btn" data-level="P5" type="button"><strong>P5</strong><span>Challenge</span></button>
           </div>
@@ -70,7 +71,7 @@
 
           <section class="quiz-card" id="quizCard">
             <div class="quiz-top"><div><span class="eyebrow" id="quizLabel">READY</span><div class="question-progress" id="questionProgress">Start a practice session</div></div><button class="text-btn" id="closeQuiz" type="button">Close</button></div>
-            <div id="questionArea" class="question-area"><div class="empty-quiz"><div class="empty-icon">✦</div><h3>Your next question is waiting.</h3><p>Choose Vocabulary, Grammar, Smart Review or Mixed Challenge above.</p></div></div>
+            <div id="questionArea" class="question-area" aria-live="polite" aria-atomic="true"><div class="empty-quiz"><div class="empty-icon">✦</div><h3>Your next question is waiting.</h3><p>Choose Vocabulary, Grammar, Smart Review or Mixed Challenge above.</p></div></div>
           </section>
         </div>
         <aside class="side-column">
@@ -83,174 +84,226 @@
     </main>
     <footer>APLUS ACHIEVER · AI Tutor Student Centre · P3–P5</footer>
   </div>
-  <script src="data/vocabulary.js"></script>
-  <script src="aplus-ai-db-v1-vocabulary-rich-p3-20260918.js"></script>
-  <script src="aplus-ai-db-v1-vocabulary-rich-p45-20260918.js"></script>
-  <script src="aplus-ai-db-v1-vocabulary-wordfamily-p3p5-batch01-20260918.js"></script>
-  <script src="aplus-ai-db-v1-vocabulary-confusables-p3p5-batch01-20260918.js"></script>
-  <script src="aplus-ai-db-v1-vocabulary-contextclues-p3p5-batch01-20260918.js"></script>
-  <script src="aplus-ai-db-v1-vocabulary-collocations-p3p5-batch01-20260918.js"></script>
-  <script src="aplus-ai-db-v1-vocabulary-question-dna-batch01-20260918.js"></script>
-  <script src="aplus-ai-db-v1-grammar-large-p3p5-batch01-20260918.js"></script>
+  <script src="data/vocabulary.js?v=20260919aitutor8"></script>
+  <script src="aplus-ai-db-v1-vocabulary-rich-p3-20260918.js?v=20260919aitutor8"></script>
+  <script src="aplus-ai-db-v1-vocabulary-rich-p45-20260918.js?v=20260919aitutor8"></script>
+  <script src="aplus-ai-db-v1-vocabulary-wordfamily-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
+  <script src="aplus-ai-db-v1-vocabulary-confusables-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
+  <script src="aplus-ai-db-v1-vocabulary-contextclues-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
+  <script src="aplus-ai-db-v1-vocabulary-collocations-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
+  <script src="aplus-ai-db-v1-vocabulary-question-dna-batch01-20260918.js?v=20260919aitutor8"></script>
+  <script src="aplus-ai-db-v1-grammar-large-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
   <script>
-  /* P3–P5 Vocabulary Context Engine v3 — grammar-safe sentence generation */
+  window.APLUS_AI_TUTOR_RUNTIME={errors:[]};
+  window.addEventListener('error',function(e){
+    try{window.APLUS_AI_TUTOR_RUNTIME.errors.push({type:'error',message:String(e.message||'Unknown script error'),source:String(e.filename||''),line:e.lineno||0,column:e.colno||0});}catch(_){}
+  });
+  window.addEventListener('unhandledrejection',function(e){
+    try{window.APLUS_AI_TUTOR_RUNTIME.errors.push({type:'unhandledrejection',message:String(e.reason?.message||e.reason||'Unhandled promise rejection')});}catch(_){}
+  });
+  </script>
+  <script>
+  /* P3–P5 Vocabulary Context Engine v4
+     Safe rule: exact database examples first; semantic generation only when confident.
+  */
   (() => {
     const clean = v => String(v ?? '').trim();
-    const stripDef = v => clean(v).replace(/^["'“”]+|["'“”]+$/g,'').replace(/[.]+$/,'');
+    const stripDef = v => clean(v).replace(/^[\"'“”]+|[\"'“”]+$/g,'').replace(/[.]+$/,'');
+    const wordEscaped = word => clean(word).replace(/[.*+?^$()|[\]\\]/g,'\\$&');
+
     const hasTarget = (text, word) => {
-      const escaped = clean(word).replace(/[.*+?^${}()|[\\]\\\\]/g,'\\$&');
-      return new RegExp('\\b' + escaped + '\\b','i').test(clean(text));
+      const w=clean(word), t=clean(text);
+      if(!w || !t) return false;
+      return new RegExp('\\b'+wordEscaped(w)+'\\b','i').test(t);
     };
-    const adjectiveContext = (word, def, level) => {
-      const d = stripDef(def).replace(/^(being |feeling |having |very |extremely )/i,'');
-      const p3=[
-        'Tom was _____ because he always smiled and encouraged his friends.',
-        'Mia felt _____ when her teacher praised her hard work.',
-        'The puppy looked _____ as it wagged its tail and played with the children.'
-      ];
-      const p4=[
-        'When the class needed help, Tom was _____ because he willingly shared his notes with everyone.',
-        'Mia felt _____ after she received a kind message from her best friend.',
-        'The coach described Ben as _____ because he remained calm and positive after the team lost.'
-      ];
-      const p5=[
-        'Although the task was difficult, Tom remained _____ and encouraged his classmates to keep trying.',
-        'After hearing the good news, Mia was _____ and could not stop smiling throughout the afternoon.',
-        'The teacher described Ben as _____ because he stayed calm, helpful and positive even when things went wrong.'
-      ];
-      const pool=String(level||'').toUpperCase().includes('P3')?p3:String(level||'').toUpperCase().includes('P5')?p5:p4;
-      return pool[(clean(word).length + d.length) % pool.length];
-    };
-    const verbContext = (word, def, level) => {
-      const d=stripDef(def).toLowerCase();
-      // Semantic-safe verb contexts: never assign a random sentence template to a verb.
-      // The sentence must test the actual meaning of the target word.
-      if(/diminish|become or make smaller|become smaller|less|decrease|reduce|weaken/.test(d))
-        return 'The noise began to _____ after midnight.';
-      if(/identify|recognise or name|recognize or name|recognise|recognize/.test(d))
-        return 'The pupils had to _____ the main idea before answering the question.';
-      if(/recommend|suggest|advise/.test(d))
-        return 'The teacher would _____ this book to pupils who enjoy adventure stories.';
-      if(/determine|find out|decide something|decide what/.test(d))
-        return 'The scientists carried out tests to _____ the cause of the problem.';
-      if(/analyse|analyze|examine.*carefully|examine something carefully/.test(d))
-        return 'The pupils had to _____ the information carefully before drawing a conclusion.';
-      if(/evaluate|judge.*quality|judge.*value|assess/.test(d))
-        return 'The teacher asked the pupils to _____ the results before choosing a solution.';
-      if(/consider|think about|take into account/.test(d))
-        return 'Before making a decision, Daniel decided to _____ all the possible consequences.';
-      if(/retrieve|get something back|recover/.test(d))
-        return 'He returned to the classroom to _____ the book he had left behind.';
-      if(/enhance|improve.*quality|improve.*value|make.*better/.test(d))
-        return 'The new design will _____ the appearance of the classroom.';
-      if(/expand|become larger|make larger|increase in size/.test(d))
-        return 'The balloon began to _____ as more air was added.';
-      if(/emerge|come into view|become known|appear/.test(d))
-        return 'The sun began to _____ from behind the clouds.';
-      if(/give special importance|special importance|stress|highlight|draw attention/.test(d))
-        return 'The teacher asked the pupils to _____ the most important point in their answers.';
-      if(/encounter|meet or experience|experience.*unexpectedly/.test(d))
-        return 'The hikers were surprised to _____ heavy rain on the way to the summit.';
-      if(/endure|suffer.*without giving up|tolerate|withstand/.test(d))
-        return 'The runner had to _____ the pain and continue the race.';
-      if(/influence|affect.*develop|affect.*decision|affect/.test(d))
-        return 'Friends can _____ the choices that we make.';
-      if(/maintain|keep.*good condition|keep.*same level/.test(d))
-        return 'Regular exercise helps us _____ good health.';
-      if(/modify|change.*slightly|adjust/.test(d))
-        return 'We had to _____ the plan after receiving new information.';
-      if(/obtain|get something|acquire|gain/.test(d))
-        return 'You must _____ permission before entering the laboratory.';
-      if(/preserve|keep.*good condition|protect|keep.*safe/.test(d))
-        return 'We should _____ the old building because it has historical value.';
-      if(/prohibit|officially stop|ban|prevent.*from being done/.test(d))
-        return 'The sign is meant to _____ visitors from entering the area.';
-      if(/resolve|solve.*problem|settle.*disagreement|settle.*problem/.test(d))
-        return 'The two groups worked together to _____ the disagreement.';
-      if(/retain|keep or continue to have|keep.*information|continue to have/.test(d))
-        return 'Regular review helps students _____ new information for longer.';
-      if(/transform|change greatly|change.*appearance|change.*form/.test(d))
-        return 'The pupils worked together to _____ the empty room into a reading corner.';
-      if(/verify|check.*true|check.*accurate|confirm/.test(d))
-        return 'Always _____ the information before using it in your report.';
-      if(/adapt|change to suit|adjust.*new situation/.test(d))
-        return 'Animals must _____ to changes in their surroundings.';
-      if(/anticipate|expect.*happen|prepare.*in advance/.test(d))
-        return 'The team tried to _____ possible problems before the event began.';
-      if(/appreciate|understand the value|value/.test(d))
-        return 'We should _____ the effort that our classmates put into the project.';
-      if(/contribute|give or add|add something|give something/.test(d))
-        return 'Everyone was encouraged to _____ an idea during the discussion.';
-      if(/convince|persuade/.test(d))
-        return 'She tried to _____ her parents that she was ready to be more independent.';
-      if(/demonstrate|show clearly|show how/.test(d))
-        return 'The teacher used a simple experiment to _____ how the machine works.';
-      if(/distract|take attention away|divert/.test(d))
-        return 'Loud noises can _____ students from their work.';
-      if(/hinder|make progress difficult|obstruct/.test(d))
-        return 'Heavy rain can _____ the workers from completing the task on time.';
-      if(/imitate|copy actions|copy behaviour|copy/.test(d))
-        return 'The child tried to _____ the dancer’s movements.';
-      if(/inspire|make someone want|motivate/.test(d))
-        return 'The teacher’s words helped to _____ the pupils to keep trying.';
-      if(/predict|say what.*happen|forecast/.test(d))
-        return 'Can you _____ what will happen next in the story?';
-      if(/clarify|make.*easier to understand|make.*clear/.test(d))
-        return 'The teacher repeated the instructions to _____ the final step.';
-      if(/cooperate|work together/.test(d))
-        return 'The pupils had to _____ with one another to complete the task.';
-      if(/organis|put in order|make plans/.test(d))
-        return 'The class monitor helped to _____ the books before the lesson began.';
+
+    const getPos = record => {
+      const explicit=clean(record?.partOfSpeech || record?.pos || record?.wordType || record?.type).toLowerCase();
+      if(explicit){
+        if(/verb/.test(explicit) && !/adverb/.test(explicit)) return 'verb';
+        if(/noun/.test(explicit)) return 'noun';
+        if(/adject/.test(explicit)) return 'adjective';
+        if(/adverb/.test(explicit)) return 'adverb';
+      }
+      const word=clean(record?.word).toLowerCase();
+      const d=stripDef(record?.definition || record?.meaning).toLowerCase();
+      if(/^to\s+/.test(d)) return 'verb';
+      if(/^(a|an|the)\s+/.test(d)) return 'noun';
+      if(/^(very|extremely|quite|full of|having|able to|likely to|eager to|willing to|showing|feeling)\b/.test(d)) return 'adjective';
+      if(/ly$/.test(word)) return 'adverb';
       return '';
     };
-    const nounContext = (word, def, level) => {
-      const p3=[
-        'The teacher praised the pupils for showing great _____ when they helped a new classmate.',
-        'There was a feeling of _____ in the room when the team won the match.',
-        'Mum showed great _____ when she listened patiently to the child.'
-      ];
-      const p4=[
-        'The teacher praised Tom for his _____ after he helped a classmate who had fallen down.',
-        'A sense of _____ filled the hall when the pupils heard that their team had won.',
-        'Everyone admired Sarah’s _____ because she remained calm and patient during the difficult situation.'
-      ];
-      const p5=[
-        'The volunteers showed great _____ by continuing to help the community even after working for many hours.',
-        'A sense of _____ spread through the audience when the missing child was finally found safe.',
-        'The principal admired the pupil’s _____ because he accepted responsibility for his mistake and tried to put it right.'
-      ];
-      const l=String(level||'').toUpperCase(); const pool=l.includes('P3')?p3:l.includes('P5')?p5:p4;
-      return pool[(clean(word).length + stripDef(def).length) % pool.length];
-    };
-    const generate = (word, definition, level, record) => {
-      const w=clean(word), d=stripDef(definition);
-      if(!w) return '';
-      const pos=clean(record?.partOfSpeech || record?.pos || record?.wordType || '').toLowerCase();
-      if(/noun/.test(pos)) return nounContext(w,d,level);
-      if(/verb/.test(pos) && !/adverb/.test(pos)) return verbContext(w,d,level);
-      // Compact records often omit part of speech. Infer verbs from definitions beginning with "to".
-      if(/^to\s+/.test(d)) return verbContext(w,d,level);
-      // Never guess an adjective template for an unknown word.
-      if(/adject/.test(pos)) return adjectiveContext(w,d,level);
-      if(/^(very|extremely|quite|not|full of|having|able to|likely to|eager to|willing to|showing|feeling)\b/i.test(d)) return adjectiveContext(w,d,level);
+
+    const semanticContext = (record) => {
+      const d=stripDef(record?.definition || record?.meaning).toLowerCase();
+      const pos=getPos(record);
+      if(!d) return '';
+
+      if(pos==='verb'){
+        if(/diminish|become or make smaller|become smaller|decrease|reduce|weaken/.test(d))
+          return 'The noise began to _____ after midnight.';
+        if(/identify|recognise or name|recognize or name|recognise|recognize/.test(d))
+          return 'The pupils had to _____ the main idea before answering the question.';
+        if(/recommend|suggest|advise/.test(d))
+          return 'The teacher would _____ this book to pupils who enjoy adventure stories.';
+        if(/determine|find out|decide something|decide what/.test(d))
+          return 'The scientists carried out tests to _____ the cause of the problem.';
+        if(/analyse|analyze|examine.*carefully|examine something carefully/.test(d))
+          return 'The pupils had to _____ the information carefully before drawing a conclusion.';
+        if(/evaluate|judge.*quality|judge.*value|assess/.test(d))
+          return 'The teacher asked the pupils to _____ the results before choosing a solution.';
+        if(/consider|think about|take into account/.test(d))
+          return 'Before making a decision, Daniel decided to _____ all the possible consequences.';
+        if(/retrieve|get something back|recover/.test(d))
+          return 'He returned to the classroom to _____ the book he had left behind.';
+        if(/enhance|improve.*quality|improve.*value|make.*better/.test(d))
+          return 'The new design will _____ the appearance of the classroom.';
+        if(/expand|become larger|make larger|increase in size/.test(d))
+          return 'The balloon began to _____ as more air was added.';
+        if(/emerge|come into view|become known|appear/.test(d))
+          return 'The sun began to _____ from behind the clouds.';
+        if(/give special importance|special importance|stress|highlight|draw attention/.test(d))
+          return 'The teacher asked the pupils to _____ the most important point in their answers.';
+        if(/encounter|meet or experience|experience.*unexpectedly/.test(d))
+          return 'The hikers were surprised to _____ heavy rain on the way to the summit.';
+        if(/endure|suffer.*without giving up|tolerate|withstand/.test(d))
+          return 'The runner had to _____ the pain and continue the race.';
+        if(/influence|affect.*develop|affect.*decision|affect/.test(d))
+          return 'Friends can _____ the choices that we make.';
+        if(/maintain|keep.*good condition|keep.*same level/.test(d))
+          return 'Regular exercise helps us _____ good health.';
+        if(/modify|change.*slightly|adjust/.test(d))
+          return 'We had to _____ the plan after receiving new information.';
+        if(/obtain|get something|acquire|gain/.test(d))
+          return 'You must _____ permission before entering the laboratory.';
+        if(/preserve|protect|keep.*safe|keep.*good condition/.test(d))
+          return 'We should _____ the old building because it has historical value.';
+        if(/prohibit|officially stop|ban|prevent.*from being done/.test(d))
+          return 'The sign is meant to _____ visitors from entering the area.';
+        if(/resolve|solve.*problem|settle.*disagreement|settle.*problem/.test(d))
+          return 'The two groups worked together to _____ the disagreement.';
+        if(/retain|keep or continue to have|keep.*information|continue to have/.test(d))
+          return 'Regular review helps students _____ new information for longer.';
+        if(/transform|change greatly|change.*appearance|change.*form/.test(d))
+          return 'The pupils worked together to _____ the empty room into a reading corner.';
+        if(/verify|check.*true|check.*accurate|confirm/.test(d))
+          return 'Always _____ the information before using it in your report.';
+        if(/adapt|change to suit|adjust.*new situation/.test(d))
+          return 'Animals must _____ to changes in their surroundings.';
+        if(/anticipate|expect.*happen|prepare.*in advance/.test(d))
+          return 'The team tried to _____ possible problems before the event began.';
+        if(/appreciate|understand the value|value/.test(d))
+          return 'We should _____ the effort that our classmates put into the project.';
+        if(/contribute|give or add|add something|give something/.test(d))
+          return 'Everyone was encouraged to _____ an idea during the discussion.';
+        if(/convince|persuade/.test(d))
+          return 'She tried to _____ her parents that she was ready to be more independent.';
+        if(/demonstrate|show clearly|show how/.test(d))
+          return 'The teacher used a simple experiment to _____ how the machine works.';
+        if(/distract|take attention away|divert/.test(d))
+          return 'Loud noises can _____ students from their work.';
+        if(/hinder|make progress difficult|obstruct/.test(d))
+          return 'Heavy rain can _____ the workers from completing the task on time.';
+        if(/imitate|copy actions|copy behaviour|copy/.test(d))
+          return 'The child tried to _____ the dancer’s movements.';
+        if(/inspire|make someone want|motivate/.test(d))
+          return 'The teacher’s words helped to _____ the pupils to keep trying.';
+        if(/predict|say what.*happen|forecast/.test(d))
+          return 'Can you _____ what will happen next in the story?';
+        if(/clarify|make.*easier to understand|make.*clear/.test(d))
+          return 'The teacher repeated the instructions to _____ the final step.';
+        if(/cooperate|work together/.test(d))
+          return 'The pupils had to _____ with one another to complete the task.';
+        if(/organis|put in order|make plans/.test(d))
+          return 'The class monitor helped to _____ the books before the lesson began.';
+        return '';
+      }
+
+      if(pos==='adjective'){
+        if(/excited|interested|eager|enthusiastic/.test(d))
+          return 'After hearing the good news, Mia was _____ and could not stop smiling throughout the afternoon.';
+        if(/worried|nervous|anxious|concerned/.test(d))
+          return 'Before the important test, Mia felt _____ and checked her work carefully.';
+        if(/happy|cheerful|positive|optimistic|hopeful/.test(d))
+          return 'Although the task was difficult, Tom remained _____ and encouraged his classmates to keep trying.';
+        if(/calm|patient|peaceful/.test(d))
+          return 'Even when the situation became difficult, Ben remained _____ and dealt with the problem carefully.';
+        if(/brave|courageous|fearless/.test(d))
+          return 'The _____ girl stayed calm and helped her younger brother when they heard the loud noise.';
+        if(/modest|humble/.test(d))
+          return 'Although she won the prize, Sarah remained _____ and thanked her teammates.';
+        if(/careful|cautious|alert/.test(d))
+          return 'The _____ pupil checked the instructions carefully before starting the experiment.';
+        if(/kind|caring|compassionate|sympathetic/.test(d))
+          return 'The _____ girl noticed that her classmate was upset and offered to help.';
+        if(/diligent|hard-working|hardworking|industrious/.test(d))
+          return 'The _____ pupil completed her work carefully and checked every answer.';
+        if(/confident|self-assured/.test(d))
+          return 'The _____ pupil spoke clearly when presenting his ideas to the class.';
+        return '';
+      }
+
+      if(pos==='noun'){
+        if(/determination|perseverance|dedication|persistence/.test(d))
+          return 'The volunteers showed great _____ by continuing to help the community even after many hours of work.';
+        if(/relief|happiness|joy|delight/.test(d))
+          return 'A feeling of _____ spread through the hall when the missing child was found safe.';
+        if(/responsibility|accountability/.test(d))
+          return 'The principal praised the pupil for taking _____ for his mistake and trying to put it right.';
+        if(/kindness|compassion|sympathy/.test(d))
+          return 'Mum showed great _____ when she listened patiently to the child.';
+        if(/courage|bravery/.test(d))
+          return 'The firefighter showed great _____ when he entered the building to help the trapped family.';
+        if(/patience/.test(d))
+          return 'The teacher showed great _____ while helping the younger pupils learn to read.';
+        return '';
+      }
       return '';
     };
-    const patchRecords=(arr,level)=>{
+
+    const generatedSentenceIsSafe = (sentence, record) => {
+      const s=clean(sentence);
+      const w=clean(record?.word);
+      const pos=getPos(record);
+      if(!s || !w || !pos) return false;
+
+      const lower=s.toLowerCase();
+      if(pos==='verb' && /\b(remained|was|were|felt|seemed|looked|became|stayed)\s+_____/.test(lower)) return false;
+      if(pos==='adjective' && /\bto\s+_____/.test(lower)) return false;
+      if(pos==='noun' && /\bto\s+_____/.test(lower)) return false;
+      return true;
+    };
+
+    const patchRecords = (arr) => {
       if(!Array.isArray(arr)) return;
-      arr.forEach(r=>{
-        if(!r||!r.word) return;
-        const word=clean(r.word);
-        const examples=Array.isArray(r.examples)?r.examples.map(clean).filter(Boolean):[];
-        const natural=examples.find(x=>hasTarget(x,word));
-        if(natural){ r.examples=[natural,...examples.filter(x=>x!==natural)]; return; }
-        const generated=generate(word,r.definition||r.meaning||'',level,r);
-        if(generated) r.examples=[generated,...examples];
+      arr.forEach(record => {
+        if(!record || !record.word) return;
+        const word=clean(record.word);
+        const examples=Array.isArray(record.examples) ? record.examples.map(clean).filter(Boolean) : [];
+
+        // Preserve a real database example whenever the exact target word occurs.
+        const natural=examples.find(x => hasTarget(x,word));
+        if(natural){
+          record.examples=[natural,...examples.filter(x=>x!==natural)];
+          return;
+        }
+
+        // Generate only when the semantic mapping is confident.
+        const generated=semanticContext(record);
+        if(generated && generatedSentenceIsSafe(generated,record)){
+          record.examples=[generated,...examples];
+        }else{
+          // Do not manufacture a question for an uncertain record.
+          record.examples=examples;
+        }
       });
     };
-    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3,'P3');
-    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45,'P4/P5');
+
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3);
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45);
   })();
   </script>
-  <script src="aitutor-student-v2-20260918.js?v=20260919pslegrammar7"></script>
+  </script>
+  <script src="aitutor-student-v2-20260918.js?v=20260919aitutor8"></script>
 </body>
 </html>
