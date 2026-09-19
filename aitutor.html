@@ -9,10 +9,12 @@
 
   <style>
     .micro-practice{display:flex;flex-direction:column;gap:10px;margin-top:18px;width:100%;max-width:290px}
-    .micro-practice-btn{display:flex;align-items:center;justify-content:center;gap:9px;border:1px solid rgba(38,108,88,.16);background:#fff;border-radius:14px;padding:12px 16px;color:#245d4d;box-shadow:0 6px 18px rgba(38,108,88,.08);cursor:pointer;font:inherit;transition:transform .18s ease,box-shadow .18s ease}
+    .micro-practice-title{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;opacity:.7;text-align:center;margin-bottom:2px}
+    .micro-practice-btn{display:grid;grid-template-columns:28px 1fr;grid-template-rows:auto auto;align-items:center;text-align:left;column-gap:9px;border:1px solid rgba(38,108,88,.16);background:#fff;border-radius:14px;padding:11px 14px;color:#245d4d;box-shadow:0 6px 18px rgba(38,108,88,.08);cursor:pointer;font:inherit;transition:transform .18s ease,box-shadow .18s ease}
     .micro-practice-btn:hover{transform:translateY(-1px);box-shadow:0 9px 22px rgba(38,108,88,.12)}
-    .micro-practice-btn span{font-size:18px;line-height:1}
-    .micro-practice-btn b{font-size:14px}
+    .micro-practice-btn span{grid-row:1 / span 2;font-size:19px;line-height:1;text-align:center}
+    .micro-practice-btn b{font-size:14px;line-height:1.2}
+    .micro-practice-btn small{font-size:11px;opacity:.65;margin-top:2px}
     @media (max-width:700px){.micro-practice{max-width:100%}}
   </style>
 </head>
@@ -41,8 +43,9 @@
           <div class="orb-icon">AI</div>
           <span id="coachMessage">Let’s start with a short practice session.</span>
           <div class="micro-practice">
-            <button class="micro-practice-btn" data-mode="micro2" type="button"><span>⚡</span><b>2-Minute Practice</b></button>
-            <button class="micro-practice-btn" data-mode="micro3" type="button"><span>🚀</span><b>3-Minute Practice</b></button>
+            <div class="micro-practice-title">Choose your practice time</div>
+            <button class="micro-practice-btn" data-mode="micro2" type="button"><span>⚡</span><b>2-Minute Practice</b><small>Quick practice · 8 questions</small></button>
+            <button class="micro-practice-btn" data-mode="micro3" type="button"><span>🚀</span><b>3-Minute Practice</b><small>Focused practice · 12 questions</small></button>
           </div>
         </div>
       </section>
