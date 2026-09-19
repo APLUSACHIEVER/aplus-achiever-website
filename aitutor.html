@@ -71,6 +71,39 @@
   <script src="aplus-ai-db-v1-vocabulary-collocations-p3p5-batch01-20260918.js"></script>
   <script src="aplus-ai-db-v1-vocabulary-question-dna-batch01-20260918.js"></script>
   <script src="aplus-ai-db-v1-grammar-large-p3p5-batch01-20260918.js"></script>
+  <script>
+  /* P3–P5 Vocabulary: force every core vocabulary item into a complete-sentence context question. */
+  (() => {
+    const completeSentence = (word, definition, level) => {
+      const w = String(word || "").trim();
+      const d = String(definition || "").trim().replace(/[.]+$/, "");
+      if (!w) return "";
+      const templates = [
+        "During the lesson, the teacher explained that the word “" + w + "” describes something that is " + d + ".",
+        "The teacher said that something can be described as “" + w + "” when it is " + d + ".",
+        "Mia realised that the word “" + w + "” was suitable because the situation was " + d + "."
+      ];
+      return templates[(w.length + String(level || "").length) % templates.length];
+    };
+    const patchRecords = arr => {
+      if (!Array.isArray(arr)) return;
+      arr.forEach(r => {
+        if (!r || !r.word) return;
+        const word = String(r.word).trim();
+        const definition = String(r.definition || r.meaning || "").trim();
+        const examples = Array.isArray(r.examples) ? r.examples : [];
+        const safeWord = word.replace(/[.*+?^${}()|[\]\\]/g, "\\  <script src="aitutor-student-v2-20260918.js?v=20260918b"></script>");
+        const hasWordSentence = examples.some(x => new RegExp("\\b" + safeWord + "\\b", "i").test(String(x || "")));
+        if (!hasWordSentence) {
+          const sentence = completeSentence(word, definition || "used in this situation", r.level);
+          if (sentence) r.examples = [sentence, ...examples];
+        }
+      });
+    };
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3);
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45);
+  })();
+  </script>
   <script src="aitutor-student-v2-20260918.js?v=20260918b"></script>
 </body>
 </html>
