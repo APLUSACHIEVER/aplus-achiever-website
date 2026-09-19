@@ -72,57 +72,94 @@
   <script src="aplus-ai-db-v1-vocabulary-question-dna-batch01-20260918.js"></script>
   <script src="aplus-ai-db-v1-grammar-large-p3p5-batch01-20260918.js"></script>
   <script>
-  /* P3–P5 Vocabulary Context Engine v2
-     Every core vocabulary question uses a complete, child-friendly sentence.
-     The context is designed to test meaning from the sentence rather than a definition prompt.
-  */
+  /* P3–P5 Vocabulary Context Engine v3 — grammar-safe sentence generation */
   (() => {
     const clean = v => String(v ?? '').trim();
-    const sentenceFromMeaning = (word, definition, level) => {
-      const w = clean(word);
-      const d = clean(definition).replace(/[.]+$/, '');
-      if (!w) return '';
-      const l = String(level || '').toUpperCase();
-      const simple = [
-        'During recess, Mia was ' + w + ' because ' + d + '.',
-        'Ben was ' + w + ' when ' + d + '.',
-        'The teacher said that Tom was ' + w + ' because ' + d + '.'
-      ];
-      const build = [
-        'When the class saw what happened, everyone agreed that the situation was ' + w + ' because ' + d + '.',
-        'After hearing the story, Sarah knew that the character was ' + w + ' because ' + d + '.',
-        'The children understood why the boy was ' + w + ' when they realised that ' + d + '.'
-      ];
-      const challenge = [
-        'Although the situation seemed ordinary at first, Daniel realised that it was ' + w + ' because ' + d + '.',
-        'After considering what had happened, Priya described the character as ' + w + ' because ' + d + '.',
-        'From the clues in the story, the pupils concluded that the behaviour was ' + w + ' because ' + d + '.'
-      ];
-      const pool = l.includes('P3') ? simple : l.includes('P5') ? challenge : build;
-      return pool[(w.length + d.length) % pool.length];
-    };
+    const stripDef = v => clean(v).replace(/^["'“”]+|["'“”]+$/g,'').replace(/[.]+$/,'');
     const hasTarget = (text, word) => {
-      const escaped = clean(word).replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');
-      return new RegExp('\\\\b' + escaped + '\\\\b', 'i').test(clean(text));
+      const escaped = clean(word).replace(/[.*+?^${}()|[\\]\\\\]/g,'\\$&');
+      return new RegExp('\\b' + escaped + '\\b','i').test(clean(text));
     };
-    const patchRecords = (arr, level) => {
-      if (!Array.isArray(arr)) return;
-      arr.forEach(r => {
-        if (!r || !r.word) return;
-        const word = clean(r.word);
-        const definition = clean(r.definition || r.meaning || '');
-        const examples = Array.isArray(r.examples) ? r.examples.map(clean).filter(Boolean) : [];
-        const natural = examples.find(x => hasTarget(x, word));
-        if (natural) {
-          r.examples = [natural, ...examples.filter(x => x !== natural)];
-          return;
-        }
-        const generated = sentenceFromMeaning(word, definition, level);
-        if (generated) r.examples = [generated, ...examples];
+    const adjectiveContext = (word, def, level) => {
+      const d = stripDef(def).replace(/^(being |feeling |having |very |extremely )/i,'');
+      const p3=[
+        'Tom was _____ because he always smiled and encouraged his friends.',
+        'Mia felt _____ when her teacher praised her hard work.',
+        'The puppy looked _____ as it wagged its tail and played with the children.'
+      ];
+      const p4=[
+        'When the class needed help, Tom was _____ because he willingly shared his notes with everyone.',
+        'Mia felt _____ after she received a kind message from her best friend.',
+        'The coach described Ben as _____ because he remained calm and positive after the team lost.'
+      ];
+      const p5=[
+        'Although the task was difficult, Tom remained _____ and encouraged his classmates to keep trying.',
+        'After hearing the good news, Mia was _____ and could not stop smiling throughout the afternoon.',
+        'The teacher described Ben as _____ because he stayed calm, helpful and positive even when things went wrong.'
+      ];
+      const pool=String(level||'').toUpperCase().includes('P3')?p3:String(level||'').toUpperCase().includes('P5')?p5:p4;
+      return pool[(clean(word).length + d.length) % pool.length];
+    };
+    const verbContext = (word, def, level) => {
+      const p3=[
+        'After the bell rang, the pupils _____ their books and left the classroom.',
+        'Sarah decided to _____ her friend when she saw that he needed help.',
+        'The boy had to _____ carefully so that he would not disturb the sleeping baby.'
+      ];
+      const p4=[
+        'When the teacher gave the instructions, the pupils _____ carefully before starting the activity.',
+        'After noticing that her friend was upset, Sarah decided to _____ her by speaking kindly to her.',
+        'The children _____ across the field when they heard the whistle calling them back.'
+      ];
+      const p5=[
+        'Before making a decision, Daniel decided to _____ the situation carefully and consider the possible consequences.',
+        'When the storm became stronger, the family had to _____ quickly to a safer place.',
+        'Although the task seemed difficult at first, the pupils continued to _____ until they found a solution.'
+      ];
+      const l=String(level||'').toUpperCase(); const pool=l.includes('P3')?p3:l.includes('P5')?p5:p4;
+      return pool[(clean(word).length + stripDef(def).length) % pool.length];
+    };
+    const nounContext = (word, def, level) => {
+      const p3=[
+        'The teacher praised the pupils for showing great _____ when they helped a new classmate.',
+        'There was a feeling of _____ in the room when the team won the match.',
+        'Mum showed great _____ when she listened patiently to the child.'
+      ];
+      const p4=[
+        'The teacher praised Tom for his _____ after he helped a classmate who had fallen down.',
+        'A sense of _____ filled the hall when the pupils heard that their team had won.',
+        'Everyone admired Sarah’s _____ because she remained calm and patient during the difficult situation.'
+      ];
+      const p5=[
+        'The volunteers showed great _____ by continuing to help the community even after working for many hours.',
+        'A sense of _____ spread through the audience when the missing child was finally found safe.',
+        'The principal admired the pupil’s _____ because he accepted responsibility for his mistake and tried to put it right.'
+      ];
+      const l=String(level||'').toUpperCase(); const pool=l.includes('P3')?p3:l.includes('P5')?p5:p4;
+      return pool[(clean(word).length + stripDef(def).length) % pool.length];
+    };
+    const generate = (word, definition, level, record) => {
+      const w=clean(word), d=stripDef(definition);
+      if(!w) return '';
+      const pos=clean(record?.partOfSpeech || record?.pos || record?.wordType || '').toLowerCase();
+      if(/noun/.test(pos)) return nounContext(w,d,level);
+      if(/verb/.test(pos) && !/adverb/.test(pos)) return verbContext(w,d,level);
+      return adjectiveContext(w,d,level);
+    };
+    const patchRecords=(arr,level)=>{
+      if(!Array.isArray(arr)) return;
+      arr.forEach(r=>{
+        if(!r||!r.word) return;
+        const word=clean(r.word);
+        const examples=Array.isArray(r.examples)?r.examples.map(clean).filter(Boolean):[];
+        const natural=examples.find(x=>hasTarget(x,word));
+        if(natural){ r.examples=[natural,...examples.filter(x=>x!==natural)]; return; }
+        const generated=generate(word,r.definition||r.meaning||'',level,r);
+        if(generated) r.examples=[generated,...examples];
       });
     };
-    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3, 'P3');
-    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45, 'P4/P5');
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3,'P3');
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45,'P4/P5');
   })();
   </script>
   <script src="aitutor-student-v2-20260918.js?v=20260918b"></script>
