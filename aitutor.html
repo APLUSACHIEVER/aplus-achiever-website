@@ -92,7 +92,7 @@
         const word = String(r.word).trim();
         const definition = String(r.definition || r.meaning || "").trim();
         const examples = Array.isArray(r.examples) ? r.examples : [];
-        const safeWord = word.replace(/[.*+?^${}()|[\]\\]/g, "\\  <script src="aitutor-student-v2-20260918.js?v=20260918b"></script>");
+        const safeWord = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         const hasWordSentence = examples.some(x => new RegExp("\\b" + safeWord + "\\b", "i").test(String(x || "")));
         if (!hasWordSentence) {
           const sentence = completeSentence(word, definition || "used in this situation", r.level);
