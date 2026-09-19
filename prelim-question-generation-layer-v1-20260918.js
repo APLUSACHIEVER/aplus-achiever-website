@@ -47,56 +47,7 @@ function tag(q,s,source,id,skill,diff){return Object.assign(q,{section:s,sourceD
 function mcq(x,s,source,r){if(!x)return null;let question=x.question||x.context||x.text;if(!question)return null;let answer=x.answer;if(typeof answer==='number'&&Array.isArray(x.options))answer=x.options[answer];if(answer==null)return null;let opts=Array.isArray(x.options)?x.options.slice():Array.isArray(x.distractors)?[answer,...x.distractors]:[];opts=opts.map(String).filter(v=>clean(v)!==clean(answer));opts=[...new Set(opts)];if(opts.length<3)return null;opts=sh([String(answer),...sh(opts,r).slice(0,3)],r);if(new Set(opts.map(clean)).size!==4)return null;return tag({type:'mcq',marks:1,question:String(question),options:opts,answer:String(answer),explanation:x.explanation||x.rule||''},s,source,x.id,x.skill||x.topic,x.difficulty);}
 function take(pool,n,r){return sh(pool.filter(Boolean),r).slice(0,n);}
 function grammar(R,n,r){let out=[];for(const x of take(R.realGrammar,1,r)){const q=mcq(x,'grammar','2026 School Prelim Real Source',r);if(q)out.push(q)}for(const x of take(R.grammar,n*5,r)){const q=mcq(x,'grammar','P6 Grammar Database',r);if(q)out.push(q);if(out.length===n)break}return out.slice(0,n);}
-function vocab(R,n,r,cloze){
-  let out=[];
-  if(cloze){
-    // PSLE Booklet A Vocabulary Cloze Q16-20: use all available real-source records.
-    for(const x of take(R.realVocabCloze,n,r)){
-      if(!Array.isArray(x.options)||x.options.length<4||x.answer==null)continue;
-      const passage=String(x.passage||'');
-      const target=String(x.blank||'').trim();
-      if(!passage||!target)continue;
-      let display=passage;
-      if(/_+/.test(display)) display=display.replace(/_+/, '<u>'+target+'</u>');
-      else {
-        const escaped=target.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-        display=display.replace(new RegExp(escaped,'i'), '<u>'+target+'</u>');
-      }
-      if(display===passage)continue;
-      out.push(tag({type:'mcq',marks:1,passage:display,blankNumber:x.questionNumber,question:'Choose the word closest in meaning to the underlined word.',options:x.options.map(String),answer:String(x.answer),explanation:x.explanation||'Choose the option that has the closest meaning to the underlined word in context.'},'vocabularyCloze','2026 School Prelim Real Source',x.id,x.skill,x.difficulty));
-      if(out.length===n)break;
-    }
-  }else{
-    // PSLE Booklet A Vocabulary Q11-15: complete sentence + blank + four options.
-    for(const x of take(R.realVocab,n,r)){
-      if(!Array.isArray(x.options)||x.options.length<4||x.answer==null)continue;
-      const answer=String(x.answer);
-      let stem=String(x.question||'');
-      const escaped=answer.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-      if(new RegExp(escaped,'i').test(stem)) stem=stem.replace(new RegExp(escaped,'i'),'________');
-      else if(/_{3,}/.test(stem)) stem=stem.replace(/_{3,}/,'________');
-      else continue;
-      out.push(tag({type:'mcq',marks:1,question:stem,options:x.options.map(String),answer:answer,explanation:x.explanation||x.rule||'Choose the word or expression that best fits the sentence in meaning, usage and collocation.'},'vocabulary','2026 School Prelim Real Source',x.id,x.skill,x.difficulty));
-      if(out.length===n)break;
-    }
-  }
-  if(out.length<n&&!cloze){
-    for(const x of take(R.vocab,n*8,r)){
-      if(!x||!x.word)continue;
-      const answer=String(x.word);
-      const clue=String(x.contextClue||'').trim();
-      if(!clue)continue;
-      const stem=clue.replace(/[.!?]+$/,'')+', showing that the person or situation was ______.';
-      const related=Array.isArray(x.synonyms)?x.synonyms.map(String):[];
-      const pool=R.vocab.map(y=>y&&y.word).filter(Boolean).filter(w=>clean(w)!==clean(answer)).filter(w=>!related.some(s=>clean(s)===clean(w)));
-      const bad=sh(pool,r).slice(0,3);
-      if(bad.length<3)continue;
-      out.push(tag({type:'mcq',marks:1,question:stem,options:sh([answer,...bad],r),answer:answer,explanation:x.definition||'Use the context clue to identify the most precise word.'},'vocabulary','P6 Master Vocabulary',x.id,'vocabulary in context',x.difficulty));
-      if(out.length===n)break;
-    }
-  }
-  return out.slice(0,n);
-}
+function vocab(R,n,r,cloze){let out=[];if(cloze){for(const x of take(R.realVocabCloze,1,r)){out.push(tag({type:'mcq',marks:1,passage:String(x.passage||''),blankNumber:x.questionNumber,question:'Choose the word closest in meaning to the underlined word.',options:x.options.map(String),answer:String(x.answer),explanation:'The correct option matches the meaning of the underlined word in context.'},'vocabularyCloze','2026 School Prelim Real Source',x.id,x.skill,x.difficulty));}}else{for(const x of take(R.realVocab,1,r)){const q=mcq(x,'vocabulary','2026 School Prelim Real Source',r);if(q)out.push(q);}} for(const x of take(R.vocab,n*6,r)){if(!x.word)continue;const context=x.contextClue||((x.contextClues||[]).join('; '))||'Choose the word that best matches the meaning described.';const bad=sh(R.vocab.map(y=>y&&y.word).filter(Boolean).filter(w=>clean(w)!==clean(x.word)),r).slice(0,3);if(bad.length<3)continue;out.push(tag({type:'mcq',marks:1,question:String(context)+(cloze?' Which word best completes the context?':' Which word best fits the context?'),options:sh([String(x.word),...bad],r),answer:String(x.word),explanation:x.definition||''},cloze?'vocabularyCloze':'vocabulary','P6 Master Vocabulary',x.id,'vocabulary',x.difficulty));if(out.length===n)break}return out.slice(0,n);}
 function visualText(t){let a=[t.title,'Organised by '+t.org,'',t.intro,'','DATE: '+t.date,'VENUE: '+t.venue,'TIME: '+t.time,''];t.cards.forEach((c,i)=>{a.push('['+(i+1)+'] '+c[0]);c.slice(1).forEach(v=>a.push('• '+v));a.push('')});return a.join('\n')}
 function visual(R,n,r){
   // Safe fallback. The dedicated Visual Text V8 module may replace this section
