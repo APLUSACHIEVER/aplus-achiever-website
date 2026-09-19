@@ -123,25 +123,85 @@
     };
     const verbContext = (word, def, level) => {
       const d=stripDef(def).toLowerCase();
+      // Semantic-safe verb contexts: never assign a random sentence template to a verb.
+      // The sentence must test the actual meaning of the target word.
+      if(/diminish|become or make smaller|become smaller|less|decrease|reduce|weaken/.test(d))
+        return 'The noise began to _____ after midnight.';
+      if(/identify|recognise or name|recognize or name|recognise|recognize/.test(d))
+        return 'The pupils had to _____ the main idea before answering the question.';
+      if(/recommend|suggest|advise/.test(d))
+        return 'The doctor advised me to _____ more rest after the illness.';
+      if(/determine|find out|decide something|decide what/.test(d))
+        return 'The scientists carried out tests to _____ the cause of the problem.';
+      if(/analyse|analyze|examine.*carefully|examine something carefully/.test(d))
+        return 'The pupils had to _____ the information carefully before drawing a conclusion.';
+      if(/evaluate|judge.*quality|judge.*value|assess/.test(d))
+        return 'The teacher asked the pupils to _____ the results before choosing a solution.';
+      if(/consider|think about|take into account/.test(d))
+        return 'Before making a decision, Daniel decided to _____ all the possible consequences.';
+      if(/retrieve|get something back|recover/.test(d))
+        return 'He returned to the classroom to _____ the book he had left behind.';
+      if(/enhance|improve.*quality|improve.*value|make.*better/.test(d))
+        return 'The new design will _____ the appearance of the classroom.';
+      if(/expand|become larger|make larger|increase in size/.test(d))
+        return 'The balloon began to _____ as more air was added.';
+      if(/emerge|come into view|become known|appear/.test(d))
+        return 'The sun began to _____ from behind the clouds.';
       if(/give special importance|special importance|stress|highlight|draw attention/.test(d))
         return 'The teacher asked the pupils to _____ the most important point in their answers.';
-      const p3=[
-        'After the bell rang, the pupils _____ their books and left the classroom.',
-        'Sarah decided to _____ her friend when she saw that he needed help.',
-        'The boy had to _____ carefully so that he would not disturb the sleeping baby.'
-      ];
-      const p4=[
-        'When the teacher gave the instructions, the pupils _____ carefully before starting the activity.',
-        'After noticing that her friend was upset, Sarah decided to _____ her by speaking kindly to her.',
-        'The children _____ across the field when they heard the whistle calling them back.'
-      ];
-      const p5=[
-        'Before making a decision, Daniel decided to _____ the situation carefully and consider the possible consequences.',
-        'When the storm became stronger, the family had to _____ quickly to a safer place.',
-        'Although the task seemed difficult at first, the pupils continued to _____ until they found a solution.'
-      ];
-      const l=String(level||'').toUpperCase(); const pool=l.includes('P3')?p3:l.includes('P5')?p5:p4;
-      return pool[(clean(word).length + stripDef(def).length) % pool.length];
+      if(/encounter|meet or experience|experience.*unexpectedly/.test(d))
+        return 'The hikers were surprised to _____ heavy rain on the way to the summit.';
+      if(/endure|suffer.*without giving up|tolerate|withstand/.test(d))
+        return 'The runner had to _____ the pain and continue the race.';
+      if(/influence|affect.*develop|affect.*decision|affect/.test(d))
+        return 'Friends can _____ the choices that we make.';
+      if(/maintain|keep.*good condition|keep.*same level|preserve/.test(d))
+        return 'Regular exercise helps us _____ good health.';
+      if(/modify|change.*slightly|adjust/.test(d))
+        return 'We had to _____ the plan after receiving new information.';
+      if(/obtain|get something|acquire|gain/.test(d))
+        return 'You must _____ permission before entering the laboratory.';
+      if(/preserve|keep.*good condition|protect|keep.*safe/.test(d))
+        return 'We should _____ the old building because it has historical value.';
+      if(/prohibit|officially stop|ban|prevent.*from being done/.test(d))
+        return 'The sign is meant to _____ visitors from entering the area.';
+      if(/resolve|solve.*problem|settle.*disagreement|settle.*problem/.test(d))
+        return 'The two groups worked together to _____ the disagreement.';
+      if(/retain|keep or continue to have|keep.*information|continue to have/.test(d))
+        return 'Regular review helps students _____ new information for longer.';
+      if(/transform|change greatly|change.*appearance|change.*form/.test(d))
+        return 'The pupils worked together to _____ the empty room into a reading corner.';
+      if(/verify|check.*true|check.*accurate|confirm/.test(d))
+        return 'Always _____ the information before using it in your report.';
+      if(/adapt|change to suit|adjust.*new situation/.test(d))
+        return 'Animals must _____ to changes in their surroundings.';
+      if(/anticipate|expect.*happen|prepare.*in advance/.test(d))
+        return 'The team tried to _____ possible problems before the event began.';
+      if(/appreciate|understand the value|value/.test(d))
+        return 'We should _____ the effort that our classmates put into the project.';
+      if(/contribute|give or add|add something|give something/.test(d))
+        return 'Everyone was encouraged to _____ an idea during the discussion.';
+      if(/convince|persuade/.test(d))
+        return 'She tried to _____ her parents that she was ready to be more independent.';
+      if(/demonstrate|show clearly|show how/.test(d))
+        return 'The teacher used a simple experiment to _____ how the machine works.';
+      if(/distract|take attention away|divert/.test(d))
+        return 'Loud noises can _____ students from their work.';
+      if(/hinder|make progress difficult|obstruct/.test(d))
+        return 'Heavy rain can _____ the workers from completing the task on time.';
+      if(/imitate|copy actions|copy behaviour|copy/.test(d))
+        return 'The child tried to _____ the dancer’s movements.';
+      if(/inspire|make someone want|motivate/.test(d))
+        return 'The teacher’s words helped to _____ the pupils to keep trying.';
+      if(/predict|say what.*happen|forecast/.test(d))
+        return 'Can you _____ what will happen next in the story?';
+      if(/clarify|make.*easier to understand|make.*clear/.test(d))
+        return 'The teacher repeated the instructions to _____ the final step.';
+      if(/cooperate|work together/.test(d))
+        return 'The pupils had to _____ with one another to complete the task.';
+      if(/organis|put in order|make plans/.test(d))
+        return 'The class monitor helped to _____ the books before the lesson began.';
+      return '';
     };
     const nounContext = (word, def, level) => {
       const p3=[
@@ -191,6 +251,6 @@
     patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45,'P4/P5');
   })();
   </script>
-  <script src="aitutor-student-v2-20260918.js?v=20260919pslegrammar6"></script>
+  <script src="aitutor-student-v2-20260918.js?v=20260919pslegrammar7"></script>
 </body>
 </html>
