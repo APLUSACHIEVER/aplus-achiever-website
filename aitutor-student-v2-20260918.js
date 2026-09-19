@@ -155,6 +155,51 @@
   }
 
   function sentenceBlank(text, word){
+
+  function vocabPos(r){
+    const d=clean(r?.definition || r?.meaning).toLowerCase();
+    const w=clean(r?.word).toLowerCase();
+    if(/^to\s+/.test(d)) return 'verb';
+    if(/^(a|an|the)\s+/.test(d)) return 'noun';
+    if(/^(very|extremely|quite|full of|having|able to|likely to|eager to|willing to|showing|feeling)\b/.test(d)) return 'adjective';
+    if(/ly$/.test(w)) return 'adverb';
+    return '';
+  }
+
+  function generatedVocabPrompt(r){
+    const word=clean(r?.word);
+    const d=clean(r?.definition || r?.meaning).toLowerCase();
+    const pos=vocabPos(r);
+    if(!word || !d) return null;
+    if(pos==='verb'){
+      if(/give special importance|special importance|stress|highlight|draw attention/.test(d)) return {prompt:'The teacher asked the pupils to _____ the most important point in their answers.',answer:word};
+      if(/move closer|come closer|go nearer/.test(d)) return {prompt:'The puppy began to _____ the children when they called it gently.',answer:word};
+      if(/try to|make an effort|attempt/.test(d)) return {prompt:'The pupils decided to _____ the difficult problem before the lesson ended.',answer:word};
+      if(/put in order|make plans|organis|organize/.test(d)) return {prompt:'The class monitor helped to _____ the books before the lesson began.',answer:word};
+      if(/respect|like someone|like something/.test(d)) return {prompt:'Many pupils _____ their teacher because she is patient and helpful.',answer:word};
+      if(/catch|record/.test(d)) return {prompt:'The photographer managed to _____ the beautiful moment with her camera.',answer:word};
+      return null;
+    }
+    if(pos==='adjective'){
+      if(/excited|interested|eager|enthusiastic/.test(d)) return {prompt:'After hearing the good news, Mia was _____ and could not stop smiling throughout the afternoon.',answer:word};
+      if(/worried|nervous|anxious|concerned/.test(d)) return {prompt:'Before the important test, Mia felt _____ and checked her work carefully.',answer:word};
+      if(/happy|cheerful|positive|optimistic/.test(d)) return {prompt:'Although the task was difficult, Tom remained _____ and encouraged his classmates to keep trying.',answer:word};
+      if(/calm|patient|peaceful/.test(d)) return {prompt:'Even when the situation became difficult, Ben remained _____ and dealt with the problem carefully.',answer:word};
+      if(/brave|courageous|fearless/.test(d)) return {prompt:'The _____ girl stayed calm and helped her younger brother when they heard the loud noise.',answer:word};
+      if(/modest|humble/.test(d)) return {prompt:'Although she won the prize, Sarah remained _____ and thanked her teammates.',answer:word};
+      return null;
+    }
+    return null;
+  }
+
+  function vocabQuestionAlignmentOK(prompt, answer, record){
+    const p=clean(prompt).toLowerCase();
+    const pos=vocabPos(record);
+    if(!p || !answer || !pos) return true;
+    if(pos==='verb' && /\b(remained|was|were|felt|seemed|looked|became|stayed)\s+_{3,}/.test(p)) return false;
+    if(pos==='adjective' && /\bto\s+_{3,}/.test(p)) return false;
+    return true;
+  }
     const src=clean(text), w=clean(word);
     if(!src || !w) return '';
     const escaped=w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -171,14 +216,21 @@
       const word=clean(r.word), def=clean(r.definition);
       if(!word || !def) continue;
       const examples=arr(r.examples).map(clean).filter(Boolean);
-      const ex=examples.find(x=>isCompleteVocabSentence(sentenceBlank(x,word)));
-      if(!ex) continue;
-      const prompt=sentenceBlank(ex,word);
-      if(!isCompleteVocabSentence(prompt)) continue;
+      const exactEx=examples.find(x=>isCompleteVocabSentence(sentenceBlank(x,word)));
+      let prompt=exactEx ? sentenceBlank(exactEx,word) : '';
+      let answer=word;
+
+      // If the stored example uses an inflected form (for example, "emphasised"),
+      // never force the base word into an incompatible sentence slot.
+      if(!prompt || !vocabQuestionAlignmentOK(prompt,answer,r)){
+        const generated=generatedVocabPrompt(r);
+        if(generated){ prompt=generated.prompt; answer=generated.answer; }
+      }
+      if(!prompt || !isCompleteVocabSentence(prompt) || !vocabQuestionAlignmentOK(prompt,answer,r)) continue;
+
       const distractors=chooseWords(core,word,3);
       if(distractors.length<3) continue;
-      out.push({id:r.id+'-meaning-context-v4',skill:'Vocabulary',type:'Vocabulary in Context',prompt,options:shuffle([word,...distractors]),answer:word,explain:'The sentence context supports “'+word+'”. '+def,source:r.id,level:r.level,questionStyle:'complete-sentence'});
-      if(out.length>=35) break;
+      out.push({id:r.id+'-meaning-context-v5',skill:'Vocabulary',type:'Vocabulary in Context',prompt,options:shuffle([answer,...distractors]),answer,explain:'The sentence context supports “'+answer+'”. '+def,source:r.id,level:r.level,questionStyle:'complete-sentence'});      if(out.length>=35) break;
     }
 
     // Context clues: retain only complete sentences with a real blank.
