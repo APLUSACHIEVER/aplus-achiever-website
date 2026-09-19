@@ -249,7 +249,7 @@
     let v=makeVocabQuestions(), g=makeGrammarQuestions();
     let pool = mode==='grammar' ? g : mode==='review' ? buildReview() : mode==='mixed' ? [...v,...g] : v;
     pool=adaptiveSort(pool);
-    const size=mode==='mixed'?12:10;
+    const size=mode==='mixed'?12:mode==='micro2'?8:mode==='micro3'?12:10;
     session={mode,questions:pool.slice(0,size),index:0,answered:false};
     if(!session.questions.length) session.questions=[...v,...g].slice(0,10);
     renderQuestion();
@@ -335,7 +335,7 @@
   }
 
   document.querySelectorAll('.level-btn').forEach(b=>b.addEventListener('click',()=>{state.level=b.dataset.level;save();updateUI();}));
-  document.querySelectorAll('.practice-card').forEach(b=>b.addEventListener('click',()=>{$('quizCard').scrollIntoView({behavior:'smooth',block:'start'});buildSession(b.dataset.mode);}));
+  document.querySelectorAll('.practice-card, .micro-practice-btn').forEach(b=>b.addEventListener('click',()=>{$('quizCard').scrollIntoView({behavior:'smooth',block:'start'});buildSession(b.dataset.mode);}));
   $('closeQuiz').addEventListener('click',()=>{$('questionArea').innerHTML='<div class="empty-quiz"><div class="empty-icon">✦</div><h3>Your next question is waiting.</h3><p>Choose a practice mode above.</p></div>';});
   document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>{const a=b.dataset.action;if(a==='easier')buildSession('review');else if(a==='challenge')buildSession('mixed');else if(a==='another')buildSession('vocabulary');else if(a==='explain'){const q=state.lastQuestion;$('quizCard').scrollIntoView({behavior:'smooth'});if(q)$('questionArea').innerHTML='<div class="feedback"><b>AI Tutor explanation</b><br>'+esc(q.explain||'Review the rule and look at the context carefully.')+'</div>';}}));
   $('resetBtn').addEventListener('click',()=>{if(confirm('Reset this browser profile and local learning progress?')){localStorage.removeItem(KEY);localStorage.removeItem(oldKey);location.reload();}});
