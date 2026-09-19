@@ -665,7 +665,7 @@ window.updateUI=function(){
     // Fluency Test follows the same PSLE-style vocabulary cloze format:
     // sentence + one blank + four vocabulary choices.
     if(example){
-      const re = new RegExp('\\\\b'+escapeRegExp(answer)+'\\\\b','i');
+      const re = new RegExp('\\b'+escapeRegExp(answer)+'\\b','i');
       if(re.test(example)){
         const blankSentence = example.replace(re,'__________');
         return {
@@ -688,7 +688,7 @@ window.updateUI=function(){
     const source = Array.isArray(VOCAB)
       ? VOCAB.filter(w=>{
           if(!w || !w.word || !w.example) return false;
-          const re=new RegExp('\\\\b'+escapeRegExp(String(w.word))+'\\\\b','i');
+          const re=new RegExp('\\b'+escapeRegExp(String(w.word))+'\\b','i');
           return re.test(String(w.example));
         })
       : [];
