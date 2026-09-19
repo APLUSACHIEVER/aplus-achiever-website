@@ -19,7 +19,7 @@ function install(){
    const ids=Object.keys(qdb.records).filter(id=>bank.some(t=>t.id===id));
    if(!ids.length)return result;
    const t=bank.find(x=>x.id===ids[Math.floor(r()*ids.length)]);
-   const sourceQs=qdb.records[t.id];
+   const sourceQs=Array.isArray(qdb.records[t.id])?qdb.records[t.id]:(Array.isArray(t.questions)?t.questions:[]);
    if(!t||!Array.isArray(sourceQs)||sourceQs.length<5)return result;
    const visual={type:t.type,title:t.title,subtitle:t.subtitle,poster:t.poster,article:t.article};
    const qs=sourceQs.slice(0,5).map((x,i)=>{
@@ -28,7 +28,7 @@ function install(){
        visual,question:x.q,options:opts,answer:x.a,skill:x.s,
        difficulty:i===0?2:(i===1?2:(i<4?3:4)),
        explanation:(x.s==='feature_application'?'Use the pupil profile and match it with the relevant features in Text 1.':x.s==='both_texts'?'Compare information from both texts before choosing the answer.':x.s==='main_message'?'Focus on the central message of Text 2 rather than one detail.':x.s==='text_type'?'Consider the purpose and presentation of Text 1.':'Use the stated information and context in the texts.'),
-       sourceDatabase:'APLUS PSLE Visual Question DNA Batch 03 + Batch 05',
+       sourceDatabase:'APLUS PSLE Visual Text DNA Batch 04 + Batch 05 + Batch 06',
        sourceRecordId:t.id,visualDNA:VERSION,visualQuestionType:x.s};
    });
    if(qs.some(q=>q.options.length!==4||new Set(q.options.map(String)).size!==4||!q.options.some(o=>String(o).trim().toLowerCase()===String(q.answer).trim().toLowerCase())))return result;
@@ -46,6 +46,7 @@ function install(){
  };
  G.visualDNA=VERSION;G.visualDatabaseVersion='BATCH04+BATCH05+BATCH06';G.visualQuestionDatabaseVersion='VQDNA_3.0+4.0+5.0';return true;
 }
-loadScript('aplus-ai-db-v1-p6-psle-visual-text-dna-batch05-20260919.js','batch05');\nloadScript('aplus-ai-db-v1-p6-psle-visual-text-dna-batch06-20260919.js','batch06');
+loadScript('aplus-ai-db-v1-p6-psle-visual-text-dna-batch05-20260919.js','batch05');
+loadScript('aplus-ai-db-v1-p6-psle-visual-text-dna-batch06-20260919.js','batch06');
 install();let tries=0;const poll=setInterval(()=>{if(install()||++tries>120)clearInterval(poll)},100);
 })();
