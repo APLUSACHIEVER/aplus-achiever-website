@@ -115,11 +115,29 @@
     return levelRank[state.level] || 1;
   }
 
+  function wordClass(r){
+    const d=clean(r?.definition || r?.meaning).toLowerCase();
+    if(/^to\\s+/.test(d)) return 'verb';
+    if(/^(a|an|the)\\s+/.test(d)) return 'noun';
+    if(/^(very|extremely|quite|not|full of|having|able to|likely to|eager to|willing to|showing|feeling)\\b/.test(d)) return 'adjective';
+    if(/ly$/.test(clean(r?.word).toLowerCase())) return 'adverb';
+    return '';
+  }
   function chooseWords(records, answer, n=3){
     const seen = new Set([clean(answer).toLowerCase()]);
-    const candidates = shuffle(records.map(r => clean(r.word)).filter(Boolean)).filter(w => !seen.has(w.toLowerCase()));
+    const targetRec = records.find(r => clean(r?.word).toLowerCase()===clean(answer).toLowerCase());
+    const targetClass = wordClass(targetRec);
+    const pool = targetClass ? records.filter(r => wordClass(r)===targetClass) : records;
+    const candidates = shuffle(pool.map(r => clean(r.word)).filter(Boolean)).filter(w => !seen.has(w.toLowerCase()));
     const out=[];
     for(const w of candidates){ if(!seen.has(w.toLowerCase())){out.push(w);seen.add(w.toLowerCase());} if(out.length===n)break; }
+    // If the database does not have enough same-class distractors, safely top up from the full pool.
+    if(out.length<n){
+      for(const w of shuffle(records.map(r => clean(r.word)).filter(Boolean))){
+        if(out.length>=n) break;
+        if(!seen.has(w.toLowerCase())){out.push(w);seen.add(w.toLowerCase());}
+      }
+    }
     return out;
   }
 
