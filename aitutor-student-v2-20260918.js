@@ -330,7 +330,8 @@
     $('statMastery').textContent=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length)+'%':'0%';
     $('statReview').textContent=state.mistakes.length;
     $('dataStatus').textContent='Tutor Brain ready · '+state.level;
-    $('coachMessage').textContent=state.questions?'I’m adapting to your recent answers.':'Let’s start with a short practice session.';
+    const coachMessage=$('coachMessage');
+    if(coachMessage) coachMessage.textContent=state.questions?'I’m adapting to your recent answers.':'Let’s start with a short practice session.';
     renderSkills();renderReview();renderPath();
     document.querySelectorAll('.level-btn').forEach(b=>b.classList.toggle('active',b.dataset.level===state.level));
   }
