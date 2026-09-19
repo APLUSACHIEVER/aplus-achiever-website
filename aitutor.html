@@ -84,17 +84,8 @@
     </main>
     <footer>APLUS ACHIEVER · AI Tutor Student Centre · P3–P5</footer>
   </div>
-  <script src="data/vocabulary.js?v=20260919aitutor8"></script>
-  <script src="aplus-ai-db-v1-vocabulary-rich-p3-20260918.js?v=20260919aitutor8"></script>
-  <script src="aplus-ai-db-v1-vocabulary-rich-p45-20260918.js?v=20260919aitutor8"></script>
-  <script src="aplus-ai-db-v1-vocabulary-wordfamily-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
-  <script src="aplus-ai-db-v1-vocabulary-confusables-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
-  <script src="aplus-ai-db-v1-vocabulary-contextclues-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
-  <script src="aplus-ai-db-v1-vocabulary-collocations-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
-  <script src="aplus-ai-db-v1-vocabulary-question-dna-batch01-20260918.js?v=20260919aitutor8"></script>
-  <script src="aplus-ai-db-v1-grammar-large-p3p5-batch01-20260918.js?v=20260919aitutor8"></script>
   <script>
-  window.APLUS_AI_TUTOR_RUNTIME={errors:[]};
+  window.APLUS_AI_TUTOR_RUNTIME=window.APLUS_AI_TUTOR_RUNTIME||{errors:[]};
   window.addEventListener('error',function(e){
     try{window.APLUS_AI_TUTOR_RUNTIME.errors.push({type:'error',message:String(e.message||'Unknown script error'),source:String(e.filename||''),line:e.lineno||0,column:e.colno||0});}catch(_){}
   });
@@ -102,6 +93,15 @@
     try{window.APLUS_AI_TUTOR_RUNTIME.errors.push({type:'unhandledrejection',message:String(e.reason?.message||e.reason||'Unhandled promise rejection')});}catch(_){}
   });
   </script>
+  <script src="data/vocabulary.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-rich-p3-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-rich-p45-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-wordfamily-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-confusables-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-contextclues-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-collocations-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-question-dna-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-grammar-large-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
   <script>
   /* P3–P5 Vocabulary Context Engine v4
      Safe rule: exact database examples first; semantic generation only when confident.
@@ -303,6 +303,57 @@
     patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45);
   })();
   </script>
-  <script src="aitutor-student-v2-20260918.js?v=20260919aitutor8"></script>
+  <script src="aitutor-student-v2-20260918.js?v=20260919aitutor9"></script>
+  <script>
+  /* Isolated AI Tutor QA Gate
+     Scope: aitutor.html only.
+     Safety rule: never replace the question/options or alter the Tutor Brain state.
+     It only removes a known non-PSLE meta-question wrapper from the rendered prompt.
+  */
+  (() => {
+    const area=document.getElementById('questionArea');
+    if(!area) return;
+
+    const recordQA=(item)=>{
+      try{
+        window.APLUS_AI_TUTOR_RUNTIME=window.APLUS_AI_TUTOR_RUNTIME||{errors:[]};
+        window.APLUS_AI_TUTOR_RUNTIME.qa=window.APLUS_AI_TUTOR_RUNTIME.qa||[];
+        window.APLUS_AI_TUTOR_RUNTIME.qa.push(item);
+        window.APLUS_AI_TUTOR_RUNTIME.qa=window.APLUS_AI_TUTOR_RUNTIME.qa.slice(-50);
+      }catch(_){}
+    };
+
+    const validateQuestion=()=>{
+      const label=(document.getElementById('quizLabel')?.textContent||'').trim().toUpperCase();
+      const node=area.querySelector('.question-text');
+      if(!node) return;
+
+      const raw=(node.textContent||'').trim();
+      if(!raw) return;
+
+      // Known fallback used by the Grammar engine. Keep the sentence/options/answer intact;
+      // remove only the generic instruction prefix so the learner sees the intended PSLE-style item.
+      const prefix='Choose the correct form for the grammar point in this sentence:';
+      if(label==='GRAMMAR' && raw.toLowerCase().startsWith(prefix.toLowerCase())){
+        const sentence=raw.slice(prefix.length).trim();
+        if(sentence){
+          node.textContent=sentence;
+          recordQA({type:'grammar-wrapper-normalized',from:raw,to:sentence,level:(document.getElementById('questionProgress')?.textContent||'').split('·').pop()?.trim()||''});
+        }
+      }
+
+      // Never allow an empty or instruction-only question to remain visible.
+      const finalText=(node.textContent||'').trim();
+      if(label==='GRAMMAR' && /^choose the correct form for the grammar point/i.test(finalText)){
+        recordQA({type:'grammar-meta-question-detected',prompt:finalText});
+      }
+    };
+
+    const observer=new MutationObserver(()=>validateQuestion());
+    observer.observe(area,{childList:true,subtree:true});
+    validateQuestion();
+  })();
+  </script>
+
 </body>
 </html>
