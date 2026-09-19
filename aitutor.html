@@ -50,13 +50,6 @@
         </div>
       </section>
 
-      <section class="stats-grid">
-        <article class="stat-card"><span>Questions</span><strong id="statQuestions">0</strong><small>answered</small></article>
-        <article class="stat-card"><span>Accuracy</span><strong id="statAccuracy">—</strong><small>overall</small></article>
-        <article class="stat-card"><span>Mastery</span><strong id="statMastery">0%</strong><small>tracked skills</small></article>
-        <article class="stat-card"><span>Review</span><strong id="statReview">0</strong><small>items to revisit</small></article>
-      </section>
-
       <section class="content-grid">
         <div class="main-column">
           <div class="section-heading"><div><span class="eyebrow">TODAY’S LEARNING</span><h2>Choose your practice</h2></div><span class="smart-pill" id="smartPill">Adaptive</span></div>
@@ -66,6 +59,14 @@
             <button class="practice-card" data-mode="review" type="button"><span class="practice-icon">↻</span><span><b>Smart Review</b><small>Recover weak skills and recent mistakes</small></span><i>→</i></button>
             <button class="practice-card" data-mode="mixed" type="button"><span class="practice-icon">✦</span><span><b>Mixed Challenge</b><small>Vocabulary + grammar transfer</small></span><i>→</i></button>
           </div>
+
+          <section class="stats-grid">
+            <article class="stat-card"><span>Questions</span><strong id="statQuestions">0</strong><small>answered</small></article>
+            <article class="stat-card"><span>Accuracy</span><strong id="statAccuracy">—</strong><small>overall</small></article>
+            <article class="stat-card"><span>Mastery</span><strong id="statMastery">0%</strong><small>tracked skills</small></article>
+            <article class="stat-card"><span>Review</span><strong id="statReview">0</strong><small>items to revisit</small></article>
+          </section>
+
           <section class="quiz-card" id="quizCard">
             <div class="quiz-top"><div><span class="eyebrow" id="quizLabel">READY</span><div class="question-progress" id="questionProgress">Start a practice session</div></div><button class="text-btn" id="closeQuiz" type="button">Close</button></div>
             <div id="questionArea" class="question-area"><div class="empty-quiz"><div class="empty-icon">✦</div><h3>Your next question is waiting.</h3><p>Choose Vocabulary, Grammar, Smart Review or Mixed Challenge above.</p></div></div>
