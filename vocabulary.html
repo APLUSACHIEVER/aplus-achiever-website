@@ -267,7 +267,7 @@ function makeQuestion(w,i){
      The target word comes directly from the vocabulary database.
   */
   if(example){
-    const re=new RegExp('\\\\b'+escapeRegExp(w.word)+'\\\\b','i');
+    const re=new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i');
     if(re.test(example)){
       const answer=String(w.word);
       const blankSentence=example.replace(re,'__________');
