@@ -3,12 +3,12 @@
    One shared Text 1 + Text 2, five linked MCQs, with PSLE-style question-form coverage.
 */
 (function(){'use strict';
-const GNAME='APLUS_P6_PSLE_PAPER2_GENERATION_V1',BANKNAME='APLUS_AI_DB_V1_P6_PSLE_VISUAL_TEXT_DNA_BATCH04',QDBNAME='APLUS_PSLE_VISUAL_QUESTION_DNA_BATCH03',EXTRABANK='APLUS_AI_DB_V1_P6_PSLE_VISUAL_TEXT_DNA_BATCH05',EXTRAQDB='APLUS_PSLE_VISUAL_QUESTION_DNA_BATCH05',VERSION='PSLE_VISUAL_TEXT_DNA_V8.2';
+const GNAME='APLUS_P6_PSLE_PAPER2_GENERATION_V1',BANKNAME='APLUS_AI_DB_V1_P6_PSLE_VISUAL_TEXT_DNA_BATCH04',QDBNAME='APLUS_PSLE_VISUAL_QUESTION_DNA_BATCH03',EXTRABANK='APLUS_AI_DB_V1_P6_PSLE_VISUAL_TEXT_DNA_BATCH05',EXTRAQDB='APLUS_PSLE_VISUAL_QUESTION_DNA_BATCH05',EXTRABANK2='APLUS_AI_DB_V1_P6_PSLE_VISUAL_TEXT_DNA_BATCH06',EXTRAQDB2='APLUS_PSLE_VISUAL_QUESTION_DNA_BATCH06',VERSION='PSLE_VISUAL_TEXT_DNA_V8.2';
 function loadScript(src,key){if(document.querySelector('script[data-aplus-visual-dna="'+key+'"]'))return;const s=document.createElement('script');s.src=src+'?v=20260919a';s.async=false;s.dataset.aplusVisualDna=key;document.head.appendChild(s)}
 function rnd(seed){let x=(seed>>>0)||1;return()=>{x^=x<<13;x^=x>>>17;return(x>>>0)/4294967296}}
 function sh(a,r){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function install(){
- const G=window[GNAME],baseBank=window[BANKNAME],extraBank=window[EXTRABANK],bank=[...(Array.isArray(baseBank)?baseBank:[]),...(Array.isArray(extraBank)?extraBank:[])],baseQdb=window[QDBNAME],extraQdb=window[EXTRAQDB],qdb={records:{...((baseQdb&&baseQdb.records)||{}),...((extraQdb&&extraQdb.records)||{})}};
+ const G=window[GNAME],baseBank=window[BANKNAME],extraBank=window[EXTRABANK],extraBank2=window[EXTRABANK2],bank=[...(Array.isArray(baseBank)?baseBank:[]),...(Array.isArray(extraBank)?extraBank:[]),...(Array.isArray(extraBank2)?extraBank2:[])],baseQdb=window[QDBNAME],extraQdb=window[EXTRAQDB],extraQdb2=window[EXTRAQDB2],qdb={records:{...((baseQdb&&baseQdb.records)||{}),...((extraQdb&&extraQdb.records)||{}),...((extraQdb2&&extraQdb2.records)||{})}};
  if(!G||typeof G.generate!=='function'||!bank.length||!Object.keys(qdb.records).length)return false;
  if(G.visualDNA===VERSION)return true;
  const original=G.generate;
@@ -44,8 +44,8 @@ function install(){
    result.ok=true;
    return result;
  };
- G.visualDNA=VERSION;G.visualDatabaseVersion='BATCH04+BATCH05';G.visualQuestionDatabaseVersion='VQDNA_3.0+4.0';return true;
+ G.visualDNA=VERSION;G.visualDatabaseVersion='BATCH04+BATCH05+BATCH06';G.visualQuestionDatabaseVersion='VQDNA_3.0+4.0+5.0';return true;
 }
-loadScript('aplus-ai-db-v1-p6-psle-visual-text-dna-batch05-20260919.js','batch05');
+loadScript('aplus-ai-db-v1-p6-psle-visual-text-dna-batch05-20260919.js','batch05');\nloadScript('aplus-ai-db-v1-p6-psle-visual-text-dna-batch06-20260919.js','batch06');
 install();let tries=0;const poll=setInterval(()=>{if(install()||++tries>120)clearInterval(poll)},100);
 })();
