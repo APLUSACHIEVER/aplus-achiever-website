@@ -248,7 +248,7 @@ function choose(mode){
   for(const w of ranked){if(out.length>=10)break;if(!used.has(w.id)){out.push(w);used.add(w.id);}}
   return out.slice(0,10);
 }
-const DAILY_PLAN=['meaning','meaning','synonym','synonym','cloze','cloze','cloze','cloze','context','context'];
+const DAILY_PLAN=['cloze','cloze','cloze','cloze','cloze','cloze','cloze','cloze','cloze','cloze'];
 function suitableForType(w,type){
   if(!w||!w.word)return false;
   if(type==='synonym')return Array.isArray(w.synonyms)&&w.synonyms.filter(Boolean).length>0;
@@ -258,30 +258,47 @@ function suitableForType(w,type){
 }
 function makeQuestion(w,i){
   if(!w || !w.word) throw new Error('Question data is missing a valid vocabulary word.');
-  const meaning=String(w.meaning||'').trim();
   const example=String(w.example||'').trim();
-  const syns=Array.isArray(w.synonyms)?w.synonyms.filter(Boolean).map(String):[];
 
   /*
-     CLOZE MCQ: the student chooses the missing vocabulary word from
-     four choices. We only create this question when the original
-     example sentence contains the target word, so the answer is fixed.
+     PSLE-STYLE VOCABULARY CLOZE MCQ
+     Every vocabulary question uses a sentence with one missing word.
+     The student chooses the most suitable word from four choices.
+     The target word comes directly from the vocabulary database.
   */
-  if(DAILY_PLAN[i%DAILY_PLAN.length]==='cloze' && example && new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i').test(example)){
-    const answer=String(w.word);
-    const blankSentence=example.replace(new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i'),'__________');
-    return {type:'cloze',text:'Choose the best word to complete the sentence.',context:blankSentence,answer:answer,opts:clozeOptions(w)};
+  if(example){
+    const re=new RegExp('\\\\b'+escapeRegExp(w.word)+'\\\\b','i');
+    if(re.test(example)){
+      const answer=String(w.word);
+      const blankSentence=example.replace(re,'__________');
+      return {
+        type:'cloze',
+        text:'Choose the most suitable word to complete the sentence.',
+        context:blankSentence,
+        answer:answer,
+        opts:clozeOptions(w)
+      };
+    }
   }
 
-  const useSyn=DAILY_PLAN[i%DAILY_PLAN.length]==='synonym' && syns.length>0;
-  if(useSyn){
-    const answer=syns[0];
-    return {type:'synonym',text:'Which word is closest in meaning to "'+w.word+'"?',answer:answer,opts:synonymOptions(w,answer)};
-  }
-  if(DAILY_PLAN[i%DAILY_PLAN.length]==='context' && meaning && example){
-    return {type:'context',text:'In the sentence below, what does "'+w.word+'" mean?',context:example,answer:meaning,opts:meaningOptions(w)};
-  }
-  return {type:'meaning',text:'What is the best meaning of "'+w.word+'"?',answer:meaning||'Meaning not available',opts:meaningOptions(w)};
+  /*
+     Data-safe fallback: keep the same PSLE cloze format even if a
+     particular entry does not contain its word inside the example.
+  */
+  const answer=String(w.word);
+  const pos=String(w.partOfSpeech||'').toLowerCase();
+  const fallbackSentence=
+    pos==='verb' ? 'The children decided to __________ when the teacher gave them permission.' :
+    pos==='adjective' ? 'The teacher was __________ with the student\'s careful work.' :
+    pos==='adverb' ? 'She completed the task __________ and checked her work.' :
+    'The __________ was important to everyone in the class.';
+  return {
+    type:'cloze',
+    text:'Choose the most suitable word to complete the sentence.',
+    context:fallbackSentence,
+    answer:answer,
+    opts:clozeOptions(w)
+  };
 }
 function clozeOptions(w){
   const answer=String(w.word);
