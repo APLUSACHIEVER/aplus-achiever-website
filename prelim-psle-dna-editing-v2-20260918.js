@@ -22,16 +22,28 @@ function install(){
    const items=set.sentences.slice(0,10);
    if(items.length!==10)return result;
    const passage=items.map(x=>'('+x.number+') '+x.text).join(' ');
-   const replacement=items.map(x=>({
-     type:'oe',marks:1,section:'editing',number:x.number,id:'Q'+x.number,
-     question:'Correct the error. Write the corrected sentence.',
-     passage:passage,
-     original:x.text,answer:x.correct,acceptedPatterns:[x.correct],
-     errorType:x.errorType,skill:x.skill,difficulty:x.difficulty,
-     sourceDatabase:'APLUS PSLE Editing DNA Batch 03 + Batch 04',
-     sourceRecordId:set.id,passageId:set.id,
-     generationLayer:'PSLE_PAPER2_DNA_V2'
-   }));
+   const wordFix=x=>{
+     if(x.correctWord)return String(x.correctWord);
+     const a=String(x.text||'').match(/[A-Za-z]+(?:'[A-Za-z]+)?/g)||[];
+     const b=String(x.correct||'').match(/[A-Za-z]+(?:'[A-Za-z]+)?/g)||[];
+     for(let i=0;i<Math.min(a.length,b.length);i++){
+       if(a[i].toLowerCase()!==b[i].toLowerCase())return b[i];
+     }
+     return String(x.correct||'');
+   };
+   const replacement=items.map(x=>{
+     const correctWord=wordFix(x);
+     return {
+       type:'oe',marks:1,section:'editing',number:x.number,id:'Q'+x.number,
+       question:'Write the correct word for the error in the sentence.',
+       passage:passage,
+       original:x.text,answer:correctWord,acceptedPatterns:[correctWord],
+       correctedSentence:x.correct,errorType:x.errorType,skill:x.skill,difficulty:x.difficulty,
+       sourceDatabase:'APLUS PSLE Editing DNA Batch 03 + Batch 04',
+       sourceRecordId:set.id,passageId:set.id,
+       generationLayer:'PSLE_PAPER2_DNA_V2'
+     };
+   });
    const kept=result.paper.filter(q=>q&&q.section!=='editing');
    result.paper=kept.slice(0,35).concat(replacement,kept.slice(35));
    result.paper.forEach((q,i)=>{q.number=i+1;q.id='Q'+(i+1)});
