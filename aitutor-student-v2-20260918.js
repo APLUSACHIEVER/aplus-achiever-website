@@ -92,49 +92,67 @@
     return out;
   }
 
+  // P3–P5 Vocabulary Quality Gate: only complete-sentence questions are allowed.
+  function isCompleteVocabSentence(text){
+    const t=clean(text).replace(/\s+/g,' ');
+    if(!t || !/_{3,}/.test(t)) return false;
+    if(!/^[A-Z]/.test(t)) return false;
+    if(!/[.!?]$/.test(t)) return false;
+    const words=t.replace(/_{3,}/g,' blank ').split(/\s+/).filter(Boolean);
+    if(words.length<6) return false;
+    if(/^Which\s+(word|sentence|option)\b/i.test(t)) return false;
+    if(/^What\s+/i.test(t) || /^Choose\s+/i.test(t)) return false;
+    return true;
+  }
+
+  function sentenceBlank(text, word){
+    const src=clean(text), w=clean(word);
+    if(!src || !w) return '';
+    const escaped=w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    return src.replace(new RegExp('\\b'+escaped+'\\b','i'),'_____');
+  }
+
   function makeVocabQuestions(){
-    const {p3,p45,family,ctx,conf,coll} = db();
+    const {p3,p45,conf,ctx} = db();
     const core = eligible([...p3,...p45]);
     const out=[];
+
+    // Core vocabulary: ONLY records with a real, complete example sentence.
     for(const r of shuffle(core)){
       const word=clean(r.word), def=clean(r.definition);
       if(!word || !def) continue;
+      const examples=arr(r.examples).map(clean).filter(Boolean);
+      const ex=examples.find(x=>isCompleteVocabSentence(sentenceBlank(x,word)));
+      if(!ex) continue;
+      const prompt=sentenceBlank(ex,word);
+      if(!isCompleteVocabSentence(prompt)) continue;
       const distractors=chooseWords(core,word,3);
       if(distractors.length<3) continue;
-      const ex=clean(arr(r.examples)[0]);
-      if(ex && new RegExp('\\b'+word.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')+'\\b','i').test(ex)){
-        const prompt=ex.replace(new RegExp('\\b'+word.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')+'\\b','i'),'_____');
-        out.push({id:r.id+'-meaning-context',skill:'Vocabulary',type:'Vocabulary in Context',prompt,options:shuffle([word,...distractors]),answer:word,explain:'The sentence context supports “'+word+'”. '+def,source:r.id});
-      } else {
-        out.push({id:r.id+'-definition',skill:'Word Meaning',type:'Word Meaning',prompt:'Which word best matches this meaning? “'+def+'”',options:shuffle([word,...distractors]),answer:word,explain:'Definition: '+def,source:r.id});
-      }
+      out.push({id:r.id+'-meaning-context-v4',skill:'Vocabulary',type:'Vocabulary in Context',prompt,options:shuffle([word,...distractors]),answer:word,explain:'The sentence context supports “'+word+'”. '+def,source:r.id,level:r.level,questionStyle:'complete-sentence'});
       if(out.length>=35) break;
     }
 
+    // Context clues: retain only complete sentences with a real blank.
     for(const r of eligible(ctx)){
       const target=clean(r.target), clue=clean(arr(r.clues)[0]);
       if(!target||!clue) continue;
+      const prompt=sentenceBlank(clue,target);
+      if(!isCompleteVocabSentence(prompt)) continue;
       const words=chooseWords(core,target,3);
-      if(words.length===3) out.push({id:r.id+'-context',skill:'Context Clues',type:'Context Clue',prompt:clue,options:shuffle([target,...words]),answer:target,explain:clean(r.inference)||'Use the surrounding clues to infer the meaning.',source:r.id});
+      if(words.length===3) out.push({id:r.id+'-context-v4',skill:'Context Clues',type:'Context Clue',prompt,options:shuffle([target,...words]),answer:target,explain:clean(r.inference)||'Use the surrounding clues to infer the meaning.',source:r.id,level:r.level,questionStyle:'complete-sentence'});
     }
 
-    // Confusable Words V2: complete sentence context only.
-    const replaceWord = (text, word) => {
-      const src=clean(text), low=src.toLowerCase(), w=clean(word).toLowerCase();
-      const i=low.indexOf(w);
-      return i<0 ? '' : src.slice(0,i)+'_____'+src.slice(i+w.length);
-    };
+    // Confusable words: complete-sentence context only.
     for(const r of eligible(conf)){
       const pair=arr(r.pair).map(clean).filter(Boolean);
       if(pair.length<2) continue;
-      const rule=clean(r.rule);
-      const cues=arr(r.cue).map(clean).filter(Boolean);
+      const rule=clean(r.rule), cues=arr(r.cue).map(clean).filter(Boolean);
       let prompt='', answer='';
       for(const target of shuffle(pair.slice(0,2))){
         const cue=cues.find(x=>x.toLowerCase().includes(target.toLowerCase()));
-        if(cue){ prompt=replaceWord(cue,target); answer=target; break; }
+        if(cue){ prompt=sentenceBlank(cue,target); answer=target; break; }
       }
-      if(!prompt || !answer) continue;
+      if(!answer || !isCompleteVocabSentence(prompt)) continue;
       const forms=[];
       const addForm=w=>{w=clean(w);if(w&&!forms.some(x=>x.toLowerCase()===w.toLowerCase()))forms.push(w);};
       pair.slice(0,2).forEach(addForm);
@@ -143,35 +161,18 @@
       else if(/s$/i.test(answer)&&!/ss$/i.test(answer)){addForm(answer.replace(/s$/i,''));}
       else {addForm(answer+'s');addForm(answer+'ed');}
       for(const x of shuffle(eligible(conf))){
-        for(const w of arr(x.pair).map(clean)){ if(forms.length>=4) break; addForm(w); }
-        if(forms.length>=4) break;
+        for(const w of arr(x.pair).map(clean)){if(forms.length>=4)break;addForm(w);}
+        if(forms.length>=4)break;
       }
       const options=shuffle(forms.slice(0,4));
       if(options.length<4 || !options.some(x=>x.toLowerCase()===answer.toLowerCase())) continue;
-      out.push({id:r.id+'-confusable-context-v2',skill:'Confusables',type:'Confusable Words',prompt,options,answer,explain:rule||'Use the meaning and grammatical role of the word in the sentence.',source:r.id,misconception:clean(r.mistake)||'confusable-pair',level:r.level,questionStyle:'complete-sentence-context',commonMistake:clean(r.mistake)});
-    }
-    for(const r of eligible(coll)){
-      const phrase=clean(r.collocation||r.phrase||r.pattern);
-      if(!phrase) continue;
-      const parts=phrase.split(/\s+/).filter(Boolean);
-      if(parts.length<2) continue;
-      const answer=parts[parts.length-1];
-      const distractors=chooseWords(core,answer,3);
-      if(distractors.length===3) out.push({id:r.id+'-collocation',skill:'Collocation',type:'Collocation',prompt:parts.slice(0,-1).join(' ')+' _____.',options:shuffle([answer,...distractors]),answer,explain:'Natural word combination: “'+phrase+'”.',source:r.id});
+      out.push({id:r.id+'-confusable-context-v4',skill:'Confusables',type:'Confusable Words',prompt,options,answer,explain:rule||'Use the meaning and grammatical role of the word in the sentence.',source:r.id,misconception:clean(r.mistake)||'confusable-pair',level:r.level,questionStyle:'complete-sentence',commonMistake:clean(r.mistake)});
     }
 
-    // Word-family questions use the existing family records without changing them.
-    for(const r of eligible(family)){
-      const base=clean(r.base), fam=arr(r.family).map(clean).filter(Boolean);
-      if(!base || fam.length<2) continue;
-      const answer=pick(fam);
-      const other=shuffle(fam.filter(x=>x!==answer)).slice(0,2);
-      if(other.length<2) continue;
-      out.push({id:r.id+'-family',skill:'Word Family',type:'Word Family',prompt:'Which word belongs to the same word family as “'+base+'” and fits the intended word form?',options:shuffle([answer,...other]),answer,explain:'Word family: '+fam.join(', ')+'.',source:r.id});
-    }
+    // Definition-only, fragment-style collocation and word-family prompts are excluded
+    // until they have a verified complete-sentence form.
     return out;
   }
-
   const grammarPatterns = [
     {test:/subject-verb agreement|indefinite pronouns|there is and there are/i, make:()=>({prompt:'Which sentence is correct?',options:['The box of pencils is on the table.','The box of pencils are on the table.','The box of pencils be on the table.','The box of pencils am on the table.'],answer:'The box of pencils is on the table.',explain:'The subject is “box”, which is singular.'})},
     {test:/present simple/i, make:()=>({prompt:'Every morning, Maya _____ to school at seven.',options:['walk','walks','walking','walked'],answer:'walks',explain:'For a singular third-person subject in the present simple, use the -s form.'})},
