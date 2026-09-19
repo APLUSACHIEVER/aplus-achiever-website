@@ -26,10 +26,35 @@
   }
   function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }
 
+  function normalizeP45(records){
+    return arr(records).map((r,i)=>{
+      // P4/P5 rich vocabulary DB uses compact tuple records:
+      // [word, definition, synonym, antonym, collocations, examples, difficulty, skills, commonMistakes]
+      if(Array.isArray(r)){
+        const difficulty=Number(r[6]) || 4;
+        return {
+          id:'P45-'+String(i+1).padStart(3,'0'),
+          word:r[0],
+          definition:r[1],
+          synonym:r[2],
+          antonym:r[3],
+          collocations:arr(r[4]),
+          examples:arr(r[5]),
+          difficulty,
+          skills:arr(r[7]),
+          commonMistakes:arr(r[8]),
+          // Difficulty 3–4 is the P4 band; difficulty 5 is the P5 challenge band.
+          level:difficulty>=5?'P5':'P4'
+        };
+      }
+      return r;
+    });
+  }
+
   function db(){
     return {
       p3: arr(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3),
-      p45: arr(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45),
+      p45: normalizeP45(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45),
       family: arr(window.APLUS_AI_DB_V1_VOCABULARY_WORDFAMILY_P3P5_BATCH01),
       conf: arr(window.APLUS_AI_DB_V1_VOCABULARY_CONFUSABLES_P3P5_BATCH01),
       ctx: arr(window.APLUS_AI_DB_V1_VOCABULARY_CONTEXTCLUES_P3P5_BATCH01),
@@ -46,15 +71,22 @@
     if(l.includes('P4')) return 2;
     if(l.includes('P5')) return 3;
     const n = parseInt(l.match(/[1-5]/)?.[0] || '', 10);
-    return Number.isFinite(n) ? n : 2;
+    if(Number.isFinite(n)) return n;
+    const d = Number(r.difficulty);
+    if(Number.isFinite(d)){
+      if(d <= 3) return 1;
+      if(d === 4) return 2;
+      return 3;
+    }
+    return 2;
   }
 
+  // Level selection is a real difficulty switch:
+  // P3 = foundation, P4 = build, P5 = challenge.
+  // Do not mix adjacent school levels when the student explicitly selects one.
   function eligible(records){
-    const p = levelRank[state.level] || 1;
-    return records.filter(r => {
-      const rnk = recRank(r);
-      return rnk >= Math.max(1,p-1) && rnk <= Math.min(3,p+1);
-    });
+    const selected = state.level || 'P3';
+    return records.filter(r => recRank(r) === (levelRank[selected] || 1));
   }
 
   function skillState(skill){
@@ -77,11 +109,10 @@
   function clearMistake(id){ state.mistakes = state.mistakes.filter(x => x.id !== id); }
 
   function targetLevelFor(skill){
-    const m = skillState(skill).mastery;
-    const base = levelRank[state.level] || 1;
-    if(m < 40) return Math.max(1,base-1);
-    if(m >= 85) return Math.min(3,base+1);
-    return base;
+    // Keep the question difficulty inside the student's selected school level.
+    // Mastery adapts skill selection, review priority and question order,
+    // but clicking P3/P4/P5 must never silently move the student to another level.
+    return levelRank[state.level] || 1;
   }
 
   function chooseWords(records, answer, n=3){
@@ -333,10 +364,29 @@
     const coachMessage=$('coachMessage');
     if(coachMessage) coachMessage.textContent=state.questions?'I’m adapting to your recent answers.':'Let’s start with a short practice session.';
     renderSkills();renderReview();renderPath();
-    document.querySelectorAll('.level-btn').forEach(b=>b.classList.toggle('active',b.dataset.level===state.level));
+    document.querySelectorAll('.level-btn').forEach(b=>{
+      const active=b.dataset.level===state.level;
+      b.classList.toggle('active',active);
+      b.setAttribute('aria-pressed',String(active));
+    });
   }
 
-  document.querySelectorAll('.level-btn').forEach(b=>b.addEventListener('click',()=>{state.level=b.dataset.level;save();updateUI();}));
+  function setLevel(level, button){
+    if(!levelRank[level]) return;
+    state.level = level;
+    document.querySelectorAll('.level-btn').forEach(b=>{
+      const active = b.dataset.level === level;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', String(active));
+    });
+    save();
+    updateUI();
+  }
+
+  document.querySelectorAll('.level-btn').forEach(b=>{
+    b.setAttribute('aria-pressed', b.classList.contains('active') ? 'true' : 'false');
+    b.addEventListener('click',()=>setLevel(b.dataset.level,b));
+  });
   document.querySelectorAll('.practice-card, .micro-practice-btn').forEach(b=>b.addEventListener('click',()=>{$('quizCard').scrollIntoView({behavior:'smooth',block:'start'});buildSession(b.dataset.mode);}));
   $('closeQuiz').addEventListener('click',()=>{$('questionArea').innerHTML='<div class="empty-quiz"><div class="empty-icon">✦</div><h3>Your next question is waiting.</h3><p>Choose a practice mode above.</p></div>';});
   document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>{const a=b.dataset.action;if(a==='easier')buildSession('review');else if(a==='challenge')buildSession('mixed');else if(a==='another')buildSession('vocabulary');else if(a==='explain'){const q=state.lastQuestion;$('quizCard').scrollIntoView({behavior:'smooth'});if(q)$('questionArea').innerHTML='<div class="feedback"><b>AI Tutor explanation</b><br>'+esc(q.explain||'Review the rule and look at the context carefully.')+'</div>';}}));
