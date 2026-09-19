@@ -50,20 +50,34 @@ function grammar(R,n,r){let out=[];for(const x of take(R.realGrammar,1,r)){const
 function vocab(R,n,r,cloze){
   let out=[];
   if(cloze){
-    for(const x of take(R.realVocabCloze,1,r)){
+    // PSLE Booklet A Vocabulary Cloze Q16-20: use all available real-source records.
+    for(const x of take(R.realVocabCloze,n,r)){
       if(!Array.isArray(x.options)||x.options.length<4||x.answer==null)continue;
-      out.push(tag({type:'mcq',marks:1,passage:String(x.passage||''),blankNumber:x.questionNumber,question:'Choose the word closest in meaning to the underlined word.',options:x.options.map(String),answer:String(x.answer),explanation:'The correct option matches the meaning of the underlined word in context.'},'vocabularyCloze','2026 School Prelim Real Source',x.id,x.skill,x.difficulty));
+      const passage=String(x.passage||'');
+      const target=String(x.blank||'').trim();
+      if(!passage||!target)continue;
+      let display=passage;
+      if(/_+/.test(display)) display=display.replace(/_+/, '<u>'+target+'</u>');
+      else {
+        const escaped=target.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+        display=display.replace(new RegExp(escaped,'i'), '<u>'+target+'</u>');
+      }
+      if(display===passage)continue;
+      out.push(tag({type:'mcq',marks:1,passage:display,blankNumber:x.questionNumber,question:'Choose the word closest in meaning to the underlined word.',options:x.options.map(String),answer:String(x.answer),explanation:x.explanation||'Choose the option that has the closest meaning to the underlined word in context.'},'vocabularyCloze','2026 School Prelim Real Source',x.id,x.skill,x.difficulty));
+      if(out.length===n)break;
     }
   }else{
     // PSLE Booklet A Vocabulary Q11-15: complete sentence + blank + four options.
-    for(const x of take(R.realVocab,1,r)){
+    for(const x of take(R.realVocab,n,r)){
       if(!Array.isArray(x.options)||x.options.length<4||x.answer==null)continue;
       const answer=String(x.answer);
       let stem=String(x.question||'');
-      if(new RegExp(answer,'i').test(stem)) stem=stem.replace(new RegExp(answer,'i'),'________');
+      const escaped=answer.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      if(new RegExp(escaped,'i').test(stem)) stem=stem.replace(new RegExp(escaped,'i'),'________');
       else if(/_{3,}/.test(stem)) stem=stem.replace(/_{3,}/,'________');
       else continue;
       out.push(tag({type:'mcq',marks:1,question:stem,options:x.options.map(String),answer:answer,explanation:x.explanation||x.rule||'Choose the word or expression that best fits the sentence in meaning, usage and collocation.'},'vocabulary','2026 School Prelim Real Source',x.id,x.skill,x.difficulty));
+      if(out.length===n)break;
     }
   }
   if(out.length<n&&!cloze){
