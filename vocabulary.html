@@ -607,6 +607,8 @@ window.updateUI=function(){
 .fluency-word{font-size:34px;font-weight:950;color:var(--deep);text-align:center;margin-bottom:8px}
 .fluency-question-text{text-align:center;font-size:16px;font-weight:800;margin-bottom:9px}
 .fluency-context{background:var(--soft);border-radius:10px;padding:11px 13px;margin:8px 0 12px;font-size:13px;line-height:1.45}
+.psle-cloze-sentence{font-size:22px;font-weight:750;line-height:1.65;background:#fff;border:2px solid #dcebe5;padding:18px 20px;border-radius:14px;text-align:left;color:var(--deep)}
+@media(max-width:650px){.psle-cloze-sentence{font-size:18px;padding:15px 16px}}
 .fluency-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
 .fluency-options button{width:100%;padding:16px 18px;border:2px solid var(--line);background:#fff;border-radius:14px;text-align:left;cursor:pointer;font-size:19px;font-weight:750;line-height:1.4;color:var(--text);transition:.15s;min-height:62px}
 .fluency-options button:hover{border-color:#9bcdb8;background:#f7fcf9}
@@ -656,30 +658,41 @@ window.updateUI=function(){
   let fluencyAdvanceTimer = null;
 
   function qmake(w, i){
-    const meaning = String(w.meaning || '').trim();
     const example = String(w.example || '').trim();
-    const syns = Array.isArray(w.synonyms) ? w.synonyms.filter(Boolean).map(String) : [];
-    let type = 'meaning';
-    if(example && /\S/.test(example) && i % 4 === 2) type='context';
-    else if(syns.length && i % 4 === 1) type='synonym';
+    const answer = String(w.word || '').trim();
+    if(!answer) return null;
 
-    if(type==='context'){
-      const opts = typeof meaningOptions==='function' ? meaningOptions(w) : [];
-      return {type, word:w.word, text:'In the sentence below, what does this word mean?', context:example, answer:meaning, opts:opts.length?opts:[]};
+    // Fluency Test follows the same PSLE-style vocabulary cloze format:
+    // sentence + one blank + four vocabulary choices.
+    if(example){
+      const re = new RegExp('\\\\b'+escapeRegExp(answer)+'\\\\b','i');
+      if(re.test(example)){
+        const blankSentence = example.replace(re,'__________');
+        return {
+          type:'cloze',
+          word:answer,
+          text:'Choose the most suitable word to complete the sentence.',
+          context:blankSentence,
+          answer:answer,
+          opts:typeof clozeOptions==='function' ? clozeOptions(w) : []
+        };
+      }
     }
-    if(type==='synonym'){
-      const answer=syns[0];
-      const opts = typeof synonymOptions==='function' ? synonymOptions(w,answer) : [];
-      return {type, word:w.word, text:'Which word is closest in meaning?', context:'', answer, opts:opts.length?opts:[]};
-    }
-    const opts = typeof meaningOptions==='function' ? meaningOptions(w) : [];
-    return {type:'meaning', word:w.word, text:'What is the best meaning of this word?', context:'', answer:meaning, opts:opts.length?opts:[]};
+    return null;
   }
 
   function makePool(){
-    const source = Array.isArray(VOCAB) ? VOCAB.filter(w=>w&&w.word) : [];
-    if(source.length < FLUENCY_TOTAL) return source.slice();
-    const shuffled = [...source].sort(()=>Math.random()-0.5);
+    // Only use entries whose real example sentence contains the target word.
+    // This guarantees every fluency question can be presented as a genuine
+    // PSLE-style vocabulary cloze question.
+    const source = Array.isArray(VOCAB)
+      ? VOCAB.filter(w=>{
+          if(!w || !w.word || !w.example) return false;
+          const re=new RegExp('\\\\b'+escapeRegExp(String(w.word))+'\\\\b','i');
+          return re.test(String(w.example));
+        })
+      : [];
+    const shuffled=[...source].sort(()=>Math.random()-0.5);
     return shuffled.slice(0,FLUENCY_TOTAL);
   }
 
@@ -742,7 +755,7 @@ window.startFluencyTest=function(){
       const pool=makePool();
       fluencyQuestions=pool.map((w,i)=>{
         try{return qmake(w,i)}catch(e){console.error('Fluency question error:',e);return null;}
-      }).filter(q=>q&&q.word);
+      }).filter(q=>q&&q.word&&q.type==='cloze');
 
       if(fluencyQuestions.length<FLUENCY_TOTAL){
         if(typeof toast==='function') toast('Not enough valid vocabulary questions.');
@@ -805,11 +818,20 @@ window.startFluencyTest=function(){
     fluencyQuestionLeft=FLUENCY_SECONDS;
     fluencyQuestionStartedAt=Date.now();
     document.getElementById('fluencyCounter').textContent='Question '+(fluencyIndex+1)+' / '+FLUENCY_TOTAL;
-    document.getElementById('fluencyWord').textContent=q.word;
+    // PSLE-style cloze: do not reveal the target word before the student answers.
+    const wordEl=document.getElementById('fluencyWord');
+    wordEl.textContent='';
+    wordEl.classList.add('hidden');
     document.getElementById('fluencyQuestionText').textContent=q.text;
     const ctx=document.getElementById('fluencyContext');
-    if(q.context){ctx.textContent=q.context;ctx.classList.remove('hidden')}
-    else{ctx.textContent='';ctx.classList.add('hidden')}
+    if(q.context){
+      ctx.textContent=q.context;
+      ctx.classList.remove('hidden');
+      ctx.classList.add('psle-cloze-sentence');
+    }else{
+      ctx.textContent='';
+      ctx.classList.add('hidden');
+    }
     const box=document.getElementById('fluencyOptions');
     box.innerHTML='';
     const opts=(Array.isArray(q.opts)?q.opts:[]).filter(Boolean);
