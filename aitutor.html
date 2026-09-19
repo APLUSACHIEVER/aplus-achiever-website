@@ -122,6 +122,9 @@
       return pool[(clean(word).length + d.length) % pool.length];
     };
     const verbContext = (word, def, level) => {
+      const d=stripDef(def).toLowerCase();
+      if(/give special importance|special importance|stress|highlight|draw attention/.test(d))
+        return 'The teacher asked the pupils to _____ the most important point in their answers.';
       const p3=[
         'After the bell rang, the pupils _____ their books and left the classroom.',
         'Sarah decided to _____ her friend when she saw that he needed help.',
@@ -165,7 +168,12 @@
       const pos=clean(record?.partOfSpeech || record?.pos || record?.wordType || '').toLowerCase();
       if(/noun/.test(pos)) return nounContext(w,d,level);
       if(/verb/.test(pos) && !/adverb/.test(pos)) return verbContext(w,d,level);
-      return adjectiveContext(w,d,level);
+      // Compact records often omit part of speech. Infer verbs from definitions beginning with "to".
+      if(/^to\s+/.test(d)) return verbContext(w,d,level);
+      // Never guess an adjective template for an unknown word.
+      if(/adject/.test(pos)) return adjectiveContext(w,d,level);
+      if(/^(very|extremely|quite|not|full of|having|able to|likely to|eager to|willing to|showing|feeling)\b/i.test(d)) return adjectiveContext(w,d,level);
+      return '';
     };
     const patchRecords=(arr,level)=>{
       if(!Array.isArray(arr)) return;
@@ -183,6 +191,6 @@
     patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45,'P4/P5');
   })();
   </script>
-  <script src="aitutor-student-v2-20260918.js?v=20260919pslegrammar2"></script>
+  <script src="aitutor-student-v2-20260918.js?v=20260919pslegrammar3"></script>
 </body>
 </html>
