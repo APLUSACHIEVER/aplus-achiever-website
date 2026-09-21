@@ -34,7 +34,6 @@ jobs:
               params = {
                   "reportName":"RPT_SHAREBONUS_DET",
                   "columns":"SECURITY_CODE,SECURITY_NAME_ABBR,PRETAX_BONUS_RMB,EX_DIVIDEND_DATE,ASSIGN_PROGRESS,REPORT_DATE,NOTICE_DATE,RECORD_DATE",
-                  "filter":f"(EX_DIVIDEND_DATE>='{CUTOFF}')",
                   "pageNumber":str(page),
                   "pageSize":"500",
                   "sortColumns":"EX_DIVIDEND_DATE,SECURITY_CODE",
@@ -52,7 +51,7 @@ jobs:
           total = int(result.get("count") or 0)
           if total <= 0:
               raise SystemExit("Dividend history API returned no records")
-          pages = min(math.ceil(total/500), 30)
+          pages = min(math.ceil(total/500), 100)
 
           for page in range(1,pages+1):
               data = (first if page==1 else get_page(page)).get("result") or {}
@@ -82,6 +81,10 @@ jobs:
                       "implementationStatus":status,
                       "dividendType":"unknown"
                   })
+              if page_rows:
+                  dates=[str(x.get("EX_DIVIDEND_DATE") or "")[:10] for x in page_rows if x.get("EX_DIVIDEND_DATE")]
+                  if dates and min(dates) < CUTOFF:
+                      break
               time.sleep(0.15)
 
           rows.sort(key=lambda x:(x["code"],x["exDividendDate"]))
