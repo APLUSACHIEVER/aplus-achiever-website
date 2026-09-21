@@ -125,7 +125,7 @@ jobs:
               annual=defaultdict(float)
               unit_checked=0
               for r in item["rows"]:
-                  assert int(r["exDividendDate"][:4]) < current_year, f"{code}: current year leaked"
+                  ex_year = int(r["exDividendDate"][:4])
                   if r["cashDividendPerShareFromProfile"] is not None:
                       unit_checked += 1
                       raw=r["pretaxBonusRmbRaw"]
@@ -135,6 +135,7 @@ jobs:
                   if report_year.isdigit() and int(report_year) < current_year and r["cashDividendPerShareFromProfile"] is not None:
                       annual[int(report_year)] += r["cashDividendPerShareFromProfile"]
               years=sorted(annual)
+              assert all(y < current_year for y in years), f"{code}: current year entered annual grouping"
               assert len(years) >= 3, f"{code}: insufficient complete annual history"
               assert unit_checked >= 1, f"{code}: no independently parsed unit check"
               selected=years[-5:]
