@@ -22,11 +22,15 @@ function filterRows(){
     if(sort==="code") return String(a.code).localeCompare(String(b.code));
     return String(a.name).localeCompare(String(b.name),"zh-CN");
   });
-  state.filtered=rows; render(rows);
+  // 默认状态只展示股息率最高的 50 支；一旦搜索股票代码/名称，则在全 A 股数据中查找，不受 50 支限制。
+  const displayRows = q ? rows : rows.slice(0,50);
+  state.filtered=displayRows; render(displayRows);
 }
 
 function render(rows){
-  $("resultCount").textContent="显示 "+rows.length+" / "+state.rows.length+" 只";
+  $("resultCount").textContent = $("stockSearch").value.trim()
+  ? "搜索结果 "+rows.length+" / 全 A 股 "+state.rows.length+" 只"
+  : "默认显示股息率最高 50 / 全 A 股 "+state.rows.length+" 只";
   if(!rows.length){
     $("radarBody").innerHTML="<tr><td colspan='8' class='empty'>没有找到符合条件的股票</td></tr>";
     return;
