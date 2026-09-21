@@ -128,6 +128,7 @@ jobs:
                       "code": code,
                       "name": name,
                       "reportYear": report_year,
+                      "reportDate": report_date,
                       "announcementDate": str(x.get("NOTICE_DATE") or "")[:10] or None,
                       "recordDate": str(x.get("RECORD_DATE") or "")[:10] or None,
                       "exDividendDate": exd,
