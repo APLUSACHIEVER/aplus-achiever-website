@@ -22,7 +22,7 @@ function filterRows(){
     if(sort==="code")return String(a.code).localeCompare(String(b.code));
     return String(a.name).localeCompare(String(b.name),"zh-CN");
   });
-  const displayRows=q?rows:rows.slice(0,50);
+  const displayRows=q?rows:rows.slice(0,100);
   state.filtered=displayRows;
   render(displayRows);
 }
@@ -30,7 +30,7 @@ function filterRows(){
 function render(rows){
   $("resultCount").textContent=$("stockSearch").value.trim()
     ? "搜索结果 "+rows.length+"｜全 A 股搜索"
-    : "默认显示股息率最高 50 只｜全 A 股覆盖";
+    : "默认显示股息率最高 100 只｜全 A 股覆盖";
   if(!rows.length){
     $("radarBody").innerHTML="<tr><td colspan='8' class='empty'>没有找到符合条件的股票</td></tr>";
     return;
