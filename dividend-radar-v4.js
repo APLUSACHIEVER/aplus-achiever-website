@@ -1,11 +1,4 @@
-const STOCKS = [
-  { name: "三一重工", ticker: "600031", dividend: 0.49 },
-  { name: "海螺水泥", ticker: "600585", dividend: 0.90 },
-  { name: "方大特钢", ticker: "600507", dividend: 0.20 },
-  { name: "包钢股份", ticker: "600010", dividend: 0 },
-  { name: "山东高速", ticker: "600350", dividend: 0.42 },
-  { name: "中国联通", ticker: "600050", dividend: 0.1635 }
-];
+// Verified dividend dataset is isolated in its own file.\n// This file intentionally uses completed fiscal-year cash dividends only.\nconst STOCKS = Object.entries(DIVIDEND_DATA).map(([ticker, d]) => ({ ticker, ...d }));
 
 const DATA_URL = "./data/dividend-radar-quotes.json";
 const REFRESH_MS = 30000;
