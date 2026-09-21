@@ -41,7 +41,8 @@ jobs:
           page_size=100
           total=None
           pn=1
-          while True:
+          max_pages=100
+          while pn <= max_pages:
               data=get_json(QUOTE,{
                 "pn":pn,"pz":page_size,"po":1,"np":1,"fltt":2,"invt":2,"fid":"f3",
                 "fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048",
@@ -62,9 +63,13 @@ jobs:
                         "pe":x.get("f9"),"market":x.get("f13")
                       })
               if total and len(rows)>=total: break
+              print(f"行情分页 pn={pn}, 本页={len(diff)}, 已累计={len(rows)}, total={total}")
               if len(diff)<page_size: break
               pn += 1
+          if pn > max_pages:
+              raise RuntimeError(f"全A股分页超过{max_pages}页，停止写入不完整数据")
           rows={r["code"]:r for r in rows}
+          print(f"行情抓取完成：接口total={total}，去重后={len(rows)}")
           if total and len(rows) < total:
               raise RuntimeError(f"全A股数据不完整：接口total={total}，实际抓到={len(rows)}，停止写入旧/残缺数据")
 
