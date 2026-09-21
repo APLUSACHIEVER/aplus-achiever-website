@@ -81,10 +81,6 @@ jobs:
                       "implementationStatus":status,
                       "dividendType":"unknown"
                   })
-              if page_rows:
-                  dates=[str(x.get("EX_DIVIDEND_DATE") or "")[:10] for x in page_rows if x.get("EX_DIVIDEND_DATE")]
-                  if dates and min(dates) < CUTOFF:
-                      break
               time.sleep(0.15)
 
           rows.sort(key=lambda x:(x["code"],x["exDividendDate"]))
