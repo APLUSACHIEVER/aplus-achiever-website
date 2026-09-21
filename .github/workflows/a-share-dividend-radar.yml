@@ -47,7 +47,7 @@ jobs:
             "ut":"bd1d9ddb04089700cf9c27f6f7426281"
           }
 
-          # 先验证接口确实返回全市场 total；绝不允许把单页100只当成全A股。
+          # 稳定按股票代码分页；绝不允许把单页100只误当成全A股。
           probe=get_json(QUOTE,{**base,"pn":1})
           probe_data=probe.get("data") or {}
           total=int(probe_data.get("total") or 0)
@@ -85,7 +85,6 @@ jobs:
           if len(rows) < total:
               raise RuntimeError(f"全A股数据不完整：接口total={total}，实际唯一股票={len(rows)}，停止写入残缺数据")
 
-          # 最近12个月已实施现金分红。
           div={}
           for pn in range(1,31):
               data=get_json(DIV,{
@@ -142,3 +141,5 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Refresh full A-share dividend radar data"
           git push
+
+      # Trigger-refresh marker: 2026-09-21 full-A-share pagination verification
