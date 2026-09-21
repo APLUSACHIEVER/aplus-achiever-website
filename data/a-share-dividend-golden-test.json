@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T09:24:44.516573+00:00",
+  "generatedAt": "2026-09-21T09:27:53.923951+00:00",
   "purpose": "golden-test",
   "rule": "latest up to 5 complete dividend years; current incomplete year excluded",
   "unitCheck": "per-share cash dividend is independently parsed from IMPL_PLAN_PROFILE (10派X => X/10); PRETAX_BONUS_RMB is retained only as a raw comparison field",
