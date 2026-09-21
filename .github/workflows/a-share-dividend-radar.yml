@@ -1,4 +1,5 @@
 name: APLUS A-share Dividend Radar
+# Trigger a fresh full-universe refresh after pagination hardening.
 
 on:
   workflow_dispatch:
