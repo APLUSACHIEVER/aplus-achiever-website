@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>APLUS A股股息率雷达</title>
+<link rel="stylesheet" href="a-share-dividend-radar-v1.css">
+</head>
+<body>
+<main class="page">
+<header class="hero">
+  <div>
+    <p class="eyebrow">APLUS INVESTMENT TOOLS</p>
+    <h1>A股股息率雷达</h1>
+    <p class="subtitle">全市场 · 实时价格 · TTM现金分红 · 自动股息率</p>
+  </div>
+  <div class="status-wrap">
+    <span id="marketStatus" class="status">正在加载…</span>
+    <span id="lastUpdated" class="updated">等待数据</span>
+  </div>
+</header>
+
+<section class="search-panel">
+  <div class="search-box">
+    <label for="stockSearch">搜索股票</label>
+    <input id="stockSearch" type="search" placeholder="输入股票代码或股票名称，例如 600350 / 山东高速">
+  </div>
+  <div class="filter">
+    <label for="yieldFilter">最低股息率</label>
+    <select id="yieldFilter">
+      <option value="0">全部</option>
+      <option value="3">≥ 3%</option>
+      <option value="4">≥ 4%</option>
+      <option value="5">≥ 5%</option>
+      <option value="6">≥ 6%</option>
+      <option value="8">≥ 8%</option>
+    </select>
+  </div>
+  <div class="filter">
+    <label for="sortBy">排序</label>
+    <select id="sortBy">
+      <option value="yield">股息率高 → 低</option>
+      <option value="price">股价低 → 高</option>
+      <option value="change">今日涨跌幅</option>
+      <option value="code">股票代码</option>
+      <option value="name">股票名称</option>
+    </select>
+  </div>
+</section>
+
+<section class="stats" id="stats"></section>
+
+<section class="table-card">
+  <div class="table-head">
+    <strong id="resultCount">A股股票</strong>
+    <span>股息率 = 最近12个月现金分红 / 最新股价</span>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>股票</th><th>现价</th><th>涨跌</th><th>近12个月分红</th>
+          <th>股息率</th><th>4.5%价格</th><th>5%价格</th><th>6%价格</th><th>状态</th>
+        </tr>
+      </thead>
+      <tbody id="radarBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <p>数据架构：后台定时抓取公开行情与分红数据 → 同源 JSON → 本页面计算与筛选。手机端无需直接跨域连接行情接口。</p>
+  <p>TTM口径：按最近12个月已实施现金分红计算；分红数据缺失或股价缺失时不虚构股息率。</p>
+  <p>本页面为独立 A股 Dividend Radar 模块，不修改现有 APLUS 网页。</p>
+</footer>
+</main>
+<script src="a-share-dividend-radar-v1.js"></script>
+</body>
+</html>
