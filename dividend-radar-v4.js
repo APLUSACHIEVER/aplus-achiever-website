@@ -1,11 +1,34 @@
-// Verified dividend dataset is isolated in its own file.\n// This file intentionally uses completed fiscal-year cash dividends only.\nconst STOCKS = Object.entries(DIVIDEND_DATA).map(([ticker, d]) => ({ ticker, ...d }));
+// APLUS Dividend Radar — isolated high-dividend × low-PE engine
+// Core dividend yield = latest completed fiscal-year cash dividend / latest price.
+// PE = Eastmoney dynamic PE (f162). Negative / zero PE is treated as unavailable.
+const STOCKS = Object.entries(DIVIDEND_DATA).map(([ticker, d]) => ({ ticker, ...d }));
 
 const DATA_URL = "./data/dividend-radar-quotes.json";
 const REFRESH_MS = 30000;
+const MAX_REASONABLE_YIELD = 15; // abnormal-data warning threshold; never silently cap the yield
 
-const money = v => v == null ? "—" : Number(v).toFixed(2);
-const pct = v => v == null ? "—" : Number(v).toFixed(2) + "%";
-const target = (d, y) => d > 0 ? d / y : null;
+const money = v => v == null || !Number.isFinite(Number(v)) ? "—" : Number(v).toFixed(2);
+const pct = v => v == null || !Number.isFinite(Number(v)) ? "—" : Number(v).toFixed(2) + "%";
+const target = (d, y) => d > 0 && y > 0 ? d / y : null;
+
+function dividendScore(y) {
+  if (!Number.isFinite(y) || y < 0) return null;
+  // 6% completed-year cash yield = 100 points; no silent capping of the displayed yield.
+  return Math.min(100, y / 6 * 100);
+}
+
+function peScore(pe) {
+  if (!Number.isFinite(pe) || pe <= 0) return null;
+  // Lower positive dynamic PE gets a higher score; 8x = 100 points.
+  return Math.max(0, Math.min(100, 8 / pe * 100));
+}
+
+function radarScore(y, pe) {
+  const ds = dividendScore(y);
+  const ps = peScore(pe);
+  if (ds == null || ps == null) return null;
+  return ds * 0.6 + ps * 0.4;
+}
 
 function tradingLabel() {
   const now = new Date();
@@ -24,43 +47,62 @@ function render(payload) {
   const quotes = payload && payload.quotes ? payload.quotes : {};
   let rows = "";
   const valid = [];
+  let abnormal = 0;
 
   for (const s of STOCKS) {
     const q = quotes[s.ticker];
-    const y = q && s.dividend > 0 ? s.dividend / q.price * 100 : null;
-    if (y != null) valid.push({ s, y });
+    const price = q ? Number(q.price) : null;
+    const y = q && s.dividend > 0 && price > 0 ? s.dividend / price * 100 : null;
+    const pe = q && Number.isFinite(Number(q.pe)) ? Number(q.pe) : null;
+    const isAbnormal = y != null && y > MAX_REASONABLE_YIELD;
+    const score = !isAbnormal ? radarScore(y, pe) : null;
+    if (isAbnormal) abnormal++;
+    if (score != null) valid.push({ s, y, pe, score });
 
     const cls = q ? (q.change > 0 ? "up" : q.change < 0 ? "down" : "") : "";
+    const yieldDisplay = isAbnormal ? "异常 " + pct(y) : pct(y);
+    const peDisplay = pe != null && pe > 0 ? money(pe) + "x" : "—";
+    const scoreDisplay = score != null ? score.toFixed(0) : "—";
+    const status = isAbnormal ? "<span class='badge'>异常数据</span>" :
+      (q ? "<span class='badge live'>LIVE</span>" : "<span class='badge'>无行情</span>");
+
     rows += "<tr>" +
       "<td><span class='stock-name'>" + s.name + "</span><span class='ticker'>" + s.ticker + "</span></td>" +
       "<td class='price'>" + (q ? money(q.price) : "—") + "</td>" +
       "<td class='" + cls + "'>" + (q ? money(q.change) + " (" + pct(q.changePct) + ")" : "—") + "</td>" +
       "<td>" + money(s.dividend) + "</td>" +
-      "<td class='yield'>" + pct(y) + "</td>" +
+      "<td class='yield'>" + yieldDisplay + "</td>" +
+      "<td>" + peDisplay + "</td>" +
+      "<td>" + scoreDisplay + "</td>" +
       "<td class='target'>" + (target(s.dividend, .045) ? money(target(s.dividend, .045)) : "—") + "</td>" +
       "<td class='target'>" + (target(s.dividend, .05) ? money(target(s.dividend, .05)) : "—") + "</td>" +
       "<td class='target'>" + (target(s.dividend, .06) ? money(target(s.dividend, .06)) : "—") + "</td>" +
-      "<td>" + (q ? "<span class='badge live'>LIVE</span>" : "<span class='badge'>无行情</span>") + "</td>" +
+      "<td>" + status + "</td>" +
       "</tr>";
   }
 
   document.getElementById("radarBody").innerHTML = rows;
 
   const highest = valid.length ? valid.reduce((a,b) => a.y > b.y ? a : b) : null;
+  const bestRadar = valid.length ? valid.reduce((a,b) => a.score > b.score ? a : b) : null;
   const five = valid.filter(x => x.y >= 5).length;
+  const lowPE = valid.filter(x => x.pe <= 12).length;
   const count = Object.values(quotes).filter(Boolean).length;
   const generated = payload && payload.generatedAt ? new Date(payload.generatedAt) : null;
 
   document.getElementById("summaryCards").innerHTML =
-    "<div class='card'><div class='card-label'>当前最高股息率</div><div class='card-value'>" +
+    "<div class='card'><div class='card-label'>当前最高有效股息率</div><div class='card-value'>" +
       (highest ? highest.s.name + " " + pct(highest.y) : "—") +
-    "</div><div class='card-note'>按最新抓取股价自动计算</div></div>" +
+    "</div><div class='card-note'>年度现金分红 ÷ 最新股价；异常值不参与综合分</div></div>" +
+    "<div class='card'><div class='card-label'>高股息 × 低PE</div><div class='card-value'>" +
+      (bestRadar ? bestRadar.s.name + " " + bestRadar.score.toFixed(0) : "—") +
+    "</div><div class='card-note'>股息率60% + 动态PE40%；不是投资建议</div></div>" +
     "<div class='card'><div class='card-label'>达到5%股息率</div><div class='card-value'>" +
       five + " / " + STOCKS.length +
-    "</div><div class='card-note'>按设定年度现金分红</div></div>" +
-    "<div class='card'><div class='card-label'>行情连接</div><div class='card-value'>" +
+    "</div><div class='card-note'>当前有效数据中；低PE≤12x：" + lowPE + "只</div></div>" +
+    "<div class='card'><div class='card-label'>数据状态</div><div class='card-value'>" +
       count + " / " + STOCKS.length +
-    "</div><div class='card-note'>后台每5分钟更新；页面每30秒检查</div></div>";
+    "</div><div class='card-note'>PE来自东方财富动态PE；异常值：" + abnormal + "</div></div>";
 
   const status = document.getElementById("marketStatus");
   status.textContent = count === STOCKS.length ? "🟢 行情已连接" : "🟡 行情部分可用";
@@ -70,8 +112,8 @@ function render(payload) {
   const notice = document.querySelector(".notice span");
   if (notice) {
     notice.textContent = tradingLabel()
-      ? "交易时段：后台行情自动更新；股息率 = 年度现金分红 ÷ 最新股价。"
-      : "非交易时段：显示最近一次抓取数据；交易时段后台自动更新。";
+      ? "交易时段：后台自动更新；股息率 = 已完成年度现金分红 ÷ 最新股价；动态PE用于低估值交叉分析。"
+      : "非交易时段：显示最近一次抓取数据；股息率采用已完成年度现金分红，动态PE用于低估值交叉分析。";
   }
 }
 
