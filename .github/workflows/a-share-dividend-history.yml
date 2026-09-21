@@ -73,7 +73,8 @@ jobs:
                   rows.append({
                       "code":code,
                       "name":x.get("SECURITY_NAME_ABBR") or "",
-                      "reportYear":str(x.get("REPORT_DATE") or "")[:4],
+                      "reportDate":str(x.get("REPORT_DATE") or "")[:10] or None,
+                    "reportYear":str(x.get("REPORT_DATE") or "")[:4],
                       "announcementDate":str(x.get("NOTICE_DATE") or "")[:10] or None,
                       "recordDate":str(x.get("RECORD_DATE") or "")[:10] or None,
                       "exDividendDate":exd,
