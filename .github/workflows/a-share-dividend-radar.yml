@@ -21,27 +21,29 @@ jobs:
       - name: Fetch A-share prices and TTM dividends
         shell: python
         run: |
-          import json, time, urllib.parse, urllib.request
+          import json, urllib.parse, urllib.request
           from datetime import datetime, timedelta, timezone
 
-          API="https://datacenter-web.eastmoney.com/api/data/v1/get"
-          QUOTE="https://push2.eastmoney.com/api/qt/ulist.np/get"
+          QUOTE="https://push2.eastmoney.com/api/qt/clist/get"
+          DIV="https://datacenter-web.eastmoney.com/api/data/v1/get"
           today=datetime.now(timezone.utc).date()
           cutoff=(today-timedelta(days=365)).isoformat()
+          headers={"User-Agent":"Mozilla/5.0","Referer":"https://quote.eastmoney.com/"}
 
           def get_json(url, params):
               qs=urllib.parse.urlencode(params)
-              req=urllib.request.Request(url+"?"+qs,headers={"User-Agent":"Mozilla/5.0"})
+              req=urllib.request.Request(url+"?"+qs,headers=headers)
               with urllib.request.urlopen(req,timeout=30) as r:
                   return json.loads(r.read().decode("utf-8","ignore"))
 
-          # 1) 全市场股票代码/名称/最新价/涨跌
+          # 全A股列表：沪深主板、创业板、科创板、北交所。
           rows=[]
-          for pn in range(1,13):
+          for pn in range(1,20):
               data=get_json(QUOTE,{
-                "fltt":"2","invt":"2","np":"1","fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81",
-                "fields":"f2,f3,f4,f12,f14","pn":pn,"pz":500,"po":1,
-                "fid":"f3","ut":"fa5fd1943c7b386f172d6893dbbd1d0c"
+                "pn":pn,"pz":500,"po":1,"np":1,"fltt":2,"invt":2,"fid":"f3",
+                "fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81",
+                "fields":"f2,f3,f4,f12,f13,f14,f18",
+                "ut":"bd1d9ddb04089700cf9c27f6f7426281"
               })
               diff=(data.get("data") or {}).get("diff") or []
               if not diff: break
@@ -49,45 +51,56 @@ jobs:
                   code=str(x.get("f12") or "")
                   name=str(x.get("f14") or "")
                   if code and name:
-                      rows.append({"code":code,"name":name,"price":x.get("f2"),"changePct":x.get("f3"),"change":x.get("f4")})
+                      rows.append({
+                        "code":code,"name":name,
+                        "price":x.get("f2"),"changePct":x.get("f3"),
+                        "change":x.get("f4"),"market":x.get("f13")
+                      })
               if len(diff)<500: break
-
-          # Deduplicate by code.
           rows={r["code"]:r for r in rows}
 
-          # 2) 拉取最近12个月分红明细，按股票代码累计现金分红。
+          # 分红明细：PRETAX_BONUS_RMB 是每10股税前分红，换算为每股后累计TTM。
           div={}
           for pn in range(1,31):
-              data=get_json(API,{
-                "reportName":"RPT_SHAREBONUS_DET","columns":"SECURITY_CODE,SECURITY_NAME_ABBR,PRETAX_BONUS_RMB,EX_DIVIDEND_DATE,ASSIGN_PROGRESS",
+              data=get_json(DIV,{
+                "reportName":"RPT_SHAREBONUS_DET",
+                "columns":"SECURITY_CODE,SECURITY_NAME_ABBR,PRETAX_BONUS_RMB,EX_DIVIDEND_DATE,ASSIGN_PROGRESS",
                 "filter":f"(EX_DIVIDEND_DATE>='{cutoff}')",
                 "pageNumber":pn,"pageSize":500,
-                "sortColumns":"EX_DIVIDEND_DATE","sortTypes":"-1","source":"WEB","client":"WEB"
+                "sortColumns":"EX_DIVIDEND_DATE","sortTypes":"-1",
+                "source":"WEB","client":"WEB"
               })
-              result=(data.get("result") or {})
-              diff=result.get("data") or []
+              diff=(data.get("result") or {}).get("data") or []
               if not diff: break
               for x in diff:
                   code=str(x.get("SECURITY_CODE") or "")
-                  progress=str(x.get("ASSIGN_PROGRESS") or "")
                   date=str(x.get("EX_DIVIDEND_DATE") or "")[:10]
-                  if not code or date<cutoff: continue
-                  # 只累计已实施方案，避免把预案重复计入TTM。
-                  if "实施" not in progress and "方案" in progress: continue
-                  cash=float(x.get("PRETAX_BONUS_RMB") or 0)
-                  if cash>0: div[code]=div.get(code,0)+cash/10.0
+                  progress=str(x.get("ASSIGN_PROGRESS") or "")
+                  if not code or date<cutoff or "实施" not in progress: continue
+                  cash=float(x.get("PRETAX_BONUS_RMB") or 0)/10.0
+                  if cash>0: div[code]=div.get(code,0)+cash
               if len(diff)<500: break
 
           out=[]
           for code,r in rows.items():
-              d=div.get(code,0)
               price=float(r["price"]) if r.get("price") not in (None,"-",0) else None
               change=float(r["change"]) if r.get("change") not in (None,"-") else None
               chgp=float(r["changePct"]) if r.get("changePct") not in (None,"-") else None
-              y=d/price*100 if price and d>0 else None
-              out.append({"code":code,"name":r["name"],"price":price,"change":change,"changePct":chgp,"dividendTTM":round(d,4),"yield":round(y,4) if y is not None else None})
+              d=round(div.get(code,0),4)
+              y=round(d/price*100,4) if price and d>0 else None
+              out.append({
+                "code":code,"name":r["name"],"price":price,
+                "change":change,"changePct":chgp,
+                "dividendTTM":d,"yield":y
+              })
 
-          payload={"generatedAt":datetime.now(timezone.utc).isoformat(),"source":"Eastmoney public market/dividend data","cutoff":cutoff,"rows":out}
+          payload={
+            "generatedAt":datetime.now(timezone.utc).isoformat(),
+            "source":"Eastmoney public market/dividend data",
+            "cutoff":cutoff,
+            "count":len(out),
+            "rows":out
+          }
           with open("data/a-share-dividend-radar.json","w",encoding="utf-8") as f:
               json.dump(payload,f,ensure_ascii=False,separators=(",",":"))
 
