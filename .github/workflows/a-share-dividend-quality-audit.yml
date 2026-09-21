@@ -1,0 +1,69 @@
+name: A-share dividend quality audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "a-share-dividend-quality-v2.js"
+      - "data/a-share-dividend-radar.json"
+      - "data/a-share-dividend-history.json"
+      - ".github/workflows/a-share-dividend-quality-audit.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit
+        shell: python
+        run: |
+          import json, math
+          from collections import defaultdict
+          from datetime import datetime, timezone
+          radar=json.load(open("data/a-share-dividend-radar.json",encoding="utf-8"))
+          hist=json.load(open("data/a-share-dividend-history.json",encoding="utf-8"))
+          year=datetime.now(timezone.utc).year
+          hm=defaultdict(lambda:defaultdict(lambda:{"d":0.0,"complete":False}))
+          for x in hist.get("rows",[]):
+              try: cash=float(x.get("cashDividendPerShare"))
+              except: continue
+              code=str(x.get("code") or ""); y=str(x.get("reportYear") or "")[:4]
+              if not code or cash<=0 or not y.isdigit(): continue
+              hm[code][y]["d"]+=cash
+              if str(x.get("reportDate") or "")[:10]==y+"-12-31": hm[code][y]["complete"]=True
+          def n(v):
+              try:
+                  x=float(v); return x if math.isfinite(x) else None
+              except: return None
+          counts=defaultdict(int); samples={}
+          for r in radar.get("rows",[]):
+              code=str(r.get("code") or ""); price=n(r.get("price")); pe=n(r.get("pe"))
+              a=sorted((int(y),v["d"]) for y,v in hm.get(code,{}).items() if y.isdigit() and int(y)<year and v["complete"])[-5:]
+              vals=[v for _,v in a]
+              if not vals or price is None or price<=0: key="data"; ny=None
+              else:
+                  avg=sum(vals)/len(vals); latest=vals[-1]; ny=avg/price*100; dev=latest/avg
+                  cv=(sum((x-avg)**2 for x in vals)/len(vals))**0.5/avg
+                  trend="down" if latest<vals[0]*.92 else "stable" if latest<=vals[0]*1.08 else "up"
+                  if ny>=7: key="anomaly"
+                  elif 5<=ny<7 and pe is not None and 0<pe<=10 and len(vals)>=3 and cv<=.25 and trend!="down" and dev<=1.5: key="core"
+                  elif 5<=ny<7: key="watch"
+                  elif pe is not None and 0<pe<=10: key="lowpe"
+                  else: key="other"
+              counts[key]+=1
+              if code in {"600036","601398","601939","601288","601728"}:
+                  samples[code]={"name":r.get("name"),"price":price,"pe":pe,"normalYield":ny,"years":len(vals),"category":key}
+          out={"generatedAt":datetime.now(timezone.utc).isoformat(),"radarRows":len(radar.get("rows",[])),"historyRows":len(hist.get("rows",[])),"counts":dict(counts),"goldenStocks":samples}
+          json.dump(out,open("data/a-share-dividend-quality-audit.json","w",encoding="utf-8"),ensure_ascii=False,indent=2)
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+      - name: Commit audit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/a-share-dividend-quality-audit.json
+          git diff --cached --quiet && exit 0
+          git commit -m "test: audit full A-share dividend quality universe"
+          git push
