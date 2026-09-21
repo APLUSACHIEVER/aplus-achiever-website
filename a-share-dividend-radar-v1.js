@@ -29,8 +29,8 @@ function filterRows(){
 
 function render(rows){
   $("resultCount").textContent=$("stockSearch").value.trim()
-    ? "搜索结果 "+rows.length+" / 全 A 股 "+state.rows.length+" 只"
-    : "默认显示股息率最高 50 / 全 A 股 "+state.rows.length+" 只";
+    ? "搜索结果 "+rows.length+"｜全 A 股搜索"
+    : "默认显示股息率最高 50 只｜全 A 股覆盖";
   if(!rows.length){
     $("radarBody").innerHTML="<tr><td colspan='8' class='empty'>没有找到符合条件的股票</td></tr>";
     return;
