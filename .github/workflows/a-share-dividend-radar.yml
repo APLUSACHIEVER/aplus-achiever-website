@@ -1,5 +1,4 @@
 name: APLUS A-share Dividend Radar
-# Trigger a fresh full-universe refresh after pagination hardening.
 
 on:
   workflow_dispatch:
@@ -22,7 +21,7 @@ jobs:
       - name: Fetch A-share prices, PE and TTM dividends
         shell: python
         run: |
-          import json, urllib.parse, urllib.request
+          import json, math, urllib.parse, urllib.request
           from datetime import datetime, timedelta, timezone
 
           QUOTE="https://82.push2.eastmoney.com/api/qt/clist/get"
@@ -35,25 +34,41 @@ jobs:
               qs=urllib.parse.urlencode(params)
               req=urllib.request.Request(url+"?"+qs,headers=headers)
               with urllib.request.urlopen(req,timeout=30) as r:
-                  return json.loads(r.read().decode("utf-8","ignore"))
+                  raw=r.read().decode("utf-8","ignore")
+                  if r.status != 200:
+                      raise RuntimeError(f"HTTP {r.status}: {url}")
+                  return json.loads(raw)
 
-          # 沪深A股全市场；动态按 data.total 翻页，不限制100只。
-          rows=[]
+          fs="m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048"
+          fields="f2,f3,f4,f9,f12,f13,f14"
+          base={
+            "pz":100,"po":1,"np":1,"fltt":2,"invt":2,
+            "fid":"f12","fs":fs,"fields":fields,
+            "ut":"bd1d9ddb04089700cf9c27f6f7426281"
+          }
+
+          # 先验证接口确实返回全市场 total；绝不允许把单页100只当成全A股。
+          probe=get_json(QUOTE,{**base,"pn":1})
+          probe_data=probe.get("data") or {}
+          total=int(probe_data.get("total") or 0)
+          probe_diff=probe_data.get("diff") or []
+          print(f"全A股接口预检：total={total}，第1页={len(probe_diff)}")
+          if total <= 100:
+              raise RuntimeError(f"Eastmoney 全A股接口异常：total={total}，拒绝把100只当作全市场")
+          if not probe_diff:
+              raise RuntimeError("Eastmoney 全A股接口异常：第1页没有数据")
+
           page_size=100
-          total=None
-          pn=1
-          max_pages=100
-          while pn <= max_pages:
-              data=get_json(QUOTE,{
-                "pn":pn,"pz":page_size,"po":1,"np":1,"fltt":2,"invt":2,"fid":"f3",
-                "fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048",
-                "fields":"f2,f3,f4,f9,f12,f13,f14",
-                "ut":"bd1d9ddb04089700cf9c27f6f7426281"
-              })
+          total_pages=math.ceil(total/page_size)
+          rows=[]
+          for pn in range(1,total_pages+1):
+              data=get_json(QUOTE,{**base,"pn":pn})
               data_section=data.get("data") or {}
               diff=data_section.get("diff") or []
-              if total is None: total=int(data_section.get("total") or 0)
-              if not diff: break
+              if pn < total_pages and not diff:
+                  raise RuntimeError(f"全A股分页异常：第{pn}页为空，但理论共{total_pages}页")
+              if len(diff)>page_size:
+                  raise RuntimeError(f"全A股分页异常：第{pn}页返回{len(diff)}只，超过page_size={page_size}")
               for x in diff:
                   code=str(x.get("f12") or "")
                   name=str(x.get("f14") or "")
@@ -63,16 +78,12 @@ jobs:
                         "changePct":x.get("f3"),"change":x.get("f4"),
                         "pe":x.get("f9"),"market":x.get("f13")
                       })
-              if total and len(rows)>=total: break
-              print(f"行情分页 pn={pn}, 本页={len(diff)}, 已累计={len(rows)}, total={total}")
-              if len(diff)<page_size: break
-              pn += 1
-          if pn > max_pages:
-              raise RuntimeError(f"全A股分页超过{max_pages}页，停止写入不完整数据")
+              print(f"行情分页 pn={pn}/{total_pages}, 本页={len(diff)}, 已累计={len(rows)}")
+
           rows={r["code"]:r for r in rows}
-          print(f"行情抓取完成：接口total={total}，去重后={len(rows)}")
-          if total and len(rows) < total:
-              raise RuntimeError(f"全A股数据不完整：接口total={total}，实际抓到={len(rows)}，停止写入旧/残缺数据")
+          print(f"行情抓取完成：接口total={total}，理论页数={total_pages}，去重后={len(rows)}")
+          if len(rows) < total:
+              raise RuntimeError(f"全A股数据不完整：接口total={total}，实际唯一股票={len(rows)}，停止写入残缺数据")
 
           # 最近12个月已实施现金分红。
           div={}
@@ -117,8 +128,11 @@ jobs:
             "count":len(out),
             "rows":out
           }
+          if len(out) < total:
+              raise RuntimeError(f"最终写入数据异常：全A股total={total}，输出={len(out)}")
           with open("data/a-share-dividend-radar.json","w",encoding="utf-8") as f:
               json.dump(payload,f,ensure_ascii=False,separators=(",",":"))
+          print(f"最终数据：{len(out)}只沪深京股票；默认前端仅显示股息率最高50只。")
 
       - name: Commit updated radar data
         run: |
@@ -126,5 +140,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/a-share-dividend-radar.json
           git diff --cached --quiet && exit 0
-          git commit -m "Update A-share dividend radar data"
+          git commit -m "Refresh full A-share dividend radar data"
           git push
