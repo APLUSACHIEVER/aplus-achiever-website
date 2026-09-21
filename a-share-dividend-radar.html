@@ -56,5 +56,21 @@
 </main>
 <script src="a-share-dividend-radar-v2.js?v=2"></script>
 <script src="a-share-dividend-quality-v4.js?v=4"></script>
+<script>
+(function(){
+  function bindRadarToggle(){
+    const module=document.getElementById("dividendRadarModule");
+    const toggle=module?.querySelector(".module-toggle");
+    if(!module||!toggle||toggle.dataset.bound==="1") return;
+    toggle.dataset.bound="1";
+    toggle.addEventListener("click",function(){
+      const collapsed=module.classList.toggle("is-collapsed");
+      toggle.setAttribute("aria-expanded",String(!collapsed));
+    });
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",bindRadarToggle);
+  else bindRadarToggle();
+})();
+</script>
 </body>
 </html>
