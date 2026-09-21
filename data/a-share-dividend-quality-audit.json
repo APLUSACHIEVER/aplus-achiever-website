@@ -1,50 +1,55 @@
 {
-  "generatedAt": "2026-09-21T09:34:36.187914+00:00",
+  "generatedAt": "2026-09-21T10:23:00.332257+00:00",
   "radarRows": 5917,
   "historyRows": 21036,
   "counts": {
-    "data": 5917
+    "watch": 151,
+    "anomaly": 86,
+    "other": 4239,
+    "lowpe": 182,
+    "core": 9,
+    "data": 1250
   },
   "goldenStocks": {
     "600036": {
       "name": "招商银行",
       "price": 41.04,
       "pe": 6.77,
-      "normalYield": null,
-      "years": 0,
-      "category": "data"
+      "normalYield": 4.50682261208577,
+      "years": 5,
+      "category": "lowpe"
     },
     "601728": {
       "name": "中国电信",
       "price": 6.16,
       "pe": 14.39,
-      "normalYield": null,
-      "years": 0,
-      "category": "data"
+      "normalYield": 3.6720779220779223,
+      "years": 5,
+      "category": "other"
     },
     "601398": {
       "name": "工商银行",
       "price": 8.11,
       "pe": 8.32,
-      "normalYield": null,
-      "years": 0,
-      "category": "data"
+      "normalYield": 3.7521578298397045,
+      "years": 5,
+      "category": "lowpe"
     },
     "601288": {
       "name": "农业银行",
       "price": 6.91,
       "pe": 8.26,
-      "normalYield": null,
-      "years": 0,
-      "category": "data"
+      "normalYield": 3.332272069464544,
+      "years": 5,
+      "category": "lowpe"
     },
     "601939": {
       "name": "建设银行",
       "price": 10.93,
       "pe": 8.43,
-      "normalYield": null,
-      "years": 0,
-      "category": "data"
+      "normalYield": 3.558462946020128,
+      "years": 5,
+      "category": "lowpe"
     }
   }
 }
