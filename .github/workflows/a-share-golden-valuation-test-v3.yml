@@ -1,0 +1,59 @@
+name: A-share golden valuation test v3
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/a-share-golden-valuation-test-v3.yml"
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build live valuation test
+        shell: python
+        run: |
+          import json,urllib.parse,urllib.request
+          from datetime import datetime,timezone
+          stocks=["600036","601398","601939","601288","601728"]
+          names={"600036":"招商银行","601398":"工商银行","601939":"建设银行","601288":"农业银行","601728":"中国电信"}
+          u="https://push2.eastmoney.com/api/qt/ulist.np/get"
+          p={"fltt":"2","invt":"2","fields":"f2,f3,f9,f12,f14","secids":",".join(("1." if c.startswith("6") else "0.")+c for c in stocks)}
+          req=urllib.request.Request(u+"?"+urllib.parse.urlencode(p),headers={"User-Agent":"Mozilla/5.0"})
+          with urllib.request.urlopen(req,timeout=30) as r: obj=json.loads(r.read().decode())
+          quotes={str(q["f12"]):q for q in ((obj.get("data") or {}).get("diff") or [])}
+          with open("data/a-share-dividend-golden-test.json",encoding="utf-8") as f: hist=json.load(f)
+          out={"generatedAt":datetime.now(timezone.utc).isoformat(),"rule":"latest up to 5 complete fiscal years; interim and final distributions grouped by report-year; current incomplete year excluded","stocks":{}}
+          for c in stocks:
+            annual={}
+            for row in hist["stocks"][c]["rows"]:
+              cash=row.get("cashDividendPerShareFromProfile"); d=str(row.get("reportDate") or "")[:10]
+              if cash is None or len(d)!=10: continue
+              try:y=int(d[:4])
+              except:continue
+              annual[y]=annual.get(y,0)+float(cash)
+            years=sorted(y for y in annual if y<datetime.now(timezone.utc).year)[-5:]
+            avg=sum(annual[y] for y in years)/len(years)
+            q=quotes.get(c,{})
+            price=float(q["f2"]) if q.get("f2") not in (None,"-") else None
+            pe=float(q["f9"]) if q.get("f9") not in (None,"-") else None
+            yld=avg/price*100 if price else None
+            cat="数据不足" if yld is None else ("异常高股息" if yld>=7 else ("高股息+低PE核心测试池" if 5<=yld<7 and pe is not None and 0<pe<=10 else ("高股息观察池" if 5<=yld<7 else "非核心高股息池")))
+            out["stocks"][c]={"name":names[c],"price":price,"changePct":q.get("f3"),"peTTM":pe,"annualDividend":{str(y):round(annual[y],6) for y in years},"completeYears":years,"avgAnnualDividendPerShare":round(avg,6),"normalAnnualDividendYieldPct":round(yld,3) if yld is not None else None,"category":cat,"targetPrice45":round(avg/.045,2),"targetPrice50":round(avg/.05,2),"targetPrice60":round(avg/.06,2)}
+          with open("data/a-share-dividend-golden-valuation-test-v3.json","w",encoding="utf-8") as f: json.dump(out,f,ensure_ascii=False,indent=2)
+      - name: Validate and commit
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open("data/a-share-dividend-golden-valuation-test-v3.json",encoding="utf-8"))
+          assert len(x["stocks"])==5
+          for v in x["stocks"].values(): assert len(v["completeYears"])>=3 and v["avgAnnualDividendPerShare"]>0 and v["price"]>0
+          print("GOLDEN VALUATION TEST V3 PASSED")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/a-share-dividend-golden-valuation-test-v3.json
+          git diff --cached --quiet && exit 0
+          git commit -m "test: calculate golden dividend valuation v3"
+          git push
