@@ -24,7 +24,7 @@ jobs:
           import json, urllib.parse, urllib.request
           from datetime import datetime, timedelta, timezone
 
-          QUOTE="https://push2.eastmoney.com/api/qt/clist/get"
+          QUOTE="https://82.push2.eastmoney.com/api/qt/clist/get"
           DIV="https://datacenter-web.eastmoney.com/api/data/v1/get"
           today=datetime.now(timezone.utc).date()
           cutoff=(today-timedelta(days=365)).isoformat()
@@ -44,7 +44,7 @@ jobs:
           while True:
               data=get_json(QUOTE,{
                 "pn":pn,"pz":page_size,"po":1,"np":1,"fltt":2,"invt":2,"fid":"f3",
-                "fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23",
+                "fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048",
                 "fields":"f2,f3,f4,f9,f12,f13,f14",
                 "ut":"bd1d9ddb04089700cf9c27f6f7426281"
               })
@@ -65,6 +65,8 @@ jobs:
               if len(diff)<page_size: break
               pn += 1
           rows={r["code"]:r for r in rows}
+          if total and len(rows) < total:
+              raise RuntimeError(f"全A股数据不完整：接口total={total}，实际抓到={len(rows)}，停止写入旧/残缺数据")
 
           # 最近12个月已实施现金分红。
           div={}
