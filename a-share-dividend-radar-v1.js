@@ -4,6 +4,7 @@ const $=id=>document.getElementById(id);
 const n=v=>Number.isFinite(Number(v))?Number(v):null;
 const money=v=>n(v)==null?"—":n(v).toFixed(2);
 const pct=v=>n(v)==null?"—":n(v).toFixed(2)+"%";
+const pe=v=>n(v)==null?"—":n(v).toFixed(2);
 const target=(d,y)=>d>0?d/y:null;
 
 function filterRows(){
@@ -26,17 +27,21 @@ function filterRows(){
 
 function render(rows){
   $("resultCount").textContent="显示 "+rows.length+" / "+state.rows.length+" 只";
-  if(!rows.length){$("radarBody").innerHTML="<tr><td colspan='9' class='empty'>没有找到符合条件的股票</td></tr>";return}
+  if(!rows.length){
+    $("radarBody").innerHTML="<tr><td colspan='8' class='empty'>没有找到符合条件的股票</td></tr>";
+    return;
+  }
   $("radarBody").innerHTML=rows.map(r=>{
     const cls=r.change>0?"up":r.change<0?"down":"";
+    const t45=target(r.dividendTTM,.045), t50=target(r.dividendTTM,.05), t60=target(r.dividendTTM,.06);
     return "<tr><td><span class='stock-name'>"+r.name+"</span><span class='ticker'>"+r.code+"</span></td>"+
       "<td class='price'>"+money(r.price)+"</td>"+
       "<td class='"+cls+"'>"+(r.change==null?"—":money(r.change)+" ("+pct(r.changePct)+")")+"</td>"+
-      "<td>"+money(r.dividendTTM)+"</td><td class='yield'>"+pct(r.yield)+"</td>"+
-      "<td class='target'>"+(target(r.dividendTTM,.045)?money(target(r.dividendTTM,.045)):"—")+"</td>"+
-      "<td class='target'>"+(target(r.dividendTTM,.05)?money(target(r.dividendTTM,.05)):"—")+"</td>"+
-      "<td class='target'>"+(target(r.dividendTTM,.06)?money(target(r.dividendTTM,.06)):"—")+"</td>"+
-      "<td>"+(r.price!=null?"<span class='badge live'>LIVE</span>":"<span class='badge'>无行情</span>")+"</td></tr>";
+      "<td class='yield'>"+pct(r.yield)+"</td>"+
+      "<td>"+pe(r.pe)+"</td>"+
+      "<td class='target'>"+(t45?money(t45):"—")+"</td>"+
+      "<td class='target'>"+(t50?money(t50):"—")+"</td>"+
+      "<td class='target'>"+(t60?money(t60):"—")+"</td></tr>";
   }).join("");
 }
 
@@ -58,7 +63,11 @@ async function load(){
   try{
     const r=await fetch(DATA_URL+"?t="+Date.now(),{cache:"no-store"}); if(!r.ok)throw Error("data");
     const payload=await r.json(); state.rows=Array.isArray(payload.rows)?payload.rows:[]; renderStats(payload); filterRows();
-  }catch(e){$("marketStatus").textContent="🟠 等待后台更新";$("lastUpdated").textContent="数据文件暂不可用";$("radarBody").innerHTML="<tr><td colspan='9' class='loading'>后台正在建立全市场数据，请稍候刷新</td></tr>"}
+  }catch(e){
+    $("marketStatus").textContent="🟠 等待后台更新";
+    $("lastUpdated").textContent="数据文件暂不可用";
+    $("radarBody").innerHTML="<tr><td colspan='8' class='loading'>后台正在建立全市场数据，请稍候刷新</td></tr>";
+  }
 }
 ["stockSearch","yieldFilter","sortBy"].forEach(id=>$(id).addEventListener(id==="stockSearch"?"input":"change",filterRows));
 load();setInterval(load,30000);
