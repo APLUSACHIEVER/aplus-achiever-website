@@ -68,12 +68,12 @@ jobs:
               data=(first if page==1 else get_page(page)).get("result") or {}
               for x in data.get("data") or []:
                   code=str(x.get("SECURITY_CODE") or "").strip()
-                  exd=str(x.get("EX_DIVIDEND_DATE") or "")[:10]
+                  exd=str(x.get("EX_DIVIDEND_DATE") or x.get("EX_DIVIDEND_DATE_DISPLAY") or x.get("EX_RIGHT_DATE") or x.get("EX_DATE") or "")[:10]
                   status=str(x.get("ASSIGN_PROGRESS") or "").strip()
                   if not code or not exd:
                       continue
                   try:
-                      raw_cash=x.get("PRETAX_BONUS_RMB")
+                      raw_cash=x.get("PRETAX_BONUS_RMB")\n                      if raw_cash in (None,""): raw_cash=x.get("PRETAX_BONUS")
                       if raw_cash in (None,""):
                           raw_cash=x.get("BONUS_RMB")
                       cash=float(raw_cash)/10.0
@@ -92,7 +92,7 @@ jobs:
                   rows.append({
                       "code":code,
                       "name":x.get("SECURITY_NAME_ABBR") or "",
-                      "reportYear":str(x.get("REPORT_DATE") or "")[:4],
+                      "reportYear":str(x.get("REPORT_DATE") or x.get("DIVIDEND_YEAR") or x.get("YEAR") or "")[:4],
                       "announcementDate":str(x.get("NOTICE_DATE") or "")[:10] or None,
                       "recordDate":str(x.get("RECORD_DATE") or "")[:10] or None,
                       "exDividendDate":exd,
