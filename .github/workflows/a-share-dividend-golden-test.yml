@@ -60,7 +60,7 @@ jobs:
               "generatedAt": datetime.now(timezone.utc).isoformat(),
               "purpose":"golden-test",
               "rule":"latest up to 5 complete dividend years; current incomplete year excluded",
-              "unitCheck":"raw PRETAX_BONUS_RMB retained; no /10 conversion in test output",
+              "unitCheck":"per-share cash dividend is independently parsed from IMPL_PLAN_PROFILE (10派X => X/10); PRETAX_BONUS_RMB is retained only as a raw comparison field",
               "stocks":{}
           }
 
@@ -84,6 +84,7 @@ jobs:
                       "pretaxBonusRmbRaw":r.get("PRETAX_BONUS_RMB"),
                       "assignProgress":r.get("ASSIGN_PROGRESS"),
                       "planProfile":r.get("IMPL_PLAN_PROFILE"),
+                      "cashDividendPerShareFromProfile": (float(str(r.get("IMPL_PLAN_PROFILE") or "").replace(",", "").split("派",1)[1].split("元",1)[0]) / 10) if ("派" in str(r.get("IMPL_PLAN_PROFILE") or "") and "10派" in str(r.get("IMPL_PLAN_PROFILE") or "")) else None,
                   })
               out["stocks"][code]={"name":name,"count":len(rows),"rows":rows}
 
