@@ -1,0 +1,123 @@
+name: A-share golden valuation test v2
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/a-share-golden-valuation-test-v2.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build live valuation test
+        shell: python
+        run: |
+          import json, urllib.parse, urllib.request
+          from datetime import datetime, timezone
+
+          stocks = ["600036","601398","601939","601288","601728"]
+          names = {"600036":"招商银行","601398":"工商银行","601939":"建设银行","601288":"农业银行","601728":"中国电信"}
+
+          # Eastmoney quote fields: f2 price, f3 change%, f9 PE(TTM), f12 code, f14 name
+          endpoint = "https://push2.eastmoney.com/api/qt/ulist.np/get"
+          params = {
+              "fltt":"2","invt":"2","fields":"f2,f3,f9,f12,f14",
+              "secids":",".join(("1." if c.startswith("6") else "0.")+c for c in stocks)
+          }
+          url = endpoint + "?" + urllib.parse.urlencode(params)
+          req = urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              obj = json.loads(r.read().decode("utf-8"))
+          diff = (obj.get("data") or {}).get("diff") or []
+          quotes = {}
+          for q in diff:
+              code = str(q.get("f12") or "")
+              quotes[code] = {
+                  "price": q.get("f2"),
+                  "changePct": q.get("f3"),
+                  "peTTM": q.get("f9"),
+                  "name": q.get("f14") or names.get(code)
+              }
+
+          with open("data/a-share-dividend-golden-test.json",encoding="utf-8") as f:
+              hist=json.load(f)
+
+          out={"generatedAt":datetime.now(timezone.utc).isoformat(),"stocks":{}}
+          for code in stocks:
+              item=hist["stocks"][code]
+              annual={}
+              for row in item["rows"]:
+                  profile=row.get("planProfile") or ""
+                  cash=row.get("cashDividendPerShareFromProfile")
+                  report=str(row.get("reportDate") or "")[:10]
+                  if cash is None or len(report)!=10 or not report.endswith("-12-31"):
+                      continue
+                  y=int(report[:4])
+                  annual[y]=annual.get(y,0)+float(cash)
+
+              current_year=datetime.now(timezone.utc).year
+              years=sorted(y for y in annual if y < current_year)[-5:]
+              avg=sum(annual[y] for y in years)/len(years) if years else None
+              q=quotes.get(code,{})
+              price=float(q["price"]) if q.get("price") not in (None,"-") else None
+              pe=float(q["peTTM"]) if q.get("peTTM") not in (None,"-") else None
+              normal_yield=(avg/price*100) if avg and price else None
+
+              if normal_yield is None or price is None:
+                  category="数据不足"
+              elif normal_yield >= 7:
+                  category="异常高股息"
+              elif 5 <= normal_yield < 7 and pe is not None and 0 < pe <= 10:
+                  category="高股息+低PE核心测试池"
+              elif 5 <= normal_yield < 7:
+                  category="高股息观察池"
+              else:
+                  category="非核心高股息池"
+
+              out["stocks"][code]={
+                  "name":names[code],
+                  "price":price,
+                  "changePct":q.get("changePct"),
+                  "peTTM":pe,
+                  "annualDividend":{str(y):round(annual[y],6) for y in years},
+                  "completeYears":years,
+                  "avgAnnualDividendPerShare":round(avg,6) if avg else None,
+                  "normalAnnualDividendYieldPct":round(normal_yield,3) if normal_yield is not None else None,
+                  "category":category,
+                  "targetPrice45":round(avg/0.045,2) if avg else None,
+                  "targetPrice50":round(avg/0.05,2) if avg else None,
+                  "targetPrice60":round(avg/0.06,2) if avg else None,
+                  "note":"正常年度股息率=最近最多5个完整财年的实际年度现金分红平均值÷实时股价；不使用TTM作为核心正常股息率。"
+              }
+
+          with open("data/a-share-dividend-golden-valuation-test-v2.json","w",encoding="utf-8") as f:
+              json.dump(out,f,ensure_ascii=False,indent=2)
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+
+      - name: Validate
+        run: |
+          python - <<'PY'
+          import json
+          with open("data/a-share-dividend-golden-valuation-test-v2.json",encoding="utf-8") as f: x=json.load(f)
+          assert len(x["stocks"])==5
+          for code,v in x["stocks"].items():
+              assert len(v["completeYears"])>=3
+              assert v["avgAnnualDividendPerShare"]>0
+              assert v["price"]>0
+          print("GOLDEN VALUATION TEST PASSED")
+          PY
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/a-share-dividend-golden-valuation-test-v2.json
+          git diff --cached --quiet && exit 0
+          git commit -m "test: calculate golden dividend valuation"
+          git push
