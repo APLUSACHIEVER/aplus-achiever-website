@@ -1,0 +1,117 @@
+name: A-share dividend history bootstrap
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/a-share-dividend-history-bootstrap.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build 5-year implemented dividend history
+        shell: python
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          import json, math, time, urllib.parse, urllib.request
+          from datetime import datetime, timedelta, timezone
+
+          ENDPOINT = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+          CUTOFF = (datetime.now(timezone.utc) - timedelta(days=5*366)).strftime("%Y-%m-%d")
+          rows, seen = [], set()
+
+          def get_page(page):
+              params = {
+                  "reportName":"RPT_SHAREBONUS_DET",
+                  "columns":"SECURITY_CODE,SECURITY_NAME_ABBR,PRETAX_BONUS_RMB,EX_DIVIDEND_DATE,ASSIGN_PROGRESS,REPORT_DATE,NOTICE_DATE,RECORD_DATE",
+                  "filter":f"(EX_DIVIDEND_DATE>='{CUTOFF}')",
+                  "pageNumber":str(page),
+                  "pageSize":"500",
+                  "sortColumns":"EX_DIVIDEND_DATE,SECURITY_CODE",
+                  "sortTypes":"-1,1",
+                  "source":"WEB",
+                  "client":"WEB"
+              }
+              url=ENDPOINT+"?"+urllib.parse.urlencode(params)
+              req=urllib.request.Request(url,headers={
+                  "User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36",
+                  "Accept":"application/json,text/plain,*/*"
+              })
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(req,timeout=45) as r:
+                          return json.loads(r.read().decode("utf-8"))
+                  except Exception:
+                      if attempt==2: raise
+                      time.sleep(2*(attempt+1))
+
+          first=get_page(1)
+          result=first.get("result") or {}
+          total=int(result.get("count") or 0)
+          if total < 100:
+              raise SystemExit(f"Dividend history API returned suspicious count: {total}")
+
+          pages=math.ceil(total/500)
+          if pages>100:
+              raise SystemExit(f"Unexpected history size: {total} records / {pages} pages")
+
+          for page in range(1,pages+1):
+              data=(first if page==1 else get_page(page)).get("result") or {}
+              for x in data.get("data") or []:
+                  code=str(x.get("SECURITY_CODE") or "").strip()
+                  exd=str(x.get("EX_DIVIDEND_DATE") or "")[:10]
+                  status=str(x.get("ASSIGN_PROGRESS") or "").strip()
+                  if not code or not exd or status!="实施":
+                      continue
+                  try:
+                      cash=float(x.get("PRETAX_BONUS_RMB"))/10.0
+                  except Exception:
+                      continue
+                  if cash<=0:
+                      continue
+                  key=(code,exd,round(cash,8))
+                  if key in seen:
+                      continue
+                  seen.add(key)
+                  rows.append({
+                      "code":code,
+                      "name":x.get("SECURITY_NAME_ABBR") or "",
+                      "reportYear":str(x.get("REPORT_DATE") or "")[:4],
+                      "announcementDate":str(x.get("NOTICE_DATE") or "")[:10] or None,
+                      "recordDate":str(x.get("RECORD_DATE") or "")[:10] or None,
+                      "exDividendDate":exd,
+                      "cashDividendPerShare":cash,
+                      "implementationStatus":status,
+                      "dividendType":"unknown"
+                  })
+              time.sleep(0.12)
+
+          rows.sort(key=lambda x:(x["code"],x["exDividendDate"]))
+          if len(rows)<100:
+              raise SystemExit(f"Built history is unexpectedly small: {len(rows)}")
+
+          out={
+              "generatedAt":datetime.now(timezone.utc).isoformat(),
+              "cutoff":CUTOFF,
+              "cutoffYears":5,
+              "count":len(rows),
+              "rows":rows
+          }
+          with open("data/a-share-dividend-history.json","w",encoding="utf-8") as f:
+              json.dump(out,f,ensure_ascii=False,separators=(",",":"))
+          print(f"Built {len(rows)} implemented dividend records from {total} source records.")
+
+      - name: Commit history database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/a-share-dividend-history.json
+          git diff --cached --quiet || git commit -m "Bootstrap isolated 5-year A-share dividend history"
+          git push
