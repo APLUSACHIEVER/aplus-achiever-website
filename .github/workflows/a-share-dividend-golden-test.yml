@@ -1,0 +1,102 @@
+name: A-share dividend golden test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/a-share-dividend-golden-test.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  golden-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch five golden stocks and build test data
+        shell: python
+        run: |
+          import json, time
+          from datetime import datetime, timezone, timedelta
+          import urllib.parse, urllib.request
+
+          stocks = {
+              "600036":"招商银行",
+              "601398":"工商银行",
+              "601939":"建设银行",
+              "601288":"农业银行",
+              "601728":"中国电信",
+          }
+
+          ENDPOINT = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+
+          def fetch(code):
+              params = {
+                  "reportName":"RPT_SHAREBONUS_DET",
+                  "columns":"SECURITY_CODE,SECURITY_NAME_ABBR,NOTICE_DATE,RECORD_DATE,EX_DIVIDEND_DATE,PRETAX_BONUS_RMB,ASSIGN_PROGRESS,REPORT_DATE,IMPL_PLAN_PROFILE",
+                  "filter":f'(SECURITY_CODE="{code}")',
+                  "pageSize":"100",
+                  "pageNumber":"1",
+                  "sortColumns":"EX_DIVIDEND_DATE",
+                  "sortTypes":"-1",
+              }
+              url = ENDPOINT + "?" + urllib.parse.urlencode(params)
+              last = None
+              for _ in range(4):
+                  try:
+                      req = urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0"})
+                      with urllib.request.urlopen(req, timeout=25) as r:
+                          obj = json.loads(r.read().decode("utf-8"))
+                      return obj.get("result",{}).get("data",[]) or []
+                  except Exception as e:
+                      last = str(e)
+                      time.sleep(2)
+              raise RuntimeError(f"{code}: {last}")
+
+          cutoff = datetime.now(timezone.utc).date().replace(year=datetime.now(timezone.utc).year-6)
+          out = {
+              "generatedAt": datetime.now(timezone.utc).isoformat(),
+              "purpose":"golden-test",
+              "rule":"latest up to 5 complete dividend years; current incomplete year excluded",
+              "unitCheck":"raw PRETAX_BONUS_RMB retained; no /10 conversion in test output",
+              "stocks":{}
+          }
+
+          for code,name in stocks.items():
+              raw = fetch(code)
+              rows=[]
+              for r in raw:
+                  ex = str(r.get("EX_DIVIDEND_DATE") or "")[:10]
+                  if len(ex)!=10: continue
+                  try:
+                      y=int(ex[:4])
+                  except: continue
+                  if y < cutoff.year: continue
+                  rows.append({
+                      "code":code,
+                      "name":r.get("SECURITY_NAME_ABBR") or name,
+                      "exDividendDate":ex,
+                      "noticeDate":str(r.get("NOTICE_DATE") or "")[:10],
+                      "recordDate":str(r.get("RECORD_DATE") or "")[:10],
+                      "reportDate":str(r.get("REPORT_DATE") or "")[:10],
+                      "pretaxBonusRmbRaw":r.get("PRETAX_BONUS_RMB"),
+                      "assignProgress":r.get("ASSIGN_PROGRESS"),
+                      "planProfile":r.get("IMPL_PLAN_PROFILE"),
+                  })
+              out["stocks"][code]={"name":name,"count":len(rows),"rows":rows}
+
+          with open("data/a-share-dividend-golden-test.json","w",encoding="utf-8") as f:
+              json.dump(out,f,ensure_ascii=False,indent=2)
+
+          print(json.dumps(out,ensure_ascii=False)[:12000])
+
+      - name: Commit golden test data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/a-share-dividend-golden-test.json
+          git diff --cached --quiet && exit 0
+          git commit -m "test: build five golden stock dividend dataset"
+          git push
