@@ -54,6 +54,11 @@ jobs:
           first=get_page(1)
           result=first.get("result") or {}
           total=int(result.get("count") or 0)
+          sample=result.get("data") or []
+          print(f"Source count={total}, first_page_rows={len(sample)}")
+          if sample:
+              print("Sample keys:", sorted(sample[0].keys()))
+              print("Sample row:", json.dumps(sample[0], ensure_ascii=False)[:2000])
           if total < 100:
               raise SystemExit(f"Dividend history API returned suspicious count: {total}")
 
@@ -65,13 +70,20 @@ jobs:
                   code=str(x.get("SECURITY_CODE") or "").strip()
                   exd=str(x.get("EX_DIVIDEND_DATE") or "")[:10]
                   status=str(x.get("ASSIGN_PROGRESS") or "").strip()
-                  if not code or not exd or status!="实施":
+                  if not code or not exd:
                       continue
                   try:
-                      cash=float(x.get("PRETAX_BONUS_RMB"))/10.0
+                      raw_cash=x.get("PRETAX_BONUS_RMB")
+                      if raw_cash in (None,""):
+                          raw_cash=x.get("BONUS_RMB")
+                      cash=float(raw_cash)/10.0
                   except Exception:
                       continue
                   if cash<=0:
+                      continue
+                  if exd < CUTOFF:
+                      continue
+                  if exd > datetime.now(timezone.utc).strftime("%Y-%m-%d"):
                       continue
                   key=(code,exd,round(cash,8))
                   if key in seen:
@@ -88,6 +100,8 @@ jobs:
                       "implementationStatus":status,
                       "dividendType":"unknown"
                   })
+              if page % 10 == 0 or page == pages:
+                  print(f"Processed page {page}/{pages}; accepted rows={len(rows)}")
               time.sleep(0.12)
 
           rows.sort(key=lambda x:(x["code"],x["exDividendDate"]))
