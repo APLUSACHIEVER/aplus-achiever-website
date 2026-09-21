@@ -14,14 +14,13 @@
   <div>
     <div class="brand-lockup"><img src="assets/sg-fat-uncle-stock-motor.svg" alt="狮城胖叔的股票小马达"><span>狮城胖叔的股票小马达</span></div>
     <h1>A股股息率雷达</h1>
-    <p class="subtitle">全市场 · 实时价格 · 股息率 · 实时PE · 目标价</p>
+    <p class="subtitle">全市场 · 实时价格 · 即时股息率 · 实时PE · 目标价</p>
   </div>
   <div class="status-wrap">
     <span id="marketStatus" class="status">正在加载…</span>
     <span id="lastUpdated" class="updated">等待数据</span>
   </div>
 </header>
-
 <section class="search-panel">
   <div class="search-box">
     <label for="stockSearch">搜索股票</label>
@@ -30,48 +29,31 @@
   <div class="filter">
     <label for="yieldFilter">最低股息率</label>
     <select id="yieldFilter">
-      <option value="0">全部</option>
-      <option value="3">≥ 3%</option>
-      <option value="4">≥ 4%</option>
-      <option value="5">≥ 5%</option>
-      <option value="6">≥ 6%</option>
-      <option value="8">≥ 8%</option>
+      <option value="0">全部</option><option value="3">≥ 3%</option><option value="4">≥ 4%</option><option value="5">≥ 5%</option><option value="6">≥ 6%</option><option value="8">≥ 8%</option>
     </select>
   </div>
   <div class="filter">
     <label for="sortBy">排序</label>
     <select id="sortBy">
-      <option value="yield">正常年度股息率高 → 低</option>
-      <option value="price">股价低 → 高</option>
-      <option value="change">今日涨跌幅</option>
-      <option value="code">股票代码</option>
-      <option value="name">股票名称</option>
+      <option value="yield">即时股息率高 → 低</option><option value="price">股价低 → 高</option><option value="change">今日涨跌幅</option><option value="code">股票代码</option><option value="name">股票名称</option>
     </select>
   </div>
 </section>
-
 <section class="stats" id="stats"></section>
-
 <section class="table-card">
   <div class="table-head">
     <strong id="resultCount">A股股票</strong>
-    <span>股息率 = 最近最多5个完整年度实际现金分红平均值 / 最新股价</span>
+    <span>即时股息率 = 最近一个完整财年实际现金分红/股 ÷ 最新股价；没有分红 = 0</span>
   </div>
   <div class="table-scroll">
     <table>
-      <thead>
-        <tr>
-          <th>股票名称</th><th>实时股价</th><th>涨跌</th><th>股息率</th><th>实时PE</th>
-          <th>4.5%目标价</th><th>5%目标价</th><th>6%目标价</th>
-        </tr>
-      </thead>
+      <thead><tr><th>股票名称</th><th>实时股价</th><th>涨跌</th><th>即时股息率</th><th>实时PE</th><th>4.5%目标价</th><th>5%目标价</th><th>6%目标价</th></tr></thead>
       <tbody id="radarBody"></tbody>
     </table>
   </div>
 </section>
-
 </main>
-<script src="a-share-dividend-radar-v2.js?v=1"></script>
-<script src="a-share-dividend-quality-v4.js?v=1"></script>
+<script src="a-share-dividend-radar-v2.js?v=2"></script>
+<script src="a-share-dividend-quality-v4.js?v=2"></script>
 </body>
 </html>
