@@ -41,7 +41,7 @@
   <div class="filter">
     <label for="sortBy">排序</label>
     <select id="sortBy">
-      <option value="yield">股息率高 → 低</option>
+      <option value="yield">正常年度股息率高 → 低</option>
       <option value="price">股价低 → 高</option>
       <option value="change">今日涨跌幅</option>
       <option value="code">股票代码</option>
@@ -55,7 +55,7 @@
 <section class="table-card">
   <div class="table-head">
     <strong id="resultCount">A股股票</strong>
-    <span>股息率 = 最近12个月现金分红 / 最新股价</span>
+    <span>股息率 = 最近最多5个完整年度实际现金分红平均值 / 最新股价</span>
   </div>
   <div class="table-scroll">
     <table>
@@ -71,7 +71,7 @@
 </section>
 
 </main>
-<script src="a-share-dividend-radar-v1.js?v=100"></script>
+<script src="a-share-dividend-radar-v2.js?v=1"></script>
 <script src="a-share-dividend-quality-v4.js?v=1"></script>
 </body>
 </html>
