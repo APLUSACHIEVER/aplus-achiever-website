@@ -60,7 +60,7 @@ jobs:
               price = num(price)
               change_pct = num(change_pct)
               change = num(change)
-              const pe = num(item.get("f162"))
+              pe = num(item.get("f162"))
 
               if price is not None and price > 1000:
                   price /= 100
