@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Fetch A-share prices and TTM dividends
+      - name: Fetch A-share prices, PE and TTM dividends
         shell: python
         run: |
           import json, urllib.parse, urllib.request
@@ -36,7 +36,7 @@ jobs:
               with urllib.request.urlopen(req,timeout=30) as r:
                   return json.loads(r.read().decode("utf-8","ignore"))
 
-          # 全A股列表：沪深主板、创业板、科创板、北交所。
+          # 沪深A股全市场；动态按 data.total 翻页，不限制100只。
           rows=[]
           page_size=100
           total=None
@@ -44,8 +44,8 @@ jobs:
           while True:
               data=get_json(QUOTE,{
                 "pn":pn,"pz":page_size,"po":1,"np":1,"fltt":2,"invt":2,"fid":"f3",
-                "fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81",
-                "fields":"f2,f3,f4,f12,f13,f14,f18",
+                "fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23",
+                "fields":"f2,f3,f4,f9,f12,f13,f14",
                 "ut":"bd1d9ddb04089700cf9c27f6f7426281"
               })
               data_section=data.get("data") or {}
@@ -57,16 +57,16 @@ jobs:
                   name=str(x.get("f14") or "")
                   if code and name:
                       rows.append({
-                        "code":code,"name":name,
-                        "price":x.get("f2"),"changePct":x.get("f3"),
-                        "change":x.get("f4"),"market":x.get("f13")
+                        "code":code,"name":name,"price":x.get("f2"),
+                        "changePct":x.get("f3"),"change":x.get("f4"),
+                        "pe":x.get("f9"),"market":x.get("f13")
                       })
               if total and len(rows)>=total: break
               if len(diff)<page_size: break
               pn += 1
           rows={r["code"]:r for r in rows}
 
-          # 分红明细：PRETAX_BONUS_RMB 是每10股税前分红，换算为每股后累计TTM。
+          # 最近12个月已实施现金分红。
           div={}
           for pn in range(1,31):
               data=get_json(DIV,{
@@ -93,12 +93,13 @@ jobs:
               price=float(r["price"]) if r.get("price") not in (None,"-",0) else None
               change=float(r["change"]) if r.get("change") not in (None,"-") else None
               chgp=float(r["changePct"]) if r.get("changePct") not in (None,"-") else None
+              pe=float(r["pe"]) if r.get("pe") not in (None,"-") else None
               d=round(div.get(code,0),4)
               y=round(d/price*100,4) if price and d>0 else None
               out.append({
                 "code":code,"name":r["name"],"price":price,
-                "change":change,"changePct":chgp,
-                "dividendTTM":d,"yield":y
+                "change":change,"changePct":chgp,"yield":y,"pe":pe,
+                "dividendTTM":d
               })
 
           payload={
