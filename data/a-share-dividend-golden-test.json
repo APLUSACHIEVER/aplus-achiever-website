@@ -1,0 +1,578 @@
+{
+  "generatedAt": "2026-09-21T09:24:44.516573+00:00",
+  "purpose": "golden-test",
+  "rule": "latest up to 5 complete dividend years; current incomplete year excluded",
+  "unitCheck": "per-share cash dividend is independently parsed from IMPL_PLAN_PROFILE (10派X => X/10); PRETAX_BONUS_RMB is retained only as a raw comparison field",
+  "stocks": {
+    "600036": {
+      "name": "招商银行",
+      "count": 8,
+      "rows": [
+        {
+          "code": "600036",
+          "name": "招商银行",
+          "exDividendDate": "2026-07-10",
+          "noticeDate": "2026-07-04",
+          "recordDate": "",
+          "reportDate": "2025-12-31",
+          "pretaxBonusRmbRaw": 10.03,
+          "assignProgress": "实施分配",
+          "planProfile": "10派10.03元(含税)",
+          "cashDividendPerShareFromProfile": 1.003
+        },
+        {
+          "code": "600036",
+          "name": "招商银行",
+          "exDividendDate": "2026-01-16",
+          "noticeDate": "2026-01-10",
+          "recordDate": "",
+          "reportDate": "2025-06-30",
+          "pretaxBonusRmbRaw": 10.13,
+          "assignProgress": "实施分配",
+          "planProfile": "10派10.13元(含税,扣税后9.117元)",
+          "cashDividendPerShareFromProfile": 1.0130000000000001
+        },
+        {
+          "code": "600036",
+          "name": "招商银行",
+          "exDividendDate": "2025-07-11",
+          "noticeDate": "2025-07-04",
+          "recordDate": "",
+          "reportDate": "2024-12-31",
+          "pretaxBonusRmbRaw": 20,
+          "assignProgress": "实施分配",
+          "planProfile": "10派20.00元(含税,扣税后18.00元)",
+          "cashDividendPerShareFromProfile": 2.0
+        },
+        {
+          "code": "600036",
+          "name": "招商银行",
+          "exDividendDate": "2024-07-11",
+          "noticeDate": "2024-07-04",
+          "recordDate": "",
+          "reportDate": "2023-12-31",
+          "pretaxBonusRmbRaw": 19.72,
+          "assignProgress": "实施分配",
+          "planProfile": "10派19.72元(含税,扣税后17.748元)",
+          "cashDividendPerShareFromProfile": 1.972
+        },
+        {
+          "code": "600036",
+          "name": "招商银行",
+          "exDividendDate": "2023-07-13",
+          "noticeDate": "2023-07-06",
+          "recordDate": "",
+          "reportDate": "2022-12-31",
+          "pretaxBonusRmbRaw": 17.38,
+          "assignProgress": "实施分配",
+          "planProfile": "10派17.38元(含税,扣税后15.642元)",
+          "cashDividendPerShareFromProfile": 1.738
+        },
+        {
+          "code": "600036",
+          "name": "招商银行",
+          "exDividendDate": "2022-07-15",
+          "noticeDate": "2022-07-08",
+          "recordDate": "",
+          "reportDate": "2021-12-31",
+          "pretaxBonusRmbRaw": 15.22,
+          "assignProgress": "实施分配",
+          "planProfile": "10派15.22元(含税,扣税后13.698元)",
+          "cashDividendPerShareFromProfile": 1.522
+        },
+        {
+          "code": "600036",
+          "name": "招商银行",
+          "exDividendDate": "2021-07-13",
+          "noticeDate": "2021-07-06",
+          "recordDate": "",
+          "reportDate": "2020-12-31",
+          "pretaxBonusRmbRaw": 12.53,
+          "assignProgress": "实施分配",
+          "planProfile": "10派12.53元(含税,扣税后11.277元)",
+          "cashDividendPerShareFromProfile": 1.253
+        },
+        {
+          "code": "600036",
+          "name": "招商银行",
+          "exDividendDate": "2020-07-10",
+          "noticeDate": "2020-07-03",
+          "recordDate": "",
+          "reportDate": "2019-12-31",
+          "pretaxBonusRmbRaw": 12,
+          "assignProgress": "实施分配",
+          "planProfile": "10派12.00元(含税,扣税后10.80元)",
+          "cashDividendPerShareFromProfile": 1.2
+        }
+      ]
+    },
+    "601398": {
+      "name": "工商银行",
+      "count": 9,
+      "rows": [
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2026-05-13",
+          "noticeDate": "2026-05-07",
+          "recordDate": "",
+          "reportDate": "2025-12-31",
+          "pretaxBonusRmbRaw": 1.689,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.689元(含税,扣税后1.5201元)",
+          "cashDividendPerShareFromProfile": 0.1689
+        },
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2025-12-15",
+          "noticeDate": "2025-12-09",
+          "recordDate": "",
+          "reportDate": "2025-06-30",
+          "pretaxBonusRmbRaw": 1.414,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.414元(含税,扣税后1.2726元)",
+          "cashDividendPerShareFromProfile": 0.1414
+        },
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2025-07-14",
+          "noticeDate": "2025-07-08",
+          "recordDate": "",
+          "reportDate": "2024-12-31",
+          "pretaxBonusRmbRaw": 1.646,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.646元(含税,扣税后1.4814元)",
+          "cashDividendPerShareFromProfile": 0.1646
+        },
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2025-01-07",
+          "noticeDate": "2024-12-31",
+          "recordDate": "",
+          "reportDate": "2024-06-30",
+          "pretaxBonusRmbRaw": 1.434,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.434元(含税,扣税后1.2906元)",
+          "cashDividendPerShareFromProfile": 0.1434
+        },
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2024-07-16",
+          "noticeDate": "2024-07-09",
+          "recordDate": "",
+          "reportDate": "2023-12-31",
+          "pretaxBonusRmbRaw": 3.064,
+          "assignProgress": "实施分配",
+          "planProfile": "10派3.064元(含税,扣税后2.7576元)",
+          "cashDividendPerShareFromProfile": 0.3064
+        },
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2023-07-17",
+          "noticeDate": "2023-07-11",
+          "recordDate": "",
+          "reportDate": "2022-12-31",
+          "pretaxBonusRmbRaw": 3.035,
+          "assignProgress": "实施分配",
+          "planProfile": "10派3.035元(含税,扣税后2.7315元)",
+          "cashDividendPerShareFromProfile": 0.3035
+        },
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2022-07-12",
+          "noticeDate": "2022-07-05",
+          "recordDate": "",
+          "reportDate": "2021-12-31",
+          "pretaxBonusRmbRaw": 2.933,
+          "assignProgress": "实施分配",
+          "planProfile": "10派2.933元(含税,扣税后2.6397元)",
+          "cashDividendPerShareFromProfile": 0.2933
+        },
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2021-07-06",
+          "noticeDate": "2021-06-29",
+          "recordDate": "",
+          "reportDate": "2020-12-31",
+          "pretaxBonusRmbRaw": 2.66,
+          "assignProgress": "实施分配",
+          "planProfile": "10派2.66元(含税,扣税后2.394元)",
+          "cashDividendPerShareFromProfile": 0.266
+        },
+        {
+          "code": "601398",
+          "name": "工商银行",
+          "exDividendDate": "2020-06-30",
+          "noticeDate": "2020-06-20",
+          "recordDate": "",
+          "reportDate": "2019-12-31",
+          "pretaxBonusRmbRaw": 2.628,
+          "assignProgress": "实施分配",
+          "planProfile": "10派2.628元(含税,扣税后2.3652元)",
+          "cashDividendPerShareFromProfile": 0.26280000000000003
+        }
+      ]
+    },
+    "601939": {
+      "name": "建设银行",
+      "count": 9,
+      "rows": [
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2026-07-13",
+          "noticeDate": "2026-07-07",
+          "recordDate": "",
+          "reportDate": "2025-12-31",
+          "pretaxBonusRmbRaw": 2.029,
+          "assignProgress": "实施分配",
+          "planProfile": "10派2.029元(含税,扣税后1.8261元)",
+          "cashDividendPerShareFromProfile": 0.2029
+        },
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2025-12-11",
+          "noticeDate": "2025-12-05",
+          "recordDate": "",
+          "reportDate": "2025-06-30",
+          "pretaxBonusRmbRaw": 1.858,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.858元(含税,扣税后1.6722元)",
+          "cashDividendPerShareFromProfile": 0.18580000000000002
+        },
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2025-05-09",
+          "noticeDate": "2025-04-30",
+          "recordDate": "",
+          "reportDate": "2024-12-31",
+          "pretaxBonusRmbRaw": 2.06,
+          "assignProgress": "实施分配",
+          "planProfile": "10派2.06元(含税,扣税后1.854元)",
+          "cashDividendPerShareFromProfile": 0.20600000000000002
+        },
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2025-01-10",
+          "noticeDate": "2025-01-03",
+          "recordDate": "",
+          "reportDate": "2024-06-30",
+          "pretaxBonusRmbRaw": 1.97,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.97元(含税,扣税后1.773元)",
+          "cashDividendPerShareFromProfile": 0.197
+        },
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2024-07-12",
+          "noticeDate": "2024-07-06",
+          "recordDate": "",
+          "reportDate": "2023-12-31",
+          "pretaxBonusRmbRaw": 4,
+          "assignProgress": "实施分配",
+          "planProfile": "10派4.00元(含税,扣税后3.60元)",
+          "cashDividendPerShareFromProfile": 0.4
+        },
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2023-07-14",
+          "noticeDate": "2023-07-08",
+          "recordDate": "",
+          "reportDate": "2022-12-31",
+          "pretaxBonusRmbRaw": 3.89,
+          "assignProgress": "实施分配",
+          "planProfile": "10派3.89元(含税,扣税后3.501元)",
+          "cashDividendPerShareFromProfile": 0.389
+        },
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2022-07-08",
+          "noticeDate": "2022-07-01",
+          "recordDate": "",
+          "reportDate": "2021-12-31",
+          "pretaxBonusRmbRaw": 3.64,
+          "assignProgress": "实施分配",
+          "planProfile": "10派3.64元(含税,扣税后3.276元)",
+          "cashDividendPerShareFromProfile": 0.364
+        },
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2021-07-15",
+          "noticeDate": "2021-07-07",
+          "recordDate": "",
+          "reportDate": "2020-12-31",
+          "pretaxBonusRmbRaw": 3.26,
+          "assignProgress": "实施分配",
+          "planProfile": "10派3.26元(含税,扣税后2.934元)",
+          "cashDividendPerShareFromProfile": 0.32599999999999996
+        },
+        {
+          "code": "601939",
+          "name": "建设银行",
+          "exDividendDate": "2020-07-10",
+          "noticeDate": "2020-07-02",
+          "recordDate": "",
+          "reportDate": "2019-12-31",
+          "pretaxBonusRmbRaw": 3.2,
+          "assignProgress": "实施分配",
+          "planProfile": "10派3.20元(含税,扣税后2.88元)",
+          "cashDividendPerShareFromProfile": 0.32
+        }
+      ]
+    },
+    "601288": {
+      "name": "农业银行",
+      "count": 9,
+      "rows": [
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2026-05-13",
+          "noticeDate": "2026-05-07",
+          "recordDate": "",
+          "reportDate": "2025-12-31",
+          "pretaxBonusRmbRaw": 1.3,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.30元(含税,扣税后1.17元)",
+          "cashDividendPerShareFromProfile": 0.13
+        },
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2025-12-15",
+          "noticeDate": "2025-12-09",
+          "recordDate": "",
+          "reportDate": "2025-06-30",
+          "pretaxBonusRmbRaw": 1.195,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.195元(含税,扣税后1.0755元)",
+          "cashDividendPerShareFromProfile": 0.11950000000000001
+        },
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2025-07-17",
+          "noticeDate": "2025-07-09",
+          "recordDate": "",
+          "reportDate": "2024-12-31",
+          "pretaxBonusRmbRaw": 1.255,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.255元(含税,扣税后1.1295元)",
+          "cashDividendPerShareFromProfile": 0.1255
+        },
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2025-01-08",
+          "noticeDate": "2024-12-30",
+          "recordDate": "",
+          "reportDate": "2024-06-30",
+          "pretaxBonusRmbRaw": 1.164,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.164元(含税,扣税后1.0476元)",
+          "cashDividendPerShareFromProfile": 0.11639999999999999
+        },
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2024-06-07",
+          "noticeDate": "2024-05-30",
+          "recordDate": "",
+          "reportDate": "2023-12-31",
+          "pretaxBonusRmbRaw": 2.309,
+          "assignProgress": "实施分配",
+          "planProfile": "10派2.309元(含税,扣税后2.0781元)",
+          "cashDividendPerShareFromProfile": 0.23090000000000002
+        },
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2023-07-18",
+          "noticeDate": "2023-07-10",
+          "recordDate": "",
+          "reportDate": "2022-12-31",
+          "pretaxBonusRmbRaw": 2.222,
+          "assignProgress": "实施分配",
+          "planProfile": "10派2.222元(含税,扣税后1.9998元)",
+          "cashDividendPerShareFromProfile": 0.2222
+        },
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2022-07-15",
+          "noticeDate": "2022-07-08",
+          "recordDate": "",
+          "reportDate": "2021-12-31",
+          "pretaxBonusRmbRaw": 2.068,
+          "assignProgress": "实施分配",
+          "planProfile": "10派2.068元(含税,扣税后1.8612元)",
+          "cashDividendPerShareFromProfile": 0.2068
+        },
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2021-06-17",
+          "noticeDate": "2021-06-08",
+          "recordDate": "",
+          "reportDate": "2020-12-31",
+          "pretaxBonusRmbRaw": 1.851,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.851元(含税,扣税后1.6659元)",
+          "cashDividendPerShareFromProfile": 0.1851
+        },
+        {
+          "code": "601288",
+          "name": "农业银行",
+          "exDividendDate": "2020-07-10",
+          "noticeDate": "2020-07-06",
+          "recordDate": "",
+          "reportDate": "2019-12-31",
+          "pretaxBonusRmbRaw": 1.819,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.819元(含税,扣税后1.6371元)",
+          "cashDividendPerShareFromProfile": 0.1819
+        }
+      ]
+    },
+    "601728": {
+      "name": "中国电信",
+      "count": 10,
+      "rows": [
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2026-09-10",
+          "noticeDate": "2026-09-03",
+          "recordDate": "",
+          "reportDate": "2026-06-30",
+          "pretaxBonusRmbRaw": 1.606,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.606元(含税,扣税后1.4454元)",
+          "cashDividendPerShareFromProfile": 0.16060000000000002
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2026-06-10",
+          "noticeDate": "2026-06-03",
+          "recordDate": "",
+          "reportDate": "2025-12-31",
+          "pretaxBonusRmbRaw": 0.908,
+          "assignProgress": "实施分配",
+          "planProfile": "10派0.908元(含税,扣税后0.8172元)",
+          "cashDividendPerShareFromProfile": 0.0908
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2025-09-04",
+          "noticeDate": "2025-08-28",
+          "recordDate": "",
+          "reportDate": "2025-06-30",
+          "pretaxBonusRmbRaw": 1.812,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.812元(含税,扣税后1.6308元)",
+          "cashDividendPerShareFromProfile": 0.1812
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2025-06-11",
+          "noticeDate": "2025-06-04",
+          "recordDate": "",
+          "reportDate": "2024-12-31",
+          "pretaxBonusRmbRaw": 0.927,
+          "assignProgress": "实施分配",
+          "planProfile": "10派0.927元(含税,扣税后0.8343元)",
+          "cashDividendPerShareFromProfile": 0.0927
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2024-09-11",
+          "noticeDate": "2024-09-04",
+          "recordDate": "",
+          "reportDate": "2024-06-30",
+          "pretaxBonusRmbRaw": 1.671,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.671元(含税,扣税后1.5039元)",
+          "cashDividendPerShareFromProfile": 0.1671
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2024-06-13",
+          "noticeDate": "2024-06-06",
+          "recordDate": "",
+          "reportDate": "2023-12-31",
+          "pretaxBonusRmbRaw": 0.9,
+          "assignProgress": "实施分配",
+          "planProfile": "10派0.90元(含税,扣税后0.81元)",
+          "cashDividendPerShareFromProfile": 0.09
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2023-08-31",
+          "noticeDate": "2023-08-24",
+          "recordDate": "",
+          "reportDate": "2023-06-30",
+          "pretaxBonusRmbRaw": 1.432,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.432元(含税,扣税后1.2888元)",
+          "cashDividendPerShareFromProfile": 0.1432
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2023-06-09",
+          "noticeDate": "2023-06-02",
+          "recordDate": "",
+          "reportDate": "2022-12-31",
+          "pretaxBonusRmbRaw": 0.76,
+          "assignProgress": "实施分配",
+          "planProfile": "10派0.76元(含税,扣税后0.684元)",
+          "cashDividendPerShareFromProfile": 0.076
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2022-09-08",
+          "noticeDate": "2022-09-01",
+          "recordDate": "",
+          "reportDate": "2022-06-30",
+          "pretaxBonusRmbRaw": 1.2,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.20元(含税,扣税后1.08元)",
+          "cashDividendPerShareFromProfile": 0.12
+        },
+        {
+          "code": "601728",
+          "name": "中国电信",
+          "exDividendDate": "2022-06-08",
+          "noticeDate": "2022-06-01",
+          "recordDate": "",
+          "reportDate": "2021-12-31",
+          "pretaxBonusRmbRaw": 1.7,
+          "assignProgress": "实施分配",
+          "planProfile": "10派1.70元(含税,扣税后1.53元)",
+          "cashDividendPerShareFromProfile": 0.16999999999999998
+        }
+      ]
+    }
+  }
+}
