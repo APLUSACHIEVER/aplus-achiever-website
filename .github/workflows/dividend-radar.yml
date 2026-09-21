@@ -20,7 +20,7 @@ jobs:
 
       - name: Fetch latest A-share quotes
         env:
-          QUOTE_URL: "https://push2.eastmoney.com/api/qt/ulist.np/get?secids=1.600031,1.600585,1.600507,1.600010,1.600350,1.600050&fields=f2,f3,f4,f12,f14&pn=1&np=1&fltt=2&invt=2&ut=fa5fd1943c7b386f172d6893dbbd1d0c"
+          QUOTE_URL: "https://push2.eastmoney.com/api/qt/ulist.np/get?secids=1.600031,1.600585,1.600507,1.600010,1.600350,1.600050&fields=f2,f3,f4,f12,f14,f162&pn=1&np=1&fltt=2&invt=2&ut=fa5fd1943c7b386f172d6893dbbd1d0c"
         run: |
           python - <<'PY'
           import json, os, urllib.request
@@ -60,6 +60,7 @@ jobs:
               price = num(price)
               change_pct = num(change_pct)
               change = num(change)
+              const pe = num(item.get("f162"))
 
               if price is not None and price > 1000:
                   price /= 100
@@ -72,7 +73,8 @@ jobs:
                   "name": item.get("f14"),
                   "price": price,
                   "change": change,
-                  "changePct": change_pct
+                  "changePct": change_pct,
+                  "pe": pe
               }
 
           out = {
