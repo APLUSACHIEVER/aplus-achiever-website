@@ -1,0 +1,149 @@
+name: A-Share Dividend Radar Bootstrap
+
+on:
+  push:
+    paths:
+      - ".github/workflows/a-share-dividend-radar-bootstrap.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build full A-share dividend database
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, math, time
+          from datetime import datetime, timedelta, timezone
+          import urllib.parse, urllib.request
+
+          OUT = "data/a-share-dividend-radar.json"
+          QUOTE = "https://push2.eastmoney.com/api/qt/clist/get"
+          DIV = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+          FS = "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048"
+
+          def get_json(url, params):
+              q = urllib.parse.urlencode(params)
+              req = urllib.request.Request(url + "?" + q, headers={"User-Agent":"Mozilla/5.0"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return json.load(r)
+
+          first = get_json(QUOTE, {
+              "pn":1,"pz":100,"po":1,"np":1,"fltt":2,"invt":2,
+              "fid":"f12","fs":FS,
+              "fields":"f2,f3,f4,f9,f12,f13,f14"
+          })
+          total = int((first.get("data") or {}).get("total") or 0)
+          if total <= 1000:
+              raise RuntimeError(f"Full A-share quote interface returned suspicious total={total}")
+
+          pages = math.ceil(total/100)
+          rows = []
+          for page in range(1, pages+1):
+              d = get_json(QUOTE, {
+                  "pn":page,"pz":100,"po":1,"np":1,"fltt":2,"invt":2,
+                  "fid":"f12","fs":FS,
+                  "fields":"f2,f3,f4,f9,f12,f13,f14"
+              }).get("data") or {}
+              rows.extend(d.get("diff") or [])
+              time.sleep(0.03)
+
+          by_code = {}
+          for r in rows:
+              code = str(r.get("f12") or "").zfill(6)
+              if code:
+                  by_code[code] = r
+          if len(by_code) < total:
+              raise RuntimeError(f"Quote completeness check failed: unique={len(by_code)} total={total}")
+
+          cutoff = (datetime.now(timezone.utc) - timedelta(days=365)).strftime("%Y-%m-%d")
+          div_rows = []
+          for page in range(1,31):
+              d = get_json(DIV, {
+                  "sortColumns":"REPORT_DATE","sortTypes":"-1","pageNumber":page,
+                  "pageSize":500,
+                  "reportName":"RPT_SHAREBONUS_DET",
+                  "columns":"ALL",
+                  "source":"WEB",
+                  "client":"WEB",
+                  "filter":f"(EX_DIVIDEND_DATE>='{cutoff}')"
+              }).get("result") or {}
+              data = d.get("data") or []
+              div_rows.extend(data)
+              if len(data) < 500:
+                  break
+              time.sleep(0.03)
+
+          div_by_code = {}
+          for r in div_rows:
+              if str(r.get("ASSIGN_PROGRESS") or "").strip() != "实施":
+                  continue
+              code = str(r.get("SECURITY_CODE") or "").zfill(6)
+              try:
+                  bonus = float(r.get("PRETAX_BONUS_RMB") or 0) / 10.0
+              except Exception:
+                  bonus = 0.0
+              div_by_code[code] = div_by_code.get(code, 0.0) + bonus
+
+          out = []
+          for code, r in by_code.items():
+              try:
+                  price = float(r.get("f2"))
+              except Exception:
+                  price = None
+              if price is None or price <= 0:
+                  continue
+              try:
+                  change = float(r.get("f3"))
+              except Exception:
+                  change = None
+              try:
+                  pe = float(r.get("f9"))
+              except Exception:
+                  pe = None
+              name = str(r.get("f14") or code)
+              div = float(div_by_code.get(code, 0.0))
+              y = div / price * 100 if div > 0 else 0.0
+              out.append({
+                  "code":code, "name":name, "price":price, "change":change,
+                  "yield":y, "pe":pe, "dividendTTM":div,
+                  "target45":div/0.045 if div>0 else None,
+                  "target50":div/0.05 if div>0 else None,
+                  "target60":div/0.06 if div>0 else None
+              })
+
+          if len(out) < 1000:
+              raise RuntimeError(f"Output database unexpectedly small: {len(out)}")
+
+          out.sort(key=lambda x:(-x["yield"], x["code"]))
+          payload = {
+              "generatedAt": datetime.now(timezone.utc).isoformat(),
+              "cutoff": cutoff,
+              "count": len(out),
+              "universe": "全A股",
+              "defaultDisplay": 50,
+              "rows": out
+          }
+          with open(OUT,"w",encoding="utf-8") as f:
+              json.dump(payload,f,ensure_ascii=False,separators=(",",":"))
+          print(f"Generated {len(out)} A-share rows")
+          PY
+
+      - name: Commit refreshed database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/a-share-dividend-radar.json
+          if git diff --cached --quiet; then
+            echo "No database changes"
+          else
+            git commit -m "chore: refresh full A-share dividend radar database"
+            git push
+          fi
