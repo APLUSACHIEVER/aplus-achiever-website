@@ -1,0 +1,216 @@
+name: APLUS A-share Dividend Radar Repair V3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/a-share-dividend-radar-repair-v3.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: a-share-dividend-radar-single-writer
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Build and validate full A-share database
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, math, time, urllib.parse, urllib.request
+          from datetime import datetime, timedelta, timezone
+
+          QUOTE_URLS = [
+              "https://push2.eastmoney.com/api/qt/clist/get",
+              "https://82.push2.eastmoney.com/api/qt/clist/get",
+              "https://73.push2.eastmoney.com/api/qt/clist/get",
+          ]
+          DIV_URL = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+          FS = "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048"
+          HEADERS = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/153 Safari/537.36",
+              "Referer": "https://quote.eastmoney.com/"
+          }
+
+          def fetch(url, params, retries=6):
+              full = url + "?" + urllib.parse.urlencode(params)
+              last = None
+              for i in range(retries):
+                  try:
+                      req = urllib.request.Request(full, headers=HEADERS)
+                      with urllib.request.urlopen(req, timeout=40) as resp:
+                          raw = resp.read().decode("utf-8", "ignore")
+                          if not raw.strip():
+                              raise RuntimeError("empty response")
+                          obj = json.loads(raw)
+                          if not isinstance(obj, dict):
+                              raise RuntimeError("invalid JSON")
+                          return obj
+                  except Exception as e:
+                      last = e
+                      print(f"retry {i+1}/{retries}: {e}")
+                      time.sleep(min(12, 2 ** i))
+              raise RuntimeError(f"request failed: {last}")
+
+          def num(v):
+              try:
+                  x = float(v)
+                  return x if math.isfinite(x) else None
+              except:
+                  return None
+
+          base = {
+              "pn": 1, "pz": 100, "po": 1, "np": 1,
+              "fltt": 2, "invt": 2, "fid": "f12",
+              "fs": FS,
+              "fields": "f2,f3,f4,f9,f12,f13,f14",
+              "ut": "bd1d9ddb04089700cf9c27f6f7426281"
+          }
+
+          chosen = None
+          first = None
+          diagnostics = []
+          for url in QUOTE_URLS:
+              try:
+                  q = fetch(url, base)
+                  total = int((q.get("data") or {}).get("total") or 0)
+                  diagnostics.append(f"{url} total={total}")
+                  print(diagnostics[-1])
+                  if total >= 1000:
+                      chosen, first = url, q
+                      break
+              except Exception as e:
+                  diagnostics.append(f"{url} error={e}")
+
+          if not chosen:
+              raise RuntimeError("FULL A-SHARE PROBE FAILED: " + " | ".join(diagnostics))
+
+          total = int((first.get("data") or {}).get("total") or 0)
+          pages = math.ceil(total / 100)
+          stocks = {}
+
+          for pn in range(1, pages + 1):
+              q = first if pn == 1 else fetch(chosen, {**base, "pn": pn})
+              items = (q.get("data") or {}).get("diff") or []
+              if not items:
+                  raise RuntimeError(f"EMPTY QUOTE PAGE {pn}/{pages}")
+              for x in items:
+                  code = str(x.get("f12") or "").strip().zfill(6)
+                  name = str(x.get("f14") or "").strip()
+                  if not code or not name:
+                      continue
+                  stocks[code] = {
+                      "code": code,
+                      "name": name,
+                      "price": num(x.get("f2")),
+                      "change": num(x.get("f4")),
+                      "changePct": num(x.get("f3")),
+                      "pe": num(x.get("f9"))
+                  }
+              if pn % 20 == 0 or pn == pages:
+                  print(f"QUOTE {pn}/{pages}: unique={len(stocks)}")
+              time.sleep(0.08)
+
+          if len(stocks) < total:
+              raise RuntimeError(f"QUOTE UNIQUENESS FAILED {len(stocks)}/{total}")
+
+          cutoff = (datetime.now(timezone.utc).date() - timedelta(days=365)).isoformat()
+          dividends = {}
+          for pn in range(1, 31):
+              q = fetch(DIV_URL, {
+                  "reportName": "RPT_SHAREBONUS_DET",
+                  "columns": "SECURITY_CODE,SECURITY_NAME_ABBR,PRETAX_BONUS_RMB,EX_DIVIDEND_DATE,ASSIGN_PROGRESS",
+                  "filter": f"(EX_DIVIDEND_DATE>='{cutoff}')",
+                  "pageNumber": pn,
+                  "pageSize": 500,
+                  "sortColumns": "EX_DIVIDEND_DATE",
+                  "sortTypes": "-1",
+                  "source": "WEB",
+                  "client": "WEB"
+              })
+              items = (q.get("result") or {}).get("data") or []
+              if not items:
+                  break
+              for x in items:
+                  code = str(x.get("SECURITY_CODE") or "").strip().zfill(6)
+                  date = str(x.get("EX_DIVIDEND_DATE") or "")[:10]
+                  progress = str(x.get("ASSIGN_PROGRESS") or "")
+                  cash10 = num(x.get("PRETAX_BONUS_RMB"))
+                  cash = cash10 / 10 if cash10 is not None else 0
+                  if code in stocks and date >= cutoff and "实施" in progress and cash > 0:
+                      dividends[code] = round(dividends.get(code, 0) + cash, 4)
+              print(f"DIV {pn}: rows={len(items)} matched={len(dividends)}")
+              if len(items) < 500:
+                  break
+
+          rows = []
+          for code, r in stocks.items():
+              d = dividends.get(code, 0)
+              p = r["price"]
+              y = round(d / p * 100, 4) if p and p > 0 and d > 0 else None
+              rows.append({
+                  **r,
+                  "yield": y,
+                  "dividendTTM": round(d, 4),
+                  "target45": round(d / .045, 4) if d > 0 else None,
+                  "target50": round(d / .05, 4) if d > 0 else None,
+                  "target60": round(d / .06, 4) if d > 0 else None
+              })
+
+          if len(rows) < 1000:
+              raise RuntimeError(f"OUTPUT TOO SMALL {len(rows)}")
+
+          rows.sort(key=lambda r: (-(r["yield"] if r["yield"] is not None else -1), r["code"]))
+          now = datetime.now(timezone.utc).isoformat()
+          payload = {
+              "generatedAt": now,
+              "source": "Eastmoney public market/dividend data",
+              "cutoff": cutoff,
+              "count": len(rows),
+              "universe": "全A股",
+              "defaultDisplay": 100,
+              "rows": rows
+          }
+
+          tmp = "data/a-share-dividend-radar.json.tmp"
+          final = "data/a-share-dividend-radar.json"
+          with open(tmp, "w", encoding="utf-8") as f:
+              json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
+          with open(tmp, "r", encoding="utf-8") as f:
+              check = json.load(f)
+
+          if check.get("universe") != "全A股" or check.get("defaultDisplay") != 100:
+              raise RuntimeError("METADATA VALIDATION FAILED")
+          if int(check.get("count", 0)) != len(check.get("rows", [])) or len(check["rows"]) < 1000:
+              raise RuntimeError("ROW COUNT VALIDATION FAILED")
+          if len({r["code"] for r in check["rows"]}) != len(check["rows"]):
+              raise RuntimeError("DUPLICATE CODE VALIDATION FAILED")
+
+          # Only after every validation passes do we replace the live database.
+          import os
+          os.replace(tmp, final)
+          print(f"RADAR_V3_SUCCESS count={len(rows)} generatedAt={now}")
+          PY
+
+      - name: Commit validated database
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/a-share-dividend-radar.json
+          if git diff --cached --quiet; then
+            echo "No database change"
+          else
+            git commit -m "fix: validated single-writer full A-share dividend radar"
+            git push
+          fi
