@@ -30,7 +30,7 @@ jobs:
           def get_page(page):
               params = {
                   "reportName":"RPT_SHAREBONUS_DET",
-                  "columns":"SECURITY_CODE,SECURITY_NAME_ABBR,PRETAX_BONUS_RMB,EX_DIVIDEND_DATE,ASSIGN_PROGRESS,REPORT_DATE,NOTICE_DATE,RECORD_DATE",
+                  "columns":"ALL",
                   "pageNumber":str(page),
                   "pageSize":"500",
                   "sortColumns":"EX_DIVIDEND_DATE,SECURITY_CODE",
