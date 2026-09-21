@@ -32,7 +32,7 @@ jobs:
           def get_page(page):
               params = {
                   "reportName": "RPT_SHAREBONUS_DET",
-                  "columns": "SECURITY_CODE,SECURITY_NAME_ABBR,NOTICE_DATE,RECORD_DATE,EX_DIVIDEND_DATE,PRETAX_BONUS_RMB,ASSIGN_PROGRESS,REPORT_DATE,TRANSFER_RATIO,BONUS_RATIO",
+                  "columns": "SECURITY_CODE,SECURITY_NAME_ABBR,NOTICE_DATE,RECORD_DATE,EX_DIVIDEND_DATE,PRETAX_BONUS_RMB,ASSIGN_PROGRESS,REPORT_DATE,TRANSFER_RATIO,BONUS_RATIO,IMPL_PLAN_PROFILE",
                   "pageNumber": str(page),
                   "pageSize": "500",
                   "sortColumns": "EX_DIVIDEND_DATE,SECURITY_CODE",
@@ -94,8 +94,15 @@ jobs:
                   if raw_cash in (None, ""):
                       continue
                   try:
-                      # Eastmoney PRETAX_BONUS_RMB is cash dividend per 10 shares.
+                      # Eastmoney PRETAX_BONUS_RMB is the tax-inclusive cash dividend per 10 shares.
                       cash = float(raw_cash) / 10.0
+                      # Independent unit check against the published plan text, e.g. 10派2.50元.
+                      profile = str(x.get("IMPL_PLAN_PROFILE") or "")
+                      if "10派" in profile:
+                          import re
+                          m = re.search(r"10派\s*([0-9]+(?:\.[0-9]+)?)", profile)
+                          if m and abs(float(m.group(1)) / 10.0 - cash) > 1e-6:
+                              raise RuntimeError(f"Dividend unit mismatch for {code} on {exd}: raw={raw_cash}, profile={profile}")
                   except Exception:
                       continue
                   if cash <= 0:
@@ -125,6 +132,8 @@ jobs:
                       "cashDividendPerShare": cash,
                       "implementationStatus": status,
                       "dividendType": "unknown",
+                      "sourceUnit": "每10股税前现金分红",
+                      "unitConversion": "PRETAX_BONUS_RMB / 10 = 每股现金分红",
                       "transferRatio": x.get("TRANSFER_RATIO"),
                       "bonusRatio": x.get("BONUS_RATIO")
                   })
