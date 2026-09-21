@@ -38,14 +38,19 @@ jobs:
 
           # 全A股列表：沪深主板、创业板、科创板、北交所。
           rows=[]
-          for pn in range(1,20):
+          page_size=100
+          total=None
+          pn=1
+          while True:
               data=get_json(QUOTE,{
-                "pn":pn,"pz":500,"po":1,"np":1,"fltt":2,"invt":2,"fid":"f3",
+                "pn":pn,"pz":page_size,"po":1,"np":1,"fltt":2,"invt":2,"fid":"f3",
                 "fs":"m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81",
                 "fields":"f2,f3,f4,f12,f13,f14,f18",
                 "ut":"bd1d9ddb04089700cf9c27f6f7426281"
               })
-              diff=(data.get("data") or {}).get("diff") or []
+              data_section=data.get("data") or {}
+              diff=data_section.get("diff") or []
+              if total is None: total=int(data_section.get("total") or 0)
               if not diff: break
               for x in diff:
                   code=str(x.get("f12") or "")
@@ -56,7 +61,9 @@ jobs:
                         "price":x.get("f2"),"changePct":x.get("f3"),
                         "change":x.get("f4"),"market":x.get("f13")
                       })
-              if len(diff)<500: break
+              if total and len(rows)>=total: break
+              if len(diff)<page_size: break
+              pn += 1
           rows={r["code"]:r for r in rows}
 
           # 分红明细：PRETAX_BONUS_RMB 是每10股税前分红，换算为每股后累计TTM。
