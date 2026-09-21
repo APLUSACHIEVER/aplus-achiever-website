@@ -30,10 +30,21 @@ jobs:
           FS = "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048"
           HEADERS = {"User-Agent":"Mozilla/5.0","Referer":"https://quote.eastmoney.com/"}
 
-          def get_json(url, params):
-              req = urllib.request.Request(url + "?" + urllib.parse.urlencode(params), headers=HEADERS)
-              with urllib.request.urlopen(req, timeout=45) as r:
-                  return json.loads(r.read().decode("utf-8","ignore"))
+          def get_json(url, params, attempts=8):
+              last = None
+              full = url + "?" + urllib.parse.urlencode(params)
+              for attempt in range(1, attempts + 1):
+                  try:
+                      req = urllib.request.Request(full, headers=HEADERS)
+                      with urllib.request.urlopen(req, timeout=45) as r:
+                          return json.loads(r.read().decode("utf-8","ignore"))
+                  except Exception as e:
+                      last = e
+                      if attempt < attempts:
+                          wait = min(20, 2 ** (attempt - 1))
+                          print(f"请求失败 {attempt}/{attempts}: {url} -> {e}; {wait}s 后重试")
+                          time.sleep(wait)
+              raise RuntimeError(f"请求失败 {url}: {last}")
 
           base = {"pz":100,"po":1,"np":1,"fltt":2,"invt":2,"fid":"f12","fs":FS,
                   "fields":"f2,f3,f4,f9,f12,f13,f14","ut":"bd1d9ddb04089700cf9c27f6f7426281"}
@@ -58,7 +69,7 @@ jobs:
           pages = math.ceil(total/100)
           stocks = {}
           for pn in range(1, pages+1):
-              q = get_json(used, {**base,"pn":pn})
+              q = get_json(used, {**base,"pn":pn}, attempts=8)
               items = (q.get("data") or {}).get("diff") or []
               if not items and pn < pages:
                   raise RuntimeError(f"行情第{pn}页为空")
@@ -72,7 +83,7 @@ jobs:
                       }
               if pn % 20 == 0 or pn == pages:
                   print(f"行情 {pn}/{pages}, unique={len(stocks)}")
-              time.sleep(0.02)
+              time.sleep(0.10)
 
           if len(stocks) < total:
               raise RuntimeError(f"全A股不完整：{len(stocks)}/{total}")
@@ -87,7 +98,7 @@ jobs:
                   "pageNumber":pn,"pageSize":500,
                   "sortColumns":"EX_DIVIDEND_DATE","sortTypes":"-1",
                   "source":"WEB","client":"WEB"
-              })
+              }, attempts=8)
               items = (q.get("result") or {}).get("data") or []
               if not items:
                   break
