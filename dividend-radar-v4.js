@@ -6,6 +6,7 @@ const STOCKS = Object.entries(DIVIDEND_DATA).map(([ticker, d]) => ({ ticker, ...
 const DATA_URL = "./data/dividend-radar-quotes.json";
 const REFRESH_MS = 30000;
 const MAX_REASONABLE_YIELD = 15; // abnormal-data warning threshold; never silently cap the yield
+const STABILITY_YEARS = 5;
 
 const money = v => v == null || !Number.isFinite(Number(v)) ? "—" : Number(v).toFixed(2);
 const pct = v => v == null || !Number.isFinite(Number(v)) ? "—" : Number(v).toFixed(2) + "%";
@@ -23,11 +24,25 @@ function peScore(pe) {
   return Math.max(0, Math.min(100, 8 / pe * 100));
 }
 
-function radarScore(y, pe) {
+function stabilityScore(history) {
+  if (!history || !Array.isArray(history.years) || history.years.length !== STABILITY_YEARS) return null;
+  const vals = history.years.map(Number);
+  const paid = vals.filter(v => Number.isFinite(v) && v > 0).length;
+  const continuity = paid / STABILITY_YEARS * 100;
+  const recent = vals.slice(-3);
+  const recentConsistency = recent.filter(v => v > 0).length / 3 * 100;
+  const avg = vals.reduce((a,b) => a + (Number.isFinite(b) ? b : 0), 0) / STABILITY_YEARS;
+  const latest = vals[vals.length - 1];
+  const trend = avg > 0 ? Math.max(0, Math.min(100, latest / avg * 100)) : 0;
+  return continuity * 0.5 + recentConsistency * 0.3 + trend * 0.2;
+}
+
+function radarScore(y, pe, stability) {
   const ds = dividendScore(y);
   const ps = peScore(pe);
   if (ds == null || ps == null) return null;
-  return ds * 0.6 + ps * 0.4;
+  if (stability == null) return ds * 0.6 + ps * 0.4;
+  return ds * 0.45 + ps * 0.30 + stability * 0.25;
 }
 
 function tradingLabel() {
@@ -55,7 +70,8 @@ function render(payload) {
     const y = q && s.dividend > 0 && price > 0 ? s.dividend / price * 100 : null;
     const pe = q && Number.isFinite(Number(q.pe)) ? Number(q.pe) : null;
     const isAbnormal = y != null && y > MAX_REASONABLE_YIELD;
-    const score = !isAbnormal ? radarScore(y, pe) : null;
+    const stability = stabilityScore(DIVIDEND_HISTORY[s.ticker]);
+    const score = !isAbnormal ? radarScore(y, pe, stability) : null;
     if (isAbnormal) abnormal++;
     if (score != null) valid.push({ s, y, pe, score });
 
@@ -63,6 +79,7 @@ function render(payload) {
     const yieldDisplay = isAbnormal ? "异常 " + pct(y) : pct(y);
     const peDisplay = pe != null && pe > 0 ? money(pe) + "x" : "—";
     const scoreDisplay = score != null ? score.toFixed(0) : "—";
+    const stabilityDisplay = stability != null ? stability.toFixed(0) : "—";
     const status = isAbnormal ? "<span class='badge'>异常数据</span>" :
       (q ? "<span class='badge live'>LIVE</span>" : "<span class='badge'>无行情</span>");
 
@@ -74,6 +91,7 @@ function render(payload) {
       "<td class='yield'>" + yieldDisplay + "</td>" +
       "<td>" + peDisplay + "</td>" +
       "<td>" + scoreDisplay + "</td>" +
+      "<td>" + stabilityDisplay + "</td>" +
       "<td class='target'>" + (target(s.dividend, .045) ? money(target(s.dividend, .045)) : "—") + "</td>" +
       "<td class='target'>" + (target(s.dividend, .05) ? money(target(s.dividend, .05)) : "—") + "</td>" +
       "<td class='target'>" + (target(s.dividend, .06) ? money(target(s.dividend, .06)) : "—") + "</td>" +
@@ -87,6 +105,7 @@ function render(payload) {
   const bestRadar = valid.length ? valid.reduce((a,b) => a.score > b.score ? a : b) : null;
   const five = valid.filter(x => x.y >= 5).length;
   const lowPE = valid.filter(x => x.pe <= 12).length;
+  const stable = valid.filter(x => stabilityScore(DIVIDEND_HISTORY[x.s.ticker]) >= 80).length;
   const count = Object.values(quotes).filter(Boolean).length;
   const generated = payload && payload.generatedAt ? new Date(payload.generatedAt) : null;
 
@@ -96,10 +115,10 @@ function render(payload) {
     "</div><div class='card-note'>年度现金分红 ÷ 最新股价；异常值不参与综合分</div></div>" +
     "<div class='card'><div class='card-label'>高股息 × 低PE</div><div class='card-value'>" +
       (bestRadar ? bestRadar.s.name + " " + bestRadar.score.toFixed(0) : "—") +
-    "</div><div class='card-note'>股息率60% + 动态PE40%；不是投资建议</div></div>" +
+    "</div><div class='card-note'>股息率45% + 动态PE30% + 分红稳定性25%</div></div>" +
     "<div class='card'><div class='card-label'>达到5%股息率</div><div class='card-value'>" +
       five + " / " + STOCKS.length +
-    "</div><div class='card-note'>当前有效数据中；低PE≤12x：" + lowPE + "只</div></div>" +
+    "</div><div class='card-note'>当前有效数据中；低PE≤12x：" + lowPE + "只；稳定性≥80：" + stable + "只</div></div>" +
     "<div class='card'><div class='card-label'>数据状态</div><div class='card-value'>" +
       count + " / " + STOCKS.length +
     "</div><div class='card-note'>PE来自东方财富动态PE；异常值：" + abnormal + "</div></div>";
