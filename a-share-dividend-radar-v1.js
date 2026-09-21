@@ -1,5 +1,5 @@
 const DATA_URL="./data/a-share-dividend-radar.json";
-const QUOTE_URL="https://82.push2.eastmoney.com/api/qt/clist/get";
+const QUOTE_URL="https://push2.eastmoney.com/api/qt/clist/get";
 const DIV_URL="https://datacenter-web.eastmoney.com/api/data/v1/get";
 const state={rows:[],filtered:[]};
 const $=id=>document.getElementById(id);
@@ -44,10 +44,21 @@ function renderStats(payload){
   $("lastUpdated").textContent=dt?"数据更新："+dt.toLocaleString("zh-CN",{hour12:false}):"数据更新：刚刚";
   $("marketStatus").textContent=valid.length?"🟢 全A股数据已连接":"🟡 等待数据";
 }
-async function getJson(url,params){
-  const u=new URL(url);Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,v));
-  const r=await fetch(u.toString(),{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status);return r.json();
+function jsonp(url,params={},timeout=20000){
+  return new Promise((resolve,reject)=>{
+    const cb="__aShareRadar_"+Date.now()+"_"+Math.random().toString(36).slice(2);
+    const s=document.createElement("script"),u=new URL(url);
+    Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,v));
+    u.searchParams.set("cb",cb);
+    let done=false;
+    const cleanup=()=>{if(s.parentNode)s.parentNode.removeChild(s);try{delete window[cb]}catch{}};
+    const timer=setTimeout(()=>{if(done)return;done=true;cleanup();reject(new Error("JSONP timeout"))},timeout);
+    window[cb]=data=>{if(done)return;done=true;clearTimeout(timer);cleanup();resolve(data)};
+    s.onerror=()=>{if(done)return;done=true;clearTimeout(timer);cleanup();reject(new Error("JSONP network error"))};
+    s.src=u.toString();document.head.appendChild(s);
+  });
 }
+async function getJson(url,params){return jsonp(url,params);}
 async function loadLive(){
   const fs="m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048";
   const base={pz:100,po:1,np:1,fltt:2,invt:2,fid:"f12",fs,fields:"f2,f3,f4,f9,f12,f13,f14",ut:"bd1d9ddb04089700cf9c27f6f7426281"};
