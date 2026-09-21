@@ -1,0 +1,17 @@
+/* Isolated layout refinement for A-share Dividend Radar */
+.page{max-width:1580px;padding:24px 22px 56px}
+.hero{padding:18px 20px 20px;margin-bottom:16px;background:linear-gradient(135deg,#ffffff,#f4f8f5);border:1px solid #e1ebe5;border-radius:20px;box-shadow:0 10px 28px rgba(31,70,53,.06);align-items:center}
+.brand-lockup{gap:12px!important;margin-bottom:8px!important}
+.brand-lockup img{width:76px!important;height:76px!important;flex:0 0 76px}
+.brand-lockup span{font-size:21px!important;font-weight:900!important}
+.hero h1{font-size:34px;margin-top:2px}
+.subtitle{font-size:13px;margin-top:6px}
+.status-wrap{min-width:180px;padding:10px 12px;background:#fff;border:1px solid #e5eee9;border-radius:12px}
+.search-panel{grid-template-columns:minmax(360px,1fr) 180px 200px;align-items:end;padding:14px;margin-bottom:12px}
+.stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:12px}
+.stat{padding:13px 14px}
+.table-card{border-radius:18px}
+.table-head{padding:13px 16px;background:#fbfdfc}
+.table-scroll{max-height:70vh}
+/* The explanatory footer has been removed; keep the data table as the visual endpoint. */
+@media(max-width:800px){.page{padding:12px 8px 36px}.hero{padding:14px;border-radius:16px}.brand-lockup img{width:64px!important;height:64px!important;flex-basis:64px}.brand-lockup span{font-size:17px!important}.hero h1{font-size:27px}.search-panel{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.table-scroll{max-height:65vh}}
