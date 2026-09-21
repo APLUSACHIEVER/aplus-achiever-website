@@ -2,6 +2,9 @@ name: A-share dividend history builder (isolated)
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/a-share-dividend-history.yml"
   schedule:
     - cron: "17 2 * * *"
 
