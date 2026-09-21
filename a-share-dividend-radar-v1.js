@@ -44,12 +44,12 @@ function renderStats(payload){
   $("lastUpdated").textContent=dt?"数据更新："+dt.toLocaleString("zh-CN",{hour12:false}):"数据更新：刚刚";
   $("marketStatus").textContent=valid.length?"🟢 全A股数据已连接":"🟡 等待数据";
 }
-function jsonp(url,params={},timeout=20000){
+function jsonp(url,params={},timeout=20000,callbackParam="cb"){
   return new Promise((resolve,reject)=>{
     const cb="__aShareRadar_"+Date.now()+"_"+Math.random().toString(36).slice(2);
     const s=document.createElement("script"),u=new URL(url);
     Object.entries(params).forEach(([k,v])=>u.searchParams.set(k,v));
-    u.searchParams.set("cb",cb);
+    u.searchParams.set(callbackParam,cb);
     let done=false;
     const cleanup=()=>{if(s.parentNode)s.parentNode.removeChild(s);try{delete window[cb]}catch{}};
     const timer=setTimeout(()=>{if(done)return;done=true;cleanup();reject(new Error("JSONP timeout"))},timeout);
@@ -58,15 +58,16 @@ function jsonp(url,params={},timeout=20000){
     s.src=u.toString();document.head.appendChild(s);
   });
 }
-async function getJson(url,params){return jsonp(url,params);}
+async function getQuoteJson(url,params){return jsonp(url,params,20000,"cb");}
+async function getDivJson(url,params){return jsonp(url,params,20000,"callback");}
 async function loadLive(){
   const fs="m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23,m:0+t:81+s:2048";
   const base={pz:100,po:1,np:1,fltt:2,invt:2,fid:"f12",fs,fields:"f2,f3,f4,f9,f12,f13,f14",ut:"bd1d9ddb04089700cf9c27f6f7426281"};
-  const probe=await getJson(QUOTE_URL,{...base,pn:1}),total=Number(probe?.data?.total||0),pageSize=100;
+  const probe=await getQuoteJson(QUOTE_URL,{...base,pn:1}),total=Number(probe?.data?.total||0),pageSize=100;
   if(total<=100)throw new Error("全A股接口返回异常 total="+total);
   const pages=Math.ceil(total/pageSize),chunks=[];
   for(let start=1;start<=pages;start+=8){
-    const batch=[];for(let pn=start;pn<Math.min(start+8,pages+1);pn++)batch.push(getJson(QUOTE_URL,{...base,pn}));
+    const batch=[];for(let pn=start;pn<Math.min(start+8,pages+1);pn++)batch.push(getQuoteJson(QUOTE_URL,{...base,pn}));
     const results=await Promise.all(batch);results.forEach(x=>(x?.data?.diff||[]).forEach(v=>chunks.push(v)));
     $("marketStatus").textContent="🟢 正在读取全A股行情 "+Math.min(start+7,pages)+"/"+pages;
   }
@@ -75,7 +76,7 @@ async function loadLive(){
   if(rowsMap.size<total)throw new Error("全A股分页不完整 "+rowsMap.size+"/"+total);
   const cutoff=new Date(Date.now()-365*86400000).toISOString().slice(0,10),div=new Map();
   for(let pn=1;pn<=30;pn++){
-    const x=await getJson(DIV_URL,{reportName:"RPT_SHAREBONUS_DET",columns:"SECURITY_CODE,SECURITY_NAME_ABBR,PRETAX_BONUS_RMB,EX_DIVIDEND_DATE,ASSIGN_PROGRESS",filter:"(EX_DIVIDEND_DATE>='"+cutoff+"')",pageNumber:pn,pageSize:500,sortColumns:"EX_DIVIDEND_DATE",sortTypes:"-1",source:"WEB",client:"WEB"});
+    const x=await getDivJson(DIV_URL,{reportName:"RPT_SHAREBONUS_DET",columns:"SECURITY_CODE,SECURITY_NAME_ABBR,PRETAX_BONUS_RMB,EX_DIVIDEND_DATE,ASSIGN_PROGRESS",filter:"(EX_DIVIDEND_DATE>='"+cutoff+"')",pageNumber:pn,pageSize:500,sortColumns:"EX_DIVIDEND_DATE",sortTypes:"-1",source:"WEB",client:"WEB"});
     const data=x?.result?.data||[];if(!data.length)break;
     data.forEach(v=>{const code=String(v.SECURITY_CODE||""),date=String(v.EX_DIVIDEND_DATE||"").slice(0,10),progress=String(v.ASSIGN_PROGRESS||""),cash=Number(v.PRETAX_BONUS_RMB||0)/10;if(code&&date>=cutoff&&progress.includes("实施")&&cash>0)div.set(code,(div.get(code)||0)+cash);});
     $("marketStatus").textContent="🟢 正在读取近12个月分红 "+pn+"/30";if(data.length<500)break;
