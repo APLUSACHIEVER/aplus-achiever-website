@@ -2,9 +2,12 @@ name: APLUS A-share Dividend Radar Repair V3
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"
   push:
     paths:
       - ".github/workflows/a-share-dividend-radar-repair-v3.yml"
+      - ".github/a-share-dividend-radar-repair-v3.trigger"
 
 permissions:
   contents: write
