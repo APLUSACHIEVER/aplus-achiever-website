@@ -5,8 +5,8 @@
 .module-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;border:0;background:#f8fbf9;color:#17372e;padding:14px 18px;font-size:16px;font-weight:800;cursor:pointer;text-align:left}
 .module-toggle:hover{background:#f1f7f3}
 .module-toggle-icon{font-size:18px;transition:transform .2s ease}
-.collapsible-module.is-collapsed .module-toggle-icon{transform:rotate(180deg)}
-.collapsible-module.is-collapsed .module-content{display:none}
+.collapsible-module.is-collapsed .module-toggle-icon,.dividend-analysis.is-collapsed .module-toggle-icon{transform:rotate(180deg)}
+.collapsible-module.is-collapsed .module-content,.dividend-analysis.is-collapsed .module-content{display:none}
 #dividendRadarModule .search-panel{margin-bottom:12px}
 #dividendRadarModule .table-card{border:0;border-radius:0;box-shadow:none}
 #aShareDividendAnalysis{margin-top:22px}
