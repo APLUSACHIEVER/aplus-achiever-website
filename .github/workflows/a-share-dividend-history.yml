@@ -26,7 +26,7 @@ jobs:
           from datetime import datetime, timedelta, timezone
 
           ENDPOINT = "https://datacenter-web.eastmoney.com/api/data/v1/get"
-          CUTOFF = (datetime.now(timezone.utc) - timedelta(days=5*366)).strftime("%Y-%m-%d")
+          CUTOFF = (datetime.now(timezone.utc) - timedelta(days=7*366)).strftime("%Y-%m-%d")
           rows = []
           seen = set()
 
@@ -87,12 +87,19 @@ jobs:
           out = {
               "generatedAt":datetime.now(timezone.utc).isoformat(),
               "cutoff":CUTOFF,
-              "cutoffYears":5,
+              "cutoffYears":7,
               "count":len(rows),
               "rows":rows
           }
-          if len(rows) < 100:
+          if len(rows) < 1000:
               raise SystemExit(f"History build unexpectedly small: {len(rows)} records")
+          by={}
+          for r in rows:
+              by.setdefault(r["code"],set()).add(r["reportYear"])
+          current_year=datetime.now(timezone.utc).year
+          for c in ["600036","601398","601939","601288","601728"]:
+              if len([y for y in by.get(c,set()) if y and int(y)<current_year])<3:
+                  raise SystemExit(f"Golden stock history incomplete: {c}")
           path="data/a-share-dividend-history.json"
           with open(path,"w",encoding="utf-8") as f:
               json.dump(out,f,ensure_ascii=False,separators=(",",":"))
