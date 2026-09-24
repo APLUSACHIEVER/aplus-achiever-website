@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-24T05:46:23.454219+00:00",
+  "generatedAt": "2026-09-24T05:57:22.775349+00:00",
   "source": "Eastmoney public quote API",
   "quotes": {
     "600031": {
       "name": "三一重工",
-      "price": 17.27,
-      "change": -0.24,
-      "changePct": -1.37,
+      "price": 17.26,
+      "change": -0.25,
+      "changePct": -1.43,
       "pe": null
     },
     "600585": {
