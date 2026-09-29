@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="APLUS AI Tutor — personalised P3, P4 and P5 English learning.">
+  <title>Aplus Achiever AI Tutor</title>
+  <link rel="stylesheet" href="https://aplusachiever.github.io/aplus-achiever-website/aitutor-student-v1-20260918.css">
+
+  <style>
+    .micro-practice{display:flex;flex-direction:column;gap:10px;margin-top:18px;width:100%;max-width:290px}
+    .micro-practice-title{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;opacity:.7;text-align:center;margin-bottom:2px}
+    .micro-practice-btn{display:grid;grid-template-columns:28px 1fr;grid-template-rows:auto auto;align-items:center;text-align:left;column-gap:9px;border:1px solid rgba(38,108,88,.16);background:#fff;border-radius:14px;padding:11px 14px;color:#245d4d;box-shadow:0 6px 18px rgba(38,108,88,.08);cursor:pointer;font:inherit;transition:transform .18s ease,box-shadow .18s ease}
+    .micro-practice-btn:hover{transform:translateY(-1px);box-shadow:0 9px 22px rgba(38,108,88,.12)}
+    .micro-practice-btn span{grid-row:1 / span 2;font-size:19px;line-height:1;text-align:center}
+    .micro-practice-btn b{font-size:14px;line-height:1.2}
+    .micro-practice-btn small{font-size:11px;opacity:.65;margin-top:2px}
+    @media (max-width:700px){.micro-practice{max-width:100%}}
+    @media (max-width:650px){.hero-orb{display:block;width:100%;min-width:0;margin-top:22px}.micro-practice{margin:18px auto 0;max-width:100%}.micro-practice-btn{width:100%;min-height:52px}}
+      .orb-avatar{width:156px;height:156px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid rgba(38,108,88,.12);box-shadow:0 14px 34px rgba(38,108,88,.12);margin:0 auto 12px;position:relative}
+    .orb-avatar img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 22%}
+    @media (max-width:650px){.orb-avatar{width:138px;height:138px}}
+</style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+      
+        <div><div class="brand-title">Aplus AI Learning System</div><div class="brand-subtitle">Your personal learning coach</div></div>
+      </div>
+      <div class="top-actions"><span class="data-status" id="dataStatus">Loading Tutor Brain…</span><button class="ghost-btn" id="resetBtn" type="button">Reset Profile</button></div>
+    </header>
+    <main>
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="eyebrow">P3 · P4 · P5</span>
+          <h1>What would you like to learn today?</h1>
+          <p>Your school level sets the starting point. Your learning history helps the Tutor Brain choose the right difficulty, skill and review path.</p>
+          <div class="level-picker" role="group" aria-label="Choose school level">
+            <button class="level-btn active" data-level="P3" type="button"><strong>P3</strong><span>Foundation</span></button>
+            <button class="level-btn" data-level="P4" type="button"><strong>P4</strong><span>Build</span></button>
+            <button class="level-btn" data-level="P5" type="button"><strong>P5</strong><span>Challenge</span></button>
+          </div>
+        </div>
+        <div class="hero-orb">
+          <div class="micro-practice">
+            <div class="micro-practice-title">Choose your practice time</div>
+            <button class="micro-practice-btn" data-mode="micro2" type="button"><span>⚡</span><b>2-Minute Practice</b><small>Quick practice · 8 questions</small></button>
+            <button class="micro-practice-btn" data-mode="micro3" type="button"><span>🚀</span><b>3-Minute Practice</b><small>Focused practice · 12 questions</small></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="main-column">
+          <div class="section-heading"><div><span class="eyebrow">TODAY’S LEARNING</span><h2>Choose your practice</h2></div><span class="smart-pill" id="smartPill">Adaptive</span></div>
+          <div class="practice-grid">
+            <button class="practice-card" data-mode="vocabulary" type="button"><span class="practice-icon">Aa</span><span><b>Vocabulary</b><small>Meaning, context & word use</small></span><i>→</i></button>
+            <button class="practice-card" data-mode="grammar" type="button"><span class="practice-icon">G</span><span><b>Grammar</b><small>Rules, forms & sentence accuracy</small></span><i>→</i></button>
+            <button class="practice-card" data-mode="review" type="button"><span class="practice-icon">↻</span><span><b>Smart Review</b><small>Recover weak skills and recent mistakes</small></span><i>→</i></button>
+            <button class="practice-card" data-mode="mixed" type="button"><span class="practice-icon">✦</span><span><b>Mixed Challenge</b><small>Vocabulary + grammar transfer</small></span><i>→</i></button>
+          </div>
+
+          <section class="stats-grid">
+            <article class="stat-card"><span>Questions</span><strong id="statQuestions">0</strong><small>answered</small></article>
+            <article class="stat-card"><span>Accuracy</span><strong id="statAccuracy">—</strong><small>overall</small></article>
+            <article class="stat-card"><span>Mastery</span><strong id="statMastery">0%</strong><small>tracked skills</small></article>
+            <article class="stat-card"><span>Review</span><strong id="statReview">0</strong><small>items to revisit</small></article>
+          </section>
+
+          <section class="quiz-card" id="quizCard">
+            <div class="quiz-top"><div><span class="eyebrow" id="quizLabel">READY</span><div class="question-progress" id="questionProgress">Start a practice session</div></div><button class="text-btn" id="closeQuiz" type="button">Close</button></div>
+            <div id="questionArea" class="question-area" aria-live="polite" aria-atomic="true"><div class="empty-quiz"><div class="empty-icon">✦</div><h3>Your next question is waiting.</h3><p>Choose Vocabulary, Grammar, Smart Review or Mixed Challenge above.</p></div></div>
+          </section>
+        </div>
+        <aside class="side-column">
+          <section class="panel skills-panel"><div class="panel-title"><div><span class="eyebrow">YOUR SKILLS</span><h2>Learning snapshot</h2></div></div><div id="skillsList"></div></section>
+          <section class="panel"><div class="panel-title"><div><span class="eyebrow">SMART REVIEW</span><h2>What needs attention?</h2></div></div><div id="reviewList" class="review-list"></div></section>
+          <section class="panel path-panel"><div class="panel-title"><div><span class="eyebrow">MY LEARNING PATH</span><h2>Next steps</h2></div></div><div id="pathList" class="path-list"></div></section>
+          <section class="panel tutor-panel"><span class="eyebrow">AI TUTOR</span><h2>Ask your Tutor</h2><p>Your recent answers guide these actions.</p><div class="tutor-actions"><button data-action="explain" type="button">Explain my mistake</button><button data-action="easier" type="button">Make it easier</button><button data-action="another" type="button">Give me another</button><button data-action="challenge" type="button">Challenge me</button></div></section>
+        </aside>
+      </section>
+    </main>
+    <footer>APLUS ACHIEVER · AI Tutor Student Centre · P3–P5</footer>
+  </div>
+  <script>
+  window.APLUS_AI_TUTOR_RUNTIME=window.APLUS_AI_TUTOR_RUNTIME||{errors:[]};
+  window.addEventListener('error',function(e){
+    try{window.APLUS_AI_TUTOR_RUNTIME.errors.push({type:'error',message:String(e.message||'Unknown script error'),source:String(e.filename||''),line:e.lineno||0,column:e.colno||0});}catch(_){}
+  });
+  window.addEventListener('unhandledrejection',function(e){
+    try{window.APLUS_AI_TUTOR_RUNTIME.errors.push({type:'unhandledrejection',message:String(e.reason?.message||e.reason||'Unhandled promise rejection')});}catch(_){}
+  });
+  </script>
+  <script src="data/vocabulary.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-rich-p3-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-rich-p45-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-wordfamily-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-confusables-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-contextclues-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-collocations-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-vocabulary-question-dna-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script src="aplus-ai-db-v1-grammar-large-p3p5-batch01-20260918.js?v=20260919aitutor9"></script>
+  <script>
+  /* P3–P5 Vocabulary Context Engine v4
+     Safe rule: exact database examples first; semantic generation only when confident.
+  */
+  (() => {
+    const clean = v => String(v ?? '').trim();
+    const stripDef = v => clean(v).replace(/^[\"'“”]+|[\"'“”]+$/g,'').replace(/[.]+$/,'');
+    const wordEscaped = word => clean(word).replace(/[.*+?^$()|[\]\\]/g,'\\$&');
+
+    const hasTarget = (text, word) => {
+      const w=clean(word), t=clean(text);
+      if(!w || !t) return false;
+      return new RegExp('\\b'+wordEscaped(w)+'\\b','i').test(t);
+    };
+
+    const getPos = record => {
+      const explicit=clean(record?.partOfSpeech || record?.pos || record?.wordType || record?.type).toLowerCase();
+      if(explicit){
+        if(/verb/.test(explicit) && !/adverb/.test(explicit)) return 'verb';
+        if(/noun/.test(explicit)) return 'noun';
+        if(/adject/.test(explicit)) return 'adjective';
+        if(/adverb/.test(explicit)) return 'adverb';
+      }
+      const word=clean(record?.word).toLowerCase();
+      const d=stripDef(record?.definition || record?.meaning).toLowerCase();
+      if(/^to\s+/.test(d)) return 'verb';
+      if(/^(a|an|the)\s+/.test(d)) return 'noun';
+      if(/^(very|extremely|quite|full of|having|able to|likely to|eager to|willing to|showing|feeling)\b/.test(d)) return 'adjective';
+      if(/ly$/.test(word)) return 'adverb';
+      return '';
+    };
+
+    const semanticContext = (record) => {
+      const d=stripDef(record?.definition || record?.meaning).toLowerCase();
+      const pos=getPos(record);
+      if(!d) return '';
+
+      if(pos==='verb'){
+        if(/diminish|become or make smaller|become smaller|decrease|reduce|weaken/.test(d))
+          return 'The noise began to _____ after midnight.';
+        if(/identify|recognise or name|recognize or name|recognise|recognize/.test(d))
+          return 'The pupils had to _____ the main idea before answering the question.';
+        if(/recommend|suggest|advise/.test(d))
+          return 'The teacher would _____ this book to pupils who enjoy adventure stories.';
+        if(/determine|find out|decide something|decide what/.test(d))
+          return 'The scientists carried out tests to _____ the cause of the problem.';
+        if(/analyse|analyze|examine.*carefully|examine something carefully/.test(d))
+          return 'The pupils had to _____ the information carefully before drawing a conclusion.';
+        if(/evaluate|judge.*quality|judge.*value|assess/.test(d))
+          return 'The teacher asked the pupils to _____ the results before choosing a solution.';
+        if(/consider|think about|take into account/.test(d))
+          return 'Before making a decision, Daniel decided to _____ all the possible consequences.';
+        if(/retrieve|get something back|recover/.test(d))
+          return 'He returned to the classroom to _____ the book he had left behind.';
+        if(/enhance|improve.*quality|improve.*value|make.*better/.test(d))
+          return 'The new design will _____ the appearance of the classroom.';
+        if(/expand|become larger|make larger|increase in size/.test(d))
+          return 'The balloon began to _____ as more air was added.';
+        if(/emerge|come into view|become known|appear/.test(d))
+          return 'The sun began to _____ from behind the clouds.';
+        if(/give special importance|special importance|stress|highlight|draw attention/.test(d))
+          return 'The teacher asked the pupils to _____ the most important point in their answers.';
+        if(/encounter|meet or experience|experience.*unexpectedly/.test(d))
+          return 'The hikers were surprised to _____ heavy rain on the way to the summit.';
+        if(/endure|suffer.*without giving up|tolerate|withstand/.test(d))
+          return 'The runner had to _____ the pain and continue the race.';
+        if(/influence|affect.*develop|affect.*decision|affect/.test(d))
+          return 'Friends can _____ the choices that we make.';
+        if(/maintain|keep.*good condition|keep.*same level/.test(d))
+          return 'Regular exercise helps us _____ good health.';
+        if(/modify|change.*slightly|adjust/.test(d))
+          return 'We had to _____ the plan after receiving new information.';
+        if(/obtain|get something|acquire|gain/.test(d))
+          return 'You must _____ permission before entering the laboratory.';
+        if(/preserve|protect|keep.*safe|keep.*good condition/.test(d))
+          return 'We should _____ the old building because it has historical value.';
+        if(/prohibit|officially stop|ban|prevent.*from being done/.test(d))
+          return 'The sign is meant to _____ visitors from entering the area.';
+        if(/resolve|solve.*problem|settle.*disagreement|settle.*problem/.test(d))
+          return 'The two groups worked together to _____ the disagreement.';
+        if(/retain|keep or continue to have|keep.*information|continue to have/.test(d))
+          return 'Regular review helps students _____ new information for longer.';
+        if(/transform|change greatly|change.*appearance|change.*form/.test(d))
+          return 'The pupils worked together to _____ the empty room into a reading corner.';
+        if(/verify|check.*true|check.*accurate|confirm/.test(d))
+          return 'Always _____ the information before using it in your report.';
+        if(/adapt|change to suit|adjust.*new situation/.test(d))
+          return 'Animals must _____ to changes in their surroundings.';
+        if(/anticipate|expect.*happen|prepare.*in advance/.test(d))
+          return 'The team tried to _____ possible problems before the event began.';
+        if(/appreciate|understand the value|value/.test(d))
+          return 'We should _____ the effort that our classmates put into the project.';
+        if(/contribute|give or add|add something|give something/.test(d))
+          return 'Everyone was encouraged to _____ an idea during the discussion.';
+        if(/convince|persuade/.test(d))
+          return 'She tried to _____ her parents that she was ready to be more independent.';
+        if(/demonstrate|show clearly|show how/.test(d))
+          return 'The teacher used a simple experiment to _____ how the machine works.';
+        if(/distract|take attention away|divert/.test(d))
+          return 'Loud noises can _____ students from their work.';
+        if(/hinder|make progress difficult|obstruct/.test(d))
+          return 'Heavy rain can _____ the workers from completing the task on time.';
+        if(/imitate|copy actions|copy behaviour|copy/.test(d))
+          return 'The child tried to _____ the dancer’s movements.';
+        if(/inspire|make someone want|motivate/.test(d))
+          return 'The teacher’s words helped to _____ the pupils to keep trying.';
+        if(/predict|say what.*happen|forecast/.test(d))
+          return 'Can you _____ what will happen next in the story?';
+        if(/clarify|make.*easier to understand|make.*clear/.test(d))
+          return 'The teacher repeated the instructions to _____ the final step.';
+        if(/cooperate|work together/.test(d))
+          return 'The pupils had to _____ with one another to complete the task.';
+        if(/organis|put in order|make plans/.test(d))
+          return 'The class monitor helped to _____ the books before the lesson began.';
+        return '';
+      }
+
+      if(pos==='adjective'){
+        if(/excited|interested|eager|enthusiastic/.test(d))
+          return 'After hearing the good news, Mia was _____ and could not stop smiling throughout the afternoon.';
+        if(/worried|nervous|anxious|concerned/.test(d))
+          return 'Before the important test, Mia felt _____ and checked her work carefully.';
+        if(/happy|cheerful|positive|optimistic|hopeful/.test(d))
+          return 'Although the task was difficult, Tom remained _____ and encouraged his classmates to keep trying.';
+        if(/calm|patient|peaceful/.test(d))
+          return 'Even when the situation became difficult, Ben remained _____ and dealt with the problem carefully.';
+        if(/brave|courageous|fearless/.test(d))
+          return 'The _____ girl stayed calm and helped her younger brother when they heard the loud noise.';
+        if(/modest|humble/.test(d))
+          return 'Although she won the prize, Sarah remained _____ and thanked her teammates.';
+        if(/careful|cautious|alert/.test(d))
+          return 'The _____ pupil checked the instructions carefully before starting the experiment.';
+        if(/kind|caring|compassionate|sympathetic/.test(d))
+          return 'The _____ girl noticed that her classmate was upset and offered to help.';
+        if(/diligent|hard-working|hardworking|industrious/.test(d))
+          return 'The _____ pupil completed her work carefully and checked every answer.';
+        if(/confident|self-assured/.test(d))
+          return 'The _____ pupil spoke clearly when presenting his ideas to the class.';
+        return '';
+      }
+
+      if(pos==='noun'){
+        if(/determination|perseverance|dedication|persistence/.test(d))
+          return 'The volunteers showed great _____ by continuing to help the community even after many hours of work.';
+        if(/relief|happiness|joy|delight/.test(d))
+          return 'A feeling of _____ spread through the hall when the missing child was found safe.';
+        if(/responsibility|accountability/.test(d))
+          return 'The principal praised the pupil for taking _____ for his mistake and trying to put it right.';
+        if(/kindness|compassion|sympathy/.test(d))
+          return 'Mum showed great _____ when she listened patiently to the child.';
+        if(/courage|bravery/.test(d))
+          return 'The firefighter showed great _____ when he entered the building to help the trapped family.';
+        if(/patience/.test(d))
+          return 'The teacher showed great _____ while helping the younger pupils learn to read.';
+        return '';
+      }
+      return '';
+    };
+
+    const generatedSentenceIsSafe = (sentence, record) => {
+      const s=clean(sentence);
+      const w=clean(record?.word);
+      const pos=getPos(record);
+      if(!s || !w || !pos) return false;
+
+      const lower=s.toLowerCase();
+      if(pos==='verb' && /\b(remained|was|were|felt|seemed|looked|became|stayed)\s+_____/.test(lower)) return false;
+      if(pos==='adjective' && /\bto\s+_____/.test(lower)) return false;
+      if(pos==='noun' && /\bto\s+_____/.test(lower)) return false;
+      return true;
+    };
+
+    const patchRecords = (arr) => {
+      if(!Array.isArray(arr)) return;
+      arr.forEach(record => {
+        if(!record || !record.word) return;
+        const word=clean(record.word);
+        const examples=Array.isArray(record.examples) ? record.examples.map(clean).filter(Boolean) : [];
+
+        // Preserve a real database example whenever the exact target word occurs.
+        const natural=examples.find(x => hasTarget(x,word));
+        if(natural){
+          record.examples=[natural,...examples.filter(x=>x!==natural)];
+          return;
+        }
+
+        // Generate only when the semantic mapping is confident.
+        const generated=semanticContext(record);
+        if(generated && generatedSentenceIsSafe(generated,record)){
+          record.examples=[generated,...examples];
+        }else{
+          // Do not manufacture a question for an uncertain record.
+          record.examples=examples;
+        }
+      });
+    };
+
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P3);
+    patchRecords(window.APLUS_AI_DB_V1_VOCABULARY_RICH_P45);
+  })();
+  </script>
+  <script src="aitutor-student-v2-20260918.js?v=20260919aitutor9"></script>
+  <script>
+  /* Isolated AI Tutor QA Gate
+     Scope: aitutor.html only.
+     Safety rule: never replace the question/options or alter the Tutor Brain state.
+     It only removes a known non-PSLE meta-question wrapper from the rendered prompt.
+  */
+  (() => {
+    const area=document.getElementById('questionArea');
+    if(!area) return;
+
+    const recordQA=(item)=>{
+      try{
+        window.APLUS_AI_TUTOR_RUNTIME=window.APLUS_AI_TUTOR_RUNTIME||{errors:[]};
+        window.APLUS_AI_TUTOR_RUNTIME.qa=window.APLUS_AI_TUTOR_RUNTIME.qa||[];
+        window.APLUS_AI_TUTOR_RUNTIME.qa.push(item);
+        window.APLUS_AI_TUTOR_RUNTIME.qa=window.APLUS_AI_TUTOR_RUNTIME.qa.slice(-50);
+      }catch(_){}
+    };
+
+    const validateQuestion=()=>{
+      const label=(document.getElementById('quizLabel')?.textContent||'').trim().toUpperCase();
+      const node=area.querySelector('.question-text');
+      if(!node) return;
+
+      const raw=(node.textContent||'').trim();
+      if(!raw) return;
+
+      // Known fallback used by the Grammar engine. Keep the sentence/options/answer intact;
+      // remove only the generic instruction prefix so the learner sees the intended PSLE-style item.
+      const prefix='Choose the correct form for the grammar point in this sentence:';
+      if(label==='GRAMMAR' && raw.toLowerCase().startsWith(prefix.toLowerCase())){
+        const sentence=raw.slice(prefix.length).trim();
+        if(sentence){
+          node.textContent=sentence;
+          recordQA({type:'grammar-wrapper-normalized',from:raw,to:sentence,level:(document.getElementById('questionProgress')?.textContent||'').split('·').pop()?.trim()||''});
+        }
+      }
+
+      // Never allow an empty or instruction-only question to remain visible.
+      const finalText=(node.textContent||'').trim();
+      if(label==='GRAMMAR' && /^choose the correct form for the grammar point/i.test(finalText)){
+        recordQA({type:'grammar-meta-question-detected',prompt:finalText});
+      }
+    };
+
+    const observer=new MutationObserver(()=>validateQuestion());
+    observer.observe(area,{childList:true,subtree:true});
+    validateQuestion();
+  })();
+  </script>
+
+</body>
+</html>
