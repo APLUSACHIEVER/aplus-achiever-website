@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T00:21:55.599435+00:00",
+  "generatedAt": "2026-09-30T00:45:54.285920+00:00",
   "source": "Eastmoney public quote API",
   "quotes": {
     "600031": {
@@ -10,7 +10,7 @@
       "pe": null
     },
     "600585": {
-      "name": "海螺水泥",
+      "name": "XD海螺水",
       "price": 16.98,
       "change": 0.21,
       "changePct": 1.25,
