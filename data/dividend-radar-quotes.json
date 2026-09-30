@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T06:12:23.828292+00:00",
+  "generatedAt": "2026-09-30T06:56:49.738797+00:00",
   "source": "Eastmoney public quote API",
   "quotes": {
     "600031": {
@@ -11,16 +11,16 @@
     },
     "600585": {
       "name": "XD海螺水",
-      "price": 17.55,
-      "change": 0.7,
-      "changePct": 4.15,
+      "price": 17.52,
+      "change": 0.67,
+      "changePct": 3.98,
       "pe": null
     },
     "600507": {
       "name": "方大特钢",
-      "price": 4.07,
-      "change": 0.09,
-      "changePct": 2.26,
+      "price": 4.09,
+      "change": 0.11,
+      "changePct": 2.76,
       "pe": null
     },
     "600010": {
@@ -32,9 +32,9 @@
     },
     "600350": {
       "name": "山东高速",
-      "price": 10.11,
-      "change": 0.15,
-      "changePct": 1.51,
+      "price": 10.17,
+      "change": 0.21,
+      "changePct": 2.11,
       "pe": null
     },
     "600050": {
