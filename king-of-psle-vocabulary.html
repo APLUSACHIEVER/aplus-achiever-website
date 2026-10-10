@@ -100,7 +100,7 @@ h1 span{display:block;color:var(--gold)}
     <p id="loadingNote" class="best">Loading the vocabulary list…</p>
   </section>
   <section id="gamePanel" class="panel hidden" aria-live="polite">
-    <div class="game-head"><span id="questionCounter" class="counter">QUESTION 1 / 30</span><span id="scorePill" class="score-pill">⭐ Score: 0</span></div>
+    <div class="game-head"><span id="questionCounter" class="counter">QUESTION 1 / 30</span><span id="scorePill" class="score-pill">🪙 K币: 0</span></div>
     <div class="timer-row"><span>TIME LEFT</span><span id="timer" class="timer">10:00</span></div>
     <div class="track"><i id="timeBar"></i></div>
     <div class="question-area"><div class="eyebrow">CHOOSE THE BEST WORD</div><p class="instruction">Which word fits the sentence?</p><div id="sentence" class="sentence">Loading question…</div></div>
@@ -163,7 +163,7 @@ h1 span{display:block;color:var(--gold)}
     clearInterval(timerId);clearTimeout(nextId);
     index=0;score=0;answered=0;wrongWords=[];secondsLeft=TEST_SECONDS;locked=false;ended=false;
     $('startPanel').classList.add('hidden');$('resultPanel').classList.add('hidden');$('gamePanel').classList.remove('hidden');
-    $('scorePill').textContent='⭐ Score: 0';renderQuestion();updateTimer();
+    $('scorePill').textContent='🪙 K币: 0';renderQuestion();updateTimer();
     timerId=setInterval(()=>{if(ended)return;secondsLeft--;updateTimer();if(secondsLeft<=0)finishGame(true);},1000);
     window.scrollTo({top:0,behavior:'smooth'});
   }
@@ -178,7 +178,7 @@ h1 span{display:block;color:var(--gold)}
   function renderQuestion(){
     if(ended)return;if(index>=TOTAL_QUESTIONS){finishGame(false);return;}
     locked=false;const q=questions[index];
-    $('questionCounter').textContent='QUESTION '+(index+1)+' / '+TOTAL_QUESTIONS;$('scorePill').textContent='⭐ Score: '+score;
+    $('questionCounter').textContent='QUESTION '+(index+1)+' / '+TOTAL_QUESTIONS;$('scorePill').textContent='🪙 K币: '+(score*5);
     $('sentence').textContent=q.sentence;$('feedback').className='feedback hidden';$('feedback').textContent='';
     const box=$('answers');box.innerHTML='';
     q.choices.forEach((choice,i)=>{
@@ -198,7 +198,7 @@ h1 span{display:block;color:var(--gold)}
       else if(btn===button&&!isCorrect)btn.classList.add('wrong');
     });
     const feedback=$('feedback');feedback.classList.remove('hidden');
-    if(isCorrect){score++;feedback.className='feedback good';feedback.textContent='✓ Correct! Keep going.';}
+    if(isCorrect){score++;feedback.className='feedback good';feedback.textContent='✓ Correct! +5 K币';}
     else{wrongWords.push(q.word);feedback.className='feedback bad';feedback.textContent='Not quite. Correct answer: '+q.answer;}
     $('scorePill').textContent='⭐ Score: '+score;
     nextId=setTimeout(()=>{if(ended)return;index++;renderQuestion();},650);
@@ -213,7 +213,7 @@ h1 span{display:block;color:var(--gold)}
     else if(accuracy>=75){crown='🥇';title='Gold Crown Level!';}
     else if(accuracy>=60){crown='🥈';title='Silver Crown Level!';}
     else if(accuracy>=40){crown='🥉';title='Bronze Crown Level!';}
-    $('resultCrown').textContent=crown;$('resultTitle').textContent=title;$('resultScore').textContent=score+' / '+answered;
+    $('resultCrown').textContent=crown;$('resultTitle').textContent=title;$('resultScore').textContent=(score*5)+' K币';
     $('resultSub').textContent=timeUp?'Time is up! You answered '+answered+' questions.':'You finished the challenge in '+formatTime(TEST_SECONDS-secondsLeft)+'.';
     $('correctCount').textContent=score;$('accuracy').textContent=accuracy+'%';
     const review=$('reviewBox');
@@ -224,10 +224,10 @@ h1 span{display:block;color:var(--gold)}
     }else{review.className='feedback good';review.textContent='Perfect round — no missed words!';}
     try{
       const previous=JSON.parse(localStorage.getItem(BEST_KEY)||'null');
-      const oldBest=previous&&Number(previous.score)>=0?previous:null;
-      const isBest=!oldBest||score>Number(oldBest.score)||(score===Number(oldBest.score)&&accuracy>Number(oldBest.accuracy));
-      const best=isBest?{score,accuracy,date:new Date().toISOString()}:oldBest;
-      localStorage.setItem(BEST_KEY,JSON.stringify(best));$('bestScore').textContent='Personal best: '+best.score+' correct · '+best.accuracy+'% accuracy';
+      const oldBest=previous&&Number(previous.coins)>=0?previous:null;
+      const coins=score*5;\n      const isBest=!oldBest||coins>Number(oldBest.coins)||(coins===Number(oldBest.coins)&&accuracy>Number(oldBest.accuracy));
+      const best=isBest?{coins,score,accuracy,date:new Date().toISOString()}:oldBest;
+      localStorage.setItem(BEST_KEY,JSON.stringify(best));$('bestScore').textContent='Personal best: '+best.coins+' K币 · '+best.accuracy+'% accuracy';
     }catch(e){$('bestScore').textContent='Your score is ready. Personal best saving is unavailable in this browser.';}
     window.scrollTo({top:0,behavior:'smooth'});
   }
