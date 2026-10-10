@@ -1,4 +1,13 @@
 {
-  "updatedAt": null,
-  "attempts": []
+  "updatedAt": "2026-10-10T05:09:50.575Z",
+  "attempts": [
+    {
+      "nickname": "LEO",
+      "coins": 75,
+      "score": 15,
+      "accuracy": 50,
+      "answered": 30,
+      "completedAt": "2026-10-10T05:09:50.575Z"
+    }
+  ]
 }
