@@ -7,6 +7,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="King of PSLE Vocabulary">
+<link rel="manifest" href="https://aplusachiever.github.io/aplus-achiever-website/king-of-psle-vocabulary.webmanifest">
+<link rel="icon" href="https://aplusachiever.github.io/aplus-achiever-website/king-of-psle-vocabulary-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://aplusachiever.github.io/aplus-achiever-website/king-of-psle-vocabulary-icon.svg">
 <title>KING OF PSLE VOCABULARY</title>
 <style>
 :root{--deep:#103e31;--green:#146b4f;--bright:#27a66d;--gold:#f3c969;--paper:#f5f8f5;--ink:#193c31;--muted:#71847c;--line:#dce9e1;--white:#fff}
@@ -18,7 +21,7 @@ button{font:inherit;touch-action:manipulation}
 .top-inner,.wrap{width:min(100%,680px);margin:0 auto}
 .brand{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand-name{font-size:11px;letter-spacing:2px;font-weight:900;color:#d9efdf}
-.crown-mini{font-size:26px}
+.crown-mini{font-size:26px}.brand-actions{display:flex;align-items:center;gap:9px}.install-app{border:1px solid rgba(255,255,255,.4);border-radius:999px;background:#f3c969;color:#173d30;padding:9px 13px;font-size:12px;font-weight:950;white-space:nowrap;cursor:pointer}.install-app:focus-visible{outline:3px solid #fff;outline-offset:3px}.install-help{font-size:12px;color:#e0eee6;text-align:right;margin:8px 0 0}.install-help a{color:#fff;text-decoration:underline}
 .hero{text-align:center;padding:22px 0 4px}
 .crown{font-size:48px;line-height:1.1;filter:drop-shadow(0 3px 0 rgba(0,0,0,.12))}
 h1{font-size:clamp(27px,7vw,39px);line-height:1.05;letter-spacing:-1px;margin:10px 0 9px;font-weight:950}
@@ -90,7 +93,7 @@ h1 span{display:block;color:var(--gold)}
 <body>
 <header class="top">
   <div class="top-inner">
-    <div class="brand"><div class="brand-name">APLUS ACHIEVER · PSLE ENGLISH</div><div class="crown-mini" aria-hidden="true">👑</div></div>
+    <div class="brand"><div class="brand-name">APLUS ACHIEVER · PSLE ENGLISH</div><div class="brand-actions"><button id="installAppBtn" class="install-app" type="button">⬇ 安装 APP</button><div class="crown-mini" aria-hidden="true">👑</div></div></div><p id="installHelp" class="install-help hidden" aria-live="polite"></p>
     <div class="hero">
       <div class="crown" aria-hidden="true">👑</div>
       <h1>KING OF <span>PSLE VOCABULARY</span></h1>
@@ -311,6 +314,36 @@ h1 span{display:block;color:var(--gold)}
   $('homeBtn').addEventListener('click',()=>{clearInterval(timerId);clearTimeout(nextId);ended=true;$('resultPanel').classList.add('hidden');$('startPanel').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});});
   loadVocabulary();
   loadLeaderboard();
+})();
+</script>
+
+<script>
+(function(){
+  const installBtn=document.getElementById('installAppBtn');
+  const installHelp=document.getElementById('installHelp');
+  let installPrompt=null;
+  const isStandalone=()=>window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true;
+  function showHelp(message){installHelp.textContent=message;installHelp.classList.remove('hidden');}
+  if(isStandalone()){installBtn.textContent='✓ 已安装 APP';installBtn.disabled=true;installBtn.style.opacity='.8';}
+  window.addEventListener('beforeinstallprompt',event=>{
+    event.preventDefault();installPrompt=event;installBtn.classList.remove('hidden');
+  });
+  installBtn.addEventListener('click',async()=>{
+    if(isStandalone()){showHelp('游戏已安装，可从手机或电脑桌面直接打开。');return;}
+    if(installPrompt){
+      installPrompt.prompt();
+      try{const choice=await installPrompt.userChoice;if(choice&&choice.outcome==='accepted'){showHelp('安装已开始，请按浏览器提示完成。');}else{showHelp('你可以稍后再安装，游戏仍可直接使用。');}}catch(e){showHelp('请使用浏览器菜单中的“安装应用”或“添加到主屏幕”。'}
+      installPrompt=null;return;
+    }
+    const ua=navigator.userAgent||'';
+    if(/iphone|ipad|ipod/i.test(ua)){showHelp('在 Safari 中点“分享”按钮，再选择“添加到主屏幕”。');}
+    else if(/android/i.test(ua)){showHelp('在 Chrome 菜单中选择“安装应用”或“添加到主屏幕”。');}
+    else{showHelp('请使用 Chrome 或 Edge 浏览器；打开浏览器菜单，选择“安装页面为应用”或“安装应用”。');}
+  });
+  window.addEventListener('appinstalled',()=>{installBtn.textContent='✓ 已安装 APP';installBtn.disabled=true;showHelp('安装完成！以后可从设备桌面打开游戏。');});
+  if('serviceWorker' in navigator && location.protocol==='https:'){
+    window.addEventListener('load',()=>navigator.serviceWorker.register('https://aplusachiever.github.io/aplus-achiever-website/king-of-psle-vocabulary-sw.js').catch(()=>{}));
+  }
 })();
 </script>
 </body>
