@@ -332,7 +332,7 @@ h1 span{display:block;color:var(--gold)}
     if(isStandalone()){showHelp('游戏已安装，可从手机或电脑桌面直接打开。');return;}
     if(installPrompt){
       installPrompt.prompt();
-      try{const choice=await installPrompt.userChoice;if(choice&&choice.outcome==='accepted'){showHelp('安装已开始，请按浏览器提示完成。');}else{showHelp('你可以稍后再安装，游戏仍可直接使用。');}}catch(e){showHelp('请使用浏览器菜单中的“安装应用”或“添加到主屏幕”。'}
+      try{const choice=await installPrompt.userChoice;if(choice&&choice.outcome==='accepted'){showHelp('安装已开始，请按浏览器提示完成。');}else{showHelp('你可以稍后再安装，游戏仍可直接使用。');}}catch(e){showHelp('请使用浏览器菜单中的“安装应用”或“添加到主屏幕”。');}
       installPrompt=null;return;
     }
     const ua=navigator.userAgent||'';
