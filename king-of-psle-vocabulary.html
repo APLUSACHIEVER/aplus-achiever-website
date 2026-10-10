@@ -225,7 +225,8 @@ h1 span{display:block;color:var(--gold)}
     try{
       const previous=JSON.parse(localStorage.getItem(BEST_KEY)||'null');
       const oldBest=previous&&Number(previous.coins)>=0?previous:null;
-      const coins=score*5;\n      const isBest=!oldBest||coins>Number(oldBest.coins)||(coins===Number(oldBest.coins)&&accuracy>Number(oldBest.accuracy));
+      const coins=score*5;
+      const isBest=!oldBest||coins>Number(oldBest.coins)||(coins===Number(oldBest.coins)&&accuracy>Number(oldBest.accuracy));
       const best=isBest?{coins,score,accuracy,date:new Date().toISOString()}:oldBest;
       localStorage.setItem(BEST_KEY,JSON.stringify(best));$('bestScore').textContent='Personal best: '+best.coins+' K币 · '+best.accuracy+'% accuracy';
     }catch(e){$('bestScore').textContent='Your score is ready. Personal best saving is unavailable in this browser.';}
