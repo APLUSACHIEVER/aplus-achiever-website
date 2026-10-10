@@ -1,0 +1,19 @@
+{
+  "name": "KING OF PSLE VOCABULARY",
+  "short_name": "PSLE Vocabulary",
+  "description": "Aplus Achiever PSLE English vocabulary challenge",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f8f5",
+  "theme_color": "#103e31",
+  "icons": [
+    {
+      "src": "./king-of-psle-vocabulary-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
