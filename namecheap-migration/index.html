@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#103e31">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="King of PSLE Vocabulary">
+<link rel="manifest" href="./king-of-psle-vocabulary.webmanifest">
+<link rel="icon" href="./king-of-psle-vocabulary-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./king-of-psle-vocabulary-icon.svg">
+<title>KING OF PSLE VOCABULARY</title>
+<style>
+:root{--deep:#103e31;--green:#146b4f;--bright:#27a66d;--gold:#f3c969;--paper:#f5f8f5;--ink:#193c31;--muted:#71847c;--line:#dce9e1;--white:#fff}
+*{box-sizing:border-box}
+html{min-height:100%;background:var(--paper);-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper);padding:0 0 env(safe-area-inset-bottom)}
+button{font:inherit;touch-action:manipulation}
+.top{background:linear-gradient(145deg,#103e31,#17694d);color:#fff;padding:22px 18px 30px;border-radius:0 0 28px 28px}
+.top-inner,.wrap{width:min(100%,680px);margin:0 auto}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand-name{font-size:11px;letter-spacing:2px;font-weight:900;color:#d9efdf}
+.crown-mini{font-size:26px}.brand-actions{display:flex;align-items:center;gap:9px}.install-app{border:1px solid rgba(255,255,255,.4);border-radius:999px;background:#f3c969;color:#173d30;padding:9px 13px;font-size:12px;font-weight:950;white-space:nowrap;cursor:pointer}.install-app:focus-visible{outline:3px solid #fff;outline-offset:3px}.install-help{font-size:12px;color:#e0eee6;text-align:right;margin:8px 0 0}.install-help a{color:#fff;text-decoration:underline}
+.hero{text-align:center;padding:22px 0 4px}
+.crown{font-size:48px;line-height:1.1;filter:drop-shadow(0 3px 0 rgba(0,0,0,.12))}
+h1{font-size:clamp(27px,7vw,39px);line-height:1.05;letter-spacing:-1px;margin:10px 0 9px;font-weight:950}
+h1 span{display:block;color:var(--gold)}
+.tagline{font-size:14px;color:#d7e9df;margin:0}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:23px}
+.hero-stat{border:1px solid rgba(255,255,255,.17);background:rgba(255,255,255,.08);border-radius:13px;padding:11px 5px;text-align:center}
+.hero-stat b{display:block;font-size:21px;color:var(--gold)}
+.hero-stat small{font-size:10px;letter-spacing:1px;color:#e0eee6;font-weight:800}
+.wrap{padding:18px 15px 34px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:21px;padding:21px;box-shadow:0 8px 25px rgba(16,62,49,.055)}
+.start-panel{text-align:center;margin-top:-2px}
+.start-panel h2{font-size:21px;margin:2px 0 8px;color:var(--deep)}
+.intro{font-size:14px;line-height:1.6;color:var(--muted);margin:0 auto 18px;max-width:430px}
+.kcoin-note{display:block;margin:0 auto 18px;padding:13px 14px;max-width:460px;border:2px solid #e3b744;border-radius:13px;background:#fff7dc;color:#49380a;font-size:14px;line-height:1.6;font-weight:850;text-align:left}
+.primary{width:100%;min-height:58px;border:0;border-radius:15px;background:linear-gradient(135deg,#f6d77f,#e9b94d);color:#263b2f;font-size:17px;font-weight:950;box-shadow:0 5px 0 #d6a33b;cursor:pointer}
+.primary:active{transform:translateY(2px);box-shadow:0 3px 0 #d6a33b}
+.secondary{min-height:48px;padding:12px 15px;border:1px solid var(--line);border-radius:13px;background:#fff;color:var(--green);font-weight:850;cursor:pointer}
+.hidden{display:none!important}
+.game-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+.counter{font-size:12px;font-weight:900;color:var(--muted)}
+.score-pill{padding:8px 11px;border-radius:999px;background:#edf8f1;color:var(--green);font-size:12px;font-weight:900;white-space:nowrap}
+.timer-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px;font-size:12px;color:var(--muted);font-weight:800}
+.timer{font-size:20px;font-weight:950;color:var(--deep);font-variant-numeric:tabular-nums}
+.timer.low{color:#c34444}
+.track{height:7px;border-radius:20px;background:#e8efe9;overflow:hidden}
+.track i{display:block;height:100%;width:100%;background:var(--bright);transition:width .25s linear}
+.question-area{padding:23px 0 16px;text-align:center}
+.eyebrow{font-size:10px;font-weight:950;letter-spacing:1.5px;color:var(--bright)}
+.instruction{font-size:15px;font-weight:850;margin:7px 0 15px}
+.sentence{font-size:clamp(20px,5.5vw,26px);font-weight:800;line-height:1.5;color:var(--deep);background:#f4faf6;border:1px solid #dceee3;border-radius:16px;padding:20px 15px;text-align:left;overflow-wrap:anywhere}
+.answers{display:grid;grid-template-columns:1fr;gap:10px;margin-top:15px}
+.answer{width:100%;min-height:57px;border:2px solid #e0eae4;border-radius:14px;background:#fff;color:var(--ink);padding:13px 15px;text-align:left;font-size:17px;font-weight:750;cursor:pointer;display:flex;align-items:center;gap:12px}
+.answer .letter{flex:0 0 29px;height:29px;border-radius:9px;display:grid;place-items:center;background:#edf5f0;color:var(--green);font-size:12px;font-weight:950}
+.answer.correct{border-color:#38a875;background:#eefaf3}
+.answer.correct .letter{background:#38a875;color:#fff}
+.answer.wrong{border-color:#df7777;background:#fff3f3}
+.answer.wrong .letter{background:#df7777;color:#fff}
+.answer:disabled{cursor:default}
+.feedback{margin-top:13px;padding:13px 14px;border-radius:12px;font-size:14px;line-height:1.5;font-weight:800}
+.feedback.good{background:#eaf8ef;color:#176747}
+.feedback.bad{background:#fff1f1;color:#9b3535}
+.result{text-align:center}
+.result-crown{font-size:61px;margin:0 0 4px}
+.result h2{font-size:26px;color:var(--deep);margin:4px 0}
+.result-score{font-size:54px;font-weight:1000;color:var(--green);line-height:1.1;margin:12px 0 5px}
+.result-sub{font-size:14px;color:var(--muted);line-height:1.5}
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:20px 0}
+.result-stat{border:1px solid var(--line);border-radius:13px;background:#f8fbf9;padding:13px}
+.result-stat b{display:block;font-size:23px;color:var(--deep)}
+.result-stat small{font-size:11px;color:var(--muted);font-weight:800}
+.result-actions{display:grid;gap:10px}
+.best{font-size:12px;color:var(--muted);margin:14px 0 0}
+.nickname-label{display:block;text-align:left;font-size:13px;font-weight:900;color:var(--deep);margin:0 0 7px}
+.nickname-input{width:100%;min-height:50px;border:1.5px solid #cddfd3;border-radius:12px;padding:12px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff;margin-bottom:14px}
+.leaderboard{margin-top:18px;text-align:left;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.leaderboard-head{padding:14px 15px;background:#f0f8f2;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.leaderboard-head strong{font-size:16px;color:var(--deep)}.leaderboard-head small{font-size:11px;color:var(--muted)}
+.leaderboard-list{padding:0 14px}.leader-row{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:9px;padding:12px 0;border-bottom:1px solid #edf2ee}.leader-row:last-child{border-bottom:0}
+.leader-rank{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;background:#edf5f0;color:var(--green);font-size:12px;font-weight:950}
+.leader-rank.gold{background:#fff0bf;color:#7a5700}.leader-rank.silver{background:#e9edf0;color:#4e5b64}.leader-rank.bronze{background:#f7e4d8;color:#8a4a27}
+.leader-name{font-size:14px;font-weight:850;overflow-wrap:anywhere}.leader-meta{font-size:11px;color:var(--muted);margin-top:3px}.leader-coins{font-size:14px;font-weight:950;color:var(--green);white-space:nowrap}
+.leader-empty{padding:18px 10px;text-align:center;color:var(--muted);font-size:13px;line-height:1.5}.submit-status{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--green);font-weight:800}
+.footer{text-align:center;color:#879890;font-size:11px;padding:20px 10px 4px}
+@media(min-width:520px){.top{padding-top:27px}.hero{padding-top:26px}.answers{grid-template-columns:1fr 1fr}.answer{min-height:68px}.panel{padding:25px}.wrap{padding-top:22px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand"><div class="brand-name">APLUS ACHIEVER · PSLE ENGLISH</div><div class="brand-actions"><button id="installAppBtn" class="install-app" type="button">⬇ 安装 APP</button><div class="crown-mini" aria-hidden="true">👑</div></div></div><p id="installHelp" class="install-help hidden" aria-live="polite"></p>
+    <div class="hero">
+      <div class="crown" aria-hidden="true">👑</div>
+      <h1>KING OF <span>PSLE VOCABULARY</span></h1>
+      <p class="tagline">10 minutes. 30 questions. Can you claim the crown?</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>10:00</b><small>TIME LIMIT</small></div>
+        <div class="hero-stat"><b>30</b><small>QUESTIONS</small></div>
+        <div class="hero-stat"><b>👑</b><small>YOUR BEST</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section id="startPanel" class="panel start-panel">
+    <h2>Ready for the King's Challenge?</h2>
+    <p class="intro">Choose the best word to complete each sentence. Your questions come from the existing APLUS PSLE vocabulary list. Answer as many as you can in 10 minutes.</p>
+    <div class="kcoin-note" role="note">💡 注意：这里的 K币是“知识币”的缩写，是游戏内积分，不涉及真实货币。</div>
+    <label class="nickname-label" for="nicknameInput">Your nickname（排行榜显示昵称）</label>
+    <input id="nicknameInput" class="nickname-input" type="text" maxlength="20" autocomplete="nickname" placeholder="Enter a nickname" />
+    <button id="startBtn" class="primary" type="button">START CHALLENGE&nbsp; →</button>
+    <p id="loadingNote" class="best">Loading the vocabulary list…</p>
+    <section class="leaderboard" aria-labelledby="leaderboardTitle">
+      <div class="leaderboard-head"><strong id="leaderboardTitle">👑 KING OF PSLE 排行榜</strong><small>TOP 10 · BEST SCORE</small></div>
+      <div id="leaderboardList" class="leaderboard-list"><div class="leader-empty">正在读取共享排行榜…</div></div>
+    </section>
+  </section>
+  <section id="gamePanel" class="panel hidden" aria-live="polite">
+    <div class="game-head"><span id="questionCounter" class="counter">QUESTION 1 / 30</span><span id="scorePill" class="score-pill">🪙 K币: 0</span></div>
+    <div class="timer-row"><span>TIME LEFT</span><span id="timer" class="timer">10:00</span></div>
+    <div class="track"><i id="timeBar"></i></div>
+    <div class="question-area"><div class="eyebrow">CHOOSE THE BEST WORD</div><p class="instruction">Which word fits the sentence?</p><div id="sentence" class="sentence">Loading question…</div></div>
+    <div id="answers" class="answers"></div>
+    <div id="feedback" class="feedback hidden" role="status"></div>
+  </section>
+  <section id="resultPanel" class="panel result hidden">
+    <div id="resultCrown" class="result-crown">👑</div><div class="eyebrow">CHALLENGE COMPLETE</div><h2 id="resultTitle">Well played!</h2>
+    <div id="resultScore" class="result-score">0 / 30</div><div id="resultSub" class="result-sub"></div>
+    <div class="result-grid"><div class="result-stat"><b id="correctCount">0</b><small>CORRECT</small></div><div class="result-stat"><b id="accuracy">0%</b><small>ACCURACY</small></div></div>
+    <div id="reviewBox" class="feedback hidden"></div>
+    <p id="submitStatus" class="submit-status" role="status"></p>
+    <div class="result-actions"><button id="againBtn" class="primary" type="button">PLAY AGAIN&nbsp; ↻</button><button id="homeBtn" class="secondary" type="button">BACK TO START</button></div>
+    <p id="bestScore" class="best"></p>
+  </section>
+  <div class="footer">Built for PSLE vocabulary practice · Keep learning, keep improving.</div>
+</main>
+<form id="leaderboardSubmitForm" method="post" target="leaderboardFrame" class="hidden"><input type="hidden" name="payload" id="leaderboardPayload" value=""></form>
+<iframe name="leaderboardFrame" title="Score submission" class="hidden"></iframe>
+<script src="./data/vocabulary.js"></script>
+<script>
+(function(){
+  'use strict';
+  const TOTAL_QUESTIONS=30, TEST_SECONDS=600, BEST_KEY='kingPSLEVocabularyBestV1';
+  const LEADERBOARD_SUBMIT_URL='https://script.google.com/macros/s/AKfycbyYVw5fhqNtP6niDBAnj31AuoWrc8b3V77dMp4l3oRPAZzQDcl7GGVPAI0MISORclVB/exec';
+  const LEADERBOARD_JSON_URL='https://raw.githubusercontent.com/APLUSACHIEVER/aplus-achiever-website/main/data/leaderboard.json';
+  let playerNickname='';
+  const letters=['A','B','C','D'];
+  let pool=[],questions=[],index=0,score=0,answered=0,wrongWords=[],secondsLeft=TEST_SECONDS,timerId=null,nextId=null,locked=false,ended=false;
+  const $=id=>document.getElementById(id);
+  const shuffle=arr=>{const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+  const escapeRegExp=s=>String(s).replace(/[.*+?^$()|[\]\\]/g,'\\$&');
+
+  function loadVocabulary(){
+    const source=Array.isArray(window.vocabulary)?window.vocabulary:[];
+    pool=source.filter(w=>w&&w.word&&w.example&&new RegExp('\\b'+escapeRegExp(w.word)+'\\b','i').test(String(w.example)));
+    $('loadingNote').textContent=pool.length?pool.length+' example sentences loaded from the existing vocabulary list.':'Vocabulary list could not be loaded. Please check the data file.';
+    $('startBtn').disabled=pool.length<TOTAL_QUESTIONS;
+    if(pool.length<TOTAL_QUESTIONS)$('startBtn').textContent='VOCABULARY NOT READY';
+  }
+
+  function makeQuestion(word){
+    const re=new RegExp('\\b'+escapeRegExp(word.word)+'\\b','i');
+    const sentence=String(word.example).replace(re,'________');
+    const pos=String(word.partOfSpeech||'').toLowerCase(),level=Number(word.level||1);
+    let candidates=pool.filter(x=>x.id!==word.id&&String(x.word).toLowerCase()!==String(word.word).toLowerCase()&&(!pos||String(x.partOfSpeech||'').toLowerCase()===pos)&&Math.abs(Number(x.level||1)-level)<=2);
+    if(candidates.length<3)candidates=pool.filter(x=>x.id!==word.id&&String(x.word).toLowerCase()!==String(word.word).toLowerCase());
+    const choices=[word.word];
+    for(const candidate of shuffle(candidates)){if(!choices.some(x=>String(x).toLowerCase()===String(candidate.word).toLowerCase()))choices.push(candidate.word);if(choices.length===4)break;}
+    if(choices.length<4)return null;
+    return {word:word.word,sentence,choices:shuffle(choices),answer:word.word};
+  }
+
+  function prepareQuestions(){
+    const chosen=shuffle(pool).slice(0,Math.min(pool.length,TOTAL_QUESTIONS*3));
+    questions=chosen.map(makeQuestion).filter(Boolean).slice(0,TOTAL_QUESTIONS);
+    if(questions.length<TOTAL_QUESTIONS){
+      const rest=shuffle(pool.filter(w=>!chosen.some(c=>c.id===w.id)));
+      for(const w of rest){const q=makeQuestion(w);if(q)questions.push(q);if(questions.length===TOTAL_QUESTIONS)break;}
+    }
+  }
+
+  function startGame(){
+    playerNickname=String($('nicknameInput').value||'').trim().replace(/\s+/g,' ').slice(0,20);
+    if(!playerNickname){$('nicknameInput').focus();$('loadingNote').textContent='Please enter a nickname before starting.';return;}
+    $('nicknameInput').value=playerNickname;
+    prepareQuestions();
+    if(questions.length<TOTAL_QUESTIONS){$('loadingNote').textContent='Not enough suitable example sentences are available yet.';return;}
+    clearInterval(timerId);clearTimeout(nextId);
+    index=0;score=0;answered=0;wrongWords=[];secondsLeft=TEST_SECONDS;locked=false;ended=false;
+    $('startPanel').classList.add('hidden');$('resultPanel').classList.add('hidden');$('gamePanel').classList.remove('hidden');
+    $('scorePill').textContent='🪙 K币: 0';renderQuestion();updateTimer();
+    timerId=setInterval(()=>{if(ended)return;secondsLeft--;updateTimer();if(secondsLeft<=0)finishGame(true);},1000);
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function updateTimer(){
+    const m=Math.floor(Math.max(0,secondsLeft)/60),s=Math.max(0,secondsLeft)%60;
+    $('timer').textContent=m+':'+String(s).padStart(2,'0');$('timer').classList.toggle('low',secondsLeft<=60);
+    $('timeBar').style.width=(Math.max(0,secondsLeft)/TEST_SECONDS*100)+'%';
+    $('timeBar').style.background=secondsLeft<=60?'#d84a4a':'var(--bright)';
+  }
+
+  function renderQuestion(){
+    if(ended)return;if(index>=TOTAL_QUESTIONS){finishGame(false);return;}
+    locked=false;const q=questions[index];
+    $('questionCounter').textContent='QUESTION '+(index+1)+' / '+TOTAL_QUESTIONS;$('scorePill').textContent='🪙 K币: '+(score*5);
+    $('sentence').textContent=q.sentence;$('feedback').className='feedback hidden';$('feedback').textContent='';
+    const box=$('answers');box.innerHTML='';
+    q.choices.forEach((choice,i)=>{
+      const btn=document.createElement('button');btn.type='button';btn.className='answer';
+      const letter=document.createElement('span');letter.className='letter';letter.textContent=letters[i];
+      const label=document.createElement('span');label.textContent=choice;btn.append(letter,label);
+      btn.addEventListener('click',()=>chooseAnswer(choice,btn));box.appendChild(btn);
+    });
+  }
+
+  function chooseAnswer(choice,button){
+    if(locked||ended)return;locked=true;answered++;const q=questions[index];
+    const isCorrect=String(choice).toLowerCase()===String(q.answer).toLowerCase();
+    document.querySelectorAll('#answers .answer').forEach(btn=>{
+      btn.disabled=true;const value=btn.lastElementChild.textContent;
+      if(String(value).toLowerCase()===String(q.answer).toLowerCase())btn.classList.add('correct');
+      else if(btn===button&&!isCorrect)btn.classList.add('wrong');
+    });
+    const feedback=$('feedback');feedback.classList.remove('hidden');
+    if(isCorrect){score++;feedback.className='feedback good';feedback.textContent='✓ Correct! +5 K币';}
+    else{wrongWords.push(q.word);feedback.className='feedback bad';feedback.textContent='Not quite. Correct answer: '+q.answer;}
+    $('scorePill').textContent='🪙 K币: '+(score*5);
+    nextId=setTimeout(()=>{if(ended)return;index++;renderQuestion();},650);
+  }
+
+  function finishGame(timeUp){
+    if(ended)return;ended=true;clearInterval(timerId);clearTimeout(nextId);
+    $('gamePanel').classList.add('hidden');$('resultPanel').classList.remove('hidden');
+    const accuracy=answered?Math.round(score/answered*100):0;
+    let crown='🌱',title='Keep Practising!';
+    if(accuracy>=90){crown='👑';title='Vocabulary King!';}
+    else if(accuracy>=75){crown='🥇';title='Gold Crown Level!';}
+    else if(accuracy>=60){crown='🥈';title='Silver Crown Level!';}
+    else if(accuracy>=40){crown='🥉';title='Bronze Crown Level!';}
+    $('resultCrown').textContent=crown;$('resultTitle').textContent=title;$('resultScore').textContent=(score*5)+' K币';
+    $('resultSub').textContent=timeUp?'Time is up! You answered '+answered+' questions.':'You finished the challenge in '+formatTime(TEST_SECONDS-secondsLeft)+'.';
+    $('correctCount').textContent=score;$('accuracy').textContent=accuracy+'%';
+    const review=$('reviewBox');
+    if(wrongWords.length){
+      review.className='feedback bad';review.textContent='';
+      const heading=document.createElement('strong');heading.textContent='Words to practise next time';review.appendChild(heading);
+      const list=document.createElement('div');list.style.marginTop='6px';list.textContent=[...new Set(wrongWords)].slice(0,12).join(' · ');review.appendChild(list);
+    }else{review.className='feedback good';review.textContent='Perfect round — no missed words!';}
+    submitAttempt(accuracy);
+    try{
+      const previous=JSON.parse(localStorage.getItem(BEST_KEY)||'null');
+      const oldBest=previous&&Number(previous.coins)>=0?previous:null;
+      const coins=score*5;
+      const isBest=!oldBest||coins>Number(oldBest.coins)||(coins===Number(oldBest.coins)&&accuracy>Number(oldBest.accuracy));
+      const best=isBest?{coins,score,accuracy,date:new Date().toISOString()}:oldBest;
+      localStorage.setItem(BEST_KEY,JSON.stringify(best));$('bestScore').textContent='Personal best: '+best.coins+' K币 · '+best.accuracy+'% accuracy';
+    }catch(e){$('bestScore').textContent='Your score is ready. Personal best saving is unavailable in this browser.';}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function submitAttempt(accuracy){
+    const status=$('submitStatus');
+    if(!answered){status.textContent='No answers recorded; no score was submitted.';return;}
+    if(!LEADERBOARD_SUBMIT_URL||LEADERBOARD_SUBMIT_URL.indexOf('PASTE_')===0){status.textContent='排行榜显示已准备好，但自动提交尚未连接。网站管理员需要完成一次性设置。';return;}
+    const payload={nickname:playerNickname,coins:score*5,score:score,accuracy:accuracy,answered:answered};
+    $('leaderboardPayload').value=JSON.stringify(payload);
+    $('leaderboardSubmitForm').action=LEADERBOARD_SUBMIT_URL;
+    status.textContent='正在提交成绩到共享排行榜…';
+    $('leaderboardSubmitForm').submit();
+    setTimeout(loadLeaderboard,4000);
+    setTimeout(()=>{if(status.textContent.indexOf('正在提交')===0)status.textContent='已发送提交请求，排行榜可能需要一点时间更新。';},1800);
+  }
+
+  async function loadLeaderboard(){
+    const list=$('leaderboardList');
+    try{
+      const response=await fetch(LEADERBOARD_JSON_URL+'?t='+Date.now(),{cache:'no-store'});
+      if(!response.ok)throw new Error('Leaderboard unavailable');
+      const data=await response.json();
+      const attempts=Array.isArray(data.attempts)?data.attempts:[];
+      const bestByName=new Map();
+      attempts.forEach(item=>{
+        const nickname=String(item.nickname||'').trim().replace(/\s+/g,' ').slice(0,20);
+        if(!nickname)return;
+        const key=nickname.toLocaleLowerCase();
+        const candidate={...item,nickname,coins:Number(item.coins)||0,accuracy:Number(item.accuracy)||0,completedAt:String(item.completedAt||'')};
+        const old=bestByName.get(key);
+        if(!old||candidate.coins>old.coins||(candidate.coins===old.coins&&candidate.accuracy>old.accuracy)||(candidate.coins===old.coins&&candidate.accuracy===old.accuracy&&candidate.completedAt<old.completedAt))bestByName.set(key,candidate);
+      });
+      const top=[...bestByName.values()].sort((a,b)=>b.coins-a.coins||b.accuracy-a.accuracy||a.completedAt.localeCompare(b.completedAt)).slice(0,10);
+      list.innerHTML='';
+      if(!top.length){const empty=document.createElement('div');empty.className='leader-empty';empty.textContent='还没有成绩。成为第一个登上排行榜的词汇王吧！';list.appendChild(empty);return;}
+      top.forEach((item,i)=>{
+        const row=document.createElement('div');row.className='leader-row';
+        const rank=document.createElement('div');rank.className='leader-rank'+(i===0?' gold':i===1?' silver':i===2?' bronze':'');rank.textContent=String(i+1);
+        const info=document.createElement('div');
+        const name=document.createElement('div');name.className='leader-name';name.textContent=item.nickname;
+        const meta=document.createElement('div');meta.className='leader-meta';meta.textContent='正确率 '+item.accuracy+'%';
+        info.append(name,meta);
+        const coins=document.createElement('div');coins.className='leader-coins';coins.textContent=item.coins+' K币';
+        row.append(rank,info,coins);list.appendChild(row);
+      });
+    }catch(e){list.innerHTML='';const empty=document.createElement('div');empty.className='leader-empty';empty.textContent='暂时无法读取排行榜，请稍后重试。';list.appendChild(empty);}
+  }
+
+  function formatTime(seconds){const s=Math.max(0,seconds);return Math.floor(s/60)+'m '+(s%60)+'s';}
+  $('startBtn').addEventListener('click',startGame);$('againBtn').addEventListener('click',startGame);
+  $('homeBtn').addEventListener('click',()=>{clearInterval(timerId);clearTimeout(nextId);ended=true;$('resultPanel').classList.add('hidden');$('startPanel').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});});
+  loadVocabulary();
+  loadLeaderboard();
+})();
+</script>
+
+<script>
+(function(){
+  const installBtn=document.getElementById('installAppBtn');
+  const installHelp=document.getElementById('installHelp');
+  let installPrompt=null;
+  const isStandalone=()=>window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true;
+  function showHelp(message){installHelp.textContent=message;installHelp.classList.remove('hidden');}
+  if(isStandalone()){installBtn.textContent='✓ 已安装 APP';installBtn.disabled=true;installBtn.style.opacity='.8';}
+  window.addEventListener('beforeinstallprompt',event=>{
+    event.preventDefault();installPrompt=event;installBtn.classList.remove('hidden');
+  });
+  installBtn.addEventListener('click',async()=>{
+    if(isStandalone()){showHelp('游戏已安装，可从手机或电脑桌面直接打开。');return;}
+    if(installPrompt){
+      installPrompt.prompt();
+      try{const choice=await installPrompt.userChoice;if(choice&&choice.outcome==='accepted'){showHelp('安装已开始，请按浏览器提示完成。');}else{showHelp('你可以稍后再安装，游戏仍可直接使用。');}}catch(e){showHelp('请使用浏览器菜单中的“安装应用”或“添加到主屏幕”。');}
+      installPrompt=null;return;
+    }
+    const ua=navigator.userAgent||'';
+    if(/iphone|ipad|ipod/i.test(ua)){showHelp('在 Safari 中点“分享”按钮，再选择“添加到主屏幕”。');}
+    else if(/android/i.test(ua)){showHelp('在 Chrome 菜单中选择“安装应用”或“添加到主屏幕”。');}
+    else{showHelp('请使用 Chrome 或 Edge 浏览器；打开浏览器菜单，选择“安装页面为应用”或“安装应用”。');}
+  });
+  window.addEventListener('appinstalled',()=>{installBtn.textContent='✓ 已安装 APP';installBtn.disabled=true;showHelp('安装完成！以后可从设备桌面打开游戏。');});
+  if('serviceWorker' in navigator && location.protocol==='https:'){
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./king-of-psle-vocabulary-sw.js').catch(()=>{}));
+  }
+})();
+</script>
+</body>
+</html>
