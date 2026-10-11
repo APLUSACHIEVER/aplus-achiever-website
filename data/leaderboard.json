@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T09:29:31.226Z",
+  "updatedAt": "2026-10-11T15:04:26.747Z",
   "attempts": [
     {
       "nickname": "LEO",
@@ -24,6 +24,14 @@
       "accuracy": 70,
       "answered": 30,
       "completedAt": "2026-10-11T09:29:31.223Z"
+    },
+    {
+      "nickname": "Alice",
+      "coins": 105,
+      "score": 21,
+      "accuracy": 70,
+      "answered": 30,
+      "completedAt": "2026-10-11T15:04:26.741Z"
     }
   ]
 }
