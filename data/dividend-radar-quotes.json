@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-12T02:45:42.311381+00:00",
+  "generatedAt": "2026-10-12T03:51:32.291453+00:00",
   "source": "Eastmoney public quote API",
   "quotes": {
     "600031": {
       "name": "三一重工",
-      "price": 17.52,
-      "change": 0.57,
-      "changePct": 3.36,
+      "price": 17.42,
+      "change": 0.47,
+      "changePct": 2.77,
       "pe": null
     },
     "600585": {
       "name": "海螺水泥",
-      "price": 17.54,
-      "change": 0.15,
-      "changePct": 0.86,
+      "price": 17.48,
+      "change": 0.09,
+      "changePct": 0.52,
       "pe": null
     },
     "600507": {
@@ -32,16 +32,16 @@
     },
     "600350": {
       "name": "山东高速",
-      "price": 10.83,
-      "change": 0.25,
-      "changePct": 2.36,
+      "price": 10.81,
+      "change": 0.23,
+      "changePct": 2.17,
       "pe": null
     },
     "600050": {
       "name": "中国联通",
-      "price": 4.35,
-      "change": 0.05,
-      "changePct": 1.16,
+      "price": 4.34,
+      "change": 0.04,
+      "changePct": 0.93,
       "pe": null
     }
   }
